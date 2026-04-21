@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Minimal client for an OpenAI-compatible chat completions endpoint."""
-import json
 import os
 import sys
 import requests
@@ -11,7 +10,6 @@ load_dotenv(".env.local")
 BASE_URL = os.environ["BASE_URL"].rstrip("/")
 AUTH_TOKEN = os.getenv("AUTH_TOKEN")
 
-DEFAULT_MODEL = "qwen3.5-122b"
 REQUEST_TIMEOUT = 540
 
 HEADERS = {"Content-Type": "application/json"}
@@ -20,7 +18,7 @@ if AUTH_TOKEN:
 
 def call_api(
     user_message: str,
-    model_id: str = DEFAULT_MODEL,
+    model_id: str,
     *,
     max_tokens: int = 512,
     temperature: float = 0.0,
