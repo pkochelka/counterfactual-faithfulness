@@ -1,10 +1,13 @@
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import argparse
 
 from api_caller import call_api
 
-DEFAULT_MODEL = "qwen3.5-122b"
-DATASET = "webnlg_cf"
+parser = argparse.ArgumentParser()
+
+parser.add_argument("--model", default="qwen3.5-122b", type=str, help="Batch size.")
+parser.add_argument("--dataset", default="webnlg_cf", type=str, help="Batch size.")
 
 def build_prompt(entry_df: pd.DataFrame) -> str:
     """Build a prompt from all triples in one entry."""
@@ -68,15 +71,18 @@ def generate_sentences(
     return meta.reset_index()
 
 
-if __name__ == "__main__":
-    model_id = DEFAULT_MODEL
-    dataset = DATASET
+def main(args: argparse.Namespace) -> None:
 
-    df = pd.read_csv(f"./data/{dataset}.csv")
+    df = pd.read_csv(f"./data/{args.dataset}.csv")
 
     print(f"Generating sentences for {df[df['kind'] == 'modified']['eid'].nunique()} entries...")
-    result = generate_sentences(df, model_id, kind="modified", max_workers=4)
+    result = generate_sentences(df, args.model, kind="modified", max_workers=4)
 
     print(result.head())
-    result.to_csv(f"./data/results/sentences_{dataset}_{model_id}.csv", index=False)
-    print(f"Saved {len(result)} sentences to sentences_{dataset}_{model_id}.csv")
+    result.to_csv(f"./data/results/sentences_{args.dataset}_{args.model}.csv", index=False)
+    print(f"Saved {len(result)} sentences to sentences_{args.dataset}_{args.model}.csv")
+
+
+if __name__ == "__main__":
+    main_args = parser.parse_args([] if "__file__" not in globals() else None)
+    main(main_args)
