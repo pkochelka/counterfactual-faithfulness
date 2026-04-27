@@ -1,4 +1,7 @@
 import xml.etree.ElementTree as ET
+import argparse
+from pathlib import Path
+
 import pandas as pd
 
 
@@ -49,7 +52,21 @@ def load_xml(path: str) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    df = load_xml("./data/GEM-v2-D2T-SharedTask/D2T-1-FI_WebNLG_Fictional.xml")
+    parser = argparse.ArgumentParser(description="Convert a GEM24 D2T XML file to CSV.")
+    parser.add_argument(
+        "xml",
+        nargs="?",
+        default="./data/GEM-v2-D2T-SharedTask/D2T-1-FI_WebNLG_Fictional.xml",
+        help="Input XML path",
+    )
+    parser.add_argument(
+        "--output",
+        default=None,
+        help="Output CSV path. Defaults to data/<input-stem>.csv",
+    )
+    args = parser.parse_args()
+
+    df = load_xml(args.xml)
 
     print(f"Loaded {len(df):,} triples from {df['eid'].nunique():,} entries")
     print(df.head(10))
@@ -59,4 +76,8 @@ if __name__ == "__main__":
     print()
     print("Top 5 categories by entry count:")
     print(df.groupby("category", observed=True)["eid"].nunique().nlargest(5))
-    df.to_csv('data/webnlg_fi.csv', index=False)
+
+    output_path = Path(args.output) if args.output else Path("data") / f"{Path(args.xml).stem}.csv"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(output_path, index=False)
+    print(f"Wrote {output_path}")

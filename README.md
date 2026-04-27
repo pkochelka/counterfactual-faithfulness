@@ -35,3 +35,21 @@ Generate fluent English sentences based on the triples in your dataset using par
 ```bash
 python3 generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg_cf"
 ```
+
+### Judging and browsing outputs
+
+The `llm-judge/` tools can browse generated sentence CSVs, compare outputs, and run an LLM judge against the modified triples.
+
+Start the Streamlit workspace from the repository root:
+
+```bash
+streamlit run llm-judge/browser_app.py
+```
+
+Run the judge without the web app:
+
+```bash
+python llm-judge/judge_csv.py sentences_webnlg_cf_qwen3.5-122b.csv --sample-size 20 --head --output-dir llm-judge/outputs
+```
+
+See `llm-judge/README_judge.md` for expected XML/CSV files, `.env.local` setup, batch judging behavior, and full CLI examples.
