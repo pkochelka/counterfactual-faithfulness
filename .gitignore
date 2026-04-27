@@ -1,5 +1,6 @@
 data/
 .vscode
+.DS_Store
 
 ####### Default python .gitignore
 # Byte-compiled / optimized / DLL files
