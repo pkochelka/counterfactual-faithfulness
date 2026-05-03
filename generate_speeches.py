@@ -1,4 +1,5 @@
 import json
+import os
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import argparse
@@ -7,8 +8,9 @@ from api_caller import call_api
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("--model", default="qwen3.5-122b", type=str, help="Batch size.")
-parser.add_argument("--dataset", default="webnlg_cf", type=str, help="Batch size.")
+parser.add_argument("--model", default="qwen3.5-122b", type=str, help="Model name.")
+parser.add_argument("--dataset", default="webnlg", type=str, help="Dataset name (e.g. webnlg, cus-qa).")
+parser.add_argument("--variant", default="cf", choices=["cf", "fa", "fi"], type=str, help="Dataset variant: cf=counterfactual, fa=factual, fi=fictional.")
 parser.add_argument("--kind", default="modified", type=str, help="Value of the 'kind' column to filter on.")
 parser.add_argument("--language", default="en", type=str, help="Prompt language (e.g. en, cs).")
 
@@ -75,15 +77,21 @@ def generate_sentences(
 
 def main(args: argparse.Namespace) -> None:
 
-    df = pd.read_csv(f"./data/{args.dataset}.csv")
+    input_path = os.path.join("data", args.dataset, f"{args.variant}.csv")
+    df = pd.read_csv(input_path)
 
     n = df[df['kind'] == args.kind]['eid'].nunique() if 'kind' in df.columns else df['eid'].nunique()
     print(f"Generating sentences for {n} entries...")
     result = generate_sentences(df, args.model, kind=args.kind, language=args.language, max_workers=4)
 
+    output_dir = os.path.join("data", "generated", args.model)
+    os.makedirs(output_dir, exist_ok=True)
+    output_filename = f"{args.dataset}_{args.variant}_{args.language}.csv"
+    output_path = os.path.join(output_dir, output_filename)
+
     print(result.head())
-    result.to_csv(f"./data/results/sentences_{args.dataset}_{args.model}_{args.language}.csv", index=False)
-    print(f"Saved {len(result)} sentences to sentences_{args.dataset}_{args.model}_{args.language}.csv")
+    result.to_csv(output_path, index=False)
+    print(f"Saved {len(result)} sentences to {output_path}")
 
 
 if __name__ == "__main__":
