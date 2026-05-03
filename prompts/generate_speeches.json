@@ -1,0 +1,5 @@
+{
+  "en": "Below are {size} RDF triples from the category '{category}'.\nGenerate a single fluent English sentence (or two short ones if needed) that naturally expresses ALL of the following facts:\n\n{triples_str}\n\nOutput ONLY the sentence(s), nothing else.",
+  "cs": "Níže je {size} RDF trojic z kategorie '{category}'.\nVygeneruj jednu plynulou českou větu (nebo dvě krátké, pokud je to potřeba), která přirozeně vyjadřuje VŠECHNY následující fakty:\n\n{triples_str}\n\nVypiš POUZE větu/věty, nic jiného.",
+  "sk": "Nižšie je {size} RDF trojíc z kategórie '{category}'.\nVygeneruj jednu plynulú slovenskú vetu (alebo dve krátke, ak je to potrebné), ktorá prirodzene vyjadruje VŠETKY nasledujúce fakty:\n\n{triples_str}\n\nVypiš IBA vetu/vety, nič iné."
+}
