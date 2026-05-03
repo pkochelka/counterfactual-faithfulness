@@ -2,6 +2,12 @@
 
 A pipeline for converting the [CUS-QA dataset](https://huggingface.co/datasets/ufal/cus-qa) - a collection of Czech questions and answers - into structured triples, including both factual and counter-factual variants.
 
+Dataset | Number of entries
+-|-:
+cus-qa-dev-czech-text (original) | 530
+factual triples | 530
+counter-factual-triples | 460
+
 ## Overview
 
 Each CUS-QA record (a question, answer, and category) is transformed into an RDF-style triple of the form `Subject | Predicate | Object`.
