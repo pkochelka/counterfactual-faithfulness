@@ -8,6 +8,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("--model", default="qwen3.5-122b", type=str, help="Batch size.")
 parser.add_argument("--dataset", default="webnlg_cf", type=str, help="Batch size.")
+parser.add_argument("--kind", default="modified", type=str, help="Value of the 'kind' column to filter on.")
 
 def build_prompt(entry_df: pd.DataFrame) -> str:
     """Build a prompt from all triples in one entry."""
@@ -48,7 +49,7 @@ def generate_sentences(
     max_workers: int = 4,
 ) -> pd.DataFrame:
     """Generate one sentence per entry."""
-    subset = df[df["kind"] == kind]
+    subset = df[df["kind"] == kind] if "kind" in df.columns else df
     grouped = subset.groupby("eid", observed=True)
 
     tasks = {eid: build_prompt(group) for eid, group in grouped}
@@ -75,8 +76,9 @@ def main(args: argparse.Namespace) -> None:
 
     df = pd.read_csv(f"./data/{args.dataset}.csv")
 
-    print(f"Generating sentences for {df[df['kind'] == 'modified']['eid'].nunique()} entries...")
-    result = generate_sentences(df, args.model, kind="modified", max_workers=4)
+    n = df[df['kind'] == args.kind]['eid'].nunique() if 'kind' in df.columns else df['eid'].nunique()
+    print(f"Generating sentences for {n} entries...")
+    result = generate_sentences(df, args.model, kind=args.kind, max_workers=4)
 
     print(result.head())
     result.to_csv(f"./data/results/sentences_{args.dataset}_{args.model}.csv", index=False)

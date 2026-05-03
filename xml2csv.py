@@ -58,11 +58,13 @@ if __name__ == "__main__":
         nargs="?",
         default="./data/GEM-v2-D2T-SharedTask/D2T-1-FI_WebNLG_Fictional.xml",
         help="Input XML path",
+        type=str
     )
     parser.add_argument(
         "--output",
         default=None,
         help="Output CSV path. Defaults to data/<input-stem>.csv",
+        type=str
     )
     args = parser.parse_args()
 
