@@ -6,7 +6,7 @@ Dataset | Number of entries
 -|-:
 cus-qa-dev-czech-text (original) | 530
 factual triples | 530
-counter-factual-triples | 460
+counter-factual-triples (`misto,jmeno_clovek,datum,cislo`) | 460
 
 ## Overview
 
