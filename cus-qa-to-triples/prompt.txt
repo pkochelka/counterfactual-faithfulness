@@ -1,0 +1,24 @@
+You are given a list of question–answer pairs in Czech. For each pair, perform the following steps:
+
+1. Write a single, fluent Czech phrase that naturally incorporates all information from the question–answer pair.
+2. Decompose the phrase into semantic triplets in the format: `Subject | predicate | Object`, where each triplet captures one distinct fact. Triplets should be in English.
+
+Output format:
+
+```xml
+<phrase>The fluent Czech phrase combining all facts.</phrase>
+<mtriple>Subject | predicate | Object </mtriple>
+<mtriple>Subject | predicate | Object </mtriple>
+<mtriple>Subject | predicate | Object </mtriple>
+...
+```
+
+Rules:
+
+- Predicates must be in English, concise, and in camelCase (e.g., `foundingDate`, `numberOfEmployees`).
+- Subjects and objects have to be in the original language (Czech).
+- Normalize values in triplets: dates -> `YYYY-MM-DD`, multi-word names → `Snake_Case_With_Underscores`, numbers -> digits only (e.g., `29000` not `29,000`).
+- The original Czech phrase should be reconstructable from the triplets alone.
+- Output ONLY the result, nothing else.
+
+The input:

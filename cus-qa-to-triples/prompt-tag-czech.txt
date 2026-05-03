@@ -1,0 +1,22 @@
+Dostaneš větu v češtině a seznam slov, tvým úkolem je vypsat seznam slov a co znamenají na základě této věty.
+
+Používej tyto tagy:
+
+{member_types}
+
+Pravidla:
+1) Slovo vypiš pouze v případě, že sedí na některou z kategorií. Jinak ho vynech.
+3) Slovo vypiš stejně, jako bylo zadáno.
+2) Vypiš pouze odpověď, nic jiného.
+
+Například:
+
+Vstup:
+Věta: Život a tvorba Jana Nerudy je spojena s Malou Stranou.
+Slova: Jan_Neruda, Malá_Strana
+
+Tvoje odpověď:
+Jan_Neruda : jmeno_cloveka
+Malá_Strana : misto
+
+Vstup:
