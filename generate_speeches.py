@@ -9,7 +9,7 @@ from api_caller import call_api
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--model", default="qwen3.5-122b", type=str, help="Model name.")
-parser.add_argument("--dataset", default="webnlg", type=str, help="Dataset name (e.g. webnlg, cus-qa).")
+parser.add_argument("--dataset", default="webnlg", type=str, help="Dataset name (e.g. webnlg, cs-qa).")
 parser.add_argument("--variant", default="cf", choices=["cf", "fa", "fi"], type=str, help="Dataset variant: cf=counterfactual, fa=factual, fi=fictional.")
 parser.add_argument("--kind", default="modified", type=str, help="Value of the 'kind' column to filter on.")
 parser.add_argument("--language", default="en", type=str, help="Prompt language (e.g. en, cs).")
