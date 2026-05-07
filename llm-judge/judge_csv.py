@@ -13,7 +13,7 @@ from webnlg_utils import (
     judge_output_path,
     judge_row,
     load_env_defaults,
-    sanitize_identifier,
+    source_identity,
     write_judge_records,
 )
 
@@ -37,9 +37,9 @@ def parse_sample_size(value: str) -> int | str:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run LLM-as-judge on WebNLG sentence CSVs.")
+    parser = argparse.ArgumentParser(description="Run LLM-as-judge on generated sentence CSVs.")
     parser.add_argument("csv", type=str, help="Path to sentences CSV")
-    parser.add_argument("--xml", type=str, default=None, help="Path to matching GEM XML")
+    parser.add_argument("--xml", type=str, default=None, help="Path to matching XML or flat CSV with source triples")
     parser.add_argument(
         "--sample-size",
         type=parse_sample_size,
@@ -64,7 +64,7 @@ def main() -> None:
 
     csv_path = Path(args.csv).resolve()
     source_label = args.label or csv_path.stem
-    source_id = sanitize_identifier(source_label)
+    source_id = source_identity(csv_path, label=source_label)
     source = SourceSpec(label=source_label, csv_path=csv_path, source_id=source_id)
 
     enriched = enrich_sentences(csv_path, args.xml)
@@ -82,7 +82,10 @@ def main() -> None:
     if args.limit is not None:
         sampled = sampled.head(args.limit)
 
-    results: list[dict] = []
+    out_path = judge_output_path(source.csv_path, args.model, args.output_dir)
+    if args.force and out_path.exists():
+        out_path.unlink()
+
     for _, row in sampled.iterrows():
         result = judge_row(
             row,
@@ -93,12 +96,10 @@ def main() -> None:
             max_tokens=args.max_tokens,
             dry_run=args.dry_run,
         )
-        results.append(result)
+        write_judge_records(path=out_path, records=[result], overwrite=False)
         print(f"judged {row['eid']}")
 
-    out_path = judge_output_path(source.csv_path.stem, args.model, args.output_dir)
-    write_judge_records(path=out_path, records=results, overwrite=args.force)
-    print(f"wrote {len(results)} judged rows to {out_path}")
+    print(f"wrote {len(sampled)} judged rows to {out_path}")
 
 
 if __name__ == "__main__":

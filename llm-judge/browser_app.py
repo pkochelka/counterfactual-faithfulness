@@ -23,8 +23,6 @@ from webnlg_utils import (
     build_annotation_summary,
     build_judge_prompt,
     enrich_sentences,
-    infer_default_flat_csv_path,
-    infer_default_xml_path,
     judge_output_path,
     judge_row,
     latest_annotation_map,
@@ -107,17 +105,27 @@ def repo_root() -> Path:
 
 
 def default_output_text() -> str:
-    default_csv = repo_root() / "sentences_webnlg_cf_qwen3.5-122b.csv"
-    return str(default_csv)
+    return "\n".join(
+        [
+            "data/generated/gpt-oss-120b/webnlg_cf_cs.csv",
+            "data/generated/gpt-oss-120b/webnlg_cf_en.csv",
+            "data/generated/gpt-oss-120b/webnlg_cf_sk.csv",
+        ]
+    )
 
 
 def default_fa_output_text() -> str:
-    default_csv = repo_root() / "sentences_webnlg_fa_qwen3.5-122b.csv"
-    return str(default_csv)
+    return "\n".join(
+        [
+            "data/generated/gpt-oss-120b/webnlg_fa_cs.csv",
+            "data/generated/gpt-oss-120b/webnlg_fa_en.csv",
+            "data/generated/gpt-oss-120b/webnlg_fa_sk.csv",
+        ]
+    )
 
 
 def dataset_presets() -> dict[str, dict[str, str]]:
-    data_root = repo_root() / "data"
+    data_root = Path("data")
     xml_root = data_root / "GEM-v2-D2T-SharedTask"
     return {
         "CF preset": {
@@ -129,15 +137,35 @@ def dataset_presets() -> dict[str, dict[str, str]]:
             "outputs_text": default_fa_output_text(),
         },
         "CSV CF preset": {
-            "dataset_path": str(data_root / "webnlg_cf.csv"),
+            "dataset_path": str(data_root / "webnlg" / "cf.csv"),
             "outputs_text": default_output_text(),
         },
         "CSV FA preset": {
-            "dataset_path": str(data_root / "webnlg_fa.csv"),
+            "dataset_path": str(data_root / "webnlg" / "fa.csv"),
             "outputs_text": default_fa_output_text(),
         },
+        "CS-QA CF preset": {
+            "dataset_path": str(data_root / "cs-qa" / "cf.csv"),
+            "outputs_text": "\n".join(
+                [
+                    str(data_root / "generated" / "gpt-oss-120b" / "cs-qa_cf_cs.csv"),
+                    str(data_root / "generated" / "gpt-oss-120b" / "cs-qa_cf_en.csv"),
+                    str(data_root / "generated" / "gpt-oss-120b" / "cs-qa_cf_sk.csv"),
+                ]
+            ),
+        },
+        "CS-QA FA preset": {
+            "dataset_path": str(data_root / "cs-qa" / "fa.csv"),
+            "outputs_text": "\n".join(
+                [
+                    str(data_root / "generated" / "gpt-oss-120b" / "cs-qa_fa_cs.csv"),
+                    str(data_root / "generated" / "gpt-oss-120b" / "cs-qa_fa_en.csv"),
+                    str(data_root / "generated" / "gpt-oss-120b" / "cs-qa_fa_sk.csv"),
+                ]
+            ),
+        },
         "Custom": {
-            "dataset_path": str(infer_default_xml_path()),
+            "dataset_path": "data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml",
             "outputs_text": default_output_text(),
         },
     }
@@ -171,7 +199,7 @@ def annotation_cache_signature(
 
     for _label, csv_path, _source_id in source_specs:
         stem = Path(csv_path).stem
-        for path in sorted(output_root.glob(f"judge_{stem}_*.jsonl")):
+        for path in sorted(output_root.glob(f"**/judge_{stem}_*.jsonl")):
             try:
                 signature.append((str(path.resolve()), path.stat().st_mtime))
             except FileNotFoundError:
@@ -564,7 +592,7 @@ def _execute_batch_job(
                     completed_jobs += 1
                     try:
                         record = future.result()
-                        out_path = judge_output_path(spec.csv_path.stem, judge_model, output_dir)
+                        out_path = judge_output_path(spec.csv_path, judge_model, output_dir)
                         write_judge_records(path=out_path, records=[record], overwrite=overwrite)
                         written += 1
                         status_message = f"Judged {payload['eid']} from {spec.label} ({completed_jobs}/{len(queued_jobs)})"
@@ -833,9 +861,8 @@ st.caption("Browse modified triples, compare model outputs, and manage judge ann
 if "batch_row_limit" not in st.session_state:
     st.session_state["batch_row_limit"] = 0
 
-default_xml = str(infer_default_xml_path())
-default_flat_csv = str(infer_default_flat_csv_path())
-default_output_dir = str(repo_root() / DEFAULT_OUTPUT_DIR)
+default_xml = "data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml"
+default_output_dir = str(DEFAULT_OUTPUT_DIR)
 presets = dataset_presets()
 dataset_preset_options = list(presets.keys())
 stored_dataset_preset = st.session_state.get("dataset_preset", "CF preset")
@@ -862,7 +889,7 @@ with st.sidebar:
     dataset_path = st.text_input(
         "Dataset XML or CSV path",
         value=st.session_state.get("dataset_path", presets[selected_dataset_preset]["dataset_path"] if selected_dataset_preset in presets else default_xml),
-        help="Supports either the original XML benchmark file or the CSV produced from it, such as data/webnlg_cf.csv.",
+        help="Supports either the original XML benchmark file or the CSV produced from it, such as data/webnlg/cf.csv.",
     )
     st.session_state["dataset_path"] = dataset_path
     st.caption("CSV can be created with `xml2csv.py`. Using the XML or the corresponding CSV should give the same dataset content in this app.")
@@ -1305,7 +1332,7 @@ with right:
                 judge_model=judge_model,
                 auth_token=auth_token,
                 max_tokens=int(judge_max_tokens),
-                output_path=judge_output_path(spec.csv_path.stem, judge_model, output_dir),
+                output_path=judge_output_path(spec.csv_path, judge_model, output_dir),
                 overwrite=overwrite_existing,
             )
 

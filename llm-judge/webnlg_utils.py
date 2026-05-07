@@ -17,7 +17,7 @@ import requests
 DEFAULT_JUDGE_MODEL = "openrouter/free"
 DEFAULT_JUDGE_MAX_TOKENS = 5000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
-DEFAULT_OUTPUT_DIR = Path("llm-judge") / "outputs"
+DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
@@ -44,6 +44,39 @@ class SourceSpec:
     label: str
     csv_path: Path
     source_id: str
+
+
+def source_namespace(source_path: str | Path) -> str | None:
+    path = Path(source_path).resolve()
+    parts = path.parts
+    if "generated" in parts:
+        index = parts.index("generated")
+        if index + 1 < len(parts):
+            return sanitize_identifier(parts[index + 1])
+    return None
+
+
+def source_identity(source_path: str | Path, *, label: str | None = None) -> str:
+    path = Path(source_path).resolve()
+    base = label or path.stem
+    namespace = source_namespace(path)
+    if namespace:
+        return sanitize_identifier(f"{namespace}__{base}")
+    return sanitize_identifier(base)
+
+
+def source_dataset_variant(source_path: str | Path) -> tuple[str | None, str | None]:
+    stem = Path(source_path).stem
+    if stem.startswith("sentences_"):
+        stem = stem.removeprefix("sentences_")
+
+    parts = stem.split("_")
+    if len(parts) < 2:
+        return None, None
+
+    dataset = sanitize_identifier(parts[0])
+    variant = sanitize_identifier(parts[1])
+    return dataset, variant
 
 
 def parse_triple(text: str) -> tuple[str, str, str]:
@@ -98,7 +131,11 @@ def load_env_defaults() -> None:
             os.environ.setdefault(key, value)
 
 
-def parse_xml_entries(xml_path: str | Path) -> dict[str, EntryData]:
+def parse_xml_entries(
+    xml_path: str | Path,
+    *,
+    triple_xpath: str = "modifiedtripleset/mtriple",
+) -> dict[str, EntryData]:
     tree = ET.parse(str(xml_path))
     root = tree.getroot()
 
@@ -113,7 +150,7 @@ def parse_xml_entries(xml_path: str | Path) -> dict[str, EntryData]:
         }
 
         modified_triples: list[tuple[str, str, str]] = []
-        for triple_elem in entry.findall("modifiedtripleset/mtriple"):
+        for triple_elem in entry.findall(triple_xpath):
             if triple_elem.text:
                 modified_triples.append(parse_triple(triple_elem.text))
 
@@ -139,21 +176,50 @@ def infer_xml_path(sentences_csv: str | Path) -> Path:
         filename = "D2T-1-FA_WebNLG_Factual.xml"
     elif "webnlg_fi" in stem:
         filename = "D2T-1-FI_WebNLG_Fictional.xml"
+    elif "cs-qa_cf" in stem:
+        filename = "CounterFactual-triples.xml"
+    elif "cs-qa_fa" in stem:
+        filename = "Factual-triples.xml"
     else:
         raise ValueError(
             f"Cannot infer XML path from {csv_path.name!r}; pass an XML path explicitly."
         )
 
-    candidates = [
-        csv_path.parent / "GEM-v2-D2T-SharedTask" / filename,
-        csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / filename,
-        csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / filename,
-    ]
+    if filename.endswith(".xml") and filename.startswith("CounterFactual"):
+        candidates = [
+            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / filename,
+            repo_root() / "cus-qa-to-triples" / "data" / filename,
+            csv_path.parent / "cus-qa-to-triples" / "data" / filename,
+            csv_path.parent / "data" / "cus-qa-to-triples" / "data" / filename,
+        ]
+    elif filename.endswith(".xml") and filename.startswith("Factual"):
+        candidates = [
+            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / filename,
+            repo_root() / "cus-qa-to-triples" / "data" / filename,
+            csv_path.parent / "cus-qa-to-triples" / "data" / filename,
+            csv_path.parent / "data" / "cus-qa-to-triples" / "data" / filename,
+        ]
+    else:
+        candidates = [
+            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / filename,
+            csv_path.parent / "GEM-v2-D2T-SharedTask" / filename,
+            csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / filename,
+            csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / filename,
+        ]
     for xml_path in candidates:
         if xml_path.exists():
             return xml_path
 
     raise FileNotFoundError(candidates[0])
+
+
+def infer_triple_xpath(source_path: str | Path) -> str:
+    path = Path(source_path)
+    stem = path.stem.lower()
+    name = path.name.lower()
+    if "cs-qa" in stem or name in {"factual-triples.xml", "counterfactual-triples.xml"}:
+        return "originaltripleset/otriple"
+    return "modifiedtripleset/mtriple"
 
 
 def infer_default_xml_path() -> Path:
@@ -173,7 +239,11 @@ def infer_default_flat_csv_path() -> Path:
     )
 
 
-def load_entry_table_from_flat_csv(dataset_csv: str | Path) -> pd.DataFrame:
+def load_entry_table_from_flat_csv(
+    dataset_csv: str | Path,
+    *,
+    kind_value: str = "modified",
+) -> pd.DataFrame:
     frame = pd.read_csv(dataset_csv)
     if frame.empty:
         return pd.DataFrame()
@@ -185,8 +255,8 @@ def load_entry_table_from_flat_csv(dataset_csv: str | Path) -> pd.DataFrame:
             f"{Path(dataset_csv).name} is missing required columns: {', '.join(missing)}"
         )
 
-    modified = frame[frame["kind"].astype(str) == "modified"].copy()
-    if modified.empty:
+    subset = frame[frame["kind"].astype(str) == kind_value].copy()
+    if subset.empty:
         return pd.DataFrame(
             columns=[
                 "eid",
@@ -202,7 +272,7 @@ def load_entry_table_from_flat_csv(dataset_csv: str | Path) -> pd.DataFrame:
         )
 
     rows: list[dict[str, Any]] = []
-    for eid, group in modified.groupby("eid", sort=False):
+    for eid, group in subset.groupby("eid", sort=False):
         triples = [
             (str(row["subject"]), str(row["predicate"]), str(row["object"]))
             for _, row in group.iterrows()
@@ -225,8 +295,12 @@ def load_entry_table_from_flat_csv(dataset_csv: str | Path) -> pd.DataFrame:
     return pd.DataFrame(rows).sort_values("eid").reset_index(drop=True)
 
 
-def load_entry_table(xml_path: str | Path) -> pd.DataFrame:
-    entries = parse_xml_entries(xml_path)
+def load_entry_table(
+    xml_path: str | Path,
+    *,
+    triple_xpath: str = "modifiedtripleset/mtriple",
+) -> pd.DataFrame:
+    entries = parse_xml_entries(xml_path, triple_xpath=triple_xpath)
     rows = []
     for entry in entries.values():
         rows.append(
@@ -266,9 +340,14 @@ def load_sentence_table(sentences_csv: str | Path) -> pd.DataFrame:
 def enrich_sentences(sentences_csv: str | Path, xml_path: str | Path | None = None) -> pd.DataFrame:
     csv_path = Path(sentences_csv)
     resolved_xml_path = Path(xml_path) if xml_path is not None else infer_xml_path(csv_path)
+    triple_xpath = infer_triple_xpath(resolved_xml_path if xml_path is not None else csv_path)
 
     sentence_df = load_sentence_table(csv_path)
-    entries = load_entry_table(resolved_xml_path)
+    if resolved_xml_path.suffix.lower() == ".csv":
+        kind_value = "original" if triple_xpath == "originaltripleset/otriple" else "modified"
+        entries = load_entry_table_from_flat_csv(resolved_xml_path, kind_value=kind_value)
+    else:
+        entries = load_entry_table(resolved_xml_path, triple_xpath=triple_xpath)
     if entries.empty:
         return entries
 
@@ -299,7 +378,7 @@ def parse_source_specs(raw_text: str) -> list[SourceSpec]:
         csv_path = Path(path_text).expanduser()
         resolved = csv_path.resolve()
         source_label = label or resolved.stem
-        base_source_id = sanitize_identifier(source_label or resolved.stem)
+        base_source_id = source_identity(resolved, label=source_label)
         source_id_count = used_source_ids.get(base_source_id, 0)
         used_source_ids[base_source_id] = source_id_count + 1
         source_id = base_source_id if source_id_count == 0 else f"{base_source_id}_{source_id_count + 1}"
@@ -321,6 +400,7 @@ def load_output_source(spec: SourceSpec) -> pd.DataFrame:
     table["source_path"] = str(spec.csv_path)
     table["source_stem"] = spec.csv_path.stem
     table["source_id"] = spec.source_id
+    table["source_namespace"] = source_namespace(spec.csv_path)
     return table
 
 
@@ -412,9 +492,15 @@ def extract_json(text: str) -> dict[str, Any]:
     raise ValueError(f"Judge response did not contain complete JSON: {text}")
 
 
-def judge_output_path(source_stem: str, judge_model: str, output_dir: str | Path = DEFAULT_OUTPUT_DIR) -> Path:
+def judge_output_path(source_path: str | Path, judge_model: str, output_dir: str | Path = DEFAULT_OUTPUT_DIR) -> Path:
     safe_model = judge_model.replace("/", "_")
-    return Path(output_dir) / f"judge_{source_stem}_{safe_model}.jsonl"
+    path = Path(source_path)
+    filename = f"judge_{path.stem}_{safe_model}.jsonl"
+    namespace = source_namespace(path)
+    output_path = Path(output_dir)
+    if namespace:
+        output_path = output_path / namespace
+    return output_path / filename
 
 
 def adhoc_output_path(dataset_name: str, judge_model: str, output_dir: str | Path = DEFAULT_OUTPUT_DIR) -> Path:
@@ -739,8 +825,17 @@ def load_annotations_for_sources(
     frames: list[pd.DataFrame] = []
     output_root = Path(output_dir)
     for spec in source_specs:
+        namespace = source_namespace(spec.csv_path)
         pattern = f"judge_{spec.csv_path.stem}_*.jsonl"
-        for path in sorted(output_root.glob(pattern)):
+        candidate_paths: list[Path] = []
+        if namespace:
+            namespaced_root = output_root / namespace
+            if namespaced_root.exists():
+                candidate_paths = sorted(namespaced_root.rglob(pattern))
+        if not candidate_paths:
+            candidate_paths = sorted(output_root.rglob(pattern))
+
+        for path in candidate_paths:
             frame = records_to_annotation_frame(load_jsonl_records(path))
             if frame.empty:
                 continue

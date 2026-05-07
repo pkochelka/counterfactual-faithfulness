@@ -14,7 +14,7 @@ cd /path/to/counterfactual-faithfulness
 - `judge_csv.py`: command-line judge runner for sentence CSV files.
 - `webnlg_utils.py`: shared XML/CSV loading, prompt building, API calls, annotation loading, and JSONL writing.
 - `runtime_state.py`: in-memory Streamlit background-batch state.
-- `outputs/`: local judge JSONL outputs. This directory is ignored by git.
+- `data/judged/`: local judge JSONL outputs. This directory is ignored by git.
 
 ## Expected files
 
@@ -31,9 +31,9 @@ data/GEM-v2-D2T-SharedTask/D2T-1-FI_WebNLG_Fictional.xml
 Optional flat CSVs from `xml2csv.py`:
 
 ```text
-data/webnlg_cf.csv
-data/webnlg_fa.csv
-data/webnlg_fi.csv
+data/webnlg/cf.csv
+data/webnlg/fa.csv
+data/webnlg/fi.csv
 ```
 
 Generated sentence CSVs must contain at least:
@@ -42,14 +42,14 @@ Generated sentence CSVs must contain at least:
 eid,sentence
 ```
 
-Typical generated files live at the repo root, for example:
+Typical generated files live under `data/generated/<model>/`, for example:
 
 ```text
-sentences_webnlg_cf_qwen3.5-122b.csv
-sentences_webnlg_fa_qwen3.5-122b.csv
+data/generated/qwen3.5-122b/webnlg_cf_cs.csv
+data/generated/qwen3.5-122b/webnlg_fa_cs.csv
 ```
 
-Generated sentence CSVs, text exports, `data/`, and `llm-judge/outputs/` are ignored by git.
+Generated sentence CSVs, text exports, `data/`, and `data/judged/` are ignored by git.
 
 ## Environment
 
@@ -91,13 +91,13 @@ Convert a GEM XML file to a flat CSV:
 
 ```bash
 python xml2csv.py data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml \
-  --output data/webnlg_cf.csv
+  --output data/webnlg/cf.csv
 ```
 
 Generate model sentences:
 
 ```bash
-python generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg_cf"
+python generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg" --variant "cf" --language "cs"
 ```
 
 The judge can also read existing sentence CSVs directly as long as they have `eid,sentence`.
@@ -123,7 +123,7 @@ In the sidebar:
 - Keep the default annotation directory unless you need a custom location:
 
 ```text
-llm-judge/outputs
+data/judged
 ```
 
 Batch judging uses the current filtered entries and currently visible outputs. Existing annotations are skipped by default for the selected judge model. `Batch row limit` means the number of non-skipped judge calls to run; already-judged skipped rows do not count against the limit. `0` means no limit.
@@ -133,7 +133,7 @@ Batch judging uses the current filtered entries and currently visible outputs. E
 Dry-run one prompt without calling the API:
 
 ```bash
-python llm-judge/judge_csv.py sentences_webnlg_cf_qwen3.5-122b.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size 1 \
   --head \
   --dry-run \
@@ -143,20 +143,20 @@ python llm-judge/judge_csv.py sentences_webnlg_cf_qwen3.5-122b.csv \
 Judge the first 20 rows:
 
 ```bash
-python llm-judge/judge_csv.py sentences_webnlg_cf_qwen3.5-122b.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model openai/gpt-5.2 \
-  --output-dir llm-judge/outputs
+  --output-dir data/judged
 ```
 
 Judge the whole CSV:
 
 ```bash
-python llm-judge/judge_csv.py sentences_webnlg_cf_qwen3.5-122b.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size all \
   --model openai/gpt-5.2 \
-  --output-dir llm-judge/outputs
+  --output-dir data/judged
 ```
 
 Pass an explicit XML file when inference from the CSV filename is not enough:
@@ -165,10 +165,11 @@ Pass an explicit XML file when inference from the CSV filename is not enough:
 python llm-judge/judge_csv.py custom_sentences.csv \
   --xml data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml \
   --sample-size 20 \
-  --output-dir llm-judge/outputs
+  --output-dir data/judged
 ```
 
 Use `--force` to rewrite existing annotation rows for the same `eid`, source, and judge model in the output JSONL file.
+By default, the CLI appends each judged row to disk immediately, so stopping the process midway still preserves already completed rows. With `--force`, the target JSONL file is cleared before the run starts.
 
 Useful CLI arguments:
 
@@ -180,7 +181,7 @@ Useful CLI arguments:
 - `--limit 50`
 - `--model openai/gpt-5.2`
 - `--max-tokens 5000`
-- `--output-dir llm-judge/outputs`
+- `--output-dir data/judged`
 - `--label custom_source_name`
 - `--force`
 - `--dry-run`
@@ -190,7 +191,13 @@ Useful CLI arguments:
 Judge outputs are JSONL files written under:
 
 ```text
-llm-judge/outputs/
+data/judged/
+```
+
+Typical layout:
+
+```text
+data/judged/<generator-model>/judge_<source-stem>_<judge-model>.jsonl
 ```
 
 Typical filename pattern:
