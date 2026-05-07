@@ -492,6 +492,17 @@ def extract_json(text: str) -> dict[str, Any]:
     raise ValueError(f"Judge response did not contain complete JSON: {text}")
 
 
+def normalize_usage_payload(usage: dict[str, Any] | None) -> dict[str, Any]:
+    usage = usage or {}
+    return {
+        "prompt_tokens": usage.get("prompt_tokens"),
+        "completion_tokens": usage.get("completion_tokens"),
+        "total_tokens": usage.get("total_tokens"),
+        "cost": usage.get("cost"),
+        "is_byok": usage.get("is_byok"),
+    }
+
+
 def judge_output_path(source_path: str | Path, judge_model: str, output_dir: str | Path = DEFAULT_OUTPUT_DIR) -> Path:
     safe_model = judge_model.replace("/", "_")
     path = Path(source_path)
@@ -620,6 +631,7 @@ def request_judge(
     usage = payload.get("usage") if isinstance(payload, dict) else None
     if not isinstance(usage, dict):
         usage = {}
+    usage = normalize_usage_payload(usage)
     response_meta = {
         "response_model": payload.get("model") if isinstance(payload, dict) else None,
         "provider": payload.get("provider") if isinstance(payload, dict) else None,

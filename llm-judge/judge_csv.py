@@ -8,6 +8,7 @@ from webnlg_utils import (
     DEFAULT_JUDGE_MODEL,
     DEFAULT_JUDGE_MAX_TOKENS,
     DEFAULT_OUTPUT_DIR,
+    JudgeRequestError,
     SourceSpec,
     enrich_sentences,
     judge_output_path,
@@ -86,20 +87,29 @@ def main() -> None:
     if args.force and out_path.exists():
         out_path.unlink()
 
+    failures = 0
     for _, row in sampled.iterrows():
-        result = judge_row(
-            row,
-            source_label=source.label,
-            source_path=str(source.csv_path),
-            source_id=source.source_id,
-            judge_model=args.model,
-            max_tokens=args.max_tokens,
-            dry_run=args.dry_run,
-        )
-        write_judge_records(path=out_path, records=[result], overwrite=False)
-        print(f"judged {row['eid']}")
+        try:
+            result = judge_row(
+                row,
+                source_label=source.label,
+                source_path=str(source.csv_path),
+                source_id=source.source_id,
+                judge_model=args.model,
+                max_tokens=args.max_tokens,
+                dry_run=args.dry_run,
+            )
+            write_judge_records(path=out_path, records=[result], overwrite=False)
+            print(f"judged {row['eid']}")
+        except JudgeRequestError as exc:
+            failures += 1
+            print(f"failed {row['eid']}: {exc}", file=sys.stderr)
+            continue
 
-    print(f"wrote {len(sampled)} judged rows to {out_path}")
+    if failures:
+        print(f"completed with {failures} failures; wrote judged rows to {out_path}", file=sys.stderr)
+    else:
+        print(f"wrote {len(sampled)} judged rows to {out_path}")
 
 
 if __name__ == "__main__":
