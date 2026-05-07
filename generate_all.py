@@ -2,13 +2,17 @@ import os
 import subprocess
 import sys
 
-DATASETS = ["webnlg", "cs-qa"]
+DATASETS = ["webnlg", "cs-qa", "sk-qa"]
 VARIANTS = ["cf", "fa", "fi"]
 LANGUAGES = ["en", "cs", "sk"]
 MODELS = ["gpt-oss-120b", "qwen3.5-122b"]
 
 DATASET_CONFIG = {
     "cs-qa": {
+        "excluded_variants": {"fi"},
+        "extra_args": ["--kind", "original"],
+    },
+    "sk-qa": {
         "excluded_variants": {"fi"},
         "extra_args": ["--kind", "original"],
     },

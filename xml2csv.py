@@ -51,7 +51,7 @@ def load_xml(path: str) -> pd.DataFrame:
     return df
 
 
-DATASETS = ["webnlg", "cs-qa"]
+DATASETS = ["webnlg", "cs-qa", "sk-qa"]
 VARIANTS = ["fi", "fa", "cf"]
 
 if __name__ == "__main__":
