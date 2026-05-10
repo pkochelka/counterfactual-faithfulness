@@ -13,6 +13,7 @@ import streamlit as st
 import os
 
 from webnlg_utils import (
+    DEFAULT_JUDGE_API_URL,
     DEFAULT_JUDGE_MODEL,
     DEFAULT_JUDGE_MAX_TOKENS,
     DEFAULT_OUTPUT_DIR,
@@ -32,6 +33,8 @@ from webnlg_utils import (
     load_entry_table_from_flat_csv,
     load_env_defaults,
     load_output_sources,
+    judge_api_url_from_env,
+    normalize_judge_api_url,
     parse_source_specs,
     sanitize_identifier,
     write_judge_records,
@@ -337,19 +340,28 @@ def joined_output_rows(entries_df: pd.DataFrame, outputs_df: pd.DataFrame) -> pd
     return entries_df.merge(outputs_df, how="inner", on="eid")
 
 
-def annotations_for_selected_model(frame: pd.DataFrame, judge_model: str) -> pd.DataFrame:
+def annotations_for_selected_model(frame: pd.DataFrame, judge_model: str, judge_api_url: str) -> pd.DataFrame:
     if frame.empty:
         return frame
 
     requested = frame.get("requested_judge_model")
     actual = frame.get("judge_model")
+    requested_api_url = frame.get("requested_judge_api_url")
 
     if requested is None and actual is None:
         return frame.iloc[0:0].copy()
 
     requested_values = requested.fillna("").astype(str) if requested is not None else pd.Series("", index=frame.index)
     actual_values = actual.fillna("").astype(str) if actual is not None else pd.Series("", index=frame.index)
-    mask = (requested_values == judge_model) | ((requested_values == "") & (actual_values == judge_model))
+    model_mask = (requested_values == judge_model) | ((requested_values == "") & (actual_values == judge_model))
+    if requested_api_url is None:
+        api_mask = pd.Series(judge_api_url == DEFAULT_JUDGE_API_URL, index=frame.index)
+    else:
+        api_values = requested_api_url.fillna("").astype(str).map(
+            lambda value: normalize_judge_api_url(value) if value else DEFAULT_JUDGE_API_URL
+        )
+        api_mask = api_values == judge_api_url
+    mask = model_mask & api_mask
     return frame[mask].copy()
 
 
@@ -455,6 +467,7 @@ def run_single_judge(
     source_id: str,
     judge_model: str,
     auth_token: str,
+    api_url: str,
     max_tokens: int,
     output_path: Path,
     overwrite: bool,
@@ -467,6 +480,7 @@ def run_single_judge(
             source_id=source_id,
             judge_model=judge_model,
             auth_token=auth_token,
+            api_url=api_url,
             max_tokens=max_tokens,
         )
         write_judge_records(path=output_path, records=[record], overwrite=overwrite)
@@ -518,6 +532,7 @@ def _execute_batch_job(
     existing_annotations: dict[tuple[str, str], dict[str, Any]],
     judge_model: str,
     auth_token: str,
+    api_url: str,
     max_tokens: int,
     output_dir: str,
     overwrite: bool,
@@ -564,6 +579,7 @@ def _execute_batch_job(
             source_id=spec.source_id,
             judge_model=judge_model,
             auth_token=auth_token,
+            api_url=api_url,
             max_tokens=max_tokens,
         )
 
@@ -659,6 +675,7 @@ def start_batch_job(
     existing_annotations: dict[tuple[str, str], dict[str, Any]],
     judge_model: str,
     auth_token: str,
+    api_url: str,
     max_tokens: int,
     output_dir: str,
     overwrite: bool,
@@ -678,6 +695,7 @@ def start_batch_job(
             "failed": 0,
             "failures": [],
             "judge_model": judge_model,
+            "judge_api_url": api_url,
             "status_message": "Starting batch job.",
             "cancel_requested": False,
             "cancel_event": threading.Event(),
@@ -693,6 +711,7 @@ def start_batch_job(
             "existing_annotations": dict(existing_annotations),
             "judge_model": judge_model,
             "auth_token": auth_token,
+            "api_url": api_url,
             "max_tokens": max_tokens,
             "output_dir": output_dir,
             "overwrite": overwrite,
@@ -723,6 +742,7 @@ def render_active_batch_panel() -> None:
             "failed": job.get("failed", 0),
             "failures": job.get("failures", []),
             "judge_model": job.get("judge_model"),
+            "judge_api_url": job.get("judge_api_url"),
         }
         st.session_state["active_batch_job_id"] = None
         clear_active_batch_job(job_id)
@@ -748,6 +768,7 @@ def render_active_batch_panel() -> None:
     failed = int(job.get("failed", 0))
 
     st.info(f"Active batch judge: {job.get('judge_model', 'unknown model')}")
+    st.caption(f"Endpoint: {job.get('judge_api_url', DEFAULT_JUDGE_API_URL)}")
     live_cols = st.columns(4, gap="small")
     live_cols[0].metric("Completed", f"{completed_jobs}/{total_jobs}" if total_jobs else "0/0")
     live_cols[1].metric("Written", written)
@@ -906,6 +927,12 @@ with st.sidebar:
 
     st.header("Judge Settings")
     judge_model = st.text_input("Judge model", value=st.session_state.get("judge_model", DEFAULT_JUDGE_MODEL))
+    judge_api_url_input = st.text_input(
+        "Judge API base URL or chat endpoint",
+        value=st.session_state.get("judge_api_url", judge_api_url_from_env()),
+        help="Accepts an OpenAI-compatible base URL such as https://api.openai.com/v1, or a full /chat/completions URL.",
+    )
+    judge_api_url = normalize_judge_api_url(judge_api_url_input)
     judge_max_tokens = st.number_input(
         "Judge max tokens",
         min_value=256,
@@ -938,6 +965,7 @@ with st.sidebar:
         help="When enabled, batch skip checks only look at annotations created with the current Judge model setting. Results from other judge models do not count as existing.",
     )
     st.session_state["judge_model"] = judge_model
+    st.session_state["judge_api_url"] = judge_api_url_input
     st.session_state["judge_max_tokens"] = int(judge_max_tokens)
     st.session_state["judge_auth_token"] = auth_token
     st.session_state["output_dir"] = output_dir
@@ -1046,8 +1074,10 @@ annotation_signature = annotation_cache_signature(output_dir, source_spec_tuple,
 annotations_df = cached_annotations(output_dir, source_spec_tuple, annotation_signature)
 adhoc_annotations_df = cached_adhoc_annotations(output_dir, adhoc_dataset_name, annotation_signature)
 annotation_map = latest_annotation_map(annotations_df)
-adhoc_map = latest_annotation_map(adhoc_annotations_df)
-selected_model_annotation_map = latest_annotation_map(annotations_for_selected_model(annotations_df, judge_model))
+selected_model_annotation_map = latest_annotation_map(annotations_for_selected_model(annotations_df, judge_model, judge_api_url))
+selected_adhoc_annotation_map = latest_annotation_map(
+    annotations_for_selected_model(adhoc_annotations_df, judge_model, judge_api_url)
+)
 
 merged_outputs = joined_output_rows(entries_df, outputs_df)
 visible_outputs = merged_outputs[merged_outputs["source_id"].isin(list(visible_source_ids))] if not merged_outputs.empty else merged_outputs
@@ -1150,7 +1180,7 @@ with st.sidebar:
     if int(batch_row_limit) > 0:
         st.caption(f"Batch row limit is active: up to {int(batch_row_limit)} non-skipped rows will be judged.")
     if skip_selected_model_existing:
-        st.caption("Existing counts are checked only against annotations from the currently selected judge model.")
+        st.caption("Existing counts are checked only against annotations from the currently selected judge model and endpoint.")
     else:
         st.caption("Skip checks are disabled. To replace same-model annotations cleanly, also enable overwrite.")
     if active_batch_job_id:
@@ -1177,6 +1207,7 @@ with st.sidebar:
                     existing_annotations=batch_existing_lookup,
                     judge_model=judge_model,
                     auth_token=auth_token,
+                    api_url=judge_api_url,
                     max_tokens=int(judge_max_tokens),
                     output_dir=output_dir,
                     overwrite=overwrite_existing,
@@ -1212,6 +1243,7 @@ context_cols = st.columns(5)
 context_cols[0].metric("Loaded outputs", len(source_specs))
 context_cols[1].metric("Visible outputs", len(visible_source_ids))
 context_cols[2].metric("Judge model", judge_model)
+st.caption(f"Judge endpoint: {judge_api_url}")
 context_cols[3].metric("Overall spend", f"${overall_spend:.4f}")
 context_cols[4].metric("Browser spend", f"${browser_spend:.4f}")
 
@@ -1316,7 +1348,7 @@ with right:
                         unsafe_allow_html=True,
                     )
 
-                    record = annotation_map.get(annotation_lookup_key(selected_entry["eid"], spec.source_id))
+                    record = selected_model_annotation_map.get(annotation_lookup_key(selected_entry["eid"], spec.source_id))
                     render_annotation(record)
                     render_prompt(build_judge_prompt(detail_row))
 
@@ -1327,14 +1359,15 @@ with right:
                             run_single_judge(
                                 row=detail_row,
                                 source_label=spec.label,
-                source_path=str(spec.csv_path),
-                source_id=spec.source_id,
-                judge_model=judge_model,
-                auth_token=auth_token,
-                max_tokens=int(judge_max_tokens),
-                output_path=judge_output_path(spec.csv_path, judge_model, output_dir),
-                overwrite=overwrite_existing,
-            )
+                                source_path=str(spec.csv_path),
+                                source_id=spec.source_id,
+                                judge_model=judge_model,
+                                auth_token=auth_token,
+                                api_url=judge_api_url,
+                                max_tokens=int(judge_max_tokens),
+                                output_path=judge_output_path(spec.csv_path, judge_model, output_dir),
+                                overwrite=overwrite_existing,
+                            )
 
     st.subheader("Ad Hoc Judge")
     adhoc_key = f"adhoc_sentence_{selected_entry['eid']}"
@@ -1354,7 +1387,7 @@ with right:
             "modified_triples": selected_entry["modified_triples"],
         }
         render_prompt(build_judge_prompt(adhoc_row))
-        adhoc_record = adhoc_map.get(annotation_lookup_key(selected_entry["eid"], adhoc_source_id))
+        adhoc_record = selected_adhoc_annotation_map.get(annotation_lookup_key(selected_entry["eid"], adhoc_source_id))
         render_annotation(adhoc_record)
 
         if st.button("Judge ad hoc sentence", key=f"judge_adhoc_{selected_entry['eid']}", use_container_width=False):
@@ -1368,6 +1401,7 @@ with right:
                     source_id=adhoc_source_id,
                     judge_model=judge_model,
                     auth_token=auth_token,
+                    api_url=judge_api_url,
                     max_tokens=int(judge_max_tokens),
                     output_path=adhoc_output_path(adhoc_dataset_name, judge_model, output_dir),
                     overwrite=overwrite_existing,

@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import argparse
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from webnlg_utils import (
+    DEFAULT_JUDGE_API_URL,
     DEFAULT_JUDGE_MODEL,
     DEFAULT_JUDGE_MAX_TOKENS,
     DEFAULT_OUTPUT_DIR,
@@ -14,6 +16,9 @@ from webnlg_utils import (
     judge_output_path,
     judge_row,
     load_env_defaults,
+    load_jsonl_records,
+    judge_api_url_from_env,
+    normalize_judge_api_url,
     source_identity,
     write_judge_records,
 )
@@ -49,9 +54,21 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--head", action="store_true", help="Take the first sample-size rows in file order instead of a random sample")
     parser.add_argument("--seed", type=int, default=7, help="Sampling seed")
-    parser.add_argument("--model", type=str, default=DEFAULT_JUDGE_MODEL, help="OpenRouter model id")
+    parser.add_argument("--model", type=str, default=DEFAULT_JUDGE_MODEL, help="Judge model id")
+    parser.add_argument(
+        "--judge-base-url",
+        "--judge-api-url",
+        dest="judge_api_url",
+        type=str,
+        default=None,
+        help=(
+            "OpenAI-compatible judge endpoint. Accepts either a base URL such as "
+            f"https://api.openai.com/v1 or a full /chat/completions URL. Default: {DEFAULT_JUDGE_API_URL}"
+        ),
+    )
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_JUDGE_MAX_TOKENS, help="Maximum completion tokens for each judge request")
     parser.add_argument("--limit", type=int, default=None, help="Upper bound on rows after sampling")
+    parser.add_argument("--concurrency", type=int, default=1, help="How many rows to judge in parallel within one CSV")
     parser.add_argument("--output-dir", type=str, default=str(DEFAULT_OUTPUT_DIR), help="Directory for outputs")
     parser.add_argument("--label", type=str, default=None, help="Optional source label override")
     parser.add_argument("--force", action="store_true", help="Overwrite existing annotation rows for this source/model")
@@ -62,6 +79,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     load_env_defaults()
     args = parse_args()
+    judge_api_url = normalize_judge_api_url(args.judge_api_url or judge_api_url_from_env())
 
     csv_path = Path(args.csv).resolve()
     source_label = args.label or csv_path.stem
@@ -87,29 +105,78 @@ def main() -> None:
     if args.force and out_path.exists():
         out_path.unlink()
 
-    failures = 0
-    for _, row in sampled.iterrows():
-        try:
-            result = judge_row(
-                row,
-                source_label=source.label,
-                source_path=str(source.csv_path),
-                source_id=source.source_id,
-                judge_model=args.model,
-                max_tokens=args.max_tokens,
-                dry_run=args.dry_run,
+    existing_keys = set()
+    if not args.force:
+        for record in load_jsonl_records(out_path):
+            key_model = record.get("requested_judge_model") or record.get("judge_model") or ""
+            key_api_url = normalize_judge_api_url(
+                record.get("requested_judge_api_url") or (DEFAULT_JUDGE_API_URL if judge_api_url == DEFAULT_JUDGE_API_URL else "")
             )
-            write_judge_records(path=out_path, records=[result], overwrite=False)
-            print(f"judged {row['eid']}")
-        except JudgeRequestError as exc:
-            failures += 1
-            print(f"failed {row['eid']}: {exc}", file=sys.stderr)
+            existing_keys.add((str(record.get("eid", "")), str(record.get("source_id", "")), str(key_model), key_api_url))
+
+    pending_rows = []
+    skipped = 0
+    for _, row in sampled.iterrows():
+        key = (str(row["eid"]), source.source_id, args.model, judge_api_url)
+        if not args.force and key in existing_keys:
+            skipped += 1
             continue
+        pending_rows.append(row)
+
+    failures = 0
+    rows = pending_rows
+
+    def worker(row):
+        return judge_row(
+            row,
+            source_label=source.label,
+            source_path=str(source.csv_path),
+            source_id=source.source_id,
+            judge_model=args.model,
+            api_url=judge_api_url,
+            max_tokens=args.max_tokens,
+            dry_run=args.dry_run,
+    )
+
+    max_workers = max(1, int(args.concurrency))
+    judged = 0
+    if max_workers == 1:
+        for row in rows:
+            try:
+                result = worker(row)
+                write_judge_records(path=out_path, records=[result], overwrite=False)
+                judged += 1
+                print(f"judged {row['eid']}")
+            except JudgeRequestError as exc:
+                failures += 1
+                print(f"failed {row['eid']}: {exc}", file=sys.stderr)
+            except Exception as exc:
+                failures += 1
+                print(f"failed {row['eid']}: {exc}", file=sys.stderr)
+    else:
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            future_map = {pool.submit(worker, row): row for row in rows}
+            for future in as_completed(future_map):
+                row = future_map[future]
+                try:
+                    result = future.result()
+                    write_judge_records(path=out_path, records=[result], overwrite=False)
+                    judged += 1
+                    print(f"judged {row['eid']}")
+                except JudgeRequestError as exc:
+                    failures += 1
+                    print(f"failed {row['eid']}: {exc}", file=sys.stderr)
+                except Exception as exc:
+                    failures += 1
+                    print(f"failed {row['eid']}: {exc}", file=sys.stderr)
 
     if failures:
-        print(f"completed with {failures} failures; wrote judged rows to {out_path}", file=sys.stderr)
+        print(
+            f"completed with {failures} failures and skipped {skipped} existing rows; wrote judged rows to {out_path}",
+            file=sys.stderr,
+        )
     else:
-        print(f"wrote {len(sampled)} judged rows to {out_path}")
+        print(f"wrote {judged} judged rows to {out_path} (skipped {skipped} existing rows)")
 
 
 if __name__ == "__main__":

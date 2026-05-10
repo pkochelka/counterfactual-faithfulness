@@ -18,7 +18,9 @@ DEFAULT_JUDGE_MODEL = "openrouter/free"
 DEFAULT_JUDGE_MAX_TOKENS = 5000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
+OPENROUTER_URL = DEFAULT_JUDGE_API_URL
 
 
 class JudgeRequestError(RuntimeError):
@@ -129,6 +131,21 @@ def load_env_defaults() -> None:
         values = _load_env_file(candidate)
         for key, value in values.items():
             os.environ.setdefault(key, value)
+
+
+def normalize_judge_api_url(value: str | None = None) -> str:
+    raw_value = (value or "").strip().rstrip("/")
+    if not raw_value:
+        return DEFAULT_JUDGE_API_URL
+    if raw_value.endswith("/chat/completions"):
+        return raw_value
+    return f"{raw_value}/chat/completions"
+
+
+def judge_api_url_from_env() -> str:
+    return normalize_judge_api_url(
+        os.getenv("JUDGE_API_URL") or os.getenv("JUDGE_BASE_URL") or os.getenv("OPENROUTER_URL")
+    )
 
 
 def parse_xml_entries(
@@ -527,9 +544,10 @@ def request_judge(
     auth_token: str,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
-    api_url: str = OPENROUTER_URL,
+    api_url: str | None = None,
     timeout: int = 120,
 ) -> tuple[str, dict[str, Any], dict[str, Any], dict[str, Any]]:
+    api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
     headers = {
         "Authorization": f"Bearer {auth_token}",
         "Content-Type": "application/json",
@@ -635,6 +653,7 @@ def request_judge(
     response_meta = {
         "response_model": payload.get("model") if isinstance(payload, dict) else None,
         "provider": payload.get("provider") if isinstance(payload, dict) else None,
+        "api_url": api_url,
     }
     return raw, parsed, usage, response_meta
 
@@ -646,6 +665,7 @@ def build_judge_record(
     source_path: str,
     source_id: str,
     judge_model: str,
+    api_url: str,
     raw_response: str | None,
     parsed: dict[str, Any] | None,
     usage: dict[str, Any] | None = None,
@@ -662,6 +682,7 @@ def build_judge_record(
         "source_id": source_id,
         "judge_model": response_meta.get("response_model") or judge_model,
         "requested_judge_model": judge_model,
+        "requested_judge_api_url": normalize_judge_api_url(api_url),
         "provider": response_meta.get("provider"),
         "request_cost": usage.get("cost"),
         "usage": usage or None,
@@ -681,10 +702,12 @@ def judge_row(
     source_id: str,
     judge_model: str = DEFAULT_JUDGE_MODEL,
     auth_token: str | None = None,
+    api_url: str | None = None,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
+    resolved_api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
     if dry_run:
         return build_judge_record(
             row=row,
@@ -692,6 +715,7 @@ def judge_row(
             source_path=source_path,
             source_id=source_id,
             judge_model=judge_model,
+            api_url=resolved_api_url,
             raw_response=None,
             parsed=None,
             usage=None,
@@ -706,6 +730,7 @@ def judge_row(
         prompt=prompt,
         judge_model=judge_model,
         auth_token=token,
+        api_url=resolved_api_url,
         max_tokens=max_tokens,
     )
     return build_judge_record(
@@ -714,6 +739,7 @@ def judge_row(
         source_path=source_path,
         source_id=source_id,
         judge_model=judge_model,
+        api_url=resolved_api_url,
         raw_response=raw,
         parsed=parsed,
         usage=usage,
@@ -923,26 +949,24 @@ def write_judge_records(
     output_path = Path(path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    def record_key(record: dict[str, Any]) -> tuple[str, str, str, str]:
+        model = record.get("requested_judge_model") or record.get("judge_model") or ""
+        api_url = record.get("requested_judge_api_url") or DEFAULT_JUDGE_API_URL
+        return (
+            str(record.get("eid", "")),
+            str(record.get("source_id", "")),
+            str(model),
+            normalize_judge_api_url(str(api_url)),
+        )
+
     existing = load_jsonl_records(output_path)
-    keyed_existing: dict[tuple[str, str, str], dict[str, Any]] = {}
+    keyed_existing: dict[tuple[str, str, str, str], dict[str, Any]] = {}
     ordered_existing: list[dict[str, Any]] = []
     for record in existing:
-        key = (
-            str(record.get("eid", "")),
-            str(record.get("source_id", "")),
-            str(record.get("judge_model", "")),
-        )
-        keyed_existing[key] = record
+        keyed_existing[record_key(record)] = record
         ordered_existing.append(record)
 
-    new_by_key = {
-        (
-            str(record.get("eid", "")),
-            str(record.get("source_id", "")),
-            str(record.get("judge_model", "")),
-        ): record
-        for record in records
-    }
+    new_by_key = {record_key(record): record for record in records}
 
     if overwrite:
         merged_by_key = keyed_existing | new_by_key

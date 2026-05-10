@@ -36,7 +36,7 @@ Use `xml2csv.py` to convert the GEM XML files into the `data/webnlg/*.csv` layou
 
 ### Speech generation
 
-Generate fluent English sentences based on the triples in your dataset using parallel LLM API calls. Set your `AUTH_TOKEN` and API `BASE_URL` in `.env.local`.
+Generate fluent sentences based on the triples in your dataset using parallel LLM API calls. Set your `AUTH_TOKEN` and OpenAI-compatible API `BASE_URL` in `.env.local`.
 
 ```bash
 python3 generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg" --variant "cf" --language "cs"
@@ -44,7 +44,7 @@ python3 generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg" --variant
 
 ### Judging and browsing outputs
 
-The `llm-judge/` tools can browse generated sentence CSVs, compare outputs, and run an LLM judge against the modified triples.
+The `llm-judge/` tools can browse generated sentence CSVs, compare outputs, and run an LLM judge against the modified triples. OpenRouter is the default judge endpoint, but you can select any OpenAI-compatible endpoint with `JUDGE_BASE_URL`, `JUDGE_API_URL`, the Streamlit sidebar, or the CLI `--judge-base-url` option.
 
 Start the Streamlit workspace from the repository root:
 

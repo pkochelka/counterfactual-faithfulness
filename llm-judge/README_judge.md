@@ -66,11 +66,27 @@ BASE_URL=https://your-openai-compatible-endpoint
 AUTH_TOKEN=your_token_if_required
 ```
 
-For judging through OpenRouter, set:
+For judging, OpenRouter is the default provider. Set:
 
 ```text
 AUTH_TOKEN=your_openrouter_token
 ```
+
+To use a different OpenAI-compatible provider, add either a base URL or a full chat completions endpoint:
+
+```text
+JUDGE_BASE_URL=https://api.openai.com/v1
+AUTH_TOKEN=your_provider_token
+```
+
+or:
+
+```text
+JUDGE_API_URL=https://api.openai.com/v1/chat/completions
+AUTH_TOKEN=your_provider_token
+```
+
+`JUDGE_BASE_URL` and `JUDGE_API_URL` are only for the judge. Sentence generation still uses `BASE_URL`.
 
 Do not commit `.env.local`. The Streamlit app also has a sidebar token field, which can be used instead of or in addition to the environment file.
 
@@ -119,7 +135,8 @@ In the sidebar:
 - Choose an XML or CSV dataset source. The presets point to the expected files under `data/`.
 - Load one or more model output CSVs. Use one path per line.
 - Use optional labels with `Label :: path/to/file.csv`.
-- Choose the judge model and token settings.
+- Choose the judge model, provider endpoint, and token settings.
+- Leave the judge endpoint at `https://openrouter.ai/api/v1/chat/completions` for OpenRouter, or paste another OpenAI-compatible base URL such as `https://api.openai.com/v1`.
 - Keep the default annotation directory unless you need a custom location:
 
 ```text
@@ -150,12 +167,37 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --output-dir data/judged
 ```
 
+Judge through another OpenAI-compatible provider:
+
+```bash
+AUTH_TOKEN=your_provider_token \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+  --sample-size 20 \
+  --head \
+  --model gpt-4.1-mini \
+  --judge-base-url https://api.openai.com/v1 \
+  --output-dir data/judged
+```
+
+Local or self-hosted endpoints work the same way if they implement `/chat/completions`:
+
+```bash
+AUTH_TOKEN=unused \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+  --sample-size 20 \
+  --head \
+  --model local-model \
+  --judge-base-url http://localhost:8000/v1 \
+  --output-dir data/judged
+```
+
 Judge the whole CSV:
 
 ```bash
 python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size all \
   --model openai/gpt-5.2 \
+  --concurrency 5 \
   --output-dir data/judged
 ```
 
@@ -169,7 +211,7 @@ python llm-judge/judge_csv.py custom_sentences.csv \
 ```
 
 Use `--force` to rewrite existing annotation rows for the same `eid`, source, and judge model in the output JSONL file.
-By default, the CLI appends each judged row to disk immediately, so stopping the process midway still preserves already completed rows. With `--force`, the target JSONL file is cleared before the run starts.
+By default, the CLI appends each judged row to disk immediately, so stopping the process midway still preserves already completed rows. When you rerun without `--force`, rows that already exist for the same source and judge model are skipped automatically. With `--force`, the target JSONL file is cleared before the run starts.
 
 Useful CLI arguments:
 
@@ -179,7 +221,9 @@ Useful CLI arguments:
 - `--head`
 - `--seed 7`
 - `--limit 50`
+- `--concurrency 5`
 - `--model openai/gpt-5.2`
+- `--judge-base-url https://api.openai.com/v1`
 - `--max-tokens 5000`
 - `--output-dir data/judged`
 - `--label custom_source_name`
@@ -214,6 +258,7 @@ Each record includes metadata such as:
 - `source_id`
 - `judge_model`
 - `requested_judge_model`
+- `requested_judge_api_url`
 - `provider`
 - `request_cost`
 - `timestamp`
@@ -247,6 +292,13 @@ If OpenRouter returns an invalid model error, use a real OpenRouter model id, fo
 
 ```text
 openai/gpt-5.2
+```
+
+If another provider returns a 404, check whether you pasted a base URL or a full chat completions URL. Both of these are accepted:
+
+```text
+https://api.openai.com/v1
+https://api.openai.com/v1/chat/completions
 ```
 
 If the app cannot find data, check that the XML files are under `data/GEM-v2-D2T-SharedTask/` or pass explicit paths in the sidebar.
