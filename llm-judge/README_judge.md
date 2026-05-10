@@ -201,6 +201,22 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --output-dir data/judged
 ```
 
+Judge multiple CSV files through a custom provider, with both file-level and row-level parallelism:
+
+```bash
+export AUTH_TOKEN="$OPENAI_API_KEY"
+
+find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
+  | xargs -0 -n 1 -P 3 python llm-judge/judge_csv.py \
+      --sample-size all \
+      --model gpt-4.1-mini \
+      --judge-base-url https://api.openai.com/v1 \
+      --concurrency 4 \
+      --output-dir data/judged
+```
+
+Here `xargs -P 3` runs up to three CSV files at once, and `--concurrency 4` runs up to four judge requests in parallel within each CSV. The maximum number of in-flight requests is therefore roughly `3 * 4 = 12`. Tune both numbers to match the provider's rate limits.
+
 Pass an explicit XML file when inference from the CSV filename is not enough:
 
 ```bash

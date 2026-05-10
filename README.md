@@ -58,4 +58,20 @@ Run the judge without the web app:
 python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv --sample-size 20 --head --output-dir data/judged
 ```
 
+Run command-line judging through a custom provider with parallelism across files and within each file:
+
+```bash
+export AUTH_TOKEN="$OPENAI_API_KEY"
+
+find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
+  | xargs -0 -n 1 -P 3 python llm-judge/judge_csv.py \
+      --sample-size all \
+      --model gpt-4.1-mini \
+      --judge-base-url https://api.openai.com/v1 \
+      --concurrency 4 \
+      --output-dir data/judged
+```
+
+`xargs -P 3` runs three files at once; `--concurrency 4` runs four examples at once inside each file, for about twelve in-flight judge calls.
+
 See `llm-judge/README_judge.md` for expected XML/CSV files, `.env.local` setup, batch judging behavior, and full CLI examples.
