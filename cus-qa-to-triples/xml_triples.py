@@ -4,6 +4,7 @@ from pathlib import Path
 from xml_tagged import import_from_xml_file
 from triplet_dataclasses import PhrasedTriple
 from xml_pretty import root_to_pretty_xml
+from typing import Literal
 
 
 def tagged_to_triples_xml(pts: list[PhrasedTriple]) -> Element:
@@ -35,8 +36,8 @@ def tagged_to_triples_xml(pts: list[PhrasedTriple]) -> Element:
     return root
 
 
-def tagged_file_to_triples_xml_file(source: Path, output: Path) -> None:
-    pts = import_from_xml_file(source)
+def tagged_file_to_triples_xml_file(source: Path, output: Path, language: Literal["cz", "sk"]) -> None:
+    pts = import_from_xml_file(source, language)
     root = tagged_to_triples_xml(pts)
     str_xml = root_to_pretty_xml(root)
     with open(output, "w", encoding="utf8") as f:

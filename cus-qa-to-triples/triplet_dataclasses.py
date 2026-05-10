@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
-from typing import Optional, Any
+from typing import Optional, Any, Type
 
-from constants import MemberType
+from constants import CZMemberType, _MemberType
 
 
 import unicodedata
@@ -26,7 +26,7 @@ def normalize_str_for_eq(value: str) -> str:
 @dataclass
 class TripleMember:
     value: str
-    type_: Optional[MemberType] = None
+    type_: Optional[_MemberType] = None
 
     _normalized: str = field(init=False, repr=False) 
 
@@ -92,8 +92,8 @@ class PhrasedTriple:
         
         return list(output)    
     
-    def _tag_members(self, llm_output: str) -> None:
-        mapping: dict[str, MemberType] = dict()
+    def _tag_members(self, llm_output: str, member_type: Type) -> None:
+        mapping: dict[str, _MemberType] = dict()
 
         for line in llm_output.split("\n"):
             try:
@@ -102,14 +102,14 @@ class PhrasedTriple:
                 tag = tag.strip()
 
                 word = normalize_str_for_eq(word)
-                tag = MemberType(tag)
+                tag: _MemberType = member_type(tag)
 
                 mapping[word] = tag
             except Exception as e:
                 print(e, line)
         
         for t in self.triples:
-            def _tag(mapping: dict[str, MemberType], member: TripleMember) -> None:
+            def _tag(mapping: dict[str, _MemberType], member: TripleMember) -> None:
                 type_ = mapping.get(member._normalized)
                 if type_ is not None:
                     member.type_ = type_

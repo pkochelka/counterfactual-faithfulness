@@ -1,8 +1,10 @@
 from xml.etree.ElementTree import Element, SubElement, ElementTree, indent, parse
 from io import StringIO
 from pathlib import Path
+from typing import Literal
 
-from triplet_dataclasses import PhrasedTriple, Triple, MemberType, TripleMember
+from triplet_dataclasses import PhrasedTriple, Triple, TripleMember
+from constants import CZMemberType, SKMemberType
 from xml_pretty import root_to_pretty_xml
 
 # Export
@@ -52,18 +54,19 @@ def export_to_xml_file(pts: list[PhrasedTriple], path: str | Path) -> None:
         
 # Import
 
-def member_from_xml(el: Element) -> TripleMember:
+def member_from_xml(el: Element, language: Literal["cz", "sk"]) -> TripleMember:
+    tp = CZMemberType if language == "cz" else SKMemberType
     value = el.get("value", "")
     raw_type = el.get("type", "null")
     try:
-        type_ = MemberType(raw_type)
+        type_ = tp(raw_type)
     except ValueError:
         type_ = None
     member = TripleMember(value=value)
     member.type_ = type_
     return member
 
-def phrased_triple_from_xml(root: Element) -> PhrasedTriple:
+def phrased_triple_from_xml(root: Element, language: Literal["cz", "sk"]) -> PhrasedTriple:
     id_ = int(root.get("id", 0))
     category = root.get("category", "")
     phrase = root.findtext("phrase") or None
@@ -75,16 +78,16 @@ def phrased_triple_from_xml(root: Element) -> PhrasedTriple:
         if subj_el is None or pred_el is None or obj_el is None:
             continue
         pt.triples.append(Triple(
-            subject   = member_from_xml(subj_el),
+            subject   = member_from_xml(subj_el, language),
             predicate = pred_el.text or "",
-            object_   = member_from_xml(obj_el),
+            object_   = member_from_xml(obj_el, language),
         ))
     return pt
 
-def import_from_xml_string(xml: str) -> list[PhrasedTriple]:
+def import_from_xml_string(xml: str, language: Literal["cz", "sk"]) -> list[PhrasedTriple]:
     root = parse(StringIO(xml)).getroot()
-    return [phrased_triple_from_xml(el) for el in root.findall("phrased_triple")]
+    return [phrased_triple_from_xml(el, language) for el in root.findall("phrased_triple")]
 
-def import_from_xml_file(path: str | Path) -> list[PhrasedTriple]:
+def import_from_xml_file(path: str | Path, language: Literal["cz", "sk"]) -> list[PhrasedTriple]:
     root = parse(path).getroot()
-    return [phrased_triple_from_xml(el) for el in root.findall("phrased_triple")]
+    return [phrased_triple_from_xml(el, language) for el in root.findall("phrased_triple")]

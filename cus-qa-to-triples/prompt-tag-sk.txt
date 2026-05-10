@@ -1,0 +1,23 @@
+Dostaneš vetu v slovenčině a zoznam slov, tvojou úlohou je vypísať zoznam slov a čo znamenajú na základe tejto vety.
+
+Používaj tieto tagy:
+
+{member_types}
+
+Pravidlá:
+
+1. Slovo vypíš iba v prípade, že patrí do niektorej z kategórií. Inak ho vynechaj.
+2. Slovo vypíš presne tak, ako bolo zadané.
+3. Vypíš iba odpoveď, nič iné.
+
+Napríklad:
+
+Vstup:
+Veta: Život a tvorba Jana Nerudy je spojená s Malou Stranou.
+Slová: Jan_Neruda, Malá_Strana
+
+Tvoja odpoveď:
+Jan_Neruda : jmeno_cloveka
+Malá_Strana : miesto
+
+Vstup:

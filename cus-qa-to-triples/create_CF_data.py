@@ -2,14 +2,14 @@ import random
 from collections import defaultdict
 from argparse import ArgumentParser
 from xml_tagged import export_to_xml_file, import_from_xml_file
-from triplet_dataclasses import PhrasedTriple, Triple, MemberType, TripleMember
-from constants import FACTUAL_PHRASED_DATA, COUNTER_FACTUAL_PHRASED_DATA
-from typing import Optional
+from triplet_dataclasses import PhrasedTriple, Triple, TripleMember
+from constants import CZ_DATA, SK_DATA, _MemberType, CZMemberType, SKMemberType
+from typing import Optional, Literal
 
 
 def change_facts_single(
     pt: PhrasedTriple,
-    options: defaultdict[MemberType, list[TripleMember]],
+    options: defaultdict[_MemberType, list[TripleMember]],
     max_changes: int,
     rng: random.Random,
 ) -> PhrasedTriple | None:
@@ -83,14 +83,14 @@ def change_facts_single(
 def change_facts_multiple(
     pts: list[PhrasedTriple],
     max_changes: int = 2,
-    tags_to_change: Optional[set[MemberType]] = None,
+    tags_to_change: Optional[set[_MemberType]] = None,
     seed: int = 42,
 ) -> list[PhrasedTriple]:
     assert max_changes > 0
 
     rng = random.Random(seed)
 
-    options: defaultdict[MemberType, list[TripleMember]] = defaultdict(list)
+    options: defaultdict[_MemberType, list[TripleMember]] = defaultdict(list)
 
     for pt in sorted(pts, key=lambda p: p.id_):
         for m in sorted(pt.get_unique_tagged_members(), key=lambda m: (m.type_.value, m.value)):
@@ -107,15 +107,17 @@ def change_facts_multiple(
     return output
 
 
-def _retrieve_tags(tags: str) -> set[MemberType]:
+def _retrieve_tags(tags: str, language: Literal["cz", "sk"]) -> set[_MemberType]:
+    type_ = SKMemberType if language == "sk" else CZMemberType
     output = set()
     for t in tags.split(","):
-        output.add(MemberType(t))
+        output.add(type_(t))
     return output
 
 
 if __name__ == "__main__":
     parser = ArgumentParser()
+    parser.add_argument("language", type=str, choices=["cz", "sk"])
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
         "--max-changes",
@@ -126,14 +128,25 @@ if __name__ == "__main__":
     parser.add_argument(
         "--tags",
         type=str,
-        help=f"Tags that will be changed separated by comma. Default is all. {[t.value for t in MemberType]}",
+        help=f"Tags that will be changed separated by comma. Default is all. {[t.value for t in CZMemberType]}",
     )
 
     args = parser.parse_args()
     if args.tags is not None:
-        args.tags = _retrieve_tags(args.tags)
+        args.tags = _retrieve_tags(args.tags, args.language)
 
-    pts = import_from_xml_file(FACTUAL_PHRASED_DATA)
+
+    if args.language == "cz":
+        dir = CZ_DATA
+    elif args.language == "sk":
+        dir = SK_DATA
+    else:
+        raise ValueError()
+    
+    factual_data_file = dir / "fa-phrase.xml"
+    cf_data_output = dir / "cf-phrase.xml"
+
+    pts = import_from_xml_file(factual_data_file, args.language)
 
     loaded_count = len(pts)
 
@@ -142,4 +155,4 @@ if __name__ == "__main__":
     )
 
     print(f"Created {len(pts)} CF triples from {loaded_count} F triples")
-    export_to_xml_file(pts, COUNTER_FACTUAL_PHRASED_DATA)
+    export_to_xml_file(pts, cf_data_output)

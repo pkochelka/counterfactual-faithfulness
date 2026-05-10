@@ -1,6 +1,6 @@
 # CUS-QA to Triples
 
-A pipeline for converting the [CUS-QA dataset](https://huggingface.co/datasets/ufal/cus-qa) - a collection of Czech questions and answers - into structured triples, including both factual and counter-factual variants.
+A pipeline for converting the [CUS-QA dataset](https://huggingface.co/datasets/ufal/cus-qa) - a collection of Czech and Slovak questions and answers - into structured triples, including both factual and counter-factual variants.
 
 Dataset | Number of entries
 -|-:
@@ -38,15 +38,15 @@ A question-answer pair is passed to an LLM (in **English**), which synthesizes t
 
 In a separate prompt without any context from the previous one (in **Czech**), the LLM assigns semantic type tags to each subject and object. Tags are defined in `MemberType` inside [`constants.py`](./constants.py):
 
-| Tag | English |
-|---|---|
-| `jmeno_umelecke_dilo` | Name of an artwork |
-| `jmeno_clovek` | Person's name |
-| `jmeno` | Generic name |
-| `misto` | Place |
-| `datum` | Date |
-| `cislo` | Number |
-| `zamestnani` | Occupation |
+| Tag Czech | Tag Slovak | English |
+|---|---|---|
+| `jmeno_umelecke_dilo` | `meno_umelecke_dielo` | Name of an artwork |
+| `jmeno_clovek` | `meno_clovek` Person's name |
+| `jmeno` | `meno` | Generic name |
+| `misto` | `miesto` | Place |
+| `datum` | `datum` | Date |
+| `cislo` | `cislo` | Number |
+| `zamestnani` | `zamestnanie` | Occupation |
 
 These tags drive counter-factual generation. They can be freely extended - updating the enum automatically updates the prompt, though tagging must be re-run afterwards.
 
@@ -82,12 +82,14 @@ If `Na_samém_konci [jmeno_umelecke_dilo]` is selected for substitution and repl
 
 **Step 1 - Generate phrases, triples, and tags:**
 ```bash
-python cus-qa-to-triples/prompt-llm.py
+python cus-qa-to-triples/prompt-llm.py cz
+python cus-qa-to-triples/prompt-llm.py sk
 ```
 
 **Step 2 - Create counter-factual data:**
 ```bash
-python cus-qa-to-triples/create-CF-data.py --max-changes 1 --tags misto,jmeno_clovek,datum,cislo
+python cus-qa-to-triples/create-CF-data.py cz --max-changes 1 --tags misto,jmeno_clovek,datum,cislo
+python cus-qa-to-triples/create-CF-data.py sk --max-changes 1 --tags miesto,meno_clovek,datum,cislo
 ```
 
 **Step 3 - Export to triples format:**

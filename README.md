@@ -29,7 +29,7 @@ deactivate
 The repo expects structured data under `data/`:
 
 - `data/webnlg/{cf,fa,fi}.csv`
-- `data/cs-qa/{cf,fa}.csv`
+- `data/{cs-qa,sk-qa}/{cf,fa}.csv`
 - `data/GEM-v2-D2T-SharedTask/*.xml`
 
 Use `xml2csv.py` to convert the GEM XML files into the `data/webnlg/*.csv` layout when needed.

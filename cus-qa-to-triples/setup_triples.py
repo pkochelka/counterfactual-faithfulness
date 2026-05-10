@@ -1,18 +1,19 @@
 from constants import (
-    FACTUAL_PHRASED_DATA,
-    FACTUAL_TRIPLES,
-    COUNTER_FACTUAL_PHRASED_DATA,
-    COUNTER_FACTUAL_TRIPLES,
+    SK_DATA,
+    CZ_DATA
 )
 from xml_triples import tagged_file_to_triples_xml_file
 
 if __name__ == "__main__":
-    tagged_file_to_triples_xml_file(
-        FACTUAL_PHRASED_DATA,
-        FACTUAL_TRIPLES
-    )
-    tagged_file_to_triples_xml_file(
-        COUNTER_FACTUAL_PHRASED_DATA,
-        COUNTER_FACTUAL_TRIPLES
-    )
+    for dir, lang in [(CZ_DATA, "cz"), (SK_DATA, "sk")]:
+        tagged_file_to_triples_xml_file(
+            dir / "cf-phrase.xml",
+            dir / "cf.xml",
+            lang
+        )
+        tagged_file_to_triples_xml_file(
+            dir / "fa-phrase.xml",
+            dir / "fa.xml",
+            lang
+        )
     
