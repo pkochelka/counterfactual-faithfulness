@@ -8,22 +8,23 @@ from dotenv import load_dotenv
 load_dotenv(".env.local")
 
 BASE_URL = os.environ["BASE_URL"].rstrip("/")
-AUTH_TOKEN = os.getenv("AUTH_TOKEN")
 
 REQUEST_TIMEOUT = 540
-
-HEADERS = {"Content-Type": "application/json"}
-if AUTH_TOKEN:
-    HEADERS["Authorization"] = f"Bearer {AUTH_TOKEN}"
 
 def call_api(
     user_message: str,
     model_id: str,
     *,
+    token_name: str = "",
     max_tokens: int = 512,
     temperature: float = 0.0,
 ) -> dict:
     """Send a single user message to the chat completions endpoint."""
+    token = os.getenv(token_name if token_name else "AUTH_TOKEN")
+    headers = {"Content-Type": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
     payload = {
         "model": model_id,
         "messages": [{"role": "user", "content": user_message}],
@@ -34,7 +35,7 @@ def call_api(
     try:
         resp = requests.post(
             f"{BASE_URL}/chat/completions",
-            headers=HEADERS,
+            headers=headers,
             json=payload,
             timeout=REQUEST_TIMEOUT,
         )

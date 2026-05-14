@@ -13,6 +13,7 @@ parser.add_argument("--dataset", default="webnlg", type=str, help="Dataset name 
 parser.add_argument("--variant", default="cf", choices=["cf", "fa", "fi"], type=str, help="Dataset variant: cf=counterfactual, fa=factual, fi=fictional.")
 parser.add_argument("--kind", default="modified", type=str, help="Value of the 'kind' column to filter on.")
 parser.add_argument("--language", default="en", type=str, help="Prompt language (e.g. en, cs, sk).")
+parser.add_argument("--token-name", default="", type=str, help="Env var name for the API token (default: AUTH_TOKEN).")
 
 with open("prompts/generate_speeches.json", encoding="utf-8") as _f:
     _PROMPTS = json.load(_f)
@@ -32,11 +33,11 @@ def build_prompt(entry_df: pd.DataFrame, language: str = "en") -> str:
     return template.format(size=size, category=category, triples_str=triples_str)
 
 
-def call_llm(prompt: str, model_id: str) -> str:
+def call_llm(prompt: str, model_id: str, token_name: str = "") -> str:
     """Call the API with retry, extract content from response."""
     while True:
         try:
-            response = call_api(prompt, model_id)
+            response = call_api(prompt, model_id, token_name=token_name)
             content = response["choices"][0]["message"]["content"]
             if content:
                 return content
@@ -50,6 +51,7 @@ def generate_sentences(
     kind: str = "modified",
     language: str = "en",
     max_workers: int = 4,
+    token_name: str = "",
 ) -> pd.DataFrame:
     """Generate one sentence per entry."""
     subset = df[df["kind"] == kind] if "kind" in df.columns else df
@@ -60,7 +62,7 @@ def generate_sentences(
 
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = {
-            pool.submit(call_llm, prompt, model_id): eid
+            pool.submit(call_llm, prompt, model_id, token_name): eid
             for eid, prompt in tasks.items()
         }
         for i, future in enumerate(as_completed(futures), 1):
@@ -82,7 +84,7 @@ def main(args: argparse.Namespace) -> None:
 
     n = df[df['kind'] == args.kind]['eid'].nunique() if 'kind' in df.columns else df['eid'].nunique()
     print(f"Generating sentences for {n} entries...")
-    result = generate_sentences(df, args.model, kind=args.kind, language=args.language, max_workers=4)
+    result = generate_sentences(df, args.model, kind=args.kind, language=args.language, max_workers=4, token_name=args.token_name)
 
     output_dir = os.path.join("data", "generated", args.model)
     os.makedirs(output_dir, exist_ok=True)
