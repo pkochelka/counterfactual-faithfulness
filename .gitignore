@@ -213,6 +213,8 @@ marimo/_lsp/
 __marimo__/
 
 # Project-generated benchmark and judge artifacts
+data_archive/
+reports/
 sentences_*.csv
 triplets_*.txt
 outputs_*.txt

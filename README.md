@@ -58,6 +58,13 @@ Run the judge without the web app:
 python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv --sample-size 20 --head --output-dir data/judged
 ```
 
+For `cs-qa` and `sk-qa`, generated CSVs are judged against the same flat source tables used for generation:
+
+- `data/cs-qa/{cf,fa}.csv`
+- `data/sk-qa/{cf,fa}.csv`
+
+This is intentional. Do not judge `cs-qa_cf` outputs against `cus-qa-to-triples/data/CounterFactual-triples.xml` unless that XML is known to be the exact source used to generate the sentence CSV. If the source cannot be inferred, pass the matching file explicitly with `--xml data/cs-qa/cf.csv` or `--xml data/sk-qa/cf.csv`.
+
 Run command-line judging through a custom provider with parallelism across files and within each file:
 
 ```bash
@@ -73,5 +80,6 @@ find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
 ```
 
 `xargs -P 3` runs three files at once; `--concurrency 4` runs four examples at once inside each file, for about twelve in-flight judge calls.
+The per-request HTTP timeout defaults to 150 seconds and can be changed with `--timeout`.
 
 See `llm-judge/README_judge.md` for expected XML/CSV files, `.env.local` setup, batch judging behavior, and full CLI examples.

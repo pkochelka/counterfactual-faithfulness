@@ -226,6 +226,22 @@ python llm-judge/judge_csv.py custom_sentences.csv \
   --output-dir data/judged
 ```
 
+For `cs-qa` and `sk-qa`, automatic inference uses the flat CSV tables under `data/<dataset>/<variant>.csv`, because those are the tables used by `generate_speeches.py` and `generate_all.py`. This prevents an alignment bug where `cs-qa_cf` generated sentences were compared against `cus-qa-to-triples/data/CounterFactual-triples.xml`, whose counterfactual substitutions can differ for the same `eid`.
+
+Examples:
+
+```bash
+python llm-judge/judge_csv.py data/generated/gpt-oss-120b/cs-qa_cf_en.csv \
+  --xml data/cs-qa/cf.csv \
+  --sample-size all \
+  --output-dir data/judged
+
+python llm-judge/judge_csv.py data/generated/gpt-oss-120b/sk-qa_cf_en.csv \
+  --xml data/sk-qa/cf.csv \
+  --sample-size all \
+  --output-dir data/judged
+```
+
 Use `--force` to rewrite existing annotation rows for the same `eid`, source, and judge model in the output JSONL file.
 By default, the CLI appends each judged row to disk immediately, so stopping the process midway still preserves already completed rows. When you rerun without `--force`, rows that already exist for the same source and judge model are skipped automatically. With `--force`, the target JSONL file is cleared before the run starts.
 
@@ -241,7 +257,10 @@ Useful CLI arguments:
 - `--model openai/gpt-5.2`
 - `--judge-base-url https://api.openai.com/v1`
 - `--max-tokens 5000`
+- `--timeout 150`
 - `--output-dir data/judged`
+- `--output-path data/judged/gpt-oss-120b/judge_cs-qa_cf_cs_glm-5.jsonl`
+- `--skip-existing-eids`
 - `--label custom_source_name`
 - `--force`
 - `--dry-run`
