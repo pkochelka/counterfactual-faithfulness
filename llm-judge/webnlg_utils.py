@@ -17,6 +17,7 @@ import requests
 DEFAULT_JUDGE_MODEL = "openrouter/free"
 DEFAULT_JUDGE_MAX_TOKENS = 1000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
+DEFAULT_JUDGE_TIMEOUT = 150
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
@@ -186,6 +187,19 @@ def parse_xml_entries(
 def infer_xml_path(sentences_csv: str | Path) -> Path:
     csv_path = Path(sentences_csv).resolve()
     stem = csv_path.stem.lower()
+    dataset, variant = source_dataset_variant(csv_path)
+
+    if dataset in {"cs-qa", "sk-qa"} and variant in {"cf", "fa"}:
+        candidates = [
+            repo_root() / "data" / dataset / f"{variant}.csv",
+            csv_path.parent.parent.parent / dataset / f"{variant}.csv",
+            csv_path.parent.parent / dataset / f"{variant}.csv",
+        ]
+        for csv_source_path in candidates:
+            if csv_source_path.exists():
+                return csv_source_path
+
+        raise FileNotFoundError(candidates[0])
 
     if "webnlg_cf" in stem:
         candidates = [
@@ -205,26 +219,6 @@ def infer_xml_path(sentences_csv: str | Path) -> Path:
             csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FI_WebNLG_Fictional.xml",
             csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FI_WebNLG_Fictional.xml",
         ]
-    elif "cs-qa_cf" in stem:
-        candidates = [
-            repo_root() / "cus-qa-to-triples" / "data" / "cz" / "cf.xml",
-            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "cz" / "cf.xml",
-        ]
-    elif "cs-qa_fa" in stem:
-        candidates = [
-            repo_root() / "cus-qa-to-triples" / "data" / "cz" / "fa.xml",
-            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "cz" / "fa.xml",
-        ]
-    elif "sk-qa_cf" in stem:
-        candidates = [
-            repo_root() / "cus-qa-to-triples" / "data" / "sk" / "cf.xml",
-            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "sk" / "cf.xml",
-        ]
-    elif "sk-qa_fa" in stem:
-        candidates = [
-            repo_root() / "cus-qa-to-triples" / "data" / "sk" / "fa.xml",
-            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "sk" / "fa.xml",
-        ]
     else:
         raise ValueError(
             f"Cannot infer XML path from {csv_path.name!r}; pass an XML path explicitly."
@@ -240,7 +234,13 @@ def infer_triple_xpath(source_path: str | Path) -> str:
     path = Path(source_path)
     stem = path.stem.lower()
     name = path.name.lower()
-    if "cs-qa" in stem or "sk-qa" in stem or name in {"factual-triples.xml", "counterfactual-triples.xml"}:
+    path_parts = {part.lower() for part in path.parts}
+    if (
+        "cs-qa" in stem
+        or "sk-qa" in stem
+        or {"cs-qa", "sk-qa"} & path_parts
+        or name in {"factual-triples.xml", "counterfactual-triples.xml"}
+    ):
         return "originaltripleset/otriple"
     return "modifiedtripleset/mtriple"
 
@@ -551,7 +551,7 @@ def request_judge(
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
     api_url: str | None = None,
-    timeout: int = 120,
+    timeout: int = DEFAULT_JUDGE_TIMEOUT,
 ) -> tuple[str, dict[str, Any], dict[str, Any], dict[str, Any]]:
     api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
     headers = {
@@ -697,6 +697,9 @@ def build_judge_record(
         "usage": usage or None,
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "sentence": str(row["sentence"]),
+        "modified_triples": str(row.get("modified_triples", "")),
+        "modified_triples_json": row.get("modified_triples_json"),
+        "num_modified_triples": row.get("num_modified_triples"),
         "prompt": prompt_preview,
         "raw_response": raw_response,
         "parsed": parsed,
@@ -713,6 +716,7 @@ def judge_row(
     auth_token: str | None = None,
     api_url: str | None = None,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
+    timeout: int = DEFAULT_JUDGE_TIMEOUT,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
@@ -741,6 +745,7 @@ def judge_row(
         auth_token=token,
         api_url=resolved_api_url,
         max_tokens=max_tokens,
+        timeout=timeout,
     )
     return build_judge_record(
         row=row,

@@ -9,6 +9,7 @@ from webnlg_utils import (
     DEFAULT_JUDGE_API_URL,
     DEFAULT_JUDGE_MODEL,
     DEFAULT_JUDGE_MAX_TOKENS,
+    DEFAULT_JUDGE_TIMEOUT,
     DEFAULT_OUTPUT_DIR,
     JudgeRequestError,
     SourceSpec,
@@ -67,9 +68,21 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_JUDGE_MAX_TOKENS, help="Maximum completion tokens for each judge request")
+    parser.add_argument("--timeout", type=int, default=DEFAULT_JUDGE_TIMEOUT, help="HTTP read timeout in seconds for each judge request")
     parser.add_argument("--limit", type=int, default=None, help="Upper bound on rows after sampling")
     parser.add_argument("--concurrency", type=int, default=1, help="How many rows to judge in parallel within one CSV")
     parser.add_argument("--output-dir", type=str, default=str(DEFAULT_OUTPUT_DIR), help="Directory for outputs")
+    parser.add_argument(
+        "--output-path",
+        type=str,
+        default=None,
+        help="Exact JSONL output path. Overrides the model-derived path.",
+    )
+    parser.add_argument(
+        "--skip-existing-eids",
+        action="store_true",
+        help="Skip any eid/source_id already present in the output file, regardless of judge model or endpoint.",
+    )
     parser.add_argument("--label", type=str, default=None, help="Optional source label override")
     parser.add_argument("--force", action="store_true", help="Overwrite existing annotation rows for this source/model")
     parser.add_argument("--dry-run", action="store_true", help="Build prompts without calling the API")
@@ -101,13 +114,16 @@ def main() -> None:
     if args.limit is not None:
         sampled = sampled.head(args.limit)
 
-    out_path = judge_output_path(source.csv_path, args.model, args.output_dir)
+    out_path = Path(args.output_path) if args.output_path else judge_output_path(source.csv_path, args.model, args.output_dir)
     if args.force and out_path.exists():
         out_path.unlink()
 
     existing_keys = set()
+    existing_eid_source_keys = set()
     if not args.force:
         for record in load_jsonl_records(out_path):
+            eid_source_key = (str(record.get("eid", "")), str(record.get("source_id", "")))
+            existing_eid_source_keys.add(eid_source_key)
             key_model = record.get("requested_judge_model") or record.get("judge_model") or ""
             key_api_url = normalize_judge_api_url(
                 record.get("requested_judge_api_url") or (DEFAULT_JUDGE_API_URL if judge_api_url == DEFAULT_JUDGE_API_URL else "")
@@ -118,13 +134,17 @@ def main() -> None:
     skipped = 0
     for _, row in sampled.iterrows():
         key = (str(row["eid"]), source.source_id, args.model, judge_api_url)
-        if not args.force and key in existing_keys:
+        eid_source_key = (str(row["eid"]), source.source_id)
+        if not args.force and (key in existing_keys or (args.skip_existing_eids and eid_source_key in existing_eid_source_keys)):
             skipped += 1
             continue
         pending_rows.append(row)
 
     failures = 0
     rows = pending_rows
+
+    def print_judged_row(row) -> None:
+        print(f"judged {row['eid']}")
 
     def worker(row):
         return judge_row(
@@ -135,6 +155,7 @@ def main() -> None:
             judge_model=args.model,
             api_url=judge_api_url,
             max_tokens=args.max_tokens,
+            timeout=args.timeout,
             dry_run=args.dry_run,
     )
 
@@ -146,7 +167,7 @@ def main() -> None:
                 result = worker(row)
                 write_judge_records(path=out_path, records=[result], overwrite=False)
                 judged += 1
-                print(f"judged {row['eid']}")
+                print_judged_row(row)
             except JudgeRequestError as exc:
                 failures += 1
                 print(f"failed {row['eid']}: {exc}", file=sys.stderr)
@@ -162,7 +183,7 @@ def main() -> None:
                     result = future.result()
                     write_judge_records(path=out_path, records=[result], overwrite=False)
                     judged += 1
-                    print(f"judged {row['eid']}")
+                    print_judged_row(row)
                 except JudgeRequestError as exc:
                     failures += 1
                     print(f"failed {row['eid']}: {exc}", file=sys.stderr)
