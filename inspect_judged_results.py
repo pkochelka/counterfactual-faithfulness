@@ -18,6 +18,18 @@ from typing import Any
 SCORE_VALUES = (1, 2, 3, 4, 5)
 LANGUAGES = {"en", "cs", "sk"}
 ISSUE_PATTERNS = {
+    "refusal": re.compile(
+        r"\b("
+        r"cannot|can't|unable to|impossible to|not possible to|"
+        r"nonsensical|nonsense|invalid triple|erroneous data|"
+        r"nelze|nemožn|není možné|nie je možné|nemůže|nemôže|"
+        r"nedá sa|neexistuje|nesmysln|nezmyseln|"
+        r"chybn(?:é|á|ým|ými)?|chybu|chybou|"
+        r"faktick(?:é|ý|ú|ou)|faktografick(?:é|ú|ou)|"
+        r"logick(?:é|ú|ou)|nesúlad|nesoulad"
+        r")\b",
+        re.I,
+    ),
     "reverse_relation": re.compile(
         r"\b("
         r"revers(?:e|ed|es|ing)|"
@@ -243,8 +255,15 @@ def load_expected_eids(path: Path | None) -> set[str]:
         return set()
 
 
-def detect_issues(text: str) -> list[str]:
-    return [name for name, pattern in ISSUE_PATTERNS.items() if pattern.search(text or "")]
+def classify_issue(sentence: str, explanation: str) -> str:
+    if ISSUE_PATTERNS["refusal"].search(" ".join([sentence, explanation])):
+        return "refusal"
+    for name, pattern in ISSUE_PATTERNS.items():
+        if name == "refusal":
+            continue
+        if pattern.search(explanation or ""):
+            return name
+    return ""
 
 
 def read_judged_records(input_dir: Path, repo_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, str]]]:
@@ -278,7 +297,7 @@ def read_judged_records(input_dir: Path, repo_root: Path) -> tuple[list[dict[str
                 expected_path = generated_source_path(repo_root, key)
                 if key not in expected_cache:
                     expected_cache[key] = load_expected_eids(expected_path)
-                issues = detect_issues(" ".join([incorrect, style]))
+                issue = classify_issue(str(record.get("sentence", "")), " ".join([incorrect, style]))
                 row = {
                     "generator_model": key.generator_model,
                     "dataset": key.dataset,
@@ -291,7 +310,7 @@ def read_judged_records(input_dir: Path, repo_root: Path) -> tuple[list[dict[str
                     "judge_correct_info": judge_correct_info,
                     "judge_info_used": judge_info_used,
                     "style_comment": style,
-                    "issue_categories": "; ".join(issues),
+                    "issue_category": issue,
                     "judge_model": record.get("requested_judge_model") or record.get("judge_model") or "",
                     "judge_endpoint": record.get("requested_judge_api_url") or "",
                     "timestamp": record.get("timestamp", ""),
@@ -438,7 +457,7 @@ def write_score_cases(base_dir: Path, rows: list[dict[str, Any]], sample_size: i
         "judge_correct_info",
         "judge_info_used",
         "style_comment",
-        "issue_categories",
+        "issue_category",
         "judge_model",
         "judge_endpoint",
         "source_csv",
@@ -508,7 +527,7 @@ def write_combined_score_cases(base_dir: Path, rows: list[dict[str, Any]], sampl
         "judge_correct_info",
         "judge_info_used",
         "style_comment",
-        "issue_categories",
+        "issue_category",
         "judge_model",
         "judge_endpoint",
         "source_csv",
@@ -625,9 +644,10 @@ def write_report_tree(output_dir: Path, rows: list[dict[str, Any]], warnings: li
     top_good = sorted(group_stats(rows, ["generator_model", "dataset", "variant", "language"]), key=lambda r: (-float(r["lenient_success_pct_score_4_5"]), -float(r["mean_score"] or 0)))[:15]
     issue_counts = Counter()
     for row in rows:
-        for issue in str(row.get("issue_categories", "")).split("; "):
-            if issue:
-                issue_counts[issue] += 1
+        issue = str(row.get("issue_category", ""))
+        if issue:
+            issue_counts[issue] += 1
+    issue_classified_records = sum(issue_counts.values())
     extra = [
         "## Worst Combinations By Failure Rate",
         "",
@@ -638,6 +658,10 @@ def write_report_tree(output_dir: Path, rows: list[dict[str, Any]], warnings: li
         stats_table_md(top_good, ["generator_model", "dataset", "variant", "language"], 15),
         "",
         "## Issue Category Counts",
+        "",
+        "Each row receives at most one primary issue category. Counts sum to the number of rows with a detected issue, not to all judged rows.",
+        "",
+        f"Rows with detected issue: {issue_classified_records}",
         "",
         "| issue | count |",
         "| --- | ---: |",
