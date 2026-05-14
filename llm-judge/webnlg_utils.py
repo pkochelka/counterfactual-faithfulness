@@ -15,7 +15,7 @@ import requests
 
 
 DEFAULT_JUDGE_MODEL = "openrouter/free"
-DEFAULT_JUDGE_MAX_TOKENS = 5000
+DEFAULT_JUDGE_MAX_TOKENS = 1000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
@@ -188,41 +188,47 @@ def infer_xml_path(sentences_csv: str | Path) -> Path:
     stem = csv_path.stem.lower()
 
     if "webnlg_cf" in stem:
-        filename = "D2T-1-CFA_WebNLG_CounterFactual.xml"
+        candidates = [
+            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-CFA_WebNLG_CounterFactual.xml",
+            csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-CFA_WebNLG_CounterFactual.xml",
+            csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-CFA_WebNLG_CounterFactual.xml",
+        ]
     elif "webnlg_fa" in stem:
-        filename = "D2T-1-FA_WebNLG_Factual.xml"
+        candidates = [
+            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FA_WebNLG_Factual.xml",
+            csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FA_WebNLG_Factual.xml",
+            csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FA_WebNLG_Factual.xml",
+        ]
     elif "webnlg_fi" in stem:
-        filename = "D2T-1-FI_WebNLG_Fictional.xml"
+        candidates = [
+            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FI_WebNLG_Fictional.xml",
+            csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FI_WebNLG_Fictional.xml",
+            csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / "D2T-1-FI_WebNLG_Fictional.xml",
+        ]
     elif "cs-qa_cf" in stem:
-        filename = "CounterFactual-triples.xml"
+        candidates = [
+            repo_root() / "cus-qa-to-triples" / "data" / "cz" / "cf.xml",
+            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "cz" / "cf.xml",
+        ]
     elif "cs-qa_fa" in stem:
-        filename = "Factual-triples.xml"
+        candidates = [
+            repo_root() / "cus-qa-to-triples" / "data" / "cz" / "fa.xml",
+            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "cz" / "fa.xml",
+        ]
+    elif "sk-qa_cf" in stem:
+        candidates = [
+            repo_root() / "cus-qa-to-triples" / "data" / "sk" / "cf.xml",
+            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "sk" / "cf.xml",
+        ]
+    elif "sk-qa_fa" in stem:
+        candidates = [
+            repo_root() / "cus-qa-to-triples" / "data" / "sk" / "fa.xml",
+            csv_path.parent.parent / "cus-qa-to-triples" / "data" / "sk" / "fa.xml",
+        ]
     else:
         raise ValueError(
             f"Cannot infer XML path from {csv_path.name!r}; pass an XML path explicitly."
         )
-
-    if filename.endswith(".xml") and filename.startswith("CounterFactual"):
-        candidates = [
-            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / filename,
-            repo_root() / "cus-qa-to-triples" / "data" / filename,
-            csv_path.parent / "cus-qa-to-triples" / "data" / filename,
-            csv_path.parent / "data" / "cus-qa-to-triples" / "data" / filename,
-        ]
-    elif filename.endswith(".xml") and filename.startswith("Factual"):
-        candidates = [
-            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / filename,
-            repo_root() / "cus-qa-to-triples" / "data" / filename,
-            csv_path.parent / "cus-qa-to-triples" / "data" / filename,
-            csv_path.parent / "data" / "cus-qa-to-triples" / "data" / filename,
-        ]
-    else:
-        candidates = [
-            repo_root() / "data" / "GEM-v2-D2T-SharedTask" / filename,
-            csv_path.parent / "GEM-v2-D2T-SharedTask" / filename,
-            csv_path.parent / "data" / "GEM-v2-D2T-SharedTask" / filename,
-            csv_path.parent.parent / "data" / "GEM-v2-D2T-SharedTask" / filename,
-        ]
     for xml_path in candidates:
         if xml_path.exists():
             return xml_path
@@ -234,7 +240,7 @@ def infer_triple_xpath(source_path: str | Path) -> str:
     path = Path(source_path)
     stem = path.stem.lower()
     name = path.name.lower()
-    if "cs-qa" in stem or name in {"factual-triples.xml", "counterfactual-triples.xml"}:
+    if "cs-qa" in stem or "sk-qa" in stem or name in {"factual-triples.xml", "counterfactual-triples.xml"}:
         return "originaltripleset/otriple"
     return "modifiedtripleset/mtriple"
 
@@ -571,6 +577,9 @@ def request_judge(
                         },
                         {"role": "user", "content": prompt},
                     ],
+                    "chat_template_kwargs": {
+                        "thinking": "true"
+                    },
                     "temperature": 0,
                     "max_tokens": max_tokens,
                 },
