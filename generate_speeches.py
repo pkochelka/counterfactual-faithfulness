@@ -8,18 +8,21 @@ from api_caller import call_api
 
 parser = argparse.ArgumentParser()
 
+TASK_PROMPTS = {
+    "generated": "prompts/generate_speeches.json",
+    "classified": "prompts/classify_speeches.json",
+}
+
 parser.add_argument("--model", default="qwen3.5-122b", type=str, help="Model name.")
 parser.add_argument("--dataset", default="webnlg", type=str, help="Dataset name (e.g. webnlg, cs-qa, sk-qa).")
 parser.add_argument("--variant", default="cf", choices=["cf", "fa", "fi"], type=str, help="Dataset variant: cf=counterfactual, fa=factual, fi=fictional.")
 parser.add_argument("--kind", default="modified", type=str, help="Value of the 'kind' column to filter on.")
 parser.add_argument("--language", default="en", type=str, help="Prompt language (e.g. en, cs, sk).")
 parser.add_argument("--token-name", default="", type=str, help="Env var name for the API token (default: AUTH_TOKEN).")
+parser.add_argument("--task", default="generated", choices=list(TASK_PROMPTS), type=str, help="Task type: determines output folder and prompt file.")
 
-with open("prompts/generate_speeches.json", encoding="utf-8") as _f:
-    _PROMPTS = json.load(_f)
 
-def build_prompt(entry_df: pd.DataFrame, language: str = "en") -> str:
-    """Build a prompt from all triples in one entry."""
+def build_prompt(entry_df: pd.DataFrame, prompts: dict, language: str = "en") -> str:
     category = entry_df["category"].iloc[0]
     size = entry_df["size"].iloc[0]
 
@@ -29,7 +32,7 @@ def build_prompt(entry_df: pd.DataFrame, language: str = "en") -> str:
 
     triples_str = "\n".join(triples)
 
-    template = _PROMPTS[language]
+    template = prompts[language]
     return template.format(size=size, category=category, triples_str=triples_str)
 
 
@@ -48,6 +51,7 @@ def call_llm(prompt: str, model_id: str, token_name: str = "") -> str:
 def generate_sentences(
     df: pd.DataFrame,
     model_id: str,
+    prompts: dict,
     kind: str = "modified",
     language: str = "en",
     max_workers: int = 4,
@@ -57,7 +61,7 @@ def generate_sentences(
     subset = df[df["kind"] == kind] if "kind" in df.columns else df
     grouped = subset.groupby("eid", observed=True)
 
-    tasks = {eid: build_prompt(group, language) for eid, group in grouped}
+    tasks = {eid: build_prompt(group, prompts, language) for eid, group in grouped}
     results = {}
 
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
@@ -78,15 +82,17 @@ def generate_sentences(
 
 
 def main(args: argparse.Namespace) -> None:
+    with open(TASK_PROMPTS[args.task], encoding="utf-8") as f:
+        prompts = json.load(f)
 
     input_path = os.path.join("data", args.dataset, f"{args.variant}.csv")
     df = pd.read_csv(input_path)
 
     n = df[df['kind'] == args.kind]['eid'].nunique() if 'kind' in df.columns else df['eid'].nunique()
     print(f"Generating sentences for {n} entries...")
-    result = generate_sentences(df, args.model, kind=args.kind, language=args.language, max_workers=4, token_name=args.token_name)
+    result = generate_sentences(df, args.model, prompts, kind=args.kind, language=args.language, max_workers=4, token_name=args.token_name)
 
-    output_dir = os.path.join("data", "generated", args.model)
+    output_dir = os.path.join("data", args.task, args.model)
     os.makedirs(output_dir, exist_ok=True)
     output_filename = f"{args.dataset}_{args.variant}_{args.language}.csv"
     output_path = os.path.join(output_dir, output_filename)

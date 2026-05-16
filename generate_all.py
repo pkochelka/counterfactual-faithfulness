@@ -7,6 +7,7 @@ DATASETS = ["webnlg", "cs-qa", "sk-qa"]
 VARIANTS = ["cf", "fa", "fi"]
 LANGUAGES = ["en", "cs", "sk"]
 MODELS = ["gpt-oss-120b", "qwen3.5-122b"]
+TASKS = ["generated", "classified"]
 TOKEN_NAMES = ["AUTH_TOKEN", "AUTH_TOKEN2", "AUTH_TOKEN3"]
 
 DATASET_CONFIG = {
@@ -21,7 +22,7 @@ DATASET_CONFIG = {
 }
 
 
-def iter_dataset_jobs(model: str, dataset: str) -> tuple[list[tuple], int]:
+def iter_dataset_jobs(task: str, model: str, dataset: str) -> tuple[list[tuple], int]:
     config = DATASET_CONFIG.get(dataset, {})
     excluded_variants = config.get("excluded_variants", set())
     extra_args = config.get("extra_args", [])
@@ -31,24 +32,25 @@ def iter_dataset_jobs(model: str, dataset: str) -> tuple[list[tuple], int]:
             continue
         for language in LANGUAGES:
             output_path = os.path.join(
-                "data", "generated", model,
+                "data", task, model,
                 f"{dataset}_{variant}_{language}.csv",
             )
             if os.path.exists(output_path):
                 print(f"[skip] {output_path}")
                 skipped += 1
             else:
-                jobs.append((model, dataset, variant, language, extra_args))
+                jobs.append((task, model, dataset, variant, language, extra_args))
     return jobs, skipped
 
 
 def collect_jobs() -> tuple[list[tuple], int]:
     jobs, skipped = [], 0
-    for model in MODELS:
-        for dataset in DATASETS:
-            new_jobs, new_skipped = iter_dataset_jobs(model, dataset)
-            jobs.extend(new_jobs)
-            skipped += new_skipped
+    for task in TASKS:
+        for model in MODELS:
+            for dataset in DATASETS:
+                new_jobs, new_skipped = iter_dataset_jobs(task, model, dataset)
+                jobs.extend(new_jobs)
+                skipped += new_skipped
     return jobs, skipped
 
 
@@ -60,8 +62,8 @@ def run_token_jobs(
     total: int,
     failed: list[int],
 ) -> None:
-    for model, dataset, variant, language, extra_args in token_jobs:
-        label = f"{model}/{dataset}_{variant}_{language}"
+    for task, model, dataset, variant, language, extra_args in token_jobs:
+        label = f"{task}/{model}/{dataset}_{variant}_{language}"
         cmd = [
             sys.executable, "generate_speeches.py",
             "--model", model,
@@ -69,6 +71,7 @@ def run_token_jobs(
             "--variant", variant,
             "--language", language,
             "--token-name", token_name,
+            "--task", task,
             *extra_args,
         ]
         result = subprocess.run(cmd)
