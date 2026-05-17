@@ -55,7 +55,7 @@ def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
                 ax.plot(LANGUAGE_ORDER, means, marker="o", linewidth=2,
                         **VARIANT_STYLE[variant])
 
-            ax.set_ylim(0, 105)
+            ax.set_ylim(95, 101)
             ax.axhline(100, color="gray", linewidth=0.6, linestyle="--", alpha=0.5)
             ax.set_title(f"{model} / {dataset}", fontsize=10)
             ax.set_xlabel("Prompt language" if row == len(models) - 1 else "")
