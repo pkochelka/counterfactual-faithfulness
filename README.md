@@ -83,3 +83,17 @@ find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
 The per-request HTTP timeout defaults to 150 seconds and can be changed with `--timeout`.
 
 See `llm-judge/README_judge.md` for expected XML/CSV files, `.env.local` setup, batch judging behavior, and full CLI examples.
+
+## References
+
+#### CUS-QA dataset
+
+```
+CUS-QA: Local-Knowledge-Oriented Open-Ended Question Answering Dataset, Libovický et al, 2025
+```
+
+#### web_nlg
+
+```
+The 2024 GEM Shared Task on Multilingual Data-to-Text Generation and Summarization
+```
