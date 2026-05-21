@@ -95,5 +95,5 @@ CUS-QA: Local-Knowledge-Oriented Open-Ended Question Answering Dataset, Libovick
 #### web_nlg
 
 ```
-The 2024 GEM Shared Task on Multilingual Data-to-Text Generation and Summarization
+The 2024 GEM Shared Task on Multilingual Data-to-Text Generation and Summarization; https://gem-benchmark.com/shared_task
 ```
