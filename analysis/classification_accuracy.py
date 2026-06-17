@@ -8,6 +8,7 @@ OUTPUT_PATH = Path(__file__).parent / "classification_accuracy.png"
 CONFUSION_OUTPUT_PATH = Path(__file__).parent / "classification_confusion_matrix.png"
 
 LABEL_ORDER = ["CFA", "FA", "FI"]
+LANGUAGE_ORDER = ["en", "cs", "sk"]
 
 HARD_LABEL = {"cf": "CFA", "fa": "FA", "fi": "FI"}
 SOFT_LABELS = {"cf": {"CFA", "FI"}, "fa": {"FA"}, "fi": {"FI", "CFA"}}
@@ -79,6 +80,7 @@ def pivot_for(results: pd.DataFrame, model: str, metric: str) -> pd.DataFrame:
     return (
         results[results["model"] == model]
         .pivot_table(index=["dataset", "variant"], columns="language", values=metric)
+        .reindex(columns=LANGUAGE_ORDER)
     )
 
 
