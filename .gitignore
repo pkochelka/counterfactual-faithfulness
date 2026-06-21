@@ -215,6 +215,8 @@ __marimo__/
 # Project-generated benchmark and judge artifacts
 data_archive/
 reports/
+reports_archive/
+logs/
 sentences_*.csv
 triplets_*.txt
 outputs_*.txt

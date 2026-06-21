@@ -1,0 +1,63 @@
+You are judging faithfulness in data-to-text generation.
+
+Task: decide quickly whether the sentence is fully supported by the triples below.
+The triples are the complete source of truth.
+Do not use outside knowledge.
+Do not explain your reasoning.
+Output the final JSON immediately.
+
+Important rules:
+- Treat every triple as true, even if it contradicts real-world knowledge.
+- Interpret each triple as subject | predicate | object, using the predicate label's actual semantics.
+- Do not treat every predicate label as an active verb. Some labels define the object's role: X | broadcastedBy | Y means Y broadcast X; X | riverFlowingThrough | Y means river Y flows through X; X | hasToItsNorth | Y means Y is north of X.
+- Mark a relation as reversed only when the sentence swaps the semantic roles.
+- Never mark information as incorrect just because it seems implausible, geographically wrong, historically wrong, or factually wrong in the real world.
+- Focus mainly on whether the correct information is present and whether there is any obviously wrong or unsupported information.
+- Do not focus too much on wording differences if the meaning is correctly supported by the triples.
+- Only mark information as incorrect if it is unsupported, contradicted, over-specific, or incorrectly transformed relative to the triples shown below.
+- Never place supported information in incorrect_information.
+- If all sentence information is supported, set faithfulness_score to 5 and return incorrect_information as [].
+- If incorrect_information is empty, the score should normally be 5.
+
+Return STRICT JSON with these keys only:
+- faithfulness_score: integer from 1 to 5
+- incorrect_information: array of objects with keys info_used, correct_info, comment
+- 5 means fully faithful: all information is supported by the triples, allowing reasonable paraphrase
+- 4 means mostly faithful: a small issue, minor overstatement, or slightly imprecise transformation
+- 3 means mixed: some information is supported, but there is at least one clear substantive problem
+- 2 means mostly unfaithful: multiple important problems or one major problem dominates the sentence
+- 1 means completely unfaithful: the sentence is largely unsupported or contradicts the triples in a major way
+- info_used: the exact claim from the sentence that is unsupported or wrong
+- correct_info: the triple-backed correction or missing constraint
+- comment: a brief explanation based only on the triples
+
+Mini examples:
+1. Triple: People's_Republic_of_China | ethnicGroup | Arabs_in_Khorasan
+   Sentence: Arabs in Khorasan are an ethnic group within the People's Republic of China.
+   Output idea: faithfulness_score 5, incorrect_information []
+
+2. Triple: Martial | occupation | military_engineer
+   Sentence: Martial is an astronaut.
+   Output idea: mark the astronaut claim as incorrect.
+
+3. Triple: Wang_Xiaoyun | height | 17068.8_(millimetres)
+   Sentence: Wang Xiaoyun is 170.69 meters tall.
+   Output idea: mark the exact height claim as incorrectly transformed.
+
+4. Triple: Beverly_Hills | broadcastedBy | IBM
+   Sentence: IBM broadcast Beverly Hills.
+   Output idea: faithfulness_score 5, incorrect_information []
+
+5. Triple: Havlíčkův_Brod | riverFlowingThrough | Hrubý_Jeseník
+   Sentence: The Hrubý Jeseník river flows through Havlíčkův Brod.
+   Output idea: faithfulness_score 5, incorrect_information []
+
+6. Triple: Adams_County | hasToItsNorth | Cumberland_County
+   Sentence: Cumberland County is north of Adams County.
+   Output idea: faithfulness_score 5, incorrect_information []
+
+Category: {category}
+Sentence: {sentence}
+
+Triples:
+{modified_triples}

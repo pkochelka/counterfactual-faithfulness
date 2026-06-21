@@ -1,14 +1,20 @@
 from __future__ import annotations
 
 import argparse
+import os
+import queue
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass
 from pathlib import Path
 
 from webnlg_utils import (
     DEFAULT_JUDGE_API_URL,
     DEFAULT_JUDGE_MODEL,
     DEFAULT_JUDGE_MAX_TOKENS,
+    DEFAULT_JUDGE_RETRY_ATTEMPTS,
+    DEFAULT_JUDGE_RETRY_SLEEP,
+    DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     DEFAULT_JUDGE_TIMEOUT,
     DEFAULT_OUTPUT_DIR,
     JudgeRequestError,
@@ -28,6 +34,12 @@ from webnlg_utils import (
 DEFAULT_SAMPLE_SIZE = 10
 
 
+@dataclass(frozen=True)
+class TokenSlot:
+    env_var: str | None
+    token: str | None
+
+
 def parse_sample_size(value: str) -> int | str:
     lowered = value.strip().lower()
     if lowered == "all":
@@ -40,6 +52,26 @@ def parse_sample_size(value: str) -> int | str:
 
     if parsed <= 0:
         raise argparse.ArgumentTypeError("sample size must be positive or 'all'")
+    return parsed
+
+
+def parse_csv_list(value: str | None) -> list[str]:
+    if not value:
+        return []
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def positive_int(value: str) -> int:
+    parsed = int(value)
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("value must be positive")
+    return parsed
+
+
+def nonnegative_float(value: str) -> float:
+    parsed = float(value)
+    if parsed < 0:
+        raise argparse.ArgumentTypeError("value must be non-negative")
     return parsed
 
 
@@ -69,8 +101,34 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_JUDGE_MAX_TOKENS, help="Maximum completion tokens for each judge request")
     parser.add_argument("--timeout", type=int, default=DEFAULT_JUDGE_TIMEOUT, help="HTTP read timeout in seconds for each judge request")
+    parser.add_argument("--retry-attempts", type=positive_int, default=DEFAULT_JUDGE_RETRY_ATTEMPTS, help="Maximum attempts per judge request")
+    parser.add_argument("--retry-sleep", type=nonnegative_float, default=DEFAULT_JUDGE_RETRY_SLEEP, help="Short sleep between retry attempts")
+    parser.add_argument(
+        "--long-retry-sleep",
+        type=nonnegative_float,
+        default=DEFAULT_JUDGE_LONG_RETRY_SLEEP,
+        help="One longer cooldown before retrying a transient request failure; use 0 to disable",
+    )
     parser.add_argument("--limit", type=int, default=None, help="Upper bound on rows after sampling")
     parser.add_argument("--concurrency", type=int, default=1, help="How many rows to judge in parallel within one CSV")
+    parser.add_argument(
+        "--concurrency-per-key",
+        type=positive_int,
+        default=None,
+        help="How many concurrent judge requests to allow for each token env var in --token-env-vars",
+    )
+    parser.add_argument(
+        "--token-env-var",
+        type=str,
+        default=None,
+        help="Single environment variable containing the API token. Defaults to AUTH_TOKEN.",
+    )
+    parser.add_argument(
+        "--token-env-vars",
+        type=str,
+        default=None,
+        help="Comma-separated token environment variable names. Total concurrency is keys * --concurrency-per-key.",
+    )
     parser.add_argument("--output-dir", type=str, default=str(DEFAULT_OUTPUT_DIR), help="Directory for outputs")
     parser.add_argument(
         "--output-path",
@@ -89,10 +147,37 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def build_token_slots(args: argparse.Namespace) -> list[TokenSlot]:
+    token_env_vars = parse_csv_list(args.token_env_vars)
+    if args.token_env_var:
+        token_env_vars.append(args.token_env_var)
+    token_env_vars = list(dict.fromkeys(token_env_vars))
+
+    if token_env_vars:
+        slots_per_key = args.concurrency_per_key or max(1, int(args.concurrency))
+        slots: list[TokenSlot] = []
+        missing = []
+        for env_var in token_env_vars:
+            token = os.getenv(env_var)
+            if not token and not args.dry_run:
+                missing.append(env_var)
+                continue
+            slots.extend(TokenSlot(env_var=env_var, token=token) for _ in range(slots_per_key))
+        if missing:
+            raise RuntimeError(f"Missing token environment variable(s): {', '.join(missing)}")
+        return slots
+
+    token = os.getenv("AUTH_TOKEN")
+    if not token and not args.dry_run:
+        raise RuntimeError("AUTH_TOKEN is missing; set it in .env.local or pass --token-env-vars.")
+    return [TokenSlot(env_var="AUTH_TOKEN", token=token) for _ in range(max(1, int(args.concurrency)))]
+
+
 def main() -> None:
     load_env_defaults()
     args = parse_args()
     judge_api_url = normalize_judge_api_url(args.judge_api_url or judge_api_url_from_env())
+    token_slots = build_token_slots(args)
 
     csv_path = Path(args.csv).resolve()
     source_label = args.label or csv_path.stem
@@ -146,25 +231,38 @@ def main() -> None:
     def print_judged_row(row) -> None:
         print(f"judged {row['eid']}")
 
-    def worker(row):
-        return judge_row(
-            row,
-            source_label=source.label,
-            source_path=str(source.csv_path),
-            source_id=source.source_id,
-            judge_model=args.model,
-            api_url=judge_api_url,
-            max_tokens=args.max_tokens,
-            timeout=args.timeout,
-            dry_run=args.dry_run,
-    )
+    slot_queue: queue.Queue[TokenSlot] = queue.Queue()
+    for slot in token_slots:
+        slot_queue.put(slot)
 
-    max_workers = max(1, int(args.concurrency))
+    def worker_with_slot(row):
+        slot = slot_queue.get()
+        try:
+            return judge_row(
+                row,
+                source_label=source.label,
+                source_path=str(source.csv_path),
+                source_id=source.source_id,
+                judge_model=args.model,
+                auth_token=slot.token,
+                token_env_var=slot.env_var,
+                api_url=judge_api_url,
+                max_tokens=args.max_tokens,
+                timeout=args.timeout,
+                retry_attempts=args.retry_attempts,
+                retry_sleep=args.retry_sleep,
+                long_retry_sleep=args.long_retry_sleep,
+                dry_run=args.dry_run,
+            )
+        finally:
+            slot_queue.put(slot)
+
+    max_workers = len(token_slots)
     judged = 0
     if max_workers == 1:
         for row in rows:
             try:
-                result = worker(row)
+                result = worker_with_slot(row)
                 write_judge_records(path=out_path, records=[result], overwrite=False)
                 judged += 1
                 print_judged_row(row)
@@ -176,7 +274,7 @@ def main() -> None:
                 print(f"failed {row['eid']}: {exc}", file=sys.stderr)
     else:
         with ThreadPoolExecutor(max_workers=max_workers) as pool:
-            future_map = {pool.submit(worker, row): row for row in rows}
+            future_map = {pool.submit(worker_with_slot, row): row for row in rows}
             for future in as_completed(future_map):
                 row = future_map[future]
                 try:
@@ -196,6 +294,7 @@ def main() -> None:
             f"completed with {failures} failures and skipped {skipped} existing rows; wrote judged rows to {out_path}",
             file=sys.stderr,
         )
+        sys.exit(1)
     else:
         print(f"wrote {judged} judged rows to {out_path} (skipped {skipped} existing rows)")
 

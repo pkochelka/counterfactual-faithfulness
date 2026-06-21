@@ -18,10 +18,13 @@ DEFAULT_JUDGE_MODEL = "openrouter/free"
 DEFAULT_JUDGE_MAX_TOKENS = 1000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
 DEFAULT_JUDGE_TIMEOUT = 150
+DEFAULT_JUDGE_RETRY_SLEEP = 2.5
+DEFAULT_JUDGE_LONG_RETRY_SLEEP = 60.0
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
 OPENROUTER_URL = DEFAULT_JUDGE_API_URL
+PROMPT_TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "prompts" / "judge_speeches.txt"
 
 
 class JudgeRequestError(RuntimeError):
@@ -451,6 +454,10 @@ def build_prompt_payload(
     }
 
 
+def load_judge_prompt_template() -> str:
+    return PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
+
+
 def build_judge_prompt(row: pd.Series | dict[str, Any]) -> str:
     payload = build_prompt_payload(
         eid=str(row["eid"]),
@@ -458,48 +465,7 @@ def build_judge_prompt(row: pd.Series | dict[str, Any]) -> str:
         sentence=str(row["sentence"]),
         modified_triples=str(row["modified_triples"]),
     )
-    return (
-        "You are judging faithfulness in data-to-text generation.\n\n"
-        "Task: decide quickly whether the sentence is fully supported by the triples below.\n"
-        "The triples are the complete source of truth.\n"
-        "Do not use outside knowledge.\n"
-        "Do not explain your reasoning.\n"
-        "Output the final JSON immediately.\n\n"
-        "Important rules:\n"
-        "- Treat every triple as true, even if it contradicts real-world knowledge.\n"
-        "- Never mark information as incorrect just because it seems implausible, geographically wrong, historically wrong, or factually wrong in the real world.\n"
-        "- Focus mainly on whether the correct information is present and whether there is any obviously wrong or unsupported information.\n"
-        "- Do not focus too much on wording differences if the meaning is correctly supported by the triples.\n"
-        "- Only mark information as incorrect if it is unsupported, contradicted, over-specific, or incorrectly transformed relative to the triples shown below.\n"
-        "- Never place supported information in incorrect_information.\n"
-        "- If all sentence information is supported, set faithfulness_score to 5 and return incorrect_information as [].\n"
-        "- If incorrect_information is empty, the score should normally be 5.\n\n"
-        "Return STRICT JSON with these keys only:\n"
-        "- faithfulness_score: integer from 1 to 5\n"
-        "- incorrect_information: array of objects with keys info_used, correct_info, comment\n"
-        "- 5 means fully faithful: all information is supported by the triples, allowing reasonable paraphrase\n"
-        "- 4 means mostly faithful: a small issue, minor overstatement, or slightly imprecise transformation\n"
-        "- 3 means mixed: some information is supported, but there is at least one clear substantive problem\n"
-        "- 2 means mostly unfaithful: multiple important problems or one major problem dominates the sentence\n"
-        "- 1 means completely unfaithful: the sentence is largely unsupported or contradicts the triples in a major way\n"
-        "- info_used: the exact claim from the sentence that is unsupported or wrong\n"
-        "- correct_info: the triple-backed correction or missing constraint\n"
-        "- comment: a brief explanation based only on the triples\n\n"
-        "Mini examples:\n"
-        "1. Triple: People's_Republic_of_China | ethnicGroup | Arabs_in_Khorasan\n"
-        "   Sentence: Arabs in Khorasan are an ethnic group within the People's Republic of China.\n"
-        "   Output idea: faithfulness_score 5, incorrect_information []\n\n"
-        "2. Triple: Martial | occupation | military_engineer\n"
-        "   Sentence: Martial is an astronaut.\n"
-        "   Output idea: mark the astronaut claim as incorrect.\n\n"
-        "3. Triple: Wang_Xiaoyun | height | 17068.8_(millimetres)\n"
-        "   Sentence: Wang Xiaoyun is 170.69 meters tall.\n"
-        "   Output idea: mark the exact height claim as incorrectly transformed.\n\n"
-        f"Category: {payload['category']}\n"
-        f"Sentence: {payload['sentence']}\n\n"
-        "Triples:\n"
-        f"{payload['modified_triples']}\n"
-    )
+    return load_judge_prompt_template().format(**payload)
 
 
 def extract_json(text: str) -> dict[str, Any]:
@@ -550,6 +516,8 @@ def request_judge(
     auth_token: str,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
+    retry_sleep: float = DEFAULT_JUDGE_RETRY_SLEEP,
+    long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     api_url: str | None = None,
     timeout: int = DEFAULT_JUDGE_TIMEOUT,
 ) -> tuple[str, dict[str, Any], dict[str, Any], dict[str, Any]]:
@@ -560,6 +528,7 @@ def request_judge(
     }
     response = None
     last_http_error: requests.HTTPError | None = None
+    used_long_retry_sleep = False
     for attempt in range(1, retry_attempts + 1):
         try:
             response = requests.post(
@@ -591,9 +560,13 @@ def request_judge(
             last_http_error = exc
             status_code = exc.response.status_code if exc.response is not None else None
             body = exc.response.text.strip() if exc.response is not None and exc.response.text else ""
-            retryable_429 = status_code == 429
-            if retryable_429 and attempt < retry_attempts:
-                time.sleep(0.2)
+            retryable = status_code == 429 or (status_code is not None and 500 <= status_code < 600)
+            if retryable and attempt < retry_attempts:
+                if not used_long_retry_sleep and long_retry_sleep > 0:
+                    time.sleep(long_retry_sleep)
+                    used_long_retry_sleep = True
+                else:
+                    time.sleep(retry_sleep)
                 continue
 
             message = f"Judge API returned HTTP {status_code if status_code is not None else 'error'}."
@@ -609,6 +582,13 @@ def request_judge(
                 },
             ) from exc
         except requests.RequestException as exc:
+            if attempt < retry_attempts:
+                if not used_long_retry_sleep and long_retry_sleep > 0:
+                    time.sleep(long_retry_sleep)
+                    used_long_retry_sleep = True
+                else:
+                    time.sleep(retry_sleep)
+                continue
             raise JudgeRequestError(
                 f"Judge API request failed: {exc}",
                 details={"api_url": api_url, "attempt": attempt, "retry_attempts": retry_attempts},
@@ -679,6 +659,7 @@ def build_judge_record(
     parsed: dict[str, Any] | None,
     usage: dict[str, Any] | None = None,
     response_meta: dict[str, Any] | None = None,
+    token_env_var: str | None = None,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
     prompt_preview = prompt.splitlines()[0] if prompt else ""
@@ -692,6 +673,7 @@ def build_judge_record(
         "judge_model": response_meta.get("response_model") or judge_model,
         "requested_judge_model": judge_model,
         "requested_judge_api_url": normalize_judge_api_url(api_url),
+        "requested_token_env_var": token_env_var,
         "provider": response_meta.get("provider"),
         "request_cost": usage.get("cost"),
         "usage": usage or None,
@@ -714,9 +696,13 @@ def judge_row(
     source_id: str,
     judge_model: str = DEFAULT_JUDGE_MODEL,
     auth_token: str | None = None,
+    token_env_var: str | None = None,
     api_url: str | None = None,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     timeout: int = DEFAULT_JUDGE_TIMEOUT,
+    retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
+    retry_sleep: float = DEFAULT_JUDGE_RETRY_SLEEP,
+    long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
@@ -733,6 +719,7 @@ def judge_row(
             parsed=None,
             usage=None,
             response_meta=None,
+            token_env_var=token_env_var,
         )
 
     token = auth_token or os.getenv("AUTH_TOKEN")
@@ -746,6 +733,9 @@ def judge_row(
         api_url=resolved_api_url,
         max_tokens=max_tokens,
         timeout=timeout,
+        retry_attempts=retry_attempts,
+        retry_sleep=retry_sleep,
+        long_retry_sleep=long_retry_sleep,
     )
     return build_judge_record(
         row=row,
@@ -758,6 +748,7 @@ def judge_row(
         parsed=parsed,
         usage=usage,
         response_meta=response_meta,
+        token_env_var=token_env_var,
     )
 
 
