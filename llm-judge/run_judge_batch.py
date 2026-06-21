@@ -38,8 +38,13 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--token-env-var",
-        required=True,
+        default=None,
         help="Environment variable containing the provider token. The token value is never logged.",
+    )
+    parser.add_argument(
+        "--token-env-vars",
+        default=None,
+        help="Comma-separated provider token environment variables. The token values are never logged.",
     )
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Judge model id.")
     parser.add_argument(
@@ -53,6 +58,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--timeout", type=int, default=None)
     parser.add_argument("--max-tokens", type=int, default=None)
     parser.add_argument("--concurrency", type=int, default=4)
+    parser.add_argument(
+        "--concurrency-per-key",
+        type=int,
+        default=None,
+        help="Concurrent requests per token env var when --token-env-vars is used.",
+    )
     parser.add_argument("--fallback-concurrency", type=int, default=3)
     parser.add_argument(
         "--retries-before-fallback",
@@ -88,6 +99,25 @@ def parse_args() -> argparse.Namespace:
         help="Pass --force to judge_csv.py.",
     )
     return parser.parse_args()
+
+
+def parse_csv_list(value: str | None) -> list[str]:
+    if not value:
+        return []
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def load_env_file(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    values: dict[str, str] = {}
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        values[key.strip()] = value.strip().strip('"').strip("'")
+    return values
 
 
 def utc_stamp() -> str:
@@ -129,6 +159,14 @@ def build_command(
         "--output-dir",
         str(args.output_dir),
     ]
+    if args.token_env_vars:
+        command.extend(["--token-env-vars", args.token_env_vars])
+    elif args.token_env_var:
+        command.extend(["--token-env-var", args.token_env_var])
+    if args.token_env_vars:
+        command.extend(["--concurrency-per-key", str(args.concurrency_per_key or concurrency)])
+    elif args.concurrency_per_key is not None:
+        command.extend(["--concurrency-per-key", str(args.concurrency_per_key)])
     if args.limit is not None:
         command.extend(["--limit", str(args.limit)])
     if args.timeout is not None:
@@ -224,9 +262,20 @@ def run_csv(args: argparse.Namespace, csv_path: Path, env: dict[str, str], log_h
 
 def main() -> None:
     args = parse_args()
-    token = os.environ.get(args.token_env_var)
-    if not token:
-        sys.exit(f"Missing token environment variable: {args.token_env_var}")
+    env = os.environ.copy()
+    for key, value in load_env_file(Path(".env.local")).items():
+        env.setdefault(key, value)
+
+    token_env_vars = parse_csv_list(args.token_env_vars)
+    if args.token_env_var:
+        token_env_vars.append(args.token_env_var)
+    token_env_vars = list(dict.fromkeys(token_env_vars))
+    if not token_env_vars and not args.dry_run:
+        sys.exit("Set --token-env-var or --token-env-vars.")
+
+    missing = [name for name in token_env_vars if not env.get(name)]
+    if missing and not args.dry_run:
+        sys.exit(f"Missing token environment variable(s): {', '.join(missing)}")
 
     csvs = find_csvs(args.generated_dir, language=args.language, pattern=args.pattern)
     if not csvs:
@@ -236,15 +285,17 @@ def main() -> None:
     log_file.parent.mkdir(parents=True, exist_ok=True)
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    env = os.environ.copy()
-    env["AUTH_TOKEN"] = token
+    if args.token_env_var and env.get(args.token_env_var):
+        env["AUTH_TOKEN"] = env[args.token_env_var]
 
     failed: list[Path] = []
     with log_file.open("a", encoding="utf-8") as log_handle:
         log(log_handle, f"[{utc_stamp()}] Batch started")
-        log(log_handle, f"token_env_var={args.token_env_var}")
+        log(log_handle, f"token_env_vars={','.join(token_env_vars) if token_env_vars else 'dry-run'}")
         log(log_handle, f"generated_dir={args.generated_dir}")
         log(log_handle, f"language={args.language or 'all'}")
+        if args.concurrency_per_key is not None:
+            log(log_handle, f"concurrency_per_key={args.concurrency_per_key}")
         log(log_handle, f"files={len(csvs)}")
 
         for index, csv_path in enumerate(csvs, start=1):

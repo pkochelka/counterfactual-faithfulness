@@ -18,6 +18,8 @@ DEFAULT_JUDGE_MODEL = "openrouter/free"
 DEFAULT_JUDGE_MAX_TOKENS = 1000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
 DEFAULT_JUDGE_TIMEOUT = 150
+DEFAULT_JUDGE_RETRY_SLEEP = 2.5
+DEFAULT_JUDGE_LONG_RETRY_SLEEP = 60.0
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
@@ -514,6 +516,8 @@ def request_judge(
     auth_token: str,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
+    retry_sleep: float = DEFAULT_JUDGE_RETRY_SLEEP,
+    long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     api_url: str | None = None,
     timeout: int = DEFAULT_JUDGE_TIMEOUT,
 ) -> tuple[str, dict[str, Any], dict[str, Any], dict[str, Any]]:
@@ -524,6 +528,7 @@ def request_judge(
     }
     response = None
     last_http_error: requests.HTTPError | None = None
+    used_long_retry_sleep = False
     for attempt in range(1, retry_attempts + 1):
         try:
             response = requests.post(
@@ -555,9 +560,13 @@ def request_judge(
             last_http_error = exc
             status_code = exc.response.status_code if exc.response is not None else None
             body = exc.response.text.strip() if exc.response is not None and exc.response.text else ""
-            retryable_429 = status_code == 429
-            if retryable_429 and attempt < retry_attempts:
-                time.sleep(2.5)
+            retryable = status_code == 429 or (status_code is not None and 500 <= status_code < 600)
+            if retryable and attempt < retry_attempts:
+                if not used_long_retry_sleep and long_retry_sleep > 0:
+                    time.sleep(long_retry_sleep)
+                    used_long_retry_sleep = True
+                else:
+                    time.sleep(retry_sleep)
                 continue
 
             message = f"Judge API returned HTTP {status_code if status_code is not None else 'error'}."
@@ -573,6 +582,13 @@ def request_judge(
                 },
             ) from exc
         except requests.RequestException as exc:
+            if attempt < retry_attempts:
+                if not used_long_retry_sleep and long_retry_sleep > 0:
+                    time.sleep(long_retry_sleep)
+                    used_long_retry_sleep = True
+                else:
+                    time.sleep(retry_sleep)
+                continue
             raise JudgeRequestError(
                 f"Judge API request failed: {exc}",
                 details={"api_url": api_url, "attempt": attempt, "retry_attempts": retry_attempts},
@@ -643,6 +659,7 @@ def build_judge_record(
     parsed: dict[str, Any] | None,
     usage: dict[str, Any] | None = None,
     response_meta: dict[str, Any] | None = None,
+    token_env_var: str | None = None,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
     prompt_preview = prompt.splitlines()[0] if prompt else ""
@@ -656,6 +673,7 @@ def build_judge_record(
         "judge_model": response_meta.get("response_model") or judge_model,
         "requested_judge_model": judge_model,
         "requested_judge_api_url": normalize_judge_api_url(api_url),
+        "requested_token_env_var": token_env_var,
         "provider": response_meta.get("provider"),
         "request_cost": usage.get("cost"),
         "usage": usage or None,
@@ -678,9 +696,13 @@ def judge_row(
     source_id: str,
     judge_model: str = DEFAULT_JUDGE_MODEL,
     auth_token: str | None = None,
+    token_env_var: str | None = None,
     api_url: str | None = None,
     max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     timeout: int = DEFAULT_JUDGE_TIMEOUT,
+    retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
+    retry_sleep: float = DEFAULT_JUDGE_RETRY_SLEEP,
+    long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
@@ -697,6 +719,7 @@ def judge_row(
             parsed=None,
             usage=None,
             response_meta=None,
+            token_env_var=token_env_var,
         )
 
     token = auth_token or os.getenv("AUTH_TOKEN")
@@ -710,6 +733,9 @@ def judge_row(
         api_url=resolved_api_url,
         max_tokens=max_tokens,
         timeout=timeout,
+        retry_attempts=retry_attempts,
+        retry_sleep=retry_sleep,
+        long_retry_sleep=long_retry_sleep,
     )
     return build_judge_record(
         row=row,
@@ -722,6 +748,7 @@ def judge_row(
         parsed=parsed,
         usage=usage,
         response_meta=response_meta,
+        token_env_var=token_env_var,
     )
 
 

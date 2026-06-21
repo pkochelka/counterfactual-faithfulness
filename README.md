@@ -42,6 +42,18 @@ Generate fluent sentences based on the triples in your dataset using parallel LL
 python3 generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg" --variant "cf" --language "cs"
 ```
 
+To use multiple equivalent provider keys from `.env.local`, pass their environment variable names and the per-key concurrency:
+
+```bash
+python3 generate_speeches.py \
+  --model "qwen3.5-122b" \
+  --dataset "webnlg" \
+  --variant "cf" \
+  --language "cs" \
+  --token-env-vars EINFRA_JR,EINFRA_AP,EINFRA_PK \
+  --concurrency-per-key 4
+```
+
 ### Judging and browsing outputs
 
 The `llm-judge/` tools can browse generated sentence CSVs, compare outputs, and run an LLM judge against the modified triples. OpenRouter is the default judge endpoint, but you can select any OpenAI-compatible endpoint with `JUDGE_BASE_URL`, `JUDGE_API_URL`, the Streamlit sidebar, or the CLI `--judge-base-url` option.
@@ -85,14 +97,12 @@ The per-request HTTP timeout defaults to 150 seconds and can be changed with `--
 For long full evaluations with one file at a time, retry, fallback from concurrency 4 to 3, and log files, use:
 
 ```bash
-source ~/.zshrc >/dev/null 2>&1
-
 ../.venv/bin/python llm-judge/run_judge_batch.py \
   --language en \
-  --token-env-var E_infra_key \
+  --token-env-vars EINFRA_JR,EINFRA_AP,EINFRA_PK \
   --model glm-5 \
   --judge-base-url https://llm.ai.e-infra.cz/v1 \
-  --concurrency 4 \
+  --concurrency-per-key 4 \
   --fallback-concurrency 3 \
   --output-dir data/judged
 ```

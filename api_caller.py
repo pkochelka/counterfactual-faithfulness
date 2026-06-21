@@ -1,11 +1,23 @@
 #!/usr/bin/env python3
 """Minimal client for an OpenAI-compatible chat completions endpoint."""
 import os
-import sys
+from pathlib import Path
 import requests
-from dotenv import load_dotenv
 
-load_dotenv(".env.local")
+
+def load_env_defaults(path: str | Path = ".env.local") -> None:
+    env_path = Path(path)
+    if not env_path.exists():
+        return
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
+load_env_defaults()
 
 BASE_URL = os.environ["BASE_URL"].rstrip("/")
 
@@ -32,17 +44,12 @@ def call_api(
         "temperature": temperature,
     }
 
-    try:
-        resp = requests.post(
-            f"{BASE_URL}/chat/completions",
-            headers=headers,
-            json=payload,
-            timeout=REQUEST_TIMEOUT,
-        )
-        resp.raise_for_status()
-    except requests.HTTPError as err:
-        sys.exit(f"HTTP {resp.status_code}:\n{resp}")
-    except requests.RequestException as err:
-        sys.exit(f"Request failed: {err}")
+    resp = requests.post(
+        f"{BASE_URL}/chat/completions",
+        headers=headers,
+        json=payload,
+        timeout=REQUEST_TIMEOUT,
+    )
+    resp.raise_for_status()
 
     return resp.json()
