@@ -98,3 +98,17 @@ source ~/.zshrc >/dev/null 2>&1
 ```
 
 See `llm-judge/README_judge.md` for expected XML/CSV files, `.env.local` setup, batch judging behavior, and full CLI examples.
+
+## References
+
+#### CUS-QA dataset
+
+```
+CUS-QA: Local-Knowledge-Oriented Open-Ended Question Answering Dataset, Libovický et al, 2025
+```
+
+#### web_nlg
+
+```
+The 2024 GEM Shared Task on Multilingual Data-to-Text Generation and Summarization; https://gem-benchmark.com/shared_task
+```
