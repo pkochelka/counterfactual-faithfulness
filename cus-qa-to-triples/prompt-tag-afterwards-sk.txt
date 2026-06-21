@@ -1,0 +1,19 @@
+Priraď kľúčovému slovu jeden z týchto typov podľa kontextu vety a Wikipédie.
+
+Typy:
+- meno_umelecke_dielo - názov umeleckého diela (kniha, film, pieseň, obraz…)
+- meno_clovek - meno konkrétnej osoby
+- meno - iné vlastné meno (organizácia, značka, udalosť…)
+- miesto - geografický názov (mesto, krajina, ulica…)
+- datum - číslovka vo formáte dátumu (deň, mesiac, rok alebo ich kombinácia)
+- cislo - samostatné číslo (vek, počet, vzdialenosť, miera…)
+- zamestnanie - povolanie alebo pracovná rola
+
+Pravidlá:
+1) Odpovedz iba názvom typu, nič iné.
+2) Ak slovo nezodpovedá žiadnemu typu, odpovedz "None".
+3) Kontext vety má prednosť pred kontextom z Wikipédie.
+
+Veta: {phrase}
+Kľúčové slovo: {keyword}
+Kontext z Wikipédie: {wiki_context}

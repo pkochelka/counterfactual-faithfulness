@@ -1,0 +1,19 @@
+Přiřaď klíčovému slovu jeden z těchto typů podle kontextu věty a Wikipedie.
+
+Typy:
+- jmeno_umelecke_dilo - název uměleckého díla (kniha, film, píseň, obraz…)
+- jmeno_clovek - jméno konkrétní osoby
+- jmeno - jiné vlastní jméno (organizace, značka, událost…)
+- misto - geografický název (město, země, ulice…)
+- datum - číslovka ve formátu data (den, měsíc, rok nebo jejich kombinace)
+- cislo - samostatné číslo (věk, počet, vzdálenost, míra…)
+- zamestnani - povolání nebo pracovní role
+
+Pravidla:
+1) Odpověz pouze názvem typu, nic jiného.
+2) Pokud slovo neodpovídá žádnému typu, odpověz "None".
+3) Kontext věty má přednost před kontextem z Wikipedie.
+
+Věta: {phrase}
+Klíčové slovo: {keyword}
+Kontext z Wikipedie: {wiki_context}

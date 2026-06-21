@@ -117,3 +117,9 @@ class PhrasedTriple:
             for m in [t.object_, t.subject]:
                 _tag(mapping, m)
 
+    def update_member_tags(self, value: str, type_: _MemberType | None) -> None:
+        for t in self.triples:
+            for m in [t.object_, t.subject]:
+                if m.value == value:
+                    m.type_ = type_
+                    

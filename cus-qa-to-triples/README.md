@@ -88,8 +88,8 @@ python cus-qa-to-triples/prompt-llm.py sk
 
 **Step 2 - Create counter-factual data:**
 ```bash
-python cus-qa-to-triples/create-CF-data.py cz --max-changes 1 --tags misto,jmeno_clovek,datum,cislo
-python cus-qa-to-triples/create-CF-data.py sk --max-changes 1 --tags miesto,meno_clovek,datum,cislo
+python cus-qa-to-triples/create_CF_data.py cz --max-changes 1 --tags misto,jmeno_clovek,datum,cislo
+python cus-qa-to-triples/create_CF_data.py sk --max-changes 1 --tags miesto,meno_clovek,datum,cislo
 ```
 
 **Step 3 - Export to triples format:**

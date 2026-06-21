@@ -3,7 +3,13 @@ from pathlib import Path
 import urllib.request
 
 class _MemberType(StrEnum):
-    pass
+    @classmethod
+    def from_str(cls, value: str):
+        for mt in cls:
+            if value == mt.value:
+                return mt
+        else:
+            return None
 
 class CZMemberType(_MemberType):
     JMENO_UMELECKE_DILO = "jmeno_umelecke_dilo"
