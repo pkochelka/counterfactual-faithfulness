@@ -82,4 +82,19 @@ find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
 `xargs -P 3` runs three files at once; `--concurrency 4` runs four examples at once inside each file, for about twelve in-flight judge calls.
 The per-request HTTP timeout defaults to 150 seconds and can be changed with `--timeout`.
 
+For long full evaluations with one file at a time, retry, fallback from concurrency 4 to 3, and log files, use:
+
+```bash
+source ~/.zshrc >/dev/null 2>&1
+
+../.venv/bin/python llm-judge/run_judge_batch.py \
+  --language en \
+  --token-env-var E_infra_key \
+  --model glm-5 \
+  --judge-base-url https://llm.ai.e-infra.cz/v1 \
+  --concurrency 4 \
+  --fallback-concurrency 3 \
+  --output-dir data/judged
+```
+
 See `llm-judge/README_judge.md` for expected XML/CSV files, `.env.local` setup, batch judging behavior, and full CLI examples.

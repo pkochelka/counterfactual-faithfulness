@@ -196,6 +196,7 @@ def main() -> None:
             f"completed with {failures} failures and skipped {skipped} existing rows; wrote judged rows to {out_path}",
             file=sys.stderr,
         )
+        sys.exit(1)
     else:
         print(f"wrote {judged} judged rows to {out_path} (skipped {skipped} existing rows)")
 

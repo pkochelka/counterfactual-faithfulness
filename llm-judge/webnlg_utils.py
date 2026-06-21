@@ -22,6 +22,7 @@ DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
 OPENROUTER_URL = DEFAULT_JUDGE_API_URL
+PROMPT_TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "prompts" / "judge_speeches.txt"
 
 
 class JudgeRequestError(RuntimeError):
@@ -451,6 +452,10 @@ def build_prompt_payload(
     }
 
 
+def load_judge_prompt_template() -> str:
+    return PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
+
+
 def build_judge_prompt(row: pd.Series | dict[str, Any]) -> str:
     payload = build_prompt_payload(
         eid=str(row["eid"]),
@@ -458,48 +463,7 @@ def build_judge_prompt(row: pd.Series | dict[str, Any]) -> str:
         sentence=str(row["sentence"]),
         modified_triples=str(row["modified_triples"]),
     )
-    return (
-        "You are judging faithfulness in data-to-text generation.\n\n"
-        "Task: decide quickly whether the sentence is fully supported by the triples below.\n"
-        "The triples are the complete source of truth.\n"
-        "Do not use outside knowledge.\n"
-        "Do not explain your reasoning.\n"
-        "Output the final JSON immediately.\n\n"
-        "Important rules:\n"
-        "- Treat every triple as true, even if it contradicts real-world knowledge.\n"
-        "- Never mark information as incorrect just because it seems implausible, geographically wrong, historically wrong, or factually wrong in the real world.\n"
-        "- Focus mainly on whether the correct information is present and whether there is any obviously wrong or unsupported information.\n"
-        "- Do not focus too much on wording differences if the meaning is correctly supported by the triples.\n"
-        "- Only mark information as incorrect if it is unsupported, contradicted, over-specific, or incorrectly transformed relative to the triples shown below.\n"
-        "- Never place supported information in incorrect_information.\n"
-        "- If all sentence information is supported, set faithfulness_score to 5 and return incorrect_information as [].\n"
-        "- If incorrect_information is empty, the score should normally be 5.\n\n"
-        "Return STRICT JSON with these keys only:\n"
-        "- faithfulness_score: integer from 1 to 5\n"
-        "- incorrect_information: array of objects with keys info_used, correct_info, comment\n"
-        "- 5 means fully faithful: all information is supported by the triples, allowing reasonable paraphrase\n"
-        "- 4 means mostly faithful: a small issue, minor overstatement, or slightly imprecise transformation\n"
-        "- 3 means mixed: some information is supported, but there is at least one clear substantive problem\n"
-        "- 2 means mostly unfaithful: multiple important problems or one major problem dominates the sentence\n"
-        "- 1 means completely unfaithful: the sentence is largely unsupported or contradicts the triples in a major way\n"
-        "- info_used: the exact claim from the sentence that is unsupported or wrong\n"
-        "- correct_info: the triple-backed correction or missing constraint\n"
-        "- comment: a brief explanation based only on the triples\n\n"
-        "Mini examples:\n"
-        "1. Triple: People's_Republic_of_China | ethnicGroup | Arabs_in_Khorasan\n"
-        "   Sentence: Arabs in Khorasan are an ethnic group within the People's Republic of China.\n"
-        "   Output idea: faithfulness_score 5, incorrect_information []\n\n"
-        "2. Triple: Martial | occupation | military_engineer\n"
-        "   Sentence: Martial is an astronaut.\n"
-        "   Output idea: mark the astronaut claim as incorrect.\n\n"
-        "3. Triple: Wang_Xiaoyun | height | 17068.8_(millimetres)\n"
-        "   Sentence: Wang Xiaoyun is 170.69 meters tall.\n"
-        "   Output idea: mark the exact height claim as incorrectly transformed.\n\n"
-        f"Category: {payload['category']}\n"
-        f"Sentence: {payload['sentence']}\n\n"
-        "Triples:\n"
-        f"{payload['modified_triples']}\n"
-    )
+    return load_judge_prompt_template().format(**payload)
 
 
 def extract_json(text: str) -> dict[str, Any]:
@@ -593,7 +557,7 @@ def request_judge(
             body = exc.response.text.strip() if exc.response is not None and exc.response.text else ""
             retryable_429 = status_code == 429
             if retryable_429 and attempt < retry_attempts:
-                time.sleep(0.2)
+                time.sleep(2.5)
                 continue
 
             message = f"Judge API returned HTTP {status_code if status_code is not None else 'error'}."

@@ -217,6 +217,51 @@ find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
 
 Here `xargs -P 3` runs up to three CSV files at once, and `--concurrency 4` runs up to four judge requests in parallel within each CSV. The maximum number of in-flight requests is therefore roughly `3 * 4 = 12`. Tune both numbers to match the provider's rate limits.
 
+For long runs where you want one file at a time plus automatic retry/fallback, use `run_judge_batch.py`. It runs each matching CSV sequentially, logs stdout/stderr to a log file, retries a failed file once at the original concurrency, then retries again with lower concurrency. `judge_csv.py` exits nonzero when any rows fail, so the batch runner can detect provider/network errors reliably.
+
+Example e-INFRA runs split by language and key:
+
+```bash
+source ~/.zshrc >/dev/null 2>&1
+
+../.venv/bin/python llm-judge/run_judge_batch.py \
+  --language en \
+  --token-env-var E_infra_key1 \
+  --model glm-5 \
+  --judge-base-url https://llm.ai.e-infra.cz/v1 \
+  --concurrency 4 \
+  --fallback-concurrency 3 \
+  --output-dir data/judged
+```
+
+```bash
+source ~/.zshrc >/dev/null 2>&1
+
+../.venv/bin/python llm-judge/run_judge_batch.py \
+  --language cs \
+  --token-env-var E_infra_key2 \
+  --model glm-5 \
+  --judge-base-url https://llm.ai.e-infra.cz/v1 \
+  --concurrency 4 \
+  --fallback-concurrency 3 \
+  --output-dir data/judged
+```
+
+```bash
+source ~/.zshrc >/dev/null 2>&1
+
+../.venv/bin/python llm-judge/run_judge_batch.py \
+  --language sk \
+  --token-env-var E_infra_key3 \
+  --model glm-5 \
+  --judge-base-url https://llm.ai.e-infra.cz/v1 \
+  --concurrency 4 \
+  --fallback-concurrency 3 \
+  --output-dir data/judged
+```
+
+By default logs go to `logs/llm-judge-batch-<timestamp>.log`. You can set an explicit path with `--log-file logs/judge-en.log`.
+
 Pass an explicit XML file when inference from the CSV filename is not enough:
 
 ```bash
