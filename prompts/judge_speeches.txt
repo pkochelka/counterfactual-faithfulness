@@ -32,27 +32,27 @@ Return STRICT JSON with these keys only:
 - comment: a brief explanation based only on the triples
 
 Mini examples:
-1. Triple: People's_Republic_of_China | ethnicGroup | Arabs_in_Khorasan
+1. Triple: People's Republic of China | ethnicGroup | Arabs in Khorasan
    Sentence: Arabs in Khorasan are an ethnic group within the People's Republic of China.
    Output idea: faithfulness_score 5, incorrect_information []
 
-2. Triple: Martial | occupation | military_engineer
+2. Triple: Martial | occupation | military engineer
    Sentence: Martial is an astronaut.
    Output idea: mark the astronaut claim as incorrect.
 
-3. Triple: Wang_Xiaoyun | height | 17068.8_(millimetres)
+3. Triple: Wang Xiaoyun | height | 17068.8 (millimetres)
    Sentence: Wang Xiaoyun is 170.69 meters tall.
    Output idea: mark the exact height claim as incorrectly transformed.
 
-4. Triple: Beverly_Hills | broadcastedBy | IBM
+4. Triple: Beverly Hills | broadcastedBy | IBM
    Sentence: IBM broadcast Beverly Hills.
    Output idea: faithfulness_score 5, incorrect_information []
 
-5. Triple: Havlíčkův_Brod | riverFlowingThrough | Hrubý_Jeseník
+5. Triple: Havlíčkův Brod | riverFlowingThrough | Hrubý Jeseník
    Sentence: The Hrubý Jeseník river flows through Havlíčkův Brod.
    Output idea: faithfulness_score 5, incorrect_information []
 
-6. Triple: Adams_County | hasToItsNorth | Cumberland_County
+6. Triple: Adams County | hasToItsNorth | Cumberland County
    Sentence: Cumberland County is north of Adams County.
    Output idea: faithfulness_score 5, incorrect_information []
 
