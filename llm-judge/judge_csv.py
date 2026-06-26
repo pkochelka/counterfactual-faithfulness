@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import queue
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
+from datetime import datetime, timezone
 
 from webnlg_utils import (
     DEFAULT_JUDGE_API_URL,
@@ -109,6 +111,8 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_JUDGE_LONG_RETRY_SLEEP,
         help="One longer cooldown before retrying a transient request failure; use 0 to disable",
     )
+    parser.add_argument("--request-jitter-min", type=nonnegative_float, default=0.1, help="Minimum random sleep before each judge API request")
+    parser.add_argument("--request-jitter-max", type=nonnegative_float, default=0.5, help="Maximum random sleep before each judge API request")
     parser.add_argument("--limit", type=int, default=None, help="Upper bound on rows after sampling")
     parser.add_argument("--concurrency", type=int, default=1, help="How many rows to judge in parallel within one CSV")
     parser.add_argument(
@@ -140,6 +144,17 @@ def parse_args() -> argparse.Namespace:
         "--skip-existing-eids",
         action="store_true",
         help="Skip any eid/source_id already present in the output file, regardless of judge model or endpoint.",
+    )
+    parser.add_argument(
+        "--failure-output-path",
+        type=str,
+        default=None,
+        help="Exact JSONL path for failed judge rows. Defaults to <output>.failures.jsonl.",
+    )
+    parser.add_argument(
+        "--allow-failures",
+        action="store_true",
+        help="Write failed rows to the failure JSONL and exit 0 so they can be retried later.",
     )
     parser.add_argument("--label", type=str, default=None, help="Optional source label override")
     parser.add_argument("--force", action="store_true", help="Overwrite existing annotation rows for this source/model")
@@ -173,6 +188,41 @@ def build_token_slots(args: argparse.Namespace) -> list[TokenSlot]:
     return [TokenSlot(env_var="AUTH_TOKEN", token=token) for _ in range(max(1, int(args.concurrency)))]
 
 
+def failure_output_path(out_path: Path, explicit_path: str | None) -> Path:
+    if explicit_path:
+        return Path(explicit_path)
+    return out_path.with_name(f"{out_path.stem}.failures.jsonl")
+
+
+def write_failure_record(
+    *,
+    path: Path,
+    row,
+    source: SourceSpec,
+    judge_model: str,
+    judge_api_url: str,
+    token_env_var: str | None,
+    exc: Exception,
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    details = getattr(exc, "details", None)
+    record = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "eid": str(row["eid"]),
+        "source_label": source.label,
+        "source_path": str(source.csv_path),
+        "source_id": source.source_id,
+        "requested_judge_model": judge_model,
+        "requested_judge_api_url": judge_api_url,
+        "requested_token_env_var": token_env_var,
+        "error_type": type(exc).__name__,
+        "error": str(exc),
+        "details": details if isinstance(details, dict) else None,
+    }
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
 def main() -> None:
     load_env_defaults()
     args = parse_args()
@@ -200,6 +250,7 @@ def main() -> None:
         sampled = sampled.head(args.limit)
 
     out_path = Path(args.output_path) if args.output_path else judge_output_path(source.csv_path, args.model, args.output_dir)
+    fail_path = failure_output_path(out_path, args.failure_output_path)
     if args.force and out_path.exists():
         out_path.unlink()
 
@@ -238,7 +289,7 @@ def main() -> None:
     def worker_with_slot(row):
         slot = slot_queue.get()
         try:
-            return judge_row(
+            result = judge_row(
                 row,
                 source_label=source.label,
                 source_path=str(source.csv_path),
@@ -252,8 +303,14 @@ def main() -> None:
                 retry_attempts=args.retry_attempts,
                 retry_sleep=args.retry_sleep,
                 long_retry_sleep=args.long_retry_sleep,
+                request_jitter_min=args.request_jitter_min,
+                request_jitter_max=args.request_jitter_max,
                 dry_run=args.dry_run,
             )
+            return result, slot.env_var
+        except Exception as exc:
+            setattr(exc, "token_env_var", slot.env_var)
+            raise
         finally:
             slot_queue.put(slot)
 
@@ -263,14 +320,33 @@ def main() -> None:
         for row in rows:
             try:
                 result = worker_with_slot(row)
-                write_judge_records(path=out_path, records=[result], overwrite=False)
+                record, _token_env_var = result
+                write_judge_records(path=out_path, records=[record], overwrite=False)
                 judged += 1
                 print_judged_row(row)
             except JudgeRequestError as exc:
                 failures += 1
+                write_failure_record(
+                    path=fail_path,
+                    row=row,
+                    source=source,
+                    judge_model=args.model,
+                    judge_api_url=judge_api_url,
+                    token_env_var=getattr(exc, "token_env_var", None),
+                    exc=exc,
+                )
                 print(f"failed {row['eid']}: {exc}", file=sys.stderr)
             except Exception as exc:
                 failures += 1
+                write_failure_record(
+                    path=fail_path,
+                    row=row,
+                    source=source,
+                    judge_model=args.model,
+                    judge_api_url=judge_api_url,
+                    token_env_var=getattr(exc, "token_env_var", None),
+                    exc=exc,
+                )
                 print(f"failed {row['eid']}: {exc}", file=sys.stderr)
     else:
         with ThreadPoolExecutor(max_workers=max_workers) as pool:
@@ -278,15 +354,33 @@ def main() -> None:
             for future in as_completed(future_map):
                 row = future_map[future]
                 try:
-                    result = future.result()
+                    result, token_env_var = future.result()
                     write_judge_records(path=out_path, records=[result], overwrite=False)
                     judged += 1
                     print_judged_row(row)
                 except JudgeRequestError as exc:
                     failures += 1
+                    write_failure_record(
+                        path=fail_path,
+                        row=row,
+                        source=source,
+                        judge_model=args.model,
+                        judge_api_url=judge_api_url,
+                        token_env_var=getattr(exc, "token_env_var", None),
+                        exc=exc,
+                    )
                     print(f"failed {row['eid']}: {exc}", file=sys.stderr)
                 except Exception as exc:
                     failures += 1
+                    write_failure_record(
+                        path=fail_path,
+                        row=row,
+                        source=source,
+                        judge_model=args.model,
+                        judge_api_url=judge_api_url,
+                        token_env_var=getattr(exc, "token_env_var", None),
+                        exc=exc,
+                    )
                     print(f"failed {row['eid']}: {exc}", file=sys.stderr)
 
     if failures:
@@ -294,7 +388,9 @@ def main() -> None:
             f"completed with {failures} failures and skipped {skipped} existing rows; wrote judged rows to {out_path}",
             file=sys.stderr,
         )
-        sys.exit(1)
+        print(f"wrote failed rows to {fail_path}", file=sys.stderr)
+        if not args.allow_failures:
+            sys.exit(1)
     else:
         print(f"wrote {judged} judged rows to {out_path} (skipped {skipped} existing rows)")
 

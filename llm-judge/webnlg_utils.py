@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import random
 import time
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -92,13 +93,21 @@ def parse_triple(text: str) -> tuple[str, str, str]:
     return parts[0], parts[1], parts[2]
 
 
-def format_triple(triple: tuple[str, str, str]) -> str:
+def prompt_text(value: object) -> str:
+    return str(value).replace("_", " ")
+
+
+def format_triple(triple: tuple[str, str, str], *, for_prompt: bool = False) -> str:
     subject, predicate, obj = triple
+    if for_prompt:
+        subject = prompt_text(subject)
+        predicate = prompt_text(predicate)
+        obj = prompt_text(obj)
     return f"{subject} | {predicate} | {obj}"
 
 
-def format_triples(triples: list[tuple[str, str, str]]) -> str:
-    return "\n".join(f"- {format_triple(triple)}" for triple in triples)
+def format_triples(triples: list[tuple[str, str, str]], *, for_prompt: bool = False) -> str:
+    return "\n".join(f"- {format_triple(triple, for_prompt=for_prompt)}" for triple in triples)
 
 
 def sanitize_identifier(value: str) -> str:
@@ -449,8 +458,8 @@ def build_prompt_payload(
     return {
         "eid": eid,
         "category": category or "",
-        "sentence": sentence,
-        "modified_triples": modified_triples,
+        "sentence": prompt_text(sentence),
+        "modified_triples": prompt_text(modified_triples),
     }
 
 
@@ -520,6 +529,8 @@ def request_judge(
     long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     api_url: str | None = None,
     timeout: int = DEFAULT_JUDGE_TIMEOUT,
+    request_jitter_min: float = 0.1,
+    request_jitter_max: float = 0.5,
 ) -> tuple[str, dict[str, Any], dict[str, Any], dict[str, Any]]:
     api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
     headers = {
@@ -529,8 +540,12 @@ def request_judge(
     response = None
     last_http_error: requests.HTTPError | None = None
     used_long_retry_sleep = False
+    if request_jitter_min < 0 or request_jitter_max < 0 or request_jitter_min > request_jitter_max:
+        raise ValueError("request jitter bounds must be non-negative and min <= max")
     for attempt in range(1, retry_attempts + 1):
         try:
+            if request_jitter_max > 0:
+                time.sleep(random.uniform(request_jitter_min, request_jitter_max))
             response = requests.post(
                 api_url,
                 headers=headers,
@@ -703,6 +718,8 @@ def judge_row(
     retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
     retry_sleep: float = DEFAULT_JUDGE_RETRY_SLEEP,
     long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
+    request_jitter_min: float = 0.1,
+    request_jitter_max: float = 0.5,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
@@ -736,6 +753,8 @@ def judge_row(
         retry_attempts=retry_attempts,
         retry_sleep=retry_sleep,
         long_retry_sleep=long_retry_sleep,
+        request_jitter_min=request_jitter_min,
+        request_jitter_max=request_jitter_max,
     )
     return build_judge_record(
         row=row,

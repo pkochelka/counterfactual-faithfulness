@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """Minimal client for an OpenAI-compatible chat completions endpoint."""
 import os
 from pathlib import Path
@@ -28,8 +30,9 @@ def call_api(
     model_id: str,
     *,
     token_name: str = "",
-    max_tokens: int = 512,
+    max_tokens: int = 2048,
     temperature: float = 0.0,
+    reasoning_effort: str | None = None,
 ) -> dict:
     """Send a single user message to the chat completions endpoint."""
     token = os.getenv(token_name if token_name else "AUTH_TOKEN")
@@ -43,6 +46,8 @@ def call_api(
         "max_tokens": max_tokens,
         "temperature": temperature,
     }
+    if reasoning_effort:
+        payload["reasoning_effort"] = reasoning_effort
 
     resp = requests.post(
         f"{BASE_URL}/chat/completions",
