@@ -1,0 +1,65 @@
+#!/bin/bash
+#PBS -N cf-einfra-pipeline
+#PBS -l select=1:ncpus=6:mem=8gb
+#PBS -l walltime=15:00:00
+#PBS -j oe
+
+set -euo pipefail
+
+PROJECT_DIR="${PROJECT_DIR:-${PBS_O_WORKDIR:-$PWD}}"
+cd "$PROJECT_DIR"
+
+export PYTHON="${PYTHON:-./.venv/bin/python}"
+export BASE_URL="${BASE_URL:-https://llm.ai.e-infra.cz/v1}"
+export OUTPUT_ROOT="${OUTPUT_ROOT:-data/einfra_run}"
+export JUDGE_OUTPUT_DIR="${JUDGE_OUTPUT_DIR:-$OUTPUT_ROOT/judged}"
+export JUDGE_MODEL="${JUDGE_MODEL:-deepseek-v4-pro}"
+
+# Reusable key pool. Each key is owned by at most one worker at a time, but
+# workers can move between generation, classification, and judging tasks.
+export EINFRA_KEYS="${EINFRA_KEYS:-EINFRA_AP EINFRA_JR EINFRA_VD EINFRA_VK EINFRA_TS EINFRA_PK EINFRA_VS EINFRA_KD EINFRA_FK}"
+
+export MODELS="${MODELS:-llama-4-scout-17b-16e-instruct gemma4 qwen3.5-122b}"
+export DATASETS="${DATASETS:-cs-qa sk-qa}"
+export VARIANTS="${VARIANTS:-cf fa}"
+export LANGUAGES="${LANGUAGES:-en cs sk}"
+
+# A model cap applies to generator models and the judge model. With 9 keys this
+# prevents all keys from piling onto one e-infra model while still avoiding idle
+# keys when other work is available.
+export MAX_KEYS_PER_MODEL="${MAX_KEYS_PER_MODEL:-4}"
+export CONCURRENCY_PER_KEY="${CONCURRENCY_PER_KEY:-4}"
+export FALLBACK_CONCURRENCY_PER_KEY="${FALLBACK_CONCURRENCY_PER_KEY:-3}"
+export RETRY_ATTEMPTS="${RETRY_ATTEMPTS:-4}"
+export LONG_RETRY_SLEEP="${LONG_RETRY_SLEEP:-50}"
+export REQUEST_JITTER_MIN="${REQUEST_JITTER_MIN:-0.1}"
+export REQUEST_JITTER_MAX="${REQUEST_JITTER_MAX:-0.5}"
+export CLASSIFICATION_REPEATS="${CLASSIFICATION_REPEATS:-5}"
+export CLASSIFICATION_TEMPERATURE="${CLASSIFICATION_TEMPERATURE:-1.0}"
+
+mkdir -p logs "$OUTPUT_ROOT" "$JUDGE_OUTPUT_DIR"
+LOG_FILE="logs/metacentrum_einfra_pipeline_${PBS_JOBID:-manual}.log"
+exec > >(tee -a "$LOG_FILE") 2>&1
+START_EPOCH="$(date +%s)"
+echo "[start] $(date -Is) job=${PBS_JOBID:-manual} project=$PROJECT_DIR output_root=$OUTPUT_ROOT log=$LOG_FILE"
+finish() {
+  local status=$?
+  local end_epoch
+  local elapsed_seconds
+  end_epoch="$(date +%s)"
+  elapsed_seconds=$((end_epoch - START_EPOCH))
+  echo "[end] $(date -Is) status=$status elapsed_seconds=$elapsed_seconds"
+}
+trap finish EXIT
+
+if [ ! -x "$PYTHON" ]; then
+  echo "Missing Python executable: $PYTHON" >&2
+  echo "Create the venv first, for example: python3 -m venv .venv && ./.venv/bin/pip install pandas==2.3.3 requests==2.32.5" >&2
+  exit 1
+fi
+
+set +e
+"$PYTHON" scripts/einfra_dynamic_pipeline.py
+STATUS=$?
+set -e
+exit "$STATUS"

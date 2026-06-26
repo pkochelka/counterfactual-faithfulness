@@ -213,6 +213,7 @@ marimo/_lsp/
 __marimo__/
 
 # Project-generated benchmark and judge artifacts
+METACENTRUM_RUNBOOK.md
 data_archive/
 reports/
 reports_archive/
