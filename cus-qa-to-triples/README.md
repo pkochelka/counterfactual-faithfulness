@@ -41,7 +41,7 @@ In a separate prompt without any context from the previous one (in **Czech**), t
 | Tag Czech | Tag Slovak | English |
 |---|---|---|
 | `jmeno_umelecke_dilo` | `meno_umelecke_dielo` | Name of an artwork |
-| `jmeno_clovek` | `meno_clovek` Person's name |
+| `jmeno_clovek` | `meno_clovek` | Person's name |
 | `jmeno` | `meno` | Generic name |
 | `misto` | `miesto` | Place |
 | `datum` | `datum` | Date |
