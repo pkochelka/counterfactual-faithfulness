@@ -63,32 +63,32 @@ For sentence generation with `generate_speeches.py`, set:
 
 ```text
 BASE_URL=https://your-openai-compatible-endpoint
-AUTH_TOKEN=your_token_if_required
+EINFRA_JR=your_token_if_required
 ```
 
-For judging, OpenRouter is the default provider. Set:
+For command-line judging, OpenRouter is the default provider. Set a named key and pass that name with `--token-env-vars`:
 
 ```text
-AUTH_TOKEN=your_openrouter_token
+OPENROUTER_API_KEY=your_openrouter_token
 ```
 
 To use a different OpenAI-compatible provider, add either a base URL or a full chat completions endpoint:
 
 ```text
 JUDGE_BASE_URL=https://api.openai.com/v1
-AUTH_TOKEN=your_provider_token
+OPENAI_API_KEY=your_provider_token
 ```
 
 or:
 
 ```text
 JUDGE_API_URL=https://api.openai.com/v1/chat/completions
-AUTH_TOKEN=your_provider_token
+OPENAI_API_KEY=your_provider_token
 ```
 
 `JUDGE_BASE_URL` and `JUDGE_API_URL` are only for the judge. Sentence generation still uses `BASE_URL`.
 
-Do not commit `.env.local`. The Streamlit app also has a sidebar token field, which can be used instead of or in addition to the environment file.
+Do not commit `.env.local`. The Streamlit app also has a sidebar token field and can still read `AUTH_TOKEN` as an app default.
 
 ## Install dependencies
 
@@ -164,30 +164,31 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model openai/gpt-5.2 \
+  --token-env-vars OPENROUTER_API_KEY \
   --output-dir data/judged
 ```
 
 Judge through another OpenAI-compatible provider:
 
 ```bash
-AUTH_TOKEN=your_provider_token \
 python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model gpt-4.1-mini \
   --judge-base-url https://api.openai.com/v1 \
+  --token-env-vars OPENAI_API_KEY \
   --output-dir data/judged
 ```
 
 Local or self-hosted endpoints work the same way if they implement `/chat/completions`:
 
 ```bash
-AUTH_TOKEN=unused \
 python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model local-model \
   --judge-base-url http://localhost:8000/v1 \
+  --token-env-vars LOCAL_API_KEY \
   --output-dir data/judged
 ```
 
@@ -197,25 +198,25 @@ Judge the whole CSV:
 python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
   --sample-size all \
   --model openai/gpt-5.2 \
-  --concurrency 5 \
+  --token-env-vars OPENROUTER_API_KEY \
+  --concurrency-per-key 5 \
   --output-dir data/judged
 ```
 
-Judge multiple CSV files through a custom provider, with both file-level and row-level parallelism:
+Judge multiple CSV files through a custom provider, with both file-level and per-key row-level parallelism:
 
 ```bash
-export AUTH_TOKEN="$OPENAI_API_KEY"
-
 find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
   | xargs -0 -n 1 -P 3 python llm-judge/judge_csv.py \
       --sample-size all \
       --model gpt-4.1-mini \
       --judge-base-url https://api.openai.com/v1 \
-      --concurrency 4 \
+      --token-env-vars OPENAI_API_KEY \
+      --concurrency-per-key 4 \
       --output-dir data/judged
 ```
 
-Here `xargs -P 3` runs up to three CSV files at once, and `--concurrency 4` runs up to four judge requests in parallel within each CSV. The maximum number of in-flight requests is therefore roughly `3 * 4 = 12`. Tune both numbers to match the provider's rate limits.
+Here `xargs -P 3` runs up to three CSV files at once, and `--concurrency-per-key 4` runs up to four judge requests per listed key within each CSV. With one key, the maximum number of in-flight requests is roughly `3 * 4 = 12`. Tune both numbers to match the provider's rate limits.
 
 If you have several equivalent provider keys in `.env.local`, pass their environment variable names explicitly and set per-key concurrency. For example, three keys with `--concurrency-per-key 4` allow up to twelve in-flight judge requests, with no more than four using any one key:
 
@@ -231,7 +232,7 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_en.csv \
 
 `--retry-sleep` is the short pause between transient retries. `--long-retry-sleep` is one longer cooldown used once per request before continuing normal retry attempts. HTTP 429, HTTP 5xx, timeouts, and connection errors are retried; authentication errors are not treated as retryable.
 
-For long runs where you want one file at a time plus automatic retry/fallback, use `run_judge_batch.py`. It runs each matching CSV sequentially, logs stdout/stderr to a log file, retries a failed file once at the original concurrency, then retries again with lower concurrency. `judge_csv.py` exits nonzero when any rows fail, so the batch runner can detect provider/network errors reliably.
+For long runs where you want one file at a time plus automatic retry/fallback, use `run_judge_batch.py`. It runs each matching CSV sequentially, logs stdout/stderr to a log file, retries a failed file once at the original per-key concurrency, then retries again with lower per-key concurrency. `judge_csv.py` exits nonzero when any rows fail, so the batch runner can detect provider/network errors reliably.
 
 Example e-INFRA run with multiple keys:
 
@@ -242,7 +243,7 @@ Example e-INFRA run with multiple keys:
   --model glm-5 \
   --judge-base-url https://llm.ai.e-infra.cz/v1 \
   --concurrency-per-key 4 \
-  --fallback-concurrency 3 \
+  --fallback-concurrency-per-key 3 \
   --output-dir data/judged
 ```
 
@@ -254,6 +255,7 @@ Pass an explicit XML file when inference from the CSV filename is not enough:
 python llm-judge/judge_csv.py custom_sentences.csv \
   --xml data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml \
   --sample-size 20 \
+  --token-env-vars OPENROUTER_API_KEY \
   --output-dir data/judged
 ```
 
@@ -265,11 +267,13 @@ Examples:
 python llm-judge/judge_csv.py data/generated/gpt-oss-120b/cs-qa_cf_en.csv \
   --xml data/cs-qa/cf.csv \
   --sample-size all \
+  --token-env-vars OPENROUTER_API_KEY \
   --output-dir data/judged
 
 python llm-judge/judge_csv.py data/generated/gpt-oss-120b/sk-qa_cf_en.csv \
   --xml data/sk-qa/cf.csv \
   --sample-size all \
+  --token-env-vars OPENROUTER_API_KEY \
   --output-dir data/judged
 ```
 
@@ -284,7 +288,8 @@ Useful CLI arguments:
 - `--head`
 - `--seed 7`
 - `--limit 50`
-- `--concurrency 5`
+- `--token-env-vars OPENAI_API_KEY`
+- `--concurrency-per-key 5`
 - `--model openai/gpt-5.2`
 - `--judge-base-url https://api.openai.com/v1`
 - `--max-tokens 5000`
@@ -352,7 +357,7 @@ The prompt tells the judge to treat the modified triples as the complete source 
 
 ## Troubleshooting
 
-If `AUTH_TOKEN` is missing, create `.env.local` at the repo root or paste the token into the Streamlit sidebar.
+If the command-line judge says token variables are missing, create `.env.local` at the repo root and pass the variable names with `--token-env-vars`. In the Streamlit app, you can also paste the token into the sidebar.
 
 If OpenRouter returns an invalid model error, use a real OpenRouter model id, for example:
 

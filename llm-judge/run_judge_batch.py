@@ -15,9 +15,16 @@ DEFAULT_MODEL = "glm-5"
 DEFAULT_JUDGE_BASE_URL = "https://llm.ai.e-infra.cz/v1"
 
 
+def positive_int(value: str) -> int:
+    parsed = int(value)
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("value must be positive")
+    return parsed
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Run judge_csv.py over generated CSVs with retry, concurrency fallback, and logging."
+        description="Run judge_csv.py over generated CSVs with retry, per-key concurrency fallback, and logging."
     )
     parser.add_argument(
         "--generated-dir",
@@ -37,11 +44,6 @@ def parse_args() -> argparse.Namespace:
         help="Glob pattern under generated-dir. Ignored when --language is set.",
     )
     parser.add_argument(
-        "--token-env-var",
-        default=None,
-        help="Environment variable containing the provider token. The token value is never logged.",
-    )
-    parser.add_argument(
         "--token-env-vars",
         default=None,
         help="Comma-separated provider token environment variables. The token values are never logged.",
@@ -57,19 +59,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--timeout", type=int, default=None)
     parser.add_argument("--max-tokens", type=int, default=None)
-    parser.add_argument("--concurrency", type=int, default=4)
     parser.add_argument(
         "--concurrency-per-key",
-        type=int,
-        default=None,
-        help="Concurrent requests per token env var when --token-env-vars is used.",
+        type=positive_int,
+        default=4,
+        help="Concurrent requests per token env var.",
     )
-    parser.add_argument("--fallback-concurrency", type=int, default=3)
+    parser.add_argument("--fallback-concurrency-per-key", type=positive_int, default=3)
     parser.add_argument(
         "--retries-before-fallback",
         type=int,
         default=1,
-        help="How many same-concurrency retries to run after the first failed attempt.",
+        help="How many same-per-key-concurrency retries to run after the first failed attempt.",
     )
     parser.add_argument(
         "--log-file",
@@ -140,7 +141,7 @@ def find_csvs(generated_dir: Path, *, language: str | None, pattern: str) -> lis
 def build_command(
     args: argparse.Namespace,
     csv_path: Path,
-    concurrency: int,
+    concurrency_per_key: int,
     *,
     force: bool = False,
 ) -> list[str]:
@@ -154,19 +155,12 @@ def build_command(
         args.model,
         "--judge-base-url",
         args.judge_base_url,
-        "--concurrency",
-        str(concurrency),
         "--output-dir",
         str(args.output_dir),
     ]
     if args.token_env_vars:
         command.extend(["--token-env-vars", args.token_env_vars])
-    elif args.token_env_var:
-        command.extend(["--token-env-var", args.token_env_var])
-    if args.token_env_vars:
-        command.extend(["--concurrency-per-key", str(args.concurrency_per_key or concurrency)])
-    elif args.concurrency_per_key is not None:
-        command.extend(["--concurrency-per-key", str(args.concurrency_per_key)])
+    command.extend(["--concurrency-per-key", str(concurrency_per_key)])
     if args.limit is not None:
         command.extend(["--limit", str(args.limit)])
     if args.timeout is not None:
@@ -189,14 +183,14 @@ def run_attempt(
     *,
     args: argparse.Namespace,
     csv_path: Path,
-    concurrency: int,
+    concurrency_per_key: int,
     attempt_label: str,
     env: dict[str, str],
     log_handle,
     force: bool = False,
 ) -> bool:
-    command = build_command(args, csv_path, concurrency, force=force)
-    log(log_handle, f"[{utc_stamp()}] START {attempt_label} csv={csv_path} concurrency={concurrency}")
+    command = build_command(args, csv_path, concurrency_per_key, force=force)
+    log(log_handle, f"[{utc_stamp()}] START {attempt_label} csv={csv_path} concurrency_per_key={concurrency_per_key}")
     log(log_handle, f"[{utc_stamp()}] CMD {' '.join(command)}")
 
     completed = subprocess.run(command, env=env, text=True, capture_output=True)
@@ -224,7 +218,7 @@ def run_csv(args: argparse.Namespace, csv_path: Path, env: dict[str, str], log_h
     if run_attempt(
         args=args,
         csv_path=csv_path,
-        concurrency=args.concurrency,
+        concurrency_per_key=args.concurrency_per_key,
         attempt_label=f"attempt-{attempt}",
         env=env,
         log_handle=log_handle,
@@ -234,11 +228,11 @@ def run_csv(args: argparse.Namespace, csv_path: Path, env: dict[str, str], log_h
 
     for _ in range(args.retries_before_fallback):
         attempt += 1
-        log(log_handle, f"[{utc_stamp()}] RETRY csv={csv_path} concurrency={args.concurrency}")
+        log(log_handle, f"[{utc_stamp()}] RETRY csv={csv_path} concurrency_per_key={args.concurrency_per_key}")
         if run_attempt(
             args=args,
             csv_path=csv_path,
-            concurrency=args.concurrency,
+            concurrency_per_key=args.concurrency_per_key,
             attempt_label=f"attempt-{attempt}",
             env=env,
             log_handle=log_handle,
@@ -248,12 +242,12 @@ def run_csv(args: argparse.Namespace, csv_path: Path, env: dict[str, str], log_h
     attempt += 1
     log(
         log_handle,
-        f"[{utc_stamp()}] FALLBACK csv={csv_path} concurrency={args.fallback_concurrency}",
+        f"[{utc_stamp()}] FALLBACK csv={csv_path} concurrency_per_key={args.fallback_concurrency_per_key}",
     )
     return run_attempt(
         args=args,
         csv_path=csv_path,
-        concurrency=args.fallback_concurrency,
+        concurrency_per_key=args.fallback_concurrency_per_key,
         attempt_label=f"attempt-{attempt}-fallback",
         env=env,
         log_handle=log_handle,
@@ -267,11 +261,9 @@ def main() -> None:
         env.setdefault(key, value)
 
     token_env_vars = parse_csv_list(args.token_env_vars)
-    if args.token_env_var:
-        token_env_vars.append(args.token_env_var)
     token_env_vars = list(dict.fromkeys(token_env_vars))
     if not token_env_vars and not args.dry_run:
-        sys.exit("Set --token-env-var or --token-env-vars.")
+        sys.exit("Set --token-env-vars.")
 
     missing = [name for name in token_env_vars if not env.get(name)]
     if missing and not args.dry_run:
@@ -285,17 +277,14 @@ def main() -> None:
     log_file.parent.mkdir(parents=True, exist_ok=True)
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    if args.token_env_var and env.get(args.token_env_var):
-        env["AUTH_TOKEN"] = env[args.token_env_var]
-
     failed: list[Path] = []
     with log_file.open("a", encoding="utf-8") as log_handle:
         log(log_handle, f"[{utc_stamp()}] Batch started")
         log(log_handle, f"token_env_vars={','.join(token_env_vars) if token_env_vars else 'dry-run'}")
         log(log_handle, f"generated_dir={args.generated_dir}")
         log(log_handle, f"language={args.language or 'all'}")
-        if args.concurrency_per_key is not None:
-            log(log_handle, f"concurrency_per_key={args.concurrency_per_key}")
+        log(log_handle, f"concurrency_per_key={args.concurrency_per_key}")
+        log(log_handle, f"fallback_concurrency_per_key={args.fallback_concurrency_per_key}")
         log(log_handle, f"files={len(csvs)}")
 
         for index, csv_path in enumerate(csvs, start=1):

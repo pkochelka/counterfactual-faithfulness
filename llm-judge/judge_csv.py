@@ -114,18 +114,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--request-jitter-min", type=nonnegative_float, default=0.1, help="Minimum random sleep before each judge API request")
     parser.add_argument("--request-jitter-max", type=nonnegative_float, default=0.5, help="Maximum random sleep before each judge API request")
     parser.add_argument("--limit", type=int, default=None, help="Upper bound on rows after sampling")
-    parser.add_argument("--concurrency", type=int, default=1, help="How many rows to judge in parallel within one CSV")
     parser.add_argument(
         "--concurrency-per-key",
         type=positive_int,
-        default=None,
+        default=1,
         help="How many concurrent judge requests to allow for each token env var in --token-env-vars",
-    )
-    parser.add_argument(
-        "--token-env-var",
-        type=str,
-        default=None,
-        help="Single environment variable containing the API token. Defaults to AUTH_TOKEN.",
     )
     parser.add_argument(
         "--token-env-vars",
@@ -164,28 +157,24 @@ def parse_args() -> argparse.Namespace:
 
 def build_token_slots(args: argparse.Namespace) -> list[TokenSlot]:
     token_env_vars = parse_csv_list(args.token_env_vars)
-    if args.token_env_var:
-        token_env_vars.append(args.token_env_var)
     token_env_vars = list(dict.fromkeys(token_env_vars))
 
-    if token_env_vars:
-        slots_per_key = args.concurrency_per_key or max(1, int(args.concurrency))
-        slots: list[TokenSlot] = []
-        missing = []
-        for env_var in token_env_vars:
-            token = os.getenv(env_var)
-            if not token and not args.dry_run:
-                missing.append(env_var)
-                continue
-            slots.extend(TokenSlot(env_var=env_var, token=token) for _ in range(slots_per_key))
-        if missing:
-            raise RuntimeError(f"Missing token environment variable(s): {', '.join(missing)}")
-        return slots
+    if not token_env_vars:
+        if args.dry_run:
+            return [TokenSlot(env_var=None, token=None)]
+        raise RuntimeError("Set --token-env-vars to one or more token environment variable names.")
 
-    token = os.getenv("AUTH_TOKEN")
-    if not token and not args.dry_run:
-        raise RuntimeError("AUTH_TOKEN is missing; set it in .env.local or pass --token-env-vars.")
-    return [TokenSlot(env_var="AUTH_TOKEN", token=token) for _ in range(max(1, int(args.concurrency)))]
+    slots: list[TokenSlot] = []
+    missing = []
+    for env_var in token_env_vars:
+        token = os.getenv(env_var)
+        if not token and not args.dry_run:
+            missing.append(env_var)
+            continue
+        slots.extend(TokenSlot(env_var=env_var, token=token) for _ in range(args.concurrency_per_key))
+    if missing:
+        raise RuntimeError(f"Missing token environment variable(s): {', '.join(missing)}")
+    return slots
 
 
 def failure_output_path(out_path: Path, explicit_path: str | None) -> Path:
