@@ -24,6 +24,7 @@ load_env_defaults()
 BASE_URL = os.environ["BASE_URL"].rstrip("/")
 
 REQUEST_TIMEOUT = 540
+NO_AUTH_TOKEN_NAME = "__NO_AUTH__"
 
 def call_api(
     user_message: str,
@@ -35,7 +36,7 @@ def call_api(
     reasoning_effort: str | None = None,
 ) -> dict:
     """Send a single user message to the chat completions endpoint."""
-    token = os.getenv(token_name if token_name else "AUTH_TOKEN")
+    token = None if token_name == NO_AUTH_TOKEN_NAME else os.getenv(token_name if token_name else "AUTH_TOKEN")
     headers = {"Content-Type": "application/json"}
     if token:
         headers["Authorization"] = f"Bearer {token}"

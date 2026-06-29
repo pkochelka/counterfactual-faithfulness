@@ -10,7 +10,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import argparse
 from dataclasses import dataclass
 
-from api_caller import call_api
+from api_caller import NO_AUTH_TOKEN_NAME, call_api
 
 parser = argparse.ArgumentParser()
 
@@ -25,10 +25,8 @@ parser.add_argument("--dataset", default="webnlg", type=str, help="Dataset name 
 parser.add_argument("--variant", default="cf", choices=["cf", "fa", "fi"], type=str, help="Dataset variant: cf=counterfactual, fa=factual, fi=fictional.")
 parser.add_argument("--kind", default="modified", type=str, help="Value of the 'kind' column to filter on.")
 parser.add_argument("--language", default="en", type=str, help="Prompt language (e.g. en, cs, sk).")
-parser.add_argument("--token-name", default="", type=str, help="Env var name for the API token (default: AUTH_TOKEN).")
 parser.add_argument("--token-env-vars", default="", type=str, help="Comma-separated API token env var names.")
-parser.add_argument("--concurrency-per-key", default=None, type=int, help="Concurrent requests per token env var.")
-parser.add_argument("--max-workers", default=4, type=int, help="Fallback total concurrency when using one token.")
+parser.add_argument("--concurrency-per-key", default=4, type=int, help="Concurrent requests per token env var.")
 parser.add_argument("--retry-attempts", default=3, type=int, help="Maximum attempts per request.")
 parser.add_argument("--retry-sleep", default=2.5, type=float, help="Short sleep between retry attempts.")
 parser.add_argument("--long-retry-sleep", default=60.0, type=float, help="One longer cooldown before retrying a transient request failure; use 0 to disable.")
@@ -61,21 +59,18 @@ def parse_csv_list(value: str | None) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
 
 
-def build_token_slots(token_name: str, token_env_vars: str, concurrency_per_key: int | None, max_workers: int) -> list[TokenSlot]:
+def build_token_slots(token_env_vars: str, concurrency_per_key: int) -> list[TokenSlot]:
+    if concurrency_per_key <= 0:
+        raise ValueError("--concurrency-per-key must be positive")
     names = parse_csv_list(token_env_vars)
-    if token_name:
-        names.append(token_name)
     names = list(dict.fromkeys(names))
+    if not names:
+        return [TokenSlot(env_var=NO_AUTH_TOKEN_NAME) for _ in range(concurrency_per_key)]
 
-    if names:
-        missing = [name for name in names if not os.getenv(name)]
-        if missing:
-            raise RuntimeError(f"Missing token environment variable(s): {', '.join(missing)}")
-        slots_per_key = concurrency_per_key or max(1, max_workers)
-        slots = [TokenSlot(env_var=name) for name in names for _ in range(slots_per_key)]
-    else:
-        slots = [TokenSlot(env_var="AUTH_TOKEN") for _ in range(max(1, max_workers))]
-    return slots
+    missing = [name for name in names if not os.getenv(name)]
+    if missing:
+        raise RuntimeError(f"Missing token environment variable(s): {', '.join(missing)}")
+    return [TokenSlot(env_var=name) for name in names for _ in range(concurrency_per_key)]
 
 
 def is_retryable_error(exc: Exception) -> bool:
@@ -197,10 +192,8 @@ def generate_sentences(
     prompts: dict,
     kind: str = "modified",
     language: str = "en",
-    max_workers: int = 4,
-    token_name: str = "",
     token_env_vars: str = "",
-    concurrency_per_key: int | None = None,
+    concurrency_per_key: int = 4,
     retry_attempts: int = 3,
     retry_sleep: float = 2.5,
     long_retry_sleep: float = 60.0,
@@ -226,12 +219,12 @@ def generate_sentences(
         tasks = dict(list(tasks.items())[:limit])
         subset = subset[subset["eid"].isin(tasks)]
     results: dict[str, dict[int, LLMResult]] = {}
-    token_slots = build_token_slots(token_name, token_env_vars, concurrency_per_key, max_workers)
+    token_slots = build_token_slots(token_env_vars, concurrency_per_key)
     slot_queue: queue.Queue[TokenSlot] = queue.Queue()
     for slot in token_slots:
         slot_queue.put(slot)
 
-    def call_with_slot(prompt: str) -> str:
+    def call_with_slot(prompt: str) -> LLMResult:
         slot = slot_queue.get()
         try:
             return call_llm_result(
@@ -329,8 +322,6 @@ def main(args: argparse.Namespace) -> None:
         prompts,
         kind=args.kind,
         language=args.language,
-        max_workers=args.max_workers,
-        token_name=args.token_name,
         token_env_vars=args.token_env_vars,
         concurrency_per_key=args.concurrency_per_key,
         retry_attempts=args.retry_attempts,

@@ -70,7 +70,7 @@ def run_token_jobs(
             "--dataset", dataset,
             "--variant", variant,
             "--language", language,
-            "--token-name", token_name,
+            "--token-env-vars", token_name,
             "--task", task,
             *extra_args,
         ]

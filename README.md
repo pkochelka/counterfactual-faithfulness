@@ -36,13 +36,19 @@ Use `xml2csv.py` to convert the GEM XML files into the `data/webnlg/*.csv` layou
 
 ### Speech generation
 
-Generate fluent sentences based on the triples in your dataset using parallel LLM API calls. Set your `AUTH_TOKEN` and OpenAI-compatible API `BASE_URL` in `.env.local`.
+Generate fluent sentences based on the triples in your dataset using parallel LLM API calls. Set an OpenAI-compatible API `BASE_URL` and one or more key variables in `.env.local`.
 
 ```bash
-python3 generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg" --variant "cf" --language "cs"
+python3 generate_speeches.py \
+  --model "qwen3.5-122b" \
+  --dataset "webnlg" \
+  --variant "cf" \
+  --language "cs" \
+  --token-env-vars EINFRA_JR \
+  --concurrency-per-key 4
 ```
 
-To use multiple equivalent provider keys from `.env.local`, pass their environment variable names and the per-key concurrency:
+Pass one or more provider keys from `.env.local` with their per-key concurrency:
 
 ```bash
 python3 generate_speeches.py \
@@ -67,7 +73,11 @@ streamlit run llm-judge/browser_app.py
 Run the judge without the web app:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv --sample-size 20 --head --output-dir data/judged
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+  --sample-size 20 \
+  --head \
+  --token-env-vars OPENROUTER_API_KEY \
+  --output-dir data/judged
 ```
 
 For `cs-qa` and `sk-qa`, generated CSVs are judged against the same flat source tables used for generation:
@@ -77,21 +87,20 @@ For `cs-qa` and `sk-qa`, generated CSVs are judged against the same flat source 
 
 This is intentional. Do not judge `cs-qa_cf` outputs against `cus-qa-to-triples/data/CounterFactual-triples.xml` unless that XML is known to be the exact source used to generate the sentence CSV. If the source cannot be inferred, pass the matching file explicitly with `--xml data/cs-qa/cf.csv` or `--xml data/sk-qa/cf.csv`.
 
-Run command-line judging through a custom provider with parallelism across files and within each file:
+Run command-line judging through a custom provider with parallelism across files and per key within each file:
 
 ```bash
-export AUTH_TOKEN="$OPENAI_API_KEY"
-
 find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
   | xargs -0 -n 1 -P 3 python llm-judge/judge_csv.py \
       --sample-size all \
       --model gpt-4.1-mini \
       --judge-base-url https://api.openai.com/v1 \
-      --concurrency 4 \
+      --token-env-vars OPENAI_API_KEY \
+      --concurrency-per-key 4 \
       --output-dir data/judged
 ```
 
-`xargs -P 3` runs three files at once; `--concurrency 4` runs four examples at once inside each file, for about twelve in-flight judge calls.
+`xargs -P 3` runs three files at once; `--concurrency-per-key 4` runs four examples at once per listed key inside each file, for about twelve in-flight judge calls with one key.
 The per-request HTTP timeout defaults to 150 seconds and can be changed with `--timeout`.
 
 For long full evaluations with one file at a time, retry, fallback from concurrency 4 to 3, and log files, use:
@@ -103,7 +112,7 @@ For long full evaluations with one file at a time, retry, fallback from concurre
   --model glm-5 \
   --judge-base-url https://llm.ai.e-infra.cz/v1 \
   --concurrency-per-key 4 \
-  --fallback-concurrency 3 \
+  --fallback-concurrency-per-key 3 \
   --output-dir data/judged
 ```
 

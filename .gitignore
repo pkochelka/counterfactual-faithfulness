@@ -215,6 +215,7 @@ __marimo__/
 # Project-generated benchmark and judge artifacts
 METACENTRUM_RUNBOOK.md
 data_archive/
+data_version*/
 reports/
 reports_archive/
 logs/
