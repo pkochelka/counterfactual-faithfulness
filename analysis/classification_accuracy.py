@@ -81,15 +81,24 @@ def load_prediction_records(classified_dir: Path) -> pd.DataFrame:
     records = []
     for model_dir in sorted(classified_dir.iterdir()):
         for csv_path in sorted(model_dir.glob("*.csv")):
-            dataset, variant, _ = csv_path.stem.split("_")
+            dataset, variant, language = csv_path.stem.split("_")
             true_label = HARD_LABEL[variant]
             for predicted in majority_predictions(csv_path):
                 records.append(dict(model=model_dir.name, dataset=dataset,
-                                    true_label=true_label, predicted_label=predicted))
+                                    language=language, true_label=true_label,
+                                    predicted_label=predicted))
     return pd.DataFrame(records)
 
 
-def plot_confusion_matrices(predictions: pd.DataFrame, output_path: Path) -> None:
+def plot_confusion_matrices(predictions: pd.DataFrame, output_path: Path,
+                            language: str | None = None) -> None:
+    """Grid of confusion matrices (rows=model, cols=dataset).
+
+    Each subplot pools variants. With language=None the languages are also pooled;
+    pass a language code to restrict to a single prompt language.
+    """
+    if language is not None:
+        predictions = predictions[predictions["language"] == language]
     models = sorted(predictions["model"].unique())
     datasets = sorted(predictions["dataset"].unique())
     fig, axes = plt.subplots(len(models), len(datasets),
@@ -114,13 +123,16 @@ def plot_confusion_matrices(predictions: pd.DataFrame, output_path: Path) -> Non
             ax.set_xlabel("Predicted" if row == len(models) - 1 else "")
             ax.set_ylabel("True" if col == 0 else "")
 
+    lang_note = "all prompt languages" if language is None else f"prompt language: {language}"
     fig.suptitle(
-        "Confusion matrix (hard accuracy) — row-normalised\nAnnotations: count  (row %)",
+        f"Confusion matrix (hard accuracy) — row-normalised — {lang_note}\n"
+        "Annotations: count  (row %)",
         fontsize=12, y=1.02,
     )
     plt.tight_layout()
     output_path.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(output_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
     print(f"Plot saved to {output_path}")
 
 
@@ -166,9 +178,26 @@ def plot_accuracy(results: pd.DataFrame, output_path: Path) -> None:
 
 
 if __name__ == "__main__":
+    import argparse
+
+    arg_parser = argparse.ArgumentParser(description=__doc__)
+    arg_parser.add_argument(
+        "--per-language",
+        action="store_true",
+        help="Also emit one confusion-matrix figure per prompt language "
+             "(in addition to the pooled one).",
+    )
+    cli_args = arg_parser.parse_args()
+
     results = load_accuracy_records(CLASSIFIED_DIR)
     print(results.sort_values(["model", "dataset", "variant", "language"]).to_string(index=False))
     plot_accuracy(results, OUTPUT_PATH)
 
     predictions = load_prediction_records(CLASSIFIED_DIR)
     plot_confusion_matrices(predictions, CONFUSION_OUTPUT_PATH)
+    if cli_args.per_language:
+        for lang in LANGUAGE_ORDER:
+            lang_output = CONFUSION_OUTPUT_PATH.with_name(
+                f"{CONFUSION_OUTPUT_PATH.stem}_{lang}{CONFUSION_OUTPUT_PATH.suffix}"
+            )
+            plot_confusion_matrices(predictions, lang_output, language=lang)
