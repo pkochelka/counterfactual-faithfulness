@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Submit one local-GPU vLLM job per model. Each lands on its own GPU node, so the
-# two models run in parallel. Run from the project root:
+# configured models run in parallel. Run from the project root:
 #   scripts/submit_local_gpu_all.sh
 #
 # Extra job variables go through EXTRA_VARS (folded into the SAME qsub -v), NOT a
@@ -17,8 +17,11 @@ EXTRA_VARS="${EXTRA_VARS:-}"   # comma-separated KEY=VALUE pairs, folded into -v
 
 # Each entry: MODEL_ID|MODEL_NAME|MAX_MODEL_LEN
 MODELS=(
-  "google/gemma-4-E4B-it|gemma4-e4b|1536"
-  "CohereLabs/tiny-aya-global|tiny-aya-global|1536"
+  "Qwen/Qwen3.5-9B|qwen3_5-9b|4096"
+  "Qwen/Qwen3-1.7B|qwen3-1_7b|4096"
+  "google/gemma-4-E2B-it|gemma4-e2b|4096"
+  "microsoft/Phi-4-mini-instruct|phi-4-mini-instruct|4096"
+  "HuggingFaceTB/SmolLM3-3B|smollm3-3b|4096"
 )
 
 for spec in "${MODELS[@]}"; do

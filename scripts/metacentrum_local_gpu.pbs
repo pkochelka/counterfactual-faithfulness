@@ -3,18 +3,17 @@
 #
 # Variant A: serve the model locally with vLLM (OpenAI-compatible endpoint) and
 # point the unchanged generate_speeches.py / api_caller.py at localhost. No API
-# keys, no per-key concurrency cap; the server's continuous batcher stays busy as
-# long as --max-workers is high.
+# keys; the server's continuous batcher stays busy as long as client
+# concurrency is high enough.
 #
 # Submit one model:
-#   qsub -v MODEL_ID=google/gemma-4-E4B-it,MODEL_NAME=gemma4-e4b scripts/metacentrum_local_gpu.pbs
-#   qsub -v MODEL_ID=CohereLabs/tiny-aya-global,MODEL_NAME=tiny-aya-global,MAX_MODEL_LEN=8192 scripts/metacentrum_local_gpu.pbs
-# Or submit both at once:  scripts/submit_local_gpu_all.sh
+#   qsub -v MODEL_ID=Qwen/Qwen3-1.7B,MODEL_NAME=qwen3-1_7b scripts/metacentrum_local_gpu.pbs
+# Or submit the configured model set:  scripts/submit_local_gpu_all.sh
 # Track:                   qstat -u $USER
 #PBS -N cf-local-gpu
 #PBS -q gpu
-#PBS -l select=1:ncpus=4:ngpus=1:gpu_mem=24gb:mem=24gb:scratch_local=40gb
-#PBS -l walltime=10:00:00
+#PBS -l select=1:ncpus=4:ngpus=1:gpu_mem=28gb:mem=28gb:scratch_local=40gb
+#PBS -l walltime=02:00:00
 #PBS -j oe
 
 set -euo pipefail
@@ -33,15 +32,16 @@ exec > >(tee -a "$JOB_LOG") 2>&1
 source scripts/gpu_env.sh
 
 # ---- Model (override via -v) -------------------------------------------------
-MODEL_ID="${MODEL_ID:-google/gemma-4-E4B-it}"   # HuggingFace id that vLLM loads
-MODEL_NAME="${MODEL_NAME:-gemma4-e4b}"          # served name + output folder name
-MAX_MODEL_LEN="${MAX_MODEL_LEN:-1536}"          # worst prompt ~600 tok + 512 out; tiny KV footprint
+MODEL_ID="${MODEL_ID:-Qwen/Qwen3-1.7B}"         # HuggingFace id that vLLM loads
+MODEL_NAME="${MODEL_NAME:-qwen3-1_7b}"          # served name + output folder name
+MAX_MODEL_LEN="${MAX_MODEL_LEN:-4096}"          # prompt + completion budget; keep small for KV footprint
 # Pick a free TCP port instead of hardcoding 8000: two GPU jobs can land on the
 # same physical node, where 127.0.0.1 is host-wide, so a fixed port makes the
 # second server crash with "Address already in use". Server and client both
 # derive off $PORT below, so they stay in sync.
 PORT="${PORT:-$("${PYTHON:-python}" -c 'import socket;s=socket.socket();s.bind(("127.0.0.1",0));print(s.getsockname()[1]);s.close()')}"
 GPU_MEM_UTIL="${GPU_MEM_UTIL:-0.90}"
+VLLM_EXTRA_ARGS="${VLLM_EXTRA_ARGS:-}"          # optional space-separated extra vLLM args
 
 # ---- Work matrix (override via -v) ------------------------------------------
 OUTPUT_ROOT="${OUTPUT_ROOT:-data/local_gpu}"
@@ -49,11 +49,13 @@ DATASETS="${DATASETS:-cs-qa sk-qa}"
 VARIANTS="${VARIANTS:-cf fa}"
 LANGUAGES="${LANGUAGES:-en cs sk}"
 TASKS="${TASKS:-generated classified}"
-MAX_WORKERS="${MAX_WORKERS:-64}"                # client concurrency -> server batch size
+CONCURRENCY_PER_KEY="${CONCURRENCY_PER_KEY:-${MAX_WORKERS:-64}}"  # client concurrency -> server batch size
 LIMIT="${LIMIT:-}"                              # empty = all entries
 SKIP_EXISTING="${SKIP_EXISTING:-1}"            # 1 = resume (skip combos whose CSV exists); 0 = overwrite
 CLASSIFICATION_REPEATS="${CLASSIFICATION_REPEATS:-5}"
 CLASSIFICATION_TEMPERATURE="${CLASSIFICATION_TEMPERATURE:-1.0}"
+MAX_TOKENS="${MAX_TOKENS:-512}"                # enough for one sentence / short classification JSON
+LONG_RETRY_SLEEP="${LONG_RETRY_SLEEP:-10}"      # local server retries can cool down quickly
 
 PYTHON="${PYTHON:-python}"
 mkdir -p logs "$OUTPUT_ROOT"
@@ -64,6 +66,7 @@ echo "[start] $(date '+%Y-%m-%d %H:%M:%S') host=$(hostname) model=$MODEL_NAME ($
 # ---- Launch the vLLM server -------------------------------------------------
 SERVER_LOG="logs/vllm-${MODEL_NAME}.log"
 echo "[serve] $MODEL_ID as '$MODEL_NAME' on 127.0.0.1:$PORT (log: $SERVER_LOG)"
+read -r -a VLLM_EXTRA_ARGV <<< "$VLLM_EXTRA_ARGS"
 "$PYTHON" -m vllm.entrypoints.openai.api_server \
   --model "$MODEL_ID" \
   --served-model-name "$MODEL_NAME" \
@@ -71,6 +74,7 @@ echo "[serve] $MODEL_ID as '$MODEL_NAME' on 127.0.0.1:$PORT (log: $SERVER_LOG)"
   --port "$PORT" \
   --max-model-len "$MAX_MODEL_LEN" \
   --gpu-memory-utilization "$GPU_MEM_UTIL" \
+  "${VLLM_EXTRA_ARGV[@]}" \
   > "$SERVER_LOG" 2>&1 &
 SERVER_PID=$!
 
@@ -93,9 +97,11 @@ trap cleanup EXIT
 # First run also downloads several GB of weights + runs torch.compile, so the
 # window is generous. Subsequent runs hit the cache and become ready in minutes.
 WAIT_SECS="${WAIT_SECS:-3600}"
-echo "[wait] polling http://127.0.0.1:$PORT/health (up to ${WAIT_SECS}s)"
+WAIT_POLL_SECS="${WAIT_POLL_SECS:-10}"
+echo "[wait] polling http://127.0.0.1:$PORT/health every ${WAIT_POLL_SECS}s (up to ${WAIT_SECS}s)"
 ready=0
-for _ in $(seq 1 "$WAIT_SECS"); do
+WAIT_START=$(date +%s)
+while [ $(( $(date +%s) - WAIT_START )) -lt "$WAIT_SECS" ]; do
   if ! kill -0 "$SERVER_PID" 2>/dev/null; then
     echo "[error] vLLM server exited during startup; see $SERVER_LOG" >&2
     tail -n 40 "$SERVER_LOG" >&2 || true
@@ -106,7 +112,7 @@ for _ in $(seq 1 "$WAIT_SECS"); do
     echo "[ready] server is up"
     break
   fi
-  sleep 1
+  sleep "$WAIT_POLL_SECS"
 done
 [ "$ready" = 1 ] || {
   echo "[error] server not ready after ${WAIT_SECS}s; see $SERVER_LOG" >&2
@@ -145,7 +151,9 @@ run_one() {
     --variant "$variant" \
     --language "$language" \
     --task "$task" \
-    --max-workers "$MAX_WORKERS" \
+    --concurrency-per-key "$CONCURRENCY_PER_KEY" \
+    --max-tokens "$MAX_TOKENS" \
+    --long-retry-sleep "$LONG_RETRY_SLEEP" \
     --output-root "$OUTPUT_ROOT" \
     "${extra[@]}"
 }
