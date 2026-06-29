@@ -1,11 +1,23 @@
+import os
+import re
+import sys
+from collections import Counter
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 
-CLASSIFIED_DIR = Path(__file__).parent.parent / "data" / "classified"
-OUTPUT_PATH = Path(__file__).parent / "classification_accuracy.png"
-CONFUSION_OUTPUT_PATH = Path(__file__).parent / "classification_confusion_matrix.png"
+# Reuse the report generator's label parsing/recovery so the plotted
+# majority-vote accuracy matches reports_v2/classification_format.* exactly.
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from inspect_judged_results import CLASS_LABELS, parse_classification_answer
+
+_DEFAULT_CLASSIFIED_DIR = Path(__file__).parent.parent / "data" / "classified"
+CLASSIFIED_DIR = Path(os.environ.get("CLASSIFIED_DIR", _DEFAULT_CLASSIFIED_DIR))
+_SUFFIX = os.environ.get("OUTPUT_SUFFIX", "")
+OUTPUT_PATH = Path(__file__).parent / f"classification_accuracy{_SUFFIX}.png"
+CONFUSION_OUTPUT_PATH = Path(__file__).parent / f"classification_confusion_matrix{_SUFFIX}.png"
 
 LABEL_ORDER = ["CFA", "FA", "FI"]
 LANGUAGE_ORDER = ["en", "cs", "sk"]
@@ -13,13 +25,49 @@ LANGUAGE_ORDER = ["en", "cs", "sk"]
 HARD_LABEL = {"cf": "CFA", "fa": "FA", "fi": "FI"}
 SOFT_LABELS = {"cf": {"CFA", "FI"}, "fa": {"FA"}, "fi": {"FI", "CFA"}}
 
+_REPEAT_RE = re.compile(r"^sentence_\d+$")
+
+
+def answer_columns(columns: list[str]) -> list[str]:
+    """Independent classification repeats to vote over.
+
+    Prefers the per-repeat columns (sentence_1..sentence_N); falls back to the
+    single 'sentence' column when a run had no repeats. The bare 'sentence'
+    column duplicates sentence_1, so it is excluded when repeats exist to avoid
+    double-weighting the first sample.
+    """
+    repeats = [c for c in columns if _REPEAT_RE.match(c)]
+    return repeats or (["sentence"] if "sentence" in columns else [])
+
+
+def majority_label(values: list[str]) -> str:
+    """Majority FA/CFA/FI label across one entry's repeats ('' if none parse).
+
+    Non-label / garbled cells contribute no vote. Ties break by CLASS_LABELS
+    order (CFA, FA, FI), matching the report generator.
+    """
+    parsed = [label for label, _ in map(parse_classification_answer, values) if label]
+    if not parsed:
+        return ""
+    votes = Counter(parsed)
+    return sorted(
+        votes.items(),
+        key=lambda item: (-item[1], CLASS_LABELS.index(item[0]) if item[0] in CLASS_LABELS else 99),
+    )[0][0]
+
+
+def majority_predictions(csv_path: Path) -> pd.Series:
+    df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
+    cols = answer_columns(list(df.columns))
+    return df[cols].apply(lambda row: majority_label(list(row)), axis=1)
+
 
 def load_accuracy_records(classified_dir: Path) -> pd.DataFrame:
     records = []
     for model_dir in sorted(classified_dir.iterdir()):
         for csv_path in sorted(model_dir.glob("*.csv")):
             dataset, variant, language = csv_path.stem.split("_")
-            predictions = pd.read_csv(csv_path)["sentence"]
+            predictions = majority_predictions(csv_path)
             hard_accuracy = (predictions == HARD_LABEL[variant]).mean() * 100
             soft_accuracy = predictions.isin(SOFT_LABELS[variant]).mean() * 100
             records.append(
@@ -35,7 +83,7 @@ def load_prediction_records(classified_dir: Path) -> pd.DataFrame:
         for csv_path in sorted(model_dir.glob("*.csv")):
             dataset, variant, _ = csv_path.stem.split("_")
             true_label = HARD_LABEL[variant]
-            for predicted in pd.read_csv(csv_path)["sentence"]:
+            for predicted in majority_predictions(csv_path):
                 records.append(dict(model=model_dir.name, dataset=dataset,
                                     true_label=true_label, predicted_label=predicted))
     return pd.DataFrame(records)
