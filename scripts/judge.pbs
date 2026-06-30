@@ -16,7 +16,7 @@
 # Track:  qstat -u $USER
 #PBS -N cf-judge
 #PBS -l select=1:ncpus=4:mem=8gb
-#PBS -l walltime=24:00:00
+#PBS -l walltime=14:00:00
 #PBS -j oe
 
 set -euo pipefail
