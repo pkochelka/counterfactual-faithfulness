@@ -56,6 +56,7 @@ CLASSIFICATION_REPEATS="${CLASSIFICATION_REPEATS:-5}"
 CLASSIFICATION_TEMPERATURE="${CLASSIFICATION_TEMPERATURE:-1.0}"
 MAX_TOKENS="${MAX_TOKENS:-512}"                # enough for one sentence / short classification JSON
 LONG_RETRY_SLEEP="${LONG_RETRY_SLEEP:-10}"      # local server retries can cool down quickly
+DISABLE_THINKING="${DISABLE_THINKING:-0}"      # 1 = pass --disable-thinking to compatible local models
 
 PYTHON="${PYTHON:-python}"
 mkdir -p logs "$OUTPUT_ROOT"
@@ -142,6 +143,9 @@ run_one() {
   fi
   if [ "$SKIP_EXISTING" = 1 ]; then
     extra+=(--skip-existing)
+  fi
+  if [ "$DISABLE_THINKING" = 1 ]; then
+    extra+=(--disable-thinking)
   fi
 
   echo "[run] task=$task model=$MODEL_NAME dataset=$dataset variant=$variant language=$language"

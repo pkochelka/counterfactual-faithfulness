@@ -4,10 +4,12 @@ import json
 import os
 import queue
 import random
+import re
 import time
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import argparse
+from collections.abc import Callable
 from dataclasses import dataclass
 
 from api_caller import NO_AUTH_TOKEN_NAME, call_api
@@ -28,7 +30,7 @@ parser.add_argument("--language", default="en", type=str, help="Prompt language 
 parser.add_argument("--token-env-vars", default="", type=str, help="Comma-separated API token env var names.")
 parser.add_argument("--concurrency-per-key", default=4, type=int, help="Concurrent requests per token env var.")
 parser.add_argument("--retry-attempts", default=3, type=int, help="Maximum attempts per request.")
-parser.add_argument("--retry-sleep", default=2.5, type=float, help="Short sleep between retry attempts.")
+parser.add_argument("--retry-sleep", default=2.0, type=float, help="Short sleep between retry attempts.")
 parser.add_argument("--long-retry-sleep", default=60.0, type=float, help="One longer cooldown before retrying a transient request failure; use 0 to disable.")
 parser.add_argument("--task", default="generated", choices=list(TASK_PROMPTS), type=str, help="Task type: determines output folder and prompt file.")
 parser.add_argument("--limit", default=None, type=int, help="Optional number of entries to process from the start of the dataset.")
@@ -40,6 +42,7 @@ parser.add_argument("--request-jitter-min", default=0.1, type=float, help="Minim
 parser.add_argument("--request-jitter-max", default=0.5, type=float, help="Maximum random sleep before each API request.")
 parser.add_argument("--max-tokens", default=2048, type=int, help="Max tokens per API completion (raise for reasoning models that need room to emit content).")
 parser.add_argument("--reasoning-effort", default="", type=str, help="Reasoning effort for reasoning models (e.g. low, medium, high). Empty omits the field.")
+parser.add_argument("--disable-thinking", action="store_true", help="Ask compatible local/vLLM reasoning models to disable thinking traces.")
 
 
 @dataclass(frozen=True)
@@ -51,6 +54,100 @@ class TokenSlot:
 class LLMResult:
     content: str
     reasoning: str | None = None
+    raw_content: str | None = None
+
+
+_LABEL_RE = re.compile(r"\b(CFA|FA|FI)\b")
+_THINK_RE = re.compile(r"<think>(.*?)</think>", re.IGNORECASE | re.DOTALL)
+_LIST_MARKER_RE = re.compile(r"^\s*(?:[-*]\s+|\d+[.)]\s*)+")
+_CODE_FENCE_RE = re.compile(r"^\s*```")
+_META_LINE_RE = re.compile(
+    r"^\s*(?:"
+    r"len(?:\s+vety?|\s+vetu/vety)?|"
+    r"length|lengva|"
+    r"vet[auy]|"
+    r"d(?:ĺ|l)žka(?:\s+vety)?|"
+    r"lo(?:ž|z)ka"
+    r")\s*[:：]",
+    re.IGNORECASE,
+)
+_TRAILING_META_RE = re.compile(
+    r"(?:"
+    r"\s*\((?:len(?:\s+vety?|\s+vetu/vety)?|length|lengva|vet[auy]|d(?:ĺ|l)žka|lo(?:ž|z)ka)[^)]*\)"
+    r"|"
+    r"\s+(?:len(?:\s+vety?|\s+vetu/vety)?|length|lengva|vet[auy]|d(?:ĺ|l)žka|lo(?:ž|z)ka)\s*[:：].*$"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def sanitize_classification_content(content: str) -> str:
+    """Reduce a classification response to a single-line value.
+
+    The classify prompt asks for only an FA/CFA/FI label, but some models append
+    multi-line reasoning, which spills a single entry across many physical CSV
+    lines. Extract the first FA/CFA/FI label when present; otherwise collapse all
+    whitespace so the raw response still stays on one line for inspection.
+    """
+    if not content:
+        return content
+    match = _LABEL_RE.search(content)
+    if match:
+        return match.group(1)
+    return " ".join(content.split())
+
+
+def strip_wrapping_quotes(content: str) -> str:
+    stripped = content.strip()
+    quote_pairs = [('"', '"'), ("'", "'"), ("`", "`"), ("“", "”"), ("„", "“")]
+    changed = True
+    while changed and len(stripped) >= 2:
+        changed = False
+        for start, end in quote_pairs:
+            if stripped.startswith(start) and stripped.endswith(end):
+                stripped = stripped[len(start):-len(end)].strip()
+                changed = True
+                break
+    return stripped
+
+
+def sanitize_generated_content(content: str) -> str:
+    """Keep generated text in one physical CSV row and trim common model chatter."""
+    if not content:
+        return content
+    lines = []
+    for raw_line in content.splitlines():
+        line = raw_line.strip()
+        if not line or _CODE_FENCE_RE.match(line) or _META_LINE_RE.match(line):
+            continue
+        line = _LIST_MARKER_RE.sub("", line).strip()
+        if line:
+            lines.append(line)
+    text = strip_wrapping_quotes(" ".join(lines))
+    previous = None
+    while previous != text:
+        previous = text
+        text = _TRAILING_META_RE.sub("", text).strip()
+        text = strip_wrapping_quotes(text)
+    return " ".join(text.split())
+
+
+def collapse_response_text(content: str | None) -> str:
+    if not content:
+        return ""
+    return " ".join(content.split())
+
+
+def split_inline_reasoning(content: str) -> tuple[str, str | None]:
+    """Remove inline <think> traces from content while preserving them separately."""
+    reasoning_parts = [match.strip() for match in _THINK_RE.findall(content) if match.strip()]
+    cleaned = _THINK_RE.sub("", content).strip()
+    return cleaned, "\n\n".join(reasoning_parts) if reasoning_parts else None
+
+
+def merge_reasoning(*parts: str | None) -> str | None:
+    merged = [part.strip() for part in parts if isinstance(part, str) and part.strip()]
+    return "\n\n".join(merged) if merged else None
 
 
 def parse_csv_list(value: str | None) -> list[str]:
@@ -160,6 +257,7 @@ def call_llm_result(
     request_jitter_max: float = 0.5,
     max_tokens: int = 2048,
     reasoning_effort: str | None = None,
+    disable_thinking: bool = False,
 ) -> LLMResult:
     """Call the API with retry, extract content from response."""
     used_long_retry_sleep = False
@@ -169,11 +267,24 @@ def call_llm_result(
         try:
             if request_jitter_max > 0:
                 time.sleep(random.uniform(request_jitter_min, request_jitter_max))
-            response = call_api(prompt, model_id, token_name=token_name, temperature=temperature, max_tokens=max_tokens, reasoning_effort=reasoning_effort)
+            response = call_api(
+                prompt,
+                model_id,
+                token_name=token_name,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                reasoning_effort=reasoning_effort,
+                disable_thinking=disable_thinking,
+            )
             message = response["choices"][0]["message"]
             content = message["content"]
             if content:
-                return LLMResult(content=content, reasoning=extract_reasoning(message))
+                cleaned_content, inline_reasoning = split_inline_reasoning(content)
+                return LLMResult(
+                    content=cleaned_content,
+                    reasoning=merge_reasoning(extract_reasoning(message), inline_reasoning),
+                    raw_content=content,
+                )
         except Exception as e:
             if not is_retryable_error(e) or attempt >= retry_attempts:
                 raise
@@ -204,15 +315,19 @@ def generate_sentences(
     request_jitter_max: float = 0.5,
     max_tokens: int = 2048,
     reasoning_effort: str | None = None,
+    content_transform: Callable[[str], str] | None = None,
+    include_raw_content: bool = False,
+    disable_thinking: bool = False,
 ) -> pd.DataFrame:
     """Generate one sentence per entry."""
     if repeats <= 0:
         raise ValueError("--repeats must be positive")
+    transform = content_transform or (lambda content: content)
 
     subset = df[df["kind"] == kind] if "kind" in df.columns else df
     grouped = subset.groupby("eid", observed=True)
 
-    tasks = {eid: build_prompt(group, prompts, language) for eid, group in grouped}
+    tasks = {str(eid): build_prompt(group, prompts, language) for eid, group in grouped}
     if limit is not None:
         if limit <= 0:
             raise ValueError("--limit must be positive when provided")
@@ -239,6 +354,7 @@ def generate_sentences(
                 request_jitter_max=request_jitter_max,
                 max_tokens=max_tokens,
                 reasoning_effort=reasoning_effort,
+                disable_thinking=disable_thinking,
             )
         finally:
             slot_queue.put(slot)
@@ -267,15 +383,28 @@ def generate_sentences(
     meta_cols = ["eid", "category", "shape", "shape_type", "size"]
     meta = subset[meta_cols].drop_duplicates("eid").set_index("eid")
     meta["sentence"] = meta.index.map(
-        lambda eid: (results.get(eid, {}).get(1) or LLMResult(content="")).content
+        lambda eid: transform((results.get(eid, {}).get(1) or LLMResult(content="")).content)
     )
     if repeats > 1:
         for repeat_index in range(1, repeats + 1):
             meta[f"sentence_{repeat_index}"] = meta.index.map(
-                lambda eid, index=repeat_index: (
-                    results.get(eid, {}).get(index) or LLMResult(content="")
-                ).content
+                lambda eid, index=repeat_index: transform(
+                    (results.get(eid, {}).get(index) or LLMResult(content="")).content
+                )
             )
+    if include_raw_content:
+        meta["raw_response"] = meta.index.map(
+            lambda eid: collapse_response_text(
+                (results.get(eid, {}).get(1) or LLMResult(content="")).raw_content
+            )
+        )
+        if repeats > 1:
+            for repeat_index in range(1, repeats + 1):
+                meta[f"raw_response_{repeat_index}"] = meta.index.map(
+                    lambda eid, index=repeat_index: collapse_response_text(
+                        (results.get(eid, {}).get(index) or LLMResult(content="")).raw_content
+                    )
+                )
     has_reasoning = any(
         result.reasoning
         for per_eid in results.values()
@@ -334,6 +463,11 @@ def main(args: argparse.Namespace) -> None:
         request_jitter_max=args.request_jitter_max,
         max_tokens=args.max_tokens,
         reasoning_effort=args.reasoning_effort or None,
+        content_transform=(
+            sanitize_classification_content if args.task == "classified" else sanitize_generated_content
+        ),
+        include_raw_content=args.task == "classified",
+        disable_thinking=args.disable_thinking,
     )
 
     os.makedirs(output_dir, exist_ok=True)

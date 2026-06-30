@@ -34,6 +34,7 @@ def call_api(
     max_tokens: int = 2048,
     temperature: float = 0.0,
     reasoning_effort: str | None = None,
+    disable_thinking: bool = False,
 ) -> dict:
     """Send a single user message to the chat completions endpoint."""
     token = None if token_name == NO_AUTH_TOKEN_NAME else os.getenv(token_name if token_name else "AUTH_TOKEN")
@@ -49,6 +50,8 @@ def call_api(
     }
     if reasoning_effort:
         payload["reasoning_effort"] = reasoning_effort
+    if disable_thinking:
+        payload["chat_template_kwargs"] = {"enable_thinking": False}
 
     resp = requests.post(
         f"{BASE_URL}/chat/completions",
