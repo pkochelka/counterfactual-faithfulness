@@ -342,7 +342,12 @@ def load_classification_summaries(
             key_aliases = list(dict.fromkeys(key_aliases))
             with csv_path.open(newline="", encoding="utf-8-sig") as handle:
                 reader = csv.DictReader(handle)
-                answer_fields = [name for name in (reader.fieldnames or []) if name.startswith("sentence")]
+                fieldnames = reader.fieldnames or []
+                # Vote over the independent repeats (sentence_1..sentence_N); the
+                # bare 'sentence' column duplicates sentence_1 and would double-weight
+                # the first sample. Fall back to 'sentence' only when there are no repeats.
+                repeat_fields = [name for name in fieldnames if re.fullmatch(r"sentence_\d+", name)]
+                answer_fields = repeat_fields or [name for name in fieldnames if name == "sentence"]
                 for row in reader:
                     eid = row.get("eid", "")
                     if not eid:
