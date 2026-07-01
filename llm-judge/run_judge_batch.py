@@ -13,6 +13,7 @@ DEFAULT_OUTPUT_DIR = Path("data") / "judged"
 DEFAULT_LOG_DIR = Path("logs")
 DEFAULT_MODEL = "glm-5"
 DEFAULT_JUDGE_BASE_URL = "https://llm.ai.e-infra.cz/v1"
+REASONING_EFFORT_CHOICES = ("max", "xhigh", "high", "medium", "low", "minimal", "none")
 
 
 def positive_int(value: str) -> int:
@@ -59,6 +60,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--timeout", type=int, default=None)
     parser.add_argument("--max-tokens", type=int, default=None)
+    parser.add_argument(
+        "--reasoning-effort",
+        choices=REASONING_EFFORT_CHOICES,
+        default=None,
+        help="Pass an OpenRouter reasoning effort to judge_csv.py.",
+    )
+    parser.add_argument(
+        "--reasoning-exclude",
+        action="store_true",
+        help="Ask the provider to omit reasoning content from responses.",
+    )
     parser.add_argument(
         "--concurrency-per-key",
         type=positive_int,
@@ -167,6 +179,10 @@ def build_command(
         command.extend(["--timeout", str(args.timeout)])
     if args.max_tokens is not None:
         command.extend(["--max-tokens", str(args.max_tokens)])
+    if args.reasoning_effort:
+        command.extend(["--reasoning-effort", args.reasoning_effort])
+    if args.reasoning_exclude:
+        command.append("--reasoning-exclude")
     if args.dry_run:
         command.append("--dry-run")
     if force:

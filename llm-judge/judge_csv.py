@@ -34,6 +34,7 @@ from webnlg_utils import (
 
 
 DEFAULT_SAMPLE_SIZE = 10
+REASONING_EFFORT_CHOICES = ("max", "xhigh", "high", "medium", "low", "minimal", "none")
 
 
 @dataclass(frozen=True)
@@ -113,6 +114,17 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--request-jitter-min", type=nonnegative_float, default=0.1, help="Minimum random sleep before each judge API request")
     parser.add_argument("--request-jitter-max", type=nonnegative_float, default=0.5, help="Maximum random sleep before each judge API request")
+    parser.add_argument(
+        "--reasoning-effort",
+        choices=REASONING_EFFORT_CHOICES,
+        default=None,
+        help="OpenRouter reasoning effort to request. When omitted, the legacy thinking=true payload is used.",
+    )
+    parser.add_argument(
+        "--reasoning-exclude",
+        action="store_true",
+        help="Ask the provider to omit reasoning content from the response when --reasoning-effort is set.",
+    )
     parser.add_argument("--limit", type=int, default=None, help="Upper bound on rows after sampling")
     parser.add_argument(
         "--concurrency-per-key",
@@ -153,6 +165,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--force", action="store_true", help="Overwrite existing annotation rows for this source/model")
     parser.add_argument("--dry-run", action="store_true", help="Build prompts without calling the API")
     return parser.parse_args()
+
+
+def reasoning_config_from_args(args: argparse.Namespace) -> dict[str, object] | None:
+    if not args.reasoning_effort:
+        return None
+    config: dict[str, object] = {"effort": args.reasoning_effort}
+    if args.reasoning_exclude:
+        config["exclude"] = True
+    return config
 
 
 def build_token_slots(args: argparse.Namespace) -> list[TokenSlot]:
@@ -216,6 +237,7 @@ def main() -> None:
     load_env_defaults()
     args = parse_args()
     judge_api_url = normalize_judge_api_url(args.judge_api_url or judge_api_url_from_env())
+    reasoning_config = reasoning_config_from_args(args)
     token_slots = build_token_slots(args)
 
     csv_path = Path(args.csv).resolve()
@@ -294,6 +316,7 @@ def main() -> None:
                 long_retry_sleep=args.long_retry_sleep,
                 request_jitter_min=args.request_jitter_min,
                 request_jitter_max=args.request_jitter_max,
+                reasoning=reasoning_config,
                 dry_run=args.dry_run,
             )
             return result, slot.env_var

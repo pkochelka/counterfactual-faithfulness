@@ -531,6 +531,7 @@ def request_judge(
     timeout: int = DEFAULT_JUDGE_TIMEOUT,
     request_jitter_min: float = 0.1,
     request_jitter_max: float = 0.5,
+    reasoning: dict[str, Any] | None = None,
 ) -> tuple[str, dict[str, Any], dict[str, Any], dict[str, Any]]:
     api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
     headers = {
@@ -546,27 +547,29 @@ def request_judge(
         try:
             if request_jitter_max > 0:
                 time.sleep(random.uniform(request_jitter_min, request_jitter_max))
+            request_payload: dict[str, Any] = {
+                "model": judge_model,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a strict evaluator. Return only valid JSON. "
+                            "Do not overthink it."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                "temperature": 0,
+                "max_tokens": max_tokens,
+            }
+            if reasoning is not None:
+                request_payload["reasoning"] = reasoning
+            else:
+                request_payload["chat_template_kwargs"] = {"thinking": "true"}
             response = requests.post(
                 api_url,
                 headers=headers,
-                json={
-                    "model": judge_model,
-                    "messages": [
-                        {
-                            "role": "system",
-                            "content": (
-                                "You are a strict evaluator. Return only valid JSON. "
-                                "Do not overthink it."
-                            ),
-                        },
-                        {"role": "user", "content": prompt},
-                    ],
-                    "chat_template_kwargs": {
-                        "thinking": "true"
-                    },
-                    "temperature": 0,
-                    "max_tokens": max_tokens,
-                },
+                json=request_payload,
                 timeout=timeout,
             )
             response.raise_for_status()
@@ -658,6 +661,7 @@ def request_judge(
         "response_model": payload.get("model") if isinstance(payload, dict) else None,
         "provider": payload.get("provider") if isinstance(payload, dict) else None,
         "api_url": api_url,
+        "requested_reasoning": reasoning,
     }
     return raw, parsed, usage, response_meta
 
@@ -675,6 +679,7 @@ def build_judge_record(
     usage: dict[str, Any] | None = None,
     response_meta: dict[str, Any] | None = None,
     token_env_var: str | None = None,
+    reasoning: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
     prompt_preview = prompt.splitlines()[0] if prompt else ""
@@ -689,6 +694,7 @@ def build_judge_record(
         "requested_judge_model": judge_model,
         "requested_judge_api_url": normalize_judge_api_url(api_url),
         "requested_token_env_var": token_env_var,
+        "requested_reasoning": reasoning,
         "provider": response_meta.get("provider"),
         "request_cost": usage.get("cost"),
         "usage": usage or None,
@@ -720,6 +726,7 @@ def judge_row(
     long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     request_jitter_min: float = 0.1,
     request_jitter_max: float = 0.5,
+    reasoning: dict[str, Any] | None = None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     prompt = build_judge_prompt(row)
@@ -737,6 +744,7 @@ def judge_row(
             usage=None,
             response_meta=None,
             token_env_var=token_env_var,
+            reasoning=reasoning,
         )
 
     token = auth_token or os.getenv("AUTH_TOKEN")
@@ -755,6 +763,7 @@ def judge_row(
         long_retry_sleep=long_retry_sleep,
         request_jitter_min=request_jitter_min,
         request_jitter_max=request_jitter_max,
+        reasoning=reasoning,
     )
     return build_judge_record(
         row=row,
@@ -768,6 +777,7 @@ def judge_row(
         usage=usage,
         response_meta=response_meta,
         token_env_var=token_env_var,
+        reasoning=reasoning,
     )
 
 
