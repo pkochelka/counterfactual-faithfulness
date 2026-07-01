@@ -10,6 +10,7 @@ from pathlib import Path
 
 DEFAULT_GENERATED_DIR = Path("data") / "generated"
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
+DEFAULT_FLUENCY_OUTPUT_DIR = Path("data") / "judged_fluency"
 DEFAULT_LOG_DIR = Path("logs")
 DEFAULT_MODEL = "glm-5"
 DEFAULT_JUDGE_BASE_URL = "https://llm.ai.e-infra.cz/v1"
@@ -35,9 +36,17 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--language",
-        choices=["en", "cs", "sk"],
+        choices=["en", "cs", "sk", "hsb"],
         default=None,
         help="Optional language suffix filter, e.g. en selects *_en.csv.",
+    )
+    parser.add_argument(
+        "--fluency",
+        action="store_true",
+        help=(
+            "Judge fluency instead of faithfulness (forwards --fluency to judge_csv.py). "
+            f"When --output-dir is left at the default, writes to {DEFAULT_FLUENCY_OUTPUT_DIR}."
+        ),
     )
     parser.add_argument(
         "--pattern",
@@ -183,6 +192,8 @@ def build_command(
         command.extend(["--reasoning-effort", args.reasoning_effort])
     if args.reasoning_exclude:
         command.append("--reasoning-exclude")
+    if args.fluency:
+        command.append("--fluency")
     if args.dry_run:
         command.append("--dry-run")
     if force:
@@ -272,6 +283,8 @@ def run_csv(args: argparse.Namespace, csv_path: Path, env: dict[str, str], log_h
 
 def main() -> None:
     args = parse_args()
+    if args.fluency and args.output_dir == DEFAULT_OUTPUT_DIR:
+        args.output_dir = DEFAULT_FLUENCY_OUTPUT_DIR
     env = os.environ.copy()
     for key, value in load_env_file(Path(".env.local")).items():
         env.setdefault(key, value)

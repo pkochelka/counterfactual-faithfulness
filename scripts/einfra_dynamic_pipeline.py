@@ -115,6 +115,13 @@ class DynamicScheduler:
         self.classification_temperature = float(os.environ.get("CLASSIFICATION_TEMPERATURE", "1.0"))
         self.gen_max_tokens = env_int("GEN_MAX_TOKENS", 2048)
         self.reasoning_effort = os.environ.get("REASONING_EFFORT", "low").strip()
+        self.judge_reasoning_effort = os.environ.get("JUDGE_REASONING_EFFORT", "low").strip()
+        self.judge_reasoning_exclude = os.environ.get("JUDGE_REASONING_EXCLUDE", "").strip().lower() in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
         self.limit = os.environ.get("LIMIT", "").strip()
 
         self.logs_dir = Path(os.environ.get("LOG_DIR", "logs"))
@@ -365,7 +372,7 @@ class DynamicScheduler:
             raise ValueError("judge task is missing generator_model")
         generator_model = task.generator_model
         csv_path = self.output_root / "generated" / output_model_name(generator_model) / f"{task.dataset}_{task.variant}_{task.language}.csv"
-        return [
+        command = [
             self.python,
             "llm-judge/judge_csv.py",
             str(csv_path),
@@ -391,6 +398,11 @@ class DynamicScheduler:
             str(self.request_jitter_max),
             "--allow-failures",
         ]
+        if self.judge_reasoning_effort:
+            command.extend(["--reasoning-effort", self.judge_reasoning_effort])
+            if self.judge_reasoning_exclude:
+                command.append("--reasoning-exclude")
+        return command
 
     def run_task(self, key: str, task: Task) -> bool:
         request_count = self.estimated_requests(task)
@@ -451,7 +463,9 @@ class DynamicScheduler:
             f"languages={','.join(self.languages)} max_keys_per_model={self.max_keys_per_model} "
             f"concurrency_per_key={self.concurrency_per_key} fallback={self.fallback_concurrency_per_key} "
             f"long_retry_sleep={self.long_retry_sleep} "
-            f"request_jitter={self.request_jitter_min}-{self.request_jitter_max}"
+            f"request_jitter={self.request_jitter_min}-{self.request_jitter_max} "
+            f"reasoning_effort={self.reasoning_effort or '<omitted>'} "
+            f"judge_reasoning_effort={self.judge_reasoning_effort or '<omitted>'}"
         )
 
         threads = [threading.Thread(target=self.worker, args=(key,), name=f"worker-{key}") for key in self.keys]

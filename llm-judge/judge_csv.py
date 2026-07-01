@@ -18,16 +18,21 @@ from webnlg_utils import (
     DEFAULT_JUDGE_RETRY_SLEEP,
     DEFAULT_JUDGE_LONG_RETRY_SLEEP,
     DEFAULT_JUDGE_TIMEOUT,
+    DEFAULT_FLUENCY_OUTPUT_DIR,
     DEFAULT_OUTPUT_DIR,
     JudgeRequestError,
+    LANGUAGE_NAMES,
     SourceSpec,
     enrich_sentences,
+    judge_fluency_row,
     judge_output_path,
     judge_row,
     load_env_defaults,
     load_jsonl_records,
+    load_sentence_table,
     judge_api_url_from_env,
     normalize_judge_api_url,
+    resolve_language,
     source_identity,
     write_judge_records,
 )
@@ -82,6 +87,23 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run LLM-as-judge on generated sentence CSVs.")
     parser.add_argument("csv", type=str, help="Path to sentences CSV")
     parser.add_argument("--xml", type=str, default=None, help="Path to matching XML or flat CSV with source triples")
+    parser.add_argument(
+        "--fluency",
+        action="store_true",
+        help=(
+            "Judge linguistic fluency instead of faithfulness. Skips source triples/XML, "
+            f"uses the fluency prompt, and defaults the output directory to {DEFAULT_FLUENCY_OUTPUT_DIR}."
+        ),
+    )
+    parser.add_argument(
+        "--language",
+        type=str,
+        default=None,
+        help=(
+            "Language code for --fluency (e.g. en, cs, sk, hsb). "
+            "When omitted, it is read from a 'language' column or inferred from the CSV filename suffix."
+        ),
+    )
     parser.add_argument(
         "--sample-size",
         type=parse_sample_size,
@@ -245,9 +267,24 @@ def main() -> None:
     source_id = source_identity(csv_path, label=source_label)
     source = SourceSpec(label=source_label, csv_path=csv_path, source_id=source_id)
 
-    enriched = enrich_sentences(csv_path, args.xml)
+    if args.fluency:
+        enriched = load_sentence_table(csv_path)
+    else:
+        enriched = enrich_sentences(csv_path, args.xml)
     if enriched.empty:
         sys.exit("No rows loaded from input CSV.")
+
+    language_code = None
+    language_name = None
+    if args.fluency:
+        language_code, language_name = resolve_language(
+            enriched.iloc[0], csv_path, override=args.language
+        )
+        if language_code is None:
+            sys.exit(
+                "Could not determine the language for --fluency. "
+                f"Pass --language with one of: {', '.join(LANGUAGE_NAMES)}."
+            )
 
     if args.sample_size == "all":
         sampled = enriched
@@ -260,7 +297,10 @@ def main() -> None:
     if args.limit is not None:
         sampled = sampled.head(args.limit)
 
-    out_path = Path(args.output_path) if args.output_path else judge_output_path(source.csv_path, args.model, args.output_dir)
+    output_dir = args.output_dir
+    if args.fluency and not args.output_path and Path(output_dir) == DEFAULT_OUTPUT_DIR:
+        output_dir = str(DEFAULT_FLUENCY_OUTPUT_DIR)
+    out_path = Path(args.output_path) if args.output_path else judge_output_path(source.csv_path, args.model, output_dir)
     fail_path = failure_output_path(out_path, args.failure_output_path)
     if args.force and out_path.exists():
         out_path.unlink()
@@ -300,8 +340,7 @@ def main() -> None:
     def worker_with_slot(row):
         slot = slot_queue.get()
         try:
-            result = judge_row(
-                row,
+            common_kwargs = dict(
                 source_label=source.label,
                 source_path=str(source.csv_path),
                 source_id=source.source_id,
@@ -319,6 +358,15 @@ def main() -> None:
                 reasoning=reasoning_config,
                 dry_run=args.dry_run,
             )
+            if args.fluency:
+                result = judge_fluency_row(
+                    row,
+                    language_code=language_code,
+                    language_name=language_name,
+                    **common_kwargs,
+                )
+            else:
+                result = judge_row(row, **common_kwargs)
             return result, slot.env_var
         except Exception as exc:
             setattr(exc, "token_env_var", slot.env_var)

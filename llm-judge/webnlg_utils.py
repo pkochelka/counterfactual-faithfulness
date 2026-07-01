@@ -22,10 +22,20 @@ DEFAULT_JUDGE_TIMEOUT = 150
 DEFAULT_JUDGE_RETRY_SLEEP = 2.5
 DEFAULT_JUDGE_LONG_RETRY_SLEEP = 60.0
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
+DEFAULT_FLUENCY_OUTPUT_DIR = Path("data") / "judged_fluency"
 DEFAULT_JUDGE_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
 OPENROUTER_URL = DEFAULT_JUDGE_API_URL
 PROMPT_TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "prompts" / "judge_speeches.txt"
+FLUENCY_PROMPT_TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "prompts" / "judge_fluency.txt"
+
+# Language code -> human-readable name used in the fluency prompt.
+LANGUAGE_NAMES = {
+    "en": "English",
+    "cs": "Czech",
+    "sk": "Slovak",
+    "hsb": "Upper Sorbian",
+}
 
 
 class JudgeRequestError(RuntimeError):
@@ -779,6 +789,176 @@ def judge_row(
         token_env_var=token_env_var,
         reasoning=reasoning,
     )
+
+
+def language_code_from_source(source_path: str | Path) -> str | None:
+    """Infer the two/three-letter language code from a sentences CSV filename.
+
+    Generated files follow the ``{dataset}_{variant}_{language}`` convention
+    (optionally prefixed with ``sentences_``), so the language is the last
+    underscore-separated part that we recognise.
+    """
+    stem = Path(source_path).stem
+    if stem.startswith("sentences_"):
+        stem = stem.removeprefix("sentences_")
+    for part in reversed(stem.split("_")):
+        code = sanitize_identifier(part)
+        if code in LANGUAGE_NAMES:
+            return code
+    return None
+
+
+def resolve_language(
+    row: pd.Series | dict[str, Any] | None,
+    source_path: str | Path,
+    *,
+    override: str | None = None,
+) -> tuple[str | None, str]:
+    """Return ``(code, name)`` for the fluency prompt.
+
+    Preference order: explicit override, a ``language`` column on the row
+    (for future generation that stores it), then the filename suffix.
+    """
+    code = override
+    if not code and row is not None:
+        row_language = row.get("language") if hasattr(row, "get") else None
+        if isinstance(row_language, str) and row_language.strip():
+            code = row_language.strip()
+    if not code:
+        code = language_code_from_source(source_path)
+    if code:
+        code = sanitize_identifier(code)
+    name = LANGUAGE_NAMES.get(code or "", "the target language")
+    return code, name
+
+
+def load_fluency_prompt_template() -> str:
+    return FLUENCY_PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
+
+
+def build_fluency_prompt(sentence: str, language_name: str) -> str:
+    return load_fluency_prompt_template().format(
+        language=language_name,
+        sentence=prompt_text(sentence),
+    )
+
+
+def build_fluency_record(
+    *,
+    row: pd.Series | dict[str, Any],
+    source_label: str,
+    source_path: str,
+    source_id: str,
+    judge_model: str,
+    api_url: str,
+    language_code: str | None,
+    language_name: str,
+    prompt: str,
+    raw_response: str | None,
+    parsed: dict[str, Any] | None,
+    usage: dict[str, Any] | None = None,
+    response_meta: dict[str, Any] | None = None,
+    token_env_var: str | None = None,
+    reasoning: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    prompt_preview = prompt.splitlines()[0] if prompt else ""
+    usage = usage or {}
+    response_meta = response_meta or {}
+    return {
+        "eid": str(row["eid"]),
+        "source_label": source_label,
+        "source_path": source_path,
+        "source_id": source_id,
+        "judge_model": response_meta.get("response_model") or judge_model,
+        "requested_judge_model": judge_model,
+        "requested_judge_api_url": normalize_judge_api_url(api_url),
+        "requested_token_env_var": token_env_var,
+        "requested_reasoning": reasoning,
+        "provider": response_meta.get("provider"),
+        "request_cost": usage.get("cost"),
+        "usage": usage or None,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "sentence": str(row["sentence"]),
+        "language": language_code,
+        "language_name": language_name,
+        "prompt": prompt_preview,
+        "raw_response": raw_response,
+        "parsed": parsed,
+    }
+
+
+def judge_fluency_row(
+    row: pd.Series | dict[str, Any],
+    *,
+    source_label: str,
+    source_path: str,
+    source_id: str,
+    language_code: str | None,
+    language_name: str,
+    judge_model: str = DEFAULT_JUDGE_MODEL,
+    auth_token: str | None = None,
+    token_env_var: str | None = None,
+    api_url: str | None = None,
+    max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
+    timeout: int = DEFAULT_JUDGE_TIMEOUT,
+    retry_attempts: int = DEFAULT_JUDGE_RETRY_ATTEMPTS,
+    retry_sleep: float = DEFAULT_JUDGE_RETRY_SLEEP,
+    long_retry_sleep: float = DEFAULT_JUDGE_LONG_RETRY_SLEEP,
+    request_jitter_min: float = 0.1,
+    request_jitter_max: float = 0.5,
+    reasoning: dict[str, Any] | None = None,
+    dry_run: bool = False,
+) -> dict[str, Any]:
+    prompt = build_fluency_prompt(str(row["sentence"]), language_name)
+    resolved_api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
+
+    def make_record(
+        *,
+        raw_response: str | None,
+        parsed: dict[str, Any] | None,
+        usage: dict[str, Any] | None,
+        response_meta: dict[str, Any] | None,
+    ) -> dict[str, Any]:
+        return build_fluency_record(
+            row=row,
+            source_label=source_label,
+            source_path=source_path,
+            source_id=source_id,
+            judge_model=judge_model,
+            api_url=resolved_api_url,
+            language_code=language_code,
+            language_name=language_name,
+            prompt=prompt,
+            raw_response=raw_response,
+            parsed=parsed,
+            usage=usage,
+            response_meta=response_meta,
+            token_env_var=token_env_var,
+            reasoning=reasoning,
+        )
+
+    if dry_run:
+        return make_record(raw_response=None, parsed=None, usage=None, response_meta=None)
+
+    token = auth_token or os.getenv("AUTH_TOKEN")
+    if not token:
+        raise RuntimeError("AUTH_TOKEN is missing; set it in .env.local or the app settings.")
+
+    raw, parsed, usage, response_meta = request_judge(
+        prompt=prompt,
+        judge_model=judge_model,
+        auth_token=token,
+        api_url=resolved_api_url,
+        max_tokens=max_tokens,
+        timeout=timeout,
+        retry_attempts=retry_attempts,
+        retry_sleep=retry_sleep,
+        long_retry_sleep=long_retry_sleep,
+        request_jitter_min=request_jitter_min,
+        request_jitter_max=request_jitter_max,
+        reasoning=reasoning,
+    )
+    return make_record(raw_response=raw, parsed=parsed, usage=usage, response_meta=response_meta)
 
 
 def load_jsonl_records(path: str | Path) -> list[dict[str, Any]]:

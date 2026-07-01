@@ -13,6 +13,8 @@
 #   qsub -v OUTPUT_ROOT=data/local_gpu,JUDGE_MODEL=deepseek-v4-pro scripts/judge.pbs
 #   qsub -v CSV_FILES=data/generated/qwen3.5-122b/cs-qa_cf_en.csv scripts/judge.pbs
 #   qsub -v MODELS=gemma4-e4b,DATASETS=cs-qa,LANGUAGES=en scripts/judge.pbs
+#   # fluency instead of faithfulness (no triples; writes to $OUTPUT_ROOT/judged_fluency):
+#   qsub -v FLUENCY=1,OUTPUT_ROOT=data/v2 scripts/judge.pbs
 # Track:  qstat -u $USER
 #PBS -N cf-judge
 #PBS -l select=1:ncpus=4:mem=8gb
@@ -34,10 +36,18 @@ exec > >(tee -a "$JOB_LOG") 2>&1
 PYTHON="${PYTHON:-./.venv/bin/python}"            # CPU venv (pandas + requests)
 OUTPUT_ROOT="${OUTPUT_ROOT:-data}"                # default root for generated/ and judged/
 GENERATED_DIR="${GENERATED_DIR:-$OUTPUT_ROOT/generated}"
-JUDGE_OUTPUT_DIR="${JUDGE_OUTPUT_DIR:-$OUTPUT_ROOT/judged}"
+# FLUENCY=1 scores linguistic fluency (no source triples) instead of faithfulness,
+# via judge_csv.py --fluency, and defaults the output to $OUTPUT_ROOT/judged_fluency.
+FLUENCY="${FLUENCY:-}"
+if [ -n "$FLUENCY" ]; then
+  JUDGE_OUTPUT_DIR="${JUDGE_OUTPUT_DIR:-$OUTPUT_ROOT/judged_fluency}"
+else
+  JUDGE_OUTPUT_DIR="${JUDGE_OUTPUT_DIR:-$OUTPUT_ROOT/judged}"
+fi
 JUDGE_MODEL="${JUDGE_MODEL:-deepseek-v4-pro}"     # large e-infra judge model
 JUDGE_BASE_URL="${JUDGE_BASE_URL:-https://llm.ai.e-infra.cz/v1}"
 MAX_TOKENS="${MAX_TOKENS:-4000}"                  # headroom for a reasoning judge before the JSON
+REASONING_EFFORT="${REASONING_EFFORT:-}"          # e.g. low; empty falls back to legacy thinking=true
 
 # Judge keys from the e-infra pool. Accepts comma- or whitespace-separated
 # env-var names; judge_csv.py expects commas, so we normalize below.
@@ -86,6 +96,8 @@ judge_one_csv() {
   # because judge_csv.py skips eids already scored for this model+endpoint.
   "$PYTHON" llm-judge/judge_csv.py \
     "$csv" \
+    ${FLUENCY:+--fluency} \
+    ${REASONING_EFFORT:+--reasoning-effort "$REASONING_EFFORT"} \
     --sample-size "$SAMPLE_SIZE" \
     --model "$JUDGE_MODEL" \
     --judge-base-url "$JUDGE_BASE_URL" \

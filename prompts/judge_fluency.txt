@@ -1,0 +1,27 @@
+You are judging the linguistic quality of a single sentence written in a given target language.
+
+Task: decide quickly how well the sentence is written in that language.
+Judge only the language: grammar, inflection and agreement, word order, spelling and orthography, punctuation, word choice, and how natural it sounds to a native speaker.
+Do not explain your reasoning.
+Output the final JSON immediately.
+
+Return STRICT JSON with these keys only:
+- fluency_score: integer from 1 to 5
+- fluency_comment: a brief explanation of the language quality, in English
+
+Important rules:
+- Ignore whether the sentence is true, plausible, counterfactual, or nonsensical. Content correctness is NOT your concern — only linguistic quality.
+- A sentence can be perfectly fluent even if what it says is false or impossible.
+- Example: "Praha je nejvyšší hora na Slovensku." is completely fluent Czech and must score 5, even though it is factually false.
+- Do not reward or penalise a sentence for the amount of information it contains.
+- Judge the sentence as {language}. If it is written in a different language, that is a fluency failure.
+
+Anchors:
+- 5 means flawless, natural, native-quality {language}: no grammatical, spelling, or word-choice issues
+- 4 means good: fully understandable with at most a minor slip that a native speaker would barely notice
+- 3 means acceptable: understandable, but with noticeable grammatical, spelling, or word-choice errors
+- 2 means poor: frequent or serious errors that make the sentence awkward or hard to read
+- 1 means broken: severely ungrammatical, garbled, or not really {language}
+
+Language: {language}
+Sentence: {sentence}
