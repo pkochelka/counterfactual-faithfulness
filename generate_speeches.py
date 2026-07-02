@@ -57,7 +57,13 @@ class LLMResult:
     raw_content: str | None = None
 
 
-_LABEL_RE = re.compile(r"\b(CFA|FA|FI)\b")
+_LABEL_RE = re.compile(r"\b(CFA|FA|FI)\b", re.IGNORECASE)
+INVALID_CLASSIFICATION_LABEL = "INVALID"
+_CLASSIFICATION_WORD_LABELS = (
+    ("CFA", re.compile(r"\bcounterfactual\b|\bkontrafaktu[aá]ln", re.IGNORECASE)),
+    ("FI", re.compile(r"\bfictional\b|\bfiktivn|\bfiktívn", re.IGNORECASE)),
+    ("FA", re.compile(r"\bfactual\b|\bfaktick", re.IGNORECASE)),
+)
 _THINK_RE = re.compile(r"<think>(.*?)</think>", re.IGNORECASE | re.DOTALL)
 _LIST_MARKER_RE = re.compile(r"^\s*(?:[-*]\s+|\d+[.)]\s*)+")
 _CODE_FENCE_RE = re.compile(r"^\s*```")
@@ -86,14 +92,20 @@ def sanitize_classification_content(content: str) -> str:
 
     The classify prompt asks for only an FA/CFA/FI label, but some models append
     multi-line reasoning, which spills a single entry across many physical CSV
-    lines. Extract the first FA/CFA/FI label when present; otherwise collapse all
-    whitespace so the raw response still stays on one line for inspection.
+    lines. Accept exactly one label token or label word, mark multi-label
+    responses as invalid, and otherwise collapse whitespace so the response
+    stays inspectable.
     """
     if not content:
         return content
-    match = _LABEL_RE.search(content)
-    if match:
-        return match.group(1)
+    token_labels = [match.group(1).upper() for match in _LABEL_RE.finditer(content)]
+    word_labels = [label for label, pattern in _CLASSIFICATION_WORD_LABELS if pattern.search(content)]
+    labels = token_labels + word_labels
+    distinct_labels = list(dict.fromkeys(labels))
+    if len(distinct_labels) == 1 and len(token_labels) <= 1:
+        return distinct_labels[0]
+    if labels:
+        return INVALID_CLASSIFICATION_LABEL
     return " ".join(content.split())
 
 
@@ -412,14 +424,16 @@ def generate_sentences(
     )
     if has_reasoning:
         meta["reasoning"] = meta.index.map(
-            lambda eid: (results.get(eid, {}).get(1) or LLMResult(content="")).reasoning
+            lambda eid: collapse_response_text(
+                (results.get(eid, {}).get(1) or LLMResult(content="")).reasoning
+            )
         )
         if repeats > 1:
             for repeat_index in range(1, repeats + 1):
                 meta[f"reasoning_{repeat_index}"] = meta.index.map(
-                    lambda eid, index=repeat_index: (
-                        results.get(eid, {}).get(index) or LLMResult(content="")
-                    ).reasoning
+                    lambda eid, index=repeat_index: collapse_response_text(
+                        (results.get(eid, {}).get(index) or LLMResult(content="")).reasoning
+                    )
                 )
     return meta.reset_index()
 

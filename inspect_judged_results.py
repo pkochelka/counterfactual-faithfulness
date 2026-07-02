@@ -16,7 +16,7 @@ from typing import Any
 
 
 SCORE_VALUES = (1, 2, 3, 4, 5)
-LANGUAGES = {"en", "cs", "sk"}
+LANGUAGES = {"en", "cs", "sk", "hsb"}
 CLASS_LABELS = ("CFA", "FA", "FI")
 VARIANT_TO_CLASS_LABEL = {"cf": "CFA", "fa": "FA", "fi": "FI"}
 ISSUE_PATTERNS = {
@@ -288,6 +288,10 @@ def parse_classification_answer(value: Any) -> tuple[str, str]:
     if upper in CLASS_LABELS:
         return upper, "recovered"
 
+    found = re.findall(r"\b(CFA|FA|FI)\b", text, re.I)
+    if len(found) > 1:
+        return "", "multiple"
+
     start_match = re.match(r"^\s*[*_`#\s]*(CFA|FA|FI)\b", text, re.I)
     if start_match:
         return start_match.group(1).upper(), "recovered"
@@ -301,7 +305,6 @@ def parse_classification_answer(value: Any) -> tuple[str, str]:
         ("FI", r"\bfictional\b|\bfiktivn|\bfiktívn"),
         ("FA", r"\bfactual\b|\bfaktick"),
     ]
-    found = re.findall(r"\b(CFA|FA|FI)\b", text, re.I)
     labels = [label.upper() for label in found]
     for label, pattern in word_map:
         if re.search(pattern, text, re.I):
@@ -310,7 +313,7 @@ def parse_classification_answer(value: Any) -> tuple[str, str]:
     if len(distinct) == 1:
         return distinct[0], "recovered"
     if len(distinct) > 1:
-        return distinct[0], "multiple"
+        return "", "multiple"
     return "", "unparsed"
 
 
@@ -414,6 +417,11 @@ def read_judged_records(
     expected_cache: dict[SourceKey, set[str]] = {}
     rows: list[dict[str, Any]] = []
     for jsonl_path in sorted(input_dir.rglob("*.jsonl")):
+        # Skip judge diagnostic sidecars: these hold error records with no
+        # `parsed`/score field, so counting them would pollute record totals
+        # and failure-rate denominators without contributing valid scores.
+        if jsonl_path.name.endswith(".failures.jsonl"):
+            continue
         with jsonl_path.open(encoding="utf-8") as handle:
             for line_number, line in enumerate(handle, start=1):
                 line = line.strip()
