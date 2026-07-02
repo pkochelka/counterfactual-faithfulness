@@ -1,13 +1,26 @@
+"""Plot mean fluency (linguistic quality) score by prompt language and variant.
+
+Fluency is the second LLM-judge dimension (see prompts/judge_fluency.txt): how well
+a sentence is written in its target language, independent of faithfulness. Records
+live under judged_fluency_v2/<model>/judge_<dataset>_<variant>_<language>_<judge>.jsonl
+with parsed.fluency_score in 1..5.
+
+Configuration mirrors analysis/faithfulness_by_language.py:
+  JUDGED_DIR     override the input directory (default data/judged_fluency)
+  OUTPUT_SUFFIX  appended to the output filename (e.g. "_v2")
+  LANGUAGES      plotted languages, comma/space separated (default en,cs,sk,hsb)
+"""
+
 import json
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-_DEFAULT_JUDGED_DIR = Path(__file__).parent.parent / "data" / "judged"
+_DEFAULT_JUDGED_DIR = Path(__file__).parent.parent / "data" / "judged_fluency"
 JUDGED_DIR = Path(os.environ.get("JUDGED_DIR", _DEFAULT_JUDGED_DIR))
 _SUFFIX = os.environ.get("OUTPUT_SUFFIX", "")
-OUTPUT_PATH = Path(__file__).parent / f"faithfulness_by_language{_SUFFIX}.png"
+OUTPUT_PATH = Path(__file__).parent / f"fluency_by_language{_SUFFIX}.png"
 
 DEFAULT_LANGUAGE_ORDER = ["en", "cs", "sk", "hsb"]
 LANGUAGE_ORDER = [
@@ -16,7 +29,7 @@ LANGUAGE_ORDER = [
 ]
 VARIANT_ORDER = ["fa", "cf", "fi"]
 VARIANT_STYLE = {
-    "fa": {"color": "#2ca02c", "linestyle": "-",  "label": "fa  (factual — upper bound)"},
+    "fa": {"color": "#2ca02c", "linestyle": "-",  "label": "fa  (factual)"},
     "cf": {"color": "#ff7f0e", "linestyle": "--", "label": "cf  (counterfactual)"},
     "fi": {"color": "#d62728", "linestyle": ":",  "label": "fi  (fictional)"},
 }
@@ -24,7 +37,7 @@ VARIANT_STYLE = {
 MAX_SCORE = 5
 
 
-def load_faithfulness_records(judged_dir: Path) -> pd.DataFrame:
+def load_fluency_records(judged_dir: Path) -> pd.DataFrame:
     records = []
     for model_dir in sorted(judged_dir.iterdir()):
         if not model_dir.is_dir():
@@ -39,16 +52,16 @@ def load_faithfulness_records(judged_dir: Path) -> pd.DataFrame:
                     line = line.strip()
                     if not line:
                         continue
-                    score = json.loads(line).get("parsed", {}).get("faithfulness_score")
+                    score = json.loads(line).get("parsed", {}).get("fluency_score")
                     if score is None:
                         continue
                     records.append(dict(model=model_dir.name, dataset=dataset,
                                         variant=variant, language=language,
-                                        faithfulness_pct=score / MAX_SCORE * 100))
+                                        fluency_pct=score / MAX_SCORE * 100))
     return pd.DataFrame(records)
 
 
-def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
+def plot_fluency(results: pd.DataFrame, output_path: Path) -> None:
     models = sorted(results["model"].unique())
     datasets = sorted(results["dataset"].unique())
 
@@ -59,13 +72,13 @@ def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
         squeeze=False,
     )
 
-    # Data-driven lower bound so lower-scoring languages (e.g. hsb) are not
-    # clipped by a fixed near-100 window. Floor to the nearest 5 below the
-    # minimum observed group mean, but never show more than down to 90.
+    # Data-driven lower bound: fluency spans a wider range than faithfulness, so
+    # a fixed near-100 window would clip low-resource languages. Floor to the
+    # nearest 5 below the minimum observed mean (never above 90).
     means_by_group = (results
-                      .groupby(["model", "dataset", "variant", "language"])["faithfulness_pct"]
+                      .groupby(["model", "dataset", "variant", "language"])["fluency_pct"]
                       .mean())
-    lo = means_by_group.min() if not means_by_group.empty else 95.0
+    lo = means_by_group.min() if not means_by_group.empty else 0.0
     y_lower = min(90.0, (lo // 5) * 5)
 
     for row, model in enumerate(models):
@@ -76,9 +89,12 @@ def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
 
             for variant in [v for v in VARIANT_ORDER if v in present_variants]:
                 means = (subset[subset["variant"] == variant]
-                         .groupby("language")["faithfulness_pct"]
+                         .groupby("language")["fluency_pct"]
                          .mean()
                          .reindex(LANGUAGE_ORDER))
+                # reindex leaves NaN for languages this model wasn't judged on;
+                # matplotlib renders those as gaps (no marker), so a model
+                # missing hsb shows nothing at hsb instead of distorting the line.
                 ax.plot(LANGUAGE_ORDER, means, marker="o", linewidth=2,
                         **VARIANT_STYLE[variant])
 
@@ -86,7 +102,7 @@ def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
             ax.axhline(100, color="gray", linewidth=0.6, linestyle="--", alpha=0.5)
             ax.set_title(f"{model} / {dataset}", fontsize=10)
             ax.set_xlabel("Prompt language" if row == len(models) - 1 else "")
-            ax.set_ylabel("Mean faithfulness (%)" if col == 0 else "")
+            ax.set_ylabel("Mean fluency (%)" if col == 0 else "")
 
     handles = [plt.Line2D([0], [0], marker="o", linewidth=2, **s)
                for s in VARIANT_STYLE.values()]
@@ -95,9 +111,7 @@ def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
                bbox_to_anchor=(0.5, -0.04))
 
     fig.suptitle(
-        "Mean faithfulness score by prompt language and variant\n"
-        "Hypothesis: cf / fi faithfulness lowest in English"
-        " — model trained on English data resists counterfactual prompts",
+        "Mean fluency (linguistic quality) score by prompt language and variant",
         fontsize=12,
     )
     plt.tight_layout()
@@ -107,10 +121,12 @@ def plot_faithfulness(results: pd.DataFrame, output_path: Path) -> None:
 
 
 if __name__ == "__main__":
-    results = load_faithfulness_records(JUDGED_DIR)
+    results = load_fluency_records(JUDGED_DIR)
+    if results.empty:
+        raise SystemExit(f"No fluency records found under {JUDGED_DIR}")
     summary = (results
-               .groupby(["model", "dataset", "variant", "language"])["faithfulness_pct"]
+               .groupby(["model", "dataset", "variant", "language"])["fluency_pct"]
                .mean()
                .round(1))
     print(summary.to_string())
-    plot_faithfulness(results, OUTPUT_PATH)
+    plot_fluency(results, OUTPUT_PATH)
