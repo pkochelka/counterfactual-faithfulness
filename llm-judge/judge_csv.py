@@ -40,6 +40,7 @@ from webnlg_utils import (
 
 DEFAULT_SAMPLE_SIZE = 10
 REASONING_EFFORT_CHOICES = ("max", "xhigh", "high", "medium", "low", "minimal", "none")
+PROGRESS_INTERVAL = 50
 
 
 @dataclass(frozen=True)
@@ -330,8 +331,12 @@ def main() -> None:
     failures = 0
     rows = pending_rows
 
-    def print_judged_row(row) -> None:
-        print(f"judged {row['eid']}")
+    def timestamp() -> str:
+        return datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
+
+    def print_judged_progress(judged_count: int) -> None:
+        if judged_count % PROGRESS_INTERVAL == 0:
+            print(f"[{timestamp()}] wrote {judged_count} judged rows to {out_path}", flush=True)
 
     slot_queue: queue.Queue[TokenSlot] = queue.Queue()
     for slot in token_slots:
@@ -383,7 +388,7 @@ def main() -> None:
                 record, _token_env_var = result
                 write_judge_records(path=out_path, records=[record], overwrite=False)
                 judged += 1
-                print_judged_row(row)
+                print_judged_progress(judged)
             except JudgeRequestError as exc:
                 failures += 1
                 write_failure_record(
@@ -417,7 +422,7 @@ def main() -> None:
                     result, token_env_var = future.result()
                     write_judge_records(path=out_path, records=[result], overwrite=False)
                     judged += 1
-                    print_judged_row(row)
+                    print_judged_progress(judged)
                 except JudgeRequestError as exc:
                     failures += 1
                     write_failure_record(
@@ -445,14 +450,14 @@ def main() -> None:
 
     if failures:
         print(
-            f"completed with {failures} failures and skipped {skipped} existing rows; wrote judged rows to {out_path}",
+            f"[{timestamp()}] completed with {failures} failures and skipped {skipped} existing rows; wrote {judged} judged rows to {out_path}",
             file=sys.stderr,
         )
         print(f"wrote failed rows to {fail_path}", file=sys.stderr)
         if not args.allow_failures:
             sys.exit(1)
     else:
-        print(f"wrote {judged} judged rows to {out_path} (skipped {skipped} existing rows)")
+        print(f"[{timestamp()}] wrote {judged} judged rows to {out_path} (skipped {skipped} existing rows)")
 
 
 if __name__ == "__main__":
