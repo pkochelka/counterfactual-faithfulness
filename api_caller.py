@@ -26,6 +26,10 @@ BASE_URL = os.environ["BASE_URL"].rstrip("/")
 REQUEST_TIMEOUT = 540
 NO_AUTH_TOKEN_NAME = "__NO_AUTH__"
 
+
+def is_openrouter_base_url(base_url: str = BASE_URL) -> bool:
+    return "openrouter.ai" in base_url.lower()
+
 def call_api(
     user_message: str,
     model_id: str,
@@ -49,9 +53,15 @@ def call_api(
         "temperature": temperature,
     }
     if reasoning_effort:
-        payload["reasoning_effort"] = reasoning_effort
+        if is_openrouter_base_url():
+            payload["reasoning"] = {"effort": reasoning_effort}
+        else:
+            payload["reasoning_effort"] = reasoning_effort
     if disable_thinking:
-        payload["chat_template_kwargs"] = {"enable_thinking": False}
+        if is_openrouter_base_url():
+            payload["reasoning"] = {"effort": "none", "exclude": True}
+        else:
+            payload["chat_template_kwargs"] = {"enable_thinking": False}
 
     resp = requests.post(
         f"{BASE_URL}/chat/completions",

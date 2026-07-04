@@ -13,6 +13,7 @@ export PYTHON="${PYTHON:-./.venv/bin/python}"
 export BASE_URL="${BASE_URL:-https://llm.ai.e-infra.cz/v1}"
 export OUTPUT_ROOT="${OUTPUT_ROOT:-data/einfra_run}"
 export JUDGE_OUTPUT_DIR="${JUDGE_OUTPUT_DIR:-$OUTPUT_ROOT/judged}"
+export FLUENCY_OUTPUT_DIR="${FLUENCY_OUTPUT_DIR:-$OUTPUT_ROOT/judged_fluency}"
 export JUDGE_MODEL="${JUDGE_MODEL:-deepseek-v4-pro}"
 
 # Reusable key pool. Each key is owned by at most one worker at a time, but
@@ -20,14 +21,15 @@ export JUDGE_MODEL="${JUDGE_MODEL:-deepseek-v4-pro}"
 export EINFRA_KEYS="${EINFRA_KEYS:-EINFRA_AP EINFRA_JR EINFRA_VD EINFRA_VK EINFRA_TS EINFRA_PK EINFRA_VS EINFRA_KD EINFRA_FK}"
 
 export MODELS="${MODELS:-llama-4-scout-17b-16e-instruct gemma4 qwen3.5-122b}"
+export TASKS="${TASKS:-generated classified faithfulness fluency}"
 export DATASETS="${DATASETS:-cs-qa sk-qa}"
 export VARIANTS="${VARIANTS:-cf fa}"
-export LANGUAGES="${LANGUAGES:-en cs sk}"
+export LANGUAGES="${LANGUAGES:-en cs sk hsb}"
 
 # A model cap applies to generator models and the judge model. With 9 keys this
 # prevents all keys from piling onto one e-infra model while still avoiding idle
 # keys when other work is available.
-export MAX_KEYS_PER_MODEL="${MAX_KEYS_PER_MODEL:-4}"
+export MAX_KEYS_PER_MODEL="${MAX_KEYS_PER_MODEL:-5}"
 export CONCURRENCY_PER_KEY="${CONCURRENCY_PER_KEY:-4}"
 export FALLBACK_CONCURRENCY_PER_KEY="${FALLBACK_CONCURRENCY_PER_KEY:-3}"
 export RETRY_ATTEMPTS="${RETRY_ATTEMPTS:-4}"
@@ -36,8 +38,14 @@ export REQUEST_JITTER_MIN="${REQUEST_JITTER_MIN:-0.1}"
 export REQUEST_JITTER_MAX="${REQUEST_JITTER_MAX:-0.5}"
 export CLASSIFICATION_REPEATS="${CLASSIFICATION_REPEATS:-5}"
 export CLASSIFICATION_TEMPERATURE="${CLASSIFICATION_TEMPERATURE:-1.0}"
+export GEN_MAX_TOKENS="${GEN_MAX_TOKENS:-4096}"
+export JUDGE_MAX_TOKENS="${JUDGE_MAX_TOKENS:-4000}"
+export RESUME_MISSING="${RESUME_MISSING:-1}"
+export GEN_DISABLE_THINKING="${GEN_DISABLE_THINKING:-1}"
+export REASONING_EFFORT="${REASONING_EFFORT:-}"
+export JUDGE_REASONING_EFFORT="${JUDGE_REASONING_EFFORT:-low}"
 
-mkdir -p logs "$OUTPUT_ROOT" "$JUDGE_OUTPUT_DIR"
+mkdir -p logs "$OUTPUT_ROOT" "$JUDGE_OUTPUT_DIR" "$FLUENCY_OUTPUT_DIR"
 LOG_FILE="logs/metacentrum_einfra_pipeline_${PBS_JOBID:-manual}.log"
 exec > >(tee -a "$LOG_FILE") 2>&1
 START_EPOCH="$(date +%s)"

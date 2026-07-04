@@ -32,6 +32,8 @@ DEFAULT_KEYS = [
     "EINFRA_KD",
     "EINFRA_FK",
 ]
+DEFAULT_TASKS = ["generated", "classified", "faithfulness", "fluency"]
+VALID_TASKS = set(DEFAULT_TASKS)
 
 
 @dataclass(frozen=True)
@@ -45,7 +47,7 @@ class Task:
 
     @property
     def label(self) -> str:
-        if self.kind == "judged" and self.generator_model:
+        if self.kind in {"faithfulness", "fluency"} and self.generator_model:
             return f"{self.kind}:{self.model}:{self.generator_model}:{self.dataset}:{self.variant}:{self.language}"
         return f"{self.kind}:{self.model}:{self.dataset}:{self.variant}:{self.language}"
 
@@ -96,25 +98,40 @@ class DynamicScheduler:
         self.base_url = os.environ.get("BASE_URL", "https://llm.ai.e-infra.cz/v1")
         self.output_root = Path(os.environ.get("OUTPUT_ROOT", "data/einfra_run"))
         self.judge_output_dir = Path(os.environ.get("JUDGE_OUTPUT_DIR", str(self.output_root / "judged")))
-        self.judge_model = os.environ.get("JUDGE_MODEL", "glm-5.2")
+        self.fluency_output_dir = Path(os.environ.get("FLUENCY_OUTPUT_DIR", str(self.output_root / "judged_fluency")))
+        self.judge_model = os.environ.get("JUDGE_MODEL", "deepseek-v4-pro")
 
         self.models = env_list("MODELS", DEFAULT_MODELS)
+        self.tasks = env_list("TASKS", DEFAULT_TASKS)
         self.keys = env_list("EINFRA_KEYS", DEFAULT_KEYS)
         self.datasets = env_list("DATASETS", ["cs-qa", "sk-qa"])
         self.variants = env_list("VARIANTS", ["cf", "fa"])
-        self.languages = env_list("LANGUAGES", ["en", "cs", "sk"])
+        self.languages = env_list("LANGUAGES", ["en", "cs", "sk", "hsb"])
 
         self.concurrency_per_key = env_int("CONCURRENCY_PER_KEY", 4)
         self.fallback_concurrency_per_key = env_int("FALLBACK_CONCURRENCY_PER_KEY", 3)
-        self.max_keys_per_model = env_int("MAX_KEYS_PER_MODEL", 4)
+        self.max_keys_per_model = env_int("MAX_KEYS_PER_MODEL", 5)
         self.retry_attempts = env_int("RETRY_ATTEMPTS", 4)
         self.long_retry_sleep = float(os.environ.get("LONG_RETRY_SLEEP", "50"))
         self.request_jitter_min = float(os.environ.get("REQUEST_JITTER_MIN", "0.1"))
         self.request_jitter_max = float(os.environ.get("REQUEST_JITTER_MAX", "0.5"))
         self.classification_repeats = env_int("CLASSIFICATION_REPEATS", 5)
         self.classification_temperature = float(os.environ.get("CLASSIFICATION_TEMPERATURE", "1.0"))
-        self.gen_max_tokens = env_int("GEN_MAX_TOKENS", 2048)
-        self.reasoning_effort = os.environ.get("REASONING_EFFORT", "low").strip()
+        self.gen_max_tokens = env_int("GEN_MAX_TOKENS", 4096)
+        self.judge_max_tokens = env_int("JUDGE_MAX_TOKENS", 4000)
+        self.resume_missing = os.environ.get("RESUME_MISSING", "1").strip().lower() in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
+        self.gen_disable_thinking = os.environ.get("GEN_DISABLE_THINKING", "1").strip().lower() in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
+        self.reasoning_effort = os.environ.get("REASONING_EFFORT", "").strip()
         self.judge_reasoning_effort = os.environ.get("JUDGE_REASONING_EFFORT", "low").strip()
         self.judge_reasoning_exclude = os.environ.get("JUDGE_REASONING_EXCLUDE", "").strip().lower() in {
             "1",
@@ -128,6 +145,7 @@ class DynamicScheduler:
         self.logs_dir.mkdir(parents=True, exist_ok=True)
         self.output_root.mkdir(parents=True, exist_ok=True)
         self.judge_output_dir.mkdir(parents=True, exist_ok=True)
+        self.fluency_output_dir.mkdir(parents=True, exist_ok=True)
         self.log_path = self.logs_dir / "einfra-dynamic-pipeline.log"
 
         self.pending: deque[Task] = deque()
@@ -154,16 +172,27 @@ class DynamicScheduler:
         missing = [key for key in self.keys if not os.getenv(key)]
         if missing:
             raise SystemExit("Missing token environment variable(s): " + ", ".join(missing))
+        unknown_tasks = sorted(set(self.tasks) - VALID_TASKS)
+        if unknown_tasks:
+            raise SystemExit(
+                "Unknown TASKS value(s): "
+                + ", ".join(unknown_tasks)
+                + ". Valid values: "
+                + ", ".join(DEFAULT_TASKS)
+            )
 
     def seed_tasks(self) -> None:
         # Put generation before classification for each combination so judge work can start early.
+        seed_generation = bool({"generated", "faithfulness", "fluency"} & set(self.tasks))
         for dataset in self.datasets:
             for variant in self.variants:
                 for language in self.languages:
-                    for model in self.models:
-                        self.pending.append(Task("generated", model, dataset, variant, language))
-                    for model in self.models:
-                        self.pending.append(Task("classified", model, dataset, variant, language))
+                    if seed_generation:
+                        for model in self.models:
+                            self.pending.append(Task("generated", model, dataset, variant, language))
+                    if "classified" in self.tasks:
+                        for model in self.models:
+                            self.pending.append(Task("classified", model, dataset, variant, language))
 
     def generated_csv(self, task: Task) -> Path:
         return self.output_root / "generated" / output_model_name(task.model) / f"{task.dataset}_{task.variant}_{task.language}.csv"
@@ -233,7 +262,7 @@ class DynamicScheduler:
             return self.count_input_entries(task)
         if task.kind == "classified":
             return self.count_input_entries(task) * self.classification_repeats
-        if task.kind == "judged" and task.generator_model:
+        if task.kind in {"faithfulness", "fluency"} and task.generator_model:
             csv_path = self.output_root / "generated" / output_model_name(task.generator_model) / f"{task.dataset}_{task.variant}_{task.language}.csv"
             return self.count_csv_rows(csv_path)
         return 0
@@ -274,21 +303,28 @@ class DynamicScheduler:
                 self.failed = True
             self.condition.notify_all()
 
-    def enqueue_judge(self, generated_task: Task) -> None:
-        judge_task = Task(
-            "judged",
-            self.judge_model,
-            generated_task.dataset,
-            generated_task.variant,
-            generated_task.language,
-            generator_model=generated_task.model,
-        )
+    def enqueue_judge_tasks(self, generated_task: Task) -> None:
+        judge_tasks = [
+            Task(
+                task_kind,
+                self.judge_model,
+                generated_task.dataset,
+                generated_task.variant,
+                generated_task.language,
+                generator_model=generated_task.model,
+            )
+            for task_kind in ("faithfulness", "fluency")
+            if task_kind in self.tasks
+        ]
+        if not judge_tasks:
+            return
         with self.condition:
             # Judge generated outputs promptly so judge keys overlap with the
             # remaining generation/classification queue instead of waiting
             # until the end of the run.
-            self.pending.appendleft(judge_task)
-            self.log(f"[enqueue judge] task={judge_task.label}")
+            for judge_task in reversed(judge_tasks):
+                self.pending.appendleft(judge_task)
+                self.log(f"[enqueue judge] task={judge_task.label}")
             self.condition.notify_all()
 
     def run_command(self, key: str, task: Task, command: list[str]) -> bool:
@@ -350,6 +386,10 @@ class DynamicScheduler:
         ]
         if self.reasoning_effort:
             command.extend(["--reasoning-effort", self.reasoning_effort])
+        if self.gen_disable_thinking:
+            command.append("--disable-thinking")
+        if self.resume_missing and task.kind == "generated":
+            command.append("--resume-missing")
         if task.dataset in {"cs-qa", "sk-qa"}:
             command.extend(["--kind", "original"])
         if task.kind == "classified":
@@ -387,7 +427,7 @@ class DynamicScheduler:
             "--concurrency-per-key",
             str(concurrency),
             "--output-dir",
-            str(self.judge_output_dir),
+            str(self.fluency_output_dir if task.kind == "fluency" else self.judge_output_dir),
             "--retry-attempts",
             str(self.retry_attempts),
             "--long-retry-sleep",
@@ -396,8 +436,13 @@ class DynamicScheduler:
             str(self.request_jitter_min),
             "--request-jitter-max",
             str(self.request_jitter_max),
+            "--max-tokens",
+            str(self.judge_max_tokens),
             "--allow-failures",
         ]
+        if task.kind == "fluency":
+            command.append("--fluency")
+            command.extend(["--language", task.language])
         if self.judge_reasoning_effort:
             command.extend(["--reasoning-effort", self.judge_reasoning_effort])
             if self.judge_reasoning_exclude:
@@ -406,19 +451,20 @@ class DynamicScheduler:
 
     def run_task(self, key: str, task: Task) -> bool:
         request_count = self.estimated_requests(task)
-        if task.kind in {"generated", "classified"} and self.output_exists(task):
+        can_resume_generated = task.kind == "generated" and self.resume_missing
+        if task.kind in {"generated", "classified"} and self.output_exists(task) and not can_resume_generated:
             self.log(f"[skip existing] key={key} task={task.label}")
             self.record_task_stats(key, task, 0)
             if task.kind == "generated":
-                self.enqueue_judge(task)
+                self.enqueue_judge_tasks(task)
             return True
 
-        command_builder = self.judge_command if task.kind == "judged" else self.generate_command
+        command_builder = self.judge_command if task.kind in {"faithfulness", "fluency"} else self.generate_command
         command = command_builder(key, task, self.concurrency_per_key)
         if self.run_command(key, task, command):
             self.record_task_stats(key, task, request_count)
             if task.kind == "generated":
-                self.enqueue_judge(task)
+                self.enqueue_judge_tasks(task)
             return True
 
         self.log(f"[fallback] key={key} task={task.label} concurrency={self.fallback_concurrency_per_key}")
@@ -427,7 +473,7 @@ class DynamicScheduler:
         if ok:
             self.record_task_stats(key, task, request_count)
         if ok and task.kind == "generated":
-            self.enqueue_judge(task)
+            self.enqueue_judge_tasks(task)
         return ok
 
     def worker(self, key: str) -> None:
@@ -459,11 +505,15 @@ class DynamicScheduler:
         self.log(
             "[config] "
             f"keys={','.join(self.keys)} models={','.join(self.models)} "
+            f"tasks={','.join(self.tasks)} "
             f"datasets={','.join(self.datasets)} variants={','.join(self.variants)} "
             f"languages={','.join(self.languages)} max_keys_per_model={self.max_keys_per_model} "
             f"concurrency_per_key={self.concurrency_per_key} fallback={self.fallback_concurrency_per_key} "
             f"long_retry_sleep={self.long_retry_sleep} "
             f"request_jitter={self.request_jitter_min}-{self.request_jitter_max} "
+            f"gen_max_tokens={self.gen_max_tokens} judge_max_tokens={self.judge_max_tokens} "
+            f"resume_missing={self.resume_missing} "
+            f"gen_disable_thinking={self.gen_disable_thinking} "
             f"reasoning_effort={self.reasoning_effort or '<omitted>'} "
             f"judge_reasoning_effort={self.judge_reasoning_effort or '<omitted>'}"
         )

@@ -24,12 +24,12 @@ from webnlg_utils import (
     LANGUAGE_NAMES,
     SourceSpec,
     enrich_sentences,
+    entity_language_name_from_source,
     judge_fluency_row,
     judge_output_path,
     judge_row,
     load_env_defaults,
     load_jsonl_records,
-    load_sentence_table,
     judge_api_url_from_env,
     normalize_judge_api_url,
     resolve_language,
@@ -92,8 +92,9 @@ def parse_args() -> argparse.Namespace:
         "--fluency",
         action="store_true",
         help=(
-            "Judge linguistic fluency instead of faithfulness. Skips source triples/XML, "
-            f"uses the fluency prompt, and defaults the output directory to {DEFAULT_FLUENCY_OUTPUT_DIR}."
+            "Judge linguistic fluency instead of faithfulness. Uses matching source triples "
+            "only to provide a lexical term set, uses the fluency prompt, and defaults "
+            f"the output directory to {DEFAULT_FLUENCY_OUTPUT_DIR}."
         ),
     )
     parser.add_argument(
@@ -268,19 +269,25 @@ def main() -> None:
     source_id = source_identity(csv_path, label=source_label)
     source = SourceSpec(label=source_label, csv_path=csv_path, source_id=source_id)
 
-    if args.fluency:
-        enriched = load_sentence_table(csv_path)
-    else:
-        enriched = enrich_sentences(csv_path, args.xml)
+    enriched = enrich_sentences(csv_path, args.xml)
     if enriched.empty:
         sys.exit("No rows loaded from input CSV.")
+    sentence_text = enriched["sentence"].fillna("").astype(str).str.strip()
+    empty_sentences = int((sentence_text == "").sum())
+    if empty_sentences:
+        print(f"[skip] {empty_sentences} rows have empty sentence text; they will not be judged.", file=sys.stderr)
+        enriched = enriched[sentence_text != ""].copy()
+    if enriched.empty:
+        sys.exit("No non-empty sentence rows loaded from input CSV.")
 
     language_code = None
     language_name = None
+    entity_language_name = None
     if args.fluency:
         language_code, language_name = resolve_language(
             enriched.iloc[0], csv_path, override=args.language
         )
+        entity_language_name = entity_language_name_from_source(csv_path)
         if language_code is None:
             sys.exit(
                 "Could not determine the language for --fluency. "
@@ -310,6 +317,8 @@ def main() -> None:
     existing_eid_source_keys = set()
     if not args.force:
         for record in load_jsonl_records(out_path):
+            if not str(record.get("sentence", "")).strip():
+                continue
             eid_source_key = (str(record.get("eid", "")), str(record.get("source_id", "")))
             existing_eid_source_keys.add(eid_source_key)
             key_model = record.get("requested_judge_model") or record.get("judge_model") or ""
@@ -368,6 +377,7 @@ def main() -> None:
                     row,
                     language_code=language_code,
                     language_name=language_name,
+                    entity_language_name=entity_language_name,
                     **common_kwargs,
                 )
             else:

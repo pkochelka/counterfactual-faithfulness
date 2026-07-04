@@ -1,0 +1,91 @@
+#!/bin/bash
+#PBS -N cf-llama4-openrouter-gen
+#PBS -l select=1:ncpus=6:mem=8gb
+#PBS -l walltime=15:00:00
+#PBS -j oe
+
+set -euo pipefail
+
+PROJECT_DIR="${PROJECT_DIR:-${PBS_O_WORKDIR:-$PWD}}"
+cd "$PROJECT_DIR"
+
+export PYTHON="${PYTHON:-./.venv/bin/python}"
+export BASE_URL="${BASE_URL:-https://openrouter.ai/api/v1}"
+export OUTPUT_ROOT="${OUTPUT_ROOT:-data/full_regen_openrouter_llama4}"
+export MODEL_ID="${MODEL_ID:-meta-llama/llama-4-scout}"
+export OUTPUT_MODEL_NAME="${OUTPUT_MODEL_NAME:-llama4-scout-openrouter}"
+export TOKEN_ENV_VARS="${TOKEN_ENV_VARS:-AUTH_TOKEN}"
+export CONCURRENCY_PER_KEY="${CONCURRENCY_PER_KEY:-20}"
+export FALLBACK_CONCURRENCY_PER_KEY="${FALLBACK_CONCURRENCY_PER_KEY:-10}"
+export RETRY_ATTEMPTS="${RETRY_ATTEMPTS:-4}"
+export LONG_RETRY_SLEEP="${LONG_RETRY_SLEEP:-50}"
+export REQUEST_JITTER_MIN="${REQUEST_JITTER_MIN:-0.1}"
+export REQUEST_JITTER_MAX="${REQUEST_JITTER_MAX:-0.5}"
+export MAX_TOKENS="${MAX_TOKENS:-4096}"
+export DATASETS="${DATASETS:-cs-qa sk-qa}"
+export VARIANTS="${VARIANTS:-cf fa}"
+export LANGUAGES="${LANGUAGES:-en cs sk hsb}"
+export RESUME_MISSING="${RESUME_MISSING:-1}"
+export DISABLE_THINKING="${DISABLE_THINKING:-1}"
+export LIMIT="${LIMIT:-}"
+
+mkdir -p logs "$OUTPUT_ROOT"
+LOG_FILE="logs/openrouter_llama4_generation_${PBS_JOBID:-manual}.log"
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+echo "[start] $(date -Is) job=${PBS_JOBID:-manual} project=$PROJECT_DIR output_root=$OUTPUT_ROOT model=$MODEL_ID"
+echo "[config] base_url=$BASE_URL token_env_vars=$TOKEN_ENV_VARS concurrency_per_key=$CONCURRENCY_PER_KEY disable_thinking=$DISABLE_THINKING"
+
+if [ ! -x "$PYTHON" ]; then
+  echo "Missing Python executable: $PYTHON" >&2
+  exit 1
+fi
+
+for dataset in $DATASETS; do
+  for variant in $VARIANTS; do
+    for language in $LANGUAGES; do
+      command=(
+        "$PYTHON" generate_speeches.py
+        --model "$MODEL_ID"
+        --output-model-name "$OUTPUT_MODEL_NAME"
+        --dataset "$dataset"
+        --variant "$variant"
+        --language "$language"
+        --task generated
+        --kind original
+        --output-root "$OUTPUT_ROOT"
+        --token-env-vars "$TOKEN_ENV_VARS"
+        --concurrency-per-key "$CONCURRENCY_PER_KEY"
+        --max-tokens "$MAX_TOKENS"
+        --temperature 0
+        --retry-attempts "$RETRY_ATTEMPTS"
+        --long-retry-sleep "$LONG_RETRY_SLEEP"
+        --request-jitter-min "$REQUEST_JITTER_MIN"
+        --request-jitter-max "$REQUEST_JITTER_MAX"
+      )
+      if [ "$RESUME_MISSING" = "1" ]; then
+        command+=(--resume-missing)
+      fi
+      if [ "$DISABLE_THINKING" = "1" ]; then
+        command+=(--disable-thinking)
+      fi
+      if [ -n "$LIMIT" ]; then
+        command+=(--limit "$LIMIT")
+      fi
+
+      echo "[run] dataset=$dataset variant=$variant language=$language"
+      "${command[@]}" || {
+        echo "[retry-fallback] dataset=$dataset variant=$variant language=$language concurrency=$FALLBACK_CONCURRENCY_PER_KEY"
+        for i in "${!command[@]}"; do
+          if [ "${command[$i]}" = "--concurrency-per-key" ]; then
+            command[$((i + 1))]="$FALLBACK_CONCURRENCY_PER_KEY"
+            break
+          fi
+        done
+        "${command[@]}"
+      }
+    done
+  done
+done
+
+echo "[end] $(date -Is) status=0"

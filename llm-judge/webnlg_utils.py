@@ -16,7 +16,7 @@ import requests
 
 
 DEFAULT_JUDGE_MODEL = "openrouter/free"
-DEFAULT_JUDGE_MAX_TOKENS = 1000
+DEFAULT_JUDGE_MAX_TOKENS = 4000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
 DEFAULT_JUDGE_TIMEOUT = 150
 DEFAULT_JUDGE_RETRY_SLEEP = 2.5
@@ -36,6 +36,19 @@ LANGUAGE_NAMES = {
     "sk": "Slovak",
     "hsb": "Upper Sorbian",
 }
+
+# Dataset -> language code of the original entities. The generation prompt keeps
+# proper named entities in their source form, so these entities can appear in a
+# different language than the target sentence (e.g. Czech names in an English
+# sentence). The fluency judge is told not to penalise such untranslated names.
+DATASET_ENTITY_LANGUAGE = {
+    "cs-qa": "cs",
+    "sk-qa": "sk",
+    "webnlg": "en",
+}
+
+# Fallback phrase when the source dataset (and thus its entity language) is unknown.
+DEFAULT_ENTITY_LANGUAGE_NAME = "the original source language"
 
 
 class JudgeRequestError(RuntimeError):
@@ -107,12 +120,15 @@ def prompt_text(value: object) -> str:
     return str(value).replace("_", " ")
 
 
+def display_triple(triple: tuple[str, str, str]) -> tuple[str, str, str]:
+    subject, predicate, obj = triple
+    return prompt_text(subject), prompt_text(predicate), prompt_text(obj)
+
+
 def format_triple(triple: tuple[str, str, str], *, for_prompt: bool = False) -> str:
     subject, predicate, obj = triple
     if for_prompt:
-        subject = prompt_text(subject)
-        predicate = prompt_text(predicate)
-        obj = prompt_text(obj)
+        subject, predicate, obj = display_triple(triple)
     return f"{subject} | {predicate} | {obj}"
 
 
@@ -330,8 +346,8 @@ def load_entry_table_from_flat_csv(
                 "shape": first.get("shape"),
                 "shape_type": first.get("shape_type"),
                 "size": int(first.get("size", 0)),
-                "modified_triples": format_triples(triples),
-                "modified_triples_json": [format_triple(triple) for triple in triples],
+                "modified_triples": format_triples(triples, for_prompt=True),
+                "modified_triples_json": [format_triple(triple, for_prompt=True) for triple in triples],
                 "num_modified_triples": len(triples),
                 "xml_path": str(dataset_csv),
             }
@@ -355,8 +371,8 @@ def load_entry_table(
                 "shape": entry.shape,
                 "shape_type": entry.shape_type,
                 "size": entry.size,
-                "modified_triples": format_triples(entry.modified_triples),
-                "modified_triples_json": [format_triple(triple) for triple in entry.modified_triples],
+                "modified_triples": format_triples(entry.modified_triples, for_prompt=True),
+                "modified_triples_json": [format_triple(triple, for_prompt=True) for triple in entry.modified_triples],
                 "num_modified_triples": len(entry.modified_triples),
                 "xml_path": str(xml_path),
             }
@@ -435,6 +451,65 @@ def parse_source_specs(raw_text: str) -> list[SourceSpec]:
             )
         )
     return specs
+
+
+def _parse_formatted_triple(text: str) -> tuple[str, str, str] | None:
+    line = text.strip()
+    if line.startswith("-"):
+        line = line[1:].strip()
+    parts = [part.strip() for part in line.split("|", 2)]
+    if len(parts) != 3:
+        return None
+    return parts[0], parts[1], parts[2]
+
+
+def _row_triples(row: pd.Series | dict[str, Any]) -> list[tuple[str, str, str]]:
+    triples_json = row.get("modified_triples_json") if hasattr(row, "get") else None
+    if isinstance(triples_json, str):
+        try:
+            triples_json = json.loads(triples_json)
+        except json.JSONDecodeError:
+            triples_json = None
+
+    triples: list[tuple[str, str, str]] = []
+    if isinstance(triples_json, list):
+        for item in triples_json:
+            if isinstance(item, (list, tuple)) and len(item) == 3:
+                triples.append((str(item[0]), str(item[1]), str(item[2])))
+            elif isinstance(item, str):
+                parsed = _parse_formatted_triple(item)
+                if parsed:
+                    triples.append(parsed)
+
+    if triples:
+        return triples
+
+    formatted = row.get("modified_triples") if hasattr(row, "get") else None
+    if isinstance(formatted, str):
+        for line in formatted.splitlines():
+            parsed = _parse_formatted_triple(line)
+            if parsed:
+                triples.append(parsed)
+    return triples
+
+
+def lexical_terms_from_row(row: pd.Series | dict[str, Any]) -> list[str]:
+    terms: list[str] = []
+    seen: set[str] = set()
+    for subject, _predicate, obj in _row_triples(row):
+        for value in (subject, obj):
+            term = prompt_text(value).strip()
+            if not term or term in seen:
+                continue
+            seen.add(term)
+            terms.append(term)
+    return terms
+
+
+def format_lexical_terms(terms: list[str]) -> str:
+    if not terms:
+        return "(none provided)"
+    return "\n".join(f"- {term}" for term in terms)
 
 
 def load_output_source(spec: SourceSpec) -> pd.DataFrame:
@@ -832,13 +907,34 @@ def resolve_language(
     return code, name
 
 
+def entity_language_name_from_source(source_path: str | Path) -> str:
+    """Human-readable language of the original (untranslated) entities.
+
+    Derived from the source dataset (e.g. cs-qa -> Czech, sk-qa -> Slovak) so
+    the fluency judge knows which language proper names may still be written in.
+    Falls back to a generic phrase when the dataset is unknown.
+    """
+    dataset, _ = source_dataset_variant(source_path)
+    code = DATASET_ENTITY_LANGUAGE.get(dataset or "")
+    if code:
+        return LANGUAGE_NAMES.get(code, DEFAULT_ENTITY_LANGUAGE_NAME)
+    return DEFAULT_ENTITY_LANGUAGE_NAME
+
+
 def load_fluency_prompt_template() -> str:
     return FLUENCY_PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
 
 
-def build_fluency_prompt(sentence: str, language_name: str) -> str:
+def build_fluency_prompt(
+    sentence: str,
+    language_name: str,
+    entity_language_name: str = DEFAULT_ENTITY_LANGUAGE_NAME,
+    lexical_terms: list[str] | None = None,
+) -> str:
     return load_fluency_prompt_template().format(
         language=language_name,
+        entity_language=entity_language_name,
+        lexical_terms=format_lexical_terms(lexical_terms or []),
         sentence=prompt_text(sentence),
     )
 
@@ -853,6 +949,7 @@ def build_fluency_record(
     api_url: str,
     language_code: str | None,
     language_name: str,
+    lexical_terms: list[str],
     prompt: str,
     raw_response: str | None,
     parsed: dict[str, Any] | None,
@@ -881,6 +978,7 @@ def build_fluency_record(
         "sentence": str(row["sentence"]),
         "language": language_code,
         "language_name": language_name,
+        "source_lexical_terms": lexical_terms,
         "prompt": prompt_preview,
         "raw_response": raw_response,
         "parsed": parsed,
@@ -895,6 +993,7 @@ def judge_fluency_row(
     source_id: str,
     language_code: str | None,
     language_name: str,
+    entity_language_name: str = DEFAULT_ENTITY_LANGUAGE_NAME,
     judge_model: str = DEFAULT_JUDGE_MODEL,
     auth_token: str | None = None,
     token_env_var: str | None = None,
@@ -909,7 +1008,13 @@ def judge_fluency_row(
     reasoning: dict[str, Any] | None = None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
-    prompt = build_fluency_prompt(str(row["sentence"]), language_name)
+    lexical_terms = lexical_terms_from_row(row)
+    prompt = build_fluency_prompt(
+        str(row["sentence"]),
+        language_name,
+        entity_language_name,
+        lexical_terms=lexical_terms,
+    )
     resolved_api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
 
     def make_record(
@@ -928,6 +1033,7 @@ def judge_fluency_row(
             api_url=resolved_api_url,
             language_code=language_code,
             language_name=language_name,
+            lexical_terms=lexical_terms,
             prompt=prompt,
             raw_response=raw_response,
             parsed=parsed,
@@ -1177,7 +1283,8 @@ def write_judge_records(
     keyed_existing: dict[tuple[str, str, str, str], dict[str, Any]] = {}
     ordered_existing: list[dict[str, Any]] = []
     for record in existing:
-        keyed_existing[record_key(record)] = record
+        if str(record.get("sentence", "")).strip():
+            keyed_existing[record_key(record)] = record
         ordered_existing.append(record)
 
     new_by_key = {record_key(record): record for record in records}
@@ -1187,6 +1294,23 @@ def write_judge_records(
         merged_records = list(merged_by_key.values())
         with output_path.open("w", encoding="utf-8") as handle:
             for record in merged_records:
+                handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+        return
+
+    replace_empty_keys = {
+        record_key(record)
+        for record in ordered_existing
+        if not str(record.get("sentence", "")).strip() and record_key(record) in new_by_key
+    }
+    if replace_empty_keys:
+        with output_path.open("w", encoding="utf-8") as handle:
+            for record in ordered_existing:
+                if record_key(record) in replace_empty_keys:
+                    continue
+                handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+            for key, record in new_by_key.items():
+                if key in keyed_existing:
+                    continue
                 handle.write(json.dumps(record, ensure_ascii=False) + "\n")
         return
 
