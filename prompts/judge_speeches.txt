@@ -36,24 +36,12 @@ Mini examples:
    Sentence: Arabs in Khorasan are an ethnic group within the People's Republic of China.
    Output idea: faithfulness_score 5, incorrect_information []
 
-2. Triple: Martial | occupation | military engineer
-   Sentence: Martial is an astronaut.
-   Output idea: mark the astronaut claim as incorrect.
+2. Triple: Cristiano Ronaldo | occupation | military engineer
+   Sentence: Cristiano Ronaldo is a professional football player.
+   Output idea: faithfulness_score 1, the triple state Cristiano Ronaldo is a military engineer.
 
-3. Triple: Wang Xiaoyun | height | 17068.8 (millimetres)
-   Sentence: Wang Xiaoyun is 170.69 meters tall.
-   Output idea: mark the exact height claim as incorrectly transformed.
-
-4. Triple: Beverly Hills | broadcastedBy | IBM
-   Sentence: IBM broadcast Beverly Hills.
-   Output idea: faithfulness_score 5, incorrect_information []
-
-5. Triple: Havlíčkův Brod | riverFlowingThrough | Hrubý Jeseník
+3. Triple: Havlíčkův Brod | riverFlowingThrough | Hrubý Jeseník
    Sentence: The Hrubý Jeseník river flows through Havlíčkův Brod.
-   Output idea: faithfulness_score 5, incorrect_information []
-
-6. Triple: Adams County | hasToItsNorth | Cumberland County
-   Sentence: Cumberland County is north of Adams County.
    Output idea: faithfulness_score 5, incorrect_information []
 
 Category: {category}

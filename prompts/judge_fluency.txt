@@ -15,6 +15,8 @@ Important rules:
 - Example: "Praha je nejvyšší hora na Slovensku." is completely fluent Czech and must score 5, even though it is factually false.
 - Do not reward or penalise a sentence for the amount of information it contains.
 - Judge the sentence as {language}. If it is written in a different language, that is a fluency failure.
+- Some entities may not be in {language}: proper named entities (names of people, places, organisations, works, etc.) may remain in {entity_language} rather than being translated. Do NOT treat such untranslated proper names as a fluency error — judge only the quality of the surrounding {language} text.
+- The source lexical terms below are deduplicated subjects and objects from the source triples, with RDF underscores already replaced by spaces. Proper names may be preserved as written. Non-proper common nouns, adjectives, roles, and descriptions should normally be translated or naturally rendered in {language}; awkward untranslated common terms may lower fluency.
 
 Anchors:
 - 5 means flawless, natural, native-quality {language}: no grammatical, spelling, or word-choice issues
@@ -24,4 +26,7 @@ Anchors:
 - 1 means broken: severely ungrammatical, garbled, or not really {language}
 
 Language: {language}
+Source lexical terms:
+{lexical_terms}
+
 Sentence: {sentence}
