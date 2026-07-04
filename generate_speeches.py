@@ -75,8 +75,14 @@ class LLMGenerationError(RuntimeError):
         self.details = details or {}
 
 
-_LABEL_RE = re.compile(r"\b(CFA|FA|FI)\b", re.IGNORECASE)
+_LABEL_RE = re.compile(r"\b(CFA|CF|FA|FI)\b", re.IGNORECASE)
 INVALID_CLASSIFICATION_LABEL = "INVALID"
+_CLASSIFICATION_LABEL_MAP = {
+    "cf": "CFA",
+    "cfa": "CFA",
+    "fa": "FA",
+    "fi": "FI",
+}
 _CLASSIFICATION_WORD_LABELS = (
     ("CFA", re.compile(r"\bcounterfactual\b|\bkontrafaktu[aá]ln", re.IGNORECASE)),
     ("FI", re.compile(r"\bfictional\b|\bfiktivn|\bfiktívn", re.IGNORECASE)),
@@ -116,11 +122,26 @@ def sanitize_classification_content(content: str) -> str:
     """
     if not content:
         return content
-    token_labels = [match.group(1).upper() for match in _LABEL_RE.finditer(content)]
+    words = re.findall(r"[A-Za-z]+", content)
+    boundary_labels = [
+        _CLASSIFICATION_LABEL_MAP.get(word.lower())
+        for word in ((words[:1] or []) + (words[-1:] if len(words) > 1 else []))
+    ]
+    boundary_labels = [label for label in boundary_labels if label]
+    distinct_boundary_labels = list(dict.fromkeys(boundary_labels))
+    if len(distinct_boundary_labels) == 1:
+        return distinct_boundary_labels[0]
+    if len(distinct_boundary_labels) > 1:
+        return INVALID_CLASSIFICATION_LABEL
+
+    token_labels = [
+        _CLASSIFICATION_LABEL_MAP[match.group(1).lower()]
+        for match in _LABEL_RE.finditer(content)
+    ]
     word_labels = [label for label, pattern in _CLASSIFICATION_WORD_LABELS if pattern.search(content)]
     labels = token_labels + word_labels
     distinct_labels = list(dict.fromkeys(labels))
-    if len(distinct_labels) == 1 and len(token_labels) <= 1:
+    if len(distinct_labels) == 1:
         return distinct_labels[0]
     if labels:
         return INVALID_CLASSIFICATION_LABEL
@@ -166,6 +187,13 @@ def collapse_response_text(content: str | None) -> str:
     if not content:
         return ""
     return " ".join(content.split())
+
+
+def displayed_raw_response(result: LLMResult) -> str:
+    raw_response = collapse_response_text(result.raw_content)
+    if raw_response.strip().lower() == result.content.strip().lower():
+        return ""
+    return raw_response
 
 
 def compact_payload(payload: object, *, max_chars: int = 4000) -> object:
@@ -355,6 +383,76 @@ def nonempty_sentence_frame(path: str | Path) -> pd.DataFrame:
     return frame.drop_duplicates("eid", keep="last")
 
 
+def repeat_sentence_column(repeat_index: int) -> str:
+    return "sentence" if repeat_index == 1 else f"sentence_{repeat_index}"
+
+
+def repeat_raw_response_column(repeat_index: int) -> str:
+    return "raw_response" if repeat_index == 1 else f"raw_response_{repeat_index}"
+
+
+def normalize_repeat_columns(frame: pd.DataFrame, repeats: int) -> pd.DataFrame:
+    if frame.empty:
+        return frame
+    frame = frame.copy()
+    if repeats > 1:
+        if "sentence" in frame.columns and "sentence_1" not in frame.columns:
+            frame["sentence_1"] = frame["sentence"]
+        if "raw_response" in frame.columns and "raw_response_1" not in frame.columns:
+            frame["raw_response_1"] = frame["raw_response"]
+    return frame
+
+
+def nonempty_value(value: object) -> bool:
+    return pd.notna(value) and str(value).strip() != ""
+
+
+def missing_repeats_by_eid(frame: pd.DataFrame, expected_eids: set[str], repeats: int) -> dict[str, set[int]]:
+    missing: dict[str, set[int]] = {eid: set(range(1, repeats + 1)) for eid in expected_eids}
+    if frame.empty or "eid" not in frame.columns:
+        return missing
+
+    for _, row in frame.iterrows():
+        eid = str(row.get("eid", ""))
+        if eid not in missing:
+            continue
+        for repeat_index in range(1, repeats + 1):
+            column = repeat_sentence_column(repeat_index)
+            fallback_column = "sentence" if repeat_index == 1 else ""
+            if column in frame.columns and nonempty_value(row.get(column)):
+                missing[eid].discard(repeat_index)
+            elif fallback_column and fallback_column in frame.columns and nonempty_value(row.get(fallback_column)):
+                missing[eid].discard(repeat_index)
+    return {eid: repeat_set for eid, repeat_set in missing.items() if repeat_set}
+
+
+def merge_resume_frames(existing: pd.DataFrame, new: pd.DataFrame) -> pd.DataFrame:
+    if existing.empty:
+        return new
+    if new.empty:
+        return existing
+
+    existing = existing.copy()
+    new = new.copy()
+    existing["eid"] = existing["eid"].astype(str)
+    new["eid"] = new["eid"].astype(str)
+    all_columns = list(dict.fromkeys([*existing.columns, *new.columns]))
+    existing = existing.reindex(columns=all_columns).astype(object)
+    new = new.reindex(columns=all_columns).astype(object)
+
+    merged = existing.set_index("eid", drop=False)
+    for _, row in new.iterrows():
+        eid = str(row["eid"])
+        if eid not in merged.index:
+            merged.loc[eid, all_columns] = row
+            continue
+        for column in all_columns:
+            value = row.get(column)
+            if nonempty_value(value):
+                merged.at[eid, column] = value
+    return merged.reset_index(drop=True)
+
+
 def expected_eids_for_run(df: pd.DataFrame, *, kind: str, limit: int | None) -> list[str]:
     subset = df[df["kind"] == kind] if "kind" in df.columns else df
     eids = [str(eid) for eid in subset.groupby("eid", observed=True).groups.keys()]
@@ -505,6 +603,7 @@ def generate_sentences(
     include_raw_content: bool = False,
     disable_thinking: bool = False,
     skip_eids: set[str] | None = None,
+    repeat_indices_by_eid: dict[str, set[int]] | None = None,
     strict_nonempty: bool = False,
 ) -> GenerationBatch:
     """Generate one sentence per entry."""
@@ -523,6 +622,13 @@ def generate_sentences(
         subset = subset[subset["eid"].isin(tasks)]
     if skip_eids:
         tasks = {eid: prompt for eid, prompt in tasks.items() if str(eid) not in skip_eids}
+        subset = subset[subset["eid"].astype(str).isin(tasks)]
+    if repeat_indices_by_eid is not None:
+        tasks = {
+            eid: prompt
+            for eid, prompt in tasks.items()
+            if repeat_indices_by_eid.get(str(eid))
+        }
         subset = subset[subset["eid"].astype(str).isin(tasks)]
 
     meta_by_eid = {
@@ -566,10 +672,15 @@ def generate_sentences(
             slot_queue.put(slot)
 
     with ThreadPoolExecutor(max_workers=len(token_slots)) as pool:
+        all_repeats = set(range(1, repeats + 1))
         futures = {
             pool.submit(call_with_slot, prompt): (eid, repeat_index)
             for eid, prompt in tasks.items()
-            for repeat_index in range(1, repeats + 1)
+            for repeat_index in sorted(
+                repeat_indices_by_eid.get(str(eid), all_repeats)
+                if repeat_indices_by_eid is not None
+                else all_repeats
+            )
         }
         total_calls = len(futures)
         failed_calls = 0
@@ -652,15 +763,13 @@ def generate_sentences(
             )
     if include_raw_content:
         meta["raw_response"] = meta.index.map(
-            lambda eid: collapse_response_text(
-                (results.get(eid, {}).get(1) or LLMResult(content="")).raw_content
-            )
+            lambda eid: displayed_raw_response(results.get(eid, {}).get(1) or LLMResult(content=""))
         )
         if repeats > 1:
             for repeat_index in range(1, repeats + 1):
                 meta[f"raw_response_{repeat_index}"] = meta.index.map(
-                    lambda eid, index=repeat_index: collapse_response_text(
-                        (results.get(eid, {}).get(index) or LLMResult(content="")).raw_content
+                    lambda eid, index=repeat_index: displayed_raw_response(
+                        results.get(eid, {}).get(index) or LLMResult(content="")
                     )
                 )
     has_reasoning = any(
@@ -710,9 +819,25 @@ def main(args: argparse.Namespace) -> None:
     existing_successes = nonempty_sentence_frame(output_path) if args.resume_missing else pd.DataFrame()
     if not existing_successes.empty:
         existing_successes = existing_successes[existing_successes["eid"].astype(str).isin(expected_eids)].copy()
-    skip_eids = set(existing_successes["eid"].astype(str)) if not existing_successes.empty else set()
+        existing_successes = normalize_repeat_columns(existing_successes, args.repeats)
+    missing_repeat_map = (
+        missing_repeats_by_eid(existing_successes, expected_eids, args.repeats)
+        if args.resume_missing
+        else None
+    )
+    skip_eids = (
+        expected_eids - set(missing_repeat_map)
+        if args.resume_missing and missing_repeat_map is not None
+        else set()
+    )
     if skip_eids:
-        print(f"[resume] Reusing {len(skip_eids)} existing non-empty rows from {output_path}")
+        print(f"[resume] Reusing {len(skip_eids)} complete existing rows from {output_path}")
+    if args.resume_missing and missing_repeat_map:
+        missing_calls = sum(len(repeat_set) for repeat_set in missing_repeat_map.values())
+        print(
+            f"[resume] Requesting {missing_calls} missing repeat calls "
+            f"for {len(missing_repeat_map)} eids from {output_path}"
+        )
 
     batch = generate_sentences(
         df,
@@ -742,6 +867,7 @@ def main(args: argparse.Namespace) -> None:
         include_raw_content=args.task == "classified",
         disable_thinking=args.disable_thinking,
         skip_eids=skip_eids,
+        repeat_indices_by_eid=missing_repeat_map,
         strict_nonempty=args.task == "generated",
     )
 
@@ -749,9 +875,8 @@ def main(args: argparse.Namespace) -> None:
 
     result = batch.rows
     if args.resume_missing and not existing_successes.empty:
-        result = pd.concat([existing_successes, result], ignore_index=True)
+        result = merge_resume_frames(existing_successes, result)
         result["eid"] = result["eid"].astype(str)
-        result = result.drop_duplicates("eid", keep="last")
 
     if args.task == "generated" and "sentence" in result.columns:
         sentence = result["sentence"].fillna("").astype(str).str.strip()
