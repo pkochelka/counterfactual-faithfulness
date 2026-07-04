@@ -30,7 +30,6 @@ def load_faithfulness_records(judged_dir: Path) -> pd.DataFrame:
         if not model_dir.is_dir():
             continue
         for jsonl_path in sorted(model_dir.glob("*.jsonl")):
-            # Skip judge diagnostic sidecars (error records, no parsed score).
             if jsonl_path.name.endswith(".failures.jsonl"):
                 continue
             _, dataset, variant, language, *_ = jsonl_path.stem.split("_")

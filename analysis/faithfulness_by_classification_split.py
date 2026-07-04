@@ -39,8 +39,9 @@ def load_split_rows() -> pd.DataFrame:
             dataset, variant, language = csv_path.stem.split("_")
             if variant not in SOURCE_VARIANTS:
                 continue
-            jsonl_path = next(judged_model_dir(model_dir.name)
-                              .glob(f"judge_{dataset}_{variant}_{language}_*.jsonl"))
+            jsonl_path = next(p for p in judged_model_dir(model_dir.name)
+                              .glob(f"judge_{dataset}_{variant}_{language}_*.jsonl")
+                              if not p.name.endswith(".failures.jsonl"))
             merged = read_predicted_labels(csv_path).merge(
                 read_faithfulness_scores(jsonl_path), on="eid")
             merged["model"] = model_dir.name
