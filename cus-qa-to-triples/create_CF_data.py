@@ -33,6 +33,11 @@ def change_facts_single(
         )  # guaranteed different, no while loop needed
 
     if len(replace_with) == 0:
+        print(
+            "No member to be replaced, "
+            f"{set(str(m.type_) for m in pt.get_unique_tagged_members())}, "
+            + str({key: len(value) for key, value in options.items()})
+        )
         return None
 
     def _shuffle_dict_and_choose(

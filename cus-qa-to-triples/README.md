@@ -97,14 +97,16 @@ python cus-qa-to-triples/create_CF_data.py sk --max-changes 1 --tags miesto,meno
 python cus-qa-to-triples/setup_triples.py
 ```
 
-## Data Files
+## Fictional data
 
-All working files are stored in `cus-qa-to-triples/data/`:
+Fictional data are created in similar way as counterfactual. Using GPT-OSS-120B and Claude Sonnet 5, we generated list of fictional entities for every type.
 
-| File | Description |
-|---|---|
-| `cus-qa-text-cz.parquet` | Raw questions and answers from CUS-QA (downloaded on first use) |
-| `Factual-phrased.xml` | Factual triples with tags and LLM-generated phrases |
-| `Factual-triples.xml` | Factual triples (clean) |
-| `CounterFactual-phrased.xml` | Counter-factual triples with tags, derived from `Factual-phrased.xml` |
-| `CounterFactual-triples.xml` | Counter-factual triples (clean) |
+Fictional triples are made by replacing entities with the same type in factual triples.
+
+The whole pipeline can be run with:
+
+```bash
+python cus-qa-to-triples/FI_pipeline.py
+```
+
+The default values are: `max_changes=1`, `seed=42`, changed entities: place, personal name, date, number.
