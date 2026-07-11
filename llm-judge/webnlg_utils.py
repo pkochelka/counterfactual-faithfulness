@@ -227,7 +227,7 @@ def infer_xml_path(sentences_csv: str | Path) -> Path:
     stem = csv_path.stem.lower()
     dataset, variant = source_dataset_variant(csv_path)
 
-    if dataset in {"cs-qa", "sk-qa"} and variant in {"cf", "fa"}:
+    if dataset in {"cs-qa", "sk-qa"} and variant in {"cf", "fa", "fi"}:
         candidates = [
             repo_root() / "data" / dataset / f"{variant}.csv",
             csv_path.parent.parent.parent / dataset / f"{variant}.csv",
