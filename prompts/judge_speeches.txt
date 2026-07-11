@@ -1,35 +1,37 @@
-You are judging faithfulness in data-to-text generation.
+You are judging faithfulness in data-to-text generation. Decide whether the sentence is fully supported by the triples below. The triples are the complete and ONLY source of truth. Do not use outside knowledge. Do not explain your reasoning. Output the final JSON immediately.
 
-Task: decide quickly whether the sentence is fully supported by the triples below.
-The triples are the complete source of truth.
-Do not use outside knowledge.
-Do not explain your reasoning.
-Output the final JSON immediately.
+STEP 0 — GATES (check these before judging content):
+- Wrong language / wrong transform: if the sentence is not written in {target_language}, or is not a natural-language sentence (e.g., it keeps the RDF/triple format, pipe-separated fields, raw predicate labels, or bullet-like untransformed output), set faithfulness_score = 1 with one incorrect_information entry (comment label: wrong_language or wrong_transform). Stop.
+- Degenerate repetition: if the sentence loops or repeats the same clause/phrase over and over, the final score is capped at 3 (score = min(content_score, 3)); add an entry with comment label: repetition.
 
-Important rules:
-- Treat every triple as true, even if it contradicts real-world knowledge.
-- Interpret each triple as subject | predicate | object, using the predicate label's actual semantics.
-- Do not treat every predicate label as an active verb. Some labels define the object's role: X | broadcastedBy | Y means Y broadcast X; X | riverFlowingThrough | Y means river Y flows through X; X | hasToItsNorth | Y means Y is north of X.
-- Mark a relation as reversed only when the sentence swaps the semantic roles.
-- Never mark information as incorrect just because it seems implausible, geographically wrong, historically wrong, or factually wrong in the real world.
-- Focus mainly on whether the correct information is present and whether there is any obviously wrong or unsupported information.
-- Do not focus too much on wording differences if the meaning is correctly supported by the triples.
-- Only mark information as incorrect if it is unsupported, contradicted, over-specific, or incorrectly transformed relative to the triples shown below.
-- Never place supported information in incorrect_information.
-- If all sentence information is supported, set faithfulness_score to 5 and return incorrect_information as [].
-- If incorrect_information is empty, the score should normally be 5.
+CORE RULES:
+- Treat every triple as true, even if it is nonsense in the real world.
+- NEVER penalize implausibility of any kind. All of the following are FULLY FAITHFUL (score 5) if they match the triples:
+  - self-referential statements (e.g., "X is located in X.")
+  - impossible or reversed time spans (e.g., "from 2000 to 1900")
+  - geographically, historically, or otherwise logically absurd facts
+- Interpret each triple as subject | predicate | object, using the predicate label's actual semantics. Some labels define the object's role: X | broadcastedBy | Y means Y broadcast X; X | riverFlowingThrough | Y means river Y flows through X; X | hasToItsNorth | Y means Y is north of X.
+- Reversed relation = the sentence swaps the SEMANTIC roles of subject and object. Do not mark a relation reversed just because the sentence order differs.
+- Paraphrase is fine: any natural wording with the same meaning counts as supported. In particular, X | country | Y is often fully supported by "X is located in Y", "X is in Y", "X lies in Y" and similar. Apply the same tolerance to other predicates.
+- Name translation is fine: translating descriptive or common-noun names into {target_language} is acceptable, as are inflection, diacritics, and transliteration changes. Only penalize a name change if it alters the entity's identity or meaning.
+- Do not penalize word order, function words, or stylistic differences when the meaning is preserved.
+- Omission: if a triple's information is missing from the sentence, count it as one omitted claim (info_used = "(missing)", correct_info = the omitted triple).
+- Only place a claim in incorrect_information if it is unsupported, contradicted, reversed, negated, omitted, over-specific, or incorrectly transformed relative to the triples. NEVER place supported information there.
+
+SCORING RUBRIC (after gates):
+- 5 = fully faithful: every claim supported (paraphrase allowed), nothing unsupported or omitted — even if nonsensical, self-referential, or implausible. If incorrect_information is [], the score MUST be 5.
+- 4 = one minor bug: exactly one wrong predicate or object, one small unsupported claim, or one omitted claim; everything else correct. (e.g., "recordedAlbum" rendered as "nahradil album".)
+- 3 = mixed: several problems, or supported content mixed with a clear substantive error, or a degenerate/looping sentence (cap).
+- 2 = reversed relation, negated/contradicted predicate, or multiple major problems.
+- 1 = wrong language, kept RDF/untransformed format, or the sentence is largely unsupported / contradicts the triples overall.
 
 Return STRICT JSON with these keys only:
 - faithfulness_score: integer from 1 to 5
 - incorrect_information: array of objects with keys info_used, correct_info, comment
-- 5 means fully faithful: all information is supported by the triples, allowing reasonable paraphrase
-- 4 means mostly faithful: a small issue, minor overstatement, or slightly imprecise transformation
-- 3 means mixed: some information is supported, but there is at least one clear substantive problem
-- 2 means mostly unfaithful: multiple important problems or one major problem dominates the sentence
-- 1 means completely unfaithful: the sentence is largely unsupported or contradicts the triples in a major way
-- info_used: the exact claim from the sentence that is unsupported or wrong
-- correct_info: the triple-backed correction or missing constraint
-- comment: a brief explanation based only on the triples
+  - info_used: the exact claim from the sentence that is wrong/unsupported ("(missing)" for omissions)
+  - correct_info: the triple-backed correction or missing constraint
+  - comment: brief reason, starting with one label if applicable: unsupported | wrong_object | wrong_predicate | reverse | negation | omission | over_specific | wrong_language | wrong_transform | repetition
+
 
 Mini examples:
 1. Triple: People's Republic of China | ethnicGroup | Arabs in Khorasan
@@ -44,6 +46,7 @@ Mini examples:
    Sentence: The Hrubý Jeseník river flows through Havlíčkův Brod.
    Output idea: faithfulness_score 5, incorrect_information []
 
+Target language: {target_language}
 Category: {category}
 Sentence: {sentence}
 
