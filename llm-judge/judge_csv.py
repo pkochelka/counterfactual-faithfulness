@@ -102,7 +102,7 @@ def parse_args() -> argparse.Namespace:
         type=str,
         default=None,
         help=(
-            "Language code for --fluency (e.g. en, cs, sk, hsb). "
+            "Target-language code for judging (e.g. en, cs, sk, hsb). "
             "When omitted, it is read from a 'language' column or inferred from the CSV filename suffix."
         ),
     )
@@ -280,19 +280,19 @@ def main() -> None:
     if enriched.empty:
         sys.exit("No non-empty sentence rows loaded from input CSV.")
 
-    language_code = None
-    language_name = None
+    language_code, language_name = resolve_language(
+        enriched.iloc[0], csv_path, override=args.language
+    )
+    if language_code is None:
+        sys.exit(
+            "Could not determine the target language. "
+            f"Pass --language with one of: {', '.join(LANGUAGE_NAMES)}."
+        )
+    enriched["target_language"] = language_name
+
     entity_language_name = None
     if args.fluency:
-        language_code, language_name = resolve_language(
-            enriched.iloc[0], csv_path, override=args.language
-        )
         entity_language_name = entity_language_name_from_source(csv_path)
-        if language_code is None:
-            sys.exit(
-                "Could not determine the language for --fluency. "
-                f"Pass --language with one of: {', '.join(LANGUAGE_NAMES)}."
-            )
 
     if args.sample_size == "all":
         sampled = enriched

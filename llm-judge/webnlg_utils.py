@@ -539,12 +539,14 @@ def build_prompt_payload(
     category: str | None,
     sentence: str,
     modified_triples: str,
+    target_language: str | None = None,
 ) -> dict[str, str]:
     return {
         "eid": eid,
         "category": category or "",
         "sentence": prompt_text(sentence),
         "modified_triples": prompt_text(modified_triples),
+        "target_language": target_language or "the target language",
     }
 
 
@@ -558,6 +560,7 @@ def build_judge_prompt(row: pd.Series | dict[str, Any]) -> str:
         category=row.get("category"),
         sentence=str(row["sentence"]),
         modified_triples=str(row["modified_triples"]),
+        target_language=str(row.get("target_language") or ""),
     )
     return load_judge_prompt_template().format(**payload)
 
