@@ -13,6 +13,8 @@ SEED = 140
 ROWS_PER_STRATUM = 5
 STRATA = ("1", "2-4", "5")
 
+MODEL_ALIASES = {"llama4-scout": "llama4-scout-openrouter"}
+
 MODEL_PARAMS_B = {
     "qwen3-1_7b": 1.7,
     "tiny-aya-global": 3.35,
@@ -63,7 +65,8 @@ def load_judgments(directory):
                     if not line.strip():
                         continue
                     record = json.loads(line)
-                    key = (model_dir.name, dataset, variant, language, record["eid"])
+                    model = MODEL_ALIASES.get(model_dir.name, model_dir.name)
+                    key = (model, dataset, variant, language, record["eid"])
                     judgments[key] = record
     return judgments
 

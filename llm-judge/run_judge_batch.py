@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import io
 import os
 import subprocess
 import sys
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -88,6 +91,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--fallback-concurrency-per-key", type=positive_int, default=3)
     parser.add_argument(
+        "--parallel-files",
+        type=positive_int,
+        default=1,
+        help="Number of CSV files judged concurrently.",
+    )
+    parser.add_argument(
         "--retries-before-fallback",
         type=int,
         default=1,
@@ -138,7 +147,11 @@ def load_env_file(path: Path) -> dict[str, str]:
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, value = line.split("=", 1)
-        values[key.strip()] = value.strip().strip('"').strip("'")
+        value = value.strip()
+        comment_index = value.find(" #")
+        if comment_index != -1:
+            value = value[:comment_index].rstrip()
+        values[key.strip()] = value.strip('"').strip("'")
     return values
 
 
@@ -314,15 +327,32 @@ def main() -> None:
         log(log_handle, f"language={args.language or 'all'}")
         log(log_handle, f"concurrency_per_key={args.concurrency_per_key}")
         log(log_handle, f"fallback_concurrency_per_key={args.fallback_concurrency_per_key}")
+        log(log_handle, f"parallel_files={args.parallel_files}")
         log(log_handle, f"files={len(csvs)}")
 
-        for index, csv_path in enumerate(csvs, start=1):
-            log(log_handle, "")
-            log(log_handle, f"[{utc_stamp()}] FILE {index}/{len(csvs)} {csv_path}")
+        log_lock = threading.Lock()
+
+        def process_file(index: int, csv_path: Path) -> bool:
             print(f"[{index}/{len(csvs)}] judging {csv_path}")
-            if not run_csv(args, csv_path, env, log_handle):
-                failed.append(csv_path)
+            buffer = io.StringIO()
+            log(buffer, "")
+            log(buffer, f"[{utc_stamp()}] FILE {index}/{len(csvs)} {csv_path}")
+            ok = run_csv(args, csv_path, env, buffer)
+            with log_lock:
+                log_handle.write(buffer.getvalue())
+                log_handle.flush()
+            if not ok:
                 print(f"failed after fallback: {csv_path}", file=sys.stderr)
+            return ok
+
+        with ThreadPoolExecutor(max_workers=args.parallel_files) as executor:
+            futures = {
+                executor.submit(process_file, index, csv_path): csv_path
+                for index, csv_path in enumerate(csvs, start=1)
+            }
+            for future in as_completed(futures):
+                if not future.result():
+                    failed.append(futures[future])
 
         log(log_handle, "")
         if failed:

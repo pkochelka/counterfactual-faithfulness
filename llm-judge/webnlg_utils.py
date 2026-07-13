@@ -18,7 +18,7 @@ import requests
 DEFAULT_JUDGE_MODEL = "openrouter/free"
 DEFAULT_JUDGE_MAX_TOKENS = 4000
 DEFAULT_JUDGE_RETRY_ATTEMPTS = 3
-DEFAULT_JUDGE_TIMEOUT = 150
+DEFAULT_JUDGE_TIMEOUT = 600
 DEFAULT_JUDGE_RETRY_SLEEP = 2.5
 DEFAULT_JUDGE_LONG_RETRY_SLEEP = 60.0
 DEFAULT_OUTPUT_DIR = Path("data") / "judged"
@@ -28,6 +28,7 @@ DEFAULT_JUDGE_API_URL = f"{DEFAULT_JUDGE_BASE_URL}/chat/completions"
 OPENROUTER_URL = DEFAULT_JUDGE_API_URL
 PROMPT_TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "prompts" / "judge_speeches.txt"
 FLUENCY_PROMPT_TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "prompts" / "judge_fluency.txt"
+DEFAULT_TARGET_LANGUAGE_NAME = "the target language"
 
 # Language code -> human-readable name used in the fluency prompt.
 LANGUAGE_NAMES = {
@@ -152,7 +153,11 @@ def _load_env_file(path: Path) -> dict[str, str]:
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, value = line.split("=", 1)
-        values[key.strip()] = value.strip().strip('"').strip("'")
+        value = value.strip()
+        comment_index = value.find(" #")
+        if comment_index != -1:
+            value = value[:comment_index].rstrip()
+        values[key.strip()] = value.strip('"').strip("'")
     return values
 
 
@@ -533,6 +538,15 @@ def load_output_sources(specs: list[SourceSpec]) -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True)
 
 
+MAX_PROMPT_SENTENCE_CHARS = 500
+
+
+def truncate_prompt_sentence(text: str, limit: int = MAX_PROMPT_SENTENCE_CHARS) -> str:
+    if len(text) <= limit:
+        return text
+    return text[:limit] + " ... [sentence truncated]"
+
+
 def build_prompt_payload(
     *,
     eid: str,
@@ -544,7 +558,7 @@ def build_prompt_payload(
     return {
         "eid": eid,
         "category": category or "",
-        "sentence": prompt_text(sentence),
+        "sentence": truncate_prompt_sentence(prompt_text(sentence)),
         "modified_triples": prompt_text(modified_triples),
         "target_language": target_language or "the target language",
     }
@@ -554,7 +568,10 @@ def load_judge_prompt_template() -> str:
     return PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
 
 
-def build_judge_prompt(row: pd.Series | dict[str, Any]) -> str:
+def build_judge_prompt(
+    row: pd.Series | dict[str, Any],
+    target_language: str = DEFAULT_TARGET_LANGUAGE_NAME,
+) -> str:
     payload = build_prompt_payload(
         eid=str(row["eid"]),
         category=row.get("category"),
@@ -737,8 +754,7 @@ def request_judge(
         parsed = extract_json(raw)
     except Exception as exc:
         raise JudgeRequestError(
-            "Judge model response did not contain valid JSON in the expected schema.",
-            details={"raw_response": raw, "response_payload": payload, "api_url": api_url},
+            f"Judge model response did not contain valid JSON in the expected schema. {raw} {payload}",
         ) from exc
 
     usage = payload.get("usage") if isinstance(payload, dict) else None
@@ -769,7 +785,7 @@ def build_judge_record(
     token_env_var: str | None = None,
     reasoning: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    prompt = build_judge_prompt(row)
+    prompt = build_judge_prompt(row, target_language_from_source(row, source_path))
     prompt_preview = prompt.splitlines()[0] if prompt else ""
     usage = usage or {}
     response_meta = response_meta or {}
@@ -817,7 +833,7 @@ def judge_row(
     reasoning: dict[str, Any] | None = None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
-    prompt = build_judge_prompt(row)
+    prompt = build_judge_prompt(row, target_language_from_source(row, source_path))
     resolved_api_url = normalize_judge_api_url(api_url or judge_api_url_from_env())
     if dry_run:
         return build_judge_record(
@@ -906,8 +922,18 @@ def resolve_language(
         code = language_code_from_source(source_path)
     if code:
         code = sanitize_identifier(code)
-    name = LANGUAGE_NAMES.get(code or "", "the target language")
+    name = LANGUAGE_NAMES.get(code or "", DEFAULT_TARGET_LANGUAGE_NAME)
     return code, name
+
+
+def target_language_from_source(
+    row: pd.Series | dict[str, Any] | None,
+    source_path: str | Path,
+) -> str:
+    code, name = resolve_language(row, source_path)
+    if code:
+        return f"{name} ({code})"
+    return name
 
 
 def entity_language_name_from_source(source_path: str | Path) -> str:
