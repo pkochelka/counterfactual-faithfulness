@@ -1,3 +1,4 @@
+import argparse
 import csv
 import json
 import random
@@ -13,14 +14,13 @@ SEED = 140
 ROWS_PER_STRATUM = 5
 STRATA = ("1", "2-4", "5")
 
-MODEL_ALIASES = {"llama4-scout": "llama4-scout-openrouter"}
-
 MODEL_PARAMS_B = {
     "qwen3-1_7b": 1.7,
     "tiny-aya-global": 3.35,
     "gemma4-e2b": 5.1,
     "gemma4-e4b": 8.0,
     "qwen3_5-9b": 9.7,
+    "llama4-scout": 17.0,
     "llama4-scout-openrouter": 17.0,
     "gemma4-31B": 30.7,
     "gpt-oss-120b": 117.0,
@@ -65,17 +65,19 @@ def load_judgments(directory):
                     if not line.strip():
                         continue
                     record = json.loads(line)
-                    model = MODEL_ALIASES.get(model_dir.name, model_dir.name)
+                    model = model_dir.name
                     key = (model, dataset, variant, language, record["eid"])
                     judgments[key] = record
     return judgments
 
 
-def build_rows():
-    fluency_judgments = load_judgments(FLUENCY_DIR)
+def build_rows(judged_dir, fluency_dir, variants=None):
+    fluency_judgments = load_judgments(fluency_dir)
     rows = []
-    for key, judged in load_judgments(JUDGED_DIR).items():
+    for key, judged in load_judgments(judged_dir).items():
         model, dataset, variant, language, eid = key
+        if variants is not None and variant not in variants:
+            continue
         faithfulness = judged.get("parsed", {}).get("faithfulness_score")
         fluency = fluency_judgments.get(key, {}).get("parsed", {})
         if faithfulness is None or fluency.get("fluency_score") is None:
@@ -131,9 +133,26 @@ def write_csv(path, columns, rows):
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Create a stratified blind sample and matching annotation key."
+    )
+    parser.add_argument("--judged-dir", type=Path, default=JUDGED_DIR)
+    parser.add_argument("--fluency-dir", type=Path, default=FLUENCY_DIR)
+    parser.add_argument(
+        "--variants", nargs="+", default=None,
+        help="Restrict the sample to these variants (for example: fi).",
+    )
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
+    parser.add_argument(
+        "--output-prefix", default="annotation",
+        help="Prefix for <prefix>_sample.csv and <prefix>_key.csv.",
+    )
+    args = parser.parse_args()
+
     rng = random.Random(SEED)
     splits = {}
-    for row in build_rows():
+    variants = set(args.variants) if args.variants else None
+    for row in build_rows(args.judged_dir, args.fluency_dir, variants):
         split_key = (row["variant"], row["size_bucket"], row["prompt_language"])
         splits.setdefault(split_key, []).append(row)
 
@@ -144,9 +163,9 @@ def main():
         sample.extend(sample_split(splits[split_key], quota, fluency_counts, rng))
     rng.shuffle(sample)
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    write_csv(OUTPUT_DIR / "annotation_sample.csv", BLIND_COLUMNS, sample)
-    write_csv(OUTPUT_DIR / "annotation_key.csv", KEY_COLUMNS, sample)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    write_csv(args.output_dir / f"{args.output_prefix}_sample.csv", BLIND_COLUMNS, sample)
+    write_csv(args.output_dir / f"{args.output_prefix}_key.csv", KEY_COLUMNS, sample)
 
     cell_counts = Counter(
         (row["variant"], row["size_bucket"], row["prompt_language"], row["faithfulness_stratum"])
