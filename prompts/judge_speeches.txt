@@ -4,7 +4,7 @@ STEP 0 — GATES (check these before judging content):
 - Wrong language / wrong transform, set faithfulness_score = 1 with one incorrect_information entry (comment label: wrong_language or wrong_transform):
    - if the sentence is not written mostly in {target_language}. Be especially careful if target language is low-resource, such as upper serbian (hsb), as even a technically valid sentence in different language should be scored low. However, if only parts of the sentence are not in the target language (or not everything from the source triple is translated correctly), while most of it is, be a bit more benevolent, and follow instructions below.
    - if it is not a natural-language sentence (e.g., it keeps the exact | pipes from the source triple). If it just keeps the RDF order, or does not split the predicate, it is alright, continue with instructions below
-- Degenerate repetition: if the sentence loops or repeats the same clause/phrase at least 10 times, the final score is at most 3 (lower if it violates additional rules for content faithfulness); add an entry with comment label: degenerate. Minor redundancy is acceptable.
+- Degenerate repetition: if the sentence loops or repeats the same clause/phrase at least 10 times, the final score is at most 3 (lower if it violates additional rules for content faithfulness); add an entry with comment label: degenerate. For info_used on this entry, do NOT quote the repeated span verbatim -- write a short placeholder like "(repeated/looping text)" instead, then continue directly to faithfulness_score. Minor redundancy is acceptable.
 
 CORE RULES:
 - Treat every triple as true, even if it is nonsense in the real world.
@@ -13,7 +13,7 @@ CORE RULES:
   - impossible or reversed time spans (e.g., "from 2000 to 1900")
   - geographically, historically, or otherwise logically absurd facts
 - Interpret each triple as subject | predicate | object, using the predicate label's actual semantics. Some labels define the object's role: X | broadcastedBy | Y means Y broadcast X; X | riverFlowingThrough | Y means river Y flows through X; X | hasToItsNorth | Y means Y is north of X.
-- Reversed relation = the sentence swaps the SEMANTIC roles of subject and object. Do not mark a relation reversed just because the sentence order differs.
+- Reversed relation = the sentence swaps the SEMANTIC roles of subject and object, so the resulting claim asserts the opposite of what the triple states. Do not mark a relation reversed just because the sentence order differs: many of the target languages (e.g. Czech, Slovak) mark grammatical role through case endings and agreement rather than word position, so a subject can correctly appear after the object. Determine the role each entity plays from grammar/meaning in context, not from which one appears first, and only flag reverse when the asserted relationship itself is actually flipped.
 - Paraphrase is fine: any wording with the same meaning counts as supported. In particular, X | country | Y is often fully supported by "X is located in Y", "X is in Y", "X lies in Y" and similar. Apply the same tolerance to other predicates.
 - Name translation is fine: translating descriptive or common-noun names into {target_language} is acceptable, as are inflection, diacritics, and transliteration changes. Only penalize a name change if it alters the entity's identity or meaning.
 - Do not penalize word order, function words, or stylistic differences when the meaning is preserved.
