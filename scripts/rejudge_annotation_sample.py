@@ -1,6 +1,20 @@
+"""Rejudge the annotation_sample_old examples with the current judge prompt.
+
+Steps (run "all" for the full pipeline, or each step separately):
+  prepare  filter data/generated to the sampled eids under data/rejudge_annotation/
+  judge    run llm-judge/judge_csv.py on every prepared CSV (API keys from .env.local)
+  collect  match judgments to annotation_sample_old and write annotation_key_rejudged.csv
+
+The judge step resumes by default (already-judged eids for the same judge model and
+endpoint are skipped); pass --fresh after updating the judge prompt so every example
+is actually rescored.
+"""
+
 import argparse
 import csv
 import json
+import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -13,6 +27,7 @@ ANNOTATION_DIR = ROOT / "data" / "annotation"
 GENERATED_DIR = ROOT / "data" / "generated"
 SOURCE_CSV_DIR = ROOT / "data" / "source_csv"
 REJUDGE_DIR = ROOT / "data" / "rejudge_annotation"
+JUDGE_SCRIPT = ROOT / "llm-judge" / "judge_csv.py"
 
 KEY_COLUMNS = [
     "uid", "model", "params_b", "size_bucket", "dataset", "variant",
@@ -43,6 +58,8 @@ def prepare():
         sanitize_identifier(path.name): path
         for path in GENERATED_DIR.iterdir() if path.is_dir()
     }
+    for name, path in list(generated_dirs.items()):
+        generated_dirs.setdefault(name.removesuffix("-openrouter"), path)
     rows = load_sample_rows()
     groups = {}
     for row in rows:
@@ -51,7 +68,7 @@ def prepare():
 
     for dataset in ("cs-qa", "sk-qa"):
         (REJUDGE_DIR / dataset).mkdir(parents=True, exist_ok=True)
-        for variant_file in ("cf.csv", "fa.csv"):
+        for variant_file in ("cf.csv", "fa.csv", "fi.csv"):
             data = (SOURCE_CSV_DIR / dataset / variant_file).read_bytes()
             (REJUDGE_DIR / dataset / variant_file).write_bytes(data)
 
@@ -100,9 +117,43 @@ def verify(sample_rows):
     print(f"Verified {checked}/{len(sample_rows)} rows against annotation_sample_old, mismatches: {mismatches}")
 
 
-def collect():
+def judge(args):
+    judged_dir = REJUDGE_DIR / (f"judged_{args.tag}" if args.tag else "judged")
+    if judged_dir.exists():
+        if args.fresh:
+            shutil.rmtree(judged_dir)
+        elif any(judged_dir.rglob("*.jsonl")):
+            print(f"Resuming into {judged_dir}: eids already judged by {args.judge_model} "
+                  "at this endpoint are skipped (use --fresh to rescore everything).")
+    csv_paths = sorted((REJUDGE_DIR / "generated").glob("*/*.csv"))
+    if not csv_paths:
+        sys.exit(f"No prepared CSVs under {REJUDGE_DIR / 'generated'}; run the prepare step first.")
+    failed = []
+    for index, csv_path in enumerate(csv_paths, 1):
+        print(f"[{index}/{len(csv_paths)}] judging {csv_path.relative_to(ROOT)}", flush=True)
+        command = [
+            sys.executable, str(JUDGE_SCRIPT), str(csv_path),
+            "--sample-size", "all",
+            "--model", args.judge_model,
+            "--judge-base-url", args.judge_base_url,
+            "--token-env-vars", args.token_env_vars,
+            "--concurrency-per-key", str(args.concurrency_per_key),
+            "--max-tokens", str(args.max_tokens),
+            "--output-dir", str(judged_dir),
+            "--allow-failures",
+        ]
+        if args.reasoning_effort:
+            command += ["--reasoning-effort", args.reasoning_effort]
+        if subprocess.run(command, cwd=ROOT).returncode != 0:
+            failed.append(csv_path.name)
+    if failed:
+        print(f"judge_csv.py failed for {len(failed)} files: {', '.join(failed)}", file=sys.stderr)
+
+
+def collect(tag=None):
+    judged_dir = REJUDGE_DIR / (f"judged_{tag}" if tag else "judged")
     sample_rows = load_sample_rows()
-    judgments = load_judgments(REJUDGE_DIR / "judged")
+    judgments = load_judgments(judged_dir)
     key_rows, missing = [], []
     for row in sample_rows:
         record = judgments.get((row["model"], row["dataset"], row["variant"], row["language"], row["eid"]))
@@ -126,7 +177,7 @@ def collect():
             "judge_faithfulness_score": score,
             "judge_incorrect_information": json.dumps(parsed.get("incorrect_information", []), ensure_ascii=False),
         })
-    output_path = ANNOTATION_DIR / "annotation_key_rejudged.csv"
+    output_path = ANNOTATION_DIR / (f"annotation_key_rejudged_{tag}.csv" if tag else "annotation_key_rejudged.csv")
     with output_path.open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=KEY_COLUMNS)
         writer.writeheader()
@@ -139,10 +190,28 @@ def collect():
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("step", choices=["prepare", "collect"])
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("step", choices=["prepare", "judge", "collect", "all"])
+    parser.add_argument("--tag", default=None,
+                        help="suffix for the judged dir and key CSV: judged_<tag>, annotation_key_rejudged_<tag>.csv")
+    parser.add_argument("--judge-model", default="deepseek-v4-pro")
+    parser.add_argument("--judge-base-url", default="https://llm.ai.e-infra.cz/v1")
+    parser.add_argument("--token-env-vars", default="KEY1",
+                        help="comma-separated env-var names holding judge API keys (loaded from .env.local)")
+    parser.add_argument("--concurrency-per-key", type=int, default=4)
+    parser.add_argument("--max-tokens", type=int, default=4000)
+    parser.add_argument("--reasoning-effort", default=None,
+                        choices=["max", "xhigh", "high", "medium", "low", "minimal", "none"],
+                        help="when omitted, judge_csv.py sends the legacy thinking=true payload")
+    parser.add_argument("--fresh", action="store_true",
+                        help="delete the judged dir first so the updated judge rescores every example")
     args = parser.parse_args()
-    prepare() if args.step == "prepare" else collect()
+    if args.step in ("prepare", "all"):
+        prepare()
+    if args.step in ("judge", "all"):
+        judge(args)
+    if args.step in ("collect", "all"):
+        collect(args.tag)
 
 
 if __name__ == "__main__":
