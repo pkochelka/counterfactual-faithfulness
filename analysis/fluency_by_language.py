@@ -1,4 +1,4 @@
-"""Plot mean fluency (linguistic quality) score by prompt language and variant.
+"""Plot mean fluency (linguistic quality) score by prompt language.
 
 Fluency is the second LLM-judge dimension (see prompts/judge_fluency.txt): how well
 a sentence is written in its target language, independent of faithfulness. Records
@@ -15,6 +15,7 @@ import json
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from pathlib import Path
 
 _DEFAULT_JUDGED_DIR = Path(__file__).parent.parent / "data" / "judged_fluency"
@@ -27,6 +28,22 @@ LANGUAGE_ORDER = [
     lang
     for lang in os.environ.get("LANGUAGES", " ".join(DEFAULT_LANGUAGE_ORDER)).replace(",", " ").split()
 ]
+
+# x-axis groups: EN and HSB are language-agnostic (same for every dataset), while
+# "Same"/"Other" resolve relative to each dataset's own target language (cs-qa's
+# target is cs, sk-qa's is sk) so a cs-qa panel and an sk-qa panel are comparable.
+GROUP_ORDER = ["EN", "Same", "Other", "HSB"]
+
+
+def language_group(dataset: str, language: str) -> str:
+    if language == "en":
+        return "EN"
+    if language == "hsb":
+        return "HSB"
+    target_language = dataset.split("-")[0]  # "cs-qa" -> "cs", "sk-qa" -> "sk"
+    return "Same" if language == target_language else "Other"
+
+
 VARIANT_ORDER = ["fa", "cf", "fi"]
 VARIANT_STYLE = {
     "fa": {"color": "#2ca02c", "linestyle": "-",  "label": "fa  (factual)"},
@@ -35,6 +52,13 @@ VARIANT_STYLE = {
 }
 
 MAX_SCORE = 5
+
+# CVD-validated categorical palette (worst adjacent-pair ΔE 13.3); models are
+# assigned slots in fixed sorted order, paired with a distinct marker each so
+# identity never rests on color alone. Kept in sync with faithfulness_by_language.py.
+MODEL_COLORS = ["#2a78d6", "#1baf7a", "#eda100", "#0891b2", "#e34948",
+                "#008300", "#4a3aa7", "#e87ba4", "#eb6834"]
+MODEL_MARKERS = ["o", "s", "^", "D", "v", "P", "X", "*", "<"]
 
 
 def load_fluency_records(judged_dir: Path) -> pd.DataFrame:
@@ -57,61 +81,55 @@ def load_fluency_records(judged_dir: Path) -> pd.DataFrame:
                         continue
                     records.append(dict(model=model_dir.name, dataset=dataset,
                                         variant=variant, language=language,
+                                        language_group=language_group(dataset, language),
+                                        fluency_score=score,
                                         fluency_pct=score / MAX_SCORE * 100))
     return pd.DataFrame(records)
 
 
 def plot_fluency(results: pd.DataFrame, output_path: Path) -> None:
     models = sorted(results["model"].unique())
-    datasets = sorted(results["dataset"].unique())
+    if len(models) > len(MODEL_COLORS):
+        raise ValueError(f"{len(models)} models but only {len(MODEL_COLORS)} palette slots; "
+                         "extend MODEL_COLORS/MODEL_MARKERS with validated entries")
 
-    fig, axes = plt.subplots(
-        len(models), len(datasets),
-        figsize=(5 * len(datasets), 4 * len(models)),
-        sharey=True, sharex=True,
-        squeeze=False,
-    )
+    fig, ax = plt.subplots(figsize=(6.5, 5))
 
     # Data-driven lower bound: fluency spans a wider range than faithfulness, so
-    # a fixed near-100 window would clip low-resource languages. Floor to the
-    # nearest 5 below the minimum observed mean (never above 90).
+    # a fixed near-5 window would clip low-resource languages. Floor to the
+    # nearest 0.5 below the minimum observed mean (never above 3.0).
+    # language_group already resolves "Same"/"Other" per dataset, so cs-qa
+    # and sk-qa rows are pooled together for a given model/group.
     means_by_group = (results
-                      .groupby(["model", "dataset", "variant", "language"])["fluency_pct"]
+                      .groupby(["model", "language_group"])["fluency_score"]
                       .mean())
-    lo = means_by_group.min() if not means_by_group.empty else 0.0
-    y_lower = min(90.0, (lo // 5) * 5)
+    lo = means_by_group.min() if not means_by_group.empty else 1.0
+    y_lower = min(3.0, (lo * 2 // 1) / 2)
 
-    for row, model in enumerate(models):
-        for col, dataset in enumerate(datasets):
-            ax = axes[row][col]
-            subset = results[(results["model"] == model) & (results["dataset"] == dataset)]
-            present_variants = subset["variant"].unique()
+    for model, color, marker in zip(models, MODEL_COLORS, MODEL_MARKERS):
+        means = (results[results["model"] == model]
+                 .groupby("language_group")["fluency_score"]
+                 .mean()
+                 .reindex(GROUP_ORDER))
+        # reindex leaves NaN for groups this model wasn't judged on;
+        # matplotlib renders those as gaps (no marker), so a model
+        # missing hsb shows nothing at hsb instead of distorting the line.
+        ax.plot(GROUP_ORDER, means, marker=marker, color=color,
+                linewidth=2, markersize=7, label=model)
 
-            for variant in [v for v in VARIANT_ORDER if v in present_variants]:
-                means = (subset[subset["variant"] == variant]
-                         .groupby("language")["fluency_pct"]
-                         .mean()
-                         .reindex(LANGUAGE_ORDER))
-                # reindex leaves NaN for languages this model wasn't judged on;
-                # matplotlib renders those as gaps (no marker), so a model
-                # missing hsb shows nothing at hsb instead of distorting the line.
-                ax.plot(LANGUAGE_ORDER, means, marker="o", linewidth=2,
-                        **VARIANT_STYLE[variant])
+    ax.set_ylim(y_lower, 5.15)
+    ax.axhline(5, color="gray", linewidth=0.6, linestyle="--", alpha=0.5)
+    ax.set_xlabel("Prompt language (relative to dataset)")
+    ax.set_ylabel("Mean fluency score (1-5)")
 
-            ax.set_ylim(y_lower, 101)
-            ax.axhline(100, color="gray", linewidth=0.6, linestyle="--", alpha=0.5)
-            ax.set_title(f"{model} / {dataset}", fontsize=10)
-            ax.set_xlabel("Prompt language" if row == len(models) - 1 else "")
-            ax.set_ylabel("Mean fluency (%)" if col == 0 else "")
-
-    handles = [plt.Line2D([0], [0], marker="o", linewidth=2, **s)
-               for s in VARIANT_STYLE.values()]
-    fig.legend(handles, [s["label"] for s in VARIANT_STYLE.values()],
-               loc="lower center", ncol=3, fontsize=10,
-               bbox_to_anchor=(0.5, -0.04))
+    handles = [Line2D([0], [0], color=color, marker=marker, linewidth=2, markersize=7)
+               for color, marker in zip(MODEL_COLORS[:len(models)], MODEL_MARKERS[:len(models)])]
+    fig.legend(handles, models, loc="lower center", ncol=min(5, len(models)),
+               fontsize=9, bbox_to_anchor=(0.5, -0.1))
 
     fig.suptitle(
-        "Mean fluency (linguistic quality) score by prompt language and variant",
+        "Mean fluency (linguistic quality) score by prompt language, aggregated across cs-qa/sk-qa and variants (fa/cf/fi)\n"
+        "Same = prompt language matches the dataset's target language, Other = the other target language",
         fontsize=12,
     )
     plt.tight_layout()
@@ -125,8 +143,8 @@ if __name__ == "__main__":
     if results.empty:
         raise SystemExit(f"No fluency records found under {JUDGED_DIR}")
     summary = (results
-               .groupby(["model", "dataset", "variant", "language"])["fluency_pct"]
+               .groupby(["model", "language_group"])["fluency_score"]
                .mean()
-               .round(1))
+               .round(2))
     print(summary.to_string())
     plot_fluency(results, OUTPUT_PATH)

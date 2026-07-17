@@ -1,0 +1,57 @@
+You are judging faithfulness in data-to-text generation. Decide whether the sentence is fully supported by the triples below. The triples are the complete and ONLY source of truth. Do not use outside knowledge. Do not explain your reasoning. Output the final JSON immediately.
+
+STEP 0 — GATES (check these before judging content):
+- Wrong language / wrong transform, set faithfulness_score = 1 with one incorrect_information entry (comment label: wrong_language or wrong_transform):
+   - if the sentence's own grammar — its verbs, function words, and connecting phrases — is not written mostly in {target_language}. Judge this only on the words the sentence adds around the entities, never on the entity names themselves. Be especially careful if target language is low-resource, such as upper serbian (hsb), as even a technically valid sentence in different language should be scored low. However, if only parts of the sentence are not in the target language, while most of it is, be a bit more benevolent, and follow instructions below.
+   - Named entities taken from the triples (people, places, organizations, titles, works) routinely remain in their original language inside a correctly written {target_language} sentence. This alone is NEVER wrong_language and never justifies score 1, even when such names make up most of the sentence's length. If a translatable descriptive name was left untranslated or translated imprecisely, it is a fluency problem and never a reason for lowering faithfulness score.
+   - if it is not a natural-language sentence (e.g., it keeps the exact | pipes from the source triple). If it just keeps the RDF order, or does not split the predicate, it is alright, continue with instructions below
+- Degenerate repetition: if the sentence loops or repeats the same clause/phrase at least 10 times, the final score is at most 3 (lower if it violates additional rules for content faithfulness); add an entry with comment label: degenerate. For info_used on this entry, do NOT quote the repeated span verbatim -- write a short placeholder like "(repeated/looping text)" instead, then continue directly to faithfulness_score. Minor redundancy is acceptable.
+
+CORE RULES:
+- Treat every triple as true, even if it is nonsense in the real world.
+- NEVER penalize implausibility of any kind. All of the following are FULLY FAITHFUL (score 5) if they match the triples:
+  - self-referential statements (e.g., "X is located in X.")
+  - impossible or reversed time spans (e.g., "from 2000 to 1900")
+  - geographically, historically, or otherwise logically absurd facts
+- Interpret each triple as subject | predicate | object, using the predicate label's actual semantics. Some labels define the object's role: X | broadcastedBy | Y means Y broadcast X; X | riverFlowingThrough | Y means river Y flows through X; X | hasToItsNorth | Y means Y is north of X.
+- Reversed relation = the sentence swaps the SEMANTIC roles of subject and object, so the resulting claim asserts the opposite of what the triple states. Do not mark a relation reversed just because the sentence order differs: many of the target languages (e.g. Czech, Slovak) mark grammatical role through case endings and agreement rather than word position, so a subject can correctly appear after the object. Determine the role each entity plays from grammar/meaning in context, not from which one appears first, and only flag reverse when the asserted relationship itself is actually flipped.
+- Paraphrase is fine: any wording with the same meaning counts as supported. In particular, X | country | Y is often fully supported by "X is located in Y", "X is in Y", "X lies in Y" and similar. Apply the same tolerance to other predicates.
+- Name translation is fine: translating descriptive or common-noun names into {target_language} is acceptable, as are inflection, diacritics, and transliteration changes. Only penalize a name change if it alters the entity's identity or meaning.
+- Do not penalize word order, function words, or stylistic differences when the meaning is preserved.
+- Omission: if any information from any triple is missing from the sentence, count it as an omitted claim (info_used = "(missing)", correct_info = the omitted triple).
+- Only place a claim in incorrect_information if it is unsupported, contradicted, reversed, negated, omitted, over-specific, or incorrectly transformed relative to the triples. NEVER place supported information there.
+
+SCORING RUBRIC (after gates):
+- 5 = fully faithful: every claim explicitly supported (paraphrase allowed), nothing unsupported, nothing omitted — even if nonsensical, self-referential, or implausible. If incorrect_information is [], the score MUST be 5.
+- 4 = one minor bug: exactly one wrong predicate or object, one small unsupported claim, one omitted claim, minor translation bug or similar; everything else correct.
+- 3 = mixed: several problems, or supported content mixed with a clear substantive error, or a degenerate/looping sentence (cap).
+- 2 = reversed relation, negated/contradicted predicate, or multiple major problems.
+- 1 = wrong language, kept original pipe-separated-RDF format, or the sentence is largely unsupported / contradicts the triples overall.
+
+Return STRICT JSON with these keys only:
+- incorrect_information: array of objects with keys info_used, correct_info, comment
+  - info_used: the exact claim from the sentence that is wrong/unsupported ("(missing)" for omissions)
+  - correct_info: the triple-backed correction or missing constraint
+  - comment: brief reason, starting with one label if applicable: unsupported | wrong_object | wrong_predicate | reverse | negation | omission | over_specific | wrong_language | wrong_transform | repetition
+- faithfulness_score: integer from 1 to 5
+
+
+Mini examples:
+1. Triple: People's Republic of China | ethnicGroup | Arabs in Khorasan
+   Sentence: Arabs in Khorasan are an ethnic group within the People's Republic of China.
+   Output idea: faithfulness_score 5, incorrect_information []
+
+2. Triple: Cristiano Ronaldo | occupation | military engineer
+   Sentence: Cristiano Ronaldo is a professional football player.
+   Output idea: faithfulness_score 1, the triple state Cristiano Ronaldo is a military engineer.
+
+3. Triple: Havlíčkův Brod | riverFlowingThrough | Hrubý Jeseník
+   Sentence: The Hrubý Jeseník river flows through Havlíčkův Brod.
+   Output idea: faithfulness_score 5, incorrect_information []
+
+Target language: {target_language}
+Category: {category}
+Sentence: {sentence}
+
+Triples:
+{modified_triples}
