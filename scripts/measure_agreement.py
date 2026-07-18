@@ -65,7 +65,7 @@ def print_markdown_table(report):
     print("| " + " | ".join(header) + " |")
     print("|" + " --- |" * len(header))
     for annotator, row in report.iterrows():
-        cells = [annotator] + [f"{value:g}" for value in row]
+        cells = [str(annotator)] + [f"{value:g}" for value in row]
         print("| " + " | ".join(cells) + " |")
 
 
