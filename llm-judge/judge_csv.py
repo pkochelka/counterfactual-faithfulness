@@ -322,9 +322,8 @@ def main() -> None:
             eid_source_key = (str(record.get("eid", "")), str(record.get("source_id", "")))
             existing_eid_source_keys.add(eid_source_key)
             key_model = record.get("requested_judge_model") or record.get("judge_model") or ""
-            key_api_url = normalize_judge_api_url(
-                record.get("requested_judge_api_url") or (DEFAULT_JUDGE_API_URL if judge_api_url == DEFAULT_JUDGE_API_URL else "")
-            )
+            # Trimmed/legacy records don't store the endpoint; count them as judged at the current one.
+            key_api_url = normalize_judge_api_url(record.get("requested_judge_api_url") or judge_api_url)
             existing_keys.add((str(record.get("eid", "")), str(record.get("source_id", "")), str(key_model), key_api_url))
 
     pending_rows = []

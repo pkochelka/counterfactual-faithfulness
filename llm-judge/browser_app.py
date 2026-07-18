@@ -355,10 +355,11 @@ def annotations_for_selected_model(frame: pd.DataFrame, judge_model: str, judge_
     actual_values = actual.fillna("").astype(str) if actual is not None else pd.Series("", index=frame.index)
     model_mask = (requested_values == judge_model) | ((requested_values == "") & (actual_values == judge_model))
     if requested_api_url is None:
-        api_mask = pd.Series(judge_api_url == DEFAULT_JUDGE_API_URL, index=frame.index)
+        # Annotation frames don't carry the endpoint (trimmed/legacy records); match any endpoint.
+        api_mask = pd.Series(True, index=frame.index)
     else:
         api_values = requested_api_url.fillna("").astype(str).map(
-            lambda value: normalize_judge_api_url(value) if value else DEFAULT_JUDGE_API_URL
+            lambda value: normalize_judge_api_url(value) if value else judge_api_url
         )
         api_mask = api_values == judge_api_url
     mask = model_mask & api_mask

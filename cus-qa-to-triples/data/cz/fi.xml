@@ -1,0 +1,3173 @@
+<?xml version="1.0" ?>
+<benchmark>
+  <entries>
+    <entry category="culture" eid="Id0" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Sabina_Olšanská | composedFor | Moravské_divadlo_Olomouc</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id1" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Alena_Králová | hasHit | největší_hit</otriple>
+        <otriple>největší_hit | originatesFrom | Starci_na_chmelu</otriple>
+        <otriple>Starci_na_chmelu | isType | muzikál</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id2" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ministryně_zahraničí_Spojených_států | originCountry | Mikulov-Les</otriple>
+        <otriple>Ministryně_zahraničí_Spojených_států | name | Madeleine_Albrightová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id3" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>svátek_svatého_Mikuláše | associatedWith | rozdávání_dárků_dětem</otriple>
+        <otriple>svátek_svatého_Mikuláše | celebrationDate | 28-02-1991</otriple>
+        <otriple>svátek_svatého_Mikuláše | celebrationTime | večer</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id4" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Březová_Zahrada | isPartOf | Vltavské_Kaskády</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id5" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>literatura | publishedBy | disidenti</otriple>
+        <otriple>literatura | location | Mlynářov</otriple>
+        <otriple>literatura | timePeriod | 1950-01-01_2000-12-31</otriple>
+        <otriple>literatura | namedAs | samizdat</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id6" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Jan_Neruda | associatedWith | Zámostí</otriple>
+        <otriple>Jan_Neruda | hasWork | tvorba</otriple>
+        <otriple>Jan_Neruda | hasLife | život</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id7" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Žabí_údolí | locatedIn | CHKO_Český_ráj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id8" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Karel_Gott | nationality | český</otriple>
+        <otriple>Karel_Gott | profession | zpěvák</otriple>
+        <otriple>Karel_Gott | award | Zlatý_slavík</otriple>
+        <otriple>Karel_Gott | awardCount | 08-10-2015</otriple>
+        <otriple>Zlatý_slavík | awardFrequency | nejvíckrát</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id9" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Filip_Marek | formsComedyDuoWith | Jiří_Lábus</otriple>
+        <otriple>Oldřich_Kaiser_Jiří_Lábus | areInseparable | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id10" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slníčko_nad_Rákosím | minedResource | uhlí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id11" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ladislav_Bureš | isMemberOf | ODS</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id12" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Barrandovské_filmové_ateliéry | founder | Renata_Hrdličková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id13" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Záhořské | height | 1603</otriple>
+        <otriple>Záhořské | partOf | Krkonoše</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id15" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Údolí_Vran | reasonForDemolition | těžba_uhlí</otriple>
+        <otriple>těžba_uhlí | resourceType | uhlí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id17" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Říčanský_Dvůr | location | údolí_Dřevnice</otriple>
+        <otriple>Dřevnice | type | řeka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id18" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Slanská_hora | locatedIn | Horní_Vítkov</otriple>
+        <otriple>Slanská_hora | name | Slanská_hora</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id19" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>těžba_uhlí | causes | Slníčko_nad_Rákosím</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id20" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Třístíčko | hasReligiousMinority | Židovská_menšina</otriple>
+        <otriple>Židovská_menšina | isReligiousMinority | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id21" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Císařský_ostrov | isLargestIslandOf | Rybářská_Lhota</otriple>
+        <otriple>Císařský_ostrov | islandType | ostrov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id22" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Nová_Lhota | knownFor | hokej</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id23" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ministerstvo_zdravotnictví_České_republiky | hasLocation | Křižovatka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id24" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Filip_Zelenka | owns | Sparta</otriple>
+        <otriple>Sparta | isA | fotbalový_klub</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id26" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Luboš_Rataj | authorOf | Na_samém_konci</otriple>
+        <otriple>Na_samém_konci | type | báseň</otriple>
+        <otriple>Na_samém_konci | writtenOn | fasáda_domu</otriple>
+        <otriple>fasáda_domu | location | nizozemské_město_Leiden</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id27" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Wilma_Havelková | authorOf | knihy</otriple>
+        <otriple>knihy | featuresCharacter | Ferda_Mravenec</otriple>
+        <otriple>knihy | featuresCharacter | Brouk_Pytlík</otriple>
+        <otriple>Ferda_Mravenec | inspiredBy | hmyz</otriple>
+        <otriple>Brouk_Pytlík | inspiredBy | hmyz</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id28" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>film_Štěstí | hasMainActor | Tatiana_Vilhelmová</otriple>
+        <otriple>film_Štěstí | hasMainActor | Jakub_Bílý</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id29" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jarmila_Vondrová | nickname | Rudý_dědek</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id30" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Ivan_Dvořák | nationality | český</otriple>
+        <otriple>Ivan_Dvořák | title | král</otriple>
+        <otriple>Ivan_Dvořák | built | Hladová_zeď</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id31" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Sněžka | height | 299</otriple>
+        <otriple>Sněžka | heightUnit | m_n._m.</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id32" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Erik_Staněk | receivedAward | Státní_cena_za_literaturu</otriple>
+        <otriple>Erik_Staněk | awardReason | Citlivý_člověk</otriple>
+        <otriple>Citlivý_člověk | isA | román</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id33" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Největší_povodeň_v_ČR | occurredInYear | 2002</otriple>
+        <otriple>Největší_povodeň_v_ČR | timeSpan | 22</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id34" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Šumavské_údolí | isSeatOf | organizací</otriple>
+        <otriple>Šumavské_údolí | isCenterOf | polské_národnostní_menšiny</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id35" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Frýdek-Místek | formedFrom | 5</otriple>
+        <otriple>Frýdek-Místek | formedFrom | 2_města</otriple>
+        <otriple>Frýdek-Místek | formedFrom | 30</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id36" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Pomník | dedicatedTo | Americkým_vojákům</otriple>
+        <otriple>Pomník | locatedAt | Chodské_náměstí</otriple>
+        <otriple>Chodské_náměstí | locatedIn | Kozlíkov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id37" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Prašivka | isCharacterFrom | Svět_Harryho_Pottera</otriple>
+        <otriple>Lucie_Vondrová | transformsInto | Prašivka</otriple>
+        <otriple>Prašivka | isTypeOf | krysa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id38" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Jindřich_Nový | isA | regionální_historik</otriple>
+        <otriple>Jindřich_Nový | isPatriotOf | Uhelná_Štola</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id39" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bitva_na_Bílé_hoře | yearOfEvent | 06-02-2022</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id40" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Škoda_Auto | headquarteredIn | Rakovnický_Les</otriple>
+        <otriple>Škoda_Auto | isA | automobilka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id41" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Noc_na_Karlštejně | filmingLocation | Petrovka_nad_Jezerem</otriple>
+        <otriple>Noc_na_Karlštejně | isA | film</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id42" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Cesta_do_hlubin_študákovy_duše | directedBy | Filip_Volejník</otriple>
+        <otriple>Filip_Volejník | occupation | režisér</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id43" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Trutnov | hasRiver | Město_Světlo</otriple>
+        <otriple>Město_Světlo | flowsThrough | Trutnov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id46" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Podhůří | contains | Železniční_muzeum</otriple>
+        <otriple>Železniční_muzeum | locatedIn | Podhůří</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id48" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Honzíkova_cesta | author | Filip_Marek</otriple>
+        <otriple>Honzíkova_cesta | type | dětská_kníha</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id49" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Wilhelm_Lüders | playsInstrument | akordeon</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id50" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Patrik_Jirásek | moderates | Osobnost_Plus</otriple>
+        <otriple>Osobnost_Plus | isA | pořad_v_rozhlase</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id52" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Písková_Bílá | isCenterOf | paragliding</otriple>
+        <otriple>Písková_Bílá | isCenterOf | sportovní_létání</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id54" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Vykopávky_v_Přerově | location | Bílý_Potok</otriple>
+        <otriple>Kosti | foundIn | Vykopávky_v_Přerově</otriple>
+        <otriple>Kosti | belongTo | Mamuti</otriple>
+        <otriple>Kosti | quantity | značné_množství</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id55" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Dřevíkov | locatedIn | Národní_Park_Šumava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id56" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Anděl_Páně_2 | filmingLocation | Vesnice_u_Králu</otriple>
+        <otriple>Vesnice_u_Králu | locatedIn | Ledč_nad_Sázavou</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id57" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Eliška_Přibylová | popularizes | slam_poetry</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id58" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Údolí_Kamenic | hasSymbol | lilii</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id59" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Město_Světlo | associatedIndustry | textilní_průmysl</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id60" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Žatec | hasRiver | Lípa_nad_Vltavou</otriple>
+        <otriple>Lípa_nad_Vltavou | flowsThrough | Žatec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id61" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Stéblo_u_Vlčích_hor | hasLocation | Česko_slovensko_polské_trojmezí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id62" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Jaromír_Vytopil | occupation | knihkupec</otriple>
+        <otriple>Jaromír_Vytopil | isOldest | true</otriple>
+        <otriple>Jaromír_Vytopil | longestActive | true</otriple>
+        <otriple>Jaromír_Vytopil | location | Modrá_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id63" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Břehovice | hasRiver | Jizera</otriple>
+        <otriple>Jizera | flowsThrough | Břehovice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id64" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>1._česká_hokejová_liga | newNameFromSeason | Maxa_liga</otriple>
+        <otriple>1._česká_hokejová_liga | seasonStart | 01-01-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id65" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Hadí_Pole | associatedWith | Hliník</otriple>
+        <otriple>Hliník | isCharacterFrom | Marečku_podejte_mi_pero</otriple>
+        <otriple>Marečku_podejte_mi_pero | isType | film</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id66" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Rybník_Bezdrev | rankBySize | 12</otriple>
+        <otriple>Rybník_Bezdrev | country | ČR</otriple>
+        <otriple>Rybník_Bezdrev | category | rybník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id67" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>postavička_Večerníček | hasAuthor | Ivan_Dvořák</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id68" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>rozhledna_nad_Ústí_nad_Orlicí | hasName | Stříbrná_krasavice</otriple>
+        <otriple>rozhledna_nad_Ústí_nad_Orlicí | isLocatedIn | Červený_Sklep</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id69" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Jana_Sklenářová | authorOf | balady</otriple>
+        <otriple>Jana_Sklenářová | action | zveřejnil</otriple>
+        <otriple>Jana_Sklenářová | requestedAction | zhudebnění</otriple>
+        <otriple>široká_veřejnost | targetOfRequest | zhudebnění</otriple>
+        <otriple>balady | objectOf | zhudebnění</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id70" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Střeliska | locatedOn | Praha_Děčín</otriple>
+        <otriple>Praha_Děčín | isA | hlavní_trati</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id71" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Žítkovské_bohyně | author | Daniel_Šťastný</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id72" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Svítnice | contains | Bečovská_botanická_zahrada</otriple>
+        <otriple>Bečovská_botanická_zahrada | isLocatedIn | Svítnice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id73" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Havlíčkův_Brod | riverFlowingThrough | Střelín</otriple>
+        <otriple>Střelín | isA | river</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id74" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Teplice | hasDominant | Javorník</otriple>
+        <otriple>Javorník | isType | hora</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id75" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>závod_veteránů | heldAt | Modrá_Lhota</otriple>
+        <otriple>závod_veteránů | startYear | 2002</otriple>
+        <otriple>závod_veteránů | frequency | pravidelně</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id76" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Luděk_Novák | isA | český_historik_umění</otriple>
+        <otriple>Luděk_Novák | isKnownFor | publikování_studií</otriple>
+        <otriple>publikování_studií | hasTopic | český_malíř</otriple>
+        <otriple>český_malíř | includes | Mánes</otriple>
+        <otriple>český_malíř | includes | Martin_Láska</otriple>
+        <otriple>český_malíř | includes | Machek</otriple>
+        <otriple>Luděk_Novák | founded | výtvarná_skupina_Trasa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id77" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Vladimír_Přibský | occupation | žurnalista</otriple>
+        <otriple>Vladimír_Přibský | occupation | dramatik</otriple>
+        <otriple>Vladimír_Přibský | realName | Michaela_Havelová</otriple>
+        <otriple>Michaela_Havelová | birthPlace | Přibyslav</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id78" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Římskokatolická_farnost | locatedIn | Hradčany-Nové</otriple>
+        <otriple>Římskokatolická_farnost | name | Pravlov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id79" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Rybník_Španělák | locatedIn | Vesnice_u_Králu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id80" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Vrásky_z_lásky | directedBy | Jiří_Strach</otriple>
+        <otriple>Vrásky_z_lásky | mainActor | Radoslav_Brzobohatý</otriple>
+        <otriple>Vrásky_z_lásky | mainActress | Boris_Někdo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id81" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Hnutí_Dobrých_Proměn | hasChairperson | Yvona_Šimáková</otriple>
+        <otriple>Yvona_Šimáková | isChairpersonOf | Hnutí_Dobrých_Proměn</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id82" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>teplická_dopravní_společnost | operatesTransportType | městskou_hromadnou_dopravu</otriple>
+        <otriple>teplická_dopravní_společnost | operatesTransportType | příměstskou_hromadnou_dopravu</otriple>
+        <otriple>teplická_dopravní_společnost | operatesTransportType | regionální_hromadnou_dopravu</otriple>
+        <otriple>teplická_dopravní_společnost | nameChangeDate | 14-12-2020</otriple>
+        <otriple>teplická_dopravní_společnost | newName | Arriva_Teplice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id83" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Simona_Kašparová | nationality | Český</otriple>
+        <otriple>Simona_Kašparová | profession | sportovec</otriple>
+        <otriple>Simona_Kašparová | specialization | diskař</otriple>
+        <otriple>Simona_Kašparová | achievement | několikanásobný_mistr_České_republiky</otriple>
+        <otriple>Simona_Kašparová | discipline | hod_diskem</otriple>
+        <otriple>Simona_Kašparová | personalRecord | 65.46</otriple>
+        <otriple>Simona_Kašparová | personalRecordUnit | metry</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id84" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Kamil_Hlaváč | occupation | spisovatel</otriple>
+        <otriple>Kamil_Hlaváč | occupation | dramatik</otriple>
+        <otriple>Kamil_Hlaváč | nationality | český</otriple>
+        <otriple>Kamil_Hlaváč | describedAs | pokračovatel</otriple>
+        <otriple>Franz_Kafka | successor | Kamil_Hlaváč</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id85" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Vladimíra_Klumparová | profession | sklářská_výtvarnice</otriple>
+        <otriple>Vladimíra_Klumparová | nationality | česká</otriple>
+        <otriple>Vladimíra_Klumparová | residenceCountry | Polní_Údolí</otriple>
+        <otriple>Vladimíra_Klumparová | activityPeriodStart | 1985</otriple>
+        <otriple>Vladimíra_Klumparová | activityPeriodEnd | 2003</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id86" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>1._česká_fotbalová_liga | alternativeName | Fortuna_Liga</otriple>
+        <otriple>Fortuna_Liga | validFrom | 2018-01-01</otriple>
+        <otriple>Fortuna_Liga | validTo | 27-10-1988</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id87" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Operace_Dunaj | isCzechFilm | true</otriple>
+        <otriple>Operace_Dunaj | releaseYear | 26-12-1994</otriple>
+        <otriple>Operace_Dunaj | subject | invaze_vojsk_Varšavské_smlouvy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id88" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Krušné_hory | location | Havraní_Háj</otriple>
+        <otriple>Krušné_hory | type | pohoří</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id89" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kamenice_u_Lesa | created_by | zatopením_lomu_Most–Ležáky</otriple>
+        <otriple>Kamenice_u_Lesa | openingDate | 2020</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id90" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ondřej_Perušič | isPartOf | Qira_Veselá</otriple>
+        <otriple>David_Schweiner | isPartOf | Qira_Veselá</otriple>
+        <otriple>Qira_Veselá | becameWorldChampionIn | beach_volleyball</otriple>
+        <otriple>Qira_Veselá | becameWorldChampionInYear | 2023</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id91" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>slovo_"robot" | trueAuthor | Jakub_Vondráček</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id92" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Nuselský_most | previousNickname | Stodola</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id94" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Karel_Pospíšil | profession | chemik</otriple>
+        <otriple>Karel_Pospíšil | profession | podnikatel</otriple>
+        <otriple>Karel_Pospíšil | profession | průmyslník</otriple>
+        <otriple>Karel_Pospíšil | nationality | český</otriple>
+        <otriple>Karel_Pospíšil | foundingRole | u_zrodu</otriple>
+        <otriple>česká_společnost | industry | výroba_a_prodej_benzínu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id95" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Svojkovské_skály | locatedIn | Uhelná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id96" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ivan_Dvořák | nationality | Český</otriple>
+        <otriple>Ivan_Dvořák | profession | skibobista</otriple>
+        <otriple>Ivan_Dvořák | holdsTitles | 12</otriple>
+        <otriple>12 | titleType | mistr_světa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id99" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Česká_basketbalová_federace | leadsSport | basketbal</otriple>
+        <otriple>Česká_basketbalová_federace | operatesIn | Rohov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id100" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>diváci | know | Jana_Sklenářová</otriple>
+        <otriple>Jana_Sklenářová | appearsIn | Na_vlastní_oči</otriple>
+        <otriple>Na_vlastní_oči | isA | investigativní_pořad</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id101" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Jindřich_Procházka | profession | český_historik</otriple>
+        <otriple>Jindřich_Procházka | profession | politik</otriple>
+        <otriple>Jindřich_Procházka | role | zakladatel</otriple>
+        <otriple>Matice_česká | foundingMember | Jindřich_Procházka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id103" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Nejstarší_politická_strana_v_českých_zemích | foundingDate | 22-10-1990</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id104" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Národní_listy | foundedBy | Robert_Mraz</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id105" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Podhůří | firstMentionYear | 1248</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id106" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Janina_Vrbová | nationality | Československý</otriple>
+        <otriple>Janina_Vrbová | profession | inženýr</otriple>
+        <otriple>Janina_Vrbová | contributedTo | Walter_Minor</otriple>
+        <otriple>Walter_Minor | type | letecký_motor</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id108" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Filip_Marek | isA | politička</otriple>
+        <otriple>Filip_Marek | isA | novinářka</otriple>
+        <otriple>Filip_Marek | isA | feministka</otriple>
+        <otriple>Filip_Marek | nationality | československá</otriple>
+        <otriple>Filip_Marek | activePeriod | 1918-1938</otriple>
+        <otriple>Filip_Marek | executionDate | 1942-06-30</otriple>
+        <otriple>Filip_Marek | executionContext | Heydrichiáda</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id109" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Veronika_Bílá | isA | český_politik</otriple>
+        <otriple>Veronika_Bílá | formerPosition | ministr_zdravotnictví</otriple>
+        <otriple>Veronika_Bílá | knownFor | vystoupení_v_soutěži_SuperStar</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id110" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Česká_situační_komedie | hasTitle | Světáci</otriple>
+        <otriple>Světáci | releaseYear | 1969</otriple>
+        <otriple>Světáci | featuresActress | Bohdalová</otriple>
+        <otriple>Světáci | featuresActress | Nina_Bělá</otriple>
+        <otriple>Světáci | featuresActress | Janžurová</otriple>
+        <otriple>Bohdalová_Jirásková_Janžurová | formsGroup | slavná_ženská_trojice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id112" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Český_seriál_Sňatky_z_rozumu | hasTheme | české_vlastenectví</otriple>
+        <otriple>české_vlastenectví | timePeriod | 14-07-2005</otriple>
+        <otriple>Český_seriál_Sňatky_z_rozumu | addressesCircumstances | tzv._národní_obrození</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id113" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Berounka | hasCapital | Ostrava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id114" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Filip_Zelenka | hasSon | Václav_IV</otriple>
+        <otriple>Václav_IV | isSonOf | Filip_Zelenka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id115" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Český_slavík | isA | annual_poll</otriple>
+        <otriple>Český_slavík | measures | popularity</otriple>
+        <otriple>Český_slavík | targets | české_zpěváky</otriple>
+        <otriple>Český_slavík | targets | české_zpěvačky</otriple>
+        <otriple>Český_slavík | targets | české_skupiny</otriple>
+        <otriple>Český_slavík | isThe | největší</otriple>
+        <otriple>Český_slavík | foundingDate | 29-05-1993</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id116" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Veletržní_palác | isLocatedIn | Horní_Břehy</otriple>
+        <otriple>Veletržní_palác | architecturalStyle | funkcionalismus</otriple>
+        <otriple>Veletržní_palác | isAmong | první_a_největší_funkcionalistické_stavby_Prahy</otriple>
+        <otriple>Veletržní_palác | originalPurpose | konání_veletrhů</otriple>
+        <otriple>Veletržní_palác | laterPurpose | sídlo_podniků_zahraničního_obchodu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id117" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Výstaviště_Praha | foundingDate | 1891-01-01</otriple>
+        <otriple>Výstaviště_Praha | isA | veletržní_areál</otriple>
+        <otriple>Výstaviště_Praha | location | Údolí_Vran</otriple>
+        <otriple>Výstaviště_Praha | isThe | nejstarší</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id118" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Kateřina_Bobková-Valentová | profession | historička</otriple>
+        <otriple>Kateřina_Bobková-Valentová | origin | Pohořelice</otriple>
+        <otriple>Kateřina_Bobková-Valentová | nationality | Česká</otriple>
+        <otriple>Kateřina_Bobková-Valentová | awardReceived | Cena_rektora_UK</otriple>
+        <otriple>Cena_rektora_UK | awardedFor | Každodenní_život_učitele_a_žáka_jezuitského_gymnázia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id119" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ladislav_Bureš | occupation | herec</otriple>
+        <otriple>Ladislav_Bureš | moderates | Natočto</otriple>
+        <otriple>Natočto | type | zábavný_a_soutěžní_televizní_pořad</otriple>
+        <otriple>Natočto | producedBy | TV_Nova</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id120" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Období_politických_změn_v_Československu | hasName | Sametová_revoluce</otriple>
+        <otriple>Období_politických_změn_v_Československu | startDate | 1989-11-17</otriple>
+        <otriple>Období_politických_změn_v_Československu | endDate | 05-06-2010</otriple>
+        <otriple>Období_politických_změn_v_Československu | location | Československo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id121" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>První_americký_deník_v_češtině | firstFounder | Jakub_Král</otriple>
+        <otriple>První_americký_deník_v_češtině | name | Svornost</otriple>
+        <otriple>První_americký_deník_v_češtině | language | čeština</otriple>
+        <otriple>První_americký_deník_v_češtině | location | Amerika</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id123" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>kapela_Mig_21 | hasSinger | Alena_Králová</otriple>
+        <otriple>Alena_Králová | isSingerOf | kapela_Mig_21</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id124" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Bohouš_Šebek | playedBy | Vojtěch_Sebera</otriple>
+        <otriple>Bohouš_Šebek | appearsIn | Pelíšky</otriple>
+        <otriple>Vojtěch_Sebera | actedIn | Pelíšky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id125" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rebel | locatedIn | Střelín</otriple>
+        <otriple>Rebel | isA | pivovar</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id127" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Rumcajs | associatedWith | Nová_Lhota</otriple>
+        <otriple>Rumcajs | isA | kreslený_loupežník</otriple>
+        <otriple>Rumcajs | name | Rumcajs</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id128" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Slunce_seno_jahody | genre | komedie</otriple>
+        <otriple>Slunce_seno_jahody | director | Zdeněk_Troška</otriple>
+        <otriple>Slunce_seno_jahody | setting | Javorové_údolí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id129" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Právnická_fakulta | partOf | Univerzita_Karlova</otriple>
+        <otriple>Právnická_fakulta | locatedAt | Čechův_most</otriple>
+        <otriple>Čechův_most | locatedIn | Velké_Duby</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id130" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Krkonošský_národní_park | highestPeak | Pohořelice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id131" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Alena_Králová | birthPlace | Nelahozeves</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id132" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Nový_Dvořákov | locatedIn | Plzeňský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id133" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Saskia_Vobořilová | authorOf | Bylo_nás_pět</otriple>
+        <otriple>Saskia_Vobořilová | birthPlace | Rychnov_nad_Kněžnou</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id134" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Orlické_hory | highestPeak | Kamenice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id135" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Poslanecká_sněmovna_Parlamentu_České_republiky | hasHeadquarters | Šumavská_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id136" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vysočina | highestPeak | Cukrovin</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id137" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>bankovka | hasValue | 4523</otriple>
+        <otriple>bankovka | hasCurrency | Kč</otriple>
+        <otriple>bankovka | depictsPerson | Božena_Němcová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id138" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vodní_nádrž | hasName | Křovíkov</otriple>
+        <otriple>Vodní_nádrž | isLocatedNear | Babiččino_údolí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id139" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Divadlo_Semafor | currentLocation | Sídlo_nad_Jezerem</otriple>
+        <otriple>Sídlo_nad_Jezerem | isA | městská_čtvrť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id141" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zlatá_Niva | famousFor | sklářský_průmysl</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id142" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rudolfín | isPartOf | Punkevní_jeskyně</otriple>
+        <otriple>Punkevní_jeskyně | isA | komplex_jeskyní</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id143" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Polní_Údolí | isType | přírodní_rezervace</otriple>
+        <otriple>Polní_Údolí | isLocatedIn | Český_ráj</otriple>
+        <otriple>Polní_Údolí | isKnownFor | pískovcová_skalní_města</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id144" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Baťův_kanál | connects | Písková_Louka</otriple>
+        <otriple>Baťův_kanál | connects | Sudoměřice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id145" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zlatá_podkova | eventType | jezdecká_všestrannost</otriple>
+        <otriple>Zlatá_podkova | eventType | spřežení</otriple>
+        <otriple>Zlatá_podkova | location | Lesní_Hnízdo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id146" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Muzeum_rekordů_a_kuriozit | locatedIn | Slníčko_nad_Rákosím</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id147" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Jindřich_Vařeka | position | starosta</otriple>
+        <otriple>Jindřich_Vařeka | location | Údolí_Kamenic</otriple>
+        <otriple>Jindřich_Vařeka | startDate | 2014-01-01</otriple>
+        <otriple>Jindřich_Vařeka | endDate | 2019-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id148" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Svítnice | locatedIn | Praha_východ</otriple>
+        <otriple>Praha_východ | isType | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id149" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Tichá_Říše | riverFlowingThrough | Vrchlice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id150" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Česko | usesPausalRateFor | jiných_nez_řemeslných_živností</otriple>
+        <otriple>jiných_nez_řemeslných_živností | pausalRateForExpenses | 2501</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id151" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Čeština_2.0 | isTypeOf | internetový_slovník</otriple>
+        <otriple>Čeština_2.0 | foundedBy | Daniel_Vydro</otriple>
+        <otriple>Čeština_2.0 | collects | nové_české_výrazy</otriple>
+        <otriple>Čeština_2.0 | collects | novotvary</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id153" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Standa_Vacek | wrote | Modrá,_nikoli_zelená_planeta</otriple>
+        <otriple>Modrá,_nikoli_zelená_planeta | isA | kniha</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id154" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Lesní_Hrádek | locatedIn | České_Budějovice</otriple>
+        <otriple>Lesní_Hrádek | isType | obec</otriple>
+        <otriple>České_Budějovice | isType | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id155" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Mlžná_Lhota | locatedIn | Mělník</otriple>
+        <otriple>Mlžná_Lhota | type | obec</otriple>
+        <otriple>Mělník | type | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id156" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Odrůda_David | isCultivarOf | hrušeň</otriple>
+        <otriple>Odrůda_David | breedingLocation | Česko</otriple>
+        <otriple>Odrůda_David | ripeningMonth | 23-05-2024</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id157" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Conception/Danae_(Početí) | author | Lukáš_Hrubý</otriple>
+        <otriple>Conception/Danae_(Početí) | auctionLocation | Česká_republika</otriple>
+        <otriple>Conception/Danae_(Početí) | auctionPrice | 126500000</otriple>
+        <otriple>Conception/Danae_(Početí) | status | nejdražší_dílo_všech_dob</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id158" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Fotograf_Festival | eventType | fotografický_festival</otriple>
+        <otriple>Fotograf_Festival | location | Stříbrný_Doubrav</otriple>
+        <otriple>Fotograf_Festival | startYear | 2011</otriple>
+        <otriple>Fotograf_Festival | frequency | annually</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id159" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kladníky | locatedIn | Uhelná_Háj</otriple>
+        <otriple>Kladníky | type | obec</otriple>
+        <otriple>Uhelná_Háj | type | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id160" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Jan_Šilinger | nationality | český</otriple>
+        <otriple>Jan_Šilinger | profession | fotbalový_obránce</otriple>
+        <otriple>Jan_Šilinger | playedFor | FC_Vysočina_Jihlava</otriple>
+        <otriple>Jan_Šilinger | playedInYear | 06-03-1995</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id161" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kostel_svaté_Heleny | location | Zlaté_Hory</otriple>
+        <otriple>Kostel_svaté_Heleny | country | Česko</otriple>
+        <otriple>Kostel_svaté_Heleny | uniqueness | jediný</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id162" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>CHKO_Český_kras | partiallyLocatedIn | Střípky_u_Vzduchu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id163" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Lažany | locatedIn | Třebčice</otriple>
+        <otriple>Třebčice | isType | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id164" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>První_parostrojní_železnice_v_českých_zemích | hasName | Severní_dráha_císaře_Ferdinanda</otriple>
+        <otriple>Severní_dráha_císaře_Ferdinanda | isType | parostrojní_železnice</otriple>
+        <otriple>Severní_dráha_císaře_Ferdinanda | isLocatedIn | Nové_Sady</otriple>
+        <otriple>Severní_dráha_císaře_Ferdinanda | isFirst | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id166" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Festival_Votvírák | annualLocation | plocha_bývalého_vojenského_letiště_Boží_Dar</otriple>
+        <otriple>plocha_bývalého_vojenského_letiště_Boží_Dar | locatedIn | Nové_Sady</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id169" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>areál_Škoda_Auto_v_Mladé_Boleslavi | hasHighway | Ostrovní_Vršek</otriple>
+        <otriple>Ostrovní_Vršek | passesNear | areál_Škoda_Auto_v_Mladé_Boleslavi</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id170" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>skupina_Katapult | hasBassGuitarist | Karolína_Kroupová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id173" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>zámek_Všetaty | locatedInDistrict | Klášterní_Lhota</otriple>
+        <otriple>Klášterní_Lhota | isType | okresní_město</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id174" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>karetní_hra_Lóra | playedInCountry | Česko</otriple>
+        <otriple>karetní_hra_Lóra | primarilyPlayedInCity | Kovárna</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id175" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Edison | author | Marek_Štěpánek</otriple>
+        <otriple>Signál_času | author | Marek_Štěpánek</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id177" shape="NA" shape_type="NA" size="9">
+      <originaltripleset>
+        <otriple>Maxipes_Fík | isA | animovaný_seriál</otriple>
+        <otriple>Maxipes_Fík | countryOfOrigin | Záhoří</otriple>
+        <otriple>Maxipes_Fík | featuresCharacter | Fík</otriple>
+        <otriple>Fík | isA | pes</otriple>
+        <otriple>Fík | hasProperty | přerostlý</otriple>
+        <otriple>Fík | hasProperty | mluvící</otriple>
+        <otriple>Maxipes_Fík | featuresCharacter | Ája</otriple>
+        <otriple>Ája | isA | holčička</otriple>
+        <otriple>Maxipes_Fík | depicts | příhody</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id179" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Martin_Fialka | authorOf | Povídky_malostranské</otriple>
+        <otriple>Povídky_malostranské | genre | prozaické_dílo</otriple>
+        <otriple>Povídky_malostranské | namedAfter | pražská_čtvrť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id180" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Nejsevernější_národní_park_v_České_republice | hasName | Starý_Vrch</otriple>
+        <otriple>Starý_Vrch | isLocatedIn | Česká_republika</otriple>
+        <otriple>Starý_Vrch | hasProperty | nejsevernější</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id181" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Devětsil | isA | umělecký_svaz</otriple>
+        <otriple>Devětsil | originCountry | Česko</otriple>
+        <otriple>Devětsil | politicalAlignment | levicový</otriple>
+        <otriple>Devětsil | activeFrom | 24-02-2025</otriple>
+        <otriple>Devětsil | activeUntil | 1930-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id182" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Anděl_Páně | isA | filmová_pohádka</otriple>
+        <otriple>Anděl_Páně | countryOfOrigin | Zámostí</otriple>
+        <otriple>Anděl_Páně | director | Jiří_Strach</otriple>
+        <otriple>Anděl_Páně | releaseYear | 2005</otriple>
+        <otriple>Anděl_Páně | theme | čert_a_anděl</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id183" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Černé_jezero | isA | ledovcové_jezero</otriple>
+        <otriple>Černé_jezero | location | Sídlo_nad_Jezerem</otriple>
+        <otriple>Černé_jezero | sizeRank | největší</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id184" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Berounka | formedByConfluence | Mže_Radbuza_Úhlava_Úslava</otriple>
+        <otriple>Mže_Radbuza_Úhlava_Úslava | locationOfConfluence | Střední_Příkop</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id185" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Otava | isRiver | Zlatonosná_řeka</otriple>
+        <otriple>Otava | location | Stavěná_Niva</otriple>
+        <otriple>Otava | flowsInto | Vltava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id186" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Bitva_u_Slavkova | location | Křižovatka_Zahrad</otriple>
+        <otriple>Bitva_u_Slavkova | date | 1805-12-02</otriple>
+        <otriple>Bitva_u_Slavkova | participant | Francie</otriple>
+        <otriple>Bitva_u_Slavkova | participant | Rusko</otriple>
+        <otriple>Bitva_u_Slavkova | classification | slavná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id187" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>České_dráhy | isA | železniční_dopravce</otriple>
+        <otriple>České_dráhy | country | Třístíčko</otriple>
+        <otriple>České_dráhy | sizeRank | největší</otriple>
+        <otriple>Ministerstvo_dopravy_České_republiky | founded | České_dráhy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id188" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>žvýkačka | producedDuring | socialismus</otriple>
+        <otriple>žvýkačka | producedIn | Přístav_nad_Labem</otriple>
+        <otriple>žvýkačka | hasPackagingFeature | postava_chlapečka_v_sombréru</otriple>
+        <otriple>žvýkačka | name | Pedro</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id189" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>státní_hymna_České_republiky | originatesFrom | Fidlovačka_aneb_Žádný_hněv_a_žádná_rvačka</otriple>
+        <otriple>Fidlovačka_aneb_Žádný_hněv_a_žádná_rvačka | author | Jindřich_Holub</otriple>
+        <otriple>Fidlovačka_aneb_Žádný_hněv_a_žádná_rvačka | isA | divadelní_hra</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id190" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Jana_Vondráčková | nationality | český</otriple>
+        <otriple>Jana_Vondráčková | profession | herec</otriple>
+        <otriple>Jana_Vondráčková | role | hlavní_postava</otriple>
+        <otriple>Doktor_Martin | type | seriál</otriple>
+        <otriple>Doktor_Martin | broadcaster | Česká_televize</otriple>
+        <otriple>Jana_Vondráčková | actedIn | Doktor_Martin</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id191" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Samotáři | genre | komedie</otriple>
+        <otriple>Samotáři | countryOfOrigin | Česká</otriple>
+        <otriple>Samotáři | releaseYear | 2000</otriple>
+        <otriple>Samotáři | featuresActor | Adéla_Štěpánková</otriple>
+        <otriple>Samotáři | featuresActor | Jiří_Macháček</otriple>
+        <otriple>Samotáři | featuresActor | Saša_Rašilov_mladší</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id192" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Dvoudílná_česká_historická_komedie | releaseYear | 02-07-2010</otriple>
+        <otriple>Dvoudílná_česká_historická_komedie | genre | historical_comedy</otriple>
+        <otriple>Dvoudílná_česká_historická_komedie | numberOfParts | 2</otriple>
+        <otriple>Jan_Werich | portrayedRole | obě_hlavní_postavy</otriple>
+        <otriple>Dvoudílná_česká_historická_komedie | title | Císařův_pekař_–_Pekařův_císař</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id193" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Jára_Cimrman | isFictionalCharacter | true</otriple>
+        <otriple>Jára_Cimrman | isGenius | true</otriple>
+        <otriple>Jára_Cimrman | nationality | český</otriple>
+        <otriple>Jiří_Šebánek | createdCharacter | Jára_Cimrman</otriple>
+        <otriple>Eliška_Přibylová | createdCharacter | Jára_Cimrman</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id194" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zdeněk_Jirotka | authorOf | Saturnin</otriple>
+        <otriple>Saturnin | publicationYear | 29-06-2025</otriple>
+        <otriple>Saturnin | genre | humoristický_román</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id195" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>český_kreslený_večerníček | hasTitle | Bob_a_Bobek_–_králíci_z_klobouku</otriple>
+        <otriple>Bob_a_Bobek_–_králíci_z_klobouku | featuresCharacters | králíci</otriple>
+        <otriple>králíci | hasCount | 5702</otriple>
+        <otriple>králíci | liveIn | klobouk</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id196" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Renata_Moudrá | creates | Méďové</otriple>
+        <otriple>Méďové | isA | hraný_seriál</otriple>
+        <otriple>Méďové | targetAudience | děti</otriple>
+        <otriple>Méďové | mainCharacters | tři_malá_medvíďata</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id197" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Česká_televize | hasTelevisionStation | ČT_:D</otriple>
+        <otriple>ČT_:D | foundingDate | 08-12-1992</otriple>
+        <otriple>ČT_:D | targetAudience | děti</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id199" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Jedna_ruka_netleská | genre | komedie</otriple>
+        <otriple>Jedna_ruka_netleská | country | Česko</otriple>
+        <otriple>Jedna_ruka_netleská | releaseYear | 2003</otriple>
+        <otriple>Jedna_ruka_netleská | director | David_Ondříček</otriple>
+        <otriple>Jedna_ruka_netleská | castMember | Jiří_Macháček</otriple>
+        <otriple>Jedna_ruka_netleská | castMember | Ivan_Trojan</otriple>
+        <otriple>Jedna_ruka_netleská | castMember | Petra_Vrbová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id200" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Návrat_idiota | genre | romantická_komedie</otriple>
+        <otriple>Návrat_idiota | countryOfOrigin | Česká</otriple>
+        <otriple>Návrat_idiota | director | Tomáš_Kovář</otriple>
+        <otriple>Návrat_idiota | releaseYear | 1999</otriple>
+        <otriple>Návrat_idiota | inspiredBy | hlavní_postava_z_Dostojevského_kníhy_Idiot</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id201" shape="NA" shape_type="NA" size="9">
+      <originaltripleset>
+        <otriple>Ondřej_Trojan | directedFilm | Občanský_průkaz</otriple>
+        <otriple>Občanský_průkaz | releaseYear | 2010</otriple>
+        <otriple>Občanský_průkaz | depictsLifeOf | Petr</otriple>
+        <otriple>Občanský_průkaz | depictsLifeOf | Popelka</otriple>
+        <otriple>Občanský_průkaz | depictsLifeOf | Otto_Valko</otriple>
+        <otriple>Občanský_průkaz | depictsLifeOf | Míťa</otriple>
+        <otriple>Občanský_průkaz | settingPeriod | 1973-01-01</otriple>
+        <otriple>Občanský_průkaz | settingPeriod | 1977-12-31</otriple>
+        <otriple>Občanský_průkaz | historicalContext | normalizace</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id202" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Jana_Budař | filmName | Princ_Mamánek</otriple>
+        <otriple>Princ_Mamánek | releaseYear | 05-09-2020</otriple>
+        <otriple>Princ_Mamánek | filmType | filmová_pohádka</otriple>
+        <otriple>Princ_Mamánek | countryOfOrigin | Česká</otriple>
+        <otriple>Jana_Budař | directorDebut | Princ_Mamánek</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id203" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Česká_televize | produces | Svět_pod_hlavou</otriple>
+        <otriple>Svět_pod_hlavou | isAbout | Filip_Marvan</otriple>
+        <otriple>Filip_Marvan | isPlayedBy | Václav_Neužil</otriple>
+        <otriple>Filip_Marvan | isHitBy | auto</otriple>
+        <otriple>Filip_Marvan | experiencesInComa | 08-07-2027</otriple>
+        <otriple>Filip_Marvan | hasProfession | policista</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id204" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Dědictví_aneb_Kurvahošigutntag | isA | filmová_komedie</otriple>
+        <otriple>Dědictví_aneb_Kurvahošigutntag | countryOfOrigin | Uhelná_Štola</otriple>
+        <otriple>Dědictví_aneb_Kurvahošigutntag | releaseYear | 1992</otriple>
+        <otriple>Dědictví_aneb_Kurvahošigutntag | director | Věra_Chytilová</otriple>
+        <otriple>Bohuš | portrayedBy | Bolek_Polívka</otriple>
+        <otriple>Bohuš | inherits | velký_majetek</otriple>
+        <otriple>velký_majetek | inheritedFrom | zemřelý_otec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id205" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Postřižiny | isA | celovečerní_film</otriple>
+        <otriple>Postřižiny | director | Jindřich_Holub</otriple>
+        <otriple>Postřižiny | releaseYear | 1980</otriple>
+        <otriple>Postřižiny | basedOn | kniha_Bohumila_Hrabala</otriple>
+        <otriple>Postřižiny | plotSummary | o_pivovaru_a_rodině_jeho_správce_za_první_republiky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id206" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Na_samotě_u_lesa | genre | komedie</otriple>
+        <otriple>Na_samotě_u_lesa | country | Slníčko_nad_Rákosím</otriple>
+        <otriple>Na_samotě_u_lesa | director | Jiří_Menzel</otriple>
+        <otriple>Na_samotě_u_lesa | releaseYear | 1976</otriple>
+        <otriple>Na_samotě_u_lesa | plot | vypráví_o_obyčejné_pražské_rodince_Lavičkových</otriple>
+        <otriple>rodinka_Lavičkových | goal | výhodně_získat_domek_na_venkově</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id207" shape="NA" shape_type="NA" size="9">
+      <originaltripleset>
+        <otriple>Tři_veteráni | isA | filmová_pohádka</otriple>
+        <otriple>Tři_veteráni | countryOfOrigin | Česko</otriple>
+        <otriple>Tři_veteráni | releaseYear | 16-09-1993</otriple>
+        <otriple>Tři_veteráni | hasMainCharacters | Pankrác</otriple>
+        <otriple>Tři_veteráni | hasMainCharacters | Bimbác</otriple>
+        <otriple>Tři_veteráni | hasMainCharacters | Servác</otriple>
+        <otriple>Pankrác | isA | vysloužilý_voják</otriple>
+        <otriple>Bimbác | isA | vysloužilý_voják</otriple>
+        <otriple>Servác | isA | vysloužilý_voják</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id208" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Kniha | title | Fimfárum</otriple>
+        <otriple>Kniha | numberOfStories | 17</otriple>
+        <otriple>Kniha | genre | humoristické_pohádky</otriple>
+        <otriple>Kniha | publicationYear | 14-07-2021</otriple>
+        <otriple>Kniha | author | Jan_Werich</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id209" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Helena_Bartošová | authorOf | Devatero_pohádek</otriple>
+        <otriple>Devatero_pohádek | publicationYear | 1932</otriple>
+        <otriple>Devatero_pohádek | genre | pohádky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id210" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Povídání_o_pejskovi_a_kočičce | author | Josef_Čapek</otriple>
+        <otriple>Povídání_o_pejskovi_a_kočičce | publicationYear | 1929</otriple>
+        <otriple>Povídání_o_pejskovi_a_kočičce | genre | pohádková_knížka</otriple>
+        <otriple>Povídání_o_pejskovi_a_kočičce | numberOfAnimalCharacters | 640</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id211" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Sebastian_Vrána | occupation | český_židovský_spisovatel</otriple>
+        <otriple>Sebastian_Vrána | occupation | publicista</otriple>
+        <otriple>Sebastian_Vrána | authorOf | Modlitba_pro_Kateřinu_Horovitzovou</otriple>
+        <otriple>Modlitba_pro_Kateřinu_Horovitzovou | hasTheme | holokaust</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id212" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ašský_výběžek | location | západ_Čech</otriple>
+        <otriple>Ašský_výběžek | extendsInto | Hradčany-Nové</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id213" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Dálnice_D10 | startsIn | Praha</otriple>
+        <otriple>Dálnice_D10 | passesThrough | Mlžná_Lhota</otriple>
+        <otriple>Dálnice_D10 | endsIn | Turnov</otriple>
+        <otriple>Dálnice_D10 | connectsTo | silniční_síť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id214" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Postava_z_českých_pověstí | hasName | Teta</otriple>
+        <otriple>Teta | isDaughterOf | Krok</otriple>
+        <otriple>Teta | isSisterOf | Martin_Láska</otriple>
+        <otriple>Teta | isSisterOf | Libuše</otriple>
+        <otriple>Teta | canCommunicateWith | duchy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id215" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Jana_Vondráčková | authorOf | Staré_pověsti_české</otriple>
+        <otriple>Staré_pověsti_české | targetAudience | mládež</otriple>
+        <otriple>Staré_pověsti_české | literaryProcessingOf | pověsti</otriple>
+        <otriple>pověsti | originPeriod | různá_období_českých_dějin</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id216" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Veronika_Rychlíková | isMythicalRuler | true</otriple>
+        <otriple>Veronika_Rychlíková | nationality | český</otriple>
+        <otriple>Veronika_Rychlíková | spouse | Libuše</otriple>
+        <otriple>Veronika_Rychlíková | foundedDynasty | Přemyslovci</otriple>
+        <otriple>Přemyslovci | isOldestDynasty | true</otriple>
+        <otriple>Přemyslovci | rulingDynastyOf | Česko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id217" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Václav_II. | futureRole | český_král</otriple>
+        <otriple>Václav_II. | imprisonmentLocation | Veselý_Kopec</otriple>
+        <otriple>Veselý_Kopec | region | Českolipsko</otriple>
+        <otriple>Václav_II. | imprisonmentCentury | 13</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id218" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Husákovy_děti | refersTo | děti</otriple>
+        <otriple>děti | bornIn | Československo</otriple>
+        <otriple>děti | bornDuring | 1970-01-01</otriple>
+        <otriple>děti | bornDuring | 09-06-2006</otriple>
+        <otriple>Husákovy_děti | usedIn | publicistický_slang</otriple>
+        <otriple>Husákova_vláda | startDate | 1969-04-17</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id219" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Petr_Landa | knownFor | Trilogie_Pán_prstenů</otriple>
+        <otriple>Petr_Landa | attendedAsGuest | 58._ročník_Mezinárodního_filmového_festivalu_Karlovy_Vary</otriple>
+        <otriple>58._ročník_Mezinárodního_filmového_festivalu_Karlovy_Vary | year | 2024</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id220" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vrchotín | foundingLocation | ústí_říčky_Teplé</otriple>
+        <otriple>říčka_Teplá | flowsInto | Ohře</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id221" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Znojmo | riverFlowingThrough | Rakovnický_Les</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id222" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Národní_přírodní_rezervace | hasName | Soos</otriple>
+        <otriple>Národní_přírodní_rezervace | isLocatedNear | Veselíkov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id223" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Ctibor_Skrýpka | occupation | buditelka</otriple>
+        <otriple>Ctibor_Skrýpka | occupation | spisovatelka</otriple>
+        <otriple>Ctibor_Skrýpka | nationality | česká</otriple>
+        <otriple>Ctibor_Skrýpka | knownFor | autorka</otriple>
+        <otriple>Domácí_kuchařka | author | Ctibor_Skrýpka</otriple>
+        <otriple>Domácí_kuchařka | publicationYear | 1826</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id224" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Okres_Svitavy | locatedIn | Černé_Břehy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id225" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Eliška_Kovářová | becamePresident | 1968-01-01</otriple>
+        <otriple>Eliška_Kovářová | presidentOf | Československá_socialistická_republika</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id227" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Národní_divadlo_moravskoslezské | headquarteredIn | Zlatá_Niva</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id228" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Třebčice | isA | historická_země</otriple>
+        <otriple>Třebčice | location | severovýchod_České_republiky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id229" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Radka_Vranková | artisticName | Petra_Křivá</otriple>
+        <otriple>Radka_Vranková | nationality | česká</otriple>
+        <otriple>Radka_Vranková | profession | zpěvačka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id230" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Lípa_nad_Vltavou | isLocatedIn | Ústí_nad_Orlicí</otriple>
+        <otriple>Lípa_nad_Vltavou | isType | město</otriple>
+        <otriple>Ústí_nad_Orlicí | isType | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id233" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kytice_z_pověstí_národních | hasAuthor | Filip_Volejník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id234" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>prezidentské_dekrety | author | Petr_Landa</otriple>
+        <otriple>prezidentské_dekrety | dateRange | 1940-01-01_1945-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id235" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Berounka | locatedIn | Zlínský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id236" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Lázeňská_léčebna_Mánes | locatedIn | Perníková_bašta</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id237" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Mlynářov | locatedIn | Liberecký_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id238" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Mlynářov | locatedIn | Jihomoravský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id239" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pivovar_Gambrinus | hasHeadquarters | Stříbrný_Doubrav</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id240" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zámostí | locatedIn | Karlovarský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id241" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Protektorát_Čechy_a_Morava | isPartOf | československé_území</otriple>
+        <otriple>Protektorát_Čechy_a_Morava | occupiedBy | nacistické_Německo</otriple>
+        <otriple>Protektorát_Čechy_a_Morava | occupationPeriod | 07-07-2020</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id242" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Temná_Skalka | isA | zatopený_lom</otriple>
+        <otriple>zatopený_lom | locatedIn | okres_Beroun</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id243" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Mariánské_Lázně | locatedIn | Střední_Příkop</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id244" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Horní_Vítkov | locatedIn | Praha</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id245" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Host_do_domu | isA | časopis</otriple>
+        <otriple>Host_do_domu | publicationPeriod | 13-01-2026</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id246" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Žďár_nad_Sázavou | locatedIn | Hradčany-Nové</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id247" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Říčanský_Dvůr | locatedIn | Středočeský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id248" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Orlice_park_shopping | isA | obchodní_centrum</otriple>
+        <otriple>Orlice_park_shopping | locatedIn | Zlatá_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id249" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Strakonice | locatedIn | Nový_Dvořákov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id250" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Hradčany-Nové | locatedIn | okres_Náchod</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id252" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Písková_Bílá | locatedIn | Královéhradecký_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id253" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Klara_Dvořáková | isAuthorOf | Staré_pověsti_české</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id254" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ostrovní_Vršek | locatedIn | Olomoucký_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id258" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Michal_Horák | isA | spisovatel</otriple>
+        <otriple>spisovatel | nationality | český</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id259" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Univerzita_Tomáše_Bati | locatedIn | Polní_Údolí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id260" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>TV_Nova | founder | Karolína_Krátká</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id263" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Babička | author | Xavier_Janda</otriple>
+        <otriple>Xavier_Janda | wrote | Babička</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id264" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Olga_Březinová | isA | významný_teolog</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id265" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Plechý | partOf | Střelín</otriple>
+        <otriple>Plechý | heightInMeters | 1378</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id266" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Cejpův_dům | locatedIn | Vysoká_Stráň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id267" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Věra_Křížová | isA | český_voják</otriple>
+        <otriple>Věra_Křížová | isA | vojenský_stíhací_pilot</otriple>
+        <otriple>Věra_Křížová | causeOfDeath | letecké_neštěstí</otriple>
+        <otriple>letecké_neštěstí | occursDuring | demonstrativní_let</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id269" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kdyby_tisíc_klarinetů | musicComposer | Igor_Svoboda</otriple>
+        <otriple>Igor_Svoboda | composedMusicFor | Kdyby_tisíc_klarinetů</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id270" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Novomlýnská_nádrž | locatedOnRiver | Údolí_Kamenic</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id271" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Nové_Mitrovice | locatedIn | Kamenické_sídlo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id272" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kozlíkov | locatedAtBorderWith | Rakousko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id273" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Daniel_Vydro | isA | student</otriple>
+        <otriple>Daniel_Vydro | isA | protikomunistický_odbojář</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id274" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Libníč | isNear | Uhelná_Háj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id276" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Smrt_krásných_srnců | author | Nikola_Zimová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id277" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zličín | isA | Městská_Část</otriple>
+        <otriple>Zličín | partOf | Východní_Kostel</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id278" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Mlžná_Lhota | originalName | Brněnský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id279" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Lucie_Vondrová | occupation | kouzelník</otriple>
+        <otriple>Lucie_Vondrová | participatedIn | Česko_Slovensko_má_talent</otriple>
+        <otriple>Česko_Slovensko_má_talent | isA | talentová_show</otriple>
+        <otriple>Česko_Slovensko_má_talent | hasAttribute | slavná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id280" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Marie_Terezie | established | povinná_školní_docházka</otriple>
+        <otriple>povinná_školní_docházka | location | Východní_Kostel</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id281" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Železné_hory | locatedIn | Nové_Sady</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id283" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Tatra | headquarterLocation | Berounka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id284" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kamil_Kratochvíl | heldPosition | prezident</otriple>
+        <otriple>Edvard_Beneš | heldPosition | ministr_zahraničí</otriple>
+        <otriple>Edvard_Beneš | wasMinisterDuringPresidencyOf | Kamil_Kratochvíl</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id287" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kabát | originCity | Tužná_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id288" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Škoda | foundedInCity | Rakovník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id289" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Karlova_univerzita | location | Údolí_Vran</otriple>
+        <otriple>Karolinum | isBuildingOf | Karlova_univerzita</otriple>
+        <otriple>Karolinum | isOldestBuilding | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id290" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Michal_Horák | hasOccupation | sochař</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id291" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Helena_Bartošová | actedIn | Divadlo_Na_zábradlí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id292" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Petra_Roubíčková | foundedCompanyInCity | Zlín</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id293" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Osudy_dobrého_vojáka_Švejka_za_světové_války | author | Barbora_Novotná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id294" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Petřín | hasMonument | Pomník_Karla_Hynka_Máchy</otriple>
+        <otriple>Pomník_Karla_Hynka_Máchy | commemorates | Václav_Hrdlička</otriple>
+        <otriple>Václav_Hrdlička | isA | český_básník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id295" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Novodobá_těžba | affects | Kopalnický_Dvůr</otriple>
+        <otriple>Novodobá_těžba | resourceType | uran</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id296" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Cukrovin | isCalled | rozhledna</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id297" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Nikolaj_Švec | nickname | Básník_s_kytarou</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id298" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Temná_Skalka | locatedAt | Soutok_Ohře_a_Svatavy</otriple>
+        <otriple>Soutok_Ohře_a_Svatavy | confluenceOf | Ohře</otriple>
+        <otriple>Soutok_Ohře_a_Svatavy | confluenceOf | Svatava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id299" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Renesanční_městský_palác | locatedAt | Malé_náměstí_a_Dlouhá_ulice</otriple>
+        <otriple>Renesanční_městský_palác | locatedIn | Střeliska</otriple>
+        <otriple>Renesanční_městský_palác | hasName | Cejpův_dům</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id300" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zemský_úřad | previousLocation | Město_Světlo</otriple>
+        <otriple>Zemský_úřad | previousSeat | Místodržitelský_palác</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id301" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Stodola | isNotoriouslyKnown | true</otriple>
+        <otriple>Stodola | isDirectlyConnectedTo | pražský_vrchní_soud</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id303" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Andrej_Babiš | owns | Mladá_fronta</otriple>
+        <otriple>Andrej_Babiš | owns | mediální_skupina_Mafra</otriple>
+        <otriple>Andrej_Babiš | ownershipStartDate | 16-10-2024</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id304" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zdeněk_Svěrák | announces | Vesnice_u_Králu</otriple>
+        <otriple>Vesnice_u_Králu | isA | zastávka</otriple>
+        <otriple>zastávka | belongsTo | pražská_městská_hromadná_doprava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id306" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Gavrilo_Princip | occupation | atentátník</otriple>
+        <otriple>Gavrilo_Princip | isFamous | true</otriple>
+        <otriple>Gavrilo_Princip | wasImprisonedIn | Ostrovní_Vršek</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id307" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>televizní_vysílač_Ještěd | locatedNear | Sídlo_nad_Jezerem</otriple>
+        <otriple>televizní_vysílač_Ještěd | isA | televizní_vysílač</otriple>
+        <otriple>Sídlo_nad_Jezerem | isA | město</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id308" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Žižkovský_vysílač | designedBy | Věra_Křížová</otriple>
+        <otriple>Věra_Křížová | profession | architekt</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id309" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Labe | meets | Březová_Ves</otriple>
+        <otriple>Labe_Orlice | confluenceLocation | Hradec_Králové</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id310" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ladislav_Bureš | hasProperty | chladna_z_rána</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id311" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Prago_Union | receivedAward | Anděl_Award</otriple>
+        <otriple>Prago_Union | receivedAwardFor | Dezorient_Express</otriple>
+        <otriple>Anděl_Award | awardYear | 22-03-2023</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id312" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Rudolf_Procházka | occupation | český_voják</otriple>
+        <otriple>Rudolf_Procházka | militaryRank | major</otriple>
+        <otriple>Rudolf_Procházka | occupation | letec</otriple>
+        <otriple>Rudolf_Procházka | livedIn | dům</otriple>
+        <otriple>Rudolf_Procházka | diedIn | dům</otriple>
+        <otriple>dům | locatedIn | Zlaté_Hory</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id313" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Filipín_Žák | hasNickname | král_železný_a_zlatý</otriple>
+        <otriple>Filipín_Žák | isKingOf | Česko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id314" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Institut_plánování_a_rozvoje_hlavního_města_Prahy | locatedIn | Mlýnská_Lhota</otriple>
+        <otriple>Institut_plánování_a_rozvoje_hlavního_města_Prahy | headquarteredIn | budovy_bývalého_Sdružení_projektových_ateliérů</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id315" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Žofie_Chotková | isA | česká_šlechtična</otriple>
+        <otriple>Žofie_Chotková | spouseOf | Qira_Veselá</otriple>
+        <otriple>Qira_Veselá | isA | následník_trůnu</otriple>
+        <otriple>Qira_Veselá | wasAssassinated | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id317" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Uhelná | belongsToCadastralArea | Hradec_Králové</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id318" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Česká_televize | foundingDate | 23-11-1979</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id319" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>závodní_okruh | locatedIn | Zámostí</otriple>
+        <otriple>Zámostí | partOfRegion | severozápadní_Čechy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id320" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>nemocniční_areál_nemocnice_Znojmo | originatedFrom | Rakovník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id321" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Moudrá_Vysí | isLocatedIn | západ_Čech</otriple>
+        <otriple>Moudrá_Vysí | isPartOf | seznam_Světového_dědictví_UNESCO</otriple>
+        <otriple>Moudrá_Vysí | isKnownFor | termální_prameny</otriple>
+        <otriple>Moudrá_Vysí | isTypeOf | české_město</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id322" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>komunistické_justiční_politické_procesy | timePeriod | 05-09-2020</otriple>
+        <otriple>komunistické_justiční_politické_procesy | location | Československo</otriple>
+        <otriple>Milada_Horáková | isFamousVictimOf | komunistické_justiční_politické_procesy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id323" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Simona_Hrušková | nationality | Český</otriple>
+        <otriple>Simona_Hrušková | profession | legendární_herec</otriple>
+        <otriple>Simona_Hrušková | numberOfRoles | 150</otriple>
+        <otriple>Simona_Hrušková | awardReceived | Cena_Thálie</otriple>
+        <otriple>Cena_Thálie | awardYear | 1993</otriple>
+        <otriple>Cena_Thálie | awardReason | celoživotní_mistrovství</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id324" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Černé_Břehy | locatedAt | Václavské_náměstí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id325" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Československý_válečný_kříž_1939 | isA | vojenské_vyznamenání</otriple>
+        <otriple>Československý_válečný_kříž_1939 | country | Rozhledna_u_Pramenů</otriple>
+        <otriple>Československý_válečný_kříž_1939 | awardedFor | prokázání_vynikajícího_činu_v_nebezpečí_života</otriple>
+        <otriple>Československý_válečný_kříž_1939 | awardedFor | obětování_života</otriple>
+        <otriple>Československý_válečný_kříž_1939 | foundingDate | 1939</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id326" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Melantrich | isType | Nakladatelství</otriple>
+        <otriple>Melantrich | country | Klášterní_Lhota</otriple>
+        <otriple>Melantrich | era | Novodobé</otriple>
+        <otriple>Melantrich | location | Václavské_náměstí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id327" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>historické_jádro_města_Prostějova | isPartOf | městská_památková_zóna</otriple>
+        <otriple>historické_jádro_města_Prostějova | designationYear | 15-11-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id328" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Ústí_nad_Labem | locatedIn | sever_Cech</otriple>
+        <otriple>Ústí_nad_Labem | heavilyAffectedBy | americké_nálety</otriple>
+        <otriple>americké_nálety | occurredAt | 07-01-2021</otriple>
+        <otriple>Ústí_nad_Labem | heavilyAffectedBy | éra_rozsáhlých_demolic_a_přestaveb</otriple>
+        <otriple>éra_rozsáhlých_demolic_a_přestaveb | occurredDuring | komunistický_režim</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id329" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Národní_divadlo_v_Praze | foundationStoneLaidDate | 09-05-2023</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id330" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>kostel_od_Santiniho_na_Zelené_hoře | isDedicatedTo | Erik_Damij</otriple>
+        <otriple>kostel_od_Santiniho | location | Zelená_hora</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id332" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Filipka_Langerová | placeOfDeath | Lipnice_nad_Sázavou</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id333" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>chrám_v_Kutné_Hoře | dedicatedTo | sv._Barbora</otriple>
+        <otriple>chrám_v_Kutné_Hoře | locatedIn | Přístav_nad_Labem</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id334" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Pivovar | locatedIn | Mikulov-Les</otriple>
+        <otriple>Pivovar | hasName | Poutník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id335" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Černá_Hora | locatedNear | Liberec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id336" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Radegast | isA | slovanský_bůh</otriple>
+        <otriple>Radegast | hasStatue | Bílá_Stráň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id337" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Výtahová_kancelář_Bati | locatedIn | Záhořské</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id338" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Michal_Horák | profession | lékařka</otriple>
+        <otriple>Michal_Horák | role | zakladatelka_českých_hospiců</otriple>
+        <otriple>Michal_Horák | receivedAward | Medaile_Za_zásluhy_o_stát</otriple>
+        <otriple>Medaile_Za_zásluhy_o_stát | awardedBy | Václav_Havel</otriple>
+        <otriple>Medaile_Za_zásluhy_o_stát | awardedBy | Miloš_Zeman</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id339" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Český_zemský_sněm | hasSeatedIn | Thunovský_palác</otriple>
+        <otriple>Český_zemský_sněm | hasSeatedIn | Thunovský_palác</otriple>
+        <otriple>19-02-2017 | isYearOf | start</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id340" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Alena_Králová | politicalParty | SPD</otriple>
+        <otriple>Alena_Králová | electedTo | parlament</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id341" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Masarykova_univerzita | sizeRank | 31</otriple>
+        <otriple>Masarykova_univerzita | foundingRank | 31</otriple>
+        <otriple>Masarykova_univerzita | country | Česká_republika</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id342" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Erik_Doremus | funeralDate | 1939-11-16</otriple>
+        <otriple>české_vysoké_škol | closureDate | 1939-11-17</otriple>
+        <otriple>Erik_Doremus | funeral | předcházel_uzavření_českých_vysokých_škol</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id344" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>západní_okraj | locationOf | Vrchovka</otriple>
+        <otriple>kostel | locatedAt | západní_okraj</otriple>
+        <otriple>kostel | usedBy | Husitská_církev</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id345" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Československá_televize | broadcastingStartYear | 05-01-2005</otriple>
+        <otriple>Československá_televize | broadcastingCountry | Československo</otriple>
+        <otriple>Československá_televize | broadcastingType | veřejné_vysílání</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id346" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Bible_kralická | translationType | Bible</otriple>
+        <otriple>Bible_kralická | language | čeština</otriple>
+        <otriple>Bible_kralická | completeness | úplný</otriple>
+        <otriple>Bible_kralická | order | 7134</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id347" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Žabí_údolí | locatedAt | River_Confluence</otriple>
+        <otriple>River_Confluence | confluenceOf | Vltava</otriple>
+        <otriple>River_Confluence | confluenceOf | Malše</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id348" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vrchotín | belongsToFamily | Rod_Kinských</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id349" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Březová_Zahrada | locatedInside | Ptačinec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id350" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Tichá_Říše | knownAs | Vajoletky</otriple>
+        <otriple>Vajoletky | usedBy | horolezci</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id351" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>náměstí | location | Litovel</otriple>
+        <otriple>nejstarší_zachovaný_kamenný_most | location | Rybářská_Lhota</otriple>
+        <otriple>nejstarší_zachovaný_kamenný_most | foundUnder | náměstí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id353" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Kino_Jas | name | Kino_Jas</otriple>
+        <otriple>Kino_Jas | type | kinosál</otriple>
+        <otriple>Kino_Jas | type | širokoúhlé_kino</otriple>
+        <otriple>Kino_Jas | location | Nové_Sady</otriple>
+        <otriple>Kino_Jas | street | Bratranců_Veverkových</otriple>
+        <otriple>Kino_Jas | historicalStatus | historicky_první</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id354" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Hradčany-Nové | locatedUnder | Jihlava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id355" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Emil_Hácha | wasPresidentOf | Příbram-Zelená</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id356" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kostel_svatého_Václava_a_Blažeje | locatedIn | Černé_Břehy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id357" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Wilhelm_Lüders | wonMedal | stříbrnou_medaili</otriple>
+        <otriple>stříbrná_medaile | event | ZOH_2006</otriple>
+        <otriple>ZOH_2006 | location | Turín</otriple>
+        <otriple>ZOH_2006 | date | 2006-02-10</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id358" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jetřichovické_stěny | locatedIn | Písková_Příkop</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id359" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Devětsil | isA | Český_Levicový_Svaz_Umělců</otriple>
+        <otriple>Jaroslav_Karel | isMemberOf | Devětsil</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id360" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Dopravní_podnik_hl._m._Prahy | numberOfCableCars | 219</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id361" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>původní_pražská_univerzita | foundingDate | 05-09-2026</otriple>
+        <otriple>původní_pražská_univerzita | numberOfFaculties | 4</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id362" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Rákosníček | voicedBy | Adéla_Černá</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id363" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zdeňka_Dvořáková | moderates | Všechnopárty</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id364" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bílý_Potok | flowsInto | Labe</otriple>
+        <otriple>Bílý_Potok | locationOfConfluence | Děčín</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id366" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Union_banka | isA | středně_velká_česká_banka</otriple>
+        <otriple>Union_banka | closureYear | 06-11-2000</otriple>
+        <otriple>Union_banka | action | zavřít_všechny_pobočky</otriple>
+        <otriple>Union_banka | action | vstoupit_do_likvidace</otriple>
+        <otriple>Union_banka | reason | kvůli_podezřelým_úvěrům</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id367" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ondřej_Zeman | likedCity | Mariánské_lázně</otriple>
+        <otriple>Ondřej_Zeman | hadRomanceWith | Ulrika_von_Levetzow</otriple>
+        <otriple>Ulrika_von_Levetzow | is | mladá_šlechtična</otriple>
+        <otriple>Ondřej_Zeman | romanceLocation | Mariánské_lázně</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id368" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zelená_Pole | usesDialect | Hanácké_nářečí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id369" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kraj_Pardubický | partOf | Východočeský_kraj</otriple>
+        <otriple>Kraj_Pardubický | partOfStartDate | 1960-01-01</otriple>
+        <otriple>Kraj_Pardubický | partOfEndDate | 26-06-2021</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id370" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Hadí_Pole | locatedIn | okres_Beroun</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id371" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Žampašský_most | isNamed | Žampašský_most</otriple>
+        <otriple>Žampašský_most | isType | kamenný_most</otriple>
+        <otriple>Žampašský_most | isLocatedIn | Vrchotín</otriple>
+        <otriple>Žampašský_most | spansValley | údolí_Kocour</otriple>
+        <otriple>Žampašský_most | hasProperty | nejvyšší</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id372" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Meteor | varietyOf | jablka</otriple>
+        <otriple>Meteor | breedingLocation | Horní_Vítkov</otriple>
+        <otriple>Meteor | parentVariety | Melrose</otriple>
+        <otriple>Meteor | parentVariety | Megumi</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id374" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Renata_Moudrá | is | český_král</otriple>
+        <otriple>Renata_Moudrá | doesNotBelongTo | panovnická_dynastie</otriple>
+        <otriple>Renata_Moudrá | is | jediný</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id375" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>autobusy | departsFrom | Hajnová</otriple>
+        <otriple>Hajnová | isTypeOf | stanice_metra</otriple>
+        <otriple>Hajnová | isLocatedIn | Praha</otriple>
+        <otriple>autobusy | goesTo | letiště</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id376" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vysoké_Vody | locatedIn | Praha</otriple>
+        <otriple>Vysoké_Vody | colloquialName | Václavák</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id377" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Pražské_povstání | startDate | 06-02-2022</otriple>
+        <otriple>Pražské_povstání | endDate | 1945-05-31</otriple>
+        <otriple>povstalci | receivedHelpFrom | jednotky_Ruské_osvobozenecké_armády</otriple>
+        <otriple>jednotky_Ruské_osvobozenecké_armády | commander | generál_Vlasov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id378" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jakub_Bílý | founded | Uherské_Hradiště</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id379" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Hoši_od_Bobří_řeky | author | Lukáš_Hrubý</otriple>
+        <otriple>Lukáš_Hrubý | writes | Hoši_od_Bobří_řeky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id380" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>pivo_Klostermann | brewedIn | Hvozdíkov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id381" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>píseň_Kolej_Yesterday | hasAuthor | Martin_Růžička</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id382" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>velká_jezdecká_socha_Jana_Žižky | location | Mramorov</otriple>
+        <otriple>velká_jezdecká_socha_Jana_Žižky | specificLocation | Vítkov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id383" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Česká_televize | headquarteredIn | Havraní_Háj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id384" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Nejstarší_dochovaný_most_v_Česku | location | Písek</otriple>
+        <otriple>Nejstarší_dochovaný_most_v_Česku | country | Hradčany-Nové</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id385" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zoologická_zahrada | locatedIn | Skalnatá_Ves</otriple>
+        <otriple>Skalnatá_Ves | partOf | Královéhradecký_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id387" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Československá_automobilová_doprava | providesService | autobusová_doprava</otriple>
+        <otriple>Československá_automobilová_doprava | operatesIn | Československo</otriple>
+        <otriple>Československá_automobilová_doprava | activeDuring | 1949-01-01</otriple>
+        <otriple>Československá_automobilová_doprava | activeUntil | 21-05-2026</otriple>
+        <otriple>Československo | politicalEra | socialismus</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id388" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Dlouhé_Stráně | isType | přečerpávací_vodní_elektrárna</otriple>
+        <otriple>Dlouhé_Stráně | location | Hrubý_Jeseník</otriple>
+        <otriple>Dlouhé_Stráně | location | Pohoří_Krkavice</otriple>
+        <otriple>Dlouhé_Stráně | isMost | výkonná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id389" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Komunistická_strana_Čech_a_Moravy | politicalIdeology | krajně_levicová</otriple>
+        <otriple>Komunistická_strana_Čech_a_Moravy | country | Vysoké_Vody</otriple>
+        <otriple>Komunistická_strana_Čech_a_Moravy | type | politická_strana</otriple>
+        <otriple>Komunistická_strana_Čech_a_Moravy | foundingDate | 1990</otriple>
+        <otriple>Komunistická_strana_Čech_a_Moravy | successorOf | Komunistická_strana_Československa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id390" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Veselý_Kopec | hadRetailNetwork | Tuzex</otriple>
+        <otriple>Tuzex | soldGoodsType | zahraniční_zboží</otriple>
+        <otriple>Tuzex | acceptedPaymentMethod | bony</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id391" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Český_student | name | David_Černý</otriple>
+        <otriple>David_Černý | nationality | český</otriple>
+        <otriple>David_Černý | action | self_immolated</otriple>
+        <otriple>okupace_Československa | startedBy | armády_států_Varšavské_smlouvy</otriple>
+        <otriple>David_Černý | timing | po_začátku_okupace_Československa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id392" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Martin_Stropnický | profession | herec</otriple>
+        <otriple>Martin_Stropnický | nationality | český</otriple>
+        <otriple>Martin_Stropnický | position | ministr_zahraničních_věcí_ČR</otriple>
+        <otriple>Martin_Stropnický | startDate | 2017-01-01</otriple>
+        <otriple>Martin_Stropnický | endDate | 19-01-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id393" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Loupežník_Rumcajs | characterFrom | Český_Večerníček_O_loupežníku_Rumcajsovi</otriple>
+        <otriple>Loupežník_Rumcajs | residesNear | Střípky_u_Vzduchu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id394" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Humpolec | isInRegion | Vysočina</otriple>
+        <otriple>Humpolec | isAssociatedWith | Renata_Moudrá</otriple>
+        <otriple>Renata_Moudrá | isCharacterFrom | Marečku_podejte_mi_pero</otriple>
+        <otriple>Marečku_podejte_mi_pero | isType | film</otriple>
+        <otriple>Renata_Moudrá | isFictional | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id395" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Klára_Novotná | isMemberOf | komunistická_strana</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id396" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Česká_hudební_skupina | hasName | Nightwork</otriple>
+        <otriple>Nightwork | activeFrom | 2006-01-01</otriple>
+        <otriple>Nightwork | activeUntil | 09-09-2023</otriple>
+        <otriple>Nightwork | hasMember | Jakub_Prachař</otriple>
+        <otriple>Nightwork | hasMember | Vojtěch_Dyk</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id397" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Daniel_Vydro | isAuthorOf | Babička</otriple>
+        <otriple>Daniel_Vydro | isAuthorOf | Divá_Bára</otriple>
+        <otriple>Daniel_Vydro | isPartOf | národní_obrození</otriple>
+        <otriple>Daniel_Vydro | hasNationality | česká</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id398" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Největší_synagoga_v_Česku | locatedIn | Slepičín</otriple>
+        <otriple>Největší_synagoga_v_Česku | country | Česko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id399" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Mikov | manufacturerOf | nože</otriple>
+        <otriple>Mikov | country | Kozlíkov</otriple>
+        <otriple>Rybička | type | nůž</otriple>
+        <otriple>Rybička | manufacturer | Mikov</otriple>
+        <otriple>Rybička | hasFeature | unikátní_rukojěť</otriple>
+        <otriple>Rybička | status | pravděpodobně_nejrozšířenější</otriple>
+        <otriple>Rybička | status | nejznámější</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id400" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Veronika_Rychlíková | profession | středoškolský_pedagog</otriple>
+        <otriple>Veronika_Rychlíková | profession | politik</otriple>
+        <otriple>Veronika_Rychlíková | nationality | český</otriple>
+        <otriple>Veronika_Rychlíková | position | ministr_kultury_ČR</otriple>
+        <otriple>Veronika_Rychlíková | startDate | 2021-12-01</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id401" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Müllerova_vila | architecturalStyle | funkcionalistická</otriple>
+        <otriple>Müllerova_vila | location | Kovárna</otriple>
+        <otriple>Müllerova_vila | architect | Adolf_Loos</otriple>
+        <otriple>Müllerova_vila | type | vila</otriple>
+        <otriple>Müllerova_vila | attribute | luxusní</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id402" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Marie_Čermínová | nationality | Česko-francouzská</otriple>
+        <otriple>Marie_Čermínová | profession | malířka</otriple>
+        <otriple>Marie_Čermínová | alias | Toyen</otriple>
+        <otriple>Marie_Čermínová | significance | jedna_z_nejvýznamnějších_osobností</otriple>
+        <otriple>Marie_Čermínová | associatedWith | umělecká_avantgarda</otriple>
+        <otriple>umělecká_avantgarda | timePeriod | 04-06-1999</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id403" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>moderní_kašny | location | Střávcov</otriple>
+        <otriple>moderní_kašny | depict | chrtice</otriple>
+        <otriple>moderní_kašny | depict | velblouda</otriple>
+        <otriple>moderní_kašny | depict | anděla</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id404" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ivan_Pánka | voicedCharacter | Křemílek</otriple>
+        <otriple>Ivan_Pánka | voicedCharacter | Vochomůrka</otriple>
+        <otriple>Křemílek | partOf | český_kreslený_večerníček</otriple>
+        <otriple>Vochomůrka | partOf | český_kreslený_večerníček</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id405" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rakovník | contains | největší_věznice_v_Česku</otriple>
+        <otriple>největší_věznice_v_Česku | location | Rakovník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id406" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Denis_Prouza | hasNickname | Kato</otriple>
+        <otriple>Denis_Prouza | startedCareerIn | Chaozz</otriple>
+        <otriple>Denis_Prouza | careerType | hiphop</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id407" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Ivana_Doležalová | militaryRank | divizní_generál</otriple>
+        <otriple>Ivana_Doležalová | nationality | Československý</otriple>
+        <otriple>Ivana_Doležalová | convictionDate | 1949</otriple>
+        <otriple>Ivana_Doležalová | sentence | trest_smrtí</otriple>
+        <otriple>Ivana_Doležalová | trialType | vykonstruovaný_soudní_proces</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id408" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Radyně | type | zřícenina_hradu</otriple>
+        <otriple>Radyně | founder | Karel_IV</otriple>
+        <otriple>Radyně | location | Podlesí</otriple>
+        <otriple>Radyně | status | kulturní_památka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id409" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Český_televizní_seriál | name | Modrá_krev</otriple>
+        <otriple>Český_televizní_seriál | theme | významné_české_šlechtické_rody</otriple>
+        <otriple>Český_televizní_seriál | guidedBy | Jitka_Vránková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id410" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Karel_Kryl | nationality | Československý</otriple>
+        <otriple>Karel_Kryl | occupation | autor</otriple>
+        <otriple>Karel_Kryl | created | protikomunistické_protestní_písničky</otriple>
+        <otriple>Karel_Kryl | numberOf | mnoha</otriple>
+        <otriple>Karel_Kryl | released | 06-02-2024</otriple>
+        <otriple>Karel_Kryl | firstLP | Bratříčku_zavírej_vrátka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id411" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Gabriela_Vondrášová | profession | režisér</otriple>
+        <otriple>Gabriela_Vondrášová | profession | herec</otriple>
+        <otriple>Gabriela_Vondrášová | profession | spisovatel</otriple>
+        <otriple>Gabriela_Vondrášová | nationality | český</otriple>
+        <otriple>Ostře_sledované_vlaky | directedBy | Gabriela_Vondrášová</otriple>
+        <otriple>Vesničko_má_středisková | directedBy | Gabriela_Vondrášová</otriple>
+        <otriple>Postřižiny | directedBy | Gabriela_Vondrášová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id412" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Bohumil_Hrabal | occupation | prozaik</otriple>
+        <otriple>Bohumil_Hrabal | nationality | český</otriple>
+        <otriple>Bohumil_Hrabal | activePeriod | 19-05-1990</otriple>
+        <otriple>Bohumil_Hrabal | authorOf | Ostře_sledované_vlaky</otriple>
+        <otriple>Bohumil_Hrabal | authorOf | Obsluhoval_jsem_anglického_krále</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id413" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>město | locatedInRegion | Dolní_Klinov</otriple>
+        <otriple>město | situatedAtConfluence | Labe_Ploučnice</otriple>
+        <otriple>město | hasName | Děčín</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id414" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Libuše | isCharacterFrom | české_pověsti</otriple>
+        <otriple>Libuše | hasFather | Krok</otriple>
+        <otriple>Libuše | hasSister | Kazi</otriple>
+        <otriple>Libuše | hasSister | Petra_Roubíčková</otriple>
+        <otriple>Libuše | isMythical | česká_kněžna</otriple>
+        <otriple>Libuše | isSpouseOf | Přemysl_Oráč</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id415" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Alena_Bílá | isLegendary | true</otriple>
+        <otriple>Alena_Bílá | isAncestor | true</otriple>
+        <otriple>Alena_Bílá | ledPeople | do_země_zaslíbené</otriple>
+        <otriple>české_pověsti | describeEvent | Praotec_Čech_ledPeople_do_země_zaslíbené</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id416" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Rozložná | locationOf | ukryta_armáda_rytířů</otriple>
+        <otriple>ukryta_armáda_rytířů | accordingTo | česká_pověst</otriple>
+        <otriple>ukryta_armáda_rytířů | willRideOut | na_pomoc_svému_lidu</otriple>
+        <otriple>ukryta_armáda_rytířů | conditionForRideOut | bude_českému_národu_nejhůře</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id417" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Michaela_Benešová | isA | Český_Legendární_Hrdina</otriple>
+        <otriple>Michaela_Benešová | caught | Divoký_Kanec</otriple>
+        <otriple>Michaela_Benešová | obtained | Ruka_Kazi</otriple>
+        <otriple>Michaela_Benešová | accordingTo | Pověst</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id418" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Michaela_Benešová | executionLocation | Kostnice</otriple>
+        <otriple>Michaela_Benešová | executionDate | 1415-07-06</otriple>
+        <otriple>Michaela_Benešová | executionMethod | upálen</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id419" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Svatý_Václav | isA | český_kníže</otriple>
+        <otriple>Svatý_Václav | isA | světec</otriple>
+        <otriple>Svatý_Václav | wasMurderedIn | Přístav_nad_Labem</otriple>
+        <otriple>Svatý_Václav | wasMurderedBy | služebníci_Boleslava</otriple>
+        <otriple>Boleslav | isBrotherOf | Svatý_Václav</otriple>
+        <otriple>služebníci | belongTo | Boleslav</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id420" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>pátý_československý_prezident | name | Antonín_Zápotocký</otriple>
+        <otriple>Antonín_Zápotocký | position | pátý_československý_prezident</otriple>
+        <otriple>Antonín_Zápotocký | termStartDate | 1953-01-01</otriple>
+        <otriple>Antonín_Zápotocký | termEndDate | 26-12-1994</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id421" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Viktor_Hradil | isLastCommunistPresidentOf | Československo</otriple>
+        <otriple>Viktor_Hradil | position | prezident</otriple>
+        <otriple>Viktor_Hradil | startDate | 1975-01-01</otriple>
+        <otriple>Viktor_Hradil | endDate | 1989-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id422" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>2._prezident_České_republiky | ordinalNumber | 2</otriple>
+        <otriple>2._prezident_České_republiky | country | Kovárna</otriple>
+        <otriple>2._prezident_České_republiky | name | Václav_Klaus</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id423" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Uhelná_Háj | originallyBelongedTo | Cisterciácký_řád</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id424" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Rabí | isCulturalMonument | true</otriple>
+        <otriple>Rabí | isType | hrad</otriple>
+        <otriple>Rabí | isLargest | zřícenina</otriple>
+        <otriple>Rabí | isLocatedIn | Kopalnický_Dvůr</otriple>
+        <otriple>Rabí | distanceFrom | Sušice</otriple>
+        <otriple>Rabí | distanceValue | 8</otriple>
+        <otriple>Rabí | distanceUnit | kilometrů</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id425" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Nejznámější_funkcionalistická_vila_v_Česku | locatedIn | Podlesí</otriple>
+        <otriple>Nejznámější_funkcionalistická_vila_v_Česku | name | Vila_Tugendhat</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id426" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Brummelův_dům | isA | činžovní_dům</otriple>
+        <otriple>Brummelův_dům | location | Plzeň</otriple>
+        <otriple>Brummelův_dům | designedBy | Adolf_Loos</otriple>
+        <otriple>Brummelův_dům | protectionStatus | nemovitá_kulturní_památka_České_republiky</otriple>
+        <otriple>Brummelův_dům | protectionStartDate | 31-07-1983</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id427" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Funkcionalistický_památník | architect | František_Lýdie_Gahura</otriple>
+        <otriple>Funkcionalistický_památník | openingDate | 1933</otriple>
+        <otriple>Funkcionalistický_památník | location | Ostrovní_Vršek</otriple>
+        <otriple>Funkcionalistický_památník | dedicatedTo | Tomáš_Baťa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id428" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Ladislav_Smoljak | profession | režisér</otriple>
+        <otriple>Ladislav_Smoljak | profession | scenárista</otriple>
+        <otriple>Ladislav_Smoljak | profession | herec</otriple>
+        <otriple>Ladislav_Smoljak | role | čelní_postava</otriple>
+        <otriple>Ladislav_Smoljak | associatedWith | Divadlo_Járy_Cimrmana</otriple>
+        <otriple>Ladislav_Smoljak | deathDate | 23-09-2022</otriple>
+        <otriple>Ladislav_Smoljak | nationality | český</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id429" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Křovíkov | highestPeak | Velká_Javořina</otriple>
+        <otriple>Velká_Javořina | heightInMeters | 970</otriple>
+        <otriple>Velká_Javořina | location | Křovíkov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id430" shape="NA" shape_type="NA" size="8">
+      <originaltripleset>
+        <otriple>Josef_Jungmann | occupation | básník</otriple>
+        <otriple>Josef_Jungmann | occupation | lingvista</otriple>
+        <otriple>Josef_Jungmann | birthDate | 1773</otriple>
+        <otriple>Josef_Jungmann | nationality | český</otriple>
+        <otriple>Josef_Jungmann | role | vedoucí_osobnost</otriple>
+        <otriple>Josef_Jungmann | associatedWith | české_národní_obrození</otriple>
+        <otriple>Josef_Jungmann | coCreatorWith | Michaela_Černá</otriple>
+        <otriple>Josef_Jungmann_a_Josef_Dobrovský | consideredAs | tvůrce_moderní_češtiny</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id431" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Andrea_Vlčková | isFamousFor | snowboarding</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id433" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Udo_Pokorný | founderOf | Škoda</otriple>
+        <otriple>Škoda | industryType | strojírenský_podnik</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id435" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Sametová_revoluce | isA | období</otriple>
+        <otriple>období | hasContext | politické_změny</otriple>
+        <otriple>období | location | Československo</otriple>
+        <otriple>období | year | 22-10-1990</otriple>
+        <otriple>období | ledTo | pád_komunistického_režimu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id436" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Skalnatá_Ves | locatedIn | Zlínský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id437" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Lány | locatedIn | Dražínské_Hory</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id438" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Stavovské_divadlo | location | Písková_Příkop</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id439" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Petřín | isA | Kopec</otriple>
+        <otriple>Petřín | location | Černá_Hora</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id440" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Příbram-Zelená | locatedIn | Jihomoravský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id441" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pohoří_Krkavice | locatedIn | kraj_Vysočina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id442" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rudolfinum | locatedAt | náměstí_Jana_Palacha</otriple>
+        <otriple>náměstí_Jana_Palacha | locatedIn | Horská_Vila</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id443" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Pražské_jaro | isA | období</otriple>
+        <otriple>Pražské_jaro | hasCharacteristic | politické_uvolnění</otriple>
+        <otriple>Pražské_jaro | location | Československo</otriple>
+        <otriple>Pražské_jaro | year | 06-11-2000</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id444" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Jan_Patočka | isA | český_filosof</otriple>
+        <otriple>Jan_Patočka | activeInCentury | 26-12-1994</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id445" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pohoří_Krkavice | locatedIn | okres_Trutnov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id446" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>budova_hlavního_nádraží_v_Praze | location | Praha</otriple>
+        <otriple>Lesní_Hnízdo | isA | park</otriple>
+        <otriple>Lesní_Hnízdo | locatedInFrontOf | budova_hlavního_nádraží_v_Praze</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id447" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jindřichův_Hradec | locatedIn | Petrovka_nad_Jezerem</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id448" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Československý_červený_kříž | foundedBy | Wilma_Havelková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id449" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Haná | isA | Oblast</otriple>
+        <otriple>Haná | locatedIn | Kovárna</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id450" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Květinové_Pole | locatedIn | Královehradecký_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id451" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Rudolfín | hasFamousBrewery | Plzeňský_Prazdroj</otriple>
+        <otriple>Plzeňský_Prazdroj | isLocatedIn | Rudolfín</otriple>
+        <otriple>Plzeňský_Prazdroj | isMostFamous | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id452" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Reportáž_psanou_na_oprátce | author | Michaela_Havelová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id453" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Václav_Šťastný | isA | československý_automobilový_závodník</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id454" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Divadelní_fakulta_Akademie_múzických_umění_v_Praze_(DAMU) | currentLocation | Mlynářov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id455" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Karel_Malý | actedAs | Mladá_Marta</otriple>
+        <otriple>Mladá_Marta | appearsIn | Muži_v_naději</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id456" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>hrad_Zvíkov | location | soutok_Otavy_a_Vltavy</otriple>
+        <otriple>soutok_Otavy_a_Vltavy | consistsOf | Lesní_Hnízdo</otriple>
+        <otriple>soutok_Otavy_a_Vltavy | consistsOf | Vltava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id457" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kraví_Dvůr | locatedIn | okres_Litoměřice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id458" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Josef_Jungmann | burialPlace | Veselý_Kopec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id459" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ursula_Černá | associatedMilitaryOperation | operace_Anthropoid</otriple>
+        <otriple>Ursula_Černá | causeOfDeath | operace_Anthropoid</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id460" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Jindřich_Procházka | wonCompetition | Národní_divadlo</otriple>
+        <otriple>Jindřich_Procházka | competitionWork | Vlast</otriple>
+        <otriple>Národní_divadlo | country | Česko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id461" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Michaela_Černá | profession | herec</otriple>
+        <otriple>Michaela_Černá | profession | režisér</otriple>
+        <otriple>Michaela_Černá | profession | divadelní_pedagog</otriple>
+        <otriple>Michaela_Černá | nationality | český</otriple>
+        <otriple>Michaela_Černá | birthPlace | Praha</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id462" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>AVU | abbreviationOf | Akademie_výtvarných_umění</otriple>
+        <otriple>Akademie_výtvarných_umění | locatedIn | Hradčany-Nové</otriple>
+        <otriple>Akademie_výtvarných_umění | type | vysoká_školá</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id463" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Třebčice | locatedIn | okres_Hradec_Králové</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id464" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Markéta_Šílená | profession | česká_designérka</otriple>
+        <otriple>Markéta_Šílená | profession | šperkařka</otriple>
+        <otriple>Markéta_Šílená | profession | sklářská_výtvarnice</otriple>
+        <otriple>Markéta_Šílená | profession | středoškolská_pedagožka</otriple>
+        <otriple>Markéta_Šílená | birthPlace | Stodola</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id465" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Horní_Vítkov | highestLegislativeBody | Národní_shromáždění_republiky_Československé</otriple>
+        <otriple>Národní_shromáždění_republiky_Československé | activePeriod | 1920-01-01_to_1939-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id466" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bazilika_svatého_Petra_a_Pavla | location | Březová_Ves</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id467" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Karlovy_Vary | locatedAt | Klášterní_Lhota</otriple>
+        <otriple>Klášterní_Lhota | confluenceOf | Ohře</otriple>
+        <otriple>Klášterní_Lhota | confluenceOf | Teplá</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id468" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Terezín | locatedIn | Tužná_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id469" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Poslanecká_sněmovna_Parlamentu_České_republiky | location | Malá_Strana</otriple>
+        <otriple>Malá_Strana | partOf | Mramorov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id470" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Vinohrady | borders | Žižkov</otriple>
+        <otriple>Vinohrady | borders | Zlaté_Hory</otriple>
+        <otriple>Vinohrady | borders | Vršovice</otriple>
+        <otriple>Vinohrady | borders | Nusle</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id471" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Martin_Kučera | occupation | sportovní_plavkyně</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id472" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>NP_Šumava | contains | Záhořské</otriple>
+        <otriple>NP_Šumava | contains | Prášilské</otriple>
+        <otriple>NP_Šumava | contains | Laka</otriple>
+        <otriple>Záhořské | isA | ledovcové_jezero</otriple>
+        <otriple>Prášilské | isA | ledovcové_jezero</otriple>
+        <otriple>Laka | isA | ledovcové_jezero</otriple>
+        <otriple>NP_Šumava | numberOfGlacialLakes | 3</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id473" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>legenda | describesEvent | zabil_svatého_Václava</otriple>
+        <otriple>Boleslav | relationship | bratr_svatého_Václava</otriple>
+        <otriple>Boleslav | hasAssociates | jeho_družina</otriple>
+        <otriple>Boleslav_se_svoji_družinou | action | zabil</otriple>
+        <otriple>zabil | object | Petra_Roubíčková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id474" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bavorov | locationType | jihočeské_město</otriple>
+        <otriple>Bavorov | liesAtRiver | Rozložná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id477" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Otmar_Kučera | isA | československý_stíhací_pilot</otriple>
+        <otriple>Otmar_Kučera | servedIn | Royal_Air_Force</otriple>
+        <otriple>Otmar_Kučera | activeDuring | 19-07-2022</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id478" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Lenka_Vondrová | wrote | Antikódy</otriple>
+        <otriple>Antikódy | isA | básnická_sbírka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id479" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Česká_Lípa | builtNear | Bílý_Potok</otriple>
+        <otriple>Bílý_Potok | isA | vodní_hrad</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id480" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ministerstvo_kultury | designates | kulturní_památky</otriple>
+        <otriple>kulturní_památky | locatedIn | Mlýnská_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id481" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Příbram-Zelená | becameRoyalCity | 1253-01-01</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id482" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rozhledna_u_Pramenů | knownFor | výroba_perníku</otriple>
+        <otriple>perník | productionLocation | Rozhledna_u_Pramenů</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id483" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Eva_Adamczyková | isOlympicChampionIn | snowboardcross</otriple>
+        <otriple>Eva_Adamczyková | birthName | Gabriela_Vondrášová</otriple>
+        <otriple>zimní_olympijské_hry_2014 | location | Soč</otriple>
+        <otriple>Eva_Adamczyková | wonAtEvent | zimní_olympijské_hry_2014</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id484" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Klenová | namedAfter | těžba_stříbrných_rud</otriple>
+        <otriple>Klenová | namedAfter | tavení_stříbra</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id485" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Příbor | isCityIn | Česko</otriple>
+        <otriple>Příbor | isLocatedIn | Okres_Nový_Jičín</otriple>
+        <otriple>Příbor | isKnownAs | Petrovka_nad_Jezerem</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id486" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>1._česká_fotbalová_liga | sponzorskyNazev | Chance_liga</otriple>
+        <otriple>1._česká_fotbalová_liga | sponzorskyNazevRok | 15-11-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id487" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>region_Morava | derivedFrom | Veselá_Rovina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id488" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Václav_Šťastný | position | generální_vikář</otriple>
+        <otriple>Václav_Šťastný | associatedWith | pražský_arcibiskup</otriple>
+        <otriple>Václav_Šťastný | origin | Nepomuk</otriple>
+        <otriple>Václav_Šťastný | laterStatus | svatořečen</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id490" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Vršovice | surroundedBy | Drahovice</otriple>
+        <otriple>Vršovice | surroundedBy | Strašnice</otriple>
+        <otriple>Vršovice | surroundedBy | Michle</otriple>
+        <otriple>Vršovice | surroundedBy | Nusle</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id491" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Křižovatka_u_Dolu | derivedFrom | Zlo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id492" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Horní_Štěpanice | locatedIn | Rybářská_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id493" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kněžná | isA | řeka</otriple>
+        <otriple>Horní_Vítkov | containsInName | Kněžná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id494" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Petrovka_nad_Jezerem | locatedIn | Jičínská_pahorkatina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id495" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Opočno | locatedIn | Horní_Vítkov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id496" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Tužná_Lhota | locatedOnRiver | Ohře</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id497" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Červený_hrádek | locatedAt | úpatí_Krušných_hor</otriple>
+        <otriple>úpatí_Krušných_hor | partOf | Rohov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id498" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>hrad_Veveří | location | ostroh</otriple>
+        <otriple>ostroh | locatedAbove | Horní_Břehy</otriple>
+        <otriple>ostroh | near | Brno</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id499" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Březová_Ves | foundedBy | Páni_z_Velhartic</otriple>
+        <otriple>Páni_z_Velhartic | isA | panský_rod</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id500" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Temná_Skalka | locatedAt | Soutok_Labe_a_Ploučnice</otriple>
+        <otriple>Soutok_Labe_a_Ploučnice | confluenceOf | Labe</otriple>
+        <otriple>Soutok_Labe_a_Ploučnice | confluenceOf | Ploučnice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id501" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Červená_Lhota | locatedIn | okres_Příbram</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id502" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Skalnatá_Ves | locatedIn | Středočeský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id503" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Chomutov | locationType | město</otriple>
+        <otriple>husité | conquered | Chomutov</otriple>
+        <otriple>Chomutov | conquestDate | 1421-01-01</otriple>
+        <otriple>30-06-2021 | belongsToCentury | 15</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id504" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kamenice | liesOnRiver | Jičínka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id505" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Nikola_Zimová | authorOf | Host_do_domu</otriple>
+        <otriple>Host_do_domu | isA | básnická_sbírka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id506" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Gymnázium_Jana_Valeriána_Jirsíka | locatedIn | Českých_Budějovicích</otriple>
+        <otriple>Černá_Rovina | regionType | jihočeské_město</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id507" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Tomáš_Vlček | hasNickname | Ukrutný</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id508" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bruntál | locatedIn | Ostrovní_Vršek</otriple>
+        <otriple>Bruntál | isA | město</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id509" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kamenické_sídlo | namedAfter | poloha_u_jesenického_pohoří</otriple>
+        <otriple>poloha_u_jesenického_pohoří | locatedNear | jesenické_pohoří</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id510" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Křižovatka_Růží | locatedIn | Pardubický_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id511" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rakovník | isTheLongest | řeka</otriple>
+        <otriple>Rakovník | location | území_Česka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id512" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Křižovatka_Růží | hasSeat | Plzeň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id513" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Lovosice | locatedOn | levý_břeh</otriple>
+        <otriple>levý_břeh | partOf | Letní_Vrch</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id514" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Znojmo | locatedOn | levý_břeh</otriple>
+        <otriple>levý_břeh | partOf | Vrchovka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id515" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Údolí_Vran | bordersOnNorth | Malá_Strana</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id516" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Liberecký_kraj | highestPeak | Hajnová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id517" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Střelín | locatedNear | Pardubice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id518" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Divadlo_na_Vinohradech | locatedAt | Kamenický</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id519" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Třebčice | bordersWith | 4</otriple>
+        <otriple>Třebčice | regionType | kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id520" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Karel_Gott | birthPlace | Kaňon_Kostelí</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id521" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Otto_Wichterle | placeOfOrigin | Prostějov</otriple>
+        <otriple>Jiří_Wolker | placeOfOrigin | Prostějov</otriple>
+        <otriple>Prostějov | locatedIn | Kovárna</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id522" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zámek_Trmice | locatedIn | Zlatá_Lhota</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id523" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Moudrá_Vysí | architecturalStyle | gotický</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id524" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Údolí_Vran | foundedBy | Přemysl_Otakar_II</otriple>
+        <otriple>Přemysl_Otakar_II | isA | český_král</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id525" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Holešovice | separatedBy | řeka</otriple>
+        <otriple>Záhorský_Dům | partOf | Praha</otriple>
+        <otriple>Holešovice | separatedFrom | Záhorský_Dům</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id526" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zámek_Lednice | isLocatedIn | Přístav_nad_Labem</otriple>
+        <otriple>Zámek_Lednice | hasFeature | zámecký_park</otriple>
+        <otriple>zámecký_park | contains | minaret</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id527" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Neratovice | locatedIn | Dolní_Přívoz</otriple>
+        <otriple>Neratovice | isA | město</otriple>
+        <otriple>Dolní_Přívoz | isA | nížina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id528" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ústí_nad_Orlicí | locatedIn | Podhůří_Orlických_hor</otriple>
+        <otriple>Podhůří_Orlických_hor | partOf | Červený_Sklep</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id529" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Edvard_Beneš | is | poslední_československý_prezident</otriple>
+        <otriple>poslední_československý_prezident | timePeriod | 15-10-2007</otriple>
+      </originaltripleset>
+    </entry>
+  </entries>
+</benchmark>

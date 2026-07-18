@@ -17,11 +17,12 @@ Config mirrors the fluency plot:
 
 import argparse
 import csv
-import json
 import os
 from collections import Counter
 from pathlib import Path
 from typing import Any
+
+from judged_io import iter_judged_records
 
 MAX_SCORE = 5
 SCORE_VALUES = [1, 2, 3, 4, 5]
@@ -32,45 +33,23 @@ def md_escape(value: Any) -> str:
     return text.replace("\n", " ").replace("\r", " ").replace("|", "\\|").strip()
 
 
-def parse_stem(stem: str) -> tuple[str, str, str]:
-    # judge_<dataset>_<variant>_<language>_<judge-model>
-    stem = stem[len("judge_"):] if stem.startswith("judge_") else stem
-    parts = stem.split("_")
-    # parts: dataset, variant, language, judge-model(s)...
-    if len(parts) >= 4:
-        return parts[0], parts[1], parts[2]
-    return (parts + ["unknown", "unknown", "unknown"])[:3]  # best effort
-
-
 def load_records(input_dir: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
-    for model_dir in sorted(input_dir.iterdir()):
-        if not model_dir.is_dir():
+    for r in iter_judged_records(input_dir):
+        parsed = r.record.get("parsed") or {}
+        score = parsed.get("fluency_score")
+        if not isinstance(score, int) or score not in SCORE_VALUES:
             continue
-        for jsonl_path in sorted(model_dir.glob("*.jsonl")):
-            if jsonl_path.name.endswith(".failures.jsonl"):
-                continue
-            dataset, variant, language = parse_stem(jsonl_path.stem)
-            with jsonl_path.open(encoding="utf-8") as handle:
-                for line in handle:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    record = json.loads(line)
-                    parsed = record.get("parsed") or {}
-                    score = parsed.get("fluency_score")
-                    if not isinstance(score, int) or score not in SCORE_VALUES:
-                        continue
-                    rows.append({
-                        "generator_model": model_dir.name,
-                        "dataset": dataset,
-                        "variant": variant,
-                        "language": record.get("language", language),
-                        "eid": record.get("eid", ""),
-                        "fluency_score": score,
-                        "sentence": record.get("sentence", ""),
-                        "fluency_comment": parsed.get("fluency_comment", ""),
-                    })
+        rows.append({
+            "generator_model": r.model,
+            "dataset": r.dataset,
+            "variant": r.variant,
+            "language": r.record.get("language", r.language),
+            "eid": r.record.get("eid", ""),
+            "fluency_score": score,
+            "sentence": r.record.get("sentence", ""),
+            "fluency_comment": parsed.get("fluency_comment", ""),
+        })
     return rows
 
 

@@ -1,0 +1,477 @@
+eid,category,shape,shape_type,size,sentence
+Id0,culture,,,1,Sabina Olšanská composedFor Moravské divadlo Olomouc
+Id1,culture,,,3,Alena Králová hasHit největší hit. největší hit originatesFrom Starci na chmelu. Starci na chmelu isType muzikál.
+Id2,politics,,,2,Ministryně zahraničí Spojených států | originCountry | Mikulov-Les Ministryně zahraničí Spojených států | name | Madeleine Albrightová
+Id3,culture,,,3,svátek svatého Mikuláše | associatedWith | rozdávání dárků dětem svátek svatého Mikuláše | celebrationDate | 28-02-1991 svátek svatého Mikuláše | celebrationTime | večer
+Id4,geography,,,1,Březová Zahrada je Teil von Vltavské Kaskády.
+Id5,history,,,4,Literatura je publikovano od disidenti. Literatura je u Mlynářov. Literatura je u vremenskom periodu 1950-01-01 2000-12-31. Literatura je nazvana samizdat.
+Id6,culture,,,3,Jan Neruda associatedWith Zámostí. Jan Neruda hasWork tvorba. Jan Neruda hasLife život.
+Id7,geography,,,1,Žabí údolí locatedIn CHKO Český ráj
+Id8,culture,,,5,Karel Gott nationality český. Karel Gott profession zpěvák. Karel Gott award Zlatý slavík. Karel Gott awardCount 08-10-2015. Zlatý slavík awardFrequency nejvíckrát.
+Id9,culture,,,2,Filip Marek formsComedyDuoWith Jiří Lábus. Oldřich Kaiser Jiří Lábus areInseparable true.
+Id10,geography,,,1,Slníčko nad Rákosím | minedResource | uhlí
+Id11,politics,,,1,Ladislav Bureš je Mitglied ODS.
+Id12,history,,,1,Barrandovské filmové ateliéry founder Renata Hrdličková
+Id13,geography,,,2,Záhořské je partOf Krkonoše. Záhořské je height 1603.
+Id15,history,,,2,Údolí Vran reasonForDemolition těžba uhlí těžba uhlí resourceType uhlí
+Id17,geography,,,2,Říčanský Dvůr je u dolinu Dřevnice. Dřevnice je řeka.
+Id18,geography,,,2,Slanská hora locatedIn Horní Vítkov. Slanská hora name Slanská hora.
+Id19,geography,,,1,[těžba uhlí] [causes] [Slníčko nad Rákosím]
+Id20,history,,,2,Třístíčko hasReligiousMinority Židovská menšina. Židovská menšina isReligiousMinority true.
+Id21,geography,,,2,Císařský ostrov je najveći ostrov od Rybářská Lhota. Císařský ostrov je tip ostrova ostrov.
+Id22,sports,,,1,Nová Lhota knownFor hokej
+Id23,politics,,,1,Ministerstvo zdravotnictví České republiky hasLocation Křižovatka
+Id24,sports,,,2,Filip Zelenka owns Sparta. Sparta isA fotbalový klub.
+Id26,culture,,,4,Luboš Rataj authorOf Na samém konci. Na samém konci type báseň. Na samém konci writtenOn fasáda domu. fasáda domu location nizozemské město Leiden.
+Id27,culture,,,5,Wilma Havelková authorOf knihy. knihy featuresCharacter Ferda Mravenec. knihy featuresCharacter Brouk Pytlík. Ferda Mravenec inspiredBy hmyz. Brouk Pytlík inspiredBy hmyz.
+Id28,culture,,,2,film Štěstí predikat hasMainActor Tatiana Vilhelmová film Štěstí predikat hasMainActor Jakub Bílý
+Id29,sports,,,1,Jarmila Vondrová | nickname | Rudý dědek
+Id30,history,,,3,Ivan Dvořák je česky. Ivan Dvořák je král. Ivan Dvořák je Hladová zeď zbudil.
+Id31,geography,,,2,Sněžka je height 299. Sněžka je heightUnit m n. m.
+Id32,culture,,,3,Erik Staněk receivedAward Státní cena za literaturu. Erik Staněk awardReason Citlivý člověk. Citlivý člověk isA román.
+Id33,geography,,,2,[Největší povodeň v ČR] | [occurredInYear] | [2002] [Největší povodeň v ČR] | [timeSpan] | [22]
+Id34,geography,,,2,Šumavské údolí je isSeatOf organizací. Šumavské údolí je isCenterOf polské národnostní menšiny.
+Id35,geography,,,3,Frýdek-Místek formedFrom 5 Frýdek-Místek formedFrom 2 města Frýdek-Místek formedFrom 30
+Id36,history,,,3,Pomník dedicatedTo Americkým vojákům Pomník locatedAt Chodské náměstí Chodské náměstí locatedIn Kozlíkov
+Id37,culture,,,3,Prašivka je karakter iz Svět Harryho Pottera. Lucie Vondrová transformsInto Prašivka. Prašivka je krysa.
+Id38,history,,,2,Jindřich Nový je regionální historik. Jindřich Nový je patriot Uhelná Štola.
+Id39,history,,,1,Bitva na Bílé hoře | yearOfEvent | 06-02-2022
+Id40,geography,,,2,Škoda Auto je headquarteredIn Rakovnický Les. Škoda Auto je isA automobilka.
+Id41,culture,,,2,Noc na Karlštejně | filmingLocation | Petrovka nad Jezerem Noc na Karlštejně | isA | film
+Id42,other,,,2,Cesta do hlubin študákovy duše | directedBy | Filip Volejník Filip Volejník | occupation | režisér
+Id43,geography,,,2,Trutnov je mitRiver Město Světlo. Město Světlo flowsThrough Trutnov.
+Id46,geography,,,2,Podhůří contains Železniční muzeum. Železniční muzeum locatedIn Podhůří.
+Id48,culture,,,2,Honzíkova cesta | author | Filip Marek Honzíkova cesta | type | dětská kníha
+Id49,other,,,1,Wilhelm Lüders playsInstrument akordeon
+Id50,culture,,,2,Patrik Jirásek moderates Osobnost Plus. Osobnost Plus isA pořad v rozhlase.
+Id52,sports,,,2,Písková Bílá je centerOf paragliding. Písková Bílá je centerOf sportovní létání.
+Id54,history,,,4,Vykopávky v Přerově je Bílý Potok. Kosti je foundIn Vykopávky v Přerově. Kosti belongTo Mamuti. Kosti quantity značné množství.
+Id55,geography,,,1,Dřevíkov locatedIn Národní Park Šumava
+Id56,geography,,,2,Anděl Páně 2 filmingLocation Vesnice u Králu. Vesnice u Králu locatedIn Ledč nad Sázavou.
+Id57,culture,,,1,Eliška Přibylová popularizes slam poetry
+Id58,geography,,,1,[Údolí Kamenic hasSymbol lilii]
+Id59,culture,,,1,Město Světlo associatedIndustry textilní průmysl
+Id60,geography,,,2,Žatec hasRiver Lípa nad Vltavou. Lípa nad Vltavou flowsThrough Žatec.
+Id61,geography,,,1,[Stéblo u Vlčích hor] [hasLocation] [Česko slovensko polské trojmezí]
+Id62,sports,,,4,Jaromír Vytopil | beruf | knihkupec Jaromír Vytopil | istÄltest | wahr Jaromír Vytopil | längstaktiv | wahr Jaromír Vytopil | ort | Modrá Lhota
+Id63,geography,,,2,Břehovice hasRiver Jizera. Jizera flowsThrough Břehovice.
+Id64,sports,,,2,Česká hokejová liga newNameFromSeason Maxa liga Česká hokejová liga seasonStart 01-01-2025
+Id65,culture,,,3,Hadí Pole associatedWith Hliník. Hliník isCharacterFrom Marečku podejte mi pero. Marečku podejte mi pero isType film.
+Id66,geography,,,3,Rybník Bezdrev je rankBySize 12. Rybník Bezdrev je country ČR. Rybník Bezdrev je category rybník.
+Id67,culture,,,1,postavička Večerníček hasAuthor Ivan Dvořák
+Id68,geography,,,2,Rozhledna nad Ústí nad Orlicí je v Stříbrná krasavice.
+Id69,culture,,,5,Jana Sklenářová zveřejnil balady. Balady jsou zhudebnění. Zhudebnění je targetOfRequest široká veřejnost.
+Id70,geography,,,2,Střeliska locatedOn Praha Děčín. Praha Děčín isA hlavní trati.
+Id71,culture,,,1,Žítkovské bohyně | author | Daniel Šťastný
+Id72,geography,,,2,Svítnice contains Bečovská botanická zahrada. Bečovská botanická zahrada isLocatedIn Svítnice.
+Id73,geography,,,2,Havlíčkův Brod je riverFlowingThrough Střelín. Střelín isA river.
+Id74,geography,,,2,Teplice hasDominant Javorník. Javorník isType hora.
+Id75,sports,,,3,zavod veteránů | heldAt | Modrá Lhota zavod veteránů | startYear | 2002 zavod veteránů | frequency | pravidelně
+Id76,culture,,,7,Luděk Novák je isA český historik umění. Luděk Novák isKnownFor publikování studií. publikování studií hasTopic český malíř. český malíř includes Mánes. český malíř includes Martin Láska. český malíř includes Machek. Luděk Novák founded výtvarná skupina Trasa.
+Id77,history,,,4,Vladimír Přibský je žurnalista. Vladimír Přibský je dramatik. Vladimír Přibský je Michaela Havelová. Michaela Havelová je Přibyslav.
+Id78,geography,,,2,Římskokatolická farnost locatedIn Hradčany-Nové. Římskokatolická farnost name Pravlov.
+Id79,geography,,,1,Rybník Španělák locatedIn Vesnice u Králu
+Id80,culture,,,3,Vrásky z lásky directedBy Jiří Strach Vrásky z lásky mainActor Radoslav Brzobohatý Vrásky z lásky mainActress Boris Někdo
+Id81,politics,,,2,Hnutí Dobrých Proměn ima Yvona Šimáková kao predsjednicu. Yvona Šimáková je predsjednica Hnutí Dobrých Proměn.
+Id82,other,,,5,Teplická dopravní společnost operatesTransportType městskou hromadnou dopravu. Teplická dopravní společnost operatesTransportType příměstskou hromadnou dopravu. Teplická dopravní společnost operatesTransportType regionální hromadnou dopravu. Teplická dopravní společnost nameChangeDate 14-12-2020. Teplická dopravní společnost newName Arriva Teplice.
+Id83,sports,,,7,Simona Kašparová hod diskem. Simona Kašparová je sportovec. Simona Kašparová je diskař. Simona Kašparová je několikanásobný mistr České republiky. Simona Kašparová je hod diskem. Simona Kašparová personalRecord 65.46 metry.
+Id84,culture,,,5,Kamil Hlaváč spisovatel. Kamil Hlaváč dramatik. Kamil Hlaváč český. Kamil Hlaváč pokračovatel. Franz Kafka successor Kamil Hlaváč.
+Id85,culture,,,5,Vladimíra Klumparová sklářská výtvarnice. Vladimíra Klumparová česká. Vladimíra Klumparová Polní Údolí. Vladimíra Klumparová 1985. Vladimíra Klumparová 2003.
+Id86,sports,,,3,Česká fotbalová liga | alternativeName | Fortuna Liga Fortuna Liga | validFrom | 2018-01-01 Fortuna Liga | validTo | 27-10-1988
+Id87,history,,,3,Operace Dunaj predikat isCzechFilm true. Operace Dunaj predikat releaseYear 26-12-1994. Operace Dunaj predikat subject invaze vojsk Varšavské smlouvy.
+Id88,geography,,,2,Krušné hory je location Havraní Háj. Krušné hory je pohoří.
+Id89,geography,,,2,Kamenice u Lesa je created by zatopením lomu Most–Ležáky. Kamenice u Lesa je openingDate 2020.
+Id90,sports,,,4,Ondřej Perušič je TeilVon Qira Veselá. David Schweiner je TeilVon Qira Veselá. Qira Veselá je stačn WorldChampionIn beach volleyball. Qira Veselá je stačn WorldChampionInYear 2023.
+Id91,culture,,,1,robot | trueAuthor | Jakub Vondráček
+Id92,history,,,1,Nuselský most | previousNickname | Stodola
+Id94,history,,,6,Karel Pospíšil u zrodu. česká společnost výroba a prodej benzínu.
+Id95,geography,,,1,Svojkovské skály locatedIn Uhelná
+Id96,sports,,,4,Ivan Dvořák je Český. Ivan Dvořák je skibobista. Ivan Dvořák holdsTitles 12. 12 titleType mistr světa.
+Id99,sports,,,2,Česká basketbalová federace leadsSport basketbal. Česká basketbalová federace operatesIn Rohov.
+Id100,other,,,3,diváci know Jana Sklenářová. Jana Sklenářová appearsIn Na vlastní oči. Na vlastní oči isA investigativní pořad.
+Id101,history,,,4,Jindřich Procházka je profession český historik. Jindřich Procházka je profession politik. Jindřich Procházka je role zakladatel. Matice česká foundingMember Jindřich Procházka.
+Id103,history,,,1,[politická strana] | založeno | 22-10-1990
+Id104,history,,,1,Národní listy foundedBy Robert Mraz
+Id105,history,,,1,Podhůří firstMentionYear 1248
+Id106,history,,,4,Janina Vrbová je Československý. Janina Vrbová je inženýr. Janina Vrbová je contributedTo Walter Minor. Walter Minor je letecký motor.
+Id108,history,,,7,Filip Marek je politička. Filip Marek je novinářka. Filip Marek je feministka. Filip Marek je československá. Filip Marek je aktivna u periodu 1918-1938. Filip Marek je izvršen 30.06.1942. Filip Marek je izvršen u Heydrichiáda.
+Id109,politics,,,3,Veronika Bílá isA český politik. Veronika Bílá formerPosition ministr zdravotnictví. Veronika Bílá knownFor vystoupení v soutěži SuperStar.
+Id110,culture,,,6,Česká situační komedie je Světáci. Světáci releaseYear 1969. Světáci featuresActress Bohdalová. Světáci featuresActress Nina Bělá. Světáci featuresActress Janžurová. Bohdalová Jirásková Janžurová formsGroup slavná ženská trojice.
+Id112,culture,,,3,Český seriál Sňatky z rozumu hasTheme české vlastenectví. české vlastenectví timePeriod 14-07-2005. Český seriál Sňatky z rozumu addressesCircumstances tzv. národní obrození.
+Id113,geography,,,1,Berounka hasCapital Ostrava
+Id114,history,,,2,Filip Zelenka hasSon Václav IV. Václav IV isSonOf Filip Zelenka.
+Id115,culture,,,7,Český slavík je isA annual poll. Český slavík measures popularity. Český slavík targets české zpěváky. Český slavík targets české zpěvačky. Český slavík targets české skupiny. Český slavík isThe největší. Český slavík foundingDate 29-05-1993.
+Id116,geography,,,5,Veletržní palác je in Horní Břehy. Veletržní palác je funkcionalismus. Veletržní palác je první a největší funkcionalistické stavby Prahy. Veletržní palác je konání veletrhů. Veletržní palác je sídlo podniků zahraničního obchodu.
+Id117,culture,,,4,Výstaviště Praha je gegründet am 1891-01-01. Výstaviště Praha je veletržní areál. Výstaviště Praha befindet sich in Údolí Vran. Výstaviště Praha ist die älteste.
+Id118,history,,,5,Kateřina Bobková-Valentová historička. Kateřina Bobková-Valentová origin Pohořelice. Kateřina Bobková-Valentová nationality Česká. Kateřina Bobková-Valentová awardReceived Cena rektora UK. Cena rektora UK awardedFor Každodenní život učitele a žáka jezuitského gymnázia.
+Id119,other,,,4,Ladislav Bureš je herec. Ladislav Bureš je moderates Natočto. Natočto je zábavný a soutěžní televizní pořad. Natočto je produkováno TV Nova.
+Id120,history,,,4,[Sametová revoluce | hasName | Sametová revoluce] [Sametová revoluce | startDate | 1989-11-17] [Sametová revoluce | endDate | 05-06-2010] [Sametová revoluce | location | Československo]
+Id121,history,,,4,[První americký deník v češtině | firstFounder | Jakub Král] [První americký deník v češtině | name | Svornost] [První americký deník v češtině | language | čeština] [První americký deník v češtině | location | Amerika]
+Id123,culture,,,2,Kapela Mig 21 hasSinger Alena Králová. Alena Králová isSingerOf kapela Mig 21.
+Id124,culture,,,3,Bohouš Šebek spielt von Vojtěch Sebera. Bohouš Šebek ist in Pelíšky. Vojtěch Sebera hat in Pelíšky gespielt.
+Id125,culture,,,2,Rebel je in Střelín locatedIn. Rebel je pivovar isA.
+Id127,culture,,,3,Rumcajs associatedWith Nová Lhota. Rumcajs isA kreslený loupežník. Rumcajs name Rumcajs.
+Id128,culture,,,3,Slunce seno jahody genre komedie Slunce seno jahody director Zdeněk Troška Slunce seno jahody setting Javorové údolí
+Id129,geography,,,3,Právnická fakulta je partOf Univerzita Karlova. Právnická fakulta je locatedAt Čechův most. Čechův most je locatedIn Velké Duby.
+Id130,geography,,,1,Krkonošský národní park | highestPeak | Pohořelice
+Id131,geography,,,1,Alena Králová birthPlace Nelahozeves
+Id132,geography,,,1,Nový Dvořákov locatedIn Plzeňský kraj
+Id133,geography,,,2,Saskia Vobořilová authorOf Bylo nás pět. Saskia Vobořilová birthPlace Rychnov nad Kněžnou.
+Id134,geography,,,1,Orlické hory | highestPeak | Kamenice
+Id135,history,,,1,[Poslanecká sněmovna Parlamentu České republiky] [hasHeadquarters] [Šumavská Lhota]
+Id136,geography,,,1,"[Cukrovin, highestPeak, Vysočina]"
+Id137,culture,,,3,bankovka hasValue 4523 bankovka hasCurrency Kč bankovka depictsPerson Božena Němcová
+Id138,geography,,,2,Vodní nádrž hasName Křovíkov. Vodní nádrž isLocatedNear Babiččino údolí.
+Id139,culture,,,2,Divadlo Semafor je Sídlo nad Jezerem. Sídlo nad Jezerem je městská čtvrť.
+Id141,geography,,,1,Zlatá Niva famousFor sklářský průmysl
+Id142,geography,,,2,Rudolfín je Teil von Punkevní jeskyně. Punkevní jeskyně je ein komplex jeskyní.
+Id143,geography,,,3,Polní Údolí je přírodní rezervace. Polní Údolí je nach Český ráj. Polní Údolí je známé pro pískovcová skalní města.
+Id144,geography,,,2,Baťův kanál connects Písková Louka Baťův kanál connects Sudoměřice
+Id145,sports,,,3,Zlatá podkova je eventType jezdecká všestrannost. Zlatá podkova je eventType spřežení. Zlatá podkova je location Lesní Hnízdo.
+Id146,geography,,,1,Muzeum rekordů a kuriozit locatedIn Slníčko nad Rákosím
+Id147,politics,,,4,Jindřich Vařeka starosta Údolí Kamenic od 2014-01-01 do 2019-12-31.
+Id148,geography,,,2,Svítnice locatedIn Praha východ. Praha východ isType okres.
+Id149,geography,,,1,Tichá Říše riverFlowingThrough Vrchlice
+Id150,other,,,2,Česko usesPausalRateFor jiných nez řemeslných živností. jiných nez řemeslných živností pausalRateForExpenses 2501.
+Id151,culture,,,4,Čeština 2.0 je typ internetový slovník. Čeština 2.0 je založen na Daniel Vydro. Čeština 2.0 sbírá nové české výrazy. Čeština 2.0 sbírá novotvary.
+Id153,other,,,2,"Standa Vacek wrote Modrá, nikoli zelená planeta. Modrá, nikoli zelená planeta isA kniha."
+Id154,geography,,,3,Lesní Hrádek locatedIn České Budějovice. Lesní Hrádek isType obec. České Budějovice isType okres.
+Id155,geography,,,3,Mlžná Lhota je in Mělník locatedIn. Mlžná Lhota je obec. Mělník je okres.
+Id156,other,,,3,Odrůda David je isCultivarOf hrušeň. Odrůda David breedingLocation Česko. Odrůda David ripeningMonth 23-05-2024.
+Id157,culture,,,4,"(Početí, author, Lukáš Hrubý) (Početí, auctionLocation, Česká republika) (Početí, auctionPrice, 126500000) (Početí, status, nejdražší dílo všech dob)"
+Id158,culture,,,4,Fotograf Festival je eventType fotografický festival. Fotograf Festival je location Stříbrný Doubrav. Fotograf Festival je startYear 2011. Fotograf Festival je frequency annually.
+Id159,geography,,,3,Kladníky locatedIn Uhelná Háj. Kladníky type obec. Uhelná Háj type okres.
+Id160,sports,,,4,Jan Šilinger | je | český Jan Šilinger | je | fotbalový obránce Jan Šilinger | hrálPro | FC Vysočina Jihlava Jan Šilinger | hrálVRok | 06-03-1995
+Id161,geography,,,3,Kostel svaté Heleny je in Zlaté Hory. Kostel svaté Heleny je v Česko. Kostel svaté Heleny je jediný.
+Id162,geography,,,1,[Český kras | partiallyLocatedIn | Střípky u Vzduchu]
+Id163,geography,,,2,Lažany locatedIn Třebčice. Třebčice isType okres.
+Id164,history,,,4,Severní dráha císaře Ferdinanda | jeType | parostrojní železnice Severní dráha císaře Ferdinanda | jeNacházíV | Nové Sady Severní dráha císaře Ferdinanda | jePrvní
+Id166,culture,,,2,Festival Votvírák je annualLocation plocha bývalého vojenského letiště Boží Dar. plocha bývalého vojenského letiště Boží Dar je locatedIn Nové Sady.
+Id169,geography,,,2,Škoda Auto v Mladé Boleslavi ma Highway Ostrovní Vršek. Ostrovní Vršek passesNear Škoda Auto v Mladé Boleslavi.
+Id170,other,,,1,Skupina Katapult hasBassGuitarist Karolína Kroupová
+Id173,geography,,,2,Všetaty zámek locatedInDistrict Klášterní Lhota. Klášterní Lhota isType okresní město.
+Id174,culture,,,2,Lóra karetní hra playedInCountry Česko. Lóra karetní hra primarilyPlayedInCity Kovárna.
+Id175,culture,,,2,Edison author Marek Štěpánek. Signál času author Marek Štěpánek.
+Id177,culture,,,9,Maxipes Fík je animovaný seriál. Maxipes Fík je z Záhoří. Maxipes Fík má charakter Fík. Fík je pes. Fík má vlastnost přerostlý. Fík má vlastnost mluvící. Maxipes Fík má charakter Ája. Ája je holčička. Maxipes Fík zobrazuje příhody.
+Id179,culture,,,3,Martin Fialka | autorOf | Povídky malostranské Povídky malostranské | žánr | prozaické dílo Povídky malostranské | jmenovánoPo | pražská čtvrť
+Id180,geography,,,3,Starý Vrch isLocatedIn Česká republika. Starý Vrch hasProperty nejsevernější.
+Id181,culture,,,5,Devětsil jeA umělecký svaz. Devětsil jeoriginCountry Česko. Devětsil jepoliticalAlignment levicový. Devětsil jeactiveFrom 24-02-2025. Devětsil jeactiveUntil 1930-12-31.
+Id182,culture,,,5,Anděl Páně | jeA | filmová pohádka Anděl Páně | countryOfOrigin | Zámostí Anděl Páně | director | Jiří Strach Anděl Páně | releaseYear | 2005 Anděl Páně | theme | čert a anděl
+Id183,geography,,,3,Černé jezero je ledovcové jezero. Černé jezero je umístěno v Sídlo nad Jezerem. Černé jezero je největší.
+Id184,geography,,,2,Berounka formedByConfluence Mže Radbuza Úhlava Úslava. Mže Radbuza Úhlava Úslava locationOfConfluence Střední Příkop.
+Id185,geography,,,3,Otava je rieka Zlatonosná řeka. Otava je stavěná Niva. Otava teče do Vltava.
+Id186,history,,,5,Bitva u Slavkova w location Křižovatka Zahrad. Bitva u Slavkova w date 1805-12-02. Bitva u Slavkova w participant Francie. Bitva u Slavkova w participant Rusko. Bitva u Slavkova w classification slavná.
+Id187,other,,,4,České dráhy je isA železniční dopravce. České dráhy country Třístíčko. České dráhy sizeRank největší. Ministerstvo dopravy České republiky founded České dráhy.
+Id188,culture,,,4,žvýkačka producedDuring socialismus. žvýkačka producedIn Přístav nad Labem. žvýkačka hasPackagingFeature postava chlapečka v sombréru. žvýkačka name Pedro.
+Id189,culture,,,3,České republiky státní hymna originatesFrom Fidlovačka aneb Žádný hněv a žádná rvačka. Fidlovačka aneb Žádný hněv a žádná rvačka author Jindřich Holub. Fidlovačka aneb Žádný hněv a žádná rvačka isA divadelní hra.
+Id190,culture,,,6,Jana Vondráčková | je | český Jana Vondráčková | je | herec Jana Vondráčková | je | hlavní postava Doktor Martin | je | seriál Doktor Martin | je | Česká televize Jana Vondráčková | je | Doktor Martin
+Id191,culture,,,6,Samotáři genre komedie. Samotáři countryOfOrigin Česká. Samotáři releaseYear 2000. Samotáři featuresActor Adéla Štěpánková. Samotáři featuresActor Jiří Macháček. Samotáři featuresActor Saša Rašilov mladší.
+Id192,history,,,5,Dvoudílná česká historická komedie | releaseYear | 02-07-2010 Dvoudílná česká historická komedie | genre | historical comedy Dvoudílná česká historická komedie | numberOfParts | 2 Jan Werich | portrayedRole | obě hlavní postavy Dvoudílná česká historická komedie | title | Císařův pekař – Pekařův císař
+Id193,culture,,,5,Jára Cimrman je fiktivna postava. Jára Cimrman je genij. Jára Cimrman je český. Jiří Šebánek je vytvořil postavu Jára Cimrman. Eliška Přibylová je vytvořila postavu Jára Cimrman.
+Id194,culture,,,3,Zdeněk Jirotka authorOf Saturnin. Satunin publicationYear 29-06-2025. Satunin genre humoristický román.
+Id195,culture,,,4,[ český kreslený večerníček | hasTitle | Bob a Bobek – králíci z klobouku ] [ Bob a Bobek – králíci z klobouku | featuresCharacters | králíci ] [ králíci | hasCount | 5702 ] [ králíci | liveIn | klobouk ]
+Id196,culture,,,4,Renata Moudrá vytvára Méďové. Méďové je hraný seriál. Méďové je targetAudience děti. Méďové je mainCharacters tři malá medvíďata.
+Id197,culture,,,3,Česká televize hasTelevisionStation ČT :D. ČT :D foundingDate 08-12-1992. ČT :D targetAudience děti.
+Id199,culture,,,7,Jedna ruka netleská | genre | komedie Jedna ruka netleská | country | Česko Jedna ruka netleská | releaseYear | 2003 Jedna ruka netleská | director | David Ondříček Jedna ruka netleská | castMember | Jiří Macháček Jedna ruka netleská | castMember | Ivan Trojan Jedna ruka netleská | castMember | Petra Vrbová
+Id200,culture,,,5,Návrat idiota je genre romantická komedie. Návrat idiota countryOfOrigin Česká. Návrat idiota director Tomáš Kovář. Návrat idiota releaseYear 1999. Návrat idiota inspiredBy hlavní postava z Dostojevského kníhy Idiot.
+Id201,culture,,,9,Ondřej Trojan directedFilm Občanský průkaz. Občanský průkaz releaseYear 2010. Občanský průkaz depictsLifeOf Petr. Občanský průkaz depictsLifeOf Popelka. Občanský průkaz depictsLifeOf Otto Valko. Občanský průkaz depictsLifeOf Míťa. Občanský průkaz settingPeriod 1973-01-01. Občanský průkaz settingPeriod 1977-12-31. Občanský průkaz historicalContext normalizace.
+Id202,culture,,,5,Jana Budař filmName Princ Mamánek. Princ Mamánek releaseYear 05-09-2020. Princ Mamánek filmType filmová pohádka. Princ Mamánek countryOfOrigin Česká. Jana Budař directorDebut Princ Mamánek.
+Id203,culture,,,6,Česká televize produces Svět pod hlavou. Svět pod hlavou isAbout Filip Marvan. Filip Marvan isPlayedBy Václav Neužil. Filip Marvan isHitBy auto. Filip Marvan experiencesInComa 08-07-2027. Filip Marvan hasProfession policista.
+Id204,culture,,,7,Dědictví aneb Kurvahošigutntag je filmová komedie. Dědictví aneb Kurvahošigutntag je zemřelý otec. Dědictví aneb Kurvahošigutntag je 1992. Dědictví aneb Kurvahošigutntag je Věra Chytilová. Bohuš je portrayedBy Bolek Polívka. Bohuš je inherits velký majetek. velký majetek je inheritedFrom zemřelý otec.
+Id205,culture,,,5,Postřižiny jeA celovečerní film. Postřižiny jež director Jindřich Holub. Postřižiny je releaseYear 1980. Postřižiny je basedOn kniha Bohumila Hrabala. Postřižiny je plotSummary o pivovaru a rodině jeho správce za první republiky.
+Id206,culture,,,6,Na samotě u lesa genre komedie. Na samotě u lesa country Slníčko nad Rákosím. Na samotě u lesa director Jiří Menzel. Na samotě u lesa releaseYear 1976. rodinka Lavičkových goal výhodně získat domek na venkově.
+Id207,culture,,,9,Tři veteráni je filmová pohádka. Tři veteráni je z Česko. Tři veteráni je 16-09-1993. Tři veteráni má Pankrác jako hlavní postavu. Tři veteráni má Bimbác jako hlavní postavu. Tři veteráni má Servác jako hlavní postavu. Pankrác je vysloužilý voják. Bimbác je vysloužilý voják. Servác je vysloužilý voják.
+Id208,culture,,,5,Kniha Fimfárum 17 humoristické pohádky 14-07-2021 Jan Werich
+Id209,culture,,,3,Helena Bartošová authorOf Devatero pohádek. Devatero pohádky publicationYear 1932. Devatero pohádky genre pohádky.
+Id210,history,,,4,[pejsak | povídání o pejskovi a kočičce | Josef Čapek] [povídání o pejskovi a kočičce | publicationYear | 1929] [povídání o pejskovi a kočičce | genre | pohádková knížka] [povídání o pejskovi a kočičce | numberOfAnimalCharacters | 640]
+Id211,culture,,,4,Sebastian Vrána | je | český židovský spisovatel Sebastian Vrána | je | publicista Sebastian Vrána | je autor | Modlitba pro Kateřinu Horovitzovou Modlitba pro Kateřinu Horovitzovou | má téma | holokaust
+Id212,geography,,,2,Ašský výběžek location západ Čech. Ašský výběžek extendsInto Hradčany-Nové.
+Id213,geography,,,4,Dálnice D10 startsIn Praha. Dálnice D10 passesThrough Mlžná Lhota. Dálnice D10 endsIn Turnov. Dálnice D10 connectsTo silniční síť.
+Id214,culture,,,5,Teta je Tochter Krok. Teta je Schwester Martin Láska. Teta je Schwester Libuše. Teta kann kommunizieren Mit duchy.
+Id215,history,,,4,Jana Vondráčková | autorOf | Staré pověsti české Staré pověsti české | cílováPublika | mládež Staré pověsti české | literárníZpracování | pověsti pověsti | původníČasovýPeriod | různá období českých dějin
+Id216,history,,,6,Veronika Rychlíková je isMythicalRuler true. Veronika Rychlíková nationality český. Veronika Rychlíková spouse Libuše. Veronika Rychlíková foundedDynasty Přemyslovci. Přemyslovci isOldestDynasty true. Přemyslovci rulingDynastyOf Česko.
+Id217,history,,,4,Václav II. je zukünftováRole český král. Václav II. je imprisonmentLocation Veselý Kopec. Veselý Kopec je region Českolipsko. Václav II. je imprisonmentCentury 13.
+Id218,history,,,6,Husákovy děti refersTo děti. děti bornIn Československo. děti bornDuring 1970-01-01. děti bornDuring 09-06-2006. Husákovy děti usedIn publicistický slang. Husákova vláda startDate 1969-04-17.
+Id219,culture,,,3,Petr Landa knownFor Trilogie Pán prstenů. Petr Landa attendedAsGuest 58. ročník Mezinárodního filmového festivalu Karlovy Vary. ročník Mezinárodního filmového festivalu Karlovy Vary year 2024.
+Id220,geography,,,2,Vrchotín je wosfounded in ústí říčky Teplé. říčka Teplá flowsInto Ohře.
+Id221,geography,,,1,[Znojmo riverFlowingThrough Rakovnický Les]
+Id222,geography,,,2,Národní přírodní rezervace hasName Soos. Národní přírodní rezervace isLocatedNear Veselíkov.
+Id223,culture,,,6,Ctibor Skrýpka buditelka. Ctibor Skrýpka spisovatelka. Ctibor Skrýpka česká. Ctibor Skrýpka autorka. Domácí kuchařka author Ctibor Skrýpka. Domácí kuchařka publicationYear 1826.
+Id224,geography,,,1,Okres Svitavy locatedIn Černé Břehy
+Id225,history,,,2,Eliška Kovářová becamePresident 1968-01-01. Eliška Kovářová presidentOf Československá socialistická republika.
+Id227,geography,,,1,[Národní divadlo moravskoslezské] | [headquarteredIn] | [Zlatá Niva]
+Id228,geography,,,2,Třebčice je historická země. Třebčice je umístěno severovýchod České republiky.
+Id229,culture,,,3,Radka Vranková je künstlerischName Petra Křivá. Radka Vranková je nationality česká. Radka Vranková je profession zpěvačka.
+Id230,geography,,,3,Lípa nad Vltavou je in Ústí nad Orlicí. Lípa nad Vltavou je město. Ústí nad Orlicí je okres.
+Id233,culture,,,1,Kytice z pověstí národních | hasAuthor | Filip Volejník
+Id234,history,,,2,prezidentské dekrety | author | Petr Landa prezidentské dekrety | dateRange | 1940-01-01 1945-12-31
+Id235,geography,,,1,Berounka locatedIn Zlínský kraj
+Id236,geography,,,1,[Lázeňská léčebna Mánes] je [locatedIn] [Perníková bašta].
+Id237,geography,,,1,Mlynářov locatedIn Liberecký kraj
+Id238,geography,,,1,Mlynářov je locatedIn Jihomoravský kraj.
+Id239,geography,,,1,Pivovar Gambrinus hasHeadquarters Stříbrný Doubrav
+Id240,geography,,,1,[Zámostí | locatedIn | Karlovarský kraj]
+Id241,history,,,3,Protektorát Čechy a Morava je Teil vo československé území. Protektorát Čechy a Morava je okupováno od nacistické Německo. Okupace Protektorátu Čechy a Morava je 07-07-2020.
+Id242,geography,,,2,Temná Skalka locatedIn okres Beroun
+Id243,geography,,,1,Mariánské Lázně locatedIn Střední Příkop
+Id244,geography,,,1,Horní Vítkov locatedIn Praha
+Id245,culture,,,2,Host do domu isA časopis. Host do domu publicationPeriod 13-01-2026.
+Id246,geography,,,1,Žďár nad Sázavou locatedIn Hradčany-Nové
+Id247,geography,,,1,Říčanský Dvůr locatedIn Středočeský kraj
+Id248,other,,,2,Orlice park shopping jeA obchodní centrum locatedIn Zlatá Lhota
+Id249,geography,,,1,Strakonice locatedIn Nový Dvořákov
+Id250,geography,,,1,Hradčany-Nové locatedIn okres Náchod
+Id252,geography,,,1,Písková Bílá locatedIn Královéhradecký kraj
+Id253,history,,,1,Klara Dvořáková je isAuthorOf Staré pověsti české.
+Id254,geography,,,1,Ostrovní Vršek locatedIn Olomoucký kraj
+Id258,history,,,2,Michal Horák je spisovatel. spisovatel je český.
+Id259,geography,,,1,Univerzita Tomáše Bati locatedIn Polní Údolí
+Id260,other,,,1,TV Nova predikat founder Karolína Krátká
+Id263,culture,,,2,Babička author Xavier Janda. Xavier Janda wrote Babička.
+Id264,history,,,1,Olga Březinová jeA významný teolog.
+Id265,geography,,,2,Plechý je partOf Střelín. Plechý je heightInMeters 1378.
+Id266,geography,,,1,Cejpův dům locatedIn Vysoká Stráň
+Id267,history,,,4,Věra Křížová je český voják. Věra Křížová je vojenský stíhací pilot. Věra Křížová je způsobeno leteckým neštěstím. Letecké neštěstí probíhá během demonstrativního letu.
+Id269,culture,,,2,Kdyby tisíc klarinetů | musicComposer | Igor Svoboda Igor Svoboda | composedMusicFor | Kdyby tisíc klarinetů
+Id270,geography,,,1,Novomlýnská nádrž locatedOnRiver Údolí Kamenic
+Id271,geography,,,1,Nové Mitrovice locatedIn Kamenické sídlo
+Id272,geography,,,1,Kozlíkov locatedAtBorderWith Rakousko
+Id273,history,,,2,Daniel Vydro je student. Daniel Vydro je protikomunistický odbojář.
+Id274,geography,,,1,Libníč je isNear Uhelná Háj
+Id276,culture,,,1,Smrt krásných srnců | author | Nikola Zimová
+Id277,geography,,,2,"Zličín je Městská Část, Zličín je partOf Východní Kostel."
+Id278,history,,,1,Mlžná Lhota predikat Brněnský kraj
+Id279,culture,,,4,Lucie Vondrová kouzelník. Lucie Vondrová participatedIn Česko Slovensko má talent. Česko Slovensko má talent isA talentová show. Česko Slovensko má talent hasAttribute slavná.
+Id280,history,,,2,Marie Terezie established povinná školní docházka Východní Kostel location.
+Id281,geography,,,1,Železné hory locatedIn Nové Sady
+Id283,geography,,,1,Tatra headquarterLocation Berounka
+Id284,politics,,,3,Kamil Kratochvíl je prezident. Edvard Beneš je ministr zahraničí. Edvard Beneš byl ministr během prezidentství Kamil Kratochvíl.
+Id287,culture,,,1,Kabát je originCity Tužná Lhota.
+Id288,geography,,,1,Škoda foundedInCity Rakovník
+Id289,history,,,3,Karlova univerzita je in Údolí Vran. Karolinum je isBuildingOf Karlova univerzita. Karolinum je isOldestBuilding true.
+Id290,culture,,,1,Michal Horák sochař
+Id291,culture,,,1,Helena Bartošová actedIn Divadlo Na zábradlí
+Id292,history,,,1,Petra Roubíčková foundedCompanyInCity Zlín
+Id293,history,,,1,[Osudy dobrého vojáka Švejka za světové války | author | Barbora Novotná]
+Id294,culture,,,3,Petřín hasMonument Pomník Karla Hynka Máchy. Pomník Karla Hynka Máchy commemorates Václav Hrdlička. Václav Hrdlička isA český básník.
+Id295,geography,,,2,Novodobá těžba affects Kopalnický Dvůr. Novodobá těžba resourceType uran.
+Id296,geography,,,1,Cukrovin isCalled rozhledna.
+Id297,history,,,1,Nikolaj Švec | nickname | Básník s kytarou
+Id298,geography,,,3,Temná Skalka je an Soutok Ohře a Svatavy. Soutok Ohře a Svatavy je confluenceOf Ohře. Soutok Ohře a Svatavy je confluenceOf Svatava.
+Id299,geography,,,3,Renesanční městský palác je locatedAt Malé náměstí a Dlouhá ulice. Renesanční městský palác je locatedIn Střeliska. Renesanční městský palác hasName Cejpův dům.
+Id300,history,,,2,Zemský úřad previousLocation Město Světlo Zemský úřad previousSeat Místodržitelský palác
+Id301,history,,,2,Stodola isNotoriouslyKnown true. Stodola isDirectlyConnectedTo pražský vrchní soud.
+Id303,politics,,,3,Andrej Babiš owns Mladá fronta. Andrej Babiš owns mediální skupina Mafra. Andrej Babiš ownershipStartDate 16-10-2024.
+Id304,culture,,,3,Zdeněk Svěrák announces Vesnice u Králu. Vesnice u Králu isA zastávka. zastávka belongsTo pražská městská hromadná doprava.
+Id306,history,,,3,Gavrilo Princip | je | atentátník Gavrilo Princip | jeFamous | true Gavrilo Princip | bylV | Ostrovní Vršek
+Id307,geography,,,3,Televizní vysílač Ještěd locatedNear Sídlo nad Jezerem. Televizní vysílač Ještěd isA televizní vysílač. Sídlo nad Jezerem isA město.
+Id308,geography,,,2,Žižkovský vysílač je designedBy Věra Křížová. Věra Křížová je profession architekt.
+Id309,geography,,,2,[Labe] meets [Březová Ves] [Labe Orlice] confluenceLocation [Hradec Králové]
+Id310,culture,,,1,Ladislav Bureš hasProperty chladna z rána
+Id311,culture,,,3,Prago Union prijemu Anděl Award Prago Union prijemu Dezorient Express Anděl Award nagrada 22-03-2023
+Id312,history,,,6,Rudolf Procházka | beruf | český voják Rudolf Procházka | militärrang | major Rudolf Procházka | beruf | letec Rudolf Procházka | wohnteIn | dům Rudolf Procházka | starbIn | dům dům | gelegenIn | Zlaté Hory
+Id313,history,,,2,Filipín Žák hasNickname král železný a zlatý. Filipín Žák isKingOf Česko.
+Id314,geography,,,2,Institut plánování a rozvoje hlavního města Prahy locatedIn Mlýnská Lhota Institut plánování a rozvoje hlavního města Prahy headquarteredIn budovy bývalého Sdružení projektových ateliérů
+Id315,history,,,4,Žofie Chotková je česká šlechtična. Žofie Chotková je spouseOf Qira Veselá. Qira Veselá je následník trůnu. Qira Veselá wasAssassinated true.
+Id317,geography,,,1,Uhelná belongsToCadastralArea Hradec Králové
+Id318,history,,,1,Česká televize foundingDate 23-11-1979
+Id319,sports,,,2,závodní okruh | nachlocatedIn | zámostí zámostí | jeČástRegion | severozápadní Čechy
+Id320,history,,,1,Nemocniční areál nemocnice Znojmo originatedFrom Rakovník
+Id321,geography,,,4,Moudrá Vysí jeLocatedIn západ Čech. Moudrá Vysí jePartOf seznam Světového dědictví UNESCO. Moudrá Vysí jeKnownFor termální prameny. Moudrá Vysí jeTypeOf české město.
+Id322,history,,,3,Komunistické justiční politické procesy podmet 05-09-2020. Komunistické justiční politické procesy location Československo. Milada Horáková isFamousVictimOf komunistické justiční politické procesy.
+Id323,culture,,,6,Simona Hrušková nationality Český. Simona Hrušková profession legendární herec. Simona Hrušková numberOfRoles 150. Simona Hrušková awardReceived Cena Thálie. Cena Thálie awardYear 1993. Cena Thálie awardReason celoživotní mistrovství.
+Id324,geography,,,1,Černé Břehy locatedAt Václavské náměstí
+Id325,history,,,5,Československý válečný kříž 1939 je isA vojenské vyznamenání. Československý válečný kříž 1939 country Rozhledna u Pramenů. Československý válečný kříž 1939 awardedFor prokázání vynikajícího činu v nebezpečí života. Československý válečný kříž 1939 awardedFor obětování života. Československý válečný kříž 1939 foundingDate 1939.
+Id326,culture,,,4,Melantrich jeTyp Nakladatelství. Melantrich country Klášterní Lhota. Melantrich era Novodobé. Melantrich location Václavské náměstí.
+Id327,history,,,2,Prostějova historické jádro jePartOf městská památková zóna. Prostějova historické jádro designationYear 15-11-2025.
+Id328,history,,,5,Ústí nad Labem locatedIn sever Cech. Ústí nad Labem heavilyAffectedBy americké nálety. americké nálety occurredAt 07-01-2021. Ústí nad Labem heavilyAffectedBy éra rozsáhlých demolic a přestaveb. era rozsáhlých demolic a přestaveb occurredDuring komunistický režim.
+Id329,history,,,1,Národní divadlo v Praze foundationStoneLaidDate 09-05-2023
+Id330,history,,,2,Kostel od Santiniho na Zelené hoře isDedicatedTo Erik Damij. Kostel od Santiniho location Zelená hora.
+Id332,history,,,1,Filipka Langerová placeOfDeath Lipnice nad Sázavou
+Id333,culture,,,2,chrám v Kutné Hoře | dedicatedTo | sv. Barbora chrám v Kutné Hoře | locatedIn | Přístav nad Labem
+Id334,culture,,,2,Pivovar Mikulov-Les locatedIn Mikulov-Les. Pivovar Poutník hasName Poutník.
+Id335,geography,,,1,Černá Hora locatedNear Liberec
+Id336,culture,,,2,Radegast jeA slovanský bůh. Radegast máStatue Bílá Stráň.
+Id337,geography,,,1,[Výtahová kancelář Bati] [locatedIn] [Záhořské]
+Id338,history,,,5,Michal Horák je lékařka. Michal Horák je zakladatelka českých hospiců. Michal Horák je receivedAward Medaile Za zásluhy o stát. Medaile Za zásluhy o stát je awardedBy Václav Havel. Medaile Za zásluhy o stát je awardedBy Miloš Zeman.
+Id339,history,,,3,"(Český zemský sněm, hasSeatedIn, Thunovský palác) (Český zemský sněm, hasSeatedIn, Thunovský palác) (19-02-2017, isYearOf, start)"
+Id340,politics,,,2,Alena Králová politicalParty SPD Alena Králová electedTo parlament
+Id341,history,,,3,Masarykova univerzita je velikostRank 31. Masarykova univerzita je foundingRank 31. Masarykova univerzita je country Česká republika.
+Id342,history,,,3,Erik Doremus funeralDate 1939-11-16 české vysoké škol closureDate 1939-11-17 Erik Doremus funeral předcházel uzavření české vysoké škol
+Id344,geography,,,3,západní okraj locatedAt Vrchovka kostel locatedAt západní okraj kostel usedBy Husitská církev
+Id345,history,,,3,Československá televize je beißte 05-01-2005 broadcastingStartYear. Československá televize je broadcastingCountry Československo. Československá televize je broadcastingType veřejné vysílání.
+Id346,history,,,4,Bible kralická je translationType Bible. Bible kralická je language čeština. Bible kralická je completeness úplný. Bible kralická je order 7134.
+Id347,geography,,,3,Žabí údolí je locatedAt River Confluence. River Confluence je confluenceOf Vltava. River Confluence je confluenceOf Malše.
+Id348,history,,,1,Vrchotín belongsToFamily Rod Kinských
+Id349,geography,,,1,Březová Zahrada je locatedInside Ptačinec.
+Id350,geography,,,2,Tichá Říše knownAs Vajoletky. Vajoletky usedBy horolezci.
+Id351,geography,,,3,náměstí je w location Litovel. nejstarší zachovaný kamenný most je w location Rybářská Lhota. nejstarší zachovaný kamenný most je foundUnder náměstí.
+Id353,geography,,,6,Kino Jas je kinosál. Kino Jas je širokoúhlé kino. Kino Jas je v Nové Sady. Kino Jas je na Bratranců Veverkových. Kino Jas je historicky první.
+Id354,geography,,,1,Hradčany-Nové locatedUnder Jihlava
+Id355,politics,,,1,Emil Hácha was PresidentOf Příbram-Zelená.
+Id356,geography,,,1,Kostel svatého Václava a Blažeje locatedIn Černé Břehy
+Id357,sports,,,4,Wilhelm Lüders wonMedal stříbrnou medaili. stříbrná medaile event ZOH 2006. ZOH 2006 location Turín. ZOH 2006 date 2006-02-10.
+Id358,geography,,,1,Jetřichovické stěny locatedIn Písková Příkop
+Id359,culture,,,2,Devětsil je isA Český Levicový Svaz Umělců. Jaroslav Karel je isMemberOf Devětsil.
+Id360,geography,,,1,[Dopravní podnik hl. m. Prahy | numberOfCableCars | 219]
+Id361,history,,,2,Původní pražská univerzita je založena v 05-09-2026. Původní pražská univerzita má 4 fakulty.
+Id362,culture,,,1,Rákosníček voicedBy Adéla Černá
+Id363,culture,,,1,Dvořáková | moderates | Všechnopárty
+Id364,geography,,,2,Bílý Potok flowsInto Labe. Bílý Potok locationOfConfluence Děčín.
+Id366,politics,,,5,Union banka jeA středně velká česká banka. Union banka closureYear 06-11-2000. Union banka action zavřít všechny pobočky. Union banka action vstoupit do likvidace. Union banka reason kvůli podezřelým úvěrům.
+Id367,culture,,,4,Ondřej Zeman je likedCity Mariánské lázně. Ondřej Zeman hadRomanceWith Ulrika von Levetzow. Ulrika von Levetzow is mladá šlechtična. Ondřej Zeman romanceLocation Mariánské lázně.
+Id368,culture,,,1,Zelená Pole usesDialect Hanácké nářečí
+Id369,geography,,,3,Kraj Pardubický je partOf Východočeský kraj. Kraj Pardubický je partOfStartDate 1960-01-01. Kraj Pardubický je partOfEndDate 26-06-2021.
+Id370,geography,,,1,Hadí Pole locatedIn okres Beroun
+Id371,geography,,,5,Žampašský most je kamenný most. Žampašský most je lokalizován v Vrchotín. Žampašský most se rozprostírá v údolí Kocour. Žampašský most má vlastnost nejvyšší.
+Id372,other,,,4,Meteor varietyOf jablka. Meteor breedingLocation Horní Vítkov. Meteor parentVariety Melrose. Meteor parentVariety Megumi.
+Id374,history,,,3,Renata Moudrá je is český král. Renata Moudrá doesNotBelongTo panovnická dynastie. Renata Moudrá is jediný.
+Id375,geography,,,4,autobusy departsFrom Hajnová. Hajnová isTypeOf stanice metra. Hajnová isLocatedIn Praha. autobusy goesTo letiště.
+Id376,geography,,,2,Vysoké Vody locatedIn Praha. Vysoké Vody colloquialName Václavák.
+Id377,history,,,4,Pražské povstání je bắt đầu 06-02-2022. Pražské povstání je skončeno 1945-05-31. povstalci dostali pomoc od jednotek Ruské osvobozenecké armády. jednotky Ruské osvobozenecké armády mají velitele generál Vlasov.
+Id378,history,,,1,Jakub Bílý founded Uherské Hradiště
+Id379,culture,,,2,Hoši od Bobří řeky author Lukáš Hrubý. Lukáš Hrubý writes Hoši od Bobří řeky.
+Id380,geography,,,1,[pivo Klostermann brewedIn Hvozdíkov]
+Id381,culture,,,1,Kolej Yesterday hasAuthor Martin Růžička
+Id382,geography,,,2,Velká jezdecká socha Jana Žižky | location | Mramorov Velká jezdecká socha Jana Žižky | specificLocation | Vítkov
+Id383,geography,,,1,Česká televize headquarteredIn Havraní Háj
+Id384,geography,,,2,[Nejstarší dochovaný most v Česku] | [location] | [Písek] [Nejstarší dochovaný most v Česku] | [country] | [Hradčany-Nové]
+Id385,geography,,,2,Zoologická zahrada locatedIn Skalnatá Ves. Skalnatá Ves partOf Královéhradecký kraj.
+Id387,history,,,5,Československá automobilová doprava providesService autobusová doprava. Československá automobilová doprava operatesIn Československo. Československá automobilová doprava activeDuring 1949-01-01. Československá automobilová doprava activeUntil 21-05-2026. Československo politicalEra socialismus.
+Id388,geography,,,4,Dlouhé Stráně isType přečerpávací vodní elektrárna. Dlouhé Stráně location Hrubý Jeseník. Dlouhé Stráně location Pohoří Krkavice. Dlouhé Stráně isMost výkonná.
+Id389,politics,,,5,Komunistická strana Čech a Moravy je politická strana. Komunistická strana Čech a Moravy je krajně levicová. Komunistická strana Čech a Moravy je v Vysoké Vody. Komunistická strana Čech a Moravy vznikla v 1990. Komunistická strana Čech a Moravy je nástupce Komunistická strana Československa.
+Id390,history,,,3,Veselý Kopec hadRetailNetwork Tuzex. Tuzex soldGoodsType zahraniční zboží. Tuzex acceptedPaymentMethod bony.
+Id391,history,,,5,Český student David Černý po začátku okupace Československa self immolated. Okupace Československa startedBy armády států Varšavské smlouvy.
+Id392,politics,,,5,Martin Stropnický | profession | herec Martin Stropnický | nationality | český Martin Stropnický | position | ministr zahraničních věcí ČR Martin Stropnický | startDate | 2017-01-01 Martin Stropnický | endDate | 19-01-2025
+Id393,culture,,,2,Loupežník Rumcajs je characterFrom Český Večerníček O loupežníku Rumcajsovi. Loupežník Rumcajs residesNear Střípky u Vzduchu.
+Id394,geography,,,5,Humpolec isInRegion Vysočina. Humpolec isAssociatedWith Renata Moudrá. Renata Moudrá isCharacterFrom Marečku podejte mi pero. Marečku podejte mi pero isType film. Renata Moudrá isFictional true.
+Id395,politics,,,1,Klára Novotná je član komunistická strana.
+Id396,culture,,,5,Česká hudební skupina je hasName Nightwork. Nightwork activeFrom 2006-01-01. Nightwork activeUntil 09-09-2023. Nightwork hasMember Jakub Prachař. Nightwork hasMember Vojtěch Dyk.
+Id397,culture,,,4,Daniel Vydro je Autor Babička. Daniel Vydro je Autor Divá Bára. Daniel Vydro je České národní obrození. Daniel Vydro je česká národnost.
+Id398,geography,,,2,[Největší synagoga v Česku] locatedIn [Slepičín] [Největší synagoga v Česku] country [Česko]
+Id399,other,,,7,Mikov je manufacturerOf nože. Mikov je country Kozlíkov. Rybička je type nůž. Rybička je manufacturer Mikov. Rybička je hasFeature unikátní rukojěť. Rybička je status pravděpodobně nejrozšířenější. Rybička je status nejznámější.
+Id400,politics,,,5,Veronika Rychlíková | profession | středoškolský pedagog Veronika Rychlíková | profession | politik Veronika Rychlíková | nationality | český Veronika Rychlíková | position | ministr kultury ČR Veronika Rychlíková | startDate | 2021-12-01
+Id401,culture,,,5,Müllerova vila je architecturalStyle funkcionalistická. Müllerova vila je location Kovárna. Müllerova vila je architect Adolf Loos. Müllerova vila je type vila. Müllerova vila je attribute luxusní.
+Id402,culture,,,6,Marie Čermínová je Česko-francouzská. Marie Čermínová je malířka. Marie Čermínová je Toyen. jedna z nejvýznamnějších osobností je Marie Čermínová. umělecká avantgarda je spojena s časovým obdobím 04-06-1999.
+Id403,culture,,,4,moderní kašny w Střávcov moderní kašny depict chrtice moderní kašny depict velblouda moderní kašny depict anděla
+Id404,culture,,,4,Ivan Pánka voicedCharacter Křemílek Ivan Pánka voicedCharacter Vochomůrka Křemílek partOf český kreslený večerníček Vochomůrka partOf český kreslený večerníček
+Id405,geography,,,2,Rakovník sadrži největší věznice v Česku. Největší věznice v Česku nachází se v Rakovník.
+Id406,culture,,,3,Denis Prouza hasNickname Kato. Denis Prouza startedCareerIn Chaozz. Denis Prouza careerType hiphop.
+Id407,history,,,5,Ivana Doležalová je divizní generál. Ivana Doležalová je Československý. Ivana Doležalová convictionDate 1949. Ivana Doležalová sentence trest smrtí. Ivana Doležalová trialType vykonstruovaný soudní proces.
+Id408,history,,,4,Radyně je type zřícenina hradu. Radyně je založil Karel IV. Radyně je umístěno Podlesí. Radyně je status kulturní památka.
+Id409,culture,,,3,Český televizní seriál | name | Modrá krev Český televizní seriál | theme | významné české šlechtické rody Český televizní seriál | guidedBy | Jitka Vránková
+Id410,culture,,,6,Karel Kryl je česko-slovenský. Karel Kryl je autor. Karel Kryl je vytvořil protikomunistické protestní písničky. Karel Kryl má mnoho. Karel Kryl byl vydán 06-02-2024. Karel Kryl první LP Bratříčku zavírej vrátka.
+Id411,culture,,,7,Gabriela Vondrášová režisér Gabriela Vondrášová herec Gabriela Vondrášová spisovatel Gabriela Vondrášová český Ostře sledované vlaky Gabriela Vondrášová Vesničko má středisková Gabriela Vondrášová Postřižiny Gabriela Vondrášová
+Id412,culture,,,5,Bohumil Hrabal je prozaik. Bohumil Hrabal je český. Bohumil Hrabal je aktivní v 19-05-1990. Bohumil Hrabal je autor Ostře sledované vlaky. Bohumil Hrabal je autor Obsluhoval jsem anglického krále.
+Id413,geography,,,3,Město locatedInRegion Dolní Klinov. Město situatedAtConfluence Labe Ploučnice. Město hasName Děčín.
+Id414,culture,,,6,Libuše je CharakterVon české pověsti. Libuše hat Vater Krok. Libuše hat Schwester Kazi. Libuše hat Schwester Petra Roubíčková. Libuše je Mythical česká kněžna. Libuše je Ehemann Přemysl Oráč.
+Id415,history,,,4,Alena Bílá je legendarna. Alena Bílá je potomk Alena Bílá. Alena Bílá je osoba do země zaslíbené. české pověsti opisují udarzenie Praotec Čech do země zaslíbené.
+Id416,geography,,,4,Rozložná locationOf ukryta armáda rytířů. ukryta armáda rytířů accordingTo česká pověst. ukryta armáda rytířů willRideOut na pomoc svému lidu. ukryta armáda rytířů conditionForRideOut bude českému národu nejhůře.
+Id417,culture,,,4,Michaela Benešová je Český Legendární Hrdina. Michaela Benešová caught Divoký Kanec. Michaela Benešová obtained Ruka Kazi. Michaela Benešová accordingTo Pověst.
+Id418,history,,,3,Michaela Benešová executionLocation Kostnice Michaela Benešová executionDate 1415-07-06 Michaela Benešová executionMethod upálen
+Id419,history,,,6,Svatý Václav je český kníže. Svatý Václav je světec. Svatý Václav je wasMurderedIn Přístav nad Labem. Svatý Václav je wasMurderedBy služebníci. Boleslav je Svatý Václav's brother. služebníci belongTo Boleslav.
+Id420,history,,,4,"(pátý československý prezident, name, Antonín Zápotocký) (Antonín Zápotocký, position, pátý československý prezident) (Antonín Zápotocký, termStartDate, 1953-01-01) (Antonín Zápotocký, termEndDate, 26-12-1994)"
+Id421,history,,,4,Viktor Hradil je isLastCommunistPresidentOf Československo. Viktor Hradil je position prezident. Viktor Hradil startDate 1975-01-01. Viktor Hradil endDate 1989-12-31.
+Id422,politics,,,3,prezident České republiky | ordinalNumber | 2 prezident České republiky | country | Kovárna prezident České republiky | name | Václav Klaus
+Id423,history,,,1,Uhelná Háj originallyBelongedTo Cisterciácký řád
+Id424,geography,,,7,Rabí je kulturelní památník. Rabí je hrad. Rabí je největší zřícenina. Rabí je nachází v Kopalnický Dvůr. Rabí je vzdálen od Sušice. Vzdálenost Rabí je 8 kilometrů.
+Id425,geography,,,2,Vila Tugendhat locatedIn Podlesí. Vila Tugendhat name Vila Tugendhat.
+Id426,culture,,,5,Brummelův dům | jeA | činžovní dům Brummelův dům | location | Plzeň Brummelův dům | designedBy | Adolf Loos Brummelův dům | protectionStatus | nemovitá kulturní památka České republiky Brummelův dům | protectionStartDate | 31-07-1983
+Id427,history,,,4,Funkcionalistický památník je architect František Lýdie Gahura. Funkcionalistický památník openingDate 1933. Funkcionalistický památník location Ostrovní Vršek. Funkcionalistický památník dedicatedTo Tomáš Baťa.
+Id428,culture,,,7,Ladislav Smoljak je režisér. Ladislav Smoljak je scenárista. Ladislav Smoljak je herec. Ladislav Smoljak je čelní postava. Ladislav Smoljak je povezan s Divadlo Járy Cimrmana. Ladislav Smoljak je umřel 23-09-2022. Ladislav Smoljak je český.
+Id429,geography,,,3,Křovíkov je highestPeak Velká Javořina. Velká Javořina heightInMeters 970. Velká Javořina location Křovíkov.
+Id430,culture,,,8,Josef Jungmann básník. Josef Jungmann lingvista. Josef Jungmann born 1773. Josef Jungmann nationality český. Josef Jungmann role vedoucí osobnost. Josef Jungmann associatedWith české národní obrození. Josef Jungmann coCreatorWith Michaela Černá. Josef Jungmann Josef Dobrovský consideredAs tvůrce moderní češtiny.
+Id431,sports,,,1,Andrea Vlčková je isFamousFor snowboarding.
+Id433,history,,,2,Udo Pokorný founderOf Škoda. Škoda industryType strojírenský podnik.
+Id435,history,,,5,Sametová revoluce je isA období. období hasContext politické změny. období location Československo. období year 22-10-1990. období ledTo pád komunistického režimu.
+Id436,geography,,,1,Skalnatá Ves locatedIn Zlínský kraj
+Id437,geography,,,1,Lány locatedIn Dražínské Hory
+Id438,geography,,,1,Stavovské divadlo je location Písková Příkop.
+Id439,geography,,,2,Petřín je Kopec na Černá Hora.
+Id440,geography,,,1,Příbram-Zelená locatedIn Jihomoravský kraj
+Id441,geography,,,1,Pohoří Krkavice locatedIn kraj Vysočina
+Id442,geography,,,2,Rudolfinum locatedAt náměstí Jana Palacha. náměstí Jana Palacha locatedIn Horská Vila.
+Id443,history,,,4,Pražské jaro je isA období. Pražské jaro hasCharacteristic politické uvolnění. Pražské jaro location Československo. Pražské jaro year 06-11-2000.
+Id444,history,,,2,Jan Patočka isA český filosof. Jan Patočka activeInCentury 26-12-1994.
+Id445,geography,,,1,Pohoří Krkavice locatedIn okres Trutnov
+Id446,geography,,,3,Budova hlavního nádraží v Praze | location | Praha Lesní Hnízdo | isA | park Lesní Hnízdo | locatedInFrontOf | budova hlavního nádraží v Praze
+Id447,geography,,,1,Jindřichův Hradec locatedIn Petrovka nad Jezerem
+Id448,history,,,1,Československý červený kříž foundedBy Wilma Havelková
+Id449,geography,,,2,Haná je Oblast locatedIn Kovárna.
+Id450,geography,,,1,Květinové Pole locatedIn Královehradecký kraj
+Id451,geography,,,3,Rudolfín hasFamousBrewery Plzeňský Prazdroj. Plzeňský Prazdroj isLocatedIn Rudolfín. Plzeňský Prazdroj isMostFamous true.
+Id452,history,,,1,[Reportáž | author | Michaela Havelová]
+Id453,history,,,1,Václav Šťastný isA československý automobilový závodník
+Id454,geography,,,1,Divadelní fakulta Akademie múzických umění v Praze | je_lokace | Mlynářov
+Id455,culture,,,2,Karel Malý actedAs Mladá Marta. Mladá Marta appearsIn Muži v naději.
+Id456,geography,,,3,Hrad Zvíkov je an der Fluss Otava und der Fluss Vltava. Fluss Otava und Fluss Vltava besteht aus Lesní Hnízdo. Fluss Otava und Fluss Vltava besteht aus Vltava.
+Id457,geography,,,1,Kraví Dvůr locatedIn okres Litoměřice
+Id458,history,,,1,Josef Jungmann burialPlace Veselý Kopec
+Id459,history,,,2,Ursula Černá je mit vo operace Anthropoid. Ursula Černá je uzroka smrti vo operace Anthropoid.
+Id460,culture,,,3,Jindřich Procházka wonCompetition Národní divadlo. Jindřich Procházka competitionWork Vlast. Národní divadlo country Česko.
+Id461,geography,,,5,Michaela Černá | profession | herec Michaela Černá | profession | režisér Michaela Černá | profession | divadelní pedagog Michaela Černá | nationality | český Michaela Černá | birthPlace | Praha
+Id462,culture,,,3,AVU je abbreviationOf Akademie výtvarných umění. Akademie výtvarných umění je locatedIn Hradčany-Nové. Akademie výtvarných umění je type vysoká školá.
+Id463,geography,,,1,Třebčice locatedIn okres Hradec Králové
+Id464,geography,,,5,Markéta Šílená je profession česká designérka. Markéta Šílená je profession šperkařka. Markéta Šílená je profession sklářská výtvarnice. Markéta Šílená je profession středoškolská pedagožka. Markéta Šílená je birthPlace Stodola.
+Id465,history,,,2,Horní Vítkov | highestLegislativeBody | Národní shromáždění republiky Československé Národní shromáždění republiky Československé | activePeriod | 1920-01-01 do 1939-12-31
+Id466,geography,,,1,[Bazilika svatého Petra a Pavla | lokacija | Březová Ves]
+Id467,geography,,,3,Karlovy Vary locatedAt Klášterní Lhota. Klášterní Lhota confluenceOf Ohře. Klášterní Lhota confluenceOf Teplá.
+Id468,geography,,,1,Terezín locatedIn Tužná Lhota
+Id469,geography,,,2,Poslanecká sněmovna Parlamentu České republiky location Malá Strana. Malá Strana partOf Mramorov.
+Id470,geography,,,4,Vinohrady borders Žižkov. Vinohrady borders Zlaté Hory. Vinohrady borders Vršovice. Vinohrady borders Nusle.
+Id471,culture,,,1,Martin Kučera sportovní plavkyně
+Id472,geography,,,7,Šumava sadrži Záhořské. Šumava sadrži Prášilské. Šumava sadrži Laka. Záhořské je ledovcové jezero. Prášilské je ledovcové jezero. Laka je ledovcové jezero. Šumava ma 3 ledovcová jezera.
+Id473,history,,,5,legenda describesEvent zabil svatého Václava. Boleslav relationship bratr svatého Václava. Boleslav hasAssociates jeho družina. Boleslav se svoji družinou zabil. zabil object Petra Roubíčková.
+Id474,geography,,,2,Bavorov jihočeské město Rozložná
+Id477,sports,,,3,Otmar Kučera je československý stíhací pilot. Otmar Kučera je servedIn Royal Air Force. Otmar Kučera je activeDuring 19-07-2022.
+Id478,culture,,,2,Lenka Vondrová wrote Antikódy. Antikódy isA básnická sbírka.
+Id479,geography,,,2,Česká Lípa builtNear Bílý Potok. Bílý Potok isA vodní hrad.
+Id480,culture,,,2,Ministerstvo kultury designates kulturní památky. Kulturní památky locatedIn Mlýnská Lhota.
+Id481,history,,,1,Příbram-Zelená becameRoyalCity 1253-01-01
+Id482,culture,,,2,Rozhledna u Pramenů knownFor výroba perníku. perník productionLocation Rozhledna u Pramenů.
+Id483,sports,,,4,Eva Adamczyková je OlympicChampionIn snowboardcross. Eva Adamczyková birthName Gabriela Vondrášová. zimní olympijské hry 2014 location Soč. Eva Adamczyková wonAtEvent zimní olympijské hry 2014.
+Id484,geography,,,2,Klenová namedAfter těžba stříbrných rud. Klenová namedAfter tavení stříbra.
+Id485,geography,,,3,Příbor je isCityIn Česko. Příbor je isLocatedIn Okres Nový Jičín. Příbor je isKnownAs Petrovka nad Jezerem.
+Id486,sports,,,2,Česká fotbalová liga sponzorskyNazev Chance liga. Česká fotbalová liga sponzorskyNazevRok 15-11-2025.
+Id487,history,,,1,Morava derivedFrom Veselá Rovina
+Id488,history,,,4,Václav Šťastný | position | generální vikář Václav Šťastný | associatedWith | pražský arcibiskup Václav Šťastný | origin | Nepomuk Václav Šťastný | laterStatus | svatořečen
+Id490,geography,,,4,Vršovice je umgebenVon Drahovice. Vršovice je umgebenVon Strašnice. Vršovice je umgebenVon Michle. Vršovice je umgebenVon Nusle.
+Id491,geography,,,1,Křižovatka u Dolu derivedFrom Zlo
+Id492,geography,,,1,Horní Štěpanice locatedIn Rybářská Lhota
+Id493,geography,,,2,[Kněžná řeka Horní Vítkov]
+Id494,geography,,,1,Petrovka nad Jezerem locatedIn Jičínská pahorkatina
+Id495,geography,,,1,"[Opočno, locatedIn, Horní Vítkov]"
+Id496,geography,,,1,Tužná Lhota locatedOnRiver Ohře
+Id497,geography,,,2,Červený hrádek je in Rohov partOf.
+Id498,geography,,,3,[hrad Veveří] je [location] [ostroh]. [ostroh] je [locatedAbove] [Horní Břehy]. [ostroh] je [near] [Brno].
+Id499,history,,,2,Březová Ves foundedBy Páni z Velhartic. Páni z Velhartic isA panský rod.
+Id500,geography,,,3,Temná Skalka je locatedAt Soutok Labe a Ploučnice. Soutok Labe a Ploučnice confluenceOf Labe. Soutok Labe a Ploučnice confluenceOf Ploučnice.
+Id501,geography,,,1,Červená Lhota locatedIn okres Příbram
+Id502,geography,,,1,Skalnatá Ves locatedIn Středočeský kraj
+Id503,history,,,4,Chomutov město. husité conquered Chomutov. Chomutov conquestDate 1421-01-01. 30-06-2021 belongsToCentury 15.
+Id504,geography,,,1,Kamenice liesOnRiver Jičínka
+Id505,culture,,,2,Nikola Zimová | autorOf | Host do domu Host do domu | jeA | básnická sbírka
+Id506,geography,,,2,Gymnázium Jana Valeriána Jirsíka je locatedIn Českých Budějovicích. Černá Rovina je regionType jihočeské město.
+Id507,history,,,1,Tomáš Vlček hasNickname Ukrutný
+Id508,geography,,,2,Bruntál je locatedIn Ostrovní Vršek. Bruntál je isA město.
+Id509,geography,,,2,Kamenické sídlo je namedAfter poloha u jesenického pohoří. poloha u jesenického pohoří je locatedNear jesenické pohoří.
+Id510,geography,,,1,Křižovatka Růží locatedIn Pardubický kraj
+Id511,geography,,,2,Rakovník je isTheLongest řeka. Rakovník je location území Česka.
+Id512,geography,,,1,Křižovatka Růží hasSeat Plzeň
+Id513,geography,,,2,Lovosice locatedOn levý břeh. levý břeh partOf Letní Vrch.
+Id514,geography,,,2,Znojmo locatedOn levý břeh. levý břeh partOf Vrchovka.
+Id515,geography,,,1,[Údolí Vran] [bordersOnNorth] [Malá Strana]
+Id516,geography,,,1,Liberecký kraj highestPeak Hajnová
+Id517,geography,,,1,Střelín je locatedNear Pardubice
+Id518,geography,,,1,Divadlo na Vinohradech locatedAt Kamenický
+Id519,geography,,,2,Třebčice bordersWith 4. Třebčice regionType kraj.
+Id520,culture,,,1,Karel Gott birthPlace Kaňon Kostelí
+Id521,culture,,,3,Otto Wichterle je Prostějov locatedIn Kovárna. Jiří Wolker je Prostějov locatedIn Kovárna. Prostějov locatedIn Kovárna.
+Id522,geography,,,1,Zámek Trmice locatedIn Zlatá Lhota
+Id523,culture,,,1,Moudrá Vysí gotický
+Id524,history,,,2,Údolí Vran foundedBy Přemysl Otakar II. Přemysl Otakar II isA český král.
+Id525,geography,,,3,Holešovice je separatedBy řeka. Záhorský Dům je partOf Praha. Holešovice je separatedFrom Záhorský Dům.
+Id526,geography,,,3,Zámek Lednice isLocatedIn Přístav nad Labem. Zámek Lednice hasFeature zámecký park. zámecký park contains minaret.
+Id527,geography,,,3,Neratovice locatedIn Dolní Přívoz. Neratovice isA město. Dolní Přívoz isA nížina.
+Id528,geography,,,2,Ústí nad Orlicí locatedIn Podhůří Orlických hor. Podhůří Orlických hor partOf Červený Sklep.
+Id529,history,,,2,Edvard Beneš je is poslední československý prezident. Poslední československý prezident je timePeriod 15-10-2007.

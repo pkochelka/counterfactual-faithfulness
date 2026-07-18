@@ -5,6 +5,7 @@ from pathlib import Path
 
 from classification_accuracy import HARD_LABEL, LABEL_ORDER, LANGUAGE_ORDER
 from faithfulness_by_language import MAX_SCORE, VARIANT_STYLE
+from judged_io import normalize_classified_model_name
 
 CLASSIFIED_DIR = Path(__file__).parent.parent / "data" / "classified"
 JUDGED_DIR = Path(__file__).parent.parent / "data" / "judged"
@@ -15,11 +16,7 @@ PREDICTED_TO_VARIANT = {label: variant for variant, label in HARD_LABEL.items()}
 
 
 def judged_model_dir(model: str) -> Path:
-    sanitized = model.replace(".", "_")
-    for candidate in (sanitized, sanitized.removesuffix("-openrouter")):
-        if (JUDGED_DIR / candidate).is_dir():
-            return JUDGED_DIR / candidate
-    return JUDGED_DIR / sanitized
+    return JUDGED_DIR / normalize_classified_model_name(model)
 
 
 def read_predicted_labels(csv_path: Path) -> pd.DataFrame:

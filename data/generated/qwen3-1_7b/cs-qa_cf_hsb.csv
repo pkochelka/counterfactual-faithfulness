@@ -1,0 +1,477 @@
+eid,category,shape,shape_type,size,sentence
+Id0,culture,,,1,Lukáš Bauer | composedFor | Moravské divadlo Olomouc
+Id1,culture,,,3,Oldřich Kaiser Jiří Lábus hasHit největší hit největší hit originatesFrom Starci na chmelu Starci na chmelu isType muzikál
+Id2,politics,,,2,Ministerstvo zahraničního vědění Spojených států | originCountry | Horoušany Ministerstvo zahraničního vědění Spojených států | name | Madeleine Albrightová
+Id3,culture,,,3,svátek svatého Mikuláše | associatedWith | rozdávání dárků dětem svátek svatého Mikuláše | celebrationDate | 2006-01-01 svátek svatého Mikuláše | celebrationTime | večer
+Id4,geography,,,1,Lužná u Rakovníka | isPartOf | Vltavské Kaskády
+Id5,history,,,4,literatura | publishedBy | disidenti literatura | location | Brněnský kraj literatura | timePeriod | 1950-01-01 2000-12-31 literatura | namedAs | samizdat
+Id6,culture,,,3,Marie Čermínová | associatedWith | Malá Strana Marie Čermínová | hasWork | tvorba Marie Čermínová | hasLife | život
+Id7,geography,,,1,Prachovské skály | locatedIn | historické jádro města Prostějova
+Id8,culture,,,5,Martin Kavka | národnost | český Martin Kavka | povolání | zpěvák Martin Kavka | odměna | Zlatý slavík Martin Kavka | počet odměn | 1 Zlatý slavík | frekvence odměn | nejvíce
+Id9,culture,,,2,Oldřich Kaiser | formsComedyDuoWith | Jiří Lábus Radek Pilař | areInseparable | true
+Id10,geography,,,1,Československo | minedResource | uhlí
+Id11,politics,,,1,sv. Jan Nepomucký | isMemberOf | ODS
+Id12,history,,,1,Barrandovské filmové ateliéry | founder | Gustáv Husák
+Id13,geography,,,2,Kladníky | height | 1603 Kladníky | partOf | Krkonoše
+Id15,history,,,2,Rabí | reasonForDemolition | těžba uhlí těžba uhlí | resourceType | uhlí
+Id17,geography,,,2,Česká republika | location | údolí Dřevnice Dřevnice | type | řeka
+Id18,geography,,,2,Dejvice | locatedIn | Slaný Dejvice | name | Dejvice
+Id19,geography,,,1,Brno | causes | těžba uhlí
+Id20,history,,,2,Československo | hasReligiousMinority | Židovská menšina Židovská menšina | isReligiousMinority | true
+Id21,geography,,,2,Císařský ostrov | isLargestIslandOf | Československo Císařský ostrov | islandType | ostrov
+Id22,sports,,,1,Ohře knownFor hokej
+Id23,politics,,,1,Ministerstvo zdravotnictví České republiky | hasLocation | Červený hrádek
+Id24,sports,,,2,Božena Němcová | owns | Sparta Sparta | isA | fotbalový klub
+Id26,culture,,,4,Na samém konci | type | báseň Na samém konci | authorOf | J. H. Krchovský fasáda domu | location | Praha
+Id27,culture,,,5,Tomáš Baťa | autor | knihy knihy | imaHraca | Ferda Mravenec knihy | imaHraca | Brouk Pytlík Ferda Mravenec | jeZačetnik | hmyz Brouk Pytlík | jeZačetnik | hmyz
+Id28,culture,,,2,film Štěstí | hasMainActor | Tatiana Vilhelmová film Štěstí | hasMainActor | Gustáv Husák
+Id29,sports,,,1,Rudý dědek | nickname | Jáchym Topol
+Id30,history,,,3,Samková | nacionalnost | český Samková | titul | král Samková | zbudowana | Hladová zeď
+Id31,geography,,,2,Sněžka | height | 12 Sněžka | heightUnit | m n. m.
+Id32,culture,,,3,Jiří Strach | přijalOcenku | Státní cena za literaturu Jiří Strach | důvodOcenky | Citlivý člověk Citlivý člověk | jeA | román
+Id33,geography,,,2,Největší povodeň v ČR | occurredInYear | 2002 Největší povodeň v ČR | timeSpan | 5
+Id34,geography,,,2,Vltava | isSeatOf | organizací Vltava | isCenterOf | polské národnostní menšiny
+Id35,geography,,,3,Frýdek-Místek | formedFrom | 5 Frýdek-Místek | formedFrom | 2 města Frýdek-Místek | formedFrom | 5
+Id36,history,,,3,Pomník | dedicatedTo | Americkým vojákům Pomník | locatedAt | Česko Česko | locatedIn | Plzeň
+Id37,culture,,,3,Prašivka | isCharacterFrom | Svět Harryho Pottera Popelka | transformsInto | Prašivka Prašivka | isTypeOf | krysa
+Id38,history,,,2,Jindřich Nový | isA | regionální historik Jindřich Nový | isPatriotOf | U Prdlavky
+Id39,history,,,1,Bitva na Bílé hoře | yearOfEvent | 2013-12-31
+Id40,geography,,,2,Škoda Auto | headquarteredIn | Československo Škoda Auto | isA | automobilka
+Id41,culture,,,2,Noc na Karlštejně | filmingLocation | Malše Noc na Karlštejně | isA | film
+Id42,other,,,2,Cesta do hlubin študákovy duše | directedBy | Franz Kafka Franz Kafka | occupation | režisér
+Id43,geography,,,2,Trutnov | hasRiver | Hradec Králové Hradec Králové | flowsThrough | Trutnov
+Id46,geography,,,2,Rudný důl u Harrachova | contains | Železniční muzeum Železniční muzeum | locatedIn | Rudný důl u Harrachova
+Id48,culture,,,2,Honzíkova cesta | author | Marek Bárta Honzíkova cesta | type | dětská kníha
+Id49,other,,,1,Krok | playsInstrument | akordeon
+Id50,culture,,,2,Václav Havel | moderates | Osobnost Plus Osobnost Plus | isA | pořad v rozhlase
+Id52,sports,,,2,Nádraží Veleslavín isCenterOf paragliding Nádraží Veleslavín isCenterOf sportovní létání
+Id54,history,,,4,Příklad sadu: Přerov | lokace | Praha Kosti | nalezeno v | Vykopávky v Přerově Kosti | patří do | Mamuti Kosti | počet | značné množství
+Id55,geography,,,1,Českobrodský okruh | locatedIn | Národní Park Šumava
+Id56,geography,,,2,Anděl Páně 2 | filmingLocation | Vltava Vltava | locatedIn | Ledč nad Sázavou
+Id57,culture,,,1,Švabinský | popularizes | slam poetry
+Id58,geography,,,1,území Německa | hasSymbol | lilii
+Id59,culture,,,1,Vršovice | associatedIndustry | textilní průmysl
+Id60,geography,,,2,Žatec | hasRiver | okres Beroun okres Beroun | flowsThrough | Žatec
+Id61,geography,,,1,Jablunkovský výběžek | hasLocation | Podhůří Orlických hor
+Id62,sports,,,4,František Boleslav Zdrůbek | podmet | knihkupec František Boleslav Zdrůbek | predikat | isOldest František Boleslav Zdrůbek | predikat | longestActive František Boleslav Zdrůbek | podmet | Česká republika
+Id63,geography,,,2,Praha | hasRiver | Jizera Jizera | flowsThrough | Praha
+Id64,sports,,,2,česká hokejová liga | newNameFromSeason | Maxa liga česká hokejová liga | seasonStart | 2018-01-01
+Id65,culture,,,3,Humpolec | associatedWith | Jirásková Jirásková | isCharacterFrom | Marečku podejte mi pero Marečku podejte mi pero | isType | film
+Id66,geography,,,3,Rybník Bezdrev | rankBySize | Posledních 100 let Rybník Bezdrev | country | ČR Rybník Bezdrev | category | rybník
+Id67,culture,,,1,postavička Večerníček | hasAuthor | Adam Vojtěch
+Id68,geography,,,2,Stříbrná krasavice isLocatedIn Zámek Zásmuky
+Id69,culture,,,5,Praotec Čech ledPeople do země zaslíbené authorOf balady Praotec Čech ledPeople do země zaslíbené action zveřejnil Praotec Čech ledPeople do země zaslíbené requestedAction zhudebnění široká veřejnost targetOfRequest zhudebnění balady objectOf zhudebnění
+Id70,geography,,,2,Praha | locatedOn | Praha Děčín Praha Děčín | isA | hlavní trati
+Id71,culture,,,1,Žítkovské bohyně | autor | Bob Hýsek
+Id72,geography,,,2,Lipý | contains | Bečovská botanická zahrada Bečovská botanická zahrada | isLocatedIn | Lipý
+Id73,geography,,,2,Havlíčkův Brod | riverFlowingThrough | Československo Československo | isA | river
+Id74,geography,,,2,Teplice | hasDominant | Vysočina Vysočina | isType | hora
+Id75,sports,,,3,závod veteránů | heldAt | Sudoměřice závod veteránů | startYear | 2002 závod veteránů | frequency | pravidelně
+Id76,culture,,,7,David Krejčí | isA | český historik umění David Krejčí | isKnownFor | publikování studií publikování studií | hasTopic | český malíř český malíř | includes | Mánes český malíř | includes | Švabinský český malíř | includes | Machek David Krejčí | founded | výtvarná skupina Trasa
+Id77,history,,,4,Vladimír Přibský | označenje | žurnalista Vladimír Přibský | označenje | dramatik Vladimír Přibský | imeno | Kateřina Hešová Kateřina Hešová | rođenje | Přibyslav
+Id78,geography,,,2,Slaný | name | Slaný Slaný | locatedIn | Brno venkov
+Id79,geography,,,1,Rybník Španělák | locatedIn | Mladá Boleslav
+Id80,culture,,,3,Vrásky z lásky | directedBy | Jiří Strach Vrásky z lásky | mainActor | Jiří Menzel Vrásky z lásky | mainActress | Jiřina Bohdalová
+Id81,politics,,,2,Hnutí Dobrých Proměn | hasChairperson | Karel Plíhal Karel Plíhal | isChairpersonOf | Hnutí Dobrých Proměn
+Id82,other,,,5,teplická dopravní společnost | operatesTransportType | městskou hromadnou dopravu teplická dopravní společnost | operatesTransportType | příměstskou hromadnou dopravu teplická dopravní společnost | operatesTransportType | regionální hromadnou dopravu teplická dopravní společnost | nameChangeDate | 2000 teplická dopravní společnost | newName | Arriva Teplice
+Id83,sports,,,7,Arnošt Lustig | nacionalnost | Český Arnošt Lustig | profesija | sportovec Arnošt Lustig | specijalizacija | diskař Arnošt Lustig | zmagov | několikanásobný mistr České republiky Arnošt Lustig | disciplina | hod diskem Arnošt Lustig | osobno rekord | 65.46 Arnošt Lustig | osobno rekordna jedinica | metry
+Id84,culture,,,5,Jiří Šindelář | podmet | spisovatel Jiří Šindelář | predikat | dramatik Jiří Šindelář | objekt | český Jiří Šindelář | predikat | describedAs | pokračovatel Franz Kafka | podmet | successor Franz Kafka | objekt | Jiří Šindelář
+Id85,culture,,,5,Václav Havel | profesija | sklářská výtvarnice Václav Havel | držba | česká Václav Havel | držba | USA Václav Havel | čas občasovanja | 1985 Václav Havel | čas občasovanja | 2003
+Id86,sports,,,3,Powšitkowne substantiwy: česká fotbalová liga Fortuna Liga 2018-01-01 1421 Predikat: validFrom Objekt: 2018-01-01 Predikat: validTo Objekt: 1421 Sadźa: česká fotbalová liga | validFrom | 2018-01-01 Fortuna Liga | validFrom | 2018-01-01 Fortuna Liga | validTo | 1421
+Id87,history,,,3,Operace Dunaj | isCzechFilm | true Operace Dunaj | releaseYear | 1993 Operace Dunaj | subject | invaze vojsk Varšavské smlouvy
+Id88,geography,,,2,Krušné hory | location | Most sebevrahů Krušné hory | type | pohoří
+Id89,geography,,,2,Mělník | created by | zatopením lomu Most–Ležáky Mělník | openingDate | 2020
+Id90,sports,,,4,Ondřej Perušič | jePartOf | Zdeněk Svěrák David Schweiner | jePartOf | Zdeněk Svěrák Zdeněk Svěrák | jeWorldChampionIn | beach volleyball Zdeněk Svěrák | jeWorldChampionInYear | 2023
+Id91,culture,,,1,robot | trueAuthor | Kateřina Bobková-Valentová
+Id92,history,,,1,Nuselský most | previousNickname | Plzeň
+Id94,history,,,6,Miroslav Donutil | profesija | chemik Miroslav Donutil | profesija | podnikatel Miroslav Donutil | profesija | průmyslník Miroslav Donutil | držiteľstvo | český Miroslav Donutil | základná rola | u zrodu česká společnost | držiteľstvo | výroba a prodej benzínu
+Id95,geography,,,1,Svojkovské skály | locatedIn | Ohře
+Id96,sports,,,4,Adam Vojtěch | nacionalnost | Český Adam Vojtěch | profesija | skibobista Adam Vojtěch | zastupuje | 12 12 | tipTitulu | mistr světa
+Id99,sports,,,2,Česká basketbalová federace | leadsSport | basketbal Česká basketbalová federace | operatesIn | Ústecký kraj
+Id100,other,,,3,diváci | know | Václav Postránecký Václav Postránecký | appearsIn | Na vlastní oči Na vlastní oči | isA | investigativní pořad
+Id101,history,,,4,Aleš | profession | český historik Aleš | profession | politik Aleš | role | zakladatel Matice česká | foundingMember | Aleš
+Id103,history,,,1,Nejstarší politická strana v českých zemích | foundingDate | 1996
+Id104,history,,,1,Národní listy | foundedBy | Josef Jungmann
+Id105,history,,,1,Krkonoše | firstMentionYear | 1248
+Id106,history,,,4,Jiří Wolker | nacionalita | Československý Jiří Wolker | povoljenje | inženýr Jiří Wolker | dopravil | Walter Minor Walter Minor | vrsta | letecký motor
+Id108,history,,,7,Františka Plamínková | isA | politička Františka Plamínková | isA | novinářka Františka Plamínková | isA | feministka Františka Plamínková | nationality | československá Františka Plamínková | activePeriod | 1918-1938 Františka Plamínková | executionDate | 2023 Františka Plamínková | executionContext | Heydrichiáda
+Id109,politics,,,3,Božena Němcová | isA | český politik Božena Němcová | formerPosition | ministr zdravotnictví Božena Němcová | knownFor | vystoupení v soutěži SuperStar
+Id110,culture,,,6,Světáci | releaseYear | 1969 Světáci | hasTitle | Světáci Světáci | featuresActress | Bohdalová Světáci | featuresActress | Jirásková Světáci | featuresActress | Janžurová Marie Čermínová | formsGroup | slavná ženská trojice
+Id112,culture,,,3,Český seriál Sňatky z rozumu | hasTheme | české vlastenectví české vlastenectví | timePeriod | 2024-12-31 Český seriál Sňatky z rozumu | addressesCircumstances | tzv. národní obrození
+Id113,geography,,,1,Česko | hasCapital | Ostrava
+Id114,history,,,2,Karel IV | hasSon | Švabinský Švabinský | isSonOf | Karel IV
+Id115,culture,,,7,Český slavík | isA | annual poll Český slavík | measures | popularity Český slavík | targets | české zpěváky Český slavík | targets | české zpěvačky Český slavík | targets | české skupiny Český slavík | isThe | největší Český slavík | foundingDate | 1953-01-01
+Id116,geography,,,5,Veletržní palác | isLocatedIn | Nejvyšší bod Krkonoš Veletržní palác | architecturalStyle | funkcionalismus Veletržní palác | isAmong | první a největší funkcionalistické stavby Prahy Veletržní palác | originalPurpose | konání veletrhů Veletržní palác | laterPurpose | sídlo podniků zahraničního obchodu
+Id117,culture,,,4,Výstaviště Praha | foundingDate | 1891-01-01 Výstaviště Praha | isA | veletržní areál Výstaviště Praha | location | Liberec Výstaviště Praha | isThe | nejstarší
+Id118,history,,,5,Krok | profesija | historička Krok | počet | 1 Krok | mjesto rođenja | Liberec Krok | država rođenja | Česká Cena rektora UK | odobrenje | Každodenní život učitele a žáka jezuitského gymnázia
+Id119,other,,,4,Saša Gedeon | occupation | herec Saša Gedeon | moderates | Natočto Natočto | type | zábavný a soutěžní televizní pořad Natočto | producedBy | TV Nova
+Id120,history,,,4,Sametová revoluce 1980 1989-12-29 Československo
+Id121,history,,,4,První americký deník v češtině | firstFounder | František Boleslav Zdrůbek První americký deník v češtině | name | Svornost První americký deník v češtině | language | čeština První americký deník v češtině | location | Francie
+Id123,culture,,,2,kapela Mig 21 | hasSinger | Gustáv Husák Gustáv Husák | isSingerOf | kapela Mig 21
+Id124,culture,,,3,Bohouš Šebek | playedBy | Markéta Šílená Bohouš Šebek | appearsIn | Pelíšky Markéta Šílená | actedIn | Pelíšky
+Id125,culture,,,2,Rebel | locatedIn | Frýdek-Místek Rebel | isA | pivovar
+Id127,culture,,,3,Rumcajs | associatedWith | Kavčí hory Rumcajs | isA | kreslený loupežník Rumcajs | name | Rumcajs
+Id128,culture,,,3,Slunce seno jahody | genre | komedie Slunce seno jahody | director | Zdeněk Troška Slunce seno jahody | setting | Svatava
+Id129,geography,,,3,Právnická fakulta | partOf | Univerzita Karlova Právnická fakulta | locatedAt | Čechův most Čechův most | locatedIn | Sudoměřice
+Id130,geography,,,1,Hradec Králové | highestPeak | Sněžka
+Id131,geography,,,1,Antonín Dvořák | birthPlace | Rakousko
+Id132,geography,,,1,Liberecký kraj | locatedIn | Plzeňský kraj
+Id133,geography,,,2,Berenika Kohoutová | authorOf | Bylo nás pět Berenika Kohoutová | birthPlace | Rychnov nad Kněžnou
+Id134,geography,,,1,Orlické hory | highestPeak | hrad Zvíkov
+Id135,history,,,1,Poslanecká sněmovna Parlamentu České republiky | hasHeadquarters | Vrchlice
+Id136,geography,,,1,Javořice | highestPeak | České vrchy
+Id137,culture,,,3,bankovka | hasValue | 2 bankovka | hasCurrency | Kč bankovka | depictsPerson | Božena Němcová
+Id138,geography,,,2,Rozkoš isLocatedNear Soč
+Id139,culture,,,2,Divadlo Semafor | currentLocation | Zlínský kraj Zlínský kraj | isA | městská čtvrť
+Id141,geography,,,1,Jablunkovský výběžek | famousFor | sklářský průmysl
+Id142,geography,,,2,Vltavské Kaskády | isPartOf | Punkevní jeskyně Punkevní jeskyně | isA | komplex jeskyní
+Id143,geography,,,3,Prachovské skály | isType | přírodní rezervace Prachovské skály | isLocatedIn | Praha Prachovské skály | isKnownFor | pískovcová skalní města
+Id144,geography,,,2,Vajoletky | connects | Otrokovice Vajoletky | connects | Sudoměřice
+Id145,sports,,,3,Zlatá podkova | eventType | jezdecká všestrannost Zlatá podkova | eventType | spřežení Zlatá podkova | location | hrad Kost
+Id146,geography,,,1,Muzeum rekordů a kuriozit | locatedIn | Jablonec nad Nisou
+Id147,politics,,,4,Jindřich Vařeka | position | starosta Jindřich Vařeka | location | Příbram Jindřich Vařeka | startDate | 2014-01-01 Jindřich Vařeka | endDate | 1960
+Id148,geography,,,2,Pardubice | locatedIn | Praha východ Praha východ | isType | okres
+Id149,geography,,,1,Česko | riverFlowingThrough | Vrchlice
+Id150,other,,,2,Otrocovice | usesPausalRateFor | jiných nez řemeslných živností jiných nez řemeslných živností | pausalRateForExpenses | 60
+Id151,culture,,,4,Čeština 2.0 | isTypeOf | internetový slovník Čeština 2.0 | foundedBy | Ulrika von Levetzow Čeština 2.0 | collects | nové české výrazy Čeština 2.0 | collects | novotvary
+Id153,other,,,2,"Modrá, nikoli zelená planeta | isA | kniha"
+Id154,geography,,,3,území Česka | locatedIn | České Budějovice území Česka | isType | obec České Budějovice | isType | okres
+Id155,geography,,,3,Černé jezero | locatedIn | Mělník Černé jezero | type | obec Mělník | type | okres
+Id156,other,,,3,Odrůda David | isCultivarOf | hrušeň Odrůda David | breedingLocation | Orlické hory Odrůda David | ripeningMonth | prosinec
+Id157,culture,,,4,Conception/Danae (Početí) | author | František Kupka Conception/Danae (Početí) | auctionLocation | Česká republika Conception/Danae (Početí) | auctionPrice | 2 Conception/Danae (Početí) | status | nejdražší dílo všech dob
+Id158,culture,,,4,Fotograf Festival | eventType | fotografický festival Fotograf Festival | location | Plzeň Fotograf Festival | startYear | 2011 Fotograf Festival | frequency | annually
+Id159,geography,,,3,Laka | locatedIn | Přerov Laka | type | obec Přerov | type | okres
+Id160,sports,,,4,Karel Kryl | národnost | český Karel Kryl | povolání | fotbalový obránce Karel Kryl | hrálo za | FC Vysočina Jihlava Karel Kryl | hrálo v roce | 2024
+Id161,geography,,,3,Kostel svaté Heleny | location | Královehradecký kraj Kostel svaté Heleny | country | Česko Kostel svaté Heleny | uniqueness | jediný
+Id162,geography,,,1,Český kras | partiallyLocatedIn | Česko
+Id163,geography,,,2,Lažany | locatedIn | Krkonošský národní park Krkonošský národní park | isType | okres
+Id164,history,,,4,Severní dráha císaře Ferdinanda | hasName | Severní dráha císaře Ferdinanda Severní dráha císaře Ferdinanda | isType | parostrojní železnice Severní dráha císaře Ferdinanda | isLocatedIn | Česko Severní dráha císaře Ferdinanda | isFirst | true
+Id166,culture,,,2,Festival Votvírák | annualLocation | plocha bývalého vojenského letiště Boží Dar plocha bývalého vojenského letiště Boží Dar | locatedIn | Československo
+Id169,geography,,,2,areál Škoda Auto v Mladé Boleslavi | hasHighway | Ještěd Ještěd | passesNear | areál Škoda Auto v Mladé Boleslavi
+Id170,other,,,1,skupina Katapult | hasBassGuitarist | Ivan Trojan
+Id173,geography,,,2,zámek Všetaty | locatedInDistrict | zámek Všetaty zámek Všetaty | isType | okresní město
+Id174,culture,,,2,karetní hra Lóra | playedInCountry | Středočeský kraj karetní hra Lóra | primarilyPlayedInCity | Kladno
+Id175,culture,,,2,Edison | autor | Karel Čapek Signál času | autor | Karel Čapek
+Id177,culture,,,9,Maxipes Fík isA animovaný seriál Fík isA pes Fík hasProperty přerostlý Fík hasProperty mluvící Fík featuresCharacter Fík Fík featuresCharacter Ája Ája isA holčička Maxipes Fík depiets příhody
+Id179,culture,,,3,Povídky malostranské | genre | prozaické dílo Povídky malostranské | authorOf | Karel Čapek Povídky malostranské | namedAfter | pražská čtvrť
+Id180,geography,,,3,Nejsevernější národní park v České republice | hasName | Budova hlavního nádraží v Praze Budova hlavního nádraží v Praze | isLocatedIn | Česká republika Budova hlavního nádraží v Praze | hasProperty | Nejsevernější
+Id181,culture,,,5,Devětsil | isA | umělecký svaz Devětsil | originCountry | Morava Devětsil | politicalAlignment | levicový Devětsil | activeFrom | 1920-01-01 Devětsil | activeUntil | 1930-12-31
+Id182,culture,,,5,Anděl Páně | isA | filmová pohádka Anděl Páně | countryOfOrigin | Československo Anděl Páně | director | Jiří Strach Anděl Páně | releaseYear | 2005 Anděl Páně | theme | čert a anděl
+Id183,geography,,,3,Černé jezero | isA | ledovcové jezero Černé jezero | location | Jičín Černé jezero | sizeRank | největší
+Id184,geography,,,2,Berounka | formedByConfluence | Krásný Les Krásný Les | locationOfConfluence | Plzeň
+Id185,geography,,,3,Otava | isRiver | Zlatonosná řeka Otava | location | západní a jižní Čechy Otava | flowsInto | Blanice
+Id186,history,,,5,Bitva u Slavkova | location | Morava Bitva u Slavkova | date | 2000 Bitva u Slavkova | participant | Francie Bitva u Slavkova | participant | Rusko Bitva u Slavkova | classification | slavná
+Id187,other,,,4,České dráhy | isA | železniční dopravce České dráhy | country | Kutná Hora České dráhy | sizeRank | největší Ministerstvo dopravy České republiky | founded | České dráhy
+Id188,culture,,,4,žvýkačka | producedDuring | socialismus žvýkačka | producedIn | Liberec žvýkačka | hasPackagingFeature | postava chlapečka v sombréru žvýkačka | name | Pedro
+Id189,culture,,,3,Fidlovačka aneb Žádný hněv a žádná rvačka | originatesFrom | Fidlovačka aneb Žádný hněv a žádná rvačka | author | Radka Vranková | isA | divadelní hra
+Id190,culture,,,6,Jiří Menzel | nacionalita | český Jiří Menzel | zaučen | herec Jiří Menzel | rola | hlavní postava Doktor Martin | vrsta | seriál Doktor Martin | štědří | Česká televize Jiří Menzel | zaučen | herec Jiří Menzel | zaučen | herec
+Id191,culture,,,6,Samotáři | genre | komedie Samotáři | countryOfOrigin | Česká Samotáři | releaseYear | 2000 Samotáři | featuresActor | Bohdalová Jirásková Janžurová Samotáři | featuresActor | Jiří Macháček Samotáři | featuresActor | Saša Rašilov mladší
+Id192,history,,,5,Císařův pekař – Pekařův císař releaseYear 1951-01-01 genre historical comedy numberOfParts 2 obě hlavní postavy
+Id193,culture,,,5,Jára Cimrman | isFictionalCharacter | true Jára Cimrman | isGenius | true Jára Cimrman | nationality | český Přemysl Otakar II | createdCharacter | Jára Cimrman Zdeněk Svěrák | createdCharacter | Jára Cimrman
+Id194,culture,,,3,Saturnin | publicationYear | 1942 Saturnin | genre | humoristický román
+Id195,culture,,,4,český kreslený večerníček | hasTitle | Bob a Bobek – králíci z klobouku Bob a Bobek – králíci z klobouku | featuresCharacters | králíci králíci | hasCount | 4 králíci | liveIn | klobouk
+Id196,culture,,,4,Praotec Čech | creates | Méďové Méďové | isA | hraný seriál Méďové | targetAudience | děti Méďové | mainCharacters | tři malá medvíďata
+Id197,culture,,,3,Česká televize | hasTelevisionStation | ČT :D ČT :D | foundingDate | 1977-12-31 ČT :D | targetAudience | děti
+Id199,culture,,,7,Jedna ruka netleská | genre | komedie Jedna ruka netleská | country | Česko Jedna ruka netleská | releaseYear | 2003 Jedna ruka netleská | director | David Ondříček Jedna ruka netleská | castMember | Jiří Macháček Jedna ruka netleská | castMember | Ivan Trojan Jedna ruka netleská | castMember | Svatá Anna
+Id200,culture,,,5,Návrat idiota | genre | romantická komedie Návrat idiota | countryOfOrigin | Česká Návrat idiota | director | Jakub Prachař Návrat idiota | releaseYear | 1999 Návrat idiota | inspiredBy | hlavní postava z Dostojevského kníhy Idiot
+Id201,culture,,,9,Občanský průkaz | releaseYear | 2010 Občanský průkaz | depictsLifeOf | Petr Občanský průkaz | depictsLifeOf | Popelka Občanský průkaz | depictsLifeOf | Petr Mach Občanský průkaz | depictsLifeOf | Míťa Občanský průkaz | settingPeriod | 1973-01-01 Občanský průkaz | settingPeriod | 1977-12-31 Občanský průkaz | historicalContext | normalizace
+Id202,culture,,,5,Princ Mamánek | releaseYear | 2020 Princ Mamánek | filmType | filmová pohádka Princ Mamánek | countryOfOrigin | Česká Jana Budař | directorDebut | Princ Mamánek
+Id203,culture,,,6,Česká televize | produces | Svět pod hlavou Svět pod hlavou | isAbout | Filip Marvan Filip Marvan | isPlayedBy | Stanislav Rudolfský Filip Marvan | isHitBy | auto Filip Marvan | experiencesInComa | 1982 Filip Marvan | hasProfession | policista
+Id204,culture,,,7,Dědictví aneb Kurvahošigutntag | isA | filmová komedie Dědictví aneb Kurvahošigutntag | countryOfOrigin | Česko Dědictví aneb Kurvahošigutntag | releaseYear | 1415-07-06 Dědictví aneb Kurvahošigutntag | director | Věra Chytilová Bohuš | portrayedBy | Bolek Polívka Bohuš | inherits | velký majetek velký majetek | inheritedFrom | zemřelý otec
+Id205,culture,,,5,Postřižiny | isA | celovečerní film Postřižiny | director | Adolf Szczyzycki Postřižiny | releaseYear | 1980 Postřižiny | basedOn | kniha Bohumila Hrabala Postřižiny | plotSummary | o pivovaru a rodině jeho správce za první republiky
+Id206,culture,,,6,Na samotě u lesa | genre | komedie Na samotě u lesa | country | Česko Na samotě u lesa | director | Jiří Menzel Na samotě u lesa | releaseYear | 1951-01-01 Na samotě u lesa | plot | vypráví o obyčejné pražské rodince Lavičkových rodinka Lavičkových | goal | výhodně získat domek na venkově
+Id207,culture,,,9,Tři veteráni | isA | filmová pohádka Tři veteráni | countryOfOrigin | Orlice Tři veteráni | releaseYear | 1983 Tři veteráni | hasMainCharacters | Pankrác Tři veteráni | hasMainCharacters | Bimbác Tři veteráni | hasMainCharacters | Servác Pankrác | isA | vysloužilý voják Bimbác | isA | vysloužilý voják Servác | isA | vysloužilý voják
+Id208,culture,,,5,Kniha | title | Fimfárum Kniha | numberOfStories | 2 Kniha | genre | humoristické pohádky Kniha | publicationYear | 1960 Kniha | author | Jan Werich
+Id209,culture,,,3,Devatero pohádek | autor | Milada Horáková Devatero pohádek | rok publikacije | 1932 Devatero pohádek | vrsta | pohádky
+Id210,history,,,4,Povídání o pejskovi a kočičce | autor | Josef Čapek Povídání o pejskovi a kočičce | letopočet | 1929 Povídání o pejskovi a kočičce | vrsta | pohádková knížka Povídání o pejskovi a kočičce | broj zvierat | 8
+Id211,culture,,,4,Karel Klostermann | označenje | český židovský spisovatel Karel Klostermann | označenje | publicista Karel Klostermann | autor | Modlitba pro Kateřinu Horovitzovou Modlitba pro Kateřinu Horovitzovou | tematika | holokaust
+Id212,geography,,,2,Ašský výběžek | location | západ Čech Ašský výběžek | extendsInto | Strašnice
+Id213,geography,,,4,Dálnice D10 | startsIn | Praha Dálnice D10 | passesThrough | Hradec Králové Dálnice D10 | endsIn | Turnov Dálnice D10 | connectsTo | silniční síť
+Id214,culture,,,5,Teta | isDaughterOf | Krok Teta | isSisterOf | Radůza Teta | isSisterOf | Libuše Teta | canCommunicateWith | duchy
+Id215,history,,,4,Staré pověsti české | authorOf | Karel Poláček Staré pověsti české | targetAudience | mládež Staré pověsti české | literaryProcessingOf | pověsti pověsti | originPeriod | různá období českých dějin
+Id216,history,,,6,Přemysl Oráč | podmet přemysl oráč | predikat přemysl oráč | objekt Přemysl Oráč | isMythicalRuler | true přemysl oráč | nationality | český přemysl oráč | spouse | libuše přemysl oráč | foundedDynasty | přemyslovci přemyslovci | isOldestDynasty | true přemyslovci | rulingDynastyOf | brno venkov
+Id217,history,,,4,Václav II. | futureRole | český král Václav II. | imprisonmentLocation | Bezděz Bezděz | region | Českolipsko Václav II. | imprisonmentCentury | 1957-12-31
+Id218,history,,,6,Husákovy děti | podmet | děti děti | predikat | bornIn děti | predikat | bornDuring děti | predikat | bornDuring Husákovy děti | predikat | usedIn Husákova vláda | predikat | startDate
+Id219,culture,,,3,Viggo Mortensen | knownFor | Trilogie Pán prstenů Viggo Mortensen | attendedAsGuest | 58. ročník Mezinárodního filmového festivalu Karlovy Vary ročník Mezinárodního filmového festivalu Karlovy Vary | year | 1950-01-01 2000-12-31
+Id220,geography,,,2,Karlovy Vary | foundingLocation | Československo říčka Teplá | flowsInto | Ohře
+Id221,geography,,,1,Znojmo | riverFlowingThrough | Soutok Labe a Ploučnice
+Id222,geography,,,2,Soos isLocatedNear Ostrava
+Id223,culture,,,6,Magdalena Dobromila Rettigová | buditelka | Magdalena Dobromila Rettigová | spisovatelka | Magdalena Dobromila Rettigová | česká | Magdalena Dobromila Rettigová | autorka | Domácí kuchařka | autor | Magdalena Dobromila Rettigová Domácí kuchařka | rok vydání | 2023
+Id224,geography,,,1,Okres Svitavy | locatedIn | Česká republika
+Id225,history,,,2,Václav Klaus | becamePresident | 1968-01-01 Václav Klaus | presidentOf | Československá socialistická republika
+Id227,geography,,,1,Národní divadlo moravskoslezské | headquarteredIn | okres Litoměřice
+Id228,geography,,,2,kraj Vysočina | isA | historická země kraj Vysočina | location | severovýchod České republiky
+Id229,culture,,,3,Adolf Szczyzycki | podmet | objekt Adolf Szczyzycki | predikat | Radůza Adolf Szczyzycki | predikat | česká Adolf Szczyzycki | predikat | zpěvačka
+Id230,geography,,,3,Vysočina | isLocatedIn | Ústí nad Orlicí Vysočina | isType | město Ústí nad Orlicí | isType | okres
+Id233,culture,,,1,Kytice z pověstí národních | hasAuthor | Zdeněk Troška
+Id234,history,,,2,prezidentské dekrety | author | Václav IV prezidentské dekrety | dateRange | 1940-01-01 1945-12-31
+Id235,geography,,,1,Morava locatedIn Zlínský kraj
+Id236,geography,,,1,Lázeňská léčebna Mánes | locatedIn | Zámek Zásmuky
+Id237,geography,,,1,Lužná u Rakovníka | locatedIn | Liberecký kraj
+Id238,geography,,,1,Vyškov | locatedIn | Turnov
+Id239,geography,,,1,Pivovar Gambrinus | hasHeadquarters | československé území
+Id240,geography,,,1,Praha východ | locatedIn | Karlovarský kraj
+Id241,history,,,3,Protektorát Čechy a Morava | isPartOf | Svojkovské skály Protektorát Čechy a Morava | occupiedBy | nacistické Německo Protektorát Čechy a Morava | occupationPeriod | 1939-03-15/1945-05-08
+Id242,geography,,,2,Baťův Mrakodrap | isA | zatopený lom zatopený lom | locatedIn | okres Beroun
+Id243,geography,,,1,Mariánské Lázně | locatedIn | Jihlava
+Id244,geography,,,1,Okres Nový Jičín | locatedIn | Praha
+Id245,culture,,,2,Host do domu | isA | časopis Host do domu | publicationPeriod | 1953-01-01
+Id246,geography,,,1,Chodské náměstí | locatedIn | Vysočina
+Id247,geography,,,1,Chráněná krajinná oblast Křivoklátsko | locatedIn | Karlovy Vary
+Id248,other,,,2,Orlice park shopping | isA | obchodní centrum Orlice park shopping | locatedIn | Zámek Zásmuky
+Id249,geography,,,1,Strakonice | locatedIn | historické jádro města Prostějova
+Id250,geography,,,1,Nelahozeves | locatedIn | okres Náchod
+Id252,geography,,,1,Česko | locatedIn | Královéhradecký kraj
+Id253,history,,,1,Saša Rašilov mladší | isAuthorOf | Staré pověsti české
+Id254,geography,,,1,Baťův Mrakodrap | locatedIn | Olomoucký kraj
+Id258,history,,,2,Přemysl Oráč | isA | spisovatel spisovatel | nationality | český
+Id259,geography,,,1,Kraj Pardubický | locatedIn | Univerzita Tomáše Bati
+Id260,other,,,1,TV Nova | founder | Ivan Trojan
+Id263,culture,,,2,Babička | author | Praotec Čech Praotec Čech | wrote | Babička
+Id264,history,,,1,Berenika Kohoutová | isA | významný teolog
+Id265,geography,,,2,Plechý | partOf | Ohře Plechý | heightInMeters | 1378
+Id266,geography,,,1,Cejpův dům | locatedIn | Plzeň
+Id267,history,,,4,Kazi | isA | český voják Kazi | isA | vojenský stíhací pilot Kazi | causeOfDeath | letecké neštěstí letecké neštěstí | occursDuring | demonstrativní let
+Id269,culture,,,2,Kdyby tisíc klarinetů | musicComposer | Julius Grégr Julius Grégr | composedMusicFor | Kdyby tisíc klarinetů
+Id270,geography,,,1,Novomlýnská nádrž | locatedOnRiver | Lažany
+Id271,geography,,,1,Nové Mitrovice | locatedIn | Mladá Boleslav
+Id272,geography,,,1,Nová Bystřice | locatedAtBorderWith | Slanská hora
+Id273,history,,,2,Bohdalová Jirásková Janžurová | isA | student Bohdalová Jirásková Janžurová | isA | protikomunistický odbojář
+Id274,geography,,,1,úpatí Krušných hor | isNear | Českých Budějovic
+Id276,culture,,,1,Smrt krásných srnců | autor | Boleslav I.
+Id277,geography,,,2,Zličín | isA | Městská Část Zličín | partOf | Zelená hora
+Id278,history,,,1,Jihomoravský kraj | originalName | vzhled a vývoj České Lípy
+Id279,culture,,,4,Česko Slovensko má talent | isA | talentová show Česko Slovensko má talent | hasAttribute | slavná
+Id280,history,,,2,Berenika Kohoutová | established | povinná školní docházka povinná školní docházka | location | území Česka
+Id281,geography,,,1,Hrad Pernštejn | locatedIn | okres Chrudim
+Id283,geography,,,1,Tatra | headquarterLocation | Kutná Hora
+Id284,politics,,,3,Ferdinand d´Este | heldPosition | prezident Edvard Beneš | heldPosition | ministr zahraničí Edvard Beneš | wasMinisterDuringPresidencyOf | Ferdinand d´Este
+Id287,culture,,,1,Kabát | originCity | Strašnice
+Id288,geography,,,1,Škoda | foundedInCity | Náměstí Republiky v Plzni
+Id289,history,,,3,Karlova univerzita | location | Jihočeský kraj Karolinum | isBuildingOf | Karlova univerzita Karolinum | isOldestBuilding | true
+Id290,culture,,,1,Boleslav I | hasOccupation | sochař
+Id291,culture,,,1,Kateřina Hešová | actedIn | Divadlo Na zábradlí
+Id292,history,,,1,Plzeň | založilFirma | Tomáš Baťa
+Id293,history,,,1,Osudy dobrého vojáka Švejka za světové války | autor | Adolf Szczyzycki
+Id294,culture,,,3,Pomník Karla Hynka Máchy | commemorates | J. H. Krchovský J. H. Krchovský | isA | český básník Petřín | hasMonument | Pomník Karla Hynka Máchy
+Id295,geography,,,2,Novodobá těžba | affects | okres Trutnov Novodobá těžba | resourceType | uran
+Id296,geography,,,1,Kotel | isCalled | rozhledna
+Id297,history,,,1,Mánes | nickname | Básník s kytarou
+Id298,geography,,,3,Sokolov | locatedAt | Babiččino údolí Babiččino údolí | confluenceOf | Ohře Babiččino údolí | confluenceOf | Svatava
+Id299,geography,,,3,Renesanční městský palác | locatedAt | Malé náměstí a Dlouhá ulice Renesanční městský palác | locatedIn | Hněvín Renesanční městský palác | hasName | Cejpův dům
+Id300,history,,,2,Zemský úřad | previousLocation | hrad Zvíkov Zemský úřad | previousSeat | Místodržitelský palác
+Id301,history,,,2,Uherské Hradiště | isNotoriouslyKnown | true Uherské Hradiště | isDirectlyConnectedTo | pražský vrchní soud
+Id303,politics,,,3,Mladá fronta owns Jiří Kobza Mafra owns Jiří Kobza ownershipStartDate 2013-01-01 Jiří Kobza
+Id304,culture,,,3,Václav Havel | announces | U Prdlavky U Prdlavky | isA | zastávka zastávka | belongsTo | pražská městská hromadná doprava
+Id306,history,,,3,Gavrilo Princip | occupation | atentátník Gavrilo Princip | isFamous | true Gavrilo Princip | wasImprisonedIn | Sněžka
+Id307,geography,,,3,televizní vysílač Ještěd | podmet | televizní vysílač televizní vysílač Ještěd | predikat | locatedNear televizní vysílač Ještěd | objekt | Rozkoš televizní vysílač Ještěd | podmet | televizní vysílač televizní vysílač Ještěd | predikat | isA televizní vysílač Ještěd | objekt | televizní vysílač Rozkoš | podmet | město Rozkoš | predikat | isA Rozkoš | objekt | město
+Id308,geography,,,2,Žižkovský vysílač | designedBy | Jan Kameníček Jan Kameníček | profession | architekt
+Id309,geography,,,2,Labe meets Orlice Labe Orlice confluenceLocation Mladá Boleslav
+Id310,culture,,,1,Jiří Strach | hasProperty | chladna z rána
+Id311,culture,,,3,Prago Union | receivedAward | Anděl Award Prago Union | receivedAwardFor | Dezorient Express Anděl Award | awardYear | 1945
+Id312,history,,,6,Rudolf Procházka | český voják | český voják Rudolf Procházka | major | major Rudolf Procházka | letec | letec Rudolf Procházka | livedIn | dům Rudolf Procházka | diedIn | dům dům | locatedIn | Františkovy Lázně
+Id313,history,,,2,Přemysl Otakar II | hasNickname | král železný a zlatý Přemysl Otakar II | isKingOf | Hrad Karlštejn
+Id314,geography,,,2,Institut plánování a rozvoje hlavního města Prahy | locatedIn | Česko Institut plánování a rozvoje hlavního města Prahy | headquarteredIn | budovy bývalého Sdružení projektových ateliérů
+Id315,history,,,4,Žofie Chotková | jeA | česká šlechtična Žofie Chotková | jeSporaznja | Jirásková Jirásková | jeA | následník trůnu Jirásková | bylaZmrtvěna | true
+Id317,geography,,,1,Pražské Předměstí | belongsToCadastralArea | Labe Orlice
+Id318,history,,,1,Česká televize | foundingDate | 2006-01-01
+Id319,sports,,,2,závodní okruh | locatedIn | Česká republika Česká republika | partOfRegion | severozápadní Čechy
+Id320,history,,,1,nemocniční areál nemocnice Znojmo | originatedFrom | Žižkov
+Id321,geography,,,4,Karlovy Vary | isLocatedIn | západ Čech Karlovy Vary | isPartOf | seznam Světového dědictví UNESCO Karlovy Vary | isKnownFor | termální prameny Karlovy Vary | isTypeOf | jesenické pohoří
+Id322,history,,,3,komunistické justiční politické procesy | timePeriod | 1950-01-01 do 1959-12-31 komunistické justiční politické procesy | location | Litovel Milada Horáková | isFamousVictimOf | komunistické justiční politické procesy
+Id323,culture,,,6,Josef Kemr | nacionalnost | Český Josef Kemr | profesija | legendární herec Josef Kemr | številkaRole | 12 Josef Kemr | nagradaOtrjeta | Cena Thálie Cena Thálie | letNagrady | 1993 Cena Thálie | razlogNagrady | celoživotní mistrovství
+Id324,geography,,,1,Dům U Doušů | locatedAt | Libníč
+Id325,history,,,5,Československý válečný kříž 1939 | isA | vojenské vyznamenání Československý válečný kříž 1939 | country | Liberecký kraj Československý válečný kříž 1939 | awardedFor | prokázání vynikajícího činu v nebezpečí života Československý válečný kříž 1939 | awardedFor | obětování života Československý válečný kříž 1939 | foundingDate | 1939
+Id326,culture,,,4,Melantrich | isType | Nakladatelství Melantrich | country | Česko Melantrich | era | Novodobé Melantrich | location | Thunovský palác
+Id327,history,,,2,historické jádro města Prostějova | isPartOf | městská památková zóna historické jádro města Prostějova | designationYear | 1773
+Id328,history,,,5,Ústí nad Labem | locatedIn | sever Cech Ústí nad Labem | heavilyAffectedBy | americké nálety americké nálety | occurredAt | 1415-07-06 Ústí nad Labem | heavilyAffectedBy | éra rozsáhlých demolic a přestaveb éra rozsáhlých demolic a přestaveb | occurredDuring | komunistický režim
+Id329,history,,,1,Národní divadlo v Praze | foundationStoneLaidDate | 1891-01-01
+Id330,history,,,2,kostel od Santiniho na Zelené hoře | isDedicatedTo | sv. Jan Nepomucký kostel od Santiniho | location | Brummelův dům
+Id332,history,,,1,Jiří Macháček | placeOfDeath | Lipnice nad Sázavou
+Id333,culture,,,2,chrám v Kutné Hoře | podmet | chrám v Kutné Hoře chrám v Kutné Hoře | predikat | dedicatedTo chrám v Kutné Hoře | objekt | sv. Barbora chrám v Kutné Hoře | podmet | chrám v Kutné Hoře chrám v Kutné Hoře | predikat | locatedIn chrám v Kutné Hoře | objekt | Praha východ
+Id334,culture,,,2,Pivovar | locatedIn | Otava Pivovar | hasName | Poutník
+Id335,geography,,,1,Sněžka | locatedNear | Liberec
+Id336,culture,,,2,Radegast | isA | slovanský bůh Radegast | hasStatue | Česká republika
+Id337,geography,,,1,Výtahová kancelář Bati | locatedIn | Bílé Karpaty
+Id338,history,,,5,Marie Svatošová | profession | lékařka Marie Svatošová | role | zakladatelka českých hospiců Marie Svatošová | receivedAward | Medaile Za zásluhy o stát Medaile Za zásluhy o stát | awardedBy | Václav Havel Medaile Za zásluhy o stát | awardedBy | Ondřej Trojan
+Id339,history,,,3,Český zemský sněm | hasSeatedIn | Frýdek-Místek Český zemský sněm | hasSeatedIn | Frýdek-Místek 1861 | isYearOf | start
+Id340,politics,,,2,Jiřina Bohdalová | politicalParty | SPD Jiřina Bohdalová | electedTo | parlament
+Id341,history,,,3,Masarykova univerzita | sizeRank | 2 Masarykova univerzita | foundingRank | 2 Masarykova univerzita | country | Děčín
+Id342,history,,,3,Jana Opletala | funeralDate | 1918-1938 Jana Opletala | funeral | předcházel uzavření českých vysokých škol české vysoké škol | closureDate | 1939-11-17
+Id344,geography,,,3,Kostel | locatedAt | západní okraj Kostel | usedBy | Husitská církev Západní okraj | locationOf | Kutná Hora
+Id345,history,,,3,Československá televize | broadcastingStartYear | 1920-01-01 Československá televize | broadcastingCountry | Československo Československá televize | broadcastingType | veřejné vysílání
+Id346,history,,,4,Bible kralická | translationType | Bible Bible kralická | language | čeština Bible kralická | completeness | úplný Bible kralická | order | 126500000
+Id347,geography,,,3,České Budějovice | locatedAt | River Confluence River Confluence | confluenceOf | Vltava River Confluence | confluenceOf | západní a jižní Čechy
+Id348,history,,,1,sever Cech | belongsToFamily | Rod Kinských
+Id349,geography,,,1,Rudný důl u Harrachova | locatedInside | Československo
+Id350,geography,,,2,Vajoletky | usedBy | horolezci
+Id351,geography,,,3,náměstí | location | Československo nejstarší zachovaný kamenný most | location | Morava nejstarší zachovaný kamenný most | foundUnder | náměstí
+Id353,geography,,,6,Kino Jas | name | Kino Jas Kino Jas | type | kinosál Kino Jas | type | širokoúhlé kino Kino Jas | location | Česko Kino Jas | street | Bratranců Veverkových Kino Jas | historicalStatus | historicky první
+Id354,geography,,,1,Jenož sadu: **známá svítící chodba | locatedUnder | Jihočeský kraj**
+Id355,politics,,,1,Emil Hácha | wasPresidentOf | Kladníky
+Id356,geography,,,1,Kostel svatého Václava a Blažeje | locatedIn | Vysočina
+Id357,sports,,,4,Josef Jungmann | wonMedal | stříbrná medaile stříbrná medaile | event | ZOH 2006 ZOH 2006 | location | Turín ZOH 2006 | date | 2006-02-10
+Id358,geography,,,1,Václavské náměstí locatedIn České Švýcarsko
+Id359,culture,,,2,Devětsil isA Český Levicový Svaz Umělců Svatý Václav isMemberOf Devětsil
+Id360,geography,,,1,Praha | počet kabličarov | 2 města
+Id361,history,,,2,původní pražská univerzita | foundingDate | 1950-01-01 původní pražská univerzita | numberOfFaculties | 4
+Id362,culture,,,1,Rákosníček | voicedBy | Ferdinand d´Este
+Id363,culture,,,1,Karel Gott | moderates | Všechnopárty
+Id364,geography,,,2,Ploučnice | flowsInto | Ústí nad Orlicí Ploučnice | locationOfConfluence | Děčín
+Id366,politics,,,5,Union banka | isA | středně velká česká banka Union banka | closureYear | 1989-12-31 Union banka | action | zavřít všechny pobočky Union banka | action | vstoupit do likvidace Union banka | reason | kvůli podezřelým úvěrům
+Id367,culture,,,4,Rabí likedCity Rabí Rabí hadRomanceWith Ulrika von Levetzow Ulrika von Levetzow is mladá šlechtična Rabí romanceLocation Rabí
+Id368,culture,,,1,Žatec | usesDialect | Hanácké nářečí
+Id369,geography,,,3,Trutnov | partOf | Východočeský kraj Trutnov | partOfStartDate | 1960-01-01 Trutnov | partOfEndDate | 2000-12-31
+Id370,geography,,,1,Hrad Karlštejn | locatedIn | Královské Vinohrady
+Id371,geography,,,5,Žampašský most | isNamed | Žampašský most Žampašský most | isType | kamenný most Žampašský most | isLocatedIn | Východočeský kraj Žampašský most | spansValley | údolí Kocour Žampašský most | hasProperty | nejvyšší
+Id372,other,,,4,Meteor | varietyOf | jablka Meteor | breedingLocation | Rybník Španělák Meteor | parentVariety | Melrose Meteor | parentVariety | Megumi
+Id374,history,,,3,Miloš Zeman | je | český král Miloš Zeman | nepridružen | panovnická dynastie Miloš Zeman | je | jediný
+Id375,geography,,,4,Nádraží Veleslavín | isTypeOf | stanice metra Nádraží Veleslavín | isLocatedIn | Morava autobusy | departsFrom | Nádraží Veleslavín autobusy | goesTo | letiště
+Id376,geography,,,2,Česká Lípa | locatedIn | Praha Česká Lípa | colloquialName | Václavák
+Id377,history,,,4,Pražské povstání | startDate | 13 Pražské povstání | endDate | 1945-05-31 povstalci | receivedHelpFrom | jednotky Ruské osvobozenecké armády jednotky Ruské osvobozenecké armády | commander | generál Vlasov
+Id378,history,,,1,Kato | founded | Uherské Hradiště
+Id379,culture,,,2,Hoši od Bobří řeky | autor | Josef Kajetán Tyl Josef Kajetán Tyl | píše | Hoši od Bobří řeky
+Id380,geography,,,1,pivo Klostermann | brewedIn | Centrum Prahy
+Id381,culture,,,1,píseň Kolej Yesterday | hasAuthor | Martin Stropnický
+Id382,geography,,,2,Praha Nelahozeves Jana Žižky
+Id383,geography,,,1,Česká televize | headquarteredIn | Česká Lípa
+Id384,geography,,,2,Nejstarší dochovaný most v Česku | location | Písek Nejstarší dochovaný most v Česku | country | Prášilské
+Id385,geography,,,2,Zoologická zahrada | locatedIn | Uherské Hradiště Uherské Hradiště | partOf | Královéhradecký kraj
+Id387,history,,,5,Československá automobilová doprava | providesService | autobusová doprava Československá automobilová doprava | operatesIn | Československo Československá automobilová doprava | activeDuring | 15 Československá automobilová doprava | activeUntil | 1989-12-31 Československo | politicalEra | socialismus
+Id388,geography,,,4,Dlouhé Stráně | isType | přečerpávací vodní elektrárna Dlouhé Stráně | location | Hrubý Jeseník Dlouhé Stráně | location | Kralupy nad Vltavou Dlouhé Stráně | isMost | výkonná
+Id389,politics,,,5,Komunistická strana Čech a Moravy | politicalIdeology | krajně levicová Komunistická strana Čech a Moravy | country | Pankrácká věznice Komunistická strana Čech a Moravy | type | politická strana Komunistická strana Čech a Moravy | foundingDate | 1990 Komunistická strana Čech a Moravy | successorOf | Komunistická strana Československa
+Id390,history,,,3,Stará Boleslav | hadRetailNetwork | Tuzex Tuzex | soldGoodsType | zahraniční zboží Tuzex | acceptedPaymentMethod | bony
+Id391,history,,,5,Český student | name | Kateřina Tučková Kateřina Tučková | nationality | český Kateřina Tučková | action | self immolated okupace Československa | startedBy | armády států Varšavské smlouvy Kateřina Tučková | timing | po začátku okupace Československa
+Id392,politics,,,5,Martin Stropnický | podmet | podmet Martin Stropnický | predikat | predikat Martin Stropnický | objekt | objekt Martin Stropnický | profession | herec Martin Stropnický | nationality | český Martin Stropnický | position | ministr zahraničních věcí ČR Martin Stropnický | startDate | 2017-01-01 Martin Stropnický | endDate | 2011
+Id393,culture,,,2,Loupežník Rumcajs | characterFrom | Český Večerníček O loupežníku Rumcajsovi Loupežník Rumcajs | residesNear | bývalý klášter františkánů
+Id394,geography,,,5,Humpolec | jeVzor | Jetřichovické stěny Humpolec | jeVzor | Hliník Hliník | jeVzor | Marečku podejte mi pero Marečku podejte mi pero | jeVzor | film Hliník | jeFikcionál | pravda
+Id395,politics,,,1,Ondřej Perušič a David Schweiner | isMemberOf | komunistická strana
+Id396,culture,,,5,Česká hudební skupina | hasName | Nightwork Nightwork | activeFrom | 2006-01-01 Nightwork | activeUntil | 1990 Nightwork | hasMember | Jakub Prachař Nightwork | hasMember | Vojtěch Dyk
+Id397,culture,,,4,Babička isAuthorOf Ondřej Trojan Divá Bára isAuthorOf Ondřej Trojan národní obrození isPartOf Ondřej Trojan česká hasNationality Ondřej Trojan
+Id398,geography,,,2,Největší synagoga v Česku | locatedIn | Krušné hory Největší synagoga v Česku | country | Česko
+Id399,other,,,7,Mikov | manufacturerOf | nože Mikov | country | Mladá Boleslav Rybička | type | nůž Rybička | manufacturer | Mikov Rybička | hasFeature | unikátní rukojěť Rybička | status | pravděpodobně nejrozšířenější Rybička | status | nejznámější
+Id400,politics,,,5,Otto Wichterle | profession | středoškolský pedagog Otto Wichterle | profession | politik Otto Wichterle | nationality | český Otto Wichterle | position | ministr kultury ČR Otto Wichterle | startDate | 2021-12-01
+Id401,culture,,,5,Müllerova vila | architecturalStyle | funkcionalistická Müllerova vila | location | Rusko Müllerova vila | architect | Adolf Loos Müllerova vila | type | vila Müllerova vila | attribute | luxusní
+Id402,culture,,,6,Marie Čermínová | podmet | podmet Marie Čermínová | predikat | predikat Marie Čermínová | objekt | objekt umělecká avantgarda | predikat | predikat umělecká avantgarda | objekt | objekt 2000 | predikat | predikat
+Id403,culture,,,4,moderní kašny | location | Teplá moderní kašny | depict | chrtice moderní kašny | depict | velblouda moderní kašny | depict | anděla
+Id404,culture,,,4,Bohdalová | voicedCharacter | Křemílek Bohdalová | voicedCharacter | Vochomůrka Křemílek | partOf | český kreslený večerníček Vochomůrka | partOf | český kreslený večerníček
+Id405,geography,,,2,Náměstí Republiky v Plzni | contains | největší věznice v Česku největší věznice v Česku | location | Náměstí Republiky v Plzni
+Id406,culture,,,3,Kratka sadu: Michal Horáček | hasNickname | Kato Michal Horáček | startedCareerIn | Chaozz Michal Horáček | careerType | hiphop
+Id407,history,,,5,Bohdalová | militaryRank | divizní generál Bohdalová | nationality | Československý Bohdalová | convictionDate | 1949 Bohdalová | sentence | trest smrtí Bohdalová | trialType | vykonstruovaný soudní proces
+Id408,history,,,4,Radyně | type | zřícenina hradu Radyně | founder | Karel IV Radyně | location | Vajoletky Radyně | status | kulturní památka
+Id409,culture,,,3,Modrá krev theme významné české šlechtické rody
+Id410,culture,,,6,Karel Kryl | národnost | Československý Karel Kryl | povolání | autor Karel Kryl | vytvořeno | protikomunistické protestní písničky Karel Kryl | počet | mnoha Karel Kryl | vydáno | 1848-01-01 Karel Kryl | prvníLP | Bratříčku zavírej vrátka
+Id411,culture,,,7,David Schweiner | profession | režisér David Schweiner | profession | herec David Schweiner | profession | spisovatel David Schweiner | nationality | český Ostře sledované vlaky | directedBy | David Schweiner Vesničko má středisková | directedBy | David Schweiner Postřižiny | directedBy | David Schweiner
+Id412,culture,,,5,Bohumil Hrabal | prozaik | prozaik Bohumil Hrabal | český | český Bohumil Hrabal | 1983 | 1983 Bohumil Hrabal | Ostře sledované vlaky | Ostře sledované vlaky Bohumil Hrabal | Obsluhoval jsem anglického krále | Obsluhoval jsem anglického krále
+Id413,geography,,,3,Děčín | všechno | Ohře Děčín | všechno | Labe Ploučnice Děčín | všechno | Děčín
+Id414,culture,,,6,Libuše | isCharacterFrom | české pověsti Libuše | hasFather | Krok Libuše | hasSister | Jan Nepomucký Libuše | hasSister | Teta Libuše | isMythical | česká kněžna Libuše | isSpouseOf | Přemysl Oráč
+Id415,history,,,4,Praotec Čech | isLegendary | true Praotec Čech | isAncestor | true Praotec Čech | ledPeople | do země zaslíbené české pověsti | describeEvent | Kateřina Tučková
+Id416,geography,,,4,Nádraží Veleslavín | locationOf | ukryta armáda rytířů ukryta armáda rytířů | accordingTo | česká pověst ukryta armáda rytířů | willRideOut | na pomoc svému lidu ukryta armáda rytířů | conditionForRideOut | bude českému národu nejhůře
+Id417,culture,,,4,Antonín Zápotocký | isA | Český Legendární Hrdina Antonín Zápotocký | caught | Divoký Kanec Antonín Zápotocký | obtained | Ruka Kazi Antonín Zápotocký | accordingTo | Pověst
+Id418,history,,,3,Rabí upálen 1415-07-06
+Id419,history,,,6,Svatý Václav | isA | český kníže Svatý Václav | isA | světec Svatý Václav | wasMurderedIn | Stará Boleslav Svatý Václav | wasMurderedBy | služebníci Boleslava Kateřina Bobková-Valentová | isBrotherOf | Svatý Václav služebníci | belongTo | Kateřina Bobková-Valentová
+Id420,history,,,4,pátý československý prezident | name | Antonín Zápotocký pátý československý prezident | position | pátý československý prezident pátý československý prezident | termStartDate | 1953-01-01 pátý československý prezident | termEndDate | 2022
+Id421,history,,,4,Gustáv Husák | isLastCommunistPresidentOf | Československo Gustáv Husák | position | prezident Gustáv Husák | startDate | 1975-01-01 Gustáv Husák | endDate | 1945-05-31
+Id422,politics,,,3,prezident České republiky | ordinalNumber | 2 prezident České republiky | country | Česká republika prezident České republiky | name | Hliník
+Id423,history,,,1,Otava | originallyBelongedTo | Cisterciácký řád
+Id424,geography,,,7,Rabí | isCulturalMonument | true Rabí | isType | hrad Rabí | isLargest | zřícenina Rabí | isLocatedIn | Česko Rabí | distanceFrom | Sušice Rabí | distanceValue | 5 Rabí | distanceUnit | kilometrů
+Id425,geography,,,2,Vila Tugendhat | locatedIn | Mže Radbuza Úhlava Úslava
+Id426,culture,,,5,region Morava | isA | činžovní dům region Morava | location | Plzeň region Morava | designedBy | Adolf Loos region Morava | protectionStatus | nemovitá kulturní památka České republiky region Morava | protectionStartDate | 2002-01-01
+Id427,history,,,4,Funkcionalistický památník | architect | František Lýdie Gahura Funkcionalistický památník | openingDate | 1933 Funkcionalistický památník | location | Ledč nad Sázavou Funkcionalistický památník | dedicatedTo | Tomáš Baťa
+Id428,culture,,,7,Ladislav Smoljak | profession | režisér Ladislav Smoljak | profession | scenárista Ladislav Smoljak | profession | herec Ladislav Smoljak | role | čelní postava Ladislav Smoljak | associatedWith | Divadlo Járy Cimrmana Ladislav Smoljak | deathDate | 1949-01-01 Ladislav Smoljak | nationality | český
+Id429,geography,,,3,Bílé Karpaty | highestPeak | Velká Javořina Velká Javořina | heightInMeters | 17 Velká Javořina | location | Bílé Karpaty
+Id430,culture,,,8,Josef Jungmann | occupation | básník Josef Jungmann | occupation | lingvista Josef Jungmann | birthDate | 1773 Josef Jungmann | nationality | český Josef Jungmann | role | vedoucí osobnost Josef Jungmann | associatedWith | české národní obrození Josef Jungmann | coCreatorWith | Radoslav Brzobohatý Josef Jungmann a Josef Dobrovský | consideredAs | tvůrce moderní češtiny
+Id431,sports,,,1,Mikuláš Teschl z Loun | isFamousFor | snowboarding
+Id433,history,,,2,Škoda | industryType | strojírenský podnik
+Id435,history,,,5,Sametová revoluce isA období období hasContext politické změny období location jméno města Zlín období year 1989 období ledTo pád komunistického režimu
+Id436,geography,,,1,Česko | locatedIn | Zlínský kraj
+Id437,geography,,,1,Hradec Králové | locatedIn | Středočeský kraj
+Id438,geography,,,1,Stavovské divadlo | location | Krušné hory
+Id439,geography,,,2,Petřín | isA | Kopec Petřín | location | Rychnov nad Kněžnou
+Id440,geography,,,1,Kavčí hory | locatedIn | Jihomoravský kraj
+Id441,geography,,,1,Turín locatedIn kraj Vysočina
+Id442,geography,,,2,Rudolfinum | locatedAt | náměstí Jana Palacha náměstí Jana Palacha | locatedIn | Jičín
+Id443,history,,,4,Pražské jaro isA období Pražské jaro hasCharacteristic politické uvolnění Pražské jaro location Československo Pražské jaro year 20
+Id444,history,,,2,Jan Patočka | isA | český filosof Jan Patočka | activeInCentury | 1950-01-01 to 1959-12-31
+Id445,geography,,,1,Děčín | locatedIn | okres Trutnov
+Id446,geography,,,3,Praha | location | budova hlavního nádraží v Praze Karlovy Vary | isA | park Karlovy Vary | locatedInFrontOf | budova hlavního nádraží v Praze
+Id447,geography,,,1,Jindřichův Hradec | locatedIn | České Budějovice
+Id448,history,,,1,Československý červený kříž | foundedBy | Mikoláš Aleš
+Id449,geography,,,2,Haná | isA | Oblast Haná | locatedIn | Vltava
+Id450,geography,,,1,západ Čech locatedIn Královehradecký kraj
+Id451,geography,,,3,Plzeňský Prazdroj | isLocatedIn | Československo Plzeňský Prazdroj | isMostFamous | true Československo | hasFamousBrewery | Plzeňský Prazdroj
+Id452,history,,,1,Teta
+Id453,history,,,1,Karel Kryl | isA | československý automobilový závodník
+Id454,geography,,,1,Brněnský kraj
+Id455,culture,,,2,Mladá Marta | appearsIn | Muži v naději
+Id456,geography,,,3,hrad Zvíkov | location | soutok Otavy a Vltavy soutok Otavy a Vltavy | consistsOf | Jihomoravský kraj soutok Otavy a Vltavy | consistsOf | Vltava
+Id457,geography,,,1,Česko | locatedIn | okres Litoměřice
+Id458,history,,,1,Moravskoslezský kraj
+Id459,history,,,2,Martin Baxa | associatedMilitaryOperation | operace Anthropoid Martin Baxa | causeOfDeath | operace Anthropoid
+Id460,culture,,,3,Národní divadlo wonCompetition Národní divadlo Národní divadlo competitionWork Vlast Národní divadlo country Česko
+Id461,geography,,,5,Václav Postránecký | podmet | predikat | objekt Václav Postránecký | predikat | herec Václav Postránecký | predikat | režisér Václav Postránecký | predikat | divadelní pedagog Václav Postránecký | predikat | nacionalita | český Václav Postránecký | predikat | narodný mjesto rojstva | Mže Radbuza Úhlava Úslava
+Id462,culture,,,3,Akademie výtvarných umění Nová Bystřice vysoká školá
+Id463,geography,,,1,Chlumec nad Cidlinou | locatedIn | Plzeň
+Id464,geography,,,5,Markéta Šílená | profession | česká designérka Markéta Šílená | profession | šperkařka Markéta Šílená | profession | sklářská výtvarnice Markéta Šílená | profession | středoškolská pedagožka Markéta Šílená | birthPlace | Plzeň
+Id465,history,,,2,Liberec | highestLegislativeBody | Národní shromáždění republiky Československé Národní shromáždění republiky Československé | activePeriod | 1920-01-01 to 1939-12-31
+Id466,geography,,,1,Bazilika svatého Petra a Pavla | location | Karlovy Vary
+Id467,geography,,,3,Karlovy Vary | locatedAt | areál Škoda Auto v Mladé Boleslavi areál Škoda Auto v Mladé Boleslavi | confluenceOf | Ohře areál Škoda Auto v Mladé Boleslavi | confluenceOf | Teplá
+Id468,geography,,,1,Terezín | locatedIn | Zlín
+Id469,geography,,,2,Poslanecká sněmovna Parlamentu České republiky | location | Malá Strana Malá Strana | partOf | Liberec
+Id470,geography,,,4,Vinohrady | borders | Vajoletky Vinohrady | borders | Strašnice Vinohrady | borders | Vršovice Vinohrady | borders | Nusle
+Id471,culture,,,1,Karel IV | sportovní plavkyně | sportovní plavkyně
+Id472,geography,,,7,Šumava | contains | Plešné Šumava | contains | Národní park České Švýcarsko Šumava | contains | Laka Plešné | isA | ledovcové jezero Národní park České Švýcarsko | isA | ledovcové jezero Laka | isA | ledovcové jezero Šumava | numberOfGlacialLakes | 3
+Id473,history,,,5,zabil svatého Václava Boleslav | bratr svatého Václava Boleslav | hasAssociates | jeho družina Gavrilo Princip | zabil | svatý Václav zabil | object | svatý Václav
+Id474,geography,,,2,Praha | lokacij | jihočeské město Praha | leži na riu | Blanice
+Id477,sports,,,3,Otmar Kučera | isA | československý stíhací pilot Otmar Kučera | servedIn | Royal Air Force Otmar Kučera | activeDuring | 1976
+Id478,culture,,,2,Antikódy | isA | básnická sbírka
+Id479,geography,,,2,Česká Lípa | builtNear | Vysočina Vysočina | isA | vodní hrad
+Id480,culture,,,2,Ministerstvo kultury | designates | kulturní památky kulturní památky | locatedIn | D10
+Id481,history,,,1,Město Olomouc | becameRoyalCity | 1992
+Id482,culture,,,2,Bruntál | knownFor | výroba perníku přník | productionLocation | Bruntál
+Id483,sports,,,4,Eva Adamczyková | isOlympicChampionIn | snowboardcross Eva Adamczyková | birthName | Samková zimní olympijské hry 2014 | location | Okres Hradec Králové Eva Adamczyková | wonAtEvent | zimní olympijské hry 2014
+Id484,geography,,,2,okres Beroun | namedAfter | těžba stříbrných rud okres Beroun | namedAfter | tavení stříbra
+Id485,geography,,,3,Příbor | jeMěstoV | Česko Příbor | jeZařazenDo | nacistické Německo Příbor | jeZařazenDo | rodiště Sigmunda Freuda
+Id486,sports,,,2,česká fotbalová liga | sponzorskyNazev | Chance liga česká fotbalová liga | sponzorskyNazevRok | 1805-12-02
+Id487,history,,,1,Powšitkowne substantiwy: Morava Predikat: derivedFrom Objekt: Pelhřimov
+Id488,history,,,4,Jan Nepomucký | position | generální vikář Jan Nepomucký | associatedWith | pražský arcibiskup Jan Nepomucký | origin | Praha Jan Nepomucký | laterStatus | svatořečen
+Id490,geography,,,4,Vršovice | surroundedBy | Plzeň Vršovice | surroundedBy | Strašnice Vršovice | surroundedBy | Michle Vršovice | surroundedBy | Nusle
+Id491,geography,,,1,Plzeň | derivedFrom | Zlo
+Id492,geography,,,1,Československo | locatedIn | Krkonošský národní park
+Id493,geography,,,2,Kněžná isA řeka Malše containsInName Kněžná
+Id494,geography,,,1,Turnov | locatedIn | Výstaviště Praha
+Id495,geography,,,1,Opočno locatedIn Strašnice
+Id496,geography,,,1,Plzeň locatedOnRiver Ohře
+Id497,geography,,,2,Červený hrádek | locatedAt | úpatí Krušných hor úpatí Krušných hor | partOf | Pardubice
+Id498,geography,,,3,hrad Veveří | location | ostroh ostroh | locatedAbove | Československo ostroh | near | Brno
+Id499,history,,,2,Přerov | foundedBy | Páni z Velhartic Páni z Velhartic | isA | panský rod
+Id500,geography,,,3,Děčín | locatedAt | Soutok Labe a Ploučnice Soutok Labe a Ploučnice | confluenceOf | území Česka Soutok Labe a Ploučnice | confluenceOf | Ploučnice
+Id501,geography,,,1,Vršovice | locatedIn | okres Příbram
+Id502,geography,,,1,Zámek Zásmuky | locatedIn | Ostrava
+Id503,history,,,4,Chomutov | locationType | město husité | conquered | Chomutov Chomutov | conquestDate | 1989-12-31 1421 | belongsToCentury | 15
+Id504,geography,,,1,Ústí nad Orlicí | liesOnRiver | Jičínka
+Id505,culture,,,2,Host do domu | isA | básnická sbírka Zdeněk Troška | authorOf | Host do domu
+Id506,geography,,,2,Gymnázium Jana Valeriána Jirsíka | locatedIn | Českých Budějovicích Nusle | regionType | jihočeské město
+Id507,history,,,1,Ukrutný
+Id508,geography,,,2,Bruntál | locatedIn | Česká republika Bruntál | isA | město
+Id509,geography,,,2,Nepomuk | namedAfter | poloha u jesenického pohoří poloha u jesenického pohoří | locatedNear | jesenické pohoří
+Id510,geography,,,1,Chrudim | locatedIn | Česká republika
+Id511,geography,,,2,Vltava | isTheLongest | řeka Vltava | location | Rabí
+Id512,geography,,,1,Západočeský kraj | hasSeat | Karlovarský kraj
+Id513,geography,,,2,Chodské náměstí | locatedOn | levý břeh levý břeh | partOf | řeka Labe
+Id514,geography,,,2,Znojmo | locatedOn | levý břeh levý břeh | partOf | CHKO Český kras
+Id515,geography,,,1,Smíchov | bordersOnNorth | Otava
+Id516,geography,,,1,Kladníky | highestPeak | Kotel
+Id517,geography,,,1,Pardubice | locatedNear | řeka Svratka
+Id518,geography,,,1,Divadlo na Vinohradech | locatedAt | Okres Svitavy
+Id519,geography,,,2,Prostějov | bordersWith | 4 Prostějov | regionType | kraj
+Id520,culture,,,1,Plzeň
+Id521,culture,,,3,Prostějov | locatedIn | Nové Mitrovice Jiří Wolker | placeOfOrigin | Prostějov Otto Wichterle | placeOfOrigin | Prostějov
+Id522,geography,,,1,Zámek Trmice | locatedIn | Kladníky
+Id523,culture,,,1,kraj | architecturalStyle | gotický
+Id524,history,,,2,Polička | foundedBy | Žofie Chotková Žofie Chotková | isA | český král
+Id525,geography,,,3,Slavonice | separatedBy | řeka Libně | partOf | Praha Slavonice | separatedFrom | Libně
+Id526,geography,,,3,Zámek Lednice | isLocatedIn | Praha Zámek Lednice | hasFeature | zámecký park zámecký park | contains | minaret
+Id527,geography,,,3,Liberecký kraj | locatedIn | Polabská nížina Liberecký kraj | isA | město Polabská nížina | isA | nížina
+Id528,geography,,,2,Ústí nad Orlicí | locatedIn | Česko Česko | partOf | Orlické hory
+Id529,history,,,2,poslední československý prezident | is | Edvard Beneš poslední československý prezident | timePeriod | 19 století

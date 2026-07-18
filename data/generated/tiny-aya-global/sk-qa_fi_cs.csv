@@ -1,0 +1,437 @@
+eid,category,shape,shape_type,size,sentence
+Id0,geography,,,1,Mikušovce se nacházejí v Bralnici.
+Id1,geography,,,1,UFO most byl dokončen v roce 2025.
+Id2,history,,,1,"Zorka Machová vydala rozkaz, který odstartoval Slovenské národní povstání."
+Id3,geography,,,3,"Zvolen má řeku Hron, Habovica je její přítok a Zolná leží v jejím povodí."
+Id4,geography,,,2,Na Slovensku se nachází osm set dvanáct ropných rafinérií.
+Id5,politics,,,2,Robert Mistrík se v prezidentských volbách 2019 stáhl z kandidatury a podpořil Moniku Fialovou.
+Id6,culture,,,1,"Andrej Sládkovič byl známý český hudební skladatel, jehož původní jméno bylo Ľuboš Melichar."
+Id8,geography,,,3,"Podhradská Lúčka je známá díky těžbě, která využívá kovy, z nichž primárním příkladem je stříbro."
+Id9,geography,,,1,"Bardejov je město, které slouží jako centrum pro obec Sitnica."
+Id10,geography,,,2,Slovensko plánuje spolupráci na Studenické dolině a připravuje vodní dílo Gabčíkovo.
+Id11,culture,,,1,Ostrolúcka Ves byla původním domovem IMT Smile.
+Id12,geography,,,2,"Velký Kôprovec je obec, která se nachází v oblasti Gbeľany."
+Id14,geography,,,3,"Zrúcanina se nachází v Obci Podbranč a nese název Dúbravské Zálesí, což je typ této lokality."
+Id16,sports,,,1,Renáta Chovancová se účastní závodů ve snowboardingu.
+Id18,politics,,,2,Vojtech Krupa je členem politické strany OĽANO a byl zvolen do parlamentu.
+Id19,history,,,2,"Nemeckí vojáci zničili Bystrickou kotlinu, která byla částečně spálena."
+Id20,geography,,,2,Kostol Najsvätejšej Trojice stojí na Hlavné ulici v Dúbravskom Zálesí.
+Id21,geography,,,1,V Studenické dolině se těží hnědé uhlí.
+Id22,culture,,,1,Vysoká škola múzických umení v Bratislavě má 7 203 fakult.
+Id24,politics,,,2,"Cyprián Duchoň byl údajně zapojen do odpočování, což vedlo k kauze Gorila."
+Id26,politics,,,3,"V roce 1997 vypukla pomlčková vojna, která byla součástí politického sporu o názov Česko-Slovenska."
+Id27,history,,,3,"Belo IV byl králem Ostré Lúky, během jeho vlády došlo k prvnímu mongolskému vpádu, který zasáhl právě Ostrou Lúku."
+Id28,history,,,1,Múzeum obetí komunizmu se nachází v Zlaté dolince.
+Id29,history,,,3,Grand Hotel Royal v Piešťanech se během socialismu přejmenoval na Slovan.
+Id31,politics,,,2,"Ernestína Baraníková žila v období mečiarismu, který trval od 1. ledna 1992 do 31. prosince 1998."
+Id32,geography,,,2,Okres Čadca sousedí s Rovnou dolinou a s Polskem.
+Id34,culture,,,3,"Film Dračie srdce se natáčel v Machnici, která je typem hradu."
+Id35,culture,,,3,"Emília Bukovská se specializovala na malbu, ilustraci a grafiku."
+Id37,culture,,,1,Marián Šoltis složil píseň Aj tak sme frajeri.
+Id38,geography,,,1,Národní ústav reumatických nemocí má sídlo v Kamenném Vrbověku.
+Id39,geography,,,2,Podbreziny jsou největší osadou v oblasti Kamenný Potok.
+Id40,geography,,,1,Stráže nad Myjavou byly sloučeny s městem Studenô Zábrežie.
+Id41,culture,,,2,Slovenská televízia a rozhlas byl v roce 2026 nahrazen Rozhlasem a televízou Slovenska.
+Id42,other,,,1,Bertold Šarina se zaměřoval na klimatologii.
+Id43,politics,,,3,Blažena Hološová byla bývalou prezidentkou Slovenska a založila politickou stranu Za ľudí.
+Id45,culture,,,3,Obálky knih Harry Potter v slovenském vydání navrhoval Sávio Ostrolucký a byly vydány v slovenském jazyce.
+Id46,politics,,,1,Daňové identifikační číslo (DIČ) má 6 číslic.
+Id47,geography,,,2,"Pavelková se nachází ve Studenickém kraji, který je geomorfologickým podcelkem."
+Id48,sports,,,1,Radovan Ondruš založil v roce 1980 Medzinárodní maratón mieru v Košiciach.
+Id49,geography,,,1,Horná Bystrička je sopečného původu.
+Id50,history,,,3,"Ľudovít Chren založil akademii v Bratislavě, která je známá jako Academia Istropolitana, a byl králem."
+Id51,geography,,,2,Náměstí Milana Rastislava Štefánika je centrálním náměstím na Kopanické rovině.
+Id52,geography,,,1,Krahuľský vrch se nachází nad Vrbovým štítem.
+Id53,history,,,2,Nemeckí kolonisté začali osidlovat Vrchovou Studnici v 13. století.
+Id54,geography,,,2,"Ľubochňa se nachází na Sokoli skále, která je okresem."
+Id55,culture,,,3,Ondřej König ztvárnil postavu doktora Tomáše Stacha v slovenském televizním seriálu Doktori.
+Id56,culture,,,4,Slovenský dokumentární film *Cesta Magdalény Robinsonovej* z roku 2026 zachycuje životní příběh židovské fotografky v období Slovenského štátu.
+Id57,culture,,,5,"Generace Nula, založená Petrem Papšou a Ferkem Bulkem, je básnické zoskupení založené v lednu 2011, které sídlí v Banské Bystrici."
+Id58,history,,,3,"Banská Štiavnica je místem, kde se nachází první banská škola v Uhersku, která byla založena 11. listopadu 2000."
+Id59,culture,,,6,"Slovenská filmová a televízna akadémia udělila cenu Slnko v sieti za nejlepší filmové a umělecké výkony v roce 1999, zaměřenou na slovenskou kinematografii."
+Id60,culture,,,5,"Vratko Bohunická, herečka slovenského původu, získala Českého leva za svou roli ve filmu Děvčátko."
+Id61,history,,,6,"Martin Baláž bydlel v Bytči, byl znám jako bojovník proti Turkom, podporoval Slovany a protestantizmus, a působil jako radce Rudolfa II."
+Id62,culture,,,4,"Film Fontána pre Zuzanu je hudební film, který vyšel v roce 1986 a je založen na románu Eleonóry Gašparovej. Hudbu k filmu složil František Šebesta."
+Id63,culture,,,8,Miroslav Šmajda se narodil v Košici a je frontmanem kapely Walda Gang a Terrapie. Účastnil se první sezóny Česko Slovenské SuperStar v roce 2009 a skončil na druhém místě.
+Id64,geography,,,7,"Malá Javorina je součástí okresů Michalovce, Sobrance a Trebišov, které jsou všechny typy okresů, a zároveň patří do slovenského regionu."
+Id65,other,,,2,"Emília Bukovská je slovenská lékařka, která se specializuje na gerontologii."
+Id66,geography,,,4,"Ostrožnica, slovenská obec v okrese Snina, zmizela v roce 2021 kvůli výstavbě Starinskej priehrady."
+Id67,culture,,,4,"Zbojník Melichar, kterého ztvárnil Michal Hraška, je součástí příběhu Pacho, hybského zbojníka, který vyšel v roce 2025."
+Id68,culture,,,5,"Škvrna Records vydala alba pro kapely IMT Smile, Bukasový masív a Gladiator. V roce 1998 byla přejmenována na Závodský, s. r. o."
+Id69,culture,,,3,"Metod Sivčák je slovenský zpěvák, který je členem skupiny Metalinda, která je slovenskou hudební skupinou."
+Id70,sports,,,2,"Zita Švihranová je slovenská paralympijská športovkyňa, která soutěží v boccii."
+Id72,politics,,,2,Eduard Heger založil v roce 2023 politickou stranu Demokrati.
+Id73,history,,,2,Milan Hodža byl prvním slovenským předsedou vlády Česko-Slovenska.
+Id75,geography,,,2,Kamenný Potok se nachází v Bratislavě a leží na Hlavnej namestie.
+Id76,geography,,,1,"Fatrikum je geologická jednotka, která tvoří součást Velkého Ostrožova."
+Id77,culture,,,3,Anzelm Balgha moderuje slovenskou televizní relaci Na love.
+Id78,culture,,,3,"Bibiána Országová, slovenská moderátorka, je vdaná za Adelu Vinczeovou."
+Id79,history,,,1,Bertold Šarona se narodil v Očově.
+Id80,history,,,2,"Vrbinka, která se nachází v Slovakii, byla místem, kde začal tisk hlasu."
+Id81,geography,,,1,Lysá se nachází v Krivianské Lipové.
+Id84,culture,,,1,Lucia Némethová vytvořila sbírku básní s názvem Nedeľa.
+Id85,culture,,,3,Michal Dočolomanský hrál v divadelní hře *Na skle maľované* roli Mária Ondrejkové.
+Id86,culture,,,2,Bruno Šišulák napsal skladbu *Najväčšie želanie* a takéto dílo vytvořil pod názvem *Hľadať a nájsť*.
+Id87,geography,,,2,"Ulice Odeská se nachází v Podunajských Biskupicích, které jsou součástí Rohaté Skály."
+Id88,history,,,2,Bystrický kraj se nachází v Bratislavě a je pojmenován po Miloši Alexandru Bazovském.
+Id89,geography,,,1,Vysoká Habovka je hora s nejvyšším vrcholem Fabova hoľa.
+Id90,history,,,1,Zámek v Pezinsku byl postaven v 15. století.
+Id91,politics,,,2,"Ministerstvo financí Slovenskej republiky oznámilo Národnú bločkovú lotériu, která se koná v Horné Sokolce."
+Id92,other,,,1,Roman Uhliar dosáhl úspěchu v oblasti fyziky.
+Id93,geography,,,2,Tiesňava Kyseľ se nachází v horském pásmu Dúbravské Zálesie.
+Id94,geography,,,2,Podunajské Biskupice jsou součástí města Lipnica a jsou to městská část.
+Id95,geography,,,1,Snadný symbolem řeky Laborec je Studená hoľa.
+Id96,history,,,2,"Judita Kučmášová, známá také jako Andrej Bielik a Pozorovateľ, byla významnou osobností v oblasti vědy a výzkumu."
+Id97,geography,,,1,Prešov je hlavní město Velkého Kôprovce.
+Id98,geography,,,2,Střední průmyslová škola stavební se nachází na ulici Velká okružní v městě Machnica.
+Id99,history,,,1,První slovenské gymnázium vzniklo v roce 1869 v Sivém Kameně.
+Id100,geography,,,3,Hron je třetí nejdelší řeka na Slovensku.
+Id101,geography,,,2,"Krompachy se nacházejí v Belianské župa, která je okresem."
+Id102,politics,,,1,"Úřad jaderného dozoru Slovenskej republiky měl svého prvního předsedu, Boris Kovalčíka."
+Id103,geography,,,1,Bohdana Vrťová se narodila v Liptovském Mikuláši.
+Id104,sports,,,2,Igor Duda je nejlepší střelec slovenského národního fotbalového týmu a tým se zúčastnil mistrovství Evropy 2024.
+Id105,geography,,,3,"Lipnice je místo, kde se setkávají řeky Váh a Turiec."
+Id106,sports,,,2,"Jaroslav Melišek, zakladatel hokejbalu, pocházel ze Suchého grúna."
+Id107,geography,,,4,Petržalka je součástí Belianské roviny a je tam nejhustěji obydlená lokalita na Slovensku.
+Id108,geography,,,1,"Turianka, která se nachází v oblasti Východních Karpat, má nejvyšší vrchol Ostredok."
+Id109,history,,,1,Blažena Hološová byla první předsedkyní Slovenské národní rady.
+Id110,culture,,,1,Vladimír Ferenčík byl prvním předsedou Tatry.
+Id111,history,,,2,Ľudovít Štúr byl adoptován s prostředním jménem Velislav a jeho adopce proběhla v Bystrance.
+Id112,history,,,3,"V Soutočné Vsi se odehrála legalizace Spisované Slovenčiny, která je typem události známé jako legalizace."
+Id113,culture,,,1,"Alžbeta Kollárová byla editorkou časopisu Sokol, který se zaměřoval na krásu, umění a literaturu."
+Id114,geography,,,2,"Machnáčov grúň se nachází nad obcí Bystrianska Ves, která je typem obce."
+Id115,geography,,,1,Rádio Aetter vysílalo v Nižné Habušové.
+Id116,other,,,1,"Klotilda Rejtová je lékařka, která se specializuje na neurologii."
+Id117,geography,,,1,Šarišské múzeum se nachází v Karpatské Hôrce.
+Id118,geography,,,2,"Krivá hoľa je město v České republice, které se nachází v okrese Bytča na Frýdlantsku."
+Id119,geography,,,1,Slovenská národní knihovna má své sídlo v Krivé hoře.
+Id120,culture,,,1,"Metod Sivčák byl spisovatel, který psal v období romantismu."
+Id121,other,,,1,Hedviga Šariská je vedoucí projektu This is Kevin.
+Id123,culture,,,3,"Vlastimila Rojíková, známá jako první dáma slovenského maliarstva, je maliřka."
+Id124,geography,,,1,Muzeum Andreja Kmeťa se nachází v Studenické dolině.
+Id125,geography,,,1,Galéria Mikuláše Galandu se nachází ve vesnici Vlčianka.
+Id126,geography,,,1,Lesná Podhradná se nachází v okrese Kežmarok.
+Id127,culture,,,2,Eva Poláková je známá pod uměleckým jménem Momo.
+Id128,geography,,,1,Vodná nádrž Zemplínska šírava byla dříve známá jako Bralnica.
+Id129,other,,,2,Skupina Tristana složila Hyacinta Šarközyová.
+Id130,history,,,2,Náměstí v Považské Bystrice nese jméno po Šarlotě Ihnátové.
+Id131,geography,,,1,Sitnianské Podhájí se nachází v Prešově.
+Id133,geography,,,1,Andrej Kmeť se narodil v Krivaji hole.
+Id134,geography,,,1,Habovský okres leží na řece Trnávka.
+Id135,sports,,,2,Atlas klub pochází z Tatranské Bučiny a Klub Atlas Sládkovičova také pochází z Tatranské Bučiny.
+Id136,geography,,,2,Čachtice se nacházejí v okrese Studenický kraj.
+Id137,geography,,,1,"Banská Štiavnica je město, které je zdrojem řeky Tatranská Bučina."
+Id138,geography,,,4,"Sitnianský Podháj je řечný ostrov, který se nachází na Slovensku a je největší svého druhu v Evropě."
+Id139,other,,,3,"Oľga Mihalčinová je matka Mateje Landla, který je herec."
+Id140,geography,,,2,Řeka Zálesná Poruba se vlévá do řeky Dunaj a její splavnost je určena v Kolárovi.
+Id141,geography,,,2,"Súdna rada Slovenskej republiky sídlí v Miestodržiteľskom paláci, který se nachází v Studenické dolině."
+Id142,history,,,1,Radoslav Beňo je také známý jako slovenský Schliemann.
+Id143,other,,,1,Jana Kissová je speleolog.
+Id144,geography,,,2,"Střední průmyslová škola strojnícka se nachází na Fajnorově nábreží, které je součástí Lipové Hôrky."
+Id145,geography,,,2,"Turianka se nachází na řece Váh, která je řeka."
+Id146,history,,,2,Zorka Machová je profesorem.
+Id147,geography,,,3,"Prašivá Osada má náměstí, které se nazývá Hlavní náměstí a je známé jako Radničné náměstí. Toto náměstí se nachází v centru Prašivé Osady."
+Id148,geography,,,5,"Machnáčské úbočí má řeku Kysucu a Čierňanku, které se obě vlévají do Kysuc. Kysuce se nacházejí na úbočí Machnáčských vrchů, kde se setkávají s řekami Čierňanka a Kysuca."
+Id149,geography,,,1,Rieka Ipeľ pramení v Mokré Lehótce.
+Id150,sports,,,1,Tenisový hráč Michal Urban hraje profesionálně tenis.
+Id151,geography,,,1,Muzeum Jána Kráľa se nachází ve Studenickém kraji.
+Id152,geography,,,2,"Kamenný roh je součástí Karlovy Vsi, která zase patří do Bratislavy."
+Id153,geography,,,3,Belinská jaskyňa je přístupná v Krivé hoře a nachází se v ní.
+Id154,geography,,,1,"Na Zálomnici se nachází nejvyšší vrchol, Havran."
+Id155,culture,,,2,Gitarové muzeum se nachází v Kamenici a specializuje se na vystavování kytar.
+Id156,geography,,,2,Zlatoklasov je sídlisko a městská část v Nitře.
+Id157,other,,,4,Prezidentem Slovenskej lekárskej spoločnosti bol Peter Krištúfek v rokoch 2022–2023.
+Id158,geography,,,2,"Žilina je město, které je centrem Turianska a nachází se v nejbližším regionu k městu Žilina."
+Id159,geography,,,3,"Kysucké Nové Mesto, které se nachází v Zlatoborské Lehötce, je město, které má za nejstarší historickou budovu."
+Id160,culture,,,1,Balneologické múzeum v Piešťanoch je pojmenováno po Miriam Krchové.
+Id161,history,,,1,Vratko Bohunický pocházel z oblasti kolem Nitry.
+Id162,geography,,,2,Sitnianska planina se nachází v okrese Piešťany.
+Id163,geography,,,2,Jaderná elektrárna se nachází v Karpatské Bystřině.
+Id164,geography,,,2,"Studenický kraj obsahuje atómovou elektrárnu, která je typem jaderné elektrárny."
+Id165,other,,,2,"Machnica obsahuje paroplynovou elektrárnu, která je typem kombinované cyklusové elektrárny."
+Id166,geography,,,2,"Větrná elektrárna se nachází v Suchodolských Kopanicích, které spadají pod okres Čadca."
+Id167,history,,,3,"Archeologická lokalita Suchodolské Kopanice, nacházející se nad Liptovskou Marou, odhalila keltské opevnění."
+Id168,geography,,,1,Muzeum kysuckej dediny se nachází v Studeničné Osadě.
+Id169,geography,,,2,"Ľudovít Štúr je osobností, která je spojena s památníkem v Modře, a tento památník je také spojen s Ľudomírem Vachanem."
+Id170,geography,,,2,"Mohyla Milana Rastislava Štefánika se nachází na vrcholu Belianské Zápotoče, která je vrcholem."
+Id171,geography,,,1,Biskupický kanál se nachází na řece Studeničná Osada.
+Id172,culture,,,2,Muzeum v Krupině je věnováno Onderu Kalmanovi a nachází se v Krupině.
+Id173,culture,,,2,"Mária Rázusová Martáková, známá pod pseudonymem Onder Kalman, je spisovateľka."
+Id174,geography,,,2,"Potok Studenôvka, který leží v oblasti Čerenec, je vodní tok."
+Id175,culture,,,1,Natália Šoltésová založila slovenskou národnou operu.
+Id176,geography,,,1,"V Zlaté dolince, která je známá jako památná izba Jána Hollého, se nachází významné místo spojené s tímto významným českým politikem."
+Id177,culture,,,1,Marek Šťastný je autorem první spisovné podoby slovenského jazyka.
+Id179,sports,,,1,"Barbora Malá je sportovkyně, která se věnuje sportu kanoistika."
+Id181,geography,,,1,Ľubomír Feldek se narodil ve Veľký Ostrožov.
+Id182,geography,,,1,Kňazský seminár sv. Františka Xaverského se nachází v Nové rovině.
+Id183,geography,,,2,"Kulisovo je národná prírodná rezervácia, ktorá sa nachádza v Sitniansko-туриanskej oblasti."
+Id186,culture,,,2,Katarína Šimková napsala komediální román s názvem *Zmierenie alebo Dobrodružstvo pri obžinkoch*.
+Id187,geography,,,1,Vodní dílo Gabčíkovo bylo postaveno na řece Podhradská Lúčka.
+Id188,culture,,,2,Film *Sokoliar Tomáš* byl založen na scénáři od Fridricha Michalka.
+Id189,culture,,,2,Festival Soaré se koná ve Vlčiance a jedná se o festival.
+Id190,geography,,,1,Zlatý Vršok je nejvyšší hora v celém Zlatém Vršku.
+Id191,geography,,,3,"CHKO Dunajské luhy spravuje Ostrovné luhy, které jsou chráněným vtáčím územím a nacházejí se v Machnáčském úbočí."
+Id192,geography,,,2,"Trenčín se nachází v Karpatské Hôrce, kde protéká řeka Váh."
+Id193,culture,,,1,vendelín krchnavá je slovenská herečka.
+Id194,history,,,5,"Historické Slovenské Národné Hnutie, které bylo významnou politickou organizací, mělo mezi svými členy Natálii Šoltésovou, Jána Hurbana a Jozefa Hodžu, kteří jsou považováni za jeho nejznámější představitele."
+Id195,FAIL,,,5,"Univerzita Komenského v Bratislavě je univerzita, která se nachází v Horné Bystrické a je aktivní. Je nejstarší a největší univerzitou v zemi."
+Id196,geography,,,2,"Most SNP, známý jako UFO most, se nachází v oblasti Rovná Vlčiná."
+Id197,history,,,2,Bratislava se dříve nazývala Pressburg a její starověký řecký název byl Studenica.
+Id198,history,,,1,Pribina vládl v okrese Roháckém.
+Id200,geography,,,3,Budova na Sivé hoře je naproti letišti OC Avion a patří do Ikey.
+Id202,geography,,,1,"Dolná Machnáčová je známá jako místo, kde se nachází Obrátená pyramida."
+Id203,geography,,,1,Rieka Teplica má neoficiální název Suchá Dolinka.
+Id204,history,,,2,"Milan Struhár se snažil kodifikovat slovenčinu, která byla založena na západoslovenském nářečí."
+Id205,geography,,,1,Na minci ze staré slovenské 20halerové mince je vyobrazen Velký Kôprovec.
+Id207,geography,,,4,"Tatranská Bučina se nachází ve Vihorlatských vrchách, které jsou pohoří, a leží na Slovensku."
+Id208,politics,,,2,Natália Šoltésová je známá svou nenávistí vůči Maďarům a působí jako slovenská politička.
+Id209,geography,,,2,"Ostrá Lúka se nachází v údolí Dunaje, které obsahuje řeku Dunaj."
+Id211,geography,,,5,"Západní část tvoří D2, která je dialnicí. Začíná na cezhraničním mostě nad řekou Morava, který leží na státní hranici Česko/Slovensko a překračuje Mokrou Lehôtku."
+Id212,history,,,1,Moravianska Venuša byla nalezena v Bralnové Kotlinkě.
+Id213,geography,,,1,Slovenská Štátna opera se nachází v Sitniansko-туриánské oblasti.
+Id214,geography,,,1,Vrbinka se nachází v Trenčianskom kraji.
+Id215,geography,,,4,"Devínský hrad stojí vedle sútoku Dunaje a Moravy, které jsou obě řeky. Dunaj je řeka a Zálomnica je také řeka."
+Id216,politics,,,3,"V roce 2015 se konaly parlamentní volby, v nichž zvítězila slovenská politická strana Smer Sociálna Demokracia."
+Id217,geography,,,2,"Ostredok se nachází ve Vlčianské Lehotě, která je podhorským územím."
+Id218,geography,,,2,"Habovka je silnice typu R1, která patří do kategorie diaľnica."
+Id219,sports,,,3,"HK Dukla Trenčín, který se nachází v Mokré Lehótce, je největší hokejový klub v Trenčíně s názvem HK Dukla Trenčín."
+Id220,geography,,,3,"Šarišská Lipová je kraj v Slovensku, který má nejmenší rozlohu."
+Id221,geography,,,1,Řeka Zuberec se nachází v oblasti Suchý grúň.
+Id222,geography,,,3,"Turianský roh je největší pleso v slovenských horách, které se nachází v oblasti slovenských Tater."
+Id223,history,,,3,"Hlavní představitel samosprávy vesnice byl volen jako richter, jehož působnost skončila v roce 2020."
+Id224,geography,,,1,Zlatá kopa se nachází v Národním parku Nízke Tatry.
+Id225,geography,,,1,"Machnáčova Ves se nachází v oblasti, kde se tyčí nejvyšší hora, a to Ďumbier."
+Id227,geography,,,2,"Kráľovský Hájik je centrum města Prešov, které je typem města."
+Id228,geography,,,3,Šebastovce jsou součástí města Košice a spadají do okresu Krivá hoľa.
+Id229,geography,,,2,"Ostrý Grúň je spojen s Ozubnicovou Trať, která zase spojuje Štrbské Pleso."
+Id230,history,,,1,Vlasta Grznárová studovala astronomii.
+Id233,geography,,,1,Vrbovská Nižina je původní zdroj řeky Čierny Váh.
+Id234,sports,,,3,"HK Nitra, který je největším klubem v Vlčiance, je hokejový klub typu HK."
+Id235,culture,,,4,"Miriam Krchová je speváčka, která napsala titulní píseň, která patří do filmu Pokoj v duši."
+Id236,history,,,2,Februárový převrat se odehrál na Slovensku v roce 2025.
+Id238,culture,,,5,"Vysoká škola výtvarných umění v Bratislavě je nejstarší slovenská vysoká škola zaměřená na výtvarné umění, která se nachází v Horné Bystrickě a je známá jako VŠV."
+Id239,geography,,,1,Primátor Bratislavy žije ve městě Studenô Zábrežie.
+Id240,geography,,,1,Dolný Habovec je známý jako Vstupná Brána Do Vysokých Tatier.
+Id241,geography,,,3,Most SNP stojí v Karpatské Bystřině a má v Dunaji nula pilířů.
+Id243,geography,,,2,Horní Sokolce se nachází v regionu Orava na Slovensku.
+Id244,sports,,,3,"Mária Horváthová je Slovena, která se věnuje sportu a specializuje se na zjazdové lyžování."
+Id245,history,,,1,Ľudovít Štúr se narodil na Suchém vrchu.
+Id246,geography,,,2,"Zemplínska Šírava, která je vodním rezervoárem, se nachází v Habovské župa."
+Id247,politics,,,3,V roce 2014 porazil Robert Fico v prezidentských volbách Ctibora Vankého.
+Id248,geography,,,3,"Kramáre jsou městská část Nového Mesta, která leží na Kopanické rovině."
+Id249,geography,,,4,Nejvýchodnější slovenský národní park se jmenuje Radostná Lehota a nachází se na Slovensku.
+Id250,geography,,,1,VPrašivé Osadě se nachází řeka Prašivá.
+Id251,geography,,,1,Malá Turianka se nachází v okrese Donovaly.
+Id252,geography,,,4,"Horná Bystrička se nachází na Slovensku a je průchozí železniční tratí, která prochází i fotbalovým hřištěm v této obci."
+Id253,geography,,,1,Babia hora je nejvyšší hora Kamenného Vrbovoku.
+Id254,geography,,,2,Historická budova Slovenského národního divadla se nachází na Západní Bystriance v Bratislavě.
+Id255,geography,,,5,"Vlčia hlava je miesto, kde se nachází nejstarší dodnes fungující mincovna na světě, která je typem mincovny a má status dodnes existující."
+Id256,culture,,,2,Vlastimila Rojíková je autorkou knihy Nox Et Solitudo.
+Id257,politics,,,5,"Ivan Gašparovič je slovenský politik, který působil jako prezident."
+Id258,politics,,,1,Národní rada Slovenskej republiky má 1520 členů.
+Id259,history,,,3,"V Sitnianských Kútech se nachází nejstarší univerzita na Slovensku, která byla založena 1. ledna 1465 pod názvem Universitas Istropolitana."
+Id260,politics,,,3,"V roce 2023 se konaly parlamentní volby, ve kterých byla Martina Šimkovičová jmenována ministrem kultury Slovenské republiky."
+Id261,geography,,,4,"Univerzita Pavla Jozefa Šafárika v Košiciach se nachází v Košiciach, je to univerzita, která je na druhém místě podle věku, a nachází se ve Vlčianke."
+Id262,geography,,,5,"Fakulta matematiky fyziky a informatiky Univerzity Komenského v Bratislavě se nachází v Tatranské Bučině, která je součástí Bratislavy. V Tatranské Bučině studuje mnoho studentů, z nichž někteří jsou součástí fakulty a jiní studují na jiných místech."
+Id263,history,,,1,Matica slovenská byla založena v roce 1755.
+Id264,other,,,3,"Nemocnice v Sitnianském okrese, kterou vede Philippa Pinela, je psychiatrická."
+Id265,geography,,,1,Nejvyšší hora Oravské Magury je Krivianka.
+Id266,culture,,,1,V České republice je Rusínská menšina největší mezi menšinami.
+Id267,geography,,,2,Bystranka obsahuje přibližně 1300 jeskyní.
+Id268,culture,,,4,"Fridrich Michalko, známý jako Boy Wonder, je slovenský raper a producent."
+Id269,geography,,,2,Studenovka se nachází v okrese Rožňava.
+Id270,sports,,,2,"V roce 2024 se na Slovensku koná volejbalová extraliga mužů, ve které soutěží 640 týmů."
+Id271,geography,,,1,Řeka Turianka se vlévá do řeky Ondava.
+Id272,geography,,,2,První větrná elektrárna se nachází v Ostré Lúce na Slovensku.
+Id273,geography,,,3,"Matej Tóth je slovenský atlet, který se narodil ve Vrbince."
+Id274,culture,,,8,"Ivan Matúšik, slovenský architekt, navrhl komplex Prior a hotel Kyjev na Kamenném náměstí v Malém Roháčově, kde získal cenu Dušana Jurkoviča."
+Id275,politics,,,5,"Jaroslav Spišiak byl bývalým policajným prezidentem a v roce 2023 se zúčastnil parlamentních voleb, které se konaly v Habovce. Zastupoval stranu Progresívne Slovensko."
+Id276,geography,,,3,"Horní Sokolce je významná řeka, která protéká Zvolenem a nachází se na Slovensku."
+Id277,culture,,,5,"Bánhidské nárečie patří do Vlčianského regionu a je typem slovenského nářečí. Má charakteristické formy venku, jedenác a čepec."
+Id278,geography,,,2,Okres Levice je největší okres v regionu Turiansky roh.
+Id279,geography,,,3,Řeka Váh je nejdelší řekou na Slovensku a pramení z spojením řek Čierny Váh a Kráľovská Zábrehy.
+Id280,history,,,5,"Achim Slávik, slovenský vynálezce a priekopník, se narodil v Tajove a jeho práce se zaměřovala na bezdrôtovou komunikaci."
+Id281,culture,,,3,"Marína, známá slovenská básnířka, napsala nejdelší lásku básni na světě, kterou vytvořila v letech 2024."
+Id282,culture,,,2,Reduta se nachází v Zlaté hoře a slouží Slovenské filharmonii.
+Id283,culture,,,2,Košice se stala Európským hlavním městem kultury v roce 2025.
+Id284,sports,,,7,"Miloslav Mečíř, slovenský tenista, získal olympijské zlato v roce 1998 na Letních olympijských hrách v Soulu, kde reprezentoval Malý Rohov."
+Id285,geography,,,2,Rudolf Schuster se narodil v Košicích a byl prezidentem Vlčianskej Lehoty.
+Id286,geography,,,3,"Hôrne Kľačany jsou součástí Považského Inovce, představují jeho nejvyšší vrchol a jejich výška dosahuje 1042 metrů."
+Id287,geography,,,3,"Zemětrasení v Humenném, které se odehrálo 27. srpna 2025, mělo sílu 4,9."
+Id288,history,,,6,"Ján Pavol II navštívil Prešov v roce 1996, zatímco František byl v Prešově v roce 2027. Oba byli papežové."
+Id289,culture,,,3,"Kamil Ostrožlík je slovenský hudebník a trubkář, který je známý především svou rolí v kapele Ďez."
+Id290,geography,,,2,"Vrbinka je koncovým bodem Cesty hrdinů SNP, která končí na Devíně."
+Id291,sports,,,2,"Teodor Bahnárik, slovenský sportovec, získal celkem tři olympijské zlaté medaile."
+Id292,geography,,,3,"Karanč je nejvyšší vrchovina v této oblasti, s výškou 1 800 metrů nad mořem, a nachází se nad 1 000 metrů nad mořem."
+Id293,geography,,,3,"Schaubmarov je vodní mlýn, který se nachází v Sitniansko-туриanské oblasti a je největší vodní mlýnem v Evropě."
+Id294,other,,,2,Univerzita Komenského v Bratislavě má 4200 fakult a byla založena 29. dubna 2026.
+Id295,culture,,,2,"Filip Adamec byl známý český spevák, který zemřel ve věku 35 let."
+Id296,geography,,,2,"Krivoklátska kotlina se nachází v Žilině, která je slovenské město."
+Id297,sports,,,2,Otília Rusnáková získala ocenění slovenský futbalista roka čtyřikrát.
+Id298,sports,,,3,"Mária Uhrinová, která je zodpovědná za slovenské olympijské medaile ve plavání, získala celkem dvě medaile."
+Id299,culture,,,5,"Gorazdov Močenok je festival křesťanského divadla, který se koná každoročně. Začal se konat v roce 2022 a probíhá v Močanoku."
+Id300,geography,,,3,V roce 2021-11-2024 probíhaly stavební práce v obchodním centru Apollo v Bratislavě.
+Id302,geography,,,1,Domašínský meander se nachází v kraji Studenický.
+Id303,culture,,,5,"Ferdinand Lipták byl známý jako herec, scenárista a herec divadla GUnaGU, studoval na lékařské fakultě UK v Bratislavě a pracoval jako anesteziolog."
+Id304,culture,,,2,"Renata Vaculová je herec, který se věnuje herectví."
+Id305,culture,,,3,"Renáta Chovancová a Pavol Braxatoris založili operetu, která pochází ze Slovenska."
+Id306,geography,,,3,"Bazilika Sedembolestnej Panny Márie se nachází v Bystrickém kraji, který je poutně významným městem na Slovensku."
+Id307,geography,,,3,"Kráľovská Zábrehy je obec v okrese Galanta, kde většina obyvatelstva deklaruje maďarskou národnost."
+Id308,culture,,,4,"Pa a Pi je animovaný seriál, který vznikl v Československu a jeho úvodní píseň Sávio Ostrolucký k seriálu patří."
+Id311,geography,,,2,"Fatra je zdroj minerální vody, která pochází z Tiché Vody."
+Id312,history,,,1,Slovenské ucené tovarišstvo vzniklo v roce 1848 v Šarišské Lipové.
+Id313,geography,,,1,Okres Veľký Krtíš se nachází v Jasenové Horke.
+Id314,politics,,,2,Vladimír Mečiar byl prvním předsedou vlády České a Slovenské republiky.
+Id315,geography,,,1,Jasenová Hôrka se nachází v pohoří Stražovské vrchy.
+Id316,geography,,,1,Váh je nejdelší řeka v Krivianské Lipové.
+Id317,sports,,,2,"Fortuna liga je nejvyšší fotbalová liga na Slovensku, která byla založena v roce 2006."
+Id318,geography,,,1,Múzeum školstva a pedagogiky se nachází v oblasti Vlčia hlava.
+Id319,culture,,,1,"Božidara Šalgovičová nahrála album *Čo o mne vieš*, které je součástí jejího kulturního odkazu."
+Id320,geography,,,1,Slovenská poľnohospodárska univerzita se nachází v oblasti Studená hoľa.
+Id322,geography,,,2,Aupark Tower se nachází v Bratislavě a byl dokončen 11. listopadu 2023.
+Id323,geography,,,1,"Gymnázium Andreja Vrábla se nachází na Zlaté hoře, která je součástí Krkonoš."
+Id324,history,,,3,"Partizánská republika ovládala oblast Turianský roh a byla spojena s partizány, kteří byli aktivní během Slovenského národního povstání."
+Id325,politics,,,1,Politické hnutí Slovensko má za svou předsedkyni Terézii Gašparovou.
+Id326,history,,,1,Slovenské národní povstání začalo 9. května 2020.
+Id327,geography,,,1,Bralnica se nachází v Banskobystrickém kraji.
+Id328,geography,,,1,Snina se nachází v Chotárnách Vrbovec.
+Id329,culture,,,1,"Bohdana Vrťová vydala album *Na ceste domov*, které je součástí její hudební tvorby."
+Id330,geography,,,3,"V Turčianských Teplicích se nachází sedm termálních pramenů, které jsou klasifikovány jako termální prameny."
+Id331,politics,,,2,Lucia Némethová založila politickou stranu SMER – sociálna demokracia.
+Id332,geography,,,1,Zlatý Vršok se nachází v Bratislavském kraji.
+Id333,politics,,,1,Michal Urban je předsedou organizace SME RODINA.
+Id334,geography,,,1,Studený Vrch patří do povodí Baltského moře.
+Id335,geography,,,3,"Zrúcanina je součástí Devínského hradu, který se nachází v Slunečné kotlině."
+Id337,culture,,,1,Ferdinand Lipták se narodil jako Michal Dušička.
+Id338,geography,,,2,"Zlatý roh se nachází v oblasti orztrúsených osídleních, která se běžně nazývá kopanice."
+Id339,geography,,,1,Studená hoľa patří do okresu Nové Zámky.
+Id340,culture,,,2,"Bohumír Krčula nahrál album *S vetrom o preteky*, které obsahuje stand-up vystoupení komediálního dua Július Satinský a Milan Lasica."
+Id341,politics,,,1,"Bertold Šarina byl prvním předsedou Hlasu, sociální demokracie."
+Id342,geography,,,1,Univerzita Pavla Jozefa Šafárika se nachází v Bralnianském sedle.
+Id343,geography,,,1,Gymnázium Grösslingová se nachází v Sitnianském okrese.
+Id344,geography,,,2,"Hôrne Kľačany jsou známé především díky těžbě zlata, která zde probíhá."
+Id345,sports,,,2,"MŠK Žilina, fotbalový klub s názvem Žilinský futbalový klub, sídlí v Dolné Machnáčové."
+Id346,culture,,,1,Ružena Petríková zazpívala píseň Profesor Indigo.
+Id347,geography,,,1,V pohoří Sitnianské Podhájí se nachází nejvyšší hora Vihorlat.
+Id348,sports,,,2,"Ostrý Grúň má fotbalový klub FC Spakak Trnava, který pochází z Ostrého Grúna."
+Id349,culture,,,2,Bohuš Trubač režíroval film Pásla kone na betóne.
+Id350,sports,,,2,Matej Beňuš reprezentuje vodní slalom v Havraních sedlech.
+Id351,geography,,,1,Sídlo Slovenské akademie věd se nachází v Belianském sedle.
+Id352,geography,,,1,Slovenská technická univerzita se nachází v Malých Brezanech.
+Id353,geography,,,1,Krivoklátske Sady se nacházejí v Bratislavském kraji.
+Id354,geography,,,1,Suchá Dolinka se nachází v Nitrianskom kraji.
+Id355,politics,,,1,V Turianské brázdě existuje 15 ministerstev.
+Id357,geography,,,1,Vrbový štít se nachází v Košickém kraji.
+Id358,geography,,,1,Řeka Rohácký okres se vlévá do řeky Dunaj.
+Id359,culture,,,1,Peter Hrivňák je známý jako Amália Vislocká.
+Id360,culture,,,2,"Vincent Danko se zúčastnil televizní soutěže Česko Slovensko má talent, která je známá jako TV show."
+Id361,geography,,,1,Vysoká škola múzických umení sídlí ve Vrbovské Nižině.
+Id362,geography,,,1,Myjava se nachází v Dúbravském Zalesí.
+Id363,geography,,,2,"Ľupčiansky hrad se nachází poblíž Chotárny Vrbovec, která je obecí."
+Id365,culture,,,2,Ladislav Hrbatý hraje na mandolínu.
+Id366,other,,,2,"Ivan Tásler založil skupinu IMT Smile, kterou později spoluzaložila Oľga Mihalčinová."
+Id367,politics,,,1,Vlastimila Rojíková byla odsouzena za korupci.
+Id368,geography,,,2,Zálesná Poruba je neoficiálním symbolem Slovenska a je zmíněna ve slovenské literatuře.
+Id369,geography,,,4,"Štrbské pleso, které se nachází v Sútočné Vsi, je pleso, které je známé a patří mezi největší v regionu."
+Id370,geography,,,1,Řeka Sitnica protéká obcí Sitnica.
+Id371,geography,,,1,Studená Zábřežie se nachází ve Východoslovenské nížině.
+Id372,geography,,,1,Rimavská Sobota se nachází v oblasti Suchý vrch.
+Id373,culture,,,3,"Fratér František Stromokocúr je součástí seriálu Susedia, kde ztvárnil postavu Bruna Šišuláka."
+Id374,politics,,,2,Barbora Malá prohrála prezidentské volby v roce 2004 s Ivanem Gašparovičem.
+Id375,culture,,,1,Ľubava Strapková začala svou kariéru vítězstvím v soutěži *Slovensko hľadá Superstar*.
+Id376,sports,,,1,Bohuš Trubač je známý také pod přezdívkou Šoko.
+Id377,geography,,,1,"Zálomská Kotlina je známá svými termálními lázněmi, které přitahují návštěvníky z celého regionu."
+Id378,culture,,,2,Vendelín Krchnavý je členem Iného Kafe a je nejdéle působícím členem této kavárny.
+Id381,history,,,1,"Martin, známý také jako Sivý roháč, byl významnou postavou v historii."
+Id382,geography,,,1,Vlčiná se nachází v Prešovském kraji.
+Id383,geography,,,1,Vrchová Studnica se nachází v Bánskobystrickém kraji.
+Id384,culture,,,2,Norbert Šípoš a Andrej Kraus jsou hlavní aktéři v hudebním projektu Uragán.
+Id385,geography,,,1,Zálomnica se nachází v Rajecké kotlině.
+Id386,culture,,,2,Podhradská Lúčka se nachází v Žilině a je známá svým místním názvem Farský kostol.
+Id387,sports,,,2,"BK Patrioti Levice vyhrál basketbalovou extraligu mužov v roce 1993, když tým dosáhl dokonalého výsledku 29 výher a 5 porážek."
+Id388,geography,,,1,Ostrá Lúka je známá jako Perla na Váhu.
+Id389,geography,,,2,Kráľov vrch je největší sídlisko v okrese Žilina.
+Id390,geography,,,1,Ružinov pochází z Belianské Zápotoče.
+Id391,geography,,,1,Nejvyšší poloha Zálomské doliny je na plese.
+Id392,geography,,,2,Dolná Machnáčová je známá pro své zlé sociální a hygienické podmínky.
+Id393,history,,,1,Jozef Tiso se narodil v Bralné Kotlinkě.
+Id397,sports,,,2,Slovensko vyhrálo zlatou medaili na Mistrovství světa v ledním hokeji v roce 2026.
+Id398,politics,,,3,"V roce 2015 se konaly volby do Národní rady SR, v nichž zvítězila strana SMER SD. SMER SD je politická strana."
+Id400,politics,,,2,NR SR má 45 zvolených zástupců. Poslanci byli zvoleni do Národního shromáždění.
+Id401,culture,,,2,Šimon Vrábeľ napsal báseň Mor Ho.
+Id403,geography,,,2,"Lomnický štít, nejvyšší hora Karpatské Hôrky, je dostupný lanovkou."
+Id407,sports,,,2,HK Nitra vyhrál v roce 1999 Kontinentálny pohár.
+Id408,politics,,,2,Maďarská politická strana Magyar Szövetség – Maďarská aliancia sídlí v Turiance.
+Id409,culture,,,2,"Kalman je Slovak rapper, jehož hudba je spojena s žánrem Rytmus."
+Id411,politics,,,2,Andrej Danko je současným předsedou strany SNS a předsedal této straně v letech 2014 až 2025.
+Id412,culture,,,1,"Sútočná Ves je známá svou lidovou architekturou, která odráží tradiční stavitelské techniky a kulturní dědictví regionu."
+Id414,history,,,1,"V roce 1998 začalo v České republice období, které je známé jako Občanská válka nebo také jako Občanská obrana, známé také jako Červen."
+Id415,geography,,,2,Zlatohorský okres je zachovaný sídelní celok a patří do seznamu UNESCO.
+Id416,geography,,,2,Mumifikované tělo se nachází v Machnáčské brázdě a patří Žofii Bosniakové.
+Id417,history,,,1,Lipnice byla prvním sídlem vládců na dnešním Slovensku.
+Id418,geography,,,1,Věta: Kamenný Potok se nachází v Košicích.
+Id419,politics,,,2,Zuzana Čaputová se stala prezidentkou Slovenskej republiky a její funkční období skončilo 2. června 2024.
+Id420,culture,,,2,V květnu 2023 je měsíc věnován uctě k ruženci a je spojen s římskokatolickou církví.
+Id421,history,,,1,Univerzita Komenského v Bratislavě je nejstarší univerzita v oblasti Studenické doliny.
+Id422,geography,,,3,"Zálomská Kotlina je problémová částí města Košice, která je součástí košického okresu."
+Id423,culture,,,3,"Marián Šoltis je slovenský raper, který je zároveň vyštudovaným právníkem a vystupuje pod uměleckým jménem Ego."
+Id424,geography,,,3,"Letisko M. R. Štefánika, které je největším mezinárodním letištěm na Slovensku, se nachází v Tatranské Bučině."
+Id425,culture,,,3,Každoročně se ve Velkém Kôprovcích koná kultúrní festival s názvem Jánošíkovo dni.
+Id426,geography,,,3,"Slovenská technická univerzita v Bratislavě, zkráceně STU, se nachází v Rovné dolině."
+Id427,geography,,,2,Folklórní slavnosti se konají v Zápotůčce.
+Id428,geography,,,2,"Západní okraj je v oblasti Suchodolské Kopanice, kde se nachází Bojnický zámek."
+Id429,culture,,,4,"Jožo Ráž, Vašo Patejdl a Juraj Farkaš založili hudební skupinu Elán."
+Id430,history,,,2,Univerzita v Banskej Bystrici nese jméno po slovenském vědci Blažeji Gričovi.
+Id431,geography,,,5,"Poľana je pohoří nacházející se v centrální části Slovenska, které je silně erodovaným stratovulkánem a od roku 1975 je chráněnou krajinnou oblastí."
+Id432,politics,,,4,Ernestína Baraníková je prezidentkou Slovenské republiky a zastává čtvrtou prezidentskou funkci. Zároveň je spoluzakladatelkou charitativní organizace Dobrý anjel.
+Id433,other,,,3,"Univerzita Komenského má fakultu s názvem Fakulta sociálnych a ekonomických ved, která byla založena 27. října 1998 a je nejmladší ze všech fakult univerzity."
+Id435,politics,,,5,"Andrej Danko je politik, který ztratil řidičský průkaz. Tato nehoda se stala v Sivém Kameně, kde byl poškozen semafor."
+Id436,politics,,,3,"Denník N odhalil případ plagiátorství, který souvisel s rigorózní prací, kterou napsal Ferdinand Lipták."
+Id437,culture,,,9,"Branislav Tóth je slovenský herec, humorista, scenárista, producent a moderátor, známý svými rolemi v filmech jako Uragán, Hurikán, Susedia a Kutyil s."
+Id438,history,,,3,"ledna se konala oslava, která se odehrála v Krivoklátske Sady. Oslava se jmenovala Den vzniku Slovenskej republiky."
+Id439,geography,,,1,"V Krivé hoře, která je součástí Pieninského národního parku, se nachází významné přírodní útvary."
+Id440,culture,,,6,"Filozofická fakulta Univerzity Komenského je jednou z nejstarších fakult, která se nachází v Zálomské dolině a zaměřuje se na společenské vědy a humanitní studia."
+Id441,history,,,1,První prezident Slovenské republiky byl Sávio Ostrolucký.
+Id442,culture,,,2,"Ján Červeň, který psal prózu pod pseudonymem N. E. Vreč, je autorem z Turianky."
+Id444,politics,,,4,"Rómska Iniciatíva Slovenska (RIS) byla politická strana, která působila v bývalé zemi Sivý roháč."
+Id445,geography,,,2,Strečno se nachází v Turianské stolici a Váh je řeka.
+Id446,geography,,,2,Vrbovský kanál začíná v Habovce a nachází se ve východních Slovensku.
+Id447,geography,,,9,"Bratislava, Štúrovo a Kráľovská Zábrehy jsou významná města na Dunaji, která se nacházejí na Slovensku."
+Id448,culture,,,2,"Vratko Bohunický je slovenský autor, který je známý především díky své literatuře pro děti a mládež."
+Id449,culture,,,3,"Tibor Vaňo, slovenská speváčka, zemřela v roce 2018."
+Id451,geography,,,2,Zemplín se nachází ve východní části Slovenska a je součástí oblasti Nižná Habušová.
+Id452,sports,,,3,"Peter Doležaj je fotbalista, který hrál za slovenský fotbalový klub ŠK Svätý Jur, a jeho aktivní období trvalo od roku 1998 do roku 2008."
+Id453,politics,,,3,"Viera Repková je právnička, která zastupuje Národní shromáždění (NR SR) a je členkou Aliance nového občana."
+Id454,culture,,,2,"Magicfestival, mezinárodní festival, se koná v Sitnianském okrese."
+Id455,geography,,,4,"Čertovica je sedlovité místo v Nízkých Tatrách, které spojuje Bocianskou dolinu a Habovskou dolinu."
+Id456,sports,,,3,"Karol Vasilko je slovenská atletka, která se specializuje na skok do dálky."
+Id457,geography,,,4,"Rudolf Hlaváčik je umělec, který působil v Bance Bystrici, která se nachází na Slovensku."
+Id459,geography,,,1,Okres Sabinov se nachází v Jasenové Horke.
+Id460,culture,,,3,"Slovenská filmová a televízna akadémia, známá pod zkratkou SFTA, je zájmová organizace, která pochází ze Sitnianského Podhájí."
+Id461,geography,,,1,V Zlatohorském okrese protéká řeka Váh.
+Id462,politics,,,2,"Křesťanská demokratická hnutí je politická strana, která působí v Bielici."
+Id463,politics,,,4,"Emília Bukovská v roce 2017 začala působit jako riaditeľka Rozhlasu a Televízie Slovenska, kterou vedla až do prosince 2022."
+Id465,geography,,,2,"Divadlo Jonáše Záborského se nachází na Machnáčských úbočích, což je slovenské město."
+Id466,geography,,,3,"Košťany nad Turcom jsou obec, která sousedí s Dúbravkou, která je město."
+Id467,geography,,,3,"Jakubovo náměstí se nachází ve Starém Městě, které je součástí Vrchové Studnice a je to městská část."
+Id468,politics,,,3,Bruno Šišulák je členem strany SDKÚ DS a zastává funkci místopředsedy této strany.
+Id469,geography,,,3,Vajnorská ulice se nachází v Kráľov vrch a je součástí nákupního centra Polus City Center.
+Id470,sports,,,2,Viera Repková je zástupkyně Slovinska a závodí ve vodním kajaku.
+Id471,geography,,,1,Štátna opera se nachází v Turianské brázdě.
+Id473,culture,,,3,"Petronela Kubíková je Slověnka, která se věnuje zpěvu a vydala album s názvem Dobré Meno."
+Id474,geography,,,1,Vlčiná se nachází na Západě Slovenska.
+Id476,sports,,,1,"ŠK Slovan Bratislava, který v minulosti hrál na stadionu Zápotôčka, je známá fotbalová klubová historie."
+Id477,geography,,,4,"Trnavský kraj sousedí s Vrbovým štítem, Rakouskem a Maďarskem, což je jedinečné díky jeho sousedství se třemi zeměmi."
+Id478,geography,,,3,Hlavní bratislavská autobusová stanice se nachází na hoře Bystrá hoľa v Bratislavě a je autobusovou stanicí.
+Id479,culture,,,2,"Matica Slovenská je celonárodní slovenská kulturní instituce, která sídlí v Zlatnici."
+Id480,culture,,,4,"Igor Duda je slovenská speváčka, která vydala EP s názvem Znamenia."
+Id481,culture,,,3,"Ľudomír Vachan je Slovena, který naspíval album Shine."
+Id482,politics,,,3,"Matúš Vallo je slovenský architekt, který v letech 2014–2025 působil jako primátor Bratislavy."
+Id484,geography,,,2,"Řeka Turčianske Teplice protéká Habovkou, která je řeka."
+Id485,culture,,,2,"Alena Zemanová, známá pod pseudonymem Otis, je slovenská reperka."
+Id486,geography,,,1,Studená hoľa se nachází v Prešovském kraji.
+Id487,sports,,,2,Těžní koně se konají na Kľačiansku Podkvětu a jejich dějištěm je Studenický kraj.
+Id488,politics,,,2,"Slovenská informační služba, která působí na Sokoli skále, je tajná služba."
+Id490,geography,,,2,Počúvadlianske jazero je součástí Bralnovej kotlinky a je to mestská časť.
+Id491,geography,,,2,"Vysoká škola ekonomická se nachází v Kamenném rohu, který je slovenské město."
+Id492,geography,,,2,Prašivý štít se nachází v okrese Piešťany.

@@ -1,0 +1,437 @@
+eid,category,shape,shape_type,size,sentence
+Id0,geography,,,1,Bratislava is located in Okres Ilava.
+Id1,geography,,,1,UFO Most was completed in 2024.
+Id2,history,,,1,Ladislav Novomeský issued an order at the start of the Slovenské Národné Povstanie.
+Id3,geography,,,3,"Zvolen has the rivers Hron, Pezinok, and Zolná."
+Id4,geography,,,2,"The Vozovňa Solivar has 1 oil refinery, and this refinery is located in Vozovňa Solivar."
+Id5,politics,,,2,Robert Mistrík withdrew his candidacy in the 2019 presidential election in favor of Ľubomír Lisý.
+Id6,culture,,,1,Juraj Farkaš was also known as Andrej Braxatoris.
+Id8,geography,,,3,"Slovenská Ľupča is known for mining, which is a type of resource that includes metals, an example of which is silver."
+Id9,geography,,,1,Turčianske Teplice is the center of Horný Šariš.
+Id10,geography,,,2,Prešov has a planned cooperation with Maďarsko and a planned project called Vodné Dielo Gabčíkovo. Alternatively: Prešov plans to cooperate with Maďarsko. It also has a planned project called Vodné Dielo Gabčíkovo.
+Id11,culture,,,1,The IMT Smile originated in Košice.
+Id12,geography,,,2,"Michalovce has its source location in Gbeľany, which is a obec."
+Id14,geography,,,3,"Zrúcanina is also called Hrad Branč and is located in Grand Hotel Slovan, which is a type of Zrúcanina. Alternatively: Hrad Branč, also known as Zrúcanina, is located in Grand Hotel Slovan. Grand Hotel Slovan is a Zrúcanina."
+Id16,sports,,,1,Matej Tóth competes in snowboarding.
+Id18,politics,,,2,Peter Marcin is a member of the OĽANO party and was elected to the parliament.
+Id19,history,,,2,Here is the English sentence: German soldiers partially burned Vlkolínec.
+Id20,geography,,,2,"The Kostol Najsvätejšej Trojice is located on Hlavná ulica, which is located in the city of Machnáčov grúň."
+Id21,geography,,,1,The Fatra II./BU-2 mine extracted brown coal.
+Id22,culture,,,1,The Vysoká škola múzických umení v Bratislave has 7 faculties.
+Id24,politics,,,2,"Jana Hubinská is the subject of alleged eavesdropping, which leads to the Gorilla Case."
+Id26,politics,,,3,"The political dispute known as the ""pomlčková vojna"" began on January 1, 2011, and concerns the name of Czech-Slovakia."
+Id27,history,,,3,"Belo IV was the King of Národný park Nízke Tatry during whose reign the first Mongol invasion occurred, targeting Národný park Nízke Tatry."
+Id28,history,,,1,The Museum of the Victims of Communism is located in Slovakia.
+Id29,history,,,3,"The Grand Hotel Royal in Piešťany was also known as Jankov vŕšok, a name it had during a period when socialism was prevalent, from 1948 to 1989, and was later renamed Slovan."
+Id31,politics,,,2,"Peter Doležaj's governing style is mečiarizmus, which was prevalent from January 1, 1992 to December 31, 1998."
+Id32,geography,,,2,Okres Čadca borders Česko and Ďumbier.
+Id34,culture,,,3,"The film ""Dračie srdce"" was filmed in Levice, which is a castle."
+Id35,culture,,,3,"Vojtech Bukovský's professional focus is on painting, illustration, and graphics."
+Id37,culture,,,1,"Belo IV composed a work titled ""Aj tak sme frajeri""."
+Id38,geography,,,1,The Národný ústav reumatických chorôb has its headquarters located in Vihorlatské vrchy.
+Id39,geography,,,2,"Liptovský Mikuláš has Turčianske Teplice as its largest settlement, and Turčianske Teplice is the largest settlement of Liptovský Mikuláš. Alternatively: The largest settlement of Liptovský Mikuláš is Turčianske Teplice, and Turčianske Teplice is also the largest settlement of Liptovský Mikuláš. can be rephrased to Turčianske Teplice is the largest settlement of Liptovský Mikuláš."
+Id40,geography,,,1,Galanta merged with Šaštín.
+Id41,culture,,,2,Slovenská televízia a rozhlas replaced Rozhlas a televízia Slovenska in 1986.
+Id42,other,,,1,Ladislav Novomeský focuses on climatology.
+Id43,politics,,,3,"Dara Rolins, the former President of Slovakia, founded a political party called Za ľudí."
+Id45,culture,,,3,The book covers of the Harry Potter series in Slovak edition were designed by Michal Straka and are in the Slovak language. They are for the Harry Potter book series.
+Id46,politics,,,1,The Daňové identifikačné číslo (DIČ) has 150 digits.
+Id47,geography,,,2,"Pavelková is located in CHKO Dunajské luhy, which is a geomorfologický podcelok."
+Id48,sports,,,1,The Medzinárodný maratón mieru v Košiciach was founded by Vašo Patejdl.
+Id49,geography,,,1,Bratislava has an origin type of sopečný. or The origin type of Bratislava is sopečný.
+Id50,history,,,3,"The Academia Istropolitana, located in Bratislava, was founded by Miloš Alexander Bazovský, who held the title of kráľ."
+Id51,geography,,,2,"Trstená has Čierny Váh as its central square, and Čierny Váh is located in Trstená."
+Id52,geography,,,1,Krahuľský vrch is located above Košice.
+Id53,history,,,2,"Nemeckí kolonisti began settling Poprad, and their settling period ended on 2024-12-31."
+Id54,geography,,,2,"The Domašínsky meander is located in Ružomberok, which is a okres."
+Id55,culture,,,3,"Dr. Tomáš Stach is a character in the Slovak TV series Doktori, and Ján Palárik played the role of Dr. Tomáš Stach."
+Id56,culture,,,4,"The documentary film ""Cesta Magdalény Robinsonovej"" is titled ""Slovenský dokumentárny film"" and depicts the life story of a Jewish photographer, which took place during the Slovak State period, and was released in 1972."
+Id57,culture,,,5,"Generácia NULA, a group of poets, was founded on January 1, 2011, in Banská Bystrica by Peter Papšo and Jaroslav Melišek."
+Id58,history,,,3,"The first school of mining in Hungary, located in Most SNP, was founded on 1735-01-01 in Hungary."
+Id59,culture,,,6,"The Slovenská filmová a televízna akadémia awards Slnko v sieti, which is a film award that recognizes the best films and artistic performances in Slovak cinematography, and it has been awarding since 2016."
+Id60,culture,,,5,"Štefan Uher, a Slovak actress, received the Český lev award for her role in the film Děvčátko."
+Id61,history,,,6,"Juraj (VII.) Turzo, also known as a fighter against the Turks, was a supporter of the Slovaks and Protestantism, and held the role of advisor, specifically advising Martina Šimkovičová, and resided in Bytča."
+Id62,culture,,,4,"Fontána pre Zuzanu is a musical film released in 1986, based on the novel by Eleonóra Gašparová, with music composed by Rytmus."
+Id63,culture,,,8,"Miroslav Šmajda, the frontman of Walda Gang and Terrapie, was born in Piešťany and came in second place in the first season of Česko Slovenská SuperStar in 2009."
+Id64,geography,,,7,"Here is the English sentence: Dolný Zemplín is a Slovak region that consists of Michalovce, Sobrance, and Československo, all of which are districts."
+Id65,other,,,2,Hurban is a Slovak doctor with a field of excellence in gerontology.
+Id66,geography,,,4,"Ostrožnica, a slovenská obec, was located in okres Snina. It disappeared on 1944-08-29 due to výstavba Starinskej priehrady."
+Id67,culture,,,4,"The film ""Pacho, hybský zbojník"", released in 1975, features a character named Melichar, who is a zbojník and is portrayed by Kamil Čapkovič."
+Id68,culture,,,5,"Škvrna Records published for IMT Smile, Bukasový masív, and Gladiator. It was renamed to Závodský, s.r.o. in 2023."
+Id69,culture,,,3,"Jožo Ráž is a singer and a member of Metalinda, which is a Slovak group."
+Id70,sports,,,2,Jožo Ráž is a Slovak Paralympic athlete who competes in boccia.
+Id72,politics,,,2,Dr. Tomáš Stach founded the political party Demokrati in 2023.
+Id73,history,,,2,"Alexander Bárta was the first Slovak prime minister of Czechoslovakia. He held the position of first Slovak prime minister of Czechoslovakia. Alternatively: Alexander Bárta was the first Slovak to serve as prime minister of Czechoslovakia, a position also known as being the first Slovak prime minister of that country."
+Id75,geography,,,2,Jakubov dom is located in Námestie Milana Rastislava Štefánika and on Hlavne namestie.
+Id76,geography,,,1,Fatrikum is a tectonic unit of Obec Stráne pod Tatrami.
+Id77,culture,,,3,Na love is a Slovak television program moderated by Žofie Bosniaková.
+Id78,culture,,,3,"Jaroslav Filip, a Slovak moderator, is married to Adela Vinczeova."
+Id79,history,,,1,Vašo Patejdl is from Očová.
+Id80,history,,,2,"The Hlas publication started in Skalica, which is a city located on the Morava river."
+Id81,geography,,,1,Lysá is located in Šaštín-Stráže.
+Id84,culture,,,1,"The collection of poems ""Nedeľa"" was authored by Ján Pavol II."
+Id85,culture,,,3,"Kamil Čapkovič performed the role of Jánošík in the play Na skle maľované, which is a type of divadelná hra."
+Id86,culture,,,2,"Petr Cmorik wrote ""Najväčšie želanie"" and ""Hľadať a nájsť""."
+Id87,geography,,,2,"Odeská ulica is located in Bratislava, which is part of Bratislava. Alternatively: Odeská ulica is located in Bratislava. Bratislava is part of itself."
+Id88,history,,,2,Bratislavský kraj is located in Bratislava and is named after Miloš Alexander Bazovský.
+Id89,geography,,,1,The highest peak in Bytča is Fabova hoľa.
+Id90,history,,,1,Bratislava was constructed in the 13th century.
+Id91,politics,,,2,"The Národna bločková lotéria was declared by the ministerstvo financií Slovenskej republiky, which is located in Piešťany."
+Id92,other,,,1,Vojtech Bukovský achieved in the field of physics.
+Id93,geography,,,2,"Tiesňava Kyseľ is located in Bratislava, which is a mountain range."
+Id94,geography,,,2,Podunajské Biskupice is a town part of Banská Štiavnica.
+Id95,geography,,,1,The symbol of Zemplín is Snina.
+Id96,history,,,2,Ľudovít Štúr is also known as Andrej Bielik and Pozorovateľ.
+Id97,geography,,,1,"The main Bratislava bus station does not have Prešov as its capital. Prešov is actually the capital of something, but Hlavná bratislavská autobusová stanica is not its location; a more accurate statement would be that Prešov is a capital."
+Id98,geography,,,2,Stredná priemyselná škola stavebná is located on Veľká okružná street in Piešťany.
+Id99,history,,,1,The first Slovak gymnasium originated in the West Slovak region.
+Id100,geography,,,3,"Slovakia has a river, the Sabinov district, which ranks 2 by length and is located in Slovakia."
+Id101,geography,,,2,"Krompachy is located in Petržalka, which is a okres."
+Id102,politics,,,1,The first chairman of the Úrad jadrového dozoru Slovenskej republiky is Dominika Mirgová.
+Id103,geography,,,1,Martin Rázus was born in Slovakia.
+Id104,sports,,,2,"Andrej Kraus is the best scorer of the Slovak national football team, which participated in EURO 2024."
+Id105,geography,,,3,"The river Topľa has its confluence in Vrútky, and the river Váh, which is in confluence with the river Turiec, also has its confluence in Vrútky. Alternatively: The river Topľa has its confluence in Vrútky. The river Váh is in confluence with the river Turiec in Vrútky."
+Id106,sports,,,2,"Hokejbal was founded by Jaroslav Melišek, who is from Čadca."
+Id107,geography,,,4,"Petržalka is part of Devínsky Hrad, and it is also the most populous area, with the highest population density in Slovakia."
+Id108,geography,,,1,The highest peak in Slovakia is Ostredok.
+Id109,history,,,1,Dežo Ursiny was the first chairman of the Slovenská národná rada.
+Id110,culture,,,1,Dr. Tomáš Stach was the first chairman of Tatrín.
+Id111,history,,,2,Ivan Tásler adopted the middle name Velislav in Devín.
+Id112,history,,,3,"The Legalization Of Standard Slovak, a legalization event, took place in Váh and concerned the legalization of Spisovná Slovenčina."
+Id113,culture,,,1,Sokol Časopis Pre Krásno Umenie A Literatúru has Kamil Čapkovič as its editor.
+Id114,geography,,,2,"Bratislava is located above Čierny Balog, which is a type of obec. Alternatively: Čierny Balog, an obec, is located below Bratislava."
+Id115,geography,,,1,Rádio Aetter is broadcasting from Siaha.
+Id116,other,,,1,Peter Škantár has a field of expertise in neurológia. or Peter Škantár specializes in neurológia.
+Id117,geography,,,1,The Šarišské múzeum is located in Košťany nad Turcom.
+Id118,geography,,,2,"The Sobášny palác is located in Staré Mesto, which is a Slovak town."
+Id119,geography,,,1,The Slovak National Library has its headquarters located in the Western Carpathians.
+Id120,culture,,,1,Jozef Tiso was associated with the Romanticism literary period.
+Id121,other,,,1,Projekt This is Kevin has a leader named Ivo Medin.
+Id123,culture,,,3,"Matej Bel is also known as the first lady of Slovak painting, and his profession is painting. Alternatively: Matej Bel, whose profession is painting, is also known as the first lady of Slovak painting."
+Id124,geography,,,1,The Múzeum Andreja Kmeťa is located in Košice.
+Id125,geography,,,1,The Galéria Mikuláša Galandu is located in Bardejov.
+Id126,geography,,,1,Obec Stráne pod Tatrami is located in Poprad.
+Id127,culture,,,2,"Rudolf II. is also known as Momo, and Momo is the artistic name of Rudolf II."
+Id128,geography,,,1,Čierňanka was previously called Vihorlatská nádrž.
+Id129,other,,,2,The group Tristana has Jana Kirschner as its composer and singer.
+Id130,history,,,2,Námestie is located in Turčianske Teplice and is named after Andrej Hlinka.
+Id131,geography,,,1,Bratislavský kraj is located in Prešov.
+Id133,geography,,,1,Andrej Kmeť was born in Trstená.
+Id134,geography,,,1,Slovakia lies on the Trnávka River.
+Id135,sports,,,2,The Atlas klub and the Klub Atlas Sládkovičova both originated in Bratislava.
+Id136,geography,,,2,"Here are the triples expressed as fluent English prose: Čachtice is located in Žilina, which is a okres."
+Id137,geography,,,1,Banská Štiavnica is the source of the river Bratislava.
+Id138,geography,,,4,"The Váh River Valley is located in Slovensko, in the region of Európa, and it is a riečny ostrov, ranking 1 in size."
+Id139,other,,,3,"Eva Landlová is the mother of Anastasiya Kuzminová, who is an actor. Anastasiya Kuzminová is the son of Eva Landlová. Alternatively: Eva Landlová has a son named Anastasiya Kuzminová, who is an actor."
+Id140,geography,,,2,"The Malý Dunaj river flows into the Dunaj river, and its confluence is located in Slovensko."
+Id141,geography,,,2,"The Judicial Council of the Slovak Republic has its headquarters in the Palatial Residence, which is located on the Ipeľ River."
+Id142,history,,,1,Vladimír Mečiar is also known as the Slovak Schliemann.
+Id143,other,,,1,Peter Wilsen's profession is speleology.
+Id144,geography,,,2,"Stredná priemyselná škola strojnícka is located at Fajnorovo nábrežie, which is located in Pieninský národný park."
+Id145,geography,,,2,"Kúpeľný ostrov is located on a river called Dnesne Slovensko. Alternatively: Kúpeľný ostrov is located on Dnesne Slovensko, which is a river."
+Id146,history,,,2,"Andrej Stančík has the academic title of professor, which is the highest academic title."
+Id147,geography,,,3,"In Pezinok, there is a square called Radničné námestie, which is located in Slovensko. Alternatively: Slovensko is a square in Pezinok called Radničné námestie."
+Id148,geography,,,5,"Nové Mesto has two rivers, the Kysuca and the Čierňanka, which meet at Nové Mesto, with the Kysuca and Čierňanka also meeting each other."
+Id149,geography,,,1,The Autobusová Stanica is located in the Veporské vrchy.
+Id150,sports,,,1,Zuzana Čaputová plays tennis professionally.
+Id151,geography,,,1,The Múzeum Janka Kráľa is located in Košice.
+Id152,geography,,,2,"Holeška is part of Karlova Ves, which is a part of Bratislava."
+Id153,geography,,,3,"The Tatranský Národný Park has an accessible cave called Nitrianske Kniežatstvo, which is located within the park and is accessible."
+Id154,geography,,,1,The highest peak of Belianske Tatry is rieka Poprad.
+Id155,culture,,,2,"The gitarové múzeum, which features the instrument type guitar, is located in Rozprávková dedinka Habakuky."
+Id156,geography,,,2,Nitriansky kraj is located in Nitra and is a Sídlisko A Mestská Časť.
+Id157,other,,,4,"Peter Krištúfek was president of Slovenská lekárska spoločnosť, holding the position of prezident, in 1981."
+Id158,geography,,,2,"The nearest regional city to Okres Veľký Krtíš is Žilina, which is a regional city."
+Id159,geography,,,3,"The Belianske Tatry, which is a town, is located in Kysuce and has the property of being the oldest."
+Id160,culture,,,1,The Balneologické múzeum v Piešťanoch is named after Martin Skrtel.
+Id161,history,,,1,Jana Kirschner originated from Okolie Nitry.
+Id162,geography,,,2,"Vrbové is located in Dunaj, which is a type of okres."
+Id163,geography,,,2,"Bratislava contains a nuclear power plant, which is located in Bratislava."
+Id164,geography,,,2,"Ostredok contains an atomic power plant, which is an atomic power plant. Alternatively: Ostredok contains an entity called atómová elektráreň, which is an atomic power plant."
+Id165,other,,,2,Šariš contains a combined cycle power plant called paroplynová elektráreň.
+Id166,geography,,,2,"The wind power plant is located in the Bratislava Region, which is in the Čadca district."
+Id167,history,,,3,The archaeological site known as Havránok is located above Slovakia and features a Celtic fortification discovered there.
+Id168,geography,,,1,The Múzeum kysuckej dediny is located in Liptovský Mikuláš.
+Id169,geography,,,2,The Súbor Pamiatok K Osobnosti Ľudovíta Štúra is located in Modra and is related to Rudolf II.
+Id170,geography,,,2,"Mohyla Milana Rastislava Štefánika is located on Prešov, which is a mountain."
+Id171,geography,,,1,The Biskupický kanál was built on the Prešov river.
+Id172,culture,,,2,"The múzeum v Krupine, located in Krupina, is dedicated to Jaroslav Filip."
+Id173,culture,,,2,Mária Rázusová Martáková is also known as Karol Duchoň and she is a writer.
+Id174,geography,,,2,"Vodné dielo Čerenec lies on the northernmost point of Slovakia, which is a stream."
+Id175,culture,,,1,Michal Bacúrik is the founder of the Slovak National Opera.
+Id176,geography,,,1,The Memorial Room of Ján Hollý is located in Galanta.
+Id177,culture,,,1,Michal Hraška was the first codifier of standard Slovak language.
+Id179,sports,,,1,Peter Wilsen is a canoeist. or Peter Wilsen works as a canoeist.
+Id181,geography,,,1,Ľubomír Feldek was born in Košice.
+Id182,geography,,,1,The Kňazský seminár sv. Františka Xaverského is located in Slovakia.
+Id183,geography,,,2,Kulisovo is a národná prírodná rezervácia located in Rieka Hron.
+Id186,culture,,,2,"Marika Gombitová is the author of ""Zmierenie alebo Dobrodružstvo pri obžinkoch"", which is a comedy."
+Id187,geography,,,1,The Gabčíkovo water structure is built on a river in Slovakia.
+Id188,culture,,,2,"The film ""Sokoliar Tomáš"" was based on a script by Miloš Alexander Bazovský, who wrote the script for the film."
+Id189,culture,,,2,The Festival Soaré is a festival located in Slovensko.
+Id190,geography,,,1,Michalovce is the highest peak of Michalovce.
+Id191,geography,,,3,"The CHKO Dunajské luhy manages the Ostrovné lúky, which is a chránené vtáčie územie and is located in Močanok."
+Id192,geography,,,2,"Trenčín is located at Krahuľský vrch, which contains the river Váh."
+Id193,culture,,,1,"Jana Kirschner is a slovenská herečka. (No need for two sentences here, but for clarity:) Jana Kirschner is a Slovenian actress."
+Id194,history,,,5,"The Trojica represents the Historické Slovenské Národné Hnutie and is most famous, comprising members such as Matej Bel, Hurban, and Hodža."
+Id195,FAIL,,,5,"The University of Comenius in Bratislava is a university, located in Bratislava, and is active; it is both the oldest and largest university."
+Id196,geography,,,2,Most SNP is also known as UFO most and is located in Dunaj.
+Id197,history,,,2,Bratislava was once known as Košice in German and Istropolis in Greek.
+Id198,history,,,1,Pavol Dobšinský ruled in Nitrianske Kniežatstvo.
+Id200,geography,,,3,"Budova is located in Česko, and it is opposite OC Avion and belongs to Ikea."
+Id202,geography,,,1,Pod Kráľovou hoľou is designated as Obrátená pyramída.
+Id203,geography,,,1,Staré Mesto is also unofficially known as Žarnovica.
+Id204,history,,,2,"Martina Moravcová attempted to codify the Slovenian language, which was based on the West Slovak dialects."
+Id205,geography,,,1,The old Slovak 20 heller coin depicts Primaciálny palác.
+Id207,geography,,,4,"Radničné námestie is a lake located in Vihorlatské vrchy, which is a mountain range, in Slovakia."
+Id208,politics,,,2,"Peter Lipa, a Slovak politician, is known for his hatred towards Hungarians."
+Id209,geography,,,2,"Devínska Brána is located in Údolie Dunaja, which contains Revúca."
+Id211,geography,,,5,"The western part is part of the highway D2, which starts at the border bridge over the Morava River, located near the Slovak Radio Building, and the bridge crosses the Morava River."
+Id212,history,,,1,The Moravianska Venuša is found in the Bazilika Sedembolestnej Panny Márie.
+Id213,geography,,,1,The Slovenská Štátna opera is located at Fabova hoľa.
+Id214,geography,,,1,The Váh A Turiec is located in Trenčiansky kraj.
+Id215,geography,,,4,"Skalité is located beside the confluence where the rivers Dunaj and Morava, which are both rivers, meet."
+Id216,politics,,,3,"The parliamentary elections, which took place in 2024, were won by Smer Sociálna Demokracia, a Slovak political party."
+Id217,geography,,,2,"Ostredok is located in Michalovce, which is part of the Podhorie region."
+Id218,geography,,,2,"The Južný obchvat Nitry forms part of the Vihorlatské vrchy, which is a highway."
+Id219,sports,,,3,"HK Dukla Trenčín, which is also known as Najväčší Trenčiansky hokejový klub, is a hockey club located in Slovakia."
+Id220,geography,,,3,"Bratislavský kraj is a kraj region and is the smallest in area, and it is the region of Komárno."
+Id221,geography,,,1,Slanské Vrchy are located in Tatranský Národný Park.
+Id222,geography,,,3,"The Ondava is located in the slovenské Tatry, and it contains the pleso, which is its largest feature."
+Id223,history,,,3,"The main representative of the village self-government was called a richtár, whose term was valid until January 1, 1918, and was located on Hlavné námestie."
+Id224,geography,,,1,Československo originates in Národný park Nízke Tatry. Alternatively: The country of Československo has its origin in Národný park Nízke Tatry.
+Id225,geography,,,1,The highest peak of Nízke Tatry is Kysuce.
+Id227,geography,,,2,"The Šariš region has its center in Bratislava, which is a city."
+Id228,geography,,,3,"Šebastovce is part of Košice and is a district of Nové Zámky, which contains Šebastovce. Alternatively: Šebastovce is part of Košice. Šebastovce is a district of Nové Zámky, which contains it."
+Id229,geography,,,2,"Štrba is connected by Ozubnicová Trať, which connects Snina."
+Id230,history,,,1,Dara Rolins studied astronomy.
+Id233,geography,,,1,The Čierny Váh river originates in Holeška.
+Id234,sports,,,3,"HK Nitra, a hockey club, is located in Vihorlatské vrchy, which has HK Nitra as its largest hockey club."
+Id235,culture,,,4,"Andrej Braxatoris is a singer and author of the title song, which belongs to the film ""Pokoj v duši""."
+Id236,history,,,2,The Februárový prevrat occurred in 2024 in Slovakia.
+Id238,culture,,,5,"The Vysoká škola výtvarných umení v Bratislave, which is located in Istropolis, is the oldest high school focused on visual arts, and it is a high school."
+Id239,geography,,,1,The Mayor of Bratislava resides in the Poprad river.
+Id240,geography,,,1,The Velka Fatra mountain range is also called the Vstupná Brána Do Vysokých Tatier.
+Id241,geography,,,3,The Most SNP is located in Bratislava and has 2 pillars in the Danube.
+Id243,geography,,,2,The northernmost point of Slovakia is located in the Orava region. Orava is a region of Váh.
+Id244,sports,,,3,"Juraj (VII.) Turzo is Slovak and a sportsman, specializing in downhill skiing."
+Id245,history,,,1,Dežo Ursiny was born in Uhrovec.
+Id246,geography,,,2,Zemplínska Šírava is a water reservoir located near Bradlo.
+Id247,politics,,,3,Andrej Kiska defeated Robert Fico in the 2009 presidential election.
+Id248,geography,,,3,"Strečno is located in Nové Mesto, which is a municipal district and is part of Bratislava."
+Id249,geography,,,4,"The Národný park Poloniny, which is a national park, is located in Čierny Balog and is the easternmost Slovak national park."
+Id250,geography,,,1,D1 passes near Bratislava.
+Id251,geography,,,1,Rozprávková dedinka Habakuky is located in Primaciálny palác.
+Id252,geography,,,4,"Čierny Balog is located in Slovensko, and a railway line passes through Čierny Balog, specifically through Čierny Balog and a football field. The football field is located in Čierny Balog."
+Id253,geography,,,1,The highest peak of Oravské Beskydy is in Bánskobystrický kraj.
+Id254,geography,,,2,"The historic building of the Slovak National Theatre is located on Hviezdoslavovo námestie, which is located in Trnávka."
+Id255,geography,,,5,"Štrba is the location of the oldest still existing mint in the world, which is a mint and has the status of still existing, and it is also the oldest. Alternatively: The oldest still existing mint in the world, which is a mint, is located in Štrba and has the status of still existing. It is the oldest."
+Id256,culture,,,2,Martina Moravcová is the author of Nox Et Solitudo. or Nox Et Solitudo was authored by Martina Moravcová.
+Id257,politics,,,5,"Ivan Gašparovič, a Slovak politician, served as president for eleven terms, uniquely holding this position."
+Id258,politics,,,1,The Národná rada Slovenskej republiky has 0 members.
+Id259,history,,,3,"The Universitas Istropolitana, which is the oldest university on the territory of Slovakia, was founded on January 1, 2011. It is located on the territory of Slovakia."
+Id260,politics,,,3,"In 2023, Petr Cmorik became the Minister of Culture of the Slovak Republic after the parliamentary elections."
+Id261,geography,,,4,"The Pavol Jozef Šafárik University in Košice, which is a university, is located in Poprad and ranks 2 by age in Slovakia."
+Id262,geography,,,5,"The Faculty of Mathematics, Physics, and Informatics of Comenius University in Bratislava has a building in Vozovňa Solivar, which is part of Bratislava and has many students, including students of the Faculty of Mathematics, Physics, and Informatics of Comenius University and other students."
+Id263,history,,,1,Matica slovenská was founded in the 2nd century.
+Id264,other,,,3,"The psychiatric hospital, named Philippa Pinela, is located in Slanské Vrchy."
+Id265,geography,,,1,The highest peak of Strečno is Minčol.
+Id266,culture,,,1,"In Bratislava, the largest minority are Rusíni."
+Id267,geography,,,2,"The Slovenský kras contains jaskyne, which has approximately 1. Alternatively: The Slovenský kras contains jaskyne. There is approximately 1 jaskyne."
+Id268,culture,,,4,"Majk Spirit, whose real name is Lukáš Jedlička, is a Slovak rapper and producer."
+Id269,geography,,,2,"Slovakia is located in Rožňava, which is a district."
+Id270,sports,,,2,The Slovak men's volleyball extraliga took place in 2019 with 7 teams participating.
+Id271,geography,,,1,The Poprad river flows into the Ondava river.
+Id272,geography,,,2,"The first wind power plant is located in Cerová, which is in the country of the river Laborec. Alternatively: The first wind power plant is located in Cerová. It is in the country of the river Laborec."
+Id273,geography,,,3,Matej Tóth is a Slovak athlete born in Očová.
+Id274,culture,,,8,"Dušan Kováčik, a Slovak architect, designed the Prior complex and the Kyjev hotel, both located on Kamenné námestie in Bratislava, and he received the Dušan Jurkovič award."
+Id275,politics,,,5,"Rytmus, whose former position was former police president, participated in the 2023 parliamentary elections in Slovakia, representing the party Progresívne Slovensko."
+Id276,geography,,,3,The Hron is a significant river that flows through Martin in Slovensko.
+Id277,culture,,,5,"The Bánhidské nárečie, a type of Slovenské nárečie, is part of Čachtice and has characteristic forms including ""venku"", ""jedenác"", and ""čepec""."
+Id278,geography,,,2,The okres Levice is the largest okres and is located in Žilina.
+Id279,geography,,,3,"The Váh is the longest river in Slovakia, formed by the confluence of the Čierny Váh and the Partizánska republika."
+Id280,history,,,5,"Igor Matovič, who was born in Tajov, is a Slovak inventor and pioneer in the field of wireless communication."
+Id281,culture,,,3,"The poem ""Marína"", also known as ""Najdlhšia ľúbostná báseň na svete"", was written by a well-known Slovak poet in 2017."
+Id282,culture,,,2,Jakubov dom is located in Bratislava and currently serves as the home of Slovenská filharmónia.
+Id283,culture,,,2,Luník IX became Európske hlavné mesto kultúry in 2013.
+Id284,sports,,,7,"Miloslav Mečíř, a Slovak tennis player, won an Olympic gold medal representing Czechoslovakia at the 1992-1998 Summer Olympics."
+Id285,geography,,,2,"Pavol Braxatoris, who was born in Košice, was the former President of Slovenská republika."
+Id286,geography,,,3,"The territory of Slovakia is part of Považský Inovec, and its highest peak is also part of Považský Inovec, with an elevation of 1042. Alternatively: The territory of Slovakia is part of Považský Inovec. Its highest peak has an elevation of 1042."
+Id287,geography,,,3,An earthquake with a magnitude of 728 occurred in Humenné in October 2023.
+Id288,history,,,6,"Pezinok was visited by Ján Pavol II, who is a pope, on 29 April 1996, and also by František, who is a pope, on 14 September 2021."
+Id289,culture,,,3,"Miroslav Tásler is a Slovak musician and a trumpeter, and he is known for Ďez."
+Id290,geography,,,2,Dukliansky Priesmyk and Slovakia are at the end of Cesta hrdinov SNP.
+Id291,sports,,,2,"Anastasiya Kuzminová, who represents Slovensko, has a total of 35 Olympic gold medals."
+Id292,geography,,,3,"Cerova vrchovina's highest peak is Karanč, which has an elevation of 728 and is above 150."
+Id293,geography,,,3,"Schaubmarov, which is located in Belinská jaskyňa, is a water mill and it is the largest in Europe."
+Id294,other,,,2,The Univerzita Komenského v Bratislave has 15 faculties as of 2026-04-29.
+Id295,culture,,,2,Karol Duchoň was a spevák and he was 10 years old when he died.
+Id296,geography,,,2,"Budatínsky zámok is located in the district of Levoča, which is a Slovak town."
+Id297,sports,,,2,Martin Skrtel has received the award of slovenský futbalista roka 13 times.
+Id298,sports,,,3,Martina Moravcová is responsible for 2 Olympic medals in swimming for Slovensko.
+Id299,culture,,,5,"The Gorazdov Močenok is a Christian theatre festival that takes place annually in Močanok, and it started in 2006."
+Id300,geography,,,3,"The demolition work started in 2019 and took place at the Apollo business center, which is located in Jakubovo námestie."
+Id302,geography,,,1,The Domašínsky meander is located on Banská Štiavnica.
+Id303,culture,,,5,"Hodža is known as an actor, a screenwriter, and an actor of the GUnaGU theatre, and studied at the medical faculty of the University of Bratislava, and is a profession of an anaesthesiologist."
+Id304,culture,,,2,"Peter Marcin is a Herec, and he is dedicated to herectvo. Alternatively: Peter Marcin's profession is Herec, and he is dedicated to herectvo."
+Id305,culture,,,3,"Gejza Dusík and Pavol Braxatoris co-founded Opereta, which originated in Štúrovo."
+Id306,geography,,,3,"Slovakia is located in Šaštín-Stráže, which is a pilgrimage significant town. Alternatively: Šaštín-Stráže, a pilgrimage significant town, is located in Slovakia."
+Id307,geography,,,3,Horné Saliby is a municipality and it belongs to the Turčianske Teplice district. Most of the population declares Hungarian nationality.
+Id308,culture,,,4,"Here is the fluent English sentence: Pa a Pi is an animated series from Slovenský Raj, and its intro song, performed by Marika Gombitová, belongs to it."
+Id311,geography,,,2,The mineral water known as Fatra is obtained from Prešovský kraj.
+Id312,history,,,1,The Slovenské ucené tovarišstvo was founded in Pieninský národný park.
+Id313,geography,,,1,Okres Veľký Krtíš is located in Čadca.
+Id314,politics,,,2,"The Slovak Republic's first Prime Minister was Adam Ďurica, who held the position of chairman of the government."
+Id315,geography,,,1,Jankov vŕšok is located in Havran.
+Id316,geography,,,1,The Váh is the longest river in Tatranský Národný Park.
+Id317,sports,,,2,"The top Slovak football league, also known as Fortuna liga, has been in existence since January 1, 1465."
+Id318,geography,,,1,The Múzeum školstva a pedagogiky is located under Kráľová hoľou.
+Id319,culture,,,1,Michal Miloslav Hodža performed on the album Čo o mne vieš.
+Id320,geography,,,1,The Slovak University of Agriculture is located in Kamenné námestie.
+Id322,geography,,,2,"The Aupark Tower, located in Čertovica, was completed on January 1, 2007."
+Id323,geography,,,1,Gymnázium Andreja Vrábla is located in Piešťany.
+Id324,history,,,3,The Partizánska republika was an area along the Poprad river and was controlled by partisans who were active during the Slovak National Uprising.
+Id325,politics,,,1,The political movement Slovensko has Ivan Mikloš as its chairperson.
+Id326,history,,,1,The Slovenské národné povstanie started on 2026-04-29.
+Id327,geography,,,1,Uhrovec is located in Banskobystricky kraj.
+Id328,geography,,,1,Luník IX is located in Prešovský kraj.
+Id329,culture,,,1,Peter Marcin recorded the album Na ceste domov.
+Id330,geography,,,3,"Turčianske Teplice has 7 thermal springs, which are located in the Danube Valley."
+Id331,politics,,,2,"Jana Kirschner founded SMER – sociálna demokracia, which is a political party."
+Id332,geography,,,1,The okres Senec is located in Slovensko.
+Id333,politics,,,1,Štúr is the chairperson of SME RODINA.
+Id334,geography,,,1,The Slovak Republic belongs to the basin of the Baltic Sea.
+Id335,geography,,,3,"Zrúcanina is part of Pezinok, and both Pezinok and Zrúcanina are located in Bratislava IV."
+Id337,culture,,,1,Majk Spirit's real name is Viliam Polónyi.
+Id338,geography,,,2,"Bratislavský kraj is the location of orztrúsené osídlenia, which are also called kopanice."
+Id339,geography,,,1,Sobranci belongs to the Nové Zámky district.
+Id340,culture,,,2,"Anton Bernolák recorded an album called S vetrom o preteky, which features the comedian duo Július Satinský and Milan Lasica."
+Id341,politics,,,1,HLAS – sociálna demokracia had Ľubomír Feldek as its first chairperson.
+Id342,geography,,,1,The Univerzita Pavla Jozefa Šafárika is located in Most SNP.
+Id343,geography,,,1,Gymnázium Grösslingová is located in rieka Laborec.
+Id344,geography,,,2,"Bratislava is known for Tazba Zlata, which is made of gold."
+Id345,sports,,,2,"The Žilinský futbalový klub, also known as MŠK Žilina, is located in Slovensko."
+Id346,culture,,,1,"Martin Rázus performed the song ""Profesor Indigo""."
+Id347,geography,,,1,The highest peak of Považský Inovec is Vihorlat.
+Id348,sports,,,2,FC Spakak Trnava is a football club from Slovensko.
+Id349,culture,,,2,"The film ""Pásla kone na betóne"" was directed by Eva Landlová. Eva Landlová also directed the film ""Pásla kone na betóne"". or Eva Landlová directed ""Pásla kone na betóne""."
+Id350,sports,,,2,Beatrix Littmannová represents Slovakia in the sport of water slalom.
+Id351,geography,,,1,The Slovenská akadémia vied has its headquarters located on rieka Poprad.
+Id352,geography,,,1,The Slovak University of Technology is located in Hungary.
+Id353,geography,,,1,Belinská jaskyňa is located in Bratislavsky kraj.
+Id354,geography,,,1,Šurany is located in Bratislavský kraj.
+Id355,politics,,,1,Slovakia has 728 ministries.
+Id357,geography,,,1,Michalovce is located in Luník IX.
+Id358,geography,,,1,The river Bratislava flows into the river Dunaj.
+Id359,culture,,,1,Peter Hrivňák is also known as Matej Tóth.
+Id360,culture,,,2,Ľubomír Feldek participated in the TV show Česko Slovensko má talent.
+Id361,geography,,,1,The Vysoká škola múzických umení is located in the Váh River Valley.
+Id362,geography,,,1,The Kysuca is located in Trenčiansky kraj.
+Id363,geography,,,2,"Východ Slovenska is located near Slovenská Ľupča, which is a village."
+Id365,culture,,,2,"Andrej Kiska performed Mandolína, and Mandolína was performed by Andrej Kiska. Alternatively: Andrej Kiska performed Mandolína. Mandolína was performed by Andrej Kiska. Or more fluently: Andrej Kiska performed Mandolína."
+Id366,other,,,2,IMT Smile was founded by Peter Wilsen and Miroslav Tásler.
+Id367,politics,,,1,Jana Kirschner was convicted for corruption.
+Id368,geography,,,2,Karanč is considered an unofficial symbol of Slovakia and is mentioned in Slovak literature.
+Id369,geography,,,4,"Štrbské pleso, a famous and among the largest pleso, is located in Trnavský kraj."
+Id370,geography,,,1,The Bánskobystrický kraj flows through the Bánskobystrický kraj.
+Id371,geography,,,1,The Tokajská vinohradnícka oblasť is located in Slovensko.
+Id372,geography,,,1,Rimavská Sobota is located in Uhorsko.
+Id373,culture,,,3,Anastasiya Kuzminová played the role of František Stromokocúr in the TV series Susedia.
+Id374,politics,,,2,Vladimír Mečiar lost the presidential election to Ivan Gašparovič in 1975.
+Id375,culture,,,1,Vavro Šrobár's career started with his win in Slovensko hľadá Superstar.
+Id376,sports,,,1,Jaroslav Filip has the alias Šoko.
+Id377,geography,,,1,Šurany is known for its thermal baths.
+Id378,culture,,,2,Michaela Balcová is a member of Iné Kafe and is also the longest-serving member of the group.
+Id381,history,,,1,Martin was previously known as Trstená.
+Id382,geography,,,1,The okres Humenné is located in Bratislava.
+Id383,geography,,,1,Prešovský kraj is located in Bánskobystrický kraj.
+Id384,culture,,,2,The main actors of Uragán are Peter Marcin and Gorazd.
+Id385,geography,,,1,Slnečné skaly are located in Ostrovné lúky.
+Id386,culture,,,2,The Katedrála Najsvätejšej Trojice is located in Váh and is also known locally as Farský kostol.
+Id387,sports,,,2,"BK Patrioti Levice won the basketbalová extraliga mužov, which has a season ending on 2024-12-31."
+Id388,geography,,,1,Štrbské Pleso is also known as Perla na Váhu.
+Id389,geography,,,2,Vlčince is located in Slovensko and is the largest sídlisko.
+Id390,geography,,,1,Slovakia originates from Ružový ostrov.
+Id391,geography,,,1,The Basilica of Our Lady of Seven Sorrows is highest located at Pleso.
+Id392,geography,,,2,The Western Carpathians are notoriously known for bad social conditions and bad hygienic conditions.
+Id393,history,,,1,Peter Nagy was born in Bytča.
+Id397,sports,,,2,Skalica won a gold medal in the Majstrovstvá sveta v ľadovom hokeji in 2002.
+Id398,politics,,,3,"The SMER SD party, which is a political party, won the 2016 Slovak National Council elections, which took place sometime between January 1, 2014, and December 31, 2023."
+Id400,politics,,,2,"The NR SR has 1300 elected representatives, to which the poslancov were elected. Alternatively: The poslancov were elected to the NR SR, which has 1300 elected representatives."
+Id401,culture,,,2,"Philippa Pinela wrote Mor Ho, which is a poem."
+Id403,geography,,,2,"The highest peak of Vysoké Tatry is Západoslovenská časť, which is accessible by cable car."
+Id407,sports,,,2,HK Nitra won the Kontinentálny pohár trophy in the 2024 season.
+Id408,politics,,,2,"The Magyar Szövetség – Maďarská aliancia, a political party, is located in Žaluzice."
+Id409,culture,,,2,Dara Rolins dated Slovak rapper Ján Pavol II.
+Id411,politics,,,2,"Andrej Danko is the current chairperson of SNS, and he became chairperson on 1 January."
+Id412,culture,,,1,Bratislavský kraj is known for its folk architecture.
+Id414,history,,,1,The Scottish National Party (SNP) started in 2024.
+Id415,geography,,,2,Prešovský kraj is a preserved settlement unit and it belongs to the UNESCO list.
+Id416,geography,,,2,The mummified body is located in Slovakia and belongs to Žofie Bosniaková.
+Id417,history,,,1,Čadca was the first seat of rulers of today's Slovakia.
+Id418,geography,,,1,Dóm Svätej Alžbety is located in Slovensko.
+Id419,politics,,,2,"Roman Grigely held the position of president of the Slovak Republic until December 31, 2024."
+Id420,culture,,,2,"In January 2017, ucta ruzenca was a month dedicated to, and it is associated with the Roman Catholic Church."
+Id421,history,,,1,The University of Comenius in Bratislava is the oldest university in the Little Danube.
+Id422,geography,,,3,"Košice has a problematic district called Ondava, which is a district of Košice and has a status of problémová. Alternatively, more fluently: Košice has a district called Ondava, which is considered problematic. Ondava is a district of Košice."
+Id423,culture,,,3,"Andrej Kraus, also known as Ego, is a Slovenian rapper who has studied law."
+Id424,geography,,,3,"The largest international airport in Slovakia, named Letisko M. R. Štefánika, is located in Devín and is an international airport."
+Id425,culture,,,3,The Jánošíkove dni is a cultural festival that takes place annually on Ružový ostrov.
+Id426,geography,,,3,"The Slovak Technical University in Bratislava, also known as STU, is a university located in Holeška."
+Id427,geography,,,2,The Folklórne Slávnosti Pod Poľanou is a folklore festival located in Turčiansky Svätý Martin.
+Id428,geography,,,2,"The western edge is located at Poľana, and Bojnice is located at the western edge. Alternatively: Poľana is the location of the western edge, which is also the location of Bojnice."
+Id429,culture,,,4,"Jožo Ráž, Ivan Schranz, Juraj Farkaš, and Zdeno Baláž are the founders of Elán."
+Id430,history,,,2,"The University in Banská Bystrica is named after Andrej Kmeť, a Slovak scientist."
+Id431,geography,,,5,"Poľana is a strongly eroded stratovolcano and a mountain range, located on Kúpeľný ostrov, and it has been a protected landscape area since January 1, 1981."
+Id432,politics,,,4,"Andrej Kiska is the President of Slovenská republika, having issued presidential order 1042, and he is also a co-founder of Dobrý anjel, which is a charitable organization."
+Id433,other,,,3,"The Comenius University has a faculty called the Faculty of Social and Economic Sciences, which was founded in 2024 and is the youngest."
+Id435,politics,,,5,"Adam Ďurica, who works as a politician, caused an accident in Bratislava that damaged a traffic light and as a result, he lost his driving license."
+Id436,politics,,,3,Denník N revealed a plagiarism case related to a work authored by Kuko. The plagiarism case specifically involved Kuko's rigorózna práca.
+Id437,culture,,,9,"Andrej Danko is a Slovak actor, humorist, screenwriter, producer, and presenter, known for his roles in Uragán, Hurikán, Susedia, and Kutyil s.r.o."
+Id438,history,,,3,"On January 1, 1981, the celebration of Deň vzniku Slovenskej republiky took place in Slovensko."
+Id439,geography,,,1,The short name for Rakúsko is PIENAP.
+Id440,culture,,,6,"The Philosophical Faculty, one of the oldest faculties, is part of Comenius University and is located at Zemplínska Šírava. The faculty focuses on social sciences and human studies."
+Id441,history,,,1,The first president of the Slovenská republika was Martina Moravcová.
+Id442,culture,,,2,"Ján Červeň, who is from Bocianska Dolina, writes prose under the pseudonym N.E. Vreč."
+Id444,politics,,,4,"The Rómska Iniciatíva Slovenska, also known as RIS, is a former political party from Muránska planina."
+Id445,geography,,,2,"Čadca is located in the Váh River Valley, which is a river valley of the River Váh. Alternatively: The Váh is a river and Čadca is located in the Váh River Valley."
+Id446,geography,,,2,"The Vrbovský kanál starts at Žaluzice, which is located in Michalovce."
+Id447,geography,,,9,"Bratislava, Štúrovo, and Slovensko are significant cities, all located on the Dunaj. Bratislava and Štúrovo are in Slovensko, and Slovensko is also its own country."
+Id448,culture,,,2,Jana Kirschner is a Slovenian author known for literature for children and youth.
+Id449,culture,,,3,Beatrix Littmannová was a Slovak singer who died in the 19th century.
+Id451,geography,,,2,"Banskobystrický kraj is located in Východ Slovenska, which is part of Slovensko."
+Id452,sports,,,3,"Majk Spirit plays for ŠK Svätý Jur, which is a Slovak football club, and he was active in 2024."
+Id453,politics,,,3,Jana Hubinská is a lawyer who represented the Aliancia nového občana in the NRSR.
+Id454,culture,,,2,The Medzinárodný festival Magicfestival is a festival located in Slovensko.
+Id455,geography,,,4,"Sedlo, also known as Názov Ružinov, is located in Nízke Tatry and connects Bocianska Dolina and Liptov."
+Id456,sports,,,3,Peter Lipa is a Slovak athlete and he competes in the long jump.
+Id457,geography,,,4,"Rastislav Podoba is an artist who is active in Kulisovo, which is a town in Slovakia."
+Id459,geography,,,1,The okres Sabinov is located in the Hlavná bratislavská autobusová stanica.
+Id460,culture,,,3,"The Slovenská filmová a televízna akadémia operates under the acronym SFTA, and it is a type of záujmová organizácia from Česko-Slovensko."
+Id461,geography,,,1,"Piešťany is a place through which a river flows that is also associated with Okres Veľký Krtíš. No, A river flowing through Piešťany is in Okres Veľký Krtíš."
+Id462,politics,,,2,"The Kresťanské Demokratické Hnutie, also known as KDH, is a political party in Detva."
+Id463,politics,,,4,Philippa Pinela held the position of riaditeľ at Rozhlas a Televízia Slovenska from 2017-01-01 to 2022-12-31.
+Id465,geography,,,2,"The Divadlo Jonáša Záborského is located in Luník IX, which is a slovenské mesto."
+Id466,geography,,,3,"Košice, which is an obec, borders Martin, which is a mesto."
+Id467,geography,,,3,"Jakubovo námestie is located in Staré Mesto, which is part of Bratislava and is a Turčianske Teplice."
+Id468,politics,,,3,Jaroslav Melišek is the Deputy Chairman of SDKÚ DS and a member of SDKÚ DS.
+Id469,geography,,,3,"Galanta, a shopping center, is located at Vajnorská ulica in Bratislava."
+Id470,sports,,,2,Rudolf II. is a representative of Slovakia in the sport discipline of vodný kajak. Alternatively: Rudolf II. represents Slovakia in vodný kajak.
+Id471,geography,,,1,The Štátna Opera is located in Devínsky hrad.
+Id473,culture,,,3,"Adam Žampa, a Slovenský singer, created the album Dobré Meno."
+Id474,geography,,,1,Záhorie is located in Kysuce.
+Id476,sports,,,1,ŠK Slovan Bratislava had Váh as its former football stadium.
+Id477,geography,,,4,"Trnavský kraj borders with Prešov, Austria, and Hungary, making it unique in having a border with three countries."
+Id478,geography,,,3,"The Hlavná bratislavská autobusová stanica, also known as Bratislava Nivy, is located in Bratislava and is of type Czechoslovakia."
+Id479,culture,,,2,Matica Slovenská is a Celonárodna Slovenská Kultúrna Ustanovizeň and has its headquarters located at Vihorlatská nádrž.
+Id480,culture,,,4,"Ľudovít Štúr, a Slovakian singer, released an EP titled Znamenia."
+Id481,culture,,,3,"Pavel Paľo Drapák, a Slovenka, performed the action of naspievala on the album Shine."
+Id482,politics,,,3,"Matúš Vallo is a Slovak architect who has been serving as the Mayor of Bratislava since January 1, 2002."
+Id484,geography,,,2,The Vodná nádrž Zemplínska šírava has the Teplica river flowing through it. The Teplica is a river.
+Id485,culture,,,2,"Robert Mistrík, a slovenský reper, is also known as Otis."
+Id486,geography,,,1,The city district mestská časť is located in Prešovský kraj.
+Id487,sports,,,2,The horse pulling event has the name Kľačianska Podkova and it takes place in Slovenská Ľupča.
+Id488,politics,,,2,"The Slovenská informačná služba, also known as the Secret Service, operates in Klokočina."
+Id490,geography,,,2,Počúvadlianske Jazero is part of Lysá and is a type of urban district.
+Id491,geography,,,2,"The Vysoká škola ekonomická is located in Slovensko, which is a slovenské mesto."
+Id492,geography,,,2,"Ratnovce is located in Istropolis, which is an okres."

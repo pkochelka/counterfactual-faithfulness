@@ -1,0 +1,531 @@
+eid,category,shape,shape_type,size,sentence
+Id0,culture,,,1,Karel Plíhal je za Morawiske divadlo Olomouc komponował.
+Id1,culture,,,3,Jana Petrů ma najwjetši hit z muzikala Starci na chmelu.
+Id2,politics,,,2,Madeleine Albrightowa je ministrynja zahraniča Spojených států z Čěskeje.
+Id3,culture,,,3,"Svátek svatého Mikuláša, kotrež se wotměwa 5. decembra 2026 wječor, je zwjazany z rozdawanjom darčkow děćom."
+Id4,geography,,,1,Wodní nádrž Slapy je dźěl Vltavské Kaskády.
+Id5,history,,,4,"Literatura, kotraž w časnym přestupku wot 1. januara 1950 hač do 31. decembra 2000 w územju Čech wustupowaše, bě pod mjenom samizdat wudana."
+Id6,culture,,,3,"Jan Neruda je z Malou Stranou spojen, ma tworbu jako swoje dźelo a život jako swoje žiwjenje."
+Id7,geography,,,1,Prachovske skale su w přirodnej rezervaciji Český ráj.
+Id8,culture,,,5,"Karel Gott je český zpěvák, kotryž dóstał Zlatý slavík, přičimž je tuto wocenu najčastěji wudělowane."
+Id9,culture,,,2,Oldřich Kaiser tworí komedijske duo z Jiří Lábusom a su njerazdźělni.
+Id10,geography,,,1,W Kladensku wudobywaja uhlí.
+Id11,politics,,,1,Miroslava Němcowa je čłonka ODS.
+Id12,history,,,1,Miloš Havel je zakładał filmowe ateliéry Barrandov.
+Id13,geography,,,2,Najwyšši bod Krkonošow ma wysokosć 1603 a słuša do Krkonošow.
+Id14,history,,,1,Bitwa u Slavkova wotbyła so w běhu Napoleonskich wójn.
+Id15,history,,,2,"Historiske město Most je z težby uhlí, kotrež je uhlí, zničene."
+Id16,culture,,,6,"Štít znaka města Třebíč so stawa z třoch wodorownych polow, z toho hornjeje a dolnjeje su čerwjene, wosebje strednjeje běła, a w njej su tři čorne benediktinske kápje."
+Id17,geography,,,2,"Zlín leži w údolí Dřevnice, kotraž je řeka."
+Id18,geography,,,2,Slanská hora leži w Slanym.
+Id19,geography,,,1,Těžba uhlí w Karviné wuzwoliła problemy.
+Id20,history,,,2,W Kolíńe je Židowská menšina jako religiozna menšina přisutna.
+Id21,geography,,,2,Císařský ostrov je najwjetši ostrow w Praze a je ostrow.
+Id22,sports,,,1,Kladno je znatny za hokej.
+Id23,politics,,,1,Ministerstwo zdravotnictwa České republiky leži na Palackého náměstí.
+Id24,sports,,,2,Petr Mach wlastni fotbalowy klub Sparta.
+Id25,culture,,,2,"Granát Turnow wutwóruje šperky, w kotrychž su české granáty."
+Id26,culture,,,4,"J. H. Krchovský je awtor báseńe „Na samém konci"", kotraž je na fasadźe domu w nizozemskim měšće Leiden zapisała."
+Id27,culture,,,5,"Ondřej Sekora je awtor knihow, kotre w sobotach wosobiny Ferdy Mravenca a Brouka Pytlíka wobsahuja, a wšě dwě wosobiny su wopćene hmyzom."
+Id28,culture,,,2,Film Štěstí ma jako hłowneho herca Tatjanu Vilhelmowu a Pawla Lišku.
+Id29,sports,,,1,Zdeněk Nejedlý ma přezwisko Rudý dědek.
+Id30,history,,,3,"Karel IV běše český král, kotryž wuhotowaše Hladowu zeď."
+Id31,geography,,,2,Sněžka ma wysokosć 1603 m n. m.
+Id32,culture,,,3,Jáchym Topol dósta Státní cenu za literaturu za román Citlivý člověk.
+Id33,geography,,,2,Najvětší povodeň v ČR nastawaše w lěće 2002 a trěbaše so w poslednich 100 lětach.
+Id34,geography,,,2,Český Těšín je sydlišćo organizacijow a centrum polskeje narodnostneje menšiny.
+Id35,geography,,,3,"Frýdek-Místek je z pěć, dwěju městow a třećich občin wutworjeny."
+Id36,history,,,3,"Pomník, kotrež je Americkým vojákům poswjećeny, leži na Chodském náměstí w Plzni."
+Id37,culture,,,3,"Peter Pettigrew přeměni so w Prašiwku, kotraž pochadźa ze swěta Harryho Pottera a je krysa."
+Id38,history,,,2,Jindřich Nový je regionální historik a je patriot Karlových Var.
+Id39,history,,,1,Bitwa na Bílé hoře wotbyła so w lěće 1620.
+Id40,geography,,,2,Škoda Auto je w Mladé Boleslavi sydlišćo a je to automobilka.
+Id41,culture,,,2,"Noc na Karlštejně je film, kotryž so w Karlštejnje natwori."
+Id42,other,,,2,Cesta do hlubin študákovy duše je dźěło režiséra Martina Friča.
+Id43,geography,,,2,"Úpa, kotrehož Trutnow ma, přechodzi přez Trutnow."
+Id44,other,,,2,Měsíční časopis je namyšlěny za školáky a předškoláky a nosi mjeno mateřídouška.
+Id45,other,,,1,Časopis Vesmír informuje wědu.
+Id46,geography,,,2,"Železniční muzeum leži w Lužnej u Rakovníka, kotraž to wobsahuje."
+Id47,culture,,,2,Ušoun Rušoun je maskot Českeho rozhlasa Rádio Junior.
+Id48,culture,,,2,"Honzíkowa cesta je dětska kniha, kotraž jo wutworił Bohumil Říha."
+Id49,other,,,1,Jim Čert hraje na akordeon.
+Id50,culture,,,2,"Barbora Tachecí moderuje pořad v rozhlase Osobnost Plus, kotryž je pořad v rozhlase."
+Id51,other,,,1,Spolek Orel je katolická sportovní organizace.
+Id52,sports,,,2,Hora Raná je centrum za paragliding a sportovní létání.
+Id53,culture,,,1,Radio Beat je w rockowej hudźbje specjalizowany.
+Id54,history,,,4,W Přerowje su při wukopach značne mnohstwo kosti mamutow namakane.
+Id55,geography,,,1,Řeka Vydra leži w Národnim parku Šumava.
+Id56,geography,,,2,"Filmowa lokacija Anděl Páně 2 je hrad w Ledči nad Sázavou, kotryž leži w mješćanskej gmejnje Ledč nad Sázavou."
+Id57,culture,,,1,Bob Hýsek popularizuje slam poetry.
+Id58,geography,,,1,Litomyšl ma jako symbol lilii.
+Id59,culture,,,1,Slavonice je z tekstilnym přemyšlom spojena.
+Id60,geography,,,2,Ohře teče skrze Žatec a má tam swój tok.
+Id61,geography,,,1,Jablunkovský výběžek leži na česko-słowakskej-polskej trojmezju.
+Id62,sports,,,4,"Jaromír Vytopil je knihkupec, žiwe je w Čěskej republice, je najstarši a ma najdlušu aktiwitu."
+Id63,geography,,,2,Jizera teče přez Turnow a ma tam swój rěčny tok.
+Id64,sports,,,2,Wot 1. augusta 2024 je 1. česká hokejowa liga pod nowym mjenom Maxa liga.
+Id65,culture,,,3,"Hliník je wuměłca z Humpolca, kotryž je wot wosobiny Marečku podejte mi pero, a ta je film."
+Id66,geography,,,3,"Rybník Bezdrev je rybník w Čěskej, kotryž ma druhu wulkosć."
+Id67,culture,,,1,Radek Pilař je awtor postavička Večerníček.
+Id68,geography,,,2,Rozhledna Stříbrná krasavice leži w Ústí nad Orlicí.
+Id69,culture,,,5,"Michal Horáček je awtor balad, zveřejnił je je a zhudebnjenje je na žadanje širokeje wěcnosće wuwił."
+Id70,geography,,,2,"Kralupy nad Vltavou leža na Pražsko-děčinskej hałcnicy, kotraž je hałcnica."
+Id71,culture,,,1,Kateřina Tučková je aworka Žítkowskich bohinjow.
+Id72,geography,,,2,"Bečov nad Teplou wobsahuje Bečovsku botanisku zahradu, kotraž leži w Bečovie nad Teplou."
+Id73,geography,,,2,"Sázawa, kotraž je řeka, teče přez město Havlíčkův Brod."
+Id74,geography,,,2,Teplice ma jako dominantu horu Doubravku.
+Id75,sports,,,3,Závod veteránů se pravidelně koná od roku 2002 na Českobrodském okruhu.
+Id76,culture,,,7,"Luděk Novák, kotryž je český historik umění a je znatny přez publikowanje studiow, załoži wýtvarnu skupinu Trasa; jeho publikowanje studiow ma za temu český malíř, kotrehož dołha přisłušeja Mánes, Švabinský a Machek."
+Id77,history,,,4,"Vladimír Přibský, kótaryž je tež pod prawim mjenom Vladimír Řezáč znat, je w Přibyslawje narodźeny a wón je žurnalista kaž tež dramatik."
+Id78,geography,,,2,"Pravlov je římskokatolická farnost, kotraž leži w Brno venkov."
+Id79,geography,,,1,Rybník Španělák leži w Okresje Hradec Králové.
+Id80,culture,,,3,"W filmje Vrásky z lásky hraja hłowne rolu Jiří Strach, Radoslav Brzobohatý a Jiřina Bohdalová."
+Id81,politics,,,2,Stanislav Rudolfský je předsyda Hnutija Dobrých Proměn.
+Id82,other,,,5,"Arriva Teplice, kotraž je wot 1. januara 2013 pod tymto nowym mjenom znata, wjedźe městsku, příměstsku a regionální hromadnu dopravu."
+Id83,sports,,,7,"Marek Bárta je čěski diskař a sportovec, kotryž je několikanásobny mistr České republiky w disciplinje hod diskem a ma osobny rekord 65,46 metra."
+Id84,culture,,,5,"Jan Kameníček je česki spisowatel a dramatik, kotryž je wopisany jako pokračowatel Franza Kafki."
+Id85,culture,,,5,"Vladimíra Klumparová je česká sklářská výtvarnice, kotraž je w USA bydlaca a wot 1985 hač do 2003 činiła."
+Id86,sports,,,3,"Česká fotbalowa liga, tež Fortuna Liga, běše wot 1. januara 2018 hač do 31. decembra 2024 wažna."
+Id87,history,,,3,"Operace Dunaj je čěski film z lěta 2009, kotryž je wot wotkaza na wotboj wojsk Varšawské smlouvy."
+Id88,geography,,,2,"Krušné hory su pohoří, kotrež leža na severozápadě Čech."
+Id89,geography,,,2,"Jezero Most, kotrež je w lěće 2020 wotewrjene, je wulčene přez zatopenje lomu Most–Ležáky."
+Id90,sports,,,4,Ondřej Perušič a David Schweiner su w 2023 w beach volleyballje swětowje mistrje woswobodźili.
+Id91,culture,,,1,"Słowo „robot"" je po prawym awtorje Josef Čapek."
+Id92,history,,,1,Nuselský most běše přezdany jako Most sebevrahů.
+Id93,culture,,,1,Prěća čěska hip hopowa sólová deska ma mjeno Frekvence P.H.A.T.
+Id94,history,,,6,"Vojtěch Zikmund běše český chemik, podnikatel a průmyslník, kotryž běše u zrodu české společnosti, kotraž se zaběraše wot wótwóby a proda benzína."
+Id95,geography,,,1,Svojkovské skály leža w Českolipsku.
+Id96,sports,,,4,"David Krejčí je Český skibobista, kotryž drži dwanaće tituly mistrja swěta."
+Id97,culture,,,2,České ocenjenje Zlatá stuha je přiznane w knižnej tworje za dźěć a młodźinu.
+Id98,culture,,,3,"Akademie múzických umění v Praze ma fakulty DAMU, FAMU a HAMU."
+Id99,sports,,,2,Česká basketbalová federace wjeduje sport basketbal a čini to w Čěskej republice.
+Id100,other,,,3,"Radko John je znaty wónym divakam, wukazuje w seriji Na vlastní oči, kotraž je badawski program."
+Id101,history,,,4,"František Palacký bě český historik, politik a zakładatel Matice české."
+Id102,culture,,,4,"Ottův Slovník Naučný je fyzická encyklopedija, kotrejuž wužiwaja w češćinje, a je najwjetša a nejobsáhlejša."
+Id103,history,,,1,Najstarša politiska strona w čěskich zemjach je w lěće 1848 załožena.
+Id104,history,,,1,Národní listy založi Julius Grégr.
+Id105,history,,,1,Hněwín je prěnjokrat lěta 1248 mjenowany.
+Id106,history,,,4,"František Barvitius bě českoslowacki inženýr, kotryž přispěwaše k wutworjenju leteckeho motora Waltera Minora."
+Id107,history,,,1,Škoda ma originalne mjeno Laurin & Klement.
+Id108,history,,,7,"Františka Plamínková bě československa politička, novinarka a feministka, kotraž je w lětach 1918–1938 činiła a 30. junija 1942 w ramje Heydrichiády zhubjena."
+Id109,politics,,,3,"Adam Vojtěch je český politik, kotryž běše ministr zdravotnictví a je znatny pro swoje wustupjenje w soutěži SuperStar."
+Id110,culture,,,6,"Česká situační komedie Světáci, kotrež w lěće 1969 wustupowaše, wobsahuje Bohdalowu, Jiráskowu a Janžurowu, kotrež wutworja slawnu žensku trojicu."
+Id111,culture,,,1,Česká hudební cena Anděl so symbolizuje soškou Anděla.
+Id112,culture,,,3,"Český seriál Sňatky z rozumu ma za tematu české vlastenectví, kotrež je w 19. století přirodne a w zwisku z tzv. národní obrození."
+Id113,geography,,,1,Hlavnje města Moravskoslezského kraja je Ostrawa.
+Id114,history,,,2,Karel IV je wotc Václav IV.
+Id115,culture,,,7,"Český slavík je wot lěta 1996 najwjetši ročny přehlad, kotry měri popularitu českych zpěwakow, zpěwačkow a skupinow."
+Id116,geography,,,5,"Veletržní palác, kótžry leži w pražskich Holešovicach, je funkcionalistiska stawba, kotraž słuša k prěnim a najwjetšim funkcionalistiskim stawbam Prahy; wón běše wotměće wužiwany za wuletrhy, pozdźišo pak jako sydło podźijow za zahranicny wobchod."
+Id117,culture,,,4,Výstaviště Praha je nejstarší veletržní areál v Česku a založeno bylo v roce 1891.
+Id118,history,,,5,"Kateřina Bobková-Valentowa je historička z Liberce, ma čěsku narodnosć, dóstała cenu rektora UK za swoje dźěło „Každodenní život učitele a žáka jezuitského gymnázia""."
+Id119,other,,,4,"Petr Rychły je herec, moderuje zábawnu a soutěžnu telewiznu wosadku Natočto, kotruž wudaje TV Nova."
+Id120,history,,,4,Sametowa revolucija bě w Čěskej a Słowakskej wot 17. nowembra hač 29. decembra 1989.
+Id121,history,,,4,"Prěni ameriski časopis w čěšćinje, kotryž ma mjeno Svornost, je w Americe wustupował a je wot Františka Boleslava Zdrůbka zakładany."
+Id122,culture,,,8,"Časopis „Nový Prostor"" prodaja Bezdomovci A Jiní Sociálně Znevýhodnění Lidé, přičimž Prodejní Cena slouži k Zabezpečení Vlastních Potřeb, Získání Pracovních Návyků, Obnovení Pracovních Návyků, Znovuzačlenění Do Společnosti a Znovuzačlenění Do Pracovního Života."
+Id123,culture,,,2,Jiří Macháček je spěwar w kapeli Mig 21.
+Id124,culture,,,3,Bohouš Šebek hraje w filmje Pelíšky hodu Miroslava Donutila.
+Id125,culture,,,2,"Rebel je pivovar, kotryž leži w Havlíčkově Brodě."
+Id126,culture,,,1,StarDance ...když hvězdy tančí je moderujejo dvojice.
+Id127,culture,,,3,Rumcajs je kreslený loupežnik z Jičína.
+Id128,culture,,,3,"Film „Slunce seno jahody"" je komedija, kotraž bě pod režijou Zdeněk Trošky w Hošticach namakana."
+Id129,geography,,,3,"Právnicka fakulta je dźěl Univerzity Karlovy, leži na Čechův moste a ten je w Praze."
+Id130,geography,,,1,W Krkonošskem narodnym parku je najwysoka horha Sněžka.
+Id131,geography,,,1,Antonín Dvořák je w Nelahozevese narodźeny.
+Id132,geography,,,1,Domažlice leža w Plzeňskem kraju.
+Id133,geography,,,2,Karel Poláček je awtorom powěsće Bylo nás pět a narodźi so w Rychnowje nad Kněžnou.
+Id134,geography,,,1,Najwyšša horca w Orlickich horach je Velká Deštná.
+Id135,history,,,1,Poslanecká sněmovna Parlamentu České republiky ma swoje sydło w Thunowskim palacu.
+Id136,geography,,,1,Wysoka krajina ma najwjetši wjeršok Javořice.
+Id137,culture,,,3,Bankowka ma hódnotu 500 Kč a wobražuje Boženu Němcowu.
+Id138,geography,,,2,"Rozkoš je wodna nádrž, kotraž leži blisko Babiččino údolí."
+Id139,culture,,,2,Divadlo Semafor leži w městnej čwěrti Dejvice.
+Id140,geography,,,1,Dlouhé stráně su přečerpáwaca elektrárna.
+Id141,geography,,,1,Nový Bor je sławny za skłoarski průmysl.
+Id142,geography,,,2,Macocha je dźěl kompleksa jeskynjow Punkevní jeskyně.
+Id143,geography,,,3,"Prachovské skály su přirodna rezervacija, kotraž leži w Čěskim raj a je znata za pískowcowe skalne města."
+Id144,geography,,,2,Baťův kanál wuzwězuje Otrokovice a Sudoměřice.
+Id145,sports,,,3,W Humpolcu so wjelepodkowna Zlatá podkova wužiwaja za jezdecku všestrannosć kaž tež za spřeženje.
+Id146,geography,,,1,Muzeum rekordů a kuriozit leži w Pelhřimowje.
+Id147,politics,,,4,Jindřich Vařeka běše wot 1. januara 2014 hač 31. decembra 2019 starosta Příbrama.
+Id148,geography,,,2,"Horoušany leža w Praze východ, kotraž je okres."
+Id149,geography,,,1,W Vrchlicach teče řeka Kutná Hora.
+Id150,other,,,2,Česko wužiwaja paušalnu sadu za jiných nez řemeslných živností na wotměnje 60.
+Id151,culture,,,4,"Čeština 2.0 je internetowy słownik, kotryž je wutworił Martin Kavka a zběra nowe čěske wotkazy a nowotwary."
+Id152,sports,,,1,Maxa liga je sportowa forma ledního hokeja.
+Id153,other,,,2,"Václav Klaus je knihu Modrá, nikoli zelená planeta napisał."
+Id154,geography,,,3,"Žimutice je obec, kotraž leži w okresu České Budějovice."
+Id155,geography,,,3,Olovnice je obec w Mělníkskim okrese.
+Id156,other,,,3,"Odrůda David je hrušeň, kotraž je w Česku wudźelana a w prosincu dozrjeje."
+Id157,culture,,,4,Dílo Danae (Početí) od Františka Kupky bylo na aukci v České republice prodáno za 126 500 000 korun a je nejdražším dílem všech dob.
+Id158,culture,,,4,"Fotograf Festival je w Praze wot lěta 2011 wotměwacy fotografiski festival, kotryž so jědnoće ročnje woponja."
+Id159,geography,,,3,"Kladníky su obec, kotraž leži w okrese Přerov."
+Id160,sports,,,4,"Jan Šilinger je český fotbalový obránce, kotryž w lěće 2024 za FC Vysočina Jihlava hraje."
+Id161,geography,,,3,Kostel swjateje Heleny leži w Krásnym Lesje w Čěskej a je jedyný.
+Id162,geography,,,1,Chránjeny kraj Český kras je částečně w Praze.
+Id163,geography,,,2,"Lažany leža w Strakonice, kotryž je okres."
+Id164,history,,,4,"První parostrojní železnice v českých zemích, Severní dráha císaře Ferdinanda, je parostrojní železnice, je ležacy w českých zemjach a je prěnja."
+Id165,sports,,,3,Stavební společnost PSJ je wjećeje wlastnik a hłowny sponsor fotbalowa klub FC Vysočina Jihlava.
+Id166,culture,,,2,"Festival Votvírák se wotměwa na plošće býwaleho wojskowneho letišća Boží Dar, kotraž leži w zrušonym wojskowym wuwikowym prostoru Milovice-Mladá."
+Id167,other,,,5,"Živa je přírodovědecký časopis, w nimž se čěšćina jako jazyk wužiwuje, jeho předmjetom je popularizace vědy, wón wotpowěduje statusu stále vycházejícího a je najstarši."
+Id168,culture,,,5,"Památny strom je strom, kotryž je pod městnymi zákonnymi předpisy chrónjeny, přičom je to wuznamne ze swójeje mimořadneje wuzrósće, stáři a społeczneje důležitosće."
+Id169,geography,,,2,"D10 přechadźi blizo areala Škoda Auto w Mladé Boleslavi, kotryž leži při D10."
+Id170,other,,,1,Skupina Katapult ma basistu Jiřího Šindelářa.
+Id171,culture,,,1,Vertigo quintet hraje jazz.
+Id172,history,,,3,"Bahna je každoroční prezentace, kotrejuž předstaji Armáda České republiky a kotreha je předmětom wšedna wěc."
+Id173,geography,,,2,Zámek Všetaty leži w okresním měsće Rakovník.
+Id174,culture,,,2,"Karetní hra Lóra je w Čěskej hrajena, přewažnje w Kladnje."
+Id175,culture,,,2,Vítězslav Nezval je awtor Delki a Signál času.
+Id176,other,,,2,"Žufánek je lihowar, kotryž wuwučuje OMG gin."
+Id177,culture,,,9,"Maxipes Fík je českosłowacki animowany seriál, w kotrymž so připowědźa přirody Fíka, přerostłeho a mluwaceho psa, Áje, holčički, a ich příhody."
+Id178,culture,,,5,"Český večerníček ma mjeno Krkonošské pohádky, w kotrymž su wosoby Trautenberk, hajný, Anče a Kuba."
+Id179,culture,,,3,"Jana Neruda je awtorom prozaického dźěla „Povídky malostranské"", kotrež je po nazwanje po pražskej čwěrti."
+Id180,geography,,,3,"Národní park České Švýcarsko, kotryž je najsevernějši narodny park w Čěskej republice, leži w Čěskej republice."
+Id181,culture,,,5,"Devětsil je česki levicowy umělecki zwaz, kotryž běše wot 1. januara 1920 hač do 31. decembra 1930 aktiwny."
+Id182,culture,,,5,"Anděl Páně je česka filmowa pohádka z lěta 2005, kotraž běži po myšlence čerta a anděla a ju režijsce wotwiči Jiří Strach."
+Id183,geography,,,3,Černé jezero je w Čěskej republice ležace ledowcowe jezero a je najwjetše.
+Id184,geography,,,2,"Berounka wustaje w Plzni, hdźež so Mže, Radbuza, Úhlava a Úslava spoja."
+Id185,geography,,,3,"Otawa je řeka, kotraž teče po západních a južních Čechach a wlewa so do Vltawy."
+Id186,history,,,5,"Bitwa u Slavkova, kotrež so 2. decembra 1805 na Morawje wuškła, bě slawná bitwa, na kotrejž su Francija a Rusko wotmołwili."
+Id187,other,,,4,"České dráhy je železniční dopravce z České republiky, kotryž je největší w swójej kategoriji a bě wustanjeny wot Ministerstwa dopravy České republiky."
+Id188,culture,,,4,"Pedro je žvýkačka, kotraž bě w Čěskej a Słowakskej w socialismusnym čase wutworjena a ma na sobu postawu chlapečka w sombréru."
+Id189,culture,,,3,"Státní hymna České republiky je divadelní hra Fidlovačka aneb Žádný hněv a žádná rvačka, kotraž je wot Josefa Kajetána Tyla wotwóćena."
+Id190,culture,,,6,"Miroslav Donutil je český herec, kotry hraje w seriale Doktor Martin, kotrež wudaje Česká televize, hłownu postawu."
+Id191,culture,,,6,"Film „Samotáři"" je komedija z Čěskeje z lěta 2000, w kotrymž hraja mjez druhim Iwan Trojan, Jiří Macháček a Saša Rašilow mładši."
+Id192,history,,,5,"Dvoudílná česká historická komedija „Císařův pekař – Pekařův císař"" z lěta 1951 ma dwě dźěłach a w njej hraja Jan Werich obě hłowne postawy."
+Id193,culture,,,5,"Jára Cimrman je fiktiwna wosoba, genij a českeho narodnosće, kotrehož su wutworili Jiří Šebánek a Zdeněk Svěrák."
+Id194,culture,,,3,"Zdeněk Jirotka je awtor humoristiskeho romana Saturnin, kotryž w lěće 1942 wujawjeny je."
+Id195,culture,,,4,"Český kreslený večerníček „Bob a Bobek – králíci z klobouku"" ma dwaj králíkami, kotřiž žiwja w klobuku."
+Id196,culture,,,4,"Václav Chaloupka je twórca hraného seriála Méďowe, kotrehož předmětna publika su děti a hłowne postawy tři malá medwíďata."
+Id197,culture,,,3,"Česká televize ma telewiznu staciju ČT :D, kotraž je w lěće 2013 załožena a je namjenjena na dźěći."
+Id198,culture,,,3,Čeští jazykoví puristé w baroku a národnym obrozenju wužiwachu termin čistonosoplena za kapesník.
+Id199,culture,,,7,"Komedija „Jedna ruka netleská"" z Čěskeje z lěta 2003 je režisował David Ondříček, w njejž hraja Jiří Macháček, Ivan Trojan a Marek Taclík."
+Id200,culture,,,5,"„Návrat idiota"" je romantická komedija z Čěskeje, kotraž je w lěće 1999 wot Saše Gedeona režisowana a kotraž je inspirowana hłownej postawu z Dostojevskijeho knihi „Idiot""."
+Id201,culture,,,9,"Film Občanský průkaz, kotrež režírował Ondřej Trojan, wotewrje so w lětach 1973 až 1977 w časy normalizacije a wobrazuje žiwjenje Petra, Popelki, Aleša a Mítu."
+Id202,culture,,,5,"Jana Budař je w swójom režijnym debjutu 2022 filmowu pohádku „Princ Mamánek"" z Čěskeje wutworiła."
+Id203,culture,,,6,"Česká televize wuwučuje dźěło „Svět pod hlavou"", kotrež je o Filipu Marwanje, kotrehož hraje Václav Neužil. Marwan je policista, w lěće 1982 padnje do komi a je přez awto zranjen."
+Id204,culture,,,7,"Dědictví aneb Kurvahošigutntag je česka filmowa komedija z lěta 1992, kotraž jo režisowała Věra Chytilová; w njej hraje Bolek Polívka Bohuša, kotryž přewzje wulki majetek wot zemrěłeho otca."
+Id205,culture,,,5,"Postřižiny je celovečerní film, kotryž je w lěće 1980 wot režisera Jiřího Menzela wotměł a na knihu Bohumila Hrabala wopřijeł; w njem ide wot pivowara a rodiny jeho správca za prěnju republiku."
+Id206,culture,,,6,"Film „Na samotě u lesa"" je česka komedie z lěta 1976 pod režijou Jiřího Menzela, kotrež vyprawuje o obyčejnej pražskej rodinje Lavičkowych, kotraž chce wužiwne domek na wjesje wopytać."
+Id207,culture,,,9,"Tři veteráni je česka filmowa pohádka z lěta 1983, w kotrejž su hałstrowe postawy Pankrác, Bimbác a Servác, wšitcy wusłuženi wojacy."
+Id208,culture,,,5,Kniha Fimfárum wot Jan Wericha wotwjeća w lěće 1960 17 humoristických pohádkow.
+Id209,culture,,,3,"Karel Čapek je awtor pohádkow Devatero pohádek, kotrež w lěće 1932 wotpowědowachu žanroweje kategoriji pohádky."
+Id210,history,,,4,"Povídání o pejskovi a kočičce je pohádkowa knížka wot Josefa Čapka z lěta 1929, kotraž wobsahuje dwě žiwynych postajach."
+Id211,culture,,,4,"Arnošt Lustig bě český židowský spisowatel, publicista a awtor Modlitba pro Kateřinu Horovitzowu, kotrejž je holokaust temom."
+Id212,geography,,,2,Ašský výběžek leži na zapadźe Čěskeje a rozšěrja so do němskeho teritorija.
+Id213,geography,,,4,Dálnica D10 wot Prahy přes Mladou Boleslav do Turnova přichadźe a připozuje so na silniční síć.
+Id214,culture,,,5,"Teta, kotraž je dźěćo Krokoweho a sestra Kazi kaž tež Libušiny, móže so z duchami rozmołwjeć."
+Id215,history,,,4,"Alois Jirásek je awtor knihy Staré pověsti české, kotraž je přiměrjena mládeži a wotpowěduje rozličnym časowym obdóbam čěskich dějin."
+Id216,history,,,6,"Přemysl Oráč, kotryž je mýtiski wladar a česki narodnosće, ma za sobu Libušu, zakłada dynastiju Přemyslovcow, kotraž je najstarša a wot Čěska wjedźena dynastija."
+Id217,history,,,4,"Václav II. bě w 13. lětstotku w Bezdězu, kotryž leži w Českolipsku, wotnět."
+Id218,history,,,6,"Husákovy děti, kotrež su w Čěskej socialistiskej republice wot 1. januara 1970 hač 30. junija 1975 narodźene, so w publicistiskim slangu wužiwaja, hač wot 17. apryla 1969 Husákowa wladna wotdźěłał."
+Id219,culture,,,3,"Viggo Mortensen, kotryž je znatny přez Trilogiju Pán prstenů, běše jako hosć na 58. ročniku Mezinárodního filmového festivalu Karlovy Vary w lěće 2024."
+Id220,geography,,,2,"Karlovy Vary su w ústiju říčky Teplé załoženi, kotrež teče do Ohře."
+Id221,geography,,,1,Dyje teče přez Znojmo.
+Id222,geography,,,2,"Soos je narodna přirodna rezervacija, kotraž leži blisko Františkovych Lázní."
+Id223,culture,,,6,"Magdalena Dobromila Rettigová je česká buditelka a spisowatelka, kotraž je znata jako autorka, a je awtorowa kniha Domácí kuchařka wot lěta 1826."
+Id224,geography,,,1,Okres Svitavy leži w Pardubickim kraju.
+Id225,history,,,2,Ludvík Svoboda je wot 1. januara 1968 prezident Československé socialistické republiki.
+Id226,history,,,3,"Husitský politický a věroučný program, kotrež ma za cíl nápravu církwe a křesćanskeje společenstwa, nosi mjeno Čtyři artikuly pražske."
+Id227,geography,,,1,Národní divadlo moravskoslezské ma swoje sydło w Ostrawje.
+Id228,geography,,,2,"Slezsko je historická země, kotraž leži na sewjerowuchodźe Čěskeje republiky."
+Id229,culture,,,3,"Radka Vranková, kotrehož přezwuk je Radůza, je česká zpěwačka."
+Id230,geography,,,3,Česká Třebová leži w okresu Ústí nad Orlicí a je město.
+Id231,culture,,,3,"Akademie múzických umění v Praze wobsahuje DAMU, FAMU a HAMU."
+Id232,culture,,,4,"Večerníček je telewizní pořad za děti, kotryž se přenosi každenoc wječor."
+Id233,culture,,,1,Kytica z pověstí národních je wot Karel Jaromír Erben.
+Id234,history,,,2,Prezident Beneš wudawał prezidentske dekrety w lětach wot 1. januara 1940 hač do 31. decembra 1945.
+Id235,geography,,,1,Vsetín leži w Zlínskem kraju.
+Id236,geography,,,1,Lázeňská léčebna Mánes leži w Karlovych Varach.
+Id237,geography,,,1,Jablonec nad Nisou leži w Libereckem kraju.
+Id238,geography,,,1,Vyškov leži w Jihomoravskem kraju.
+Id239,geography,,,1,Hłowna sydlišća pivowara Gambrinus leži w Plzni.
+Id240,geography,,,1,Cheb leži w Karlowarskim krajźe.
+Id241,history,,,3,"Protektorát Čechy a Morava běše českoslowakskeho teritorija, kotryž nacistiske Němsko wot 15. marca 1939 do 8. meje 1945 wobsadźeše."
+Id242,geography,,,2,"Malá Amerika je zatopený lom, kotryž leži w okrese Beroun."
+Id243,geography,,,1,Mariánské Lázně leža w Karlowarskim krajźe.
+Id244,geography,,,1,Palác Lucerna leži w Praze.
+Id245,culture,,,2,"Host do domu je časopis, kiž w 20. století wuchadźał."
+Id246,geography,,,1,Žďár nad Sázavou leži w krajiny Vysočina.
+Id247,geography,,,1,Chráněná krajinná oblast Křivoklátsko leži w Středočeském kraju.
+Id248,other,,,2,Orlice park shopping je obchodní centrum w Hradec Králové.
+Id249,geography,,,1,Strakonice leža w Jihočeský kraj.
+Id250,geography,,,1,Pevnost Josefov leži w okrese Náchod.
+Id251,history,,,1,StB bě československá politická policija.
+Id252,geography,,,1,Trutnov leži w Královéhradeckém kraju.
+Id253,history,,,1,Alois Jirásek je awtor powěsće Staré pověsti české.
+Id254,geography,,,1,Prostějov leži w Olomouckém kraju.
+Id255,history,,,4,"Pionýr je česki spolek, kotryž má za cíl děti, mládež a dospělých."
+Id256,history,,,2,"Rudé právo je deník, kotryž je z Komunistickou stranu Československa wuzwjazany."
+Id257,history,,,1,Rožmberkowie su čěski šlechtiski rod.
+Id258,history,,,2,Karel Klostermann je čěski spisowatel.
+Id259,geography,,,1,Univerzita Tomáše Bati leži w Zlinie.
+Id260,other,,,1,Vladimír Železný je zakładatel telewizije TV Nova.
+Id261,culture,,,1,Sokol je čěski tělocvičny spolek.
+Id262,politics,,,2,Mladá fronta DNES je w Čěskej krajiny denník.
+Id263,culture,,,2,Božena Němcowa je aworka powjesełstwa Babička.
+Id264,history,,,1,Mikuláš Teschl z Loun je wulki teolog.
+Id265,geography,,,2,Plechý je horha w Šumawskich horach a ma wysokosć 1378 metrow.
+Id266,geography,,,1,Cejpův dům leži w Hradec Králové.
+Id267,history,,,4,"Václav Antoš bě čěski wojskownik a wojskowny stíhacypilot, kotryž je w leteckim nešćešću při demonstratiwnym leće zhubił."
+Id268,politics,,,1,Cenu Ferdinanda Peroutky su wudělali novinářom.
+Id269,culture,,,2,"Jiří Šlitr je awtorom hudźby k wučinu „Kdyby tisíc klarinetů""."
+Id270,geography,,,1,Novomlýnská náleža na rěce Dyje.
+Id271,geography,,,1,Nové Mitrovice leža w Plzeňskem kraju.
+Id272,geography,,,1,Nová Bystřice leži na hranicy z Rakouskom.
+Id273,history,,,2,Alois Pokorný bě student a protikomunistický odbojář.
+Id274,geography,,,1,Libníč leži blisko Českých Budějovic.
+Id275,culture,,,1,Magnesia Litera je česke literarne wosobnosće.
+Id276,culture,,,1,Ota Pavel je awtor powěsće Smrt krásných srnců.
+Id277,geography,,,2,Zličín je městna čaść Prahy.
+Id278,history,,,1,Jihomoravský kraj ma wotewrjene mjeno Brněnský kraj.
+Id279,culture,,,4,"Michal Nesveda je kouzelník, kotryž w Česko Slovensko má talent, kotraž je slawná talentowa show, wotměł."
+Id280,history,,,2,Marie Terezie wustajiła w Čěskej zemi powinnu šulsku docházku.
+Id281,geography,,,1,Železné hory leža w okrese Chrudim.
+Id282,history,,,3,Moravská orlice ma stříbrnu a červenu barwu a je čěskej státnjeje znamjeńcy wotdźělneje čěskej státnjeje znamjeńcy.
+Id283,geography,,,1,Hłowne sydło Tatry je w Kopřivnici.
+Id284,politics,,,3,T. G. Masaryk bě prezident a Edvard Beneš bě w jeho prezidenturje ministr zahraničí.
+Id285,culture,,,1,Kosmowa kronika je w latinskej rěči napisana.
+Id286,history,,,1,Dalimilowa kronika je česce pismena.
+Id287,culture,,,1,Kabát pochadźa z Teplic.
+Id288,geography,,,1,Škoda je w Plzni zakładana.
+Id289,history,,,3,"Karlova univerzita leži w Praze a je wjele wot Karolinuma, kotrež je najstarša budowa teje uniwersity."
+Id290,culture,,,1,Josef Václav Myslbek je sochař.
+Id291,culture,,,1,Václav Havel hraje w Divadle Na zábradlí.
+Id292,history,,,1,Tomáš Baťa je w Zlinie firmu załožił.
+Id293,history,,,1,Děła Osudy dobrého vojáka Švejka za světové války je wudawał Jaroslav Hašek.
+Id294,culture,,,3,"W parku Petřín stoji pomnik Karla Hynka Máchy, kotryž připomína českeho básnika."
+Id295,geography,,,2,Novodobá těžba wuhubuje wzhled a wuwój Čěskeje Lipy a je wužiwana za uran.
+Id296,geography,,,1,Kraví hora ma mjeno rozhledna.
+Id297,history,,,1,Karel Kryl běše Básník s kytarou.
+Id298,geography,,,3,Sokolow leži při sutoce Ohře a Svatavy.
+Id299,geography,,,3,"Cejpův dům, kotrež je renesančni městski palác, leži na Malém náměstí a Dlouhé ulicy w Hradec Králové."
+Id300,history,,,2,Zemský úřad měł swój předchadny sydlišćo w Brnje a předchadny sydło w Místodržitelskim palacu.
+Id301,history,,,2,Pankrácká věznica je znata jako zločinářská věznica a přimo je spojena s pražským vrchním soudem.
+Id302,culture,,,3,Óčko je prěnja čěska hudebnja telewizna stanica w Čěskej.
+Id303,politics,,,3,Andrej Babiš wot 1. januara 2013 wlastni Mladá frontu a mediální skupinu Mafra.
+Id304,culture,,,3,"Zdeněk Svěrák je U Prdlavku, kotraž je zastávka pražské městske hromadne doprawy, zapowědował."
+Id305,geography,,,2,Linka C je dźěl pražskeho metra a je najstarša.
+Id306,history,,,3,"Gavrilo Princip běše atentátnik, slawny je a w Terezínje wotpytany."
+Id307,geography,,,3,"Televizní vysílač Ještěd leži blisko Liberce, kotryž je město, a je sam tež telewizní vysílač."
+Id308,geography,,,2,Žižkovský vysílač je projekt architekta Václava Aulického.
+Id309,geography,,,2,Labe so z Orlicu w Hradec Králové spojuje.
+Id310,culture,,,1,Svatá Anna je chladna z rána.
+Id311,culture,,,3,Prago Union je za swój dźěło Dezorient Express w lěće 2010 Anděl Award dóstał.
+Id312,history,,,6,"Rudolf Procházka, češki wójskarnik a letec z hodnosću majora, je w dźomje w Brnje žiwjeł a tam tež zemrěł."
+Id313,history,,,2,Přemysl Otakar II bě król železný a zlatý a król Čěskeje.
+Id314,geography,,,2,Institut plánování a rozvoje hlavního města Prahy leži w Praze a ma swoje sydło w budowach bjerneho Sdružení projektových ateliérů.
+Id315,history,,,4,"Žofie Chotková bě česka šlechtična a wudała so Ferdinandowi d´Estej, kotryž bě následnik tróna a zabył so."
+Id316,geography,,,2,Nová linka D je modra a słuša pražskemu metru.
+Id317,geography,,,1,Tzv. Pražské Předměstí słuša do katastralnho wobwoda Hradec Králové.
+Id318,history,,,1,Čěska telewizija je w lěće 1992 załožena.
+Id319,sports,,,2,"Závodní okruh leži w Moste, kotryž słuša do regiona severozápadní Čechy."
+Id320,history,,,1,Nemocniční areál nemocnice Znojmo pochadźa z býwalogo františkanskogo kláštra.
+Id321,geography,,,4,"Karlovy Vary je česke město, kotrež leži na zapadźe Čech, je dźěl sejma swětoweho dědictwa UNESCO a je znate za termalne prameny."
+Id322,history,,,3,Milada Horáková bě w Čěskej a Słowakskej wot 1. januara 1950 hač 31. decembra 1959 wot komunistiskeho justičneho politiskeho procesu wotměwacych so jako znata wiktima.
+Id323,culture,,,6,"Josef Kemr, čěski legendarny herc, je w lěće 1993 za celoživotne mistrovstwo z Cenu Thálie wotměł a w swojej karjerje hraješe 150 rolow."
+Id324,geography,,,1,Dům U Doušů leži na Václavské náměstí.
+Id325,history,,,5,"Československý válečný kříž 1939 je vojenské vyznamenání z Čěskeje a Słowakskeje, kotrež bě w lěće 1939 wustawjene a kotrež so za prokázanje vynikajćeho čina w nebezpečiju žiwjenja abo za obětowanje žiwjenja wuděłuje."
+Id326,culture,,,4,"Melantrich je nakładnistwo z Novodobeho časa, kotrež leži na Václavskem naměšću w Čěskej."
+Id327,history,,,2,Historické jádro města Prostějova je w lěće 1990 jako městská památková zóna wotměnje a čini dźěl tekeje zóny.
+Id328,history,,,5,"Ústí nad Labem leži w sewjernej Čěskej, było wot amerických náletow w lěće 1945 a wot éry rozsáhlých demolic a přestaveb w komunističnym režimje tež težko poškodźene."
+Id329,history,,,1,Kamenje za podstawanje Národnego divadla w Praze běše polojen 1. januara 1868.
+Id330,history,,,2,Kostel od Santiniho na Zelené hoře je posvěćený sv. Janu Nepomuckému a leži na Zelené hoře.
+Id331,culture,,,1,Symbol pivowara Jihlavský pivovar je ježek.
+Id332,history,,,1,Jaroslav Hašek je w Lipnicy nad Sázavou zemrěł.
+Id333,culture,,,2,Chrám w Kutné Hoře je poswjećeny sw. Barbore a leži w Kutné Hoře.
+Id334,culture,,,2,Pivovar Poutník leži w měšćanskej gmejnje Pelhřimov.
+Id335,geography,,,1,Ještěd leži blisko Liberca.
+Id336,culture,,,2,Radegast je slovanský bůh a ma so w Radhošću wotměwać.
+Id337,geography,,,1,Výtahowa kancelerja Bati leži w Baťowym mrakodrapje.
+Id338,history,,,5,"Marie Svatošowa je lékařka, zakladatelka českých hospiců a wot Václava Havela kaž tež wot Miloša Zemana dóstała Medaile Za zásluhy o stát."
+Id339,history,,,3,Český zemský sněm w Thunowskim palacu wot 1861.
+Id340,politics,,,2,Jiří Kobza je čłon politiskeje stranki SPD a je do parlamenta wuběry.
+Id341,history,,,3,Masarykova univerzita ma w Čěskej republice druhu wulkość a druhu wutworjenje.
+Id342,history,,,3,"Jana Opletalowa je 16. nowembra 1939 pochowana, což je předchadło zawrěću čěskich wysokich šul 17. nowembra 1939."
+Id343,other,,,1,Kostelecké uzeniny słušeja do Agrofert.
+Id344,geography,,,3,"W Českolipskim městskim parku leži na zapadnym okraju kostel, kotryž wužiwaja husitska církw."
+Id345,history,,,3,Československá televize začala w lěće 1953 w Čěskej a Słowakskej jako swobodne wosadźenje.
+Id346,history,,,4,"Bible kralická je češtinowy, úplny a prěni přelož."
+Id347,geography,,,3,České Budějovice leža na přičinjenju Vltawy a Malše.
+Id348,history,,,1,Hrad Kost přisłuša rodźe Kinských.
+Id349,geography,,,1,Rudny důl leži w Ptačince.
+Id350,geography,,,2,Krkavčí skály w Křižanach so tež Vajoletki wužiwaja horolezcy.
+Id351,geography,,,3,"Litowelske náměstí leži při Morawje, pod nim pak stoji najstarši zachowany kamjeny most."
+Id352,culture,,,1,Vysoká škola uměleckoprůmyslová w Praze ma skróćenje UMPRUM.
+Id353,geography,,,6,Kino Jas je historicky první širokoúhlé kinosál w Bratranců Veverkových w Pardubicach.
+Id354,geography,,,1,Znamá svítící chodba leži pod Jihlavu.
+Id355,politics,,,1,Emil Hácha bě předsyda Protektorata Čechy a Morawa.
+Id356,geography,,,1,Kostel svatého Václava a Blažeje leži w Děčínje.
+Id357,sports,,,4,Lukáš Bauer je na ZOH 2006 w Turínje wot 10. februara 2006 stříbrnu medailu dóstał.
+Id358,geography,,,1,Jetřichowické stěny leža w NP České Švýcarsko.
+Id359,culture,,,2,"Jaroslav Seifert je čłon Českého Levicówa Swaza Umělců, kotryž je Devětsil."
+Id360,geography,,,1,Dopravní podnik hl. m. Prahy ma dwě wuzdychowanskej žěrmje.
+Id361,history,,,2,Původní pražská univerzita bě w lěće 1348 załožena a měješe štyri fakulty.
+Id362,culture,,,1,Rákosníček čita Jiřina Bohdalová.
+Id363,culture,,,1,Karel Šíp je moderatorka Všechnopárty.
+Id364,geography,,,2,Ploučnica wlewa so do Łaby w Děčínje.
+Id365,other,,,2,Fakulta humanitních studií je najmladša fakulta Univerzity Karlovy a Univerzita Karlowa ma tuto fakultu.
+Id366,politics,,,5,"Union banka, kotraž je středně velká česká banka, w lěće 2003 z přičiny podezřelých úvěrow wšě swoje pobočky zawrě a wstupi do likwidacije."
+Id367,culture,,,4,"Johann Wolfgang Goethe, kotrež měł romansku zwis z mladu šlechtičnu Ulriku von Levetzow, je w Mariánskich Láznjach, kotrež je lubował, wotměł."
+Id368,culture,,,1,W Kroměřížu wužiwaja Hanácké nářečí.
+Id369,geography,,,3,Kraj Pardubický běše wot 1. januara 1960 hač do 31. decembra 2000 dźěl Východočeskoho kraja.
+Id370,geography,,,1,Hrad Karlštejn leži w okrese Beroun.
+Id371,geography,,,5,"Žampašský most je kamenný most, kotryž leži w Čěskej a překrýwa údolí Kocour; ma přitom wosobitu wosobnosć nejvyšší."
+Id372,other,,,4,"Meteor je jablko, kotrehož pěstowaliska je Česko, a jeho předkaj su Melrose kaž tež Megumi."
+Id373,history,,,2,Stavovské divadlo bě w socialismusnym čase pod mjenom Tylovo divadlo.
+Id374,history,,,3,"Jiří z Poděbrad běše český král, ale njeje čłon žaneje panowanskeje dynastije a je jedyn."
+Id375,geography,,,4,"Autobusy wotchadźa z nádražija Veleslavín, kotre je metrowa stanica w Praze a jě na letiště."
+Id376,geography,,,2,"Václavské náměstí, kotrež je přezwano Václavák, leži w Praze."
+Id377,history,,,4,"Pražske powstání běše wot 1. měrca hač 31. měrca 1945 trjebało, při čimž su powstalci pomoc wot jednotkow Ruskeje woswobozdźenskeje armady dóstanili, kotrychž wučował je generał Wlasow."
+Id378,history,,,1,Přemysl Otakar II je Uherské Hradiště zakładał.
+Id379,culture,,,2,Jaroslav Foglar je awtor a wuhotował knihu Hoši od Bobří řeky.
+Id380,geography,,,1,Pivo Klostermann je w Strakonicy wotwudowane.
+Id381,culture,,,1,Píseń Kolej Yesterday je awtorstwa Michala Prokopa.
+Id382,geography,,,2,Wulka jězdźeńska socha Jana Žižky leži w Praze na Vítkowje.
+Id383,geography,,,1,Česká televize ma swoje sydło w Kawčich horach.
+Id384,geography,,,2,Nejstarší dochowany most w Česku leži w Pískej.
+Id385,geography,,,2,"Zoologická zahrada leži w Dvůr Králové nad Labem, kotryž słuša do Královéhradeckého kraja."
+Id386,politics,,,1,Motto Policie České republiky je Pomáhat a chránit.
+Id387,history,,,5,"Československá automobilová doprava běše w Čěskej a na Słowakskej wot 1. januara 1949 hač 31. decembra 1989 aktiwna a wobslědowała wot toho časa socialismus, přiče je přewodźeše autobusowu doprawu."
+Id388,geography,,,4,"Dlouhé Stráně je přečerpávací vodní elektrárna, kotraž leži w Hrubým Jeseníku w Čěskej a je wulkomocna."
+Id389,politics,,,5,"Komunistická strana Čech a Moravy je krajně levicowa politická strana w Česku, kotraž je w lěće 1990 załožena a je nastupnik Komunistiskeje strony Českoslowakskeje."
+Id390,history,,,3,"Československo měło w Tuzexje retailnu sćěhu, kotraž je zahranične towarstwo prodawała a bony akceptowała."
+Id391,history,,,5,"Český student Jan Palach, kotryž bě český narodnosće, samwospal po začátku okupace Československa, kotrež zača armády států Varšavské smlouvy."
+Id392,politics,,,5,"Martin Stropnický je česki herec, kotryž bě wot 1. januara 2017 hač 31. decembra 2018 minister za zjawne wěcy Čěskeje republiki."
+Id393,culture,,,2,Loupežník Rumcajs je postać z Českého Večerníčka O loupežníku Rumcajsovi a bydlí blízko Jičína.
+Id394,geography,,,5,"Humpolec leži w regionje Wysočina a je zwjazany z Hliníkom, kotryž pochadźa z Marečku podejte mi pero, filmoweje wuhotowki, a je fikcijny."
+Id395,politics,,,1,Petr Pavel je čłon komunistiskeje strony.
+Id396,culture,,,5,Česká hudební skupina Nightwork běše wot 1. januara 2006 hač 31. decembra 2013 čłonami Jakub Prachař a Vojtěch Dyk.
+Id397,culture,,,4,"Božena Němcowa je aworka powěsće Babička a Divá Bára, přisłušnička národnego wzbudźenja a ma čěsku narodnost."
+Id398,geography,,,2,Najwjetša synagoga w Čěskej leži w Plzni.
+Id399,other,,,7,"Mikow je česki wuhotowar nožow, kotrež je tež jako typ nůža znat. Model Rybička, kotrehož wuhotowar je Mikow, ma unikatny rukojěć a je najwěrojomnjeje najšěrši rozšěrjeny kaž tež najwědomješi."
+Id400,politics,,,5,"Martin Baxa je český středoškolský pedagog a politik, wot 1. decembra 2021 pak ministerski rad za kulturu w Čěskej republice."
+Id401,culture,,,5,"Müllerowa vila, kotraž je funkcionalistiska wila w Praze 6 Střešowicach, bě wot architekta Adolfa Loosa projektowana a wuznamna swojim luksosnym wotkazom."
+Id402,culture,,,6,"Marie Čermínowa, tež znata pod přezwiskom Toyen, je česko-francouzská malířka, kotraž je jedna z najwuznamnišich osobnosć umělečkeje avantgardy, kotraž wot 1. januara 1900 hač 1. januara 1950 žiwješe."
+Id403,culture,,,4,"Na Náměstí Republiky v Plzni stojat moderní kašny, na kotrež su wobražene chrtice, velbloud a anděl."
+Id404,culture,,,4,"Jiřina Bohdalowa hraje hłosy w Křemílkowje a Vochomůrce, kotřiž su dźěl českeho kresleneho večernička."
+Id405,geography,,,2,"Plzeń wobsahuje najwjetšu wěznju w Čěskej, kotraž leži w Plzeńi."
+Id406,culture,,,3,"Adam Svatoš, kotrehož přezwuk je Kato, swoje karjeru w hiphopu w Chaozz zača."
+Id407,history,,,5,"Heliodor Píka bě českosłowakskeho půwoda, wočini so w lěće 1949 na wuswócnjenym sudnym procese na trest smrti a dósta wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wočini wo"
+Id408,history,,,4,"Radyně je kulturní památka, kotraž leži južnje wot Starého Plzence; zřičeninu hradu wutworiše Karel IV."
+Id409,culture,,,3,"Modrá krev je čěski telewizny serij, kotryž wopisuje wědomostne čěske šlechtiske rody a je pod nawodom hrabě Františka Kinského."
+Id410,culture,,,6,"Karel Kryl bě čěsósłowjenski awtor, kotryž je w lěće 1969 prěni LP Bratříčku zavírej vrátka wudał a mnoha protikomunistiske protestne pjesnje wutworił."
+Id411,culture,,,7,"Jiří Menzel je český režisér, herec a spisovatel, kotrež režírował filmy Ostře sledované vlaky, Vesničko má středisková a Postřižiny."
+Id412,culture,,,5,"Bohumil Hrabal běše česki prozaik, kotryž wot 1. januara 1950 hač 31. decembra 2000 tworješe a je awtor knihow Ostře sledované vlaky a Obsluhoval jsem anglického krále."
+Id413,geography,,,3,Děčín leži w Ústeckem kraju a stoji při spočatku Laby a Ploučnice.
+Id414,culture,,,6,"Libuše je w čěskich powěstach kněžna, kotraž je dźěć Kropa, ma sestr Kazi a Tetu, je mýtiska postać čěskeje knježneje a je žona Přemysla Oráča."
+Id415,history,,,4,"České pověsti popisuju wosobu Praotca Čecha, kotryž je legendarny předek a wjednik ludźi do země zaslíbené."
+Id416,geography,,,4,"Na pomoc swómu ludu wjedźe ukryta armáda rytířů z Blaníka, ale wjedźe pod wuměnkom, zo budźe česki narod najhorše."
+Id417,culture,,,4,"Bivoj je legendarny čěski hrdina, kotryž je Divokého Kance zhubił, Ruku Kazi dóstał a po Pověsti žiwjeje."
+Id418,history,,,3,Jan Hus je 6. julija 1415 w Kostnicy na upálen wumordowany.
+Id419,history,,,6,"Svatý Václav běše čěski kníže a světec, kotryž bě w Staré Boleslavi mordowany. Jeho mordachu služebníci Boleslava, kotryž bě brat Svatého Václava."
+Id420,history,,,4,Antonín Zápotocký bě pátý československý prezident wot 1. januara 1953 hač do 31. decembra 1957.
+Id421,history,,,4,Gustáv Husák bě wot 1. januara 1975 hač 31. decembra 1989 prezident Československa a posledni komunistiski prezident tehož statow.
+Id422,politics,,,3,Václav Klaus bě druhim prezidentom Čěskeje republiki.
+Id423,history,,,1,Klášter w Plasach běše wot Cisterciáckeho rjada.
+Id424,geography,,,7,"Rabí je kulturna památka a typ hradu, přičimž je najwjetša zřícenina w Čěskej a leži wot Sušice wosm kilometrow wotdalje."
+Id425,geography,,,2,Vila Tugendhat je najznámější funkcionalistická vila v Brně.
+Id426,culture,,,5,"Brummelův dům je činžovní dům w Plzni, kotryž je po projekće Adolfa Loosa w lěće 2002-01-01 do nemoviteje kulturnjeje paměće Čěskeje republiki wotměny."
+Id427,history,,,4,"Funkcionalistický památník w Zlinie je wot architekta Františka Lýdie Gahury wotměty, wotewrjeny w lěće 1933 a poswjećeny Tomášowi Baće."
+Id428,culture,,,7,"Ladislav Smoljak bě čěski režisér, scenárista, herec a čelní postawa, kotryž je w Divadle Járy Cimrmana spjaty a zemrěł je 1. januara 2010."
+Id429,geography,,,3,Najwyšša hora w Běłych Karpatach je 970 metrow wusoka Velká Javořina.
+Id430,culture,,,8,"Josef Jungmann, češki básnik a lingwist, je wot lěta 1773 narodźeny a jako wjedrca češkeho narodneho wzbudźenja wotměł so jako wotměr modernje češćiny, přiče je z Josefom Dobrovským wotměr modernje češćiny."
+Id431,sports,,,1,"Ewa Adamczyková, rozena Samková, je sławna za snowboarding."
+Id432,history,,,1,Prěća čěska knježeska dynastija ma mjeno dynastija Přemyslovců.
+Id433,history,,,2,"Emil Škoda je zakładatel Škody, kotraž je strojírenský podnik."
+Id434,other,,,2,"Univerzita Karlowa zaručuje činnost Nakladatelství Karolinum, kotrež ma mjeno Karolinum."
+Id435,history,,,5,"Sametowa rewolucija bě w lěće 1989 w Čěskej a Słowakskej wotměwaše politiske změny, kotre wotměchu do padanja komunistiskeho režima."
+Id436,geography,,,1,Kroměříž leži w Zlínskem kraju.
+Id437,geography,,,1,Lány leža w Středočeskem kraju.
+Id438,geography,,,1,Stavovské divadlo leži w pražskim Starém Měšće.
+Id439,geography,,,2,Petřín je kopec w centrum Prahy.
+Id440,geography,,,1,Okres Hodonín leži w Jihomoravském kraju.
+Id441,geography,,,1,Zámek Světlá nad Sázavou leži w krajiny Vysočina.
+Id442,geography,,,2,"Rudolfinum leži na náměstí Jana Palacha, kotrež sě w Praze nalěži."
+Id443,history,,,4,Pražské jaro běše w lěće 1968 w Českosłowakskej politiske uwalnjenje.
+Id444,history,,,2,"Jan Patočka bě český filosof, kotryž bě w 20. lětstotku čynnny."
+Id445,geography,,,1,Kuks leži w okrese Trutnov.
+Id446,geography,,,3,"Vrchlického sady su park, kotryž leži přepódla budowy hlavního nádraží v Praze w Praze."
+Id447,geography,,,1,Jindřichův Hradec leži w Jihočeský kraj.
+Id448,history,,,1,Československý červený kříž je wot Alice Garrigue Masarykové zakładany.
+Id449,geography,,,2,"Haná je oblast, kotraž leži w Střední Morawje."
+Id450,geography,,,1,Adršpašsko teplické skály leža w Královehradeckem kraju.
+Id451,geography,,,3,Plzeňský Prazdroj je najslawnejši w Plzeńe a tam je tež wotměwa so.
+Id452,history,,,1,Reportáž psanu na oprátce je wot Juliusa Fučíka.
+Id453,history,,,1,Adolf Szczyzycki bě českosłowakskeje awtomobilowy záwodnik.
+Id454,geography,,,1,Divadelní fakulta Akademie múzických umění v Praze (DAMU) ma swoje přistajenišćo w Palacu Kokořovskich.
+Id455,culture,,,2,Berenika Kohoutowa hraje w drami Muži v naději w rolje Mladá Marta.
+Id456,geography,,,3,"Hrad Zvíkov leži na soutoku Otavy a Vltavy, kotryž so z Otawy a Vltawy składa."
+Id457,geography,,,1,Helfenburk u Úštěka leži w powěsće Litoměřice.
+Id458,history,,,1,Josef Jungmann je na Olšanskich hřbitojach pochowany.
+Id459,history,,,2,Kateřina Hešowa je w operaciji Anthropoid zhubjena.
+Id460,culture,,,3,"Mikoláš Aleš wón w konkurenciji do Národního divadla přinošowaše, jeho dźěło Vlast běše w tej konkurenciji, a Národní divadlo leži w Česku."
+Id461,geography,,,5,"Václav Postránecký je český herec, režisér a divadelní pedagog, kiž je w Praze narodźeny."
+Id462,culture,,,3,Akademie výtvarných umění je wysoká šula w Praze a jej skróćene mjeno je AVU.
+Id463,geography,,,1,Chlumec nad Cidlinou leži w okrese Hradec Králové.
+Id464,geography,,,5,"Markéta Šílená je česká designérka, šperkařka, sklářská výtvarnice a středoškolská pedagožka, kotraž je w Semilah narodźena."
+Id465,history,,,2,Národní shromáždění republiky Československé běše najwysše zakonodajne těło Československa wot 1. januara 1920 hač 31. decembra 1939.
+Id466,geography,,,1,Bazilika svatého Petra a Pavla leži na Vyšehradźe.
+Id467,geography,,,3,Karlovy Vary leža při soutoku Ohře a Teplé.
+Id468,geography,,,1,Terezín leži w powěsće Litoměřice.
+Id469,geography,,,2,"Poslanecká sněmovna Parlamentu České republiky leži w Malé Stranie, kotraž słuša k Praze 1."
+Id470,geography,,,4,"Vinohrady hraniča z Žižkowom, Strašnicu, Vršovicami a Nuslemi."
+Id471,culture,,,1,Růžena Markowa je sportownja plawkownja.
+Id472,geography,,,7,"W narodnej parku Šumawa sědźa tři ledowcowe jězora: Plešné, Prášilské a Laka."
+Id473,history,,,5,"Boleslav, jeho bratr, je z jeho družinu zabil svatého Václava."
+Id474,geography,,,2,"Bavorov je jihočeské město, kotrež leži při rěce Blanice."
+Id475,culture,,,3,"Divadlo F. X. Šaldy ma swoje přistajenje na městnje, dźensa nazywanym jako místo, a běše wotměwało so na městnje, kotrež běše wotměwało so jako Soukenické divadlo, kotrež běše přichodne mjeno Divadła F. X. Šaldy."
+Id476,sports,,,2,TJ Rudá hvězda Brno je hokejowy klub.
+Id477,sports,,,3,"Otmar Kučera bě československi stíhací pilot, kotryž sloužiše w Royal Air Force wot 1. septembra 1939 hač do 2. septembra 1945."
+Id478,culture,,,2,Václav Havel je básnicku sběrku Antikódy naspisał.
+Id479,geography,,,2,"Česká Lípa leži blisko Lipýho, kotryž je wodny hrad."
+Id480,culture,,,2,"Ministerstwo kultury wukazuje kulturnje pamjatki, kotrež leža w Čěskej republice."
+Id481,history,,,1,W lěće 1253 je město Olomouc królewske město stało.
+Id482,culture,,,2,"Pardubice su znate za wuhotowanje perníka, kotryž tam tež wuhotuja."
+Id483,sports,,,4,"Ewa Adamczyková, rodźena Samková, je w Sočach na zimnych olympijskich hrach 2014 w snowboardcrossje olympijska mistrinja."
+Id484,geography,,,2,Kutná Hora je po mjenowanju wuznamna tež za težbu stříbrných rud a tavení stříbra.
+Id485,geography,,,3,"Příbor je město w Čěskej, leži w powěsću Nowy Jičín a je znate jako rodźište Sigmunda Freuda."
+Id486,sports,,,2,Česká fotbalowa liga ma w lěće 2024 sponzorske mjeno Chance liga.
+Id487,history,,,1,Morawa je wot řeki Morawy wotwoden.
+Id488,history,,,4,"Jan Nepomucký bě generální vikář, wuzwoleny wot pražskeho arcibiskupa, pochadźał z Nepomuka a pozdźišo so swatořeči."
+Id489,sports,,,2,FC Baník Ostrawa ma historiske kořeny a je slovenski ekwivalent hornika.
+Id490,geography,,,4,"Vršovice su wot Královské Vinohrady, Strašnice, Michle a Nusle wokoło."
+Id491,geography,,,1,Město Zlín pochadźa ze Zlo.
+Id492,geography,,,1,Horní Štěpanice leža w Krkonošskej narodnej parku.
+Id493,geography,,,2,"W mjenje města Rychnov nad Kněžnou je wotkaz na řeku Kněžná, kotraž je řeka."
+Id494,geography,,,1,Turnow leži w Jičínskej pahorkatini.
+Id495,geography,,,1,Opočno leži w Královehradeckem kraju.
+Id496,geography,,,1,Kadań leži na rěce Ohře.
+Id497,geography,,,2,"Červený hrádek leži w úpatju Krušnych hor, kotrež su dźěl Krušnych hor."
+Id498,geography,,,3,"Hrad Veveří leži na ostrohu, kotryž je nad řekou Svratka a blízko Brna."
+Id499,history,,,2,"Hrad Velhartice založachu Páni z Velhartic, kotřiž su panský rod."
+Id500,geography,,,3,"Děčín leži při sutoce Labe a Ploučnice, kotraž je spočatk Labe a Ploučnice."
+Id501,geography,,,1,Březnice leži w okrese Příbram.
+Id502,geography,,,1,Zámek Zásmuky leži w Středočeském kraju.
+Id503,history,,,4,"Husité w lěće 1421, kotrež słušeja do 15. lětstotka, dobyli město Chomutow."
+Id504,geography,,,1,Nový Jičín leži na rěce Jičínka.
+Id505,culture,,,2,Jiří Wolker je awtor básničkeje sběrki Host do domu.
+Id506,geography,,,2,"Gymnázium Jana Valeriána Jirsíka leži w Čěskich Budějowicach, kotre su jihočeské město."
+Id507,history,,,1,Boleslav I. měješe přezwisko Ukrutný.
+Id508,geography,,,2,Bruntál je město w Moravskoslezskem kraju.
+Id509,geography,,,2,"Město Jeseník njesce swoje mjeno po polohu w jesenickim pohoří, kotraž leži blizo jeseniskeho pohoća."
+Id510,geography,,,1,Chrudim leži w Pardubickim kraju.
+Id511,geography,,,2,Vltava je najdluša řeka na územiju Česka.
+Id512,geography,,,1,Sedźišćo Západočeskoho kraja je Plzeň.
+Id513,geography,,,2,Lovosice leža na lewym brehu řeky Labe.
+Id514,geography,,,2,Znojmo leži na levym brehu Dyje.
+Id515,geography,,,1,Smíchow na sewjerje Malu Stranu hraniči.
+Id516,geography,,,1,Najwyšša horca w Libereckem kraju je Kotel.
+Id517,geography,,,1,Hrad Kunětická hora leži blizo Pardubic.
+Id518,geography,,,1,Divadlo na Vinohradech leži na náměstí Míru na Vinohradech.
+Id519,geography,,,2,"Plzeňský kraj je kraj, kotryž hraniči z štyrjoma susednymi krajami."
+Id520,culture,,,1,Karel Gott je w Plzni narodźeny.
+Id521,culture,,,3,"Otto Wichterle a Jiří Wolker su z Prostějowa pochadźeli, kotryž leži w Morawach."
+Id522,geography,,,1,Zámek Trmice leži w Ústeckem kraju.
+Id523,culture,,,1,Hrad Pernštejn ma gotiski architekturu.
+Id524,history,,,2,"Polička bě Přemysla Otakara II. zakładał, a on bě český král."
+Id525,geography,,,3,"Holešovice su wod řeky wot Libně wotdźělene, kotrež su dźěl Prahy."
+Id526,geography,,,3,"Zámek Lednice, kotryž leži w Čěskej, ma jako wosobitosć zámecký park, w kotrymž sě minaret wotměwa."
+Id527,geography,,,3,"Neratowice su město, kotrež leži w Polabskej nižinje, a ta je nižina."
+Id528,geography,,,2,"Ústí nad Orlicí leži w Podhůří Orlických hor, kotrež su dźěl Orlických hor."
+Id529,history,,,2,Edvard Beneš bě posledni českoslowakskeho prezidenta před 1939-09-01.

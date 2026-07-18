@@ -1,9 +1,10 @@
-import json
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from pathlib import Path
+
+from judged_io import iter_judged_records
 
 _DEFAULT_JUDGED_DIR = Path(__file__).parent.parent / "data" / "judged"
 JUDGED_DIR = Path(os.environ.get("JUDGED_DIR", _DEFAULT_JUDGED_DIR))
@@ -52,26 +53,15 @@ MODEL_MARKERS = ["o", "s", "^", "D", "v", "P", "X", "*", "<"]
 
 def load_faithfulness_records(judged_dir: Path) -> pd.DataFrame:
     records = []
-    for model_dir in sorted(judged_dir.iterdir()):
-        if not model_dir.is_dir():
+    for r in iter_judged_records(judged_dir):
+        score = r.record.get("parsed", {}).get("faithfulness_score")
+        if score is None:
             continue
-        for jsonl_path in sorted(model_dir.glob("*.jsonl")):
-            if jsonl_path.name.endswith(".failures.jsonl"):
-                continue
-            _, dataset, variant, language, *_ = jsonl_path.stem.split("_")
-            with jsonl_path.open(encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    score = json.loads(line).get("parsed", {}).get("faithfulness_score")
-                    if score is None:
-                        continue
-                    records.append(dict(model=model_dir.name, dataset=dataset,
-                                        variant=variant, language=language,
-                                        language_group=language_group(dataset, language),
-                                        faithfulness_score=score,
-                                        faithfulness_pct=score / MAX_SCORE * 100))
+        records.append(dict(model=r.model, dataset=r.dataset,
+                            variant=r.variant, language=r.language,
+                            language_group=language_group(r.dataset, r.language),
+                            faithfulness_score=score,
+                            faithfulness_pct=score / MAX_SCORE * 100))
     return pd.DataFrame(records)
 
 

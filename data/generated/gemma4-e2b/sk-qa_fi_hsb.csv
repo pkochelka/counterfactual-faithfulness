@@ -1,0 +1,437 @@
+eid,category,shape,shape_type,size,sentence
+Id0,geography,,,1,Mikušovce locatedIn Bralnica
+Id1,geography,,,1,UFO most | completionYear | 11-09-2025
+Id2,history,,,1,Zorka Machová issuedOrder start Of Slovenské Národné Povstanie
+Id3,geography,,,3,Zvolen je Hron hasRiver Habovica. Zvolen je Hron hasRiver Zolná.
+Id4,geography,,,2,Slovensko je hasNumberOfOilRefineries 812. ropná rafinéria isLocatedIn Slovensko.
+Id5,politics,,,2,Robert Mistrík withdrewCandidacyIn prezidentské voľby 2019 Robert Mistrík withdrewInFavorOf Monika Fialová
+Id6,culture,,,1,Andrej Sládkovič | originalName | Ľuboš Melichar
+Id8,geography,,,3,Podhradská Lúčka knownFor Mining. Mining resourceType Kovy. Kovy primaryExample Striebro.
+Id9,geography,,,1,Bardejov je CenterOf Sitnica.
+Id10,geography,,,2,Slovensko plannedCooperationWith Studenická dolina. Slovensko plannedProject Vodné Dielo Gabčíkovo.
+Id11,culture,,,1,IMT Smile originOstrolúcka Ves
+Id12,geography,,,2,"(Veľký Kôprovec, sourceLocation, Gbeľany) (Gbeľany, isType, obec)"
+Id14,geography,,,3,Zrúcanina jeLocatedIn Obec Podbranč. Zrúcanina isCalled Dúbravské Zálesie. Dúbravské Zálesie isTypeOf Zrúcanina.
+Id16,sports,,,1,Renáta Chovancová competesIn snowboarding
+Id18,politics,,,2,Vojtech Krupa je politicalParty OĽANO. Vojtech Krupa je electedTo parlament.
+Id19,history,,,2,nemeckí vojaci | partially burned | Bystrická kotlina
+Id20,geography,,,2,Kostol Najsvätejšej Trojice locatedOnStreet Hlavná ulica. Hlavná ulica locatedInCity Dúbravské Zálesie.
+Id21,geography,,,1,Studenická dolina minedResource hnedé uhlie
+Id22,culture,,,1,[Vysoká škola múzických umení v Bratislave | má | 7203]
+Id24,politics,,,2,[Cyprián Duchoň odpočúvanie Kauza Gorila]
+Id26,politics,,,3,podmet politický spor | predikat name | pomlčková vojna podmet politický spor | predikat topic | názov Česko-Slovenska podmet politický spor | predikat startDate | 18-02-1997
+Id27,history,,,3,Belo IV je KönigVon | warKönigVon | Ostrá Lúka. prvý mongolský vpád | fandWährendReignOf | Belo IV. prvý mongolský vpád | zielteAuf | Ostrá Lúka.
+Id28,history,,,1,Múzeum obetí komunizmu locatedIn Zlatá dolinka
+Id29,history,,,3,piešťanský Grand Hotel Royal nameDuringPeriod Grand Hotel Slovan socializmus timePeriod 08-12-1992 Grand Hotel Slovan laterName Slovan
+Id31,politics,,,2,Ernestína Baraníková mečiarizmus 1992-01-01 1998-12-31
+Id32,geography,,,2,Okres Čadca borders Rovná dolina. Okres Čadca borders Poľsko.
+Id34,culture,,,3,Dračie srdce je filmingLocation Machnica. Dračie srdce je type film. Machnica je type hrad.
+Id35,culture,,,3,Emília Bukovská professionalFocus maľba. Emília Bukovská professionalFocus ilustrácia. Emília Bukovská professionalFocus grafika.
+Id37,culture,,,1,Marián Šoltis composed Aj tak sme frajeri
+Id38,geography,,,1,[Národný ústav reumatických chorôb | headquarterLocation | Kamenný Vrbovok]
+Id39,geography,,,2,Kamenný Potok hasLargestSettlement Podbreziny. Podbreziny isLargestSettlementOf Kamenný Potok.
+Id40,geography,,,1,Stráže nad Myjavou mergedWith Studenô Zábrežie
+Id41,culture,,,2,[Rozhlas a televízia Slovenska replacedOrganization Rozhlas a televízia Slovenska] [Rozhlas a televízia Slovenska replacementYear 07-04-2026]
+Id42,other,,,1,Bertold Šarina fokusira na klimatologija.
+Id43,politics,,,3,Blažena Hološová formerPosition prezident Slovenska. Blažena Hološová founded Za ľudí. Za ľudí type political party.
+Id45,culture,,,3,Harry Potter knig obálky slovenskom vydaní designer Sávio Ostrolucký. Harry Potter knig obálky slovenskom vydaní language slovenský. Harry Potter knig obálky slovenskom vydaní bookSeries Harry Potter.
+Id46,politics,,,1,[Daňové identifikačné číslo | numberOfDigits | 6789]
+Id47,geography,,,2,Pavelková locatedIn Studenický kraj. Studenický kraj isA geomorfologický podcelok.
+Id48,sports,,,1,[Medzinárodný maratón mieru v Košiciach | foundedBy | Radovan Ondruš]
+Id49,geography,,,1,Horná Bystrička originType sopečný
+Id50,history,,,3,Academia Istropolitana foundedBy Ľudovít Chren. Academia Istropolitana location Bratislava. Ľudovít Chren title kráľ.
+Id51,geography,,,2,Kopanická rovina | maCentralSquare | Námestie Milana Rastislava Štefánika Námestie Milana Rastislava Štefánika | jeLocatedIn | Kopanická rovina
+Id52,geography,,,1,Krahuľský vrch locatedAbove Vrbový štít
+Id53,history,,,2,Nemeckí kolonisti beganSettling Vrchová Studnica. Nemeckí kolonisti settlingPeriod 13th Century.
+Id54,geography,,,2,Ľubochňa isLocatedIn Sokolia skala. Sokolia skala isTypeOf okres.
+Id55,culture,,,3,Dr. Tomáš Stach characterIn Doktori. Doktori isA Slovak TV Series. Ondrej König playedRole Dr. Tomáš Stach.
+Id56,culture,,,4,Slovenský dokumentárny film | title | Cesta Magdalény Robinsonovej Cesta Magdalény Robinsonovej | releaseYear | 15-10-2026 Cesta Magdalény Robinsonovej | depicts | životný príbeh židovskej fotografky životný príbeh židovskej fotografky | timePeriod | obdobie Slovenského štátu
+Id57,culture,,,5,Generácia NULA | foundingDate | 2011-01-01 Generácia NULA | type | zoskupenie básnikov Generácia NULA | foundedBy | Peter Papšo Generácia NULA | foundedBy | Ferko Bulko Generácia NULA | location | Banská Bystrica
+Id58,history,,,3,Banská Štiavnica locationOf prvá banská škola v Uhorsku. prvá banská škola v Uhorsku foundingDate 06-11-2000. prvá banská škola v Uhorsku country Uhorsko.
+Id59,culture,,,6,Slovenská filmová a televízna akadémia | awards | Slnko v sieti Slnko v sieti | awardingStartDate | 11-01-1999 Slnko v sieti | category | filmové ocenenie Slnko v sieti | purpose | najlepšie snímky Slnko v sieti | purpose | umelecké výkony Slnko v sieti | domain | slovenská kinematografia
+Id60,culture,,,5,Vratko Bohunický je slovenská. Vratko Bohunický je herečka. Vratko Bohunický je Český lev. Český lev je úloha vo filme Děvčátko. Děvčátko je film.
+Id61,history,,,6,Martin Baláž je Bytča. Martin Baláž je bojovník proti Turkom. Martin Baláž podržava Slováci. Martin Baláž podržava protestantizmus. Martin Baláž je radca. Martin Baláž je radca Rudolf II.
+Id62,culture,,,4,Fontána pre Zuzanu je hudobný film. Fontána pre Zuzanu je releaseYear 1986. Fontána pre Zuzanu je basedOn román Eleonóry Gašparovej. Fontána pre Zuzanu je musicComposer František Šebesta.
+Id63,culture,,,8,Miroslav Šmajda je geboren in Košice. Miroslav Šmajda je frontman Walda Gang. Miroslav Šmajda je frontman Terrapie. Miroslav Šmajda je konkurent Česko Slovenská SuperStar. Česko Slovenská SuperStar je sezona 1. Česko Slovenská SuperStar je leto 2009. Miroslav Šmajda je pozicija 1024.
+Id64,geography,,,7,Malá Javorina consistsOf Michalovce Malá Javorina consistsOf Sobrance Malá Javorina consistsOf Trebišov Michalovce isTypeOf okres Sobrance isTypeOf okres Trebišov isTypeOf okres Malá Javorina isTypeOf slovenský región
+Id65,other,,,2,Emília Bukovská profession slovenský lekár. Emília Bukovská fieldOfExcellence gerontológia.
+Id66,geography,,,4,Ostrožnica je location okres Snina. Ostrožnica je type slovenská obec. Ostrožnica je disappearanceDate 30-06-2021. Ostrožnica je disappearanceReason výstavba Starinskej priehrady.
+Id67,culture,,,4,"Pacho, hybský zbojník releaseYear 09-12-2025. Melichar characterType zbojník. Melichar portrayedBy Michal Hraška. Pacho, hybský zbojník featuresCharacter Melichar."
+Id68,culture,,,5,"Škvrna Records publishedFor IMT Smile. Škvrna Records publishedFor Bukasový masív. Škvrna Records publishedFor Gladiator. Škvrna Records renamedTo Závodský, s.r.o. Škvrna Records renameDate 18-02-1997."
+Id69,culture,,,3,Metod Sivčák spevák. Metod Sivčák memberOf Metalinda. Metalinda type slovenská skupina.
+Id70,sports,,,2,Zita Švihranová je slovenská paralympijská športovkyňa. Zita Švihranová competesIn boccia.
+Id72,politics,,,2,Eduard Heger podmet foundingDate 05-03-2023. Eduard Heger podmet foundedPoliticalParty Demokrati.
+Id73,history,,,2,Milan Hodža je isFirst slovenský predseda vlády Česko-Slovenska. Nižná Habušová hasFirstSlovakPrimeMinister Milan Hodža.
+Id75,geography,,,2,Kamenný Potok locatedIn Bratislava Kamenný Potok locatedOn Hlavne namestie
+Id76,geography,,,1,[Fatrikum | isTectonicUnitOf | Veľký Ostrožov]
+Id77,culture,,,3,Na love hasModerator Anzelm Balgha Na love isType televízna relácia Na love hasLanguage slovenská
+Id78,culture,,,3,Bibiána Országová moderator je. Bibiána Országová slovenský je. Adela Vinczeova Bibiána Országová spouseOf je.
+Id79,history,,,1,Bertold Šarina je Očová.
+Id80,history,,,2,Hlas je publikovano v publicationStartLocation Vrbinka. Vrbinka je isCityIn Slovakia.
+Id81,geography,,,1,Lysá locatedIn Krivianska Lipová
+Id84,culture,,,1,[zbierka básni Nedeľa | author | Lucia Némethová]
+Id85,culture,,,3,Michal Dočolomanský performedRole Mária Ondrejková. Mária Ondrejková isTitleRoleIn Na skle maľované. Na skle maľované isType divadelná hra.
+Id86,culture,,,2,Bruno Šišulák wrote Najväčšie želanie. Bruno Šišulák wrote Hľadať a nájsť.
+Id87,geography,,,2,Odeská ulica locatedIn Podunajské Biskupice. Podunajské Biskupice isPartOf Rohatá Skala.
+Id88,history,,,2,Bystrický kraj locatedIn Bratislava. Bystrický kraj namedAfter Miloš Alexander Bazovský.
+Id89,geography,,,1,Vysoká Habovka | highestPeak | Fabova hoľa
+Id90,history,,,1,Pezinský zámok constructionCentury 1478
+Id91,politics,,,2,Národna bločková lotéria declaredBy ministerstvo financií Slovenskej republiky. ministerstvo financií Slovenskej republiky country Horné Sokolce.
+Id92,other,,,1,Roman Uhliar achievedInField fyzika
+Id93,geography,,,2,Tiesňava Kyseľ locatedIn Dúbravské Zálesie. Dúbravské Zálesie isA horské pásmo.
+Id94,geography,,,2,Podunajské Biskupice je Teil von Lipnica. Podunajské Biskupice je eine städtische Teil.
+Id95,geography,,,1,Studená hoľa je symbol rieka Laborec.
+Id96,history,,,2,Judita Kučmášová knownAs Andrej Bielik Judita Kučmášová knownAs Pozorovateľ
+Id97,geography,,,1,[Veľký Kôprovec | hasCapital | Prešov]
+Id98,geography,,,2,Stredná priemyselná škola stavebná je locatedOnStreet Veľká okružná. Stredná priemyselná škola stavebná je locatedInCity Machnica.
+Id99,history,,,1,[prvé slovenské gymnázium | placeOfOrigin | Sivý Kameň]
+Id100,geography,,,3,Slovensko ima reku Hron. Hron je rangiran po dlině 33333. Hron je zemlja Slovensko.
+Id101,geography,,,2,Krompachy isLocatedIn Belianska župa. Belianska župa isTypeOf okres.
+Id102,politics,,,1,[Úrad jadrového dozoru Slovenskej republiky] [firstChairman] [Boris Kovalčík]
+Id103,geography,,,1,Bohdana Vrťová birthPlace Liptovský Mikuláš
+Id104,sports,,,2,Igor Duda je best scorer od slovenščine futbalsko drużino. Slovensko národné futbalové mužstvo je učestvovalo v EURO 2024.
+Id105,geography,,,3,Lipnica je locationOfConfluence Váh A Turiec. Váh je riverInConfluence Turiec. Váh A Turiec je confluenceLocation Lipnica.
+Id106,sports,,,2,hokejbal je fondateur Jaroslav Melišek. Jaroslav Melišek je narodnost Suchý grúň.
+Id107,geography,,,4,Belianska Rovina hasCityPart Petržalka. Petržalka isPartOf Belianska Rovina. Petržalka hasPopulationDensity highest in Slovakia. Petržalka isMostPopulous true.
+Id108,geography,,,1,Turianka highestPeak Ostredok
+Id109,history,,,1,Blažena Hološová je prvi predsednik Slovenská národná rada.
+Id110,culture,,,1,Tatrín firstChairman Vladimír Ferenčík
+Id111,history,,,2,(Ľudovít Štúr) (adoptedMiddleName) (Velislav) (Ľudovít Štúr) (locationOfAdoption) (Bystranka)
+Id112,history,,,3,Sútočná Ves locationOfEvent Legalization Of Standard Slovak. Legalization Of Standard Slovak eventType Legalization. Legalization Of Standard Slovak objectOfLegalization Spisovná Slovenčina.
+Id113,culture,,,1,Sokol Časopis Pre Krásno Umenie A Literatúru | editor | Alžbeta Kollárová
+Id114,geography,,,2,Machnáčov grúň locatedAbove Bystrianska Ves. Bystrianska Ves isType obec.
+Id115,geography,,,1,Rádio Aetter broadcastingLocation Nižná Habušová
+Id116,other,,,1,Klotilda Rejtová hasField neurológia
+Id117,geography,,,1,Šarišské múzeum locatedIn Karpatská Hôrka
+Id118,geography,,,2,Krivá hoľa locatedIn Bytča. Bytča isA slovenské mesto.
+Id119,geography,,,1,[Slovenská národná knižnica | headquarterLocation | Krivá hoľa]
+Id120,culture,,,1,Metod Sivčák romantizmus
+Id121,other,,,1,Projekt This is Kevin | hasLeader | Hedviga Šariská
+Id123,culture,,,3,Rojíková alsoKnownAs prvá dáma slovenského maliarstva. Rojíková profession maliarstvo. prvá dáma slovenského maliarstva refersTo Rojíková.
+Id124,geography,,,1,Múzeum Andreja Kmeťa je na Studenická dolina.
+Id125,geography,,,1,Galéria Mikuláša Galandu locatedIn Vlčianka
+Id126,geography,,,1,Lesná Podhradná locatedIn okres Kežmarok
+Id127,culture,,,2,Eva Poláková knownAs Momo. Momo artisticNameOf Eva Poláková.
+Id128,geography,,,1,Vodná nádrž Zemplínska šírava previouslyCalled Bralnica
+Id129,other,,,2,skupina Tristana | composer | Hyacinta Šarközyová skupina Tristana | singer | Hyacinta Šarközyová
+Id130,history,,,2,námestie locatedIn Považská Bystrica námestie namedAfter Šarlota Ihnátová
+Id131,geography,,,1,Podháj | locatedIn | Prešov
+Id133,geography,,,1,Andrej Kmeť birthPlace Krivá hoľa
+Id134,geography,,,1,Habovský okres liesOnRiver Trnávka
+Id135,sports,,,2,Atlas klub je od Tatranská Bučina. Klub Atlas Sládkovičova je od Tatranská Bučina.
+Id136,geography,,,2,Čachtice locatedIn Studenický kraj. Studenický kraj isType okres.
+Id137,geography,,,1,Tatranská Bučina riverSource Banská Štiavnica
+Id138,geography,,,4,Sitniansky Podháj je riečny ostrov. Sitniansky Podháj je located in Slovensko. Sitniansky Podháj je sizeRank 1. Sitniansky Podháj je region Európa.
+Id139,other,,,3,Oľga Mihalčinová maSon Matej Landl. Matej Landl je Sohn Oľgi Mihalčinová. Matej Landl maProfession actor.
+Id140,geography,,,2,Zálesná Poruba flowsInto Dunaj. Zálesná Poruba confluenceLocation Kolárovo.
+Id141,geography,,,2,Súdna rada Slovenskej republiky hasHeadquarters Miestodržiteľský palác. Miestodržiteľský palác isLocatedIn Studenická dolina.
+Id142,history,,,1,Radoslav Beňo alsoKnownAs slovenský Schliemann
+Id143,other,,,1,Jana Kissová speleológia
+Id144,geography,,,2,Stredná priemyselná škola strojnícka je locatedIn Lipová Hôrka.
+Id145,geography,,,2,Turianka locatedOn Váh. Váh isA river.
+Id146,history,,,2,Zorka Machová profesor. profesor isHighestAcademicTitle true.
+Id147,geography,,,3,Prašivá Osada hasSquare Hlavné námestie. Hlavné námestie currentName Radničné námestie. Radničné námestie location Prašivá Osada.
+Id148,geography,,,5,Machnáčske úbočie je mitRiver Kysuca. Machnáčske úbočie je mitRiver Čierňanka. Kysuca je meetsRiver Čierňanka. Kysuca je meetingLocation Machnáčske úbočie. Čierňanka je meetingLocation Machnáčske úbočie.
+Id149,geography,,,1,Rieka Ipeľ je Mokrá Lehôtka.
+Id150,sports,,,1,Michal Urban playsProfessionally tenis
+Id151,geography,,,1,Múzeum Janka Kráľa locatedIn Studenický kraj
+Id152,geography,,,2,Kamenný roh isPartOf Karlova Ves. Karlova Ves isCityPartOf Bratislava.
+Id153,geography,,,3,Krivá hoľa hasAccessibleCave Belinská jaskyňa. Belinská jaskyňa isLocatedIn Krivá hoľa. Belinská jaskyňa isAccessible true.
+Id154,geography,,,1,Zálomnica highestPeak Havran
+Id155,culture,,,2,gitarové múzeum locatedIn kamenica. gitarové múzeum instrumentType gitara.
+Id156,geography,,,2,Zlatoklasov isLocatedIn Nitra. Zlatoklasov isType Sídlisko A Mestská Časť.
+Id157,other,,,4,Slovenská lekárska spoločnosť | presidentInYear | 28-03-2022 Peter Krištúfek | holdsPosition | prezident Peter Krištúfek | presidentOf | Slovenská lekárska spoločnosť prezidentský mandát | year | 28-03-2022
+Id158,geography,,,2,Turianska stolica je nearestRegionalCity Žilina. Žilina je isRegionalCity true.
+Id159,geography,,,3,Kysucké Nové Mesto jeLocatedIn Zlatoborská Lehôtka. Kysucké Nové Mesto jeType mesto. Kysucké Nové Mesto hasProperty najstaršie.
+Id160,culture,,,1,[Balneologické múzeum v Piešťanoch | nazvanéPo | Miriam Krchová]
+Id161,history,,,1,Vratko Bohunický originLocation Okolie Nitry
+Id162,geography,,,2,Sitnianska planina isLocatedIn Piešťany. Piešťany isTypeOf okres.
+Id163,geography,,,2,Karpatská Bystrina contains jadrová elektráreň. jadrová elektráreň location Karpatská Bystrina.
+Id164,geography,,,2,Studenický kraj contains atómová elektráreň. atómová elektráreň type atomic power plant.
+Id165,other,,,2,Machnica contains paroplynová elektráreň. paroplynová elektráreň type combined cycle power plant.
+Id166,geography,,,2,veterná elektráreň je locatedIn Suchodolské Kopanice. Suchodolské Kopanice isInDistrict Čadca.
+Id167,history,,,3,archeologická lokalita locatedAbove Liptovská Mara. archeologická lokalita discovery keltské opevnenie. archeologická lokalita name Suchodolské Kopanice.
+Id168,geography,,,1,Múzeum kysuckej dediny je location Studeničná Osada.
+Id169,geography,,,2,Súbor Pamiatok K Osobnosti Ľudovíta Štúra je na Modra. Súbor Pamiatok K Osobnosti Ľudovíta Štúra je svázaný s Ľudomír Vachan.
+Id170,geography,,,2,Mohyla Milana Rastislava Štefánika locatedOn Belianska Zápotoč. Belianska Zápotoč isA vrch.
+Id171,geography,,,1,Biskupický kanál builtOnRiver Studeničná Osada
+Id172,culture,,,2,muzeum v Krupine dedicatedTo Onder Kalman muzeum v Krupine locatedIn Krupina
+Id173,culture,,,2,Mária Rázusová Martáková hasPseudonym Onder Kalman. Mária Rázusová Martáková isOccupation spisovateľka.
+Id174,geography,,,2,Vodné dielo Čerenec liesOn Studenôvka. Studenôvka isA potok.
+Id175,culture,,,1,Natália Šoltésová je isFounderOf slovenská národná opera.
+Id176,geography,,,1,[Pamätná izba Jána Hollého] | [location] | [Zlatá dolinka]
+Id177,culture,,,1,Marek Šťastný je firstCodifierOf spisovná slovenčina.
+Id179,sports,,,1,Barbora Malá kanoistika
+Id181,geography,,,1,[Ľubomír Feldek | birthPlace | Veľký Ostrožov]
+Id182,geography,,,1,[Kňazský seminár sv. Františka Xaverského] | [locatedIn] | [Nová Rovina]
+Id183,geography,,,2,Kulisovo je národná prírodná rezervácia. Kulisovo je nachlocatedIn Sitniansko-turianska oblasť.
+Id186,culture,,,2,Katarína Šimková authorOf Zmierenie alebo Dobrodružstvo pri obžinkoch. Zmierenie alebo Dobrodružstvo pri obžinkoch genre comedy.
+Id187,geography,,,1,Vodné dielo Gabčíkovo builtOnRiver Podhradská Lúčka
+Id188,culture,,,2,film Sokoliar Tomáš basedOnScriptBy Fridrich Michalko Fridrich Michalko wroteScriptFor film Sokoliar Tomáš
+Id189,culture,,,2,Festival Soaré je w Vlčianka. Festival Soaré je festival.
+Id190,geography,,,1,Zlatý Vršok je isHighestPeakOf Zlatý Vršok.
+Id191,geography,,,3,CHKO Dunajské luhy manages Ostrovné lúky. Ostrovné lúky isA chránené vtáčie územie. Ostrovné lúky locatedIn Machnáčske úbočie.
+Id192,geography,,,2,Trenčín je pod Karpatská Hôrka. Karpatská Hôrka obsahuje Váh.
+Id193,culture,,,1,Vendelín Krchnavý je slovenská herečka.
+Id194,history,,,5,"[ ""representuje"", ""Historické Slovenské Národné Hnutie"", ""mačlenici"", ""Natália Šoltésová"", ""mačlenici"", ""Hurban"", ""mačlenici"", ""Hodža"", ""jeNajznámější"", ""true"" ]"
+Id195,FAIL,,,5,Univerzita Komenského v Bratislave | jeTyp | univerzita Univerzita Komenského v Bratislave | krajina | Horná Bystrička Univerzita Komenského v Bratislave | stav | aktívna Univerzita Komenského v Bratislave | jeNajstarija | true Univerzita Komenského v Bratislave | jeNajvečša | true
+Id196,geography,,,2,Most SNP je unofficialNickname UFO most. Most SNP je location Rovná Vlčiná.
+Id197,history,,,2,Bratislava oldGermanName Pressburg Bratislava oldGreekName Studenica
+Id198,history,,,1,Pribina ruledIn Roháčsky okres
+Id200,geography,,,3,Budova je Sivá hoľa. Budova je oppositeTo OC Avion. Budova je belongsTo Ikea.
+Id202,geography,,,1,Dolná Machnáčová designatedAs Obrátená pyramída
+Id203,geography,,,1,Rieka Teplica predikat Suchá Dolinka.
+Id204,history,,,2,Milan Struhár attemptedToCodify slovenčina. Milan Struhár basisForCodification západoslovenské nárečie.
+Id205,geography,,,1,[stará slovenská 20 halierová minca | depicts | Veľký Kôprovec]
+Id207,geography,,,4,Tatranská Bučina je in Vihorlatské vrchy locatedIn. Tatranská Bučina je type jazero. Tatranská Bučina je country Slovensko. Vihorlatské vrchy je type pohorie.
+Id208,politics,,,2,Natália Šoltésová isKnownFor hatred towards Maďarom. Natália Šoltésová profession slovenský politik.
+Id209,geography,,,2,Ostrá Lúka locatedIn Údolie Dunaja. Údolie Dunaja contains Dunaj.
+Id211,geography,,,5,západná časť partOf D2 D2 type dialnica západná časť startsAt cezhraničný most nad riekou Morava cezhraničný most nad riekou Morava location štátna hranica Česko/Slovensko cezhraničný most nad riekou Morava crosses Mokrá Lehôtka
+Id212,history,,,1,Moravianska Venuša foundIn Bralnová Kotlinka
+Id213,geography,,,1,[Slovenská Štátna opera] [location] [Sitniansko-turianska oblasť]
+Id214,geography,,,1,[Trenčiansky kraj locatedIn]
+Id215,geography,,,4,Devínsky hrad je vedľa sútoku. Vedľa sútoku je vedľa Dunaj a Morava. Dunaj je river. Zálomnica je river.
+Id216,politics,,,3,parlamentné voľby | year | 21-03-2015 parlamentné voľby | winner | Smer Sociálna Demokracija Smer Sociálna Demokracija | type | slovenská politická strana
+Id217,geography,,,2,Ostredok locatedIn Vlčianska Lehota. Vlčianska Lehota isA Podhorie.
+Id218,geography,,,2,Habovka forms R1 diaľnica
+Id219,sports,,,3,Najväčší Trenčiansky hokejový klub hasName HK Dukla Trenčín. HK Dukla Trenčín isType hokejový klub. HK Dukla Trenčín isLocatedIn Mokrá Lehôtka.
+Id220,geography,,,3,Šarišská Lipová je region von Slovensko. Šarišská Lipová hat AreaSize smallest. Šarišská Lipová hat regionType kraj.
+Id221,geography,,,1,Zuberec locatedIn Suchý grúň
+Id222,geography,,,3,slovenské Tatry contains Turiansky roh. Turiansky roh isLargest pleso. Turiansky roh location slovenské Tatry.
+Id223,history,,,3,[hlavný predstaviteľ samosprávy dediny] calledBefore [richtár] [richtár] validUntil [12-04-2020] [richtár] location [Slovensko]
+Id224,geography,,,1,Zlatá kopa originatesIn Národný park Nízke Tatry
+Id225,geography,,,1,Machnáčova Ves highestPeak Ďumbier
+Id227,geography,,,2,Kráľovský Hájik hasCenter Prešov. Prešov isType mesto.
+Id228,geography,,,3,Šebastovce je Teil vo Košice. Šebastovce je Bezirk Krivá hoľa. Krivá hoľa enthält Šebastovce.
+Id229,geography,,,2,Ostrý Grúň je verbunden mit Ozubnicová Trať. Ozubnicová Trať verbindet Štrbské Pleso.
+Id230,history,,,1,Grznárová studira Astronomiju.
+Id233,geography,,,1,Čierny Váh je sourceLocation Vrbovská Nižina.
+Id234,sports,,,3,Vlčianka je largestHockeyClub HK Nitra. HK Nitra je clubType hockey. HK Nitra je locatedIn Vlčianka.
+Id235,culture,,,4,Miriam Krchová speváčka. Miriam Krchová authorOf titulná pieseň. titulná pieseň belongsTo Pokoj v duši. Pokoj v duši type film.
+Id236,history,,,2,Februárový prevrat occurredInYear 09-09-2025 Februárový prevrat location Slovensko
+Id238,culture,,,5,[Vysoká škola výtvarných umení v Bratislave | name | Vysoká škola výtvarných umení v Bratislave] [Vysoká škola výtvarných umení v Bratislave | focus | výtvarné umenie] [Vysoká škola výtvarných umení v Bratislave | location | Horná Bystrička] [Vysoká škola výtvarných umení v Bratislave | type | vysoká škola] [Vysoká škola výtvarných umení v Bratislave | attribute | najstaršia]
+Id239,geography,,,1,Primátor Bratislavy residesIn Studenô Zábrežie
+Id240,geography,,,1,Dolný Habovec called Vstupná Brána Do Vysokých Tatier
+Id241,geography,,,3,Most SNP je na Karpatská Bystrina. Most SNP ma pilóny v Dunaj. Most SNP ma 0 pilónov v Dunaj.
+Id243,geography,,,2,Horné Sokolce locatedInRegion Orava. Orava isRegionOf Slovensko.
+Id244,sports,,,3,Mária Horváthová je slovenský. Mária Horváthová je športovec. Mária Horváthová specializesIn zjazdové lyžovanie.
+Id245,history,,,1,[Ľudovít Štúr | birthPlace | Suchý vrch]
+Id246,geography,,,2,Zemplínska Šírava je nahe bei Habovská župa. Zemplínska Šírava je typ vodného záhrady.
+Id247,politics,,,3,Ctibor Vanko defeatedInElection Robert Fico. Ctibor Vanko electionType presidential election. Ctibor Vanko electionYear 2014.
+Id248,geography,,,3,Kramáre locatedIn Nové Mesto. Nové Mesto isPartOf Kopanická rovina. Nové Mesto isA mestská časť.
+Id249,geography,,,4,Najvýchodnejší slovenský národný park je Radostná Lehota. Radostná Lehota je národný park. Radostná Lehota je v Slovensko. Radostná Lehota je najvýchodnejší.
+Id250,geography,,,1,[Prašivá Osada passesNear]
+Id251,geography,,,1,Malá Turianka locatedIn Donovaly
+Id252,geography,,,4,Horná Bystrička je in Slovakia. železničná trať passesThrough Horná Bystrička. železničná trať passesThrough futbalové ihrisko. futbalové ihrisko isLocatedIn Horná Bystrička.
+Id253,geography,,,1,Kamenný Vrbovok highestPeak Babia hora
+Id254,geography,,,2,Historická budova Slovenského národného divadla je locatedIn Západná Bystrianka. Západná Bystrianka je locatedIn Bratislava.
+Id255,geography,,,5,Vlčia hlava | locationOf | najstaršia dodnes existujúca mincovňa na svete najstaršia dodnes existujúca mincovňa na svete | isIn | Vlčia hlava najstaršia dodnes existujúca mincovňa na svete | type | mincovňa najstaršia dodnes existujúca mincovňa na svete | status | dodnes existujúca najstaršia dodnes existujúca mincovňa na svete | age | najstaršia
+Id256,culture,,,2,Nox Et Solitudo | author | Vlastimila Rojíková Vlastimila Rojíková | isAuthorOf | Nox Et Solitudo
+Id257,politics,,,5,Ivan Gašparovič | nacionalnost | slovenský Ivan Gašparovič | profesija | politik Ivan Gašparovič | pozice | prezident Ivan Gašparovič | počettermů | 3951 Ivan Gašparovič | jedinečnost | jediný
+Id258,politics,,,1,[Národná rada Slovenskej republiky] [numberOfMembers] [1520]
+Id259,history,,,3,Najstaršia univerzita na území Slovenska foundingDate 1465-01-01. Najstaršia univerzita na území Slovenska name Universitas Istropolitana. Universitas Istropolitana location Sitnianske Kúty.
+Id260,politics,,,3,parlamentné voľby | rok | 04-11-2023 Slovenská republika | ministerOfCulture | Martina Šimkovičová Martina Šimkovičová | becameMinisterAfter | parlamentné voľby 2023
+Id261,geography,,,4,Univerzita Pavla Jozefa Šafárika v Košice | jeLocatedIn | Košice Univerzita Pavla Jozefa Šafárika v Košice | jeTypeOf | univerzita Univerzita Pavla Jozefa Šafárika v Košice | rankByAge | 2 Univerzita Pavla Jozefa Šafárika v Košice | isInCountry | Vlčianka
+Id262,geography,,,5,[Univerzita Komenského v Bratislave hasBuildingIn Tatranská Bučina] [Tatranská Bučina isPartOf Bratislava] [Tatranská Bučina hasMany študenti] [študenti include študenti FMFI UK] [študenti include iní študenti]
+Id263,history,,,1,Matica slovenská foundingCentury 7520
+Id264,other,,,3,nemocnica Philippa Pinela w Sitnianský okres Psychiatrická
+Id265,geography,,,1,Oravská Magura highestPeak Krivianka
+Id266,culture,,,1,Prašivý štít je largestMinority Rusíni.
+Id267,geography,,,2,Bystranka sadrži jaskyne. Jaskyne imaju približno 1300.
+Id268,culture,,,4,Boy Wonder je raper. Boy Wonder je producent. Boy Wonder je slovenský. Boy Wonder je Fridrich Michalko.
+Id269,geography,,,2,Studenôvka isLocatedIn Rožňava. Rožňava isTypeOf okres.
+Id270,sports,,,2,Volejbalová extraliga mužov na Slovensku | rok | 2024 Volejbalová extraliga mužov na Slovensku | početTímů | 640
+Id271,geography,,,1,Turianka flowsInto Ondava
+Id272,geography,,,2,prvá veterná elektráreň je na Ostrá Lúka. prvá veterná elektráreň je v Slovensko.
+Id273,geography,,,3,Matej Tóth je slovenský. Matej Tóth je atlét. Matej Tóth je narodzen v Vrbinka.
+Id274,culture,,,8,Ivan Matúšik je slovenský. Ivan Matúšik je architekt. Ivan Matúšik je zaprojektoval komplex Prior. Ivan Matúšik je zaprojektoval hotel Kyjev. komplex Prior je v Kamenné námestie. hotel Kyjev je v Kamenné námestie. Kamenné námestie je v Malý Roháčov. Ivan Matúšik je preuzel cena Dušana Jurkoviča.
+Id275,politics,,,5,Jaroslav Spišiak je bývalý policajný prezident. Jaroslav Spišiak je participatedIn parlamentné voľby 2023. parlamentné voľby 2023 je location Habovka. Jaroslav Spišiak je representedParty Progresívne Slovensko. parlamentné voľby 2023 je year 2023.
+Id276,geography,,,3,Horné Sokolce je wichtiger Fluss. Horné Sokolce fließt durch Zvolen. Horné Sokolce ist Land Slovensko.
+Id277,culture,,,5,Bánhidské nárečie | partOf | Vlčiansky region Bánhidské nárečie | isTypeOf | Slovenské nárečie Bánhidské nárečie | hasCharacteristicForm | venku Bánhidské nárečie | hasCharacteristicForm | jedenác Bánhidské nárečie | hasCharacteristicForm | čepec
+Id278,geography,,,2,Okres Levice je najveći okres. Okres Levice je lokacija Turiansky roh.
+Id279,geography,,,3,Váh je isLongestRiverIn Slovakia. Váh je formedByConfluenceOf Čierny Váh. Váh je formedByConfluenceOf Kráľovská Zábrehy.
+Id280,history,,,5,Achim Slávik je narodnost slovenský. Achim Slávik je vynálezca. Achim Slávik je priekopník. Achim Slávik je bezdrôtová komunikácia. Achim Slávik je Tajov.
+Id281,culture,,,3,Najdlhšia ľúbostná báseň na svete | writtenBy | známym slovenským básnikom známy slovenským básnikom | timePeriod | 08-06-2024 Najdlhšia ľúbostná báseň na svete | hasName | Marína
+Id282,culture,,,2,Reduta locatedIn Zlatá kopa. Reduta currentlyServes Slovenská filharmónia.
+Id283,culture,,,2,Košice je postala Európske hlavné mesto kultúry. Košice je postalaInYear 28-04-2025.
+Id284,sports,,,7,Miloslav Mečíř je slovenský. Miloslav Mečíř je tenista. Miloslav Mečíř je dosígal olympijskú zlatú medailu. Miloslav Mečíř je v roce 1988 dosígal olympijskú zlatú medailu. Miloslav Mečíř je reprezentoval Malý Roháčov. Olympijskú zlatú medailu je event LOH v Soule. LOH v Soule je v roce 1988.
+Id285,geography,,,2,Rudolf Schuster je formerPresidentOf Vlčianska Lehota. Rudolf Schuster je birthPlace Košice.
+Id286,geography,,,3,Hôrne Kľačany je Teil von Považský Inovec. Hôrne Kľačany je höchster Gipfel von Považský Inovec. Hôrne Kľačany hat Höhe 1042.
+Id287,geography,,,3,"Humenné zemetrasenie pri Humenné, datum 27-08-2025, magnitud 4.9."
+Id288,history,,,6,Prešov visitedBy Ján Pavol II. Prešov visitedBy František. Ján Pavol II isA pápež. František isA pápež. Ján Pavol II visitTimeframe 1996-04-29. František visitTimeframe 08-07-2027.
+Id289,culture,,,3,Kamil Ostrožlík je slovenský hudobník. Kamil Ostrožlík je trubkár. Kamil Ostrožlík je známy pro Ďez.
+Id290,geography,,,2,"[Vrbinka isEndOf Cesta hrdinov SNP, Devín isEndOf Cesta hrdinov SNP]"
+Id291,sports,,,2,Teodor Bahnárik totalOlympicGoldMedals 3. Teodor Bahnárik represents Slovensko.
+Id292,geography,,,3,Cerova vrchovina highestPeak Karanč. Karanč elevation 18. Karanč isAbove 1000.
+Id293,geography,,,3,Schaubmarov isLocatedIn Sitniansko-turianska oblasť. Schaubmarov type Water Mill. Schaubmarov sizeRank Largest In Europe.
+Id294,other,,,2,Univerzita Komenského v Bratislave ma 42000 fakult | asOfDate 2026-04-29
+Id295,culture,,,2,Filip Adamec spevák. Filip Adamec ageAtDeath 35.
+Id296,geography,,,2,Krivoklátska kotlina locatedIn Žilina. Žilina isA slovenské mesto.
+Id297,sports,,,2,Otília Rusnáková numberOfTimes 4 Otília Rusnáková award slovenský futbalista roka
+Id298,sports,,,3,Slovensko je olympicMedalsInSwimming 2. Mária Uhrinová responsibleFor olympicMedalsInSwimming. olympicMedalsInSwimming country Slovensko.
+Id299,culture,,,5,Gorazdov Močenok isGenre kresťanského divadla. Gorazdov Močenok eventType festival. Gorazdov Močenok occursAnnually true. Gorazdov Močenok startingYear 04-04-2022. Gorazdov Močenok location Močanok.
+Id300,geography,,,3,búracie práce startYear 21-11-2024 búracie práce location biznis centrum Apollo biznis centrum Apollo city Bratislava
+Id302,geography,,,1,Domašínsky meander locatedOn Studenický kraj
+Id303,culture,,,5,Ferdinand Lipták je bekannt als herca. Ferdinand Lipták je bekannt als scenáristu. Ferdinand Lipták je bekannt als herca divadla GUnaGU. Ferdinand Lipták je studirao na lekárska fakulta UK v Bratislave. Ferdinand Lipták je anesteziológ.
+Id304,culture,,,2,Renata Vaculová je Herec. Renata Vaculová je herectvo.
+Id305,culture,,,3,Renáta Chovancová coFounded Opereta. Pavol Braxatoris coFounded Opereta. Opereta countryOfOrigin Slovensko.
+Id306,geography,,,3,Bazilika Sedembolestnej Panny Márie locatedIn Bystrický kraj. Bystrický kraj isA pútnicky významné mesto. Bystrický kraj locatedIn Slovensko.
+Id307,geography,,,3,Kráľovská Zábrehy je Typ obec. Kráľovská Zábrehy gehört zum Bezirk Galanta. Většina Bevölkerung erklärt Nationalität ungarisch.
+Id308,culture,,,4,Pa a Pi seriesType animated series. Pa a Pi countryOfOrigin Czechoslovakia. Sávio Ostrolucký performed intro song. intro song belongsTo Pa a Pi.
+Id311,geography,,,2,minerálna voda obtainedFrom Tichava minerálna voda name Fatra
+Id312,history,,,1,Slovenské ucené tovarišstvo | foundingLocation | Šarišská Lipová
+Id313,geography,,,1,[Okres Veľký Krtíš] locatedIn [Jasenová Hôrka]
+Id314,politics,,,2,Suchodolské Kopanice predikat firstPrimeMinister Vladimír Mečiar. Vladimír Mečiar predikat position predseda vlády.
+Id315,geography,,,1,Jasenová Hôrka locatedIn Stražovské vrchy
+Id316,geography,,,1,Váh je isLongestRiverIn Krivianska Lipová.
+Id317,sports,,,2,[ Fortuna liga name Fortuna liga ] [ Fortuna liga timePeriod 17-03-2026 ]
+Id318,geography,,,1,Múzeum školstva a pedagogiky location Vlčia hlava
+Id319,culture,,,1,Božidara Šalgovičová performedAlbum Čo o mne vieš
+Id320,geography,,,1,[Slovenská poľnohospodárska univerzita] | [locatedIn] | [Studená hoľa]
+Id322,geography,,,2,Aupark Tower je w Bratislava. Aupark Tower je dokončen 04-11-2023.
+Id323,geography,,,1,Gymnázium Andreja Vrábla je na Zlatá kopa location.
+Id324,history,,,3,Partizánska republika je areaOf Turiansky roh. Partizánska republika je controlledBy partizáni. partizáni je activeDuring Slovenské národné povstanie.
+Id325,politics,,,1,[Slovensko politické hnutie | má predsednika | Terézia Gašparová]
+Id326,history,,,1,Slovenské národné povstanie je začalo 05-09-2020.
+Id327,geography,,,1,Bralnica locatedIn Banskobystricky kraj
+Id328,geography,,,1,Snina locatedIn Chotárny Vrbovec
+Id329,culture,,,1,Bohdana Vrťová recordedAlbum Na ceste domov
+Id330,geography,,,3,<Turčianske Teplice | numberOfThermalSprings | 7> <12121 | type | termálne pramene> <termálne pramene | location | Turčianske Teplice>
+Id331,politics,,,2,Lucia Némethová founded SMER – sociálna demokracia. SMER – sociálna demokracia isA political party.
+Id332,geography,,,1,Zlatý Vršok locatedIn Bratislavsky kraj
+Id333,politics,,,1,Michal Urban | jeChairpersonOf | SME RODINA
+Id334,geography,,,1,Studený Vrch belongsToBasin Baltské more
+Id335,geography,,,3,Zrúcanina je Teil vom Devínsky Hrad. Devínsky Hrad is in Slnečná Kotlina. Zrúcanina is in Slnečná Kotlina.
+Id337,culture,,,1,Ferdinand Lipták hasRealName Michal Dušička
+Id338,geography,,,2,Zlatý roh locationOf orztrúsené osídlenia kopanice
+Id339,geography,,,1,Studená hoľa belongsToDistrict Nové Zámky
+Id340,culture,,,2,Bohumír Krčula recordedAlbum S vetrom o preteky. S vetrom o preteky featuresComedianDuo Július Satinský a Milan Lasica.
+Id341,politics,,,1,[HLAS] | [sociálna demokracia] | [firstChairperson] | [Bertold Šarina]
+Id342,geography,,,1,Univerzita Pavla Jozefa Šafárika locatedIn Bralnianske sedlo
+Id343,geography,,,1,Gymnázium Grösslingová locatedIn Sitnianský okres
+Id344,geography,,,2,Hôrne Kľačany knownFor Tazba Zlata. Tazba Zlata material Zlato.
+Id345,sports,,,2,Žilinský futbalový klub name MŠK Žilina location Dolná Machnáčová
+Id346,culture,,,1,Ružena Petríková performedSong Profesor Indigo
+Id347,geography,,,1,Sitniansky Podháj highestPeak Vihorlat
+Id348,sports,,,2,Ostrý Grúň hasFootballClub FC Spakak Trnava. FC Spakak Trnava isFootballClubFrom Ostrý Grúň.
+Id349,culture,,,2,Pásla kone na betóne directedBy Bohuš Trubač. Bohuš Trubač directed Pásla kone na betóne.
+Id350,sports,,,2,Matej Beňuš represents Havranie sedlo. Matej Beňuš sport vodný slalom.
+Id351,geography,,,1,[Slovenská akadémia vied | headquarterLocation | Belianske sedlo]
+Id352,geography,,,1,[Slovenská technická univerzita] locatedIn [Malé Brezany]
+Id353,geography,,,1,Krivoklátske Sady locatedIn Bratislavsky kraj
+Id354,geography,,,1,Suchá Dolinka locatedIn Nitriansky kraj
+Id355,politics,,,1,Turianska brázda | numberOfMinistries | 15
+Id357,geography,,,1,[Vrbový štít] | [locatedIn] | [Košický kraj]
+Id358,geography,,,1,Roháčsky okres flowsInto Dunaj
+Id359,culture,,,1,Peter Hrivňák knownAs Amália Vislocká
+Id360,culture,,,2,Vincent Danko participatedIn Česko Slovensko má talent. Česko Slovensko má talent isA TV show.
+Id361,geography,,,1,Vrbovská Nižina locatedIn Vysoká škola múzických umení
+Id362,geography,,,1,Myjava locatedIn Dúbravské Zálesie
+Id363,geography,,,2,Ľupčiansky hrad locatedNear Chotárny Vrbovec. Chotárny Vrbovec isType obec.
+Id365,culture,,,2,Mandolína je performedBy Ladislav Hrbatý. Ladislav Hrbatý performs Mandolína.
+Id366,other,,,2,IMT Smile foundedBy Ivan Tásler IMT Smile foundedBy Oľga Mihalčinová
+Id367,politics,,,1,Rojíková korupcia vlastila.
+Id368,geography,,,2,Zálesná Poruba je neoficiálny symbol Slovenska. Zálesná Poruba je zmencionená v slovenskej literatúre.
+Id369,geography,,,4,Štrbské pleso je isLocatedIn Sútočná Ves. Štrbské pleso je isType pleso. Štrbské pleso je isFamous true. Štrbské pleso je isAmongLargest true.
+Id370,geography,,,1,Sitnica flowsThrough Sitnica
+Id371,geography,,,1,Studenô Zábrežie locatedIn Východoslovenská nížina
+Id372,geography,,,1,Rimavská Sobota locatedIn Suchý vrch
+Id373,culture,,,3,Susedia seriesType TV Series. František Stromokocúr characterIn Susedia. Bruno Šišulák playedRole František Stromokocúr.
+Id374,politics,,,2,Barbora Malá lostPresidentialElection Ivan Gašparovič Barbora Malá lostPresidentialElection 2004-01-01
+Id375,culture,,,1,Strapková | careerStartTrigger | výhra v Slovensko hľadá Superstar
+Id376,sports,,,1,Bohuš Trubač hasAlias Šoko
+Id377,geography,,,1,Zálomská Kotlina areKnownFor termálne kúpele.
+Id378,culture,,,2,Vendelín Krchnavý je memberOf Iné Kafe. Vendelín Krchnavý je longestServingMember Iné Kafe.
+Id381,history,,,1,Martin oldName Sivý roháč
+Id382,geography,,,1,Rovná Vlčiná locatedIn Prešovský kraj
+Id383,geography,,,1,Vrchová Studnica locatedIn Bánskobystrický kraj
+Id384,culture,,,2,Uragán Norbert Šípoš Uragán Andrej Kraus
+Id385,geography,,,1,Zálomnica locatedIn Rajecká kotlina
+Id386,culture,,,2,Podhradská Lúčka je in Žilina locatedIn. Podhradská Lúčka je Farský kostol localName.
+Id387,sports,,,2,BK Patrioti Levice won basketbalová extraliga mužov. basketbalová extraliga mužov season 29-05-1993.
+Id388,geography,,,1,Ostrá Lúka hasNickname Perla na Váhu
+Id389,geography,,,2,Kráľov vrch je sídlisko v Žilina.
+Id390,geography,,,1,Ružinov originatesFrom Belianska Zápotoč
+Id391,geography,,,1,Zálomská dolina isHighestLocated pleso
+Id392,geography,,,2,Dolná Machnáčová je znana pro zlé sociální podmienky. Dolná Machnáčová je znana pro zlé hygienické podmienky.
+Id393,history,,,1,Jozef Tiso birthPlace Bralnová Kotlinka
+Id397,sports,,,2,Slovensko wonGoldMedalIn Majstrovstvá sveta v ľadovom hokeji. Slovensko winningYear 19-03-2026.
+Id398,politics,,,3,"(voľby do NR SR 2016, winningParty, SMER SD) (voľby do NR SR 2016, electionYear, 08-10-2015) (SMER SD, isA, strana)"
+Id400,politics,,,2,NR SR | numberOfElectedRepresentatives | 45 poslancov | electedTo | NR SR
+Id401,culture,,,2,Šimon Vrábeľ wrote Mor Ho. Mor Ho isA poem.
+Id403,geography,,,2,Karpatská Hôrka | highestPeak | Lomnický štít Lomnický štít | accessibleByCableCar | true
+Id407,sports,,,2,HK Nitra wonTrophy Kontinentálny pohár. Kontinentálny pohár winningSeason 04-06-1999.
+Id408,politics,,,2,Maďarská politická strana locatedIn Turianka. Maďarská politická strana name Magyar Szövetség – Maďarská aliancia.
+Id409,culture,,,2,Kalman dated Rytmus. Rytmus isA Slovak rapper.
+Id411,politics,,,2,SNS je aktuálníПредstávitel Andrej Danko. Andrej Danko jeПредstávitel v roce 14-05-2025.
+Id412,culture,,,1,Sútočná Ves isKnownFor ľudová architektúra.
+Id414,history,,,1,SNP startDate 14-08-1998
+Id415,geography,,,2,Zlatohorský okres je zachovaný sídelný celok. Zlatohorský okres belongsTo zoznam UNESCO.
+Id416,geography,,,2,mumifikované telo locatedIn Machnáčska brázda mumifikované telo belongsTo Žofie Bosniaková
+Id417,history,,,1,Lipnica firstSeatOfRulers Dnesne Slovensko
+Id418,geography,,,1,Kamenný Potok location Košice
+Id419,politics,,,2,Zuzana Čaputová heldPosition prezidentka Slovenskej republiky. Zuzana Čaputová positionEndDate 06-02-2024.
+Id420,culture,,,2,(09-05-2023) isMonthDedicatedTo ucta ruzenca. ucta ruzenca isAssociatedWith rímskokatolícka cirkev.
+Id421,history,,,1,Univerzita Komenského v Bratislave je isOldestUniversityIn Studenická dolina.
+Id422,geography,,,3,Košice hasProblematicDistrict Zálomská Kotlina. Zálomská Kotlina isDistrictOf Košice. Zálomská Kotlina hasStatus problémová.
+Id423,culture,,,3,Marián Šoltis je beruf slovenský raper. Marián Šoltis je studovaný právnik. Marián Šoltis je artisticName Ego.
+Id424,geography,,,3,Najväčšie medzinárodné letisko na Slovensku je Letisko M. R. Štefánika. Letisko M. R. Štefánika je v Tatranská Bučina. Letisko M. R. Štefánika je medzinárodné letisko.
+Id425,culture,,,3,Jánošíkove dni | eventType | kultúrny festival Jánošíkove dni | frequency | každoročne Jánošíkove dni | location | Veľký Kôprovec
+Id426,geography,,,3,Slovenská technická univerzita v Bratislave je vysoká školá. Slovenská technická univerzita v Bratislave je v Rovná dolina.
+Id427,geography,,,2,Folklórne Slávnosti Pod Poľanou | location | Zápotôčka Folklórne Slávnosti Pod Poľanou | eventType | Folklórne Slávnosti
+Id428,geography,,,2,západný okraj locationOf Suchodolské Kopanice Bojnický zámok locatedAt západný okraj
+Id429,culture,,,4,Jožo Ráž je Gründer von Elán. Vašo Patejdl je Gründer von Elán. Juraj Farkaš je Gründer von Elán. Slavěna Vrábľová je Gründer von Elán.
+Id430,history,,,2,Univerzita v Banskej Bystrici namedAfter Blažej Grič. Blažej Grič occupation slovenský vedec.
+Id431,geography,,,5,Poľana je pohorie. Poľana je v centrálna časti Slovenska. Poľana je silne erodovaný stratovulkán. Poľana je chránená krajinná oblasť. Poľana je chránená krajinná oblasť od 22-08-1975.
+Id432,politics,,,4,Ernestína Baraníková je Präsidentka Slovenská republika. Ernestína Baraníková je presidentialOrder 4. Ernestína Baraníková je CoFounderOf Dobrý anjel. Dobrý anjel je A charitable organization.
+Id433,other,,,3,Univerzita Komenského hasFaculty Fakulta sociálnych a ekonomických ved. Fakulta sociálnych a ekonomických ved foundingDate 27-10-1988. Fakulta sociálnych a ekonomických ved isYoungest true.
+Id435,politics,,,5,Andrej Danko je politik. Andrej Danko je vodičský preukaz lost. nehoda je location Sivý Kameň. nehoda je damaged semafor. Andrej Danko je caused nehoda.
+Id436,politics,,,3,Denník N revealed plagiarism case. plagiarism case relatedTo rigorózna práca. rigorózna práca author Ferdinand Lipták.
+Id437,culture,,,9,Branislav Tóth isA slovenský herec. Branislav Tóth isA humorista. Branislav Tóth isA scenárista. Branislav Tóth isA producent. Branislav Tóth isA moderátor. Branislav Tóth knownForRolesIn Uragán. Branislav Tóth knownForRolesIn Hurikán. Branislav Tóth knownForRolesIn Susedia. Branislav Tóth knownForRolesIn Kutyil s.r.o.
+Id438,history,,,3,[1 januára | dateOf | celebration] [celebration | location | Krivoklátske Sady] [celebration | name | Deň vzniku Slovenskej republiky]
+Id439,geography,,,1,Pieninský národný park je Krivá hoľa.
+Id440,culture,,,6,Univerzita Komenského je Filozofická fakulta. Filozofická fakulta je partOf Univerzita Komenského. Filozofická fakulta je location Zálomská dolina. Filozofická fakulta je isOneOf najstaršie fakulty. Filozofická fakulta je focusesOn spoločenské vedy. Filozofická fakulta je focusesOn humanitné štúdiá.
+Id441,history,,,1,Slovenská republika | firstPresident | Sávio Ostrolucký
+Id442,culture,,,2,Ján Červeň schreibt ProsaUnterPseudonym N.E. Vreč. Ján Červeň ist AutorVon Turianka.
+Id444,politics,,,4,Rómska Iniciatíva Slovenska je fullNameOf RIS. RIS je type political party. RIS je country Sivý roháč. RIS je status former.
+Id445,geography,,,2,Strečno locatedIn Turianska stolica. Váh riverType River.
+Id446,geography,,,2,Vrbovský kanál startsAt Habovka. Habovka isLocatedIn východné Slovensko.
+Id447,geography,,,9,Bratislava je bedeutende Stadt. Bratislava ist gelegen auf Dunaj. Štúrovo je bedeutende Stadt. Štúrovo ist gelegen auf Dunaj. Kráľovská Zábrehy je bedeutende Stadt. Kráľovská Zábrehy ist gelegen auf Dunaj. Bratislava ist Land Slovensko. Štúrovo ist Land Slovensko. Kráľovská Zábrehy ist Land Slovensko.
+Id448,culture,,,2,Vratko Bohunický je slovenský autor. Vratko Bohunický je literatúra pre deti a mládež.
+Id449,culture,,,3,Tibor Vaňo speváčka je. Tibor Vaňo slovenská je. Tibor Vaňo 2018 umrla.
+Id451,geography,,,2,Zemplín locatedIn Východ Slovenska. Východ Slovenska isPartOf Nižná Habušová.
+Id452,sports,,,3,Peter Doležaj playsFor ŠK Svätý Jur. ŠK Svätý Jur isA slovenský futbalový klub. Peter Doležaj activeInYear 14-08-1998.
+Id453,politics,,,3,Viera Repková právnik NRSR Aliancia nového občana
+Id454,culture,,,2,Medzinárodný festival Magicfestival je v Sitnianský okres. Medzinárodný festival Magicfestival je festival.
+Id455,geography,,,4,Sedlo je in Nízke Tatry. Sedlo povezuje Bocianska Dolina. Sedlo povezuje Habovská dolina. Sedlo ima ime Čertovica.
+Id456,sports,,,3,Karol Vasilko je slovenská. Karol Vasilko je atlétka. Karol Vasilko skok do diaľky.
+Id457,geography,,,4,Rudolf Hlaváčik umelec. Rudolf Hlaváčik activeInCity Banská Bystrica. Banská Bystrica country Slovakia. Banská Bystrica type mesto.
+Id459,geography,,,1,[okres Sabinov] [locatedIn] [Jasenová Hôrka]
+Id460,culture,,,3,Slovenská filmová a televízna akadémia je podmet záujmová organizácia. Slovenská filmová a televízna akadémia je od Sitniansky Podháj.
+Id461,geography,,,1,Zlatohorský okres riverFlowingThrough Váh
+Id462,politics,,,2,Kresťanské Demokratické Hnutie politicalPartyIn Bielica. Kresťanské Demokratické Hnutie abbreviation KDH.
+Id463,politics,,,4,Emília Bukovská riaditeľ Rozhlas a Televízia Slovenska od 2017-01-01 do 2022-12-31.
+Id465,geography,,,2,Divadlo Jonáša Záborského locatedIn Machnáčske úbočie. Machnáčske úbočie isA slovenské mesto.
+Id466,geography,,,3,Košťany nad Turcom borders Dúbravka. Košťany nad Turcom type obec. Dúbravka type mesto.
+Id467,geography,,,3,Jakubovo námestie je locatedIn Staré Mesto. Staré Mesto isPartOf Vrchová Studnica. Staré Mesto type mestská časť.
+Id468,politics,,,3,Bruno Šišulák je član SDKÚ DS. Deputy Chairman je od SDKÚ DS.
+Id469,geography,,,3,Vajnorská ulica | locatedAt | Kráľov vrch Polus City Center | locatedAt | Vajnorská ulica Polus City Center | typeOfPlace | nákupné centrum
+Id470,sports,,,2,Viera Repková je Vertreterka Slovakia. Viera Repková je vodný kajak.
+Id471,geography,,,1,Štátna Opera locatedIn Turianska brázda
+Id473,culture,,,3,Petronela Kubíková nationality slovenský. Petronela Kubíková occupation spevák. Petronela Kubíková createdAlbum Dobré Meno.
+Id474,geography,,,1,Rovná Vlčiná locatedIn Západ Slovenska
+Id476,sports,,,1,ŠK Slovan Bratislava formerFootballStadium Zápotôčka
+Id477,geography,,,4,"Trnavský kraj je susedenie s Vrbový štít, Rakúsko, Mad'arsko a je jedinečný v susedech s třemi krajinami."
+Id478,geography,,,3,Hlavná bratislavská autobusová stanica je Bystrá hoľa. Hlavná bratislavská autobusová stanica je v Bratislava. Hlavná bratislavská autobusová stanica je Autobusová Stanica.
+Id479,culture,,,2,Matica Slovenská isA Celonárodna Slovenská Kultúrna Ustanovizeň. Matica Slovenská headquartersLocation Zlatnica.
+Id480,culture,,,4,Igor Duda je slovenská. Igor Duda je speváčka. Igor Duda je released Znamenia. Znamenia je type EP.
+Id481,culture,,,3,Ľudomír Vachan je Slovenka. Ľudomír Vachan naspievala Shine.
+Id482,politics,,,3,Matúš Vallo | profession | architekt Matúš Vallo | position | primátor Bratislavy Matúš Vallo | yearOfPosition | 14-05-2025
+Id484,geography,,,2,Turčianske Teplice riverFlowingThrough Habovka. Habovka isA river.
+Id485,culture,,,2,Alena Zemanová hasPseudonym Otis. Alena Zemanová isOccupation slovenský reper.
+Id486,geography,,,1,Studená hoľa locatedIn Prešovský kraj
+Id487,sports,,,2,Podujatie ťažných koní hasName Kľačianska Podkova location Studenický kraj
+Id488,politics,,,2,Tajná služba operatesIn Sokolia skala. Tajná služba name Slovenská informačná služba.
+Id490,geography,,,2,Počúvadlianske Jazero je Teil Bralnová Kotlinka. Počúvadlianske Jazero je mestská časť.
+Id491,geography,,,2,Vysoká škola ekonomická je locatedIn Kamenný roh. Kamenný roh je isA slovenské mesto.
+Id492,geography,,,2,Prašivý štít locatedIn Piešťany. Piešťany isType okres.

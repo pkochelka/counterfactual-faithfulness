@@ -1,6 +1,6 @@
 # llm-judge
 
-Utilities for browsing generated WebNLG-style sentences and judging whether they are faithful to the modified triples used by this benchmark.
+Utilities for browsing generated sentences and judging them against the modified triples used by this benchmark, on two dimensions: faithfulness to the triples and linguistic fluency.
 
 Run all commands below from the repository root:
 
@@ -11,29 +11,21 @@ cd /path/to/counterfactual-faithfulness
 ## What is here
 
 - `browser_app.py`: Streamlit workspace for browsing entries, comparing model outputs, and running judge batches.
-- `judge_csv.py`: command-line judge runner for sentence CSV files.
+- `judge_csv.py`: command-line judge runner for sentence CSV files (faithfulness by default, fluency with `--fluency`).
+- `run_judge_batch.py`: sequential batch driver with logging, retry, and a concurrency fallback.
+- `run_fluency_batch.py`: thin wrapper around the batch driver that injects `--fluency` and the fluency default model.
 - `webnlg_utils.py`: shared XML/CSV loading, prompt building, API calls, annotation loading, and JSONL writing.
 - `runtime_state.py`: in-memory Streamlit background-batch state.
-- `data/judged/`: local judge JSONL outputs. This directory is ignored by git.
+
+Judge JSONL outputs go to `data/judged/` (faithfulness) and `data/judged_fluency/` (fluency).
 
 ## Expected files
 
-The judge can work from either original GEM XML files or flat CSVs created from them.
-
-Expected XML files:
+The judge scores generated sentences against source triples. For `cs-qa` and `sk-qa` the source triples are the flat tables also used for generation:
 
 ```text
-data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml
-data/GEM-v2-D2T-SharedTask/D2T-1-FA_WebNLG_Factual.xml
-data/GEM-v2-D2T-SharedTask/D2T-1-FI_WebNLG_Fictional.xml
-```
-
-Optional flat CSVs from `xml2csv.py`:
-
-```text
-data/webnlg/cf.csv
-data/webnlg/fa.csv
-data/webnlg/fi.csv
+data/cs-qa/cf.csv  data/cs-qa/fa.csv  data/cs-qa/fi.csv
+data/sk-qa/cf.csv  data/sk-qa/fa.csv  data/sk-qa/fi.csv
 ```
 
 Generated sentence CSVs must contain at least:
@@ -45,11 +37,11 @@ eid,sentence
 Typical generated files live under `data/generated/<model>/`, for example:
 
 ```text
-data/generated/qwen3.5-122b/webnlg_cf_cs.csv
-data/generated/qwen3.5-122b/webnlg_fa_cs.csv
+data/generated/qwen3.5-122b/cs-qa_cf_cs.csv
+data/generated/qwen3.5-122b/sk-qa_fa_en.csv
 ```
 
-Generated sentence CSVs, text exports, `data/`, and `data/judged/` are ignored by git.
+The whole `data/` tree is ignored by git.
 
 ## Environment
 
@@ -63,7 +55,7 @@ For sentence generation with `generate_speeches.py`, set:
 
 ```text
 BASE_URL=https://your-openai-compatible-endpoint
-EINFRA_JR=your_token_if_required
+KEY1=your_token_if_required
 ```
 
 For command-line judging, OpenRouter is the default provider. Set a named key and pass that name with `--token-env-vars`:
@@ -103,17 +95,10 @@ pip install -r llm-judge/requirements.txt
 
 ## Prepare data
 
-Convert a GEM XML file to a flat CSV:
+The `cs-qa`/`sk-qa` flat tables come from the `cus-qa-to-triples/` pipeline and live under `data/{cs-qa,sk-qa}/`. Generate model sentences from them:
 
 ```bash
-python xml2csv.py data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml \
-  --output data/webnlg/cf.csv
-```
-
-Generate model sentences:
-
-```bash
-python generate_speeches.py --model "qwen3.5-122b" --dataset "webnlg" --variant "cf" --language "cs"
+python generate_speeches.py --model "qwen3.5-122b" --dataset "cs-qa" --variant "cf" --language "cs" --kind original
 ```
 
 The judge can also read existing sentence CSVs directly as long as they have `eid,sentence`.
@@ -150,7 +135,7 @@ Batch judging uses the current filtered entries and currently visible outputs. E
 Dry-run one prompt without calling the API:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_cs.csv \
   --sample-size 1 \
   --head \
   --dry-run \
@@ -160,7 +145,7 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
 Judge the first 20 rows:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model openai/gpt-5.2 \
@@ -171,7 +156,7 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
 Judge through another OpenAI-compatible provider:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model gpt-4.1-mini \
@@ -183,7 +168,7 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
 Local or self-hosted endpoints work the same way if they implement `/chat/completions`:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_cs.csv \
   --sample-size 20 \
   --head \
   --model local-model \
@@ -195,7 +180,7 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
 Judge the whole CSV:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_cs.csv \
   --sample-size all \
   --model openai/gpt-5.2 \
   --token-env-vars OPENROUTER_API_KEY \
@@ -206,7 +191,7 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_cs.csv \
 Judge multiple CSV files through a custom provider, with both file-level and per-key row-level parallelism:
 
 ```bash
-find data/generated/qwen3.5-122b -name 'webnlg_*.csv' -print0 \
+find data/generated/qwen3.5-122b -name 'cs-qa_*.csv' -print0 \
   | xargs -0 -n 1 -P 3 python llm-judge/judge_csv.py \
       --sample-size all \
       --model gpt-4.1-mini \
@@ -221,11 +206,11 @@ Here `xargs -P 3` runs up to three CSV files at once, and `--concurrency-per-key
 If you have several equivalent provider keys in `.env.local`, pass their environment variable names explicitly and set per-key concurrency. For example, three keys with `--concurrency-per-key 4` allow up to twelve in-flight judge requests, with no more than four using any one key:
 
 ```bash
-python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_en.csv \
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_en.csv \
   --sample-size all \
-  --model glm-5 \
-  --judge-base-url https://llm.ai.e-infra.cz/v1 \
-  --token-env-vars EINFRA_JR,EINFRA_AP,EINFRA_PK \
+  --model deepseek-v4-pro \
+  --judge-base-url https://your-openai-compatible-endpoint/v1 \
+  --token-env-vars KEY1,KEY2,KEY3 \
   --concurrency-per-key 4 \
   --output-dir data/judged
 ```
@@ -234,14 +219,14 @@ python llm-judge/judge_csv.py data/generated/qwen3.5-122b/webnlg_cf_en.csv \
 
 For long runs where you want one file at a time plus automatic retry/fallback, use `run_judge_batch.py`. It runs each matching CSV sequentially, logs stdout/stderr to a log file, retries a failed file once at the original per-key concurrency, then retries again with lower per-key concurrency. `judge_csv.py` exits nonzero when any rows fail, so the batch runner can detect provider/network errors reliably.
 
-Example e-INFRA run with multiple keys:
+Example batch run with multiple keys:
 
 ```bash
-../.venv/bin/python llm-judge/run_judge_batch.py \
+python llm-judge/run_judge_batch.py \
   --language en \
-  --token-env-vars EINFRA_JR,EINFRA_AP,EINFRA_PK \
-  --model glm-5 \
-  --judge-base-url https://llm.ai.e-infra.cz/v1 \
+  --token-env-vars KEY1,KEY2,KEY3 \
+  --model deepseek-v4-pro \
+  --judge-base-url https://your-openai-compatible-endpoint/v1 \
   --concurrency-per-key 4 \
   --fallback-concurrency-per-key 3 \
   --output-dir data/judged
@@ -249,11 +234,31 @@ Example e-INFRA run with multiple keys:
 
 By default logs go to `logs/llm-judge-batch-<timestamp>.log`. You can set an explicit path with `--log-file logs/judge-en.log`.
 
-Pass an explicit XML file when inference from the CSV filename is not enough:
+## Fluency judging
+
+`--fluency` switches `judge_csv.py` to the second dimension: how well the sentence is written in its target language, independent of faithfulness (prompt: `prompts/judge_fluency.txt`). The matching source triples are used only to provide a lexical term set, and output defaults to `data/judged_fluency/` instead of `data/judged/`:
+
+```bash
+python llm-judge/judge_csv.py data/generated/qwen3.5-122b/cs-qa_cf_cs.csv \
+  --fluency \
+  --sample-size all \
+  --model deepseek-v4-pro \
+  --judge-base-url https://your-openai-compatible-endpoint/v1 \
+  --token-env-vars KEY1 \
+  --output-dir data/judged_fluency
+```
+
+For full batches, `run_fluency_batch.py` forwards everything to `run_judge_batch.py` with `--fluency` and the fluency default model injected:
+
+```bash
+python llm-judge/run_fluency_batch.py --token-env-vars KEY1,KEY2 --sample-size all
+```
+
+Pass an explicit source file when inference from the CSV filename is not enough:
 
 ```bash
 python llm-judge/judge_csv.py custom_sentences.csv \
-  --xml data/GEM-v2-D2T-SharedTask/D2T-1-CFA_WebNLG_CounterFactual.xml \
+  --xml data/cs-qa/cf.csv \
   --sample-size 20 \
   --token-env-vars OPENROUTER_API_KEY \
   --output-dir data/judged
@@ -295,7 +300,7 @@ Useful CLI arguments:
 - `--max-tokens 5000`
 - `--timeout 150`
 - `--output-dir data/judged`
-- `--output-path data/judged/gpt-oss-120b/judge_cs-qa_cf_cs_glm-5.jsonl`
+- `--output-path data/judged/gpt-oss-120b/judge_cs-qa_cf_cs_deepseek-v4-pro.jsonl`
 - `--skip-existing-eids`
 - `--label custom_source_name`
 - `--force`
@@ -303,57 +308,41 @@ Useful CLI arguments:
 
 ## Output format
 
-Judge outputs are JSONL files written under:
-
-```text
-data/judged/
-```
-
-Typical layout:
+Judge outputs are JSONL files written under `data/judged/` (faithfulness) or `data/judged_fluency/` (fluency), one file per source CSV:
 
 ```text
 data/judged/<generator-model>/judge_<source-stem>_<judge-model>.jsonl
 ```
 
-Typical filename pattern:
+Failed judge calls go to a `judge_<source-stem>_<judge-model>.failures.jsonl` sidecar; all downstream loaders skip those.
 
-```text
-judge_<source-stem>_<judge-model>.jsonl
-```
+Each record includes `eid`, `sentence`, and `parsed` (the judge's verdict), source identification (`source_label`, `source_id`), and judge metadata (`judge_model`, `requested_judge_model`, `requested_judge_api_url`, `provider`, `request_cost`, `timestamp`), plus the full `prompt`, `raw_response`, and token `usage`. Note that the archived runs stored in this repo's data tree were trimmed of the bulky reproducible fields (`prompt`, `raw_response`, `usage`, `source_path`, `modified_triples_json`, `requested_judge_api_url`) to save space; fresh runs still write them.
 
-Each record includes metadata such as:
-
-- `eid`
-- `source_label`
-- `source_path`
-- `source_id`
-- `judge_model`
-- `requested_judge_model`
-- `requested_judge_api_url`
-- `provider`
-- `request_cost`
-- `timestamp`
-- `sentence`
-- `raw_response`
-- `parsed`
-
-The current expected judge response schema is:
+The faithfulness judge response schema (`prompts/judge_speeches.txt`) is:
 
 ```json
 {
-  "faithfulness_score": 5,
   "incorrect_information": [
     {
       "info_used": "exact unsupported or wrong claim from the sentence",
       "correct_info": "triple-backed correction or missing constraint",
-      "comment": "brief explanation based only on the triples"
+      "comment": "label plus brief explanation based only on the triples"
     }
   ],
-  "style_comment": "short comment about style and fluency"
+  "faithfulness_score": 5
 }
 ```
 
-The prompt tells the judge to treat the modified triples as the complete source of truth, even if they contradict real-world facts.
+An empty `incorrect_information` list means the score must be 5. The fluency judge (`prompts/judge_fluency.txt`) returns:
+
+```json
+{
+  "fluency_score": 5,
+  "fluency_comment": "short English comment on grammar, word order, and naturalness"
+}
+```
+
+The faithfulness prompt tells the judge to treat the modified triples as the complete source of truth, even if they contradict real-world facts.
 
 ## Troubleshooting
 
@@ -372,4 +361,4 @@ https://api.openai.com/v1
 https://api.openai.com/v1/chat/completions
 ```
 
-If the app cannot find data, check that the XML files are under `data/GEM-v2-D2T-SharedTask/` or pass explicit paths in the sidebar.
+If the app cannot find data, check that the flat source tables are under `data/{cs-qa,sk-qa}/`, or pass explicit paths in the sidebar.

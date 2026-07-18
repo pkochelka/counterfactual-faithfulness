@@ -21,7 +21,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import json
 import random
 import re
 import sys
@@ -33,7 +32,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(Path(__file__).parent))
 from inspect_judged_results import CLASS_LABELS, parse_classification_answer  # noqa: E402
+from judged_io import iter_judged_records, normalize_classified_model_name  # noqa: E402
 
 DEFAULT_JUDGED_DIR = REPO_ROOT / "data" / "judged"
 DEFAULT_CLASSIFIED_DIR = REPO_ROOT / "data" / "classified"
@@ -107,39 +108,6 @@ def extract_predicate(correct_info: str) -> str:
     return match.group(1).strip() if match else ""
 
 
-def parse_stem(stem: str) -> tuple[str, str, str]:
-    # judge_<dataset>_<variant>_<language>_<judge-model...>
-    parts = stem.split("_")
-    if len(parts) >= 4 and parts[0] == "judge":
-        return parts[1], parts[2], parts[3]
-    return "", "", ""
-
-
-def iter_judged_files(judged_dir: Path):
-    for model_dir in sorted(judged_dir.iterdir()):
-        if not model_dir.is_dir():
-            continue
-        for jsonl_path in sorted(model_dir.glob("*.jsonl")):
-            if jsonl_path.name.endswith(".failures.jsonl"):
-                continue
-            yield model_dir.name, jsonl_path
-
-
-def normalize_classified_model_name(name: str) -> str:
-    """Map a data/classified/ model directory name to its data/judged/ counterpart.
-
-    The two trees name a couple of models differently: classified drops
-    judged's underscore-for-dot ("qwen3.5-122b" vs "qwen3_5-122b") and keeps
-    an "-openrouter" suffix judged does not ("llama4-scout-openrouter" vs
-    "llama4-scout").
-    """
-    if name.endswith("-openrouter"):
-        name = name[: -len("-openrouter")]
-    if "." in name:
-        name = name.replace(".", "_", 1)
-    return name
-
-
 def majority_predicted_label(values: list[str]) -> str:
     parsed = [label for label, _ in map(parse_classification_answer, values) if label]
     if not parsed:
@@ -183,61 +151,51 @@ def load_predicted_labels(classified_dir: Path) -> dict[tuple[str, str, str, str
 def load_rows(judged_dir: Path, predicted_labels: dict[tuple[str, str, str, str, str], str] | None = None) -> list[dict[str, Any]]:
     predicted_labels = predicted_labels or {}
     rows = []
-    for model, jsonl_path in iter_judged_files(judged_dir):
-        dataset, variant, language = parse_stem(jsonl_path.stem)
-        with jsonl_path.open(encoding="utf-8") as f:
-            for line_no, line in enumerate(f, start=1):
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    record = json.loads(line)
-                except json.JSONDecodeError:
-                    continue
-                parsed = record.get("parsed") or {}
-                score = parsed.get("faithfulness_score")
-                if not isinstance(score, (int, float)) or score >= MAX_SCORE:
-                    continue
-                info = parsed.get("incorrect_information") or []
-                if not isinstance(info, list):
-                    info = [info]
-                items = []
-                for idx, item in enumerate(info):
-                    if isinstance(item, dict):
-                        comment = str(item.get("comment") or "")
-                        info_used = str(item.get("info_used") or "")
-                        correct_info = str(item.get("correct_info") or "")
-                    else:
-                        comment = str(item)
-                        info_used = ""
-                        correct_info = ""
-                    label = extract_label(comment)
-                    items.append(dict(
-                        item_index=idx,
-                        label=label,
-                        category=LABEL_TO_CATEGORY.get(label, ""),
-                        is_other_label=label in OTHER_LABELS,
-                        info_used=info_used,
-                        correct_info=correct_info,
-                        comment=comment,
-                        comment_detail=extract_comment_detail(comment, label),
-                        predicate=extract_predicate(correct_info),
-                    ))
-                eid = str(record.get("eid", ""))
-                rows.append(dict(
-                    model=model,
-                    dataset=dataset,
-                    variant=variant,
-                    language=language,
-                    eid=eid,
-                    sentence=str(record.get("sentence", "")),
-                    modified_triples=str(record.get("modified_triples", "")),
-                    faithfulness_score=int(score),
-                    predicted_label=predicted_labels.get((model, dataset, variant, language, eid), ""),
-                    judged_file=str(jsonl_path.relative_to(REPO_ROOT)),
-                    judged_line=line_no,
-                    items=items,
-                ))
+    for r in iter_judged_records(judged_dir):
+        parsed = r.record.get("parsed") or {}
+        score = parsed.get("faithfulness_score")
+        if not isinstance(score, (int, float)) or score >= MAX_SCORE:
+            continue
+        info = parsed.get("incorrect_information") or []
+        if not isinstance(info, list):
+            info = [info]
+        items = []
+        for idx, item in enumerate(info):
+            if isinstance(item, dict):
+                comment = str(item.get("comment") or "")
+                info_used = str(item.get("info_used") or "")
+                correct_info = str(item.get("correct_info") or "")
+            else:
+                comment = str(item)
+                info_used = ""
+                correct_info = ""
+            label = extract_label(comment)
+            items.append(dict(
+                item_index=idx,
+                label=label,
+                category=LABEL_TO_CATEGORY.get(label, ""),
+                is_other_label=label in OTHER_LABELS,
+                info_used=info_used,
+                correct_info=correct_info,
+                comment=comment,
+                comment_detail=extract_comment_detail(comment, label),
+                predicate=extract_predicate(correct_info),
+            ))
+        eid = str(r.record.get("eid", ""))
+        rows.append(dict(
+            model=r.model,
+            dataset=r.dataset,
+            variant=r.variant,
+            language=r.language,
+            eid=eid,
+            sentence=str(r.record.get("sentence", "")),
+            modified_triples=str(r.record.get("modified_triples", "")),
+            faithfulness_score=int(score),
+            predicted_label=predicted_labels.get((r.model, r.dataset, r.variant, r.language, eid), ""),
+            judged_file=str(r.path.relative_to(REPO_ROOT)),
+            judged_line=r.line_no,
+            items=items,
+        ))
     return rows
 
 

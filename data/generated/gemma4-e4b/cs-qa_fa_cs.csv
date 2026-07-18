@@ -1,0 +1,531 @@
+eid,category,shape,shape_type,size,sentence
+Id0,culture,,,1,Karel Plíhal složil pro Moravské divadlo Olomouc.
+Id1,culture,,,3,"Jana Petrů má největší hit, který pochází ze Starci na chmelu, což je muzikál."
+Id2,politics,,,2,"Ministryně zahraničí Spojených států, Madeleine Albrightová, má za původní zemi Česko."
+Id3,culture,,,3,Svátek svatého Mikuláše je spojen s rozdáváním dárků dětem a slaví se 5. prosince 2026 večer.
+Id4,geography,,,1,Vodní nádrž Slapy je součástí Vltavských Kaskád.
+Id5,history,,,4,"Literatura byla publikována Disidenti, nachází se na území Čech a je nazvána samizdat, přičemž její časový období je 1950-01-01 až 2000-12-31."
+Id6,culture,,,3,"Jan Neruda je spojen s Malou Stanou, má dílo tvorba a má život."
+Id7,geography,,,1,Prachovské skály se nacházejí v CHKO Český ráj.
+Id8,culture,,,5,"Karel Gott je český zpěvák a získal cenu Zlatý slavík, kterou obdržel nejvíckrát."
+Id9,culture,,,2,Oldřich Kaiser tvoří komediální duo s Jiřím Lábusem a jsou neoddelitelní.
+Id10,geography,,,1,Kladensko má jako těžební zdroj uhlí.
+Id11,politics,,,1,Miroslava Němcová je členkou ODS.
+Id12,history,,,1,Miloš Havel je zakladatel Barrandovských filmových ateliérů.
+Id13,geography,,,2,Nejvyšší bod Krkonoš má výšku 1603 a je součástí Krkonoš.
+Id14,history,,,1,Bitva u Slavkova se odehrála během Napoleonských válek.
+Id15,history,,,2,"Historické město Most bylo zrušeno kvůli těžbě uhlí, která je typem zdroje uhlí."
+Id16,culture,,,6,"Znak města Třebíč se skládá ze štítu, který má tři vodorovná pole; horní pole je červené, dolní pole je červené a střední pole je bílé a obsahuje tři černé benediktinské kápě."
+Id17,geography,,,2,"Zlín se nachází v údolí Dřevnice, které je řeka."
+Id18,geography,,,2,Slanská hora má název Slanská hora a nachází se v Slaný.
+Id19,geography,,,1,Těžba uhlí způsobuje problémy v Karviné.
+Id20,history,,,2,"Kolín má židovskou menšinu jako náboženskou menšinu, a židovská menšina je náboženskou menšinou."
+Id21,geography,,,2,Císařský ostrov je ostrov a je největším ostrovem Prahy.
+Id22,sports,,,1,Kladno je známé pro hokej.
+Id23,politics,,,1,Ministerstvo zdravotnictví České republiky má sídlo na Palackého náměstí.
+Id24,sports,,,2,"Petr Mach vlastní Sparta, která je fotbalový klub."
+Id25,culture,,,2,"Granát Turnov produkuje šperky, které jsou české granáty."
+Id26,culture,,,4,"J. H. Krchovský je autorem básně Na samém konci, která byla napsána na fasádě domu v nizozemském městě Leiden."
+Id27,culture,,,5,"Ondřej Sekora je autorem knih, které mají postavy Ferda Mravence a Brouka Pytlíka, a obě tyto postavy jsou inspirovány hmyzem."
+Id28,culture,,,2,Film Štěstí má hlavní aktérky Tatiana Vilhelmová a Pavel Liška.
+Id29,sports,,,1,Zdeněk Nejedlý má přezdívku Rudý dědek.
+Id30,history,,,3,Karel IV je český král a postavil Hladovou zeď.
+Id31,geography,,,2,Sněžka má výšku 1603 metrů.
+Id32,culture,,,3,"Jáchym Topol obdržel Státní cenu za literaturu, protože je citlivý člověk, a citlivý člověk je román."
+Id33,geography,,,2,Největší povodeň v ČR nastala v roce 2002 a proběhla během posledních 100 let.
+Id34,geography,,,2,Český Těšín je sídlem organizací a je středem polské národnostní menšiny.
+Id35,geography,,,3,"Frýdek-Místek vznikl z 5, z 2 měst a z 3 obcí."
+Id36,history,,,3,"Pomník je věnován Americkým vojákům a nachází se na Chodském náměstí, které je v Plzni."
+Id37,culture,,,3,"Prašivka je postava ze Světa Harryho Pottera, je typ krysy a Peter Pettigrew se transformuje do Prašivky."
+Id38,history,,,2,Jindřich Nový je regionální historik a je patriota Karlových Var.
+Id39,history,,,1,Bitva na Bílé hoře se odehrála v roce 1620.
+Id40,geography,,,2,Škoda Auto je automobilkou a má sídlo v Mladé Boleslavi.
+Id41,culture,,,2,Noc na Karlštejně je film a je místem pro natáčení na Karlštejně.
+Id42,other,,,2,Martin Frič je režisér a Cesta do hlubin študákovy duše je řízena Martinem Fričem.
+Id43,geography,,,2,"Trutnov má řeku Úpa, která protéká Trutnovem."
+Id44,other,,,2,Měsíční časopis mateřídouška je určen pro školáky a předškoláky.
+Id45,other,,,1,Časopis Vesmír informuje o vědě.
+Id46,geography,,,2,"Lužná u Rakovníka obsahuje Železniční muzeum, které je umístěno v Lužné u Rakovníka."
+Id47,culture,,,2,Český rozhlas Rádio Junior má maskotu Ušoun Rušoun.
+Id48,culture,,,2,"Honzíkova cesta je dětská kníha, kterou napsal Bohumil Říha."
+Id49,other,,,1,Jim Čert hraje akordeon.
+Id50,culture,,,2,"Barbora Tachecí moderuje Osobnost Plus, který je pořad v rozhlase."
+Id51,other,,,1,Spolek Orel je katolická sportovní organizace.
+Id52,sports,,,2,Hora Raná je středem paraglidingu a sportovního létání.
+Id53,culture,,,1,Radio Beat se specializuje na rockovou hudbu.
+Id54,history,,,4,"Vykopávky v Přerově se nacházejí v Přerově, kde byly nalezeny kosti, které patří Mamuti a byly nalezeny ve značném množství."
+Id55,geography,,,1,Řeka Vydra se nachází v Národním parku Šumava.
+Id56,geography,,,2,"Anděl Páně 2 byl natočen na hradu v Ledči nad Sázavou, který se nachází v Ledči nad Sázavou."
+Id57,culture,,,1,Bob Hýsek popularizuje slamovou poezii.
+Id58,geography,,,1,Litomyšl má symbol lilii.
+Id59,culture,,,1,Slavonice je spojena s textilním průmyslem.
+Id60,geography,,,2,"Žatec má řeku Ohře, která protéká Žatecem."
+Id61,geography,,,1,Jablunkovský výběžek má pro své umístění trojmezí Česko-slovensko-polské.
+Id62,sports,,,4,"Jaromír Vytopil je knihkupec, je nejstarší a nejdelji aktivní a jeho lokalita je Česká republika."
+Id63,geography,,,2,"Turnov má řeku Jizera, která protéká Turnovem."
+Id64,sports,,,2,Česká hokejová liga má novou název Maxa liga a její sezóna začíná 1. srpna 2024.
+Id65,culture,,,3,"Humpolec je spojen s Hliníkem, který je postavou z filmu Marečku podejte mi pero."
+Id66,geography,,,3,"Rybník Bezdrev je rybník, který se nachází v ČR a je řazen na druhém místě podle velikosti."
+Id67,culture,,,1,Postavička Večerníček má autora Radek Pilař.
+Id68,geography,,,2,Rozhledna nad Ústí nad Orlicí má jméno Stříbrná krasavice a nachází se v Ústí nad Orlicí.
+Id69,culture,,,5,"Michal Horáček je autorem balád, které zveřejnil a požádal o zhudebnění, přičemž zhudebnění je určeno pro širokou veřejnost a týká se balád."
+Id70,geography,,,2,"Kralupy nad Vltavou se nachází na Praha Děčín, která je hlavní tratí."
+Id71,culture,,,1,Kateřina Tučková je autorkou Žítkovské bohyně.
+Id72,geography,,,2,"Bečov nad Teplou obsahuje Bečovskou botanickou zahradu, která je umístěna v Bečově nad Teplou."
+Id73,geography,,,2,"Havlíčkův Brod má řeku Sázava, která je řekou."
+Id74,geography,,,2,"Teplice má dominantní charakter Doubravka, která je typem hory."
+Id75,sports,,,3,"Závod veteránů se koná pravidelně, byl v roce 2002 a je pořádán na Českobrodském okruhu."
+Id76,culture,,,7,"Luděk Novák je český historik umění, který založil výtvarnou skupinu Trasa a je známý pro publikování studií, která se týkají českého malíře, mezi kterými patří Mánes, Švabinský a Machek."
+Id77,history,,,4,"Vladimír Přibský, jehož skutečné jméno je Vladimír Řezáč, je žurnalista a dramatik a narodil se v Přibyslavu."
+Id78,geography,,,2,Římskokatolická farnost Pravlov je umístěna na Brno venkov.
+Id79,geography,,,1,Rybník Španělák se nachází v Okrese Hradec Králové.
+Id80,culture,,,3,"Film Vrásky z lásky byl režírovaný Jiřím Strachem, a jeho hlavními herci jsou Radoslav Brzobohatý a Jiřina Bohdalová."
+Id81,politics,,,2,"Stanislav Rudolfský je předseda Hnutí Dobrých Proměn, a Hnutí Dobrých Proměn má předsedu Stanislava Rudolfského."
+Id82,other,,,5,"Teplická dopravní společnost provozuje městskou, příměstskou a regionální hromadnou dopravu a změnila své jméno na Arriva Teplice dne 2013-01-01."
+Id83,sports,,,7,"Marek Bárta je český sportovec a diskař, který je několikanásobný mistr České republiky v disciplíně hod diskem, a jeho osobní rekord je 65.46 metry."
+Id84,culture,,,5,"Jan Kameníček je český spisovatel a dramatik, který je považován za pokračovatele a je následovníkem Franz Kafka."
+Id85,culture,,,5,"Vladimíra Klumparová je česká sklářská výtvarnice, která žije v USA a působila v období od roku 1985 do roku 2003."
+Id86,sports,,,3,"Česká fotbalová liga má alternativní název Fortuna Liga, která je platná od 2018-01-01 do 2024-12-31."
+Id87,history,,,3,"Film Operace Dunaj je český film, který byl vydán v roce 2009 a jeho tématem je invaze vojsk Varšavské smlouvy."
+Id88,geography,,,2,Krušné hory jsou pohoří a nacházejí se na severozápadě Čech.
+Id89,geography,,,2,Jezero Most bylo vytvořeno zatopením lomu Most–Ležáky a jeho datum otevření je 2020.
+Id90,sports,,,4,Ondřej Perušič a David Schweiner jsou součástí týmu Ondřej Perušič a David Schweiner a stali se mistři světa v beach volleybalu v roce 2023.
+Id91,culture,,,1,"Slovo ""robot"" má Josef Čapek jako skutečného autora."
+Id92,history,,,1,Nuselský most měl předchozí název Most sebevrahů.
+Id93,culture,,,1,První česká hip hopová sólová deska má název Frekvence P.H.A.T.
+Id94,history,,,6,"Vojtěch Zikmund je český chemik, podnikatel a průmyslník, který byl u zrodu české společnosti, která se zabývá výrobou a prodejem benzínu."
+Id95,geography,,,1,Svojkovské skály se nacházejí v Českolipsku.
+Id96,sports,,,4,"David Krejčí je český skibobista, který drží 12 titulů, a tyto 12 titulů je mistr světa."
+Id97,culture,,,2,České ocenění má název Zlatá stuha a je udělováno v oboru knižní tvorba pro děti a mládež.
+Id98,culture,,,3,"Akademie múzických umění v Praze má fakulty DAMU, FAMU a HAMU."
+Id99,sports,,,2,Česká basketbalová federace vede sport basketbal a působí v České republice.
+Id100,other,,,3,"Diváci znají Radka Johna, který se objevuje v pořadu Na vlastní oči, který je investigativní pořad."
+Id101,history,,,4,"František Palacký byl český historik a politik, zakladatel Matice česká, kde byl také zakladatel."
+Id102,culture,,,4,"Ottův Slovník Naučný je fyzická encyklopedie, která je v češtině a je největší a nejobsáhlejší."
+Id103,history,,,1,Nejstarší politická strana v českých zemích byla založena dne 1848-01-01.
+Id104,history,,,1,Národní listy byl založen Julius Grégr.
+Id105,history,,,1,Hněvín byl poprvé zmíněn v roce 1248.
+Id106,history,,,4,"František Barvitius je Československý inženýr, který přispěl k Walter Minor, který je letecký motor."
+Id107,history,,,1,Škoda má původní název Laurin & Klement.
+Id108,history,,,7,"Františka Plamínková je československá politička, novinářka a feministka, která byla aktivní v období 1918-1938 a byla provedena 30. června 1942 v kontextu Heydrichiády."
+Id109,politics,,,3,"Adam Vojtěch je český politik, který byl ministrem zdravotnictví a je známý pro vystoupení v soutěži SuperStar."
+Id110,culture,,,6,"Česká situační komedie Světáci byla vydána v roce 1969 a obsahuje herečky Bohdalová, Jirásková a Janžurová, které tvoří slavnou ženskou trojici."
+Id111,culture,,,1,Česká hudební cena Anděl symbolizuje sošku Anděla.
+Id112,culture,,,3,"Český seriál Sňatky z rozumu má téma české vlastenectví, které se týká 19. století, a také se zabývá tzv. národním obrozením."
+Id113,geography,,,1,Moravskoslezský kraj má jako hlavní město Ostrava.
+Id114,history,,,2,Karel IV je otec Václava IV a Václav IV je syn Karla IV.
+Id115,culture,,,7,"Český slavík je roční průzkum, který měří popularitu a je největší, a jehož založení bylo v roce 1996, a cílí na české zpěváky, české zpěvačky a české skupiny."
+Id116,geography,,,5,"Veletržní palác se nachází v pražských Holešovicích, jeho architektonický styl je funkcionalismus, a je mezi prvními a největšími funkcionalistickými stavbami Prahy; původně sloužil k konání veletrhů, později však byl sídlem podniků zahraničního obchodu."
+Id117,culture,,,4,"Výstaviště Praha je veletržní areál, který byl založen dne 1891-01-01, nachází se v Česku a je nejstarší."
+Id118,history,,,5,"Kateřina Bobková-Valentová je historička z Liberece a je Česká, a obdržela Cena rektora UK za každodenní život učitele a žáka jezuitského gymnázia."
+Id119,other,,,4,"Petr Rychlý je herec a moderuje Natočto, který je zábavný a soutěžní televizní pořad vyrobený TV Nova."
+Id120,history,,,4,"Období politických změn v Československu, které se konalo v Československu, začalo 1989-11-17 a skončilo 1989-12-29 a má jméno Sametová revoluce."
+Id121,history,,,4,"První americký deník v češtině, jehož název je Svornost, byl napsán v češtině a jeho autor je František Boleslav Zdrůbek; tento deník se týká Ameriky."
+Id122,culture,,,8,"Časopis Nový Prostor je prodáván Bezdomovci A Jiní Sociálně Znevýhodnění Lidé, kteří obdrží Prodejní Cenu, která se použije k zabezpečení vlastních potřeb, získání pracovních návyků, obnovení pracovních návyků, znovuzačlenění do společnosti a znovuzačlenění do pracovního života."
+Id123,culture,,,2,"Kapela Mig 21 má zpěváka Jiřího Macháčka, a Jiří Macháček je zpěvák kapely Mig 21."
+Id124,culture,,,3,Bohouš Šebek se objevil v Pelíškách a jejím hrdinou byl Miroslav Donutil.
+Id125,culture,,,2,Rebel je pivovar a nachází se v Havlíčkově Brodě.
+Id126,culture,,,1,"StarDance, když hvězdy tančí, je moderován dvojice."
+Id127,culture,,,3,Rumcajs je kreslený loupežník a je spojen s Jičínem.
+Id128,culture,,,3,"Film Slunce seno jahody je komedií, který režíroval Zdeněk Troška a jeho děj se odehrává v Hošticích."
+Id129,geography,,,3,"Právnická fakulta je součástí Univerzity Karlova a nachází se na Čechově mostě, který je v Praze."
+Id130,geography,,,1,Krkonošský národní park má nejvyšší vrchol Sněžka.
+Id131,geography,,,1,Antonín Dvořák se narodil v Nelahozeves.
+Id132,geography,,,1,Domažlice se nachází v Plzeňském kraji.
+Id133,geography,,,2,Karel Poláček je autorem díla Bylo nás pět a narodil se v Rychnově nad Kněžnou.
+Id134,geography,,,1,Orlické hory mají nejvyšší vrchol Velká Deštná.
+Id135,history,,,1,Poslanecká sněmovna Parlamentu České republiky má sídlo v Thunovském paláci.
+Id136,geography,,,1,Vysočina má nejvyšší vrchol Javořice.
+Id137,culture,,,3,Bankovka má hodnotu 500 Kč a zobrazuje Boženu Němcovou.
+Id138,geography,,,2,Vodní nádrž má jméno Rozkoš a nachází se poblíž Babiččina údolí.
+Id139,culture,,,2,"Divadlo Semafor se nachází v Dejvicích, která je městská čtvrť."
+Id140,geography,,,1,Dlouhé stráně je typu přečerpávací elektrárna.
+Id141,geography,,,1,Nový Bor je známý pro sklářský průmysl.
+Id142,geography,,,2,"Macocha je součástí Punkevní jeskyně, která je komplexem jeskyní."
+Id143,geography,,,3,"Prachovské skály jsou přírodní rezervace, nacházejí se v Českém ráji a jsou známé pískovcovými skalními městy."
+Id144,geography,,,2,Baťův kanál spojuje Otrokovice a Sudoměřice.
+Id145,sports,,,3,Zlatá podkova je jezdecká všestrannost a spřežení a koná se v Humpoleci.
+Id146,geography,,,1,Muzeum rekordů a kuriozit se nachází v Pelhřimově.
+Id147,politics,,,4,Jindřich Vařeka je starosta v Příbramu od roku 2014-01-01 do roku 2019-12-31.
+Id148,geography,,,2,"Horoušany se nacházejí v Praha východ, který je okres."
+Id149,geography,,,1,Kutná Hora má řeku Vrchlice tekoucí skrz sebe.
+Id150,other,,,2,"Česko používá kauzální sazbu pro jiné než řemeslné živnosti, a tato sazba pro výdaje jiných než řemeslných živností je 60."
+Id151,culture,,,4,"Čeština 2.0 je internetový slovník, který založil Martin Kavka a sbírá nové české výrazy a novotvary."
+Id152,sports,,,1,Maxa liga je sportem lední hokej.
+Id153,other,,,2,"Václav Klaus napsal knihu Modrá, nikoli zelená planeta."
+Id154,geography,,,3,"Žimutice je obec, která se nachází v České Budějovicích, které jsou okres."
+Id155,geography,,,3,"Olovnice je obec, který se nachází v Mělníku, který je okres."
+Id156,other,,,3,"Odrůda David je odrůda hrušeň, byla vyvinuta v Česku a zralá je v prosince."
+Id157,culture,,,4,"Dílo Conception/Danae (Početí) je autorem František Kupka, bylo vyloženo v Česká republika a jeho dražební cena byla 126500000, přičemž je označeno jako nejdražší dílo všech dob."
+Id158,culture,,,4,"Fotograf Festival je fotografický festival, který se koná v Praze a začal v roce 2011, a koná ročně."
+Id159,geography,,,3,"Kladníky je obec, která se nachází v Přerově, který je okres."
+Id160,sports,,,4,"Jan Šilinger je český fotbalový obránce, který hrál pro FC Vysočina Jihlava v roce 2024."
+Id161,geography,,,3,Kostel svaté Heleny se nachází v Krásném Lesu v Česku a je jediný.
+Id162,geography,,,1,CHKO Český kras je částečně umístěna v Praze.
+Id163,geography,,,2,"Lažany se nachází v Strakonici, která je okres."
+Id164,history,,,4,Severní dráha císaře Ferdinanda je první parostrojní železnice v českých zemích.
+Id165,sports,,,3,"Stavební společnost PSJ je majoritním vlastníkem a obecným sponzorem FC Vysočina Jihlava, který je fotbalový klub."
+Id166,culture,,,2,"Festival Votvírák se koná na ploše bývalého vojenského letiště Boží Dar, která je umístěna v zrušeném vojenském výcvikovém prostoru Milovice-Mladá."
+Id167,other,,,5,"Živa je přírodovědecký časopis, který je stále vycházející, jehož jazyk je čeština a zaměřuje se na popularizaci vědy, přičemž je nejstarší."
+Id168,culture,,,5,"Památný strom je strom a je chráněn místními zákonnými předpisy z důvodu mimořádného vzrůstu, stáří a společenské důležitosti."
+Id169,geography,,,2,Areál Škoda Auto v Mladé Boleslavi má silnici D10 a D10 prochází poblíž areálu Škoda Auto v Mladé Boleslavi.
+Id170,other,,,1,Jiří Šindelář je člen skupiny Katapult jako basový gitarista.
+Id171,culture,,,1,Vertigo quintet hraje žánr jazz.
+Id172,history,,,3,"Bahna je každoroční prezentace, kterou předvádí Armáda České republiky a je určena pro veřejnost."
+Id173,geography,,,2,"Zámek Všetaty se nachází v Rakovníku, který je okresní město."
+Id174,culture,,,2,Karetní hra Lóra se hraje v Česku a primárně se hraje v Kladně.
+Id175,culture,,,2,Edison je autorem Vítězslava Nezvala a Signál času je také autorem Vítězslava Nezvala.
+Id176,other,,,2,Žufánek je lihovar a produkuje OMG gin.
+Id177,culture,,,9,"Animovaný seriál Maxipes Fík pochází z Československa a zobrazuje příhody; jeho postavy jsou Fík, který je pes a je přerostlý a mluvící, a Ája, která je holčička."
+Id178,culture,,,5,"Český večerníček má název Krkonošské pohádky, které obsahují postavy Trautenberk, hajný, Anče a Kubu."
+Id179,culture,,,3,"Jana Neruda je autorkou Povídek malostranských, které jsou prozaickým dílem a jsou pojmenovány po pražské čtvrti."
+Id180,geography,,,3,Národní park České Švýcarsko je nejsevernější národní park v České republice.
+Id181,culture,,,5,"Devětsil je umělecký svaz, který pochází z Česka, má levicový politický směr a byl aktivní od 1920-01-01 do 1930-12-31."
+Id182,culture,,,5,"Filmová pohádka Anděl Páně pochází z Česka, byl režírovan Jiří Strach a byl vydán v roce 2005, přičemž jeho téma je čert a anděl."
+Id183,geography,,,3,"Černé jezero je ledovcové jezero, nachází se v České republice a je největší."
+Id184,geography,,,2,"Berounka je vytvořena spojením Mže, Radbuzy, Úhlavy a Úslavy, které se nacházejí v Plzni."
+Id185,geography,,,3,"Otava je řeka, která teče do Vltavy a nachází se v západních a jižních Čechách."
+Id186,history,,,5,"Bitva u Slavkova, která je slavná, se odehrála 2. prosince 1805 v Moravě a účastnami byly Francie a Rusko."
+Id187,other,,,4,"České dráhy je železniční dopravce, který je největší a jeho země je Česká republika, a Ministerstvo dopravy České republiky založilo České dráhy."
+Id188,culture,,,4,Žvýkačka Pedro byla vyrobena v Československu během socialismu a má obal s postavou chlapečka v sombréru.
+Id189,culture,,,3,"Státní hymna České republiky pochází z Fidlovačka aneb Žádný hněv a žádná rvačka, která je divadelní hrou a autorem je Josef Kajetán Tyl."
+Id190,culture,,,6,"Miroslav Donutil je český herec a hraje v seriálu Doktor Martin hlavní postavu, který je vysílán Českou televizí."
+Id191,culture,,,6,"Film Samotáři je komedie z Česká, který byl vydán v roce 2000 a jehož herci jsou Ivan Trojan, Jiří Macháček a Saša Rašilov mladší."
+Id192,history,,,5,"Dvoudílná česká historická komedie s názvem Císařův pekař – Pekařův císař, která byla vydána 1951-01-01, je žánru historická komedie a má 2 díly, a Jan Werich v ní zahrnul obě hlavní postavy."
+Id193,culture,,,5,"Jára Cimrman je fikční postava a génius, jehož národnost je česká, a postavu Jára Cimrmana vytvořili Jiří Šebánek a Zdeněk Svěrák."
+Id194,culture,,,3,"Zdeněk Jirotka je autorem Saturninu, který byl publikován v roce 1942 a je humoristický román."
+Id195,culture,,,4,"Český kreslený večerníček má název Bob a Bobek – králíci z klobouku, a tento kreslený večerníček obsahuje králíky, kteří jsou ve kterém 2 a žijí v klobouku."
+Id196,culture,,,4,"Václav Chaloupka vytvořil Méďové, který je hraný seriál určený pro děti a jeho hlavními postavami jsou tři malá medvíďata."
+Id197,culture,,,3,"Česká televize má stanici ČT :D, která byla založena dne 2013-01-01 a cílovou skupinou jsou děti."
+Id198,culture,,,3,"Čeští jazykoví puristé se týkají období baroko a národní obrození, označují termín kapesník a čistonosoplena je termín pro kapesník."
+Id199,culture,,,7,"Film Jedna ruka netleská je komedie z Česka, který byl vydán v roce 2003 a režíroval David Ondříček; v něm hrají Jiří Macháček, Ivan Trojan a Marek Taclík."
+Id200,culture,,,5,"Film Návrat idiota je romantická komedie z Česká, který vyšel v roce 1999, byl režírovan Sašou Gedeonem a inspiroval se hlavní postavou z Dostojevského kníhy Idiot."
+Id201,culture,,,9,"Film Občanský průkaz, který směřoval Ondřej Trojan, byl vydán v roce 2010 a zobrazuje životy Petra, Popelky, Aleše a Míťy v období od 1973-01-01 do 1977-12-31 v kontextu normalizace."
+Id202,culture,,,5,"Jana Budař vytvořila film Princ Mamánek, který byl vydán v roce 2022, je filmovou pohádkou a pochází z České republiky, a je také její debutový film jako režisérka."
+Id203,culture,,,6,"Česká televize produkuje Svět pod hlavou, který je o Filipu Marvanovi, který je hrajéný Václavem Neužilem a který byl policistou; Filip Marvan byl zasažen autem a zažil komu v roce 1982."
+Id204,culture,,,7,"Filmová komedie Dědictví aneb Kurvahošigutntag pochází z Česka, byl vydán v roce 1992 a jeho režírovala Věra Chytilová; Bohuš ho zahrál Bolek Polívka a Bohuš dědí velký majetek od zemřelého otce."
+Id205,culture,,,5,"Celovečerní film Postřižiny je režie Jiřího Menzela, byl vydán v roce 1980 a je založen na knize Bohumila Hrabala, jehož děj se týká pivovaru a rodiny jeho správce za první republiky."
+Id206,culture,,,6,"Film Na samotě u lesa je komedie z Česka, který Jiří Menzel režíroval a byl vydán v roce 1976; vypráví o obyčejné pražské rodince Lavičkových, jejichž cílem je výhodně získat domek na venkově."
+Id207,culture,,,9,"Filmová pohádka Tři veteráni pochází z Česka a byla vydána v roce 1983, a její hlavní postavy jsou Pankrác, Bimbác a Servác, kteří jsou vysloužilí vojáci."
+Id208,culture,,,5,"Kniha s názvem Fimfárum, která byla vydána v roce 1960, je humoristické pohádky a obsahuje 17 příběhů, a její autorem je Jan Werich."
+Id209,culture,,,3,"Karel Čapek je autor Devatero pohádek, které byly publikovány v roce 1932 a patří do žánru pohádek."
+Id210,history,,,4,"Povídání o pejskovi a kočičce je autorem Josef Čapek, bylo publikováno v roce 1929, je pohádková knížka a obsahuje 2 zvířecí postavy."
+Id211,culture,,,4,"Arnošt Lustig je český židovský spisovatel a publicista, který napsal knihu Modlitba pro Kateřinu Horovitzovou, která má téma holokaustu."
+Id212,geography,,,2,Ašský výběžek je v západě Čech a rozšiřuje se do území Německa.
+Id213,geography,,,4,"Dálnice D10 začíná v Praze, prochází Mladou Boleslaví a končí v Turnově, přičemž je propojena s silniční sítí."
+Id214,culture,,,5,"Postava z českých pověstí má jméno Teta, která je dcera Krok a sestra Kazi a Libuše, a Teta může komunikovat s duchy."
+Id215,history,,,4,"Alois Jirásek je autorem Starých pověstí české, které jsou zpracovány z pověstí, a jejich cílovou skupinou je mládež, přičemž pověsti pocházejí z různých období českých dějin."
+Id216,history,,,6,"Přemysl Oráč je český mytický vůdce, který založil dynastii Přemyslovci, a jeho manželkou byla Libuše; Přemyslovci jsou nejstarší dynastie vládnoucí v Česku."
+Id217,history,,,4,"Václav II. bude českým králem, byl vězněn v Bezdězi, který se nachází v Českolipsku, a to v 13. století."
+Id218,history,,,6,"Husákovy děti se odkazují na děti, které se narodily v Československu mezi 1970-01-01 a 1975-06-30, a Husákovy děti byly použity v publicistickém slangu, zatímco Husákova vláda začala 1969-04-17."
+Id219,culture,,,3,"Viggo Mortensen je známý z Trilogie Pán prstenů a navštívil 58. ročník Mezinárodního filmového festivalu Karlovy Vary, který se konal v roce 2024."
+Id220,geography,,,2,"Karlovy Vary má za místo založení ústí říčky Teplé, která teče do Ohře."
+Id221,geography,,,1,Znojmo má řeku Dyje tekoucí skrz.
+Id222,geography,,,2,Národní přírodní rezervace má jméno Soos a nachází se poblíž Františkových Lázní.
+Id223,culture,,,6,"Magdalena Dobromila Rettigová je česká buditelka a spisovatelka, která je známá jako autorka, a její dílo „Domácí kuchařka“ bylo publikováno v roce 1826."
+Id224,geography,,,1,Okres Svitavy se nachází v Pardubickém kraji.
+Id225,history,,,2,Ludvík Svoboda se stal prezidentem dne 1968-01-01 a byl prezidentem Československé socialistické republiky.
+Id226,history,,,3,"Husitský politický a věroučný program, který se jmenuje Čtyři artikuly pražské, má za cíle nápravu církve a nápravu křesťanské společnosti."
+Id227,geography,,,1,Národní divadlo moravskoslezské má sídlo v Ostravě.
+Id228,geography,,,2,Slezsko je historická země a nachází se severovýchodní České republiky.
+Id229,culture,,,3,Radka Vranková je česká zpěvačka a její umělecké jméno je Radůza.
+Id230,geography,,,3,"Česká Třebová je město, které se nachází v Ústí nad Orlicí, která je okres."
+Id231,culture,,,3,"Akademie múzických umění v Praze se skládá z DAMU, FAMU a HAMU."
+Id232,culture,,,4,"Večerníček je televizní pořad, jehož cílová skupina jsou děti, vysílá se každý den večer."
+Id233,culture,,,1,Kytice z pověstí národních má autora Karel Jaromír Erben.
+Id234,history,,,2,Prezidentské dekrety byly autorizovány prezidentem Beneš a jejich časový rozsah je 1940-01-01 až 1945-12-31.
+Id235,geography,,,1,Vsetín se nachází v Zlínském kraji.
+Id236,geography,,,1,Lázeňská léčebna Mánes se nachází v Karlových Varech.
+Id237,geography,,,1,Jablonec nad Nisou se nachází v Libereckém kraji.
+Id238,geography,,,1,Vyškov se nachází v Jihomoravském kraji.
+Id239,geography,,,1,Pivovar Gambrinus má sídlo v Plzni.
+Id240,geography,,,1,Cheb se nachází v Karlovarském kraji.
+Id241,history,,,3,"Protektorát Čechy a Morava je součástí československého území, bylo okupováno nacistickým Německem v období 1939-03-15/1945-05-08."
+Id242,geography,,,2,"Malá Amerika je zatopený lom, který se nachází v okresu Beroun."
+Id243,geography,,,1,Mariánské Lázně se nachází v Karlovarském kraji.
+Id244,geography,,,1,Palác Lucerna se nachází v Praze.
+Id245,culture,,,2,Host do domu je časopis a jeho publikace se týká 20. století.
+Id246,geography,,,1,Žďár nad Sázavou se nachází v Vysočině.
+Id247,geography,,,1,Chráněná krajinná oblast Křivoklátsko se nachází ve Středočeském kraji.
+Id248,other,,,2,Orlice park shopping je obchodní centrum a nachází se v Hradci Králové.
+Id249,geography,,,1,Strakonice se nachází v Jihočeském kraji.
+Id250,geography,,,1,Pevnost Josefov se nachází v okresu Náchod.
+Id251,history,,,1,StB byla československá politická policie.
+Id252,geography,,,1,Trutnov se nachází v Královéhradeckém kraji.
+Id253,history,,,1,Alois Jirásek je autorem Staré pověsti české.
+Id254,geography,,,1,Prostějov se nachází v Olomouckém kraji.
+Id255,history,,,4,"Pionýr je Český Spolek, který cílí na děti, mládež a dospělé."
+Id256,history,,,2,Rudé právo je deník a je spojeno s Komunistickou stranou Československa.
+Id257,history,,,1,Rožmberkové je český šlechtický rod.
+Id258,history,,,2,Karel Klostermann je spisovatel a je český.
+Id259,geography,,,1,Univerzita Tomáše Bati se nachází ve Zlíně.
+Id260,other,,,1,TV Nova byl založen Vladimír Železný.
+Id261,culture,,,1,Sokol je český tělocvičný spolek.
+Id262,politics,,,2,Mladá fronta DNES je denník a je z Českého.
+Id263,culture,,,2,"Babička je dílo, které napsala Božena Němcová."
+Id264,history,,,1,Mikuláš Teschl z Loun je významný teolog.
+Id265,geography,,,2,Plechý je součástí Šumavského pohoří a jeho výška je 1378 metrů.
+Id266,geography,,,1,Cejpův dům se nachází v Hradci Králové.
+Id267,history,,,4,"Václav Antoš je český voják a vojenský stíhací pilot, jeho smrt byla způsobena leteckým neštěstím, které se stalo během demonstrativního letu."
+Id268,politics,,,1,Ferdinand Peroutka obdaroval novináře.
+Id269,culture,,,2,Kdyby tisíc klarinetů je kompozice Jiřího Šlitra.
+Id270,geography,,,1,Novomlýnská nádrž se nachází na řece Dyje.
+Id271,geography,,,1,Nové Mitrovice se nachází v Plzeňském kraji.
+Id272,geography,,,1,Nová Bystřice se nachází na hranici s Rakouskem.
+Id273,history,,,2,Alois Pokorný je student a protikomunistický odbojář.
+Id274,geography,,,1,Libníč je blízko Českých Budějovic.
+Id275,culture,,,1,Magnesia Litera je české literární ocenění.
+Id276,culture,,,1,Smrt krásných srnců je autorem Ota Pavel.
+Id277,geography,,,2,Zličín je městská část a je součástí Prahy.
+Id278,history,,,1,Jihomoravský kraj má původní název Brněnský kraj.
+Id279,culture,,,4,"Michal Nesveda je kouzelník a zúčastnil se talentové show Česko Slovensko má talent, která je slavná."
+Id280,history,,,2,Marie Terezie zavedla povinnou školní docházku na území Česka.
+Id281,geography,,,1,Železné hory se nacházejí v okresu Chrudim.
+Id282,history,,,3,Moravská orlice má stříbrnou a červenou barvu a je součástí velkého státního znaku České republiky.
+Id283,geography,,,1,Tatra má sídlo v Kopřivnici.
+Id284,politics,,,3,"T. G. Masaryk byl prezidentem a Edvard Beneš byl ministr zahraničí, a Edvard Beneš byl ministr během prezidentského období T. G. Masaryka."
+Id285,culture,,,1,Kosmova kronika je napsána v latině.
+Id286,history,,,1,Dalimilova kronika byla napsána v češtině.
+Id287,culture,,,1,Kabát pochází z Teplice.
+Id288,geography,,,1,Škoda byla založena v Plzni.
+Id289,history,,,3,"Karlova univerzita se nachází v Praze, a Karolinum je budova Karlovy univerzity, která je nejstarší budova."
+Id290,culture,,,1,Josef Václav Myslbek je sochař.
+Id291,culture,,,1,Václav Havel namáhal v Divadle Na zábradlí.
+Id292,history,,,1,Tomáš Baťa založil společnost v Zlíně.
+Id293,history,,,1,Jaroslav Hašek je autor osudů dobrého vojáka Švejka za světové války.
+Id294,culture,,,3,"Petřín má monument Pomník Karla Hynka Máchy, který upomíná Karla Hynka Mácha, a Karel Hynek Mácha je český básník."
+Id295,geography,,,2,Novodobá těžba ovlivňuje vzhled a vývoj České Lípy a je typem uranu.
+Id296,geography,,,1,Kraví hora je nazývána rozhledna.
+Id297,history,,,1,Karel Kryl má přezdívku Básník s kytarou.
+Id298,geography,,,3,"Sokolov se nachází u Soutoku Ohře a Svatavy, který je místem spojení Ohře a Svatavy."
+Id299,geography,,,3,"Cejpův dům, který je Renesanční městský palác, je umístěn na Malé náměstí a Dlouhá ulice v Hradec Králové."
+Id300,history,,,2,Zemský úřad měl předchozí umístění v Brně a předchozí sídlo v Místodržitelském paláci.
+Id301,history,,,2,Pankrácká věznice je slavně známá a je přímo spojena s pražským vrchním soudem.
+Id302,culture,,,3,První česká hudební televizní stanice je hudební televizní stanice a je z České republiky.
+Id303,politics,,,3,"Andrej Babiš vlastní Mladou frontu a mediální skupinu Mafra, a jeho vlastnictví začalo 1. ledna 2013."
+Id304,culture,,,3,"Zdeněk Svěrák oznámil U Prdlavky, která je zastávkou a patří do pražské městské hromadné dopravy."
+Id305,geography,,,2,linka C je součástí pražského metra a je nejstarší.
+Id306,history,,,3,"Gavrilo Princip byl atentátník, je slavný a byl vězněn v Terezíně."
+Id307,geography,,,3,"Televizní vysílač Ještěd je televizní vysílač a nachází se poblíž Liberec, který je město."
+Id308,geography,,,2,"Václav Aulický, který je architekt, navrhl Žižkovský vysílač."
+Id309,geography,,,2,"Labe se setkává s Orlice, a Orlice má místo sjednocení v Hradec Králové."
+Id310,culture,,,1,Svatá Anna má vlastnost chladna z rána.
+Id311,culture,,,3,"Prago Union obdržela Anděl Award za Dezorient Express, a tato odměna byla udělená v roce 2010."
+Id312,history,,,6,"Rudolf Procházka byl český voják a letec, který sloužil jako major, a žil i zemřel v domě, který se nachází v Brně."
+Id313,history,,,2,Přemysl Otakar II má přezdívku král železný a zlatý a je králem Česka.
+Id314,geography,,,2,Institut plánování a rozvoje hlavního města Prahy se nachází v Praze a má sídlo v budově bývalého Sdružení projektových ateliérů.
+Id315,history,,,4,"Žofie Chotková je česká šlechtična a manželka Ferdinanda d´Este, který je následníkem trůnu a byl vražen."
+Id316,geography,,,2,Nová linka D je součástí pražského metra a má barvu modrá.
+Id317,geography,,,1,Tzv. Pražské Předměstí patří do katastrální oblasti Hradec Králové.
+Id318,history,,,1,Česká televize byla založena dne 1992-01-01.
+Id319,sports,,,2,"Závodní okruh se nachází v Mostu, který je součástí severozápadních Čech."
+Id320,history,,,1,Nemocniční areál nemocnice Znojmo pochází z bývalého kláštera františkánů.
+Id321,geography,,,4,"Karlovy Vary je české město, které se nachází na západě Čech a je součástí seznamu Světového dědictví UNESCO, a je známé svými termálními prameny."
+Id322,history,,,3,Komunistické justiční politické procesy se odehrály v Československu v období od 1950-01-01 do 1959-12-31 a Milada Horáková je slavnou obětí těchto procesů.
+Id323,culture,,,6,"Josef Kemr je Český a legendární herec, který měl 150 rolí a obdržel Cenu Thálie za celoživotní mistrovství v roce 1993."
+Id324,geography,,,1,Dům U Doušů je umístěn na Václavském náměstí.
+Id325,history,,,5,"Československý válečný kříž 1939 je vojenské vyznamenání Československa, které byl založen v roce 1939 a uděloval se za prokázání vynikajícího činu v nebezpečí života nebo za obětování života."
+Id326,culture,,,4,"Melantrich je nakladatelství z Česka, které patří do novodobé éry a nachází se na Václavském náměstí."
+Id327,history,,,2,Historické jádro města Prostějova je součástí městské památkové zóny a bylo označeno v roce 1990.
+Id328,history,,,5,"Ústí nad Labem se nachází v severu Čech a bylo silně ovlivněno americkými nálety, které se staly v roce 1945, a také érou rozsáhlých demolic a přestaveb, která probíhala během komunistického režimu."
+Id329,history,,,1,Národní divadlo v Praze bylo založeno dne 1868-01-01.
+Id330,history,,,2,Kostel od Santiniho na Zelené hoře je věnován sv. Jan Nepomucký.
+Id331,culture,,,1,Jihlavský pivovar má symbol ježek.
+Id332,history,,,1,Jaroslav Hašek zemřel v Lipnici nad Sázavou.
+Id333,culture,,,2,Chrám v Kutné Hoře je věnován sv. Barbarě a nachází se v Kutné Horě.
+Id334,culture,,,2,Pivovar Poutník je umístěn v Pelhřimově.
+Id335,geography,,,1,Ještěd se nachází poblíž Liberec.
+Id336,culture,,,2,Radegast je slovanský bůh a má sochu na Radhošti.
+Id337,geography,,,1,Výtahová kancelář Bati se nachází v Baťově Mrakodrapu.
+Id338,history,,,5,"Marie Svatošová je lékařka a zakladatelka českých hospiců, a obdržela Medaile Za zásluhy o stát, kterou jí udělili Václav Havel i Miloš Zeman."
+Id339,history,,,3,Český zemský sněm se konal v Thunovském paláci a začal v roce 1861.
+Id340,politics,,,2,Jiří Kobza patří do politické strany SPD a byl zvolen do parlamentu.
+Id341,history,,,3,Masarykova univerzita má velikost 2 a založení 2 a nachází se v České republice.
+Id342,history,,,3,"Úmrtí Jana Opletala, které nastalo 16. listopadu 1939, předcházelo uzavření českých vysokých škol 17. listopadu 1939."
+Id343,other,,,1,Kostelecké uzeniny patří do Agrofertu.
+Id344,geography,,,3,"Kostel je umístěn na západním okraji, který je lokalitou Českolipského městského parku, a je používán Husitskou církví."
+Id345,history,,,3,Československá televize začala vysílat v roce 1953 v Československu jako veřejné vysílání.
+Id346,history,,,4,Bible kralická je úplný překlad Bible a je v češtině a je první.
+Id347,geography,,,3,"České Budějovice se nachází u River Confluence, které je spojení Vltavy a Malše."
+Id348,history,,,1,Hrad Kost patří do rodiny Kinských.
+Id349,geography,,,1,Rudný důl u Harrachova se nachází v Ptačince.
+Id350,geography,,,2,Krkavčí skály u Křižan jsou známé jako Vajoletky a horolezci je používají.
+Id351,geography,,,3,"Náměstí se nachází v Litoveli, a nejstarší zachovaný kamenný most se nachází v Moravě a je nalezen pod náměstím."
+Id352,culture,,,1,Vysoká škola uměleckoprůmyslová v Praze má zkratku UMPRUM.
+Id353,geography,,,6,"Kino Jas má název Kino Jas, je kinosál a širokoúhlé kino, nachází se v Pardubicích na ulici Bratranců Veverkových a je historicky první."
+Id354,geography,,,1,Známá svítící chodba se nachází pod Jihlavou.
+Id355,politics,,,1,Emil Hácha byl prezidentem Protektorátu Čechy a Morava.
+Id356,geography,,,1,Kostel svatého Václava a Blažeje se nachází v Děčíně.
+Id357,sports,,,4,"Lukáš Bauer vyhrál stříbrnou medaili na ZOH 2006, která se konala v Turíně dne 2006-02-10."
+Id358,geography,,,1,Jetřichovické stěny se nacházejí v NP České Švýcarsko.
+Id359,culture,,,2,Devětsil je Český Levicový Svaz Umělců a Jaroslav Seifert je členem Devětsilu.
+Id360,geography,,,1,Dopravní podnik hl. m. Prahy má 2 kabelovky.
+Id361,history,,,2,Původní pražská univerzita byla založena dne 1348-01-01 a měla 4 fakulty.
+Id362,culture,,,1,Rákosníček byla озvněna Jiřinou Bohdalovou.
+Id363,culture,,,1,Karel Šíp moderuje Všechnopárty.
+Id364,geography,,,2,Ploučnice teče do Labe a v Děčíně se tam spojuje.
+Id365,other,,,2,Fakulta humanitních studií je fakultou Univerzity Karlova a je nejmladší fakultou Univerzity Karlova.
+Id366,politics,,,5,"Union banka je středně velká česká banka, která v roce 2003 zavřela všechny pobočky a vstoupila do likvidace kvůli podezřelým úvěrům."
+Id367,culture,,,4,"Johann Wolfgang Goethe miloval Mariánské lázně, kde měl román s Ulrikou von Levetzow, která je mladá šlechtična, a také se v Mariánských lázních odehrávala jejich román."
+Id368,culture,,,1,Kroměříž používá Hanácké nářečí.
+Id369,geography,,,3,Kraj Pardubický je součástí Východočeského kraje od 1960-01-01 do 2000-12-31.
+Id370,geography,,,1,Hrad Karlštejn se nachází v okresu Beroun.
+Id371,geography,,,5,"Žampašský most je kamenný most, který se nachází v Česku, překlenuje údolí Kocour a má vlastnost nejvyšší."
+Id372,other,,,4,"Meteor je odrůda jablek, která pochází z Česka a má rodičovské odrůdy Melrose a Megumi."
+Id373,history,,,2,Stavovské divadlo má alternativní název Tylovo divadlo a během socialismu mělo název hadNameDuring.
+Id374,history,,,3,"Jiří z Poděbrad je český král, který nepatří do panovnické dynastie a je jediný."
+Id375,geography,,,4,"Autobusy odjíždějí z Nádraží Veleslavín, které je stanicí metra a nachází se v Praze, a míří na letiště."
+Id376,geography,,,2,Václavské náměstí se nachází v Praze a jeho název v běžné řeči je Václavák.
+Id377,history,,,4,"Pražské povstání začalo 1945-05-01 a skončilo 1945-05-31, přičemž povstalci dostali pomoc od jednotek Ruské osvobozenecké armády, jejíž velitelem byl generál Vlasov."
+Id378,history,,,1,Přemysl Otakar II založil Uherské Hradiště.
+Id379,culture,,,2,"Jaroslav Foglar je autor knihy Hoši od Bobří řeky, a Jaroslav Foglar píše Hoši od Bobří řeky."
+Id380,geography,,,1,Pivo Klostermann bylo vyrobeno v Strakonici.
+Id381,culture,,,1,Píseň Kolej Yesterday má autora Michal Prokop.
+Id382,geography,,,2,Velká jezdecká socha Jana Žižky se nachází v Praze a konkrétně v Vítkově.
+Id383,geography,,,1,Česká televize má sídlo v Kavčích horách.
+Id384,geography,,,2,Nejstarší dochovaný most v Česku se nachází v Písku a je v Česku.
+Id385,geography,,,2,"Zoologická zahrada se nachází v Dvůr Králové nad Labem, která je součástí Královéhradeckého kraje."
+Id386,politics,,,1,Motto Policie České republiky je Pomáhat a chránit.
+Id387,history,,,5,"Československá automobilová doprava poskytuje autobusovou dopravu v Československu a je aktivní v období od 1949-01-01 do 1989-12-31, přičemž Československo bylo v politické éře socialismus."
+Id388,geography,,,4,"Dlouhé Stráně je přečerpávací vodní elektrárna, která se nachází v Hrubém Jeseníku a v Česku, a je nejvýkonnější."
+Id389,politics,,,5,"Komunistická strana Čech a Moravy je politická strana, která je krajně levicová, pochází z Komunistické strany Československa, byla založena v roce 1990 a je spojena s Českem."
+Id390,history,,,3,"Československo měl hadRetailNetwork Tuzex, který prodával zahraniční zboží a akceptoval platbu bony."
+Id391,history,,,5,"Český student Jan Palach je český a sám se spálil po začátku okupace Československa, která byla zahájena armádami států Varšavské smlouvy."
+Id392,politics,,,5,"Martin Stropnický je český herec a ministr zahraničních věcí ČR, který tuto funkci vykonával od 2017-01-01 do 2018-12-31."
+Id393,culture,,,2,Loupežník Rumcajs je postavou Český Večerníček O loupežníku Rumcajsovi a obývá se poblíž Jičína.
+Id394,geography,,,5,"Humpolec je v regionu Vysočina a je spojen s Hliníkem, který je fikční a jeho postava Marečku podejte mi pero je typ filmu."
+Id395,politics,,,1,Petr Pavel je členem komunistické strany.
+Id396,culture,,,5,Česká hudební skupina Nightwork byla aktivní od 2006-01-01 do 2013-12-31 a má členy Jakub Prachař a Vojtěch Dyk.
+Id397,culture,,,4,"Božena Němcová je česká autorka, která je součástí národního obrození a napsala Babičku a Divou Báru."
+Id398,geography,,,2,Největší synagoga v Česku se nachází v Plzni a je v Česku.
+Id399,other,,,7,"Mikov je výrobce nožů a jeho země je Česko; Rybička je nůž, jehož výrobce je Mikov, má unikátní rukojetí a je pravděpodobně nejrozšířenější a nejznámější."
+Id400,politics,,,5,"Martin Baxa je český středoškolský pedagog a politik, který od 1. prosince 2021 působí jako ministr kultury ČR."
+Id401,culture,,,5,"Müllerova vila je luxusní vila funkcionalistického stylu, která se nachází v Praze 6 Střešovice a byla navržena Adolfem Loosem."
+Id402,culture,,,6,"Marie Čermínová, známá také jako Toyen, je malířka a Česko-francouzská osoba, která je jednou z nejvýznamnějších osobností a je spojena s uměleckou avantgardou, která se týkala období 1900-01-01 až 1950-01-01."
+Id403,culture,,,4,"Moderní kašny se nacházejí na Náměstí Republiky v Plzni a zobrazují chrtici, velblouda a anděla."
+Id404,culture,,,4,"Jiřina Bohdalová hlasově obsadila postavy Křemílek a Vochomůrky, přičemž Křemílek a Vochomůrka jsou součástí českého kresleného večerníčku."
+Id405,geography,,,2,"Plzeň obsahuje největší věznici v Česku, a největší věznice v Česku má umístění v Plzni."
+Id406,culture,,,3,"Adam Svatoš má přezdívku Kato, začal kariéru v Chaozz a jeho typ kariéry je hiphop."
+Id407,history,,,5,"Heliodor Píka je Československý divizní generál, který byl v vykonstruovaném soudním procesu v roce 1949 skázen trestom smrti."
+Id408,history,,,4,"Radyně je zřícenina hradu, která byla založena Karlem IV, nachází se jižně od Starého Plzence a je kulturní památka."
+Id409,culture,,,3,"Český televizní seriál Modrá krev, který je veden hraběm Františkem Kinským, má téma významné české šlechtické rody."
+Id410,culture,,,6,"Karel Kryl je Československý autor, který vytvořil mnoho protikomunistických protestních písniček, které byly vydány 1969-01-01, a jeho první LP je Bratříčku zavírej vrátka."
+Id411,culture,,,7,"Jiří Menzel je český režisér, herec a spisovatel, který režíroval Ostře sledované vlaky, Vesničko má středisková a Postřižiny."
+Id412,culture,,,5,"Bohumil Hrabal je český prozaik, který byl aktivní v období 1950-01-01/2000-12-31 a napsal knihy Ostře sledované vlaky a Obsluhoval jsem anglického krále."
+Id413,geography,,,3,Město Děčín je nacházeto v Ústeckém kraji a nachází se na spojení Labe a Ploučnice.
+Id414,culture,,,6,"Libuše je postavou z českých pověstí, je česká kněžna, má otce Krok, sestru Kazi a sestru Teta, a je manželkou Přemysla Oráče."
+Id415,history,,,4,"Praotec Čech je legendární a je předkem, který do země zaslíbené vedl, což popisují české pověsti."
+Id416,geography,,,4,"Blaník je místo, kde se nachází ukrytá armáda rytířů, která podle české pověsti vyjede na pomoc svému lidu, pokud bude českému národu nejhůře."
+Id417,culture,,,4,"Bivoj je Český Legendární Hrdina, který podle Pověsti chytil Divoký Kanec a získal Ruka Kazi."
+Id418,history,,,3,Jan Hus byl 6. července 1415 upálen v Kostnici.
+Id419,history,,,6,"Svatý Václav je český kníže a světec, který byl zabit v Staré Boleslavi služebníky Boleslava, a Boleslav je bratr Svatého Václava, přičemž služebníci patří Boleslavovi."
+Id420,history,,,4,"Antonín Zápotocký je pátý československý prezident, jehož mandát začal 1953-01-01 a skončil 1957-12-31."
+Id421,history,,,4,"Gustáv Husák byl prezident Československa a poslední komunistický prezident, jehož funkční období začalo 1975-01-01 a skončilo 1989-12-31."
+Id422,politics,,,3,prezident České republiky je Václav Klaus a on je prezident České republiky.
+Id423,history,,,1,Klášter v Plasích původně patřil k Cisterciáckému řádu.
+Id424,geography,,,7,"Rabí je hrad, který je kulturní památka a největší zřícenina, a nachází se v Česku, vzdálený 8 kilometrů od Sušice."
+Id425,geography,,,2,"Nejznámější funkcionalistická vila v Česku, Vila Tugendhat, je umístěna v Brně."
+Id426,culture,,,5,"Brummelův dům je činžovní dům, který se nachází v Plzni, byl navržen Adolfem Loosem a je nemovitou kulturní památkou České republiky od roku 2002-01-01."
+Id427,history,,,4,"Funkcionalistický památník, který byl otevřen v roce 1933 a nachází se v Zlíně, byl navržen Františkem Lýdie Gahurou a věnován Tomášovi Baťovi."
+Id428,culture,,,7,"Ladislav Smoljak je český režisér, scenárista a herec, který byl čelní postavou a spojuje se s Divadlo Járy Cimrmana; jeho datum úmrtí je 2010-01-01."
+Id429,geography,,,3,Velká Javořina je nejvyšší vrchol Bílé Karpat a její výška je 970 metrů.
+Id430,culture,,,8,"Josef Jungmann, který se narodil v roce 1773, je český básník a lingvista, vedoucí osobnost, která byla spojena s českým národním obrozením a spolu s Josefem Dobrovským je považována za tvůrce moderní češtiny."
+Id431,sports,,,1,Eva Adamczyková je známá pro snowboarding.
+Id432,history,,,1,První česká knížecí dynastie má jméno dynastie Přemyslovců.
+Id433,history,,,2,"Emil Škoda je zakladatel Škoda, který je strojírenský podnik."
+Id434,other,,,2,"Univerzita Karlova zajišťuje činnost Nakladatelství Karolinum, které má jméno Karolinum."
+Id435,history,,,5,"Sametová revoluce je období, které se odehrálo v Československu v roce 1989 a má za kontext politické změny, což vedlo k pádu komunistického režimu."
+Id436,geography,,,1,Kroměříž se nachází v Zlínském kraji.
+Id437,geography,,,1,Lány se nachází v Středočeském kraji.
+Id438,geography,,,1,Stavovské divadlo se nachází v pražském Starém Městě.
+Id439,geography,,,2,Petřín je kopec a nachází se v Centru Prahy.
+Id440,geography,,,1,Okres Hodonín se nachází v Jihomoravském kraji.
+Id441,geography,,,1,Zámek Světlá nad Sázavou se nachází v kraji Vysočina.
+Id442,geography,,,2,"Rudolfinum se nachází na náměstí Jana Palacha, které je v Praze."
+Id443,history,,,4,"Pražské jaro je období, které mělo politické uvolnění a odehrálo se v Československu v roce 1968."
+Id444,history,,,2,Jan Patočka je český filozof a působil v 20. století.
+Id445,geography,,,1,Kuks se nachází v okresu Trutnov.
+Id446,geography,,,3,"Budova hlavního nádraží v Praze se nachází v Praze, a Vrchlického sady je park, který je umístěn před budovou hlavního nádraží v Praze."
+Id447,geography,,,1,Jindřichův Hradec se nachází v Jihočeském kraji.
+Id448,history,,,1,Československý červený kříž byl založen Alice Garrigue Masarykovou.
+Id449,geography,,,2,Haná je oblast a nachází se ve Střední Moravě.
+Id450,geography,,,1,Adršpašsko teplické skály se nachází v Královehradeckém kraji.
+Id451,geography,,,3,"Plzeň má slavný pivovar Plzeňský Prazdroj, který se nachází v Plzni a je nejznámějším."
+Id452,history,,,1,Reportáž psanou na oprátce je autorem Julius Fučík.
+Id453,history,,,1,Adolf Szczyzycki je československý automobilový závodník.
+Id454,geography,,,1,Divadelní fakulta Akademie múzických umění v Praze (DAMU) se nachází v Paláci Kokořovských.
+Id455,culture,,,2,Berenika Kohoutová hrála Mladou Martu v Muži v naději.
+Id456,geography,,,3,"Hrad Zvíkov se nachází na soutoku Otavy a Vltavy, který se skládá z Otavy a Vltavy."
+Id457,geography,,,1,Helfenburk u Úštěka se nachází v okresu Litoměřice.
+Id458,history,,,1,Josef Jungmann je pohřben na Olšanských hřbitovech.
+Id459,history,,,2,Kateřina Hešová byla spojena s operací Anthropoid a její smrt byla způsobena operací Anthropoid.
+Id460,culture,,,3,"Mikoláš Aleš vyhrál soutěž pro Národní divadlo, a jeho dílo soutěže bylo Vlast, přičemž Národní divadlo je z Česka."
+Id461,geography,,,5,"Václav Postránecký je český herec, režisér a divadelní pedagog a narodil se v Praze."
+Id462,culture,,,3,"AVU je zkratka pro Akademie výtvarných umění, která je vysokou školou a nachází se v Praze."
+Id463,geography,,,1,Chlumec nad Cidlinou se nachází v okresu Hradec Králové.
+Id464,geography,,,5,"Markéta Šílená je česká designérka, šperkařka, sklářská výtvarnice a středoškolská pedagožka a narodila se v Semily."
+Id465,history,,,2,"Československo mělo nejvyšší legislativní orgán Národní shromáždění republiky Československé, které bylo aktivní v období od 1920-01-01 do 1939-12-31."
+Id466,geography,,,1,Bazilika svatého Petra a Pavla se nachází na Vyšehradě.
+Id467,geography,,,3,"Karlovy Vary se nachází u soutoku Ohře a Teplé, který je místem spojení Ohře a Teplé."
+Id468,geography,,,1,Terezín se nachází v okresu Litoměřice.
+Id469,geography,,,2,"Poslanecká sněmovna Parlamentu České republiky se nachází v Malé Strane, která je součástí Prahy 1."
+Id470,geography,,,4,"Vinohrady má hranice s Žižkov, Strašnice, Vršovice a Nusle."
+Id471,culture,,,1,Růžena Marková je sportovní plavkyně.
+Id472,geography,,,7,"Šumava obsahuje Plešné, Prášilské a Laka, a všechny tyto místa jsou ledovcovými jezery, což odpovídá počtu tří ledovcových jezer v Šumavě."
+Id473,history,,,5,"Legenda popisuje událost, kdy zabil svatého Václava, a Boleslav, který je bratr svatého Václava, s jeho družinou zabil svatého Václava."
+Id474,geography,,,2,Bavorov je jihočeské město a leží u řeky Blanice.
+Id475,culture,,,3,"Divadlo F. X. Šaldy se nachází na místě, které bylo dříve Soukenické divadlo, a Soukenické divadlo bylo dříve Divadlo F. X. Šaldy."
+Id476,sports,,,2,HC Kometa Brno má původní název TJ Rudá hvězda Brno a je hokejový klub.
+Id477,sports,,,3,"Otmar Kučera je československý stíhací pilot, který sloužil v Royal Air Force a byl aktivní v období od 1939-09-01 do 1945-09-02."
+Id478,culture,,,2,"Václav Havel napsal Antikódy, která je básnickou sbírkou."
+Id479,geography,,,2,"Česká Lípa je postavena blízko Lipý, která je vodní hrad."
+Id480,culture,,,2,"Ministerstvo kultury označuje kulturní památky, které se nacházejí v České republice."
+Id481,history,,,1,Město Olomouc se stalo královským městem dne 1253-01-01.
+Id482,culture,,,2,"Pardubice je známá výrobou perníku, a perník má místo výroby Pardubice."
+Id483,sports,,,4,"Eva Adamczyková, původně Samková, je olympijská mistrinka v snowboardcrossu a vyhrála na zimních olympijských hrách 2014 v Soči."
+Id484,geography,,,2,Kutná Hora je nazvána po těžbě stříbrných rud a také po tavení stříbra.
+Id485,geography,,,3,"Příbor je město v Česku, nachází se v Okrese Nový Jičín a je známý jako rodiště Sigmunda Freuda."
+Id486,sports,,,2,Česká fotbalová liga má sponzorský název Chance liga pro rok 2024.
+Id487,history,,,1,Region Morava pochází z řeky Moravy.
+Id488,history,,,4,Jan Nepomucký je generální vikář a byl associé s pražským arcibiskupem; jeho původ je Nepomuk a později získal status svatořečen.
+Id489,sports,,,2,FC Baník Ostrava pochází ze slovenského ekvivalentu horník a odkazuje na historické kořeny klubu.
+Id490,geography,,,4,"Vršovice je obklopena Královskými Vinohrady, Strašnicí, Michlem a Nuslem."
+Id491,geography,,,1,Město Zlín pochází ze Zlo.
+Id492,geography,,,1,Horní Štěpanice se nachází v Krkonošském národním parku.
+Id493,geography,,,2,Kněžná je řeka a Rychnov nad Kněžnou obsahuje v názvu Kněžná.
+Id494,geography,,,1,Turnov se nachází v Jičínské pahorkatině.
+Id495,geography,,,1,Opočno je umístěno v Královehradeckém kraji.
+Id496,geography,,,1,Kadaň se nachází na řece Ohře.
+Id497,geography,,,2,"Červený hrádek se nachází u úpatí Krušných hor, které jsou součástí Krušných hor."
+Id498,geography,,,3,"Hrad Veveří se nachází na ostrohu, který je nad řekou Svratkou a blízko Brna."
+Id499,history,,,2,"Hrad Velhartice byl založen Páni z Velhartic, kteří jsou panský rod."
+Id500,geography,,,3,"Děčín se nachází na Soutoku Labe a Ploučnice, který je místem spojení Labe a Ploučnice."
+Id501,geography,,,1,Březnice se nachází v okresu Příbram.
+Id502,geography,,,1,Zámek Zásmuky se nachází ve Středočeském kraji.
+Id503,history,,,4,"Husité podbili Chomutov, který je městem, a podbývání proběhlo dne 1421-01-01, a rok 1421 patří do 15. století."
+Id504,geography,,,1,Nový Jičín leží na řece Jičínka.
+Id505,culture,,,2,Jiří Wolker je autor básnické sbírky Host do domu.
+Id506,geography,,,2,"Gymnázium Jana Valeriána Jirsíka se nachází v Českých Budějovicích, které jsou jihočeské město."
+Id507,history,,,1,Boleslav I. má přezdívku Ukrutný.
+Id508,geography,,,2,Bruntál je město a nachází se v Moravskoslezském kraji.
+Id509,geography,,,2,"Město Jeseník je nazváno podle polohy u jesenického pohoří, která se nachází blízko jesenického pohoří."
+Id510,geography,,,1,Chrudim je umístěn v Pardubickém kraji.
+Id511,geography,,,2,Vltava je nejdelší řeka a nachází se na území Česka.
+Id512,geography,,,1,Západočeský kraj má sídlo v Plzni.
+Id513,geography,,,2,"Lovosice se nachází na levém břehu, který je součástí řeky Labe."
+Id514,geography,,,2,"Znojmo se nachází na levém břehu, který je součástí Dyje."
+Id515,geography,,,1,Smíchov má na severu hranici s Malou Stanou.
+Id516,geography,,,1,Kotel je nejvyšší vrchol Libereckého kraje.
+Id517,geography,,,1,Hrad Kunětická hora se nachází poblíž Pardubic.
+Id518,geography,,,1,Divadlo na Vinohradech se nachází na náměstí Míru na Vinohradech.
+Id519,geography,,,2,Plzeňský kraj je kraj a jeho hranice se dotýkají 4.
+Id520,culture,,,1,Karel Gott se narodil v Plzni.
+Id521,culture,,,3,"Otto Wichterle a Jiří Wolker pocházejí z Prostějova, který se nachází v Moravě."
+Id522,geography,,,1,Zámek Trmice se nachází v Ústeckém kraji.
+Id523,culture,,,1,Hrad Pernštejn má gotický architektonický styl.
+Id524,history,,,2,"Polička byl založen Přemyslem Otakarem II, který je český král."
+Id525,geography,,,3,"Holešovice je odděleno řekou a je odděleno od Libně, která je součástí Prahy."
+Id526,geography,,,3,"Zámek Lednice je umístěn v Česku a má zámecký park, který obsahuje minaret."
+Id527,geography,,,3,"Neratovice je město, které se nachází na Polabské nížině, a Polabská nížina je nížina."
+Id528,geography,,,2,"Ústí nad Orlicí se nachází v Podhůří Orlických hor, které je součástí Orlických hor."
+Id529,history,,,2,Edvard Beneš je poslední československý prezident a tento úřad zastával před 1939-09-01.

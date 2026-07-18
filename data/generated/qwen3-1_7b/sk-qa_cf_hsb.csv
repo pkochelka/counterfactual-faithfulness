@@ -1,0 +1,437 @@
+eid,category,shape,shape_type,size,sentence
+Id0,geography,,,1,Bratislava | locatedIn | Okres Ilava
+Id1,geography,,,1,UFO most | completionYear | 2024
+Id2,history,,,1,Ladislav Novomeský | issuedOrder | start Of Slovenské Národné Povstanie
+Id3,geography,,,3,Zvolen | hasRiver | Hron Zvolen | hasRiver | Pezinok Zvolen | hasRiver | Zolná
+Id4,geography,,,2,Vozovňa Solivar | hasNumberOfOilRefineries | 1 ropná rafinéria | isLocatedIn | Vozovňa Solivar
+Id5,politics,,,2,Robert Mistrík | withdrewCandidacyIn | prezidentské voľby 2019 Robert Mistrík | withdrewInFavorOf | Ľubomír Lisý
+Id6,culture,,,1,Juraj Farkaš | originalName | Andrej Braxatoris
+Id8,geography,,,3,Slovenská Ľupča | knownFor | Mining Mining | resourceType | Kovy Kovy | primaryExample | Striebro
+Id9,geography,,,1,Turčianske Teplice | isCenterOf | Horný Šariš
+Id10,geography,,,2,Prešov | plannedCooperationWith | Maďarsko Prešov | plannedProject | Vodné Dielo Gabčíkovo
+Id11,culture,,,1,IMT Smile | originCity | Košice
+Id12,geography,,,2,Michalovce | sourceLocation | Gbeľany Gbeľany | isType | obec
+Id14,geography,,,3,Zrúcanina isLocatedIn Grand Hotel Slovan Zrúcanina isCalled Hrad Branč Hrad Branč isTypeOf Zrúcanina
+Id16,sports,,,1,Matej Tóth | competesIn | snowboarding
+Id18,politics,,,2,Peter Marcin | politicalParty | OĽANO Peter Marcin | electedTo | parlament
+Id19,history,,,2,nemeckí vojaci | action | partially burned nemeckí vojaci | target | Vlkolínec
+Id20,geography,,,2,Kostol Najsvätejšej Trojice | locatedOnStreet | Hlavná ulica Hlavná ulica | locatedInCity | Machnáčov grúň
+Id21,geography,,,1,Fatra II./BU-2 | minedResource | hnedé uhlie
+Id22,culture,,,1,Vysoká škola múzických umení v Bratislave | numberOfFaculties | 7
+Id24,politics,,,2,Údajné odpočúvanie | Jana Hubinská | Údajné odpočúvanie Údajné odpočúvanie | Kauza Gorila | Údajné odpočúvanie
+Id26,politics,,,3,pomlčková vojna | name | polská vojna pomlčková vojna | topic | názov Česko-Slovenska pomlčková vojna | startDate | 2011-01-01
+Id27,history,,,3,Belo IV | wasKingOf | Národný park Nízke Tatry prvý mongolský vpád | occurredDuringReignOf | Belo IV prvý mongolský vpád | targetedLocation | Národný park Nízke Tatry
+Id28,history,,,1,Múzeum obetí komunizmu | locatedIn | Slovensko
+Id29,history,,,3,Piešťanský Grand Hotel Royal | nameDuringPeriod | Jankov vŕšok socializmus | timePeriod | 1948-1989 Jankov vŕšok | laterName | Slovan
+Id31,politics,,,2,Peter Doležaj | governingStyle | mečiarizmus mečiarizmus | timePeriod | 1992-01-01 1998-12-31
+Id32,geography,,,2,Okres Čadca | borders | Česko Okres Čadca | borders | Ďumbier
+Id34,culture,,,3,Dračie srdce | filmingLocation | Levice Dračie srdce | type | film Levice | type | hrad
+Id35,culture,,,3,Vojtech Bukovský | professionalFocus | maľba Vojtech Bukovský | professionalFocus | ilustrácia Vojtech Bukovský | professionalFocus | grafika
+Id37,culture,,,1,Belo IV | komponirano | Aj tak sme frajeri
+Id38,geography,,,1,Vihorlatské vrchy
+Id39,geography,,,2,Liptovský Mikuláš | hasLargestSettlement | Turčianske Teplice Turčianske Teplice | isLargestSettlementOf | Liptovský Mikuláš
+Id40,geography,,,1,Galanta šaštín
+Id41,culture,,,2,Slovenská televízia a rozhlas | replacedOrganization | Rozhlas a televízia Slovenska Slovenská televízia a rozhlas | replacementYear | 1986
+Id42,other,,,1,Ladislav Novomeský | focusesOn | klimatológia
+Id43,politics,,,3,Dara Rolins | formerPosition | prezident Slovenska Dara Rolins | founded | Za ľudí Za ľudí | type | political party
+Id45,culture,,,3,obálky kníh Harry Potter v slovenskom vydaní | designer | Michal Straka obálky kníh Harry Potter v slovenskom vydaní | language | slovenský obálky kníh Harry Potter v slovenskom vydaní | bookSeries | Harry Potter
+Id46,politics,,,1,Daňové identifikačné číslo (DIČ) | numberOfDigits | 150
+Id47,geography,,,2,Pavelková | locatedIn | CHKO Dunajské luhy CHKO Dunajské luhy | isA | geomorfologický podcelok
+Id48,sports,,,1,Medzinárodný maratón mieru v Košiciach | foundedBy | Vašo Patejdl
+Id49,geography,,,1,Bratislava | originType | sopečný
+Id50,history,,,3,Academia Istropolitana | podmet | Miloš Alexander Bazovský Academia Istropolitana | predikat | založen | Miloš Alexander Bazovský Academia Istropolitana | objekt | Bratislava
+Id51,geography,,,2,Trstená | hasCentralSquare | Čierny Váh Čierny Váh | isLocatedIn | Trstená
+Id52,geography,,,1,Krahuľský vrch | locatedAbove | Košice
+Id53,history,,,2,Poprad | beganSettling | Nemeckí kolonisti Poprad | settlingPeriod | 2024-12-31
+Id54,geography,,,2,Domašínsky meander | isLocatedIn | Ružomberok Ružomberok | isTypeOf | okres
+Id55,culture,,,3,Doktori | isA | Slovak TV Series Ján Palárik | playedRole | Dr. Tomáš Stach Dr. Tomáš Stach | characterIn | Doktori
+Id56,culture,,,4,Cesta Magdalény Robinsonovej | releaseYear | 1972 Cesta Magdalény Robinsonovej | depicts | životný príbeh židovskej fotografky životný príbeh židovskej fotografky | timePeriod | obdobie Slovenského štátu
+Id57,culture,,,5,Generácia NULA | type | zoskupenie básnikov Generácia NULA | foundedBy | Peter Papšo Generácia NULA | foundedBy | Jaroslav Melišek Generácia NULA | foundingDate | 2011-01-01 Generácia NULA | location | Banská Bystrica
+Id58,history,,,3,prvá banská škola v Uhorsku | locationOf | Most SNP prvá banská škola v Uhorsku | foundingDate | 1735-01-01 prvá banská škola v Uhorsku | country | Uhorsko
+Id59,culture,,,6,Slnko v sieti | awardingStartDate | 2016 Slnko v sieti | category | filmové ocenenie Slnko v sieti | purpose | najlepšie snímky Slnko v sieti | purpose | umelecké výkony Slnko v sieti | domain | slovenská kinematografia
+Id60,culture,,,5,Štefan Uher | podmet | podmet Štefan Uher | predikat | herečka Štefan Uher | objekt | Český lev Český lev | predikat | awardedFor Český lev | objekt | úloha vo filme Děvčátko Děvčátko | predikat | type Děvčátko | objekt | film
+Id61,history,,,6,Juraj (VII.) Turzo | hasResidence | Bytča Juraj (VII.) Turzo | knownAs | bojovník proti Turkom Juraj (VII.) Turzo | supports | Slováci Juraj (VII.) Turzo | supports | protestantizmus Juraj (VII.) Turzo | role | radca Juraj (VII.) Turzo | advisorOf | Martina Šimkovičová
+Id62,culture,,,4,Fontána pre Zuzanu | isA | hudobný film Fontána pre Zuzanu | releaseYear | 1986 Fontána pre Zuzanu | basedOn | román Eleonóry Gašparovej Fontána pre Zuzanu | musicComposer | Rytmus
+Id63,culture,,,8,Miroslav Šmajda | podmet | podmet Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Česko Slovenská SuperStar | predikat | predikat Česko Slovenská SuperStar | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Česko Slovenská SuperStar | predikat | predikat Česko Slovenská SuperStar | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Česko Slovenská SuperStar | predikat | predikat Česko Slovenská SuperStar | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Česko Slovenská SuperStar | predikat | predikat Česko Slovenská SuperStar | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Miroslav Šmajda | predikat | predikat Miroslav Šmajda | objekt | objekt Česko Slovenská SuperStar | predikat | predikat Česko Slovenská SuperStar | objekt | objekt Miroslav Šmaj
+Id64,geography,,,7,Dolný Zemplín | consistsOf | Michalovce Dolný Zemplín | consistsOf | Sobrance Dolný Zemplín | consistsOf | Československo Michalovce | isTypeOf | okres Sobrance | isTypeOf | okres Československo | isTypeOf | okres Dolný Zemplín | isTypeOf | slovenský región
+Id65,other,,,2,Hurban | profession | slovenský lekár Hurban | fieldOfExcellence | gerontológia
+Id66,geography,,,4,Ostrožnica | location | okres Snina Ostrožnica | type | slovenská obec Ostrožnica | disappearanceDate | 1944-08-29 Ostrožnica | disappearanceReason | výstavba Starinskej priehrady
+Id67,culture,,,4,"Pacho, hybský zbojník | releaseYear | 1975 Pacho, hybský zbojník | featuresCharacter | Melichar Melichar | characterType | zbojník Melichar | portrayedBy | Kamil Čapkovič"
+Id68,culture,,,5,"Škvrna Records | publishedFor | IMT Smile Škvrna Records | publishedFor | Bukasový masív Škvrna Records | publishedFor | Gladiator Škvrna Records | renamedTo | Závodský, s.r.o. Škvrna Records | renameDate | 2023"
+Id69,culture,,,3,Jožo Ráž | spevák | spevák Jožo Ráž | memberOf | Metalinda Metalinda | type | slovenská skupina
+Id70,sports,,,2,Jožo Ráž | isA | slovenská paralympijská športovkyňa Jožo Ráž | competesIn | boccia
+Id72,politics,,,2,Dr. Tomáš Stach | foundedPoliticalParty | Demokrati
+Id73,history,,,2,Alexander Bárta | isFirst | slovenský predseda vlády Česko-Slovenska Česko-Slovensko | hasFirstSlovakPrimeMinister | Alexander Bárta
+Id75,geography,,,2,Jakubov dom | locatedIn | Námestie Milana Rastislava Štefánika Jakubov dom | locatedOn | Hlavne namestie
+Id76,geography,,,1,Fatrikum | isTectonicUnitOf | Obec Stráne pod Tatrami
+Id77,culture,,,3,Na love | hasModerator | Žofie Bosniaková Na love | isType | televízna relácia Na love | hasLanguage | slovenská
+Id78,culture,,,3,Jaroslav Filip | occupation | moderator Jaroslav Filip | nationality | slovenský Adela Vinczeova | spouseOf | Jaroslav Filip
+Id79,history,,,1,Očová
+Id80,history,,,2,Hlas | publicationStartLocation | Skalica Sklica | isCityIn | rieka Morava
+Id81,geography,,,1,Lysá locatedIn Šaštín-Stráže
+Id84,culture,,,1,Nedeľa | autor | Ján Pavol II
+Id85,culture,,,3,Jenož sadu: Jánošík | isTitleRoleIn | Na skle maľované Na skle maľované | isType | divadelná hra Kamil Čapkovič | performedRole | Jánošík
+Id86,culture,,,2,Najväčšie želanie Hľadať a nájsť
+Id87,geography,,,2,Bratislava | isPartOf | Bratislava
+Id88,history,,,2,Bratislavský kraj | locatedIn | Bratislava Bratislavský kraj | namedAfter | Miloš Alexander Bazovský
+Id89,geography,,,1,Bytča | highestPeak | Fabova hoľa
+Id90,history,,,1,Bratislava | constructionCentury | 13
+Id91,politics,,,2,Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky ministerstvo financií Slovenskej republiky | country | Piešťany
+Id92,other,,,1,Vojtech Bukovský | zmagal se v oblasti fyzike | fyzika
+Id93,geography,,,2,Tiesňava Kyseľ | locatedIn | Bratislava Bratislava | isA | horské pásmo
+Id94,geography,,,2,Podunajské Biskupice | isPartOf | Banská Štiavnica Podunajské Biskupice | type | mestská časť
+Id95,geography,,,1,Snina | symbol | Zemplín
+Id96,history,,,2,Ľudovít Štúr | knownAs | Andrej Bielik Ľudovít Štúr | knownAs | Pozorovateľ
+Id97,geography,,,1,Hlavná bratislavská autobusová stanica | hasCapital | Prešov
+Id98,geography,,,2,Stredná priemyselná škola stavebná | locatedOnStreet | Veľká okružná Stredná priemyselná škola stavebná | locatedInCity | Piešťany
+Id99,history,,,1,prvé slovenské gymnázium | placeOfOrigin | Západoslovenská časť
+Id100,geography,,,3,Slovensko | hasRiver | okres Sabinov okres Sabinov | rankByLength | 2 okres Sabinov | country | Slovensko
+Id101,geography,,,2,Krompachy | isLocatedIn | Petržalka Petržalka | isTypeOf | okres
+Id102,politics,,,1,Úrad jadrového dozoru Slovenskej republiky | firstChairman | Dominika Mirgová
+Id103,geography,,,1,Martin Rázus | birthPlace | Slovakia
+Id104,sports,,,2,Andrej Kraus | isBestScorerOf | slovenské národné futbalové mužstvo slovenské národné futbalové mužstvo | participatedIn | EURO 2024
+Id105,geography,,,3,Vrútky | locationOfConfluence | Topľa Váh | riverInConfluence | Turiec Topľa | confluenceLocation | Vrútky
+Id106,sports,,,2,hokejbal | founder | Jaroslav Melišek Jaroslav Melišek | nationality | Čadca
+Id107,geography,,,4,Devínsky Hrad | hasCityPart | Petržalka Petržalka | isPartOf | Devínsky Hrad Petržalka | hasPopulationDensity | highest in Slovakia Petržalka | isMostPopulous | true
+Id108,geography,,,1,Ostredok
+Id109,history,,,1,Dežo Ursiny | isFirstChairmanOf | Slovenská národná rada
+Id110,culture,,,1,Tatrín | firstChairman | Dr. Tomáš Stach
+Id111,history,,,2,Ivan Tásler | adoptedMiddleName | Velislav Ivan Tásler | locationOfAdoption | Devín
+Id112,history,,,3,Váh | locationOfEvent | Legalization Of Standard Slovak Legalization Of Standard Slovak | eventType | Legalization Legalization Of Standard Slovak | objectOfLegalization | Spisovná Slovenčina
+Id113,culture,,,1,Sokol Časopis Pre Krásno Umenie A Literatúru | editor | Kamil Čapkovič
+Id114,geography,,,2,Bratislava | locatedAbove | Čierny Balog Čierny Balog | isType | obec
+Id115,geography,,,1,Rádio Aetter | broadcastingLocation | Siaha
+Id116,other,,,1,Peter Škantár | hasField | neurológia
+Id117,geography,,,1,Šarišské múzeum | locatedIn | Košťany nad Turcom
+Id118,geography,,,2,Staré Mesto | isA | slovenské mesto Sobášny palác | locatedIn | Staré Mesto
+Id119,geography,,,1,Sady: Powšitkowne substantiwy: Slovenská národná knižnica Predikat: headquarterLocation Objekt: Západné Karpaty
+Id120,culture,,,1,Jozef Tiso | literaryPeriod | romantizmus
+Id121,other,,,1,projekt This is Kevin | hasLeader | Ivo Medin
+Id123,culture,,,3,prvá dáma slovenského maliarstva | refersTo | Matej Bel Matej Bel | alsoKnownAs | prvá dáma slovenského maliarstva Matej Bel | profession | maliarstvo
+Id124,geography,,,1,Košice | lokacija | Múzeum Andreja Kmeťa
+Id125,geography,,,1,Galéria Mikuláša Galandu | locatedIn | Bardejov
+Id126,geography,,,1,Obec Stráne pod Tatrami | locatedIn | Poprad
+Id127,culture,,,2,Rudolf II. | knownAs | Momo Momo | artisticNameOf | Rudolf II.
+Id128,geography,,,1,Čierňanka | previouslyCalled | Vihorlatská nádrž
+Id129,other,,,2,skupina Tristana | composer | Jana Kirschner skupina Tristana | singer | Jana Kirschner
+Id130,history,,,2,námestie | locatedIn | Turčianske Teplice námestie | namedAfter | Andrej Hlinka
+Id131,geography,,,1,Bratislavský kraj | locatedIn | Prešov
+Id133,geography,,,1,Trstená
+Id134,geography,,,1,Slovensko | liesOnRiver | Trnávka
+Id135,sports,,,2,Atlas klub | placeOfOrigin | Bratislava Klub Atlas Sládkovičova | placeOfOrigin | Bratislava
+Id136,geography,,,2,Čachtice | locatedIn | Žilina Žilina | isType | okres
+Id137,geography,,,1,Bratislava | riverSource | Banská Štiavnica
+Id138,geography,,,4,Váh River Valley | isA | riečny ostrov Váh River Valley | location | Slovensko Váh River Valley | sizeRank | 1 Váh River Valley | region | Európa
+Id139,other,,,3,Eva Landlová | hasSon | Anastasiya Kuzminová Anastasiya Kuzminová | isSonOf | Eva Landlová Anastasiya Kuzminová | hasProfession | actor
+Id140,geography,,,2,Malý Dunaj | flowsInto | Dunaj Malý Dunaj | confluenceLocation | Slovensko
+Id141,geography,,,2,Súdna rada Slovenskej republiky | hasHeadquarters | Miestodržiteľský palác Miestodržiteľský palác | isLocatedIn | rieka Ipeľ
+Id142,history,,,1,Vladimír Mečiar | alsoKnownAs | slovenský Schliemann
+Id143,other,,,1,Peter Wilsen | profesija | speleológia
+Id144,geography,,,2,Stredná priemyselná škola strojnícka | location | Fajnorovo nábrežie Fajnorovo nábrežie | locatedIn | Pieninský národný park
+Id145,geography,,,2,Kúpeľný ostrov | locatedOn | Dnesne Slovensko Dnesne Slovensko | isA | river
+Id146,history,,,2,Profesor | isHighestAcademicTitle | true
+Id147,geography,,,3,Pezinok | hasSquare | Slovensko Slovensko | currentName | Radničné námestie Radničné námestie | location | Pezinok
+Id148,geography,,,5,Nové Mesto | hasRiver | Kysuca Nové Mesto | hasRiver | Čierňanka Kysuca | meetsRiver | Čierňanka Kysuca | meetingLocation | Nové Mesto Čierňanka | meetingLocation | Nové Mesto
+Id149,geography,,,1,Veporské vrchy | sourceLocation | Autobusová Stanica
+Id150,sports,,,1,Zuzana Čaputová | playsProfessionally | tenis
+Id151,geography,,,1,Múzeum Janka Kráľa | locatedIn | Košice
+Id152,geography,,,2,Holeška | isPartOf | Karlova Ves Karlova Ves | isCityPartOf | Bratislava
+Id153,geography,,,3,Tatranský Národný Park | hasAccessibleCave | Nitrianske Kniežatstvo Nitrianske Kniežatstvo | isLocatedIn | Tatranský Národný Park Nitrianske Kniežatstvo | isAccessible | true
+Id154,geography,,,1,Belianske Tatry | highestPeak | rieka Poprad
+Id155,culture,,,2,gitarové múzeum | locatedIn | Rozprávková dedinka Habakuky gitarové múzeum | instrumentType | gitara
+Id156,geography,,,2,Nitriansky kraj | isLocatedIn | Nitra Nitriansky kraj | isType | Sídlisko A Mestská Časť
+Id157,other,,,4,Slovenská lekárska spoločnosť | presidentInYear | 1981-01-01 Peter Krištúfek | holdsPosition | prezident Peter Krištúfek | presidentOf | Slovenská lekárska spoločnosť prezidentský mandát | year | 1981-01-01
+Id158,geography,,,2,Okres Veľký Krtíš | nearestRegionalCity | Žilina Žilina | isRegionalCity | true
+Id159,geography,,,3,Belianske Tatry | isLocatedIn | Kysuce Belianske Tatry | isType | mesto Belianske Tatry | hasProperty | najstaršie
+Id160,culture,,,1,Balneologické múzeum v Piešťanoch | namedAfter | Martin Skrtel
+Id161,history,,,1,Jana Kirschner | originLocation | Okolie Nitry
+Id162,geography,,,2,Vrbové | isLocatedIn | Dunaj Dunaj | isTypeOf | okres
+Id163,geography,,,2,Bratislava | contains | jadrová elektráreň jadrová elektráreň | location | Bratislava
+Id164,geography,,,2,Ostredok | contains | atómová elektráreň atómová elektráreň | type | atomic power plant
+Id165,other,,,2,Šariš | contains | paroplynová elektráreň paroplynová elektráreň | type | combined cycle power plant
+Id166,geography,,,2,veterná elektráreň | locatedIn | Bratislavský kraj Bratislavský kraj | isInDistrict | Čadca
+Id167,history,,,3,Havránok | locatedAbove | Slovensko Havránok | discovery | keltské opevnenie Havránok | name | Havránok
+Id168,geography,,,1,Múzeum kysuckej dediny | location | Liptovský Mikuláš
+Id169,geography,,,2,Modra Rudolf II.
+Id170,geography,,,2,Mohyla Milana Rastislava Štefánika | podmet | Prešov Mohyla Milana Rastislava Štefánika | predikat | locatedOn Mohyla Milana Rastislava Štefánika | objekt | Prešov Prešov | podmet | Prešov Prešov | predikat | isA Prešov | objekt | vrch
+Id171,geography,,,1,Biskupický kanál | builtOnRiver | Prešov
+Id172,culture,,,2,múzeum v Krupine | podmet | múzeum v Krupine múzeum v Krupine | predikat | dedicatedTo múzeum v Krupine | objekt | Jaroslav Filip múzeum v Krupine | podmet | múzeum v Krupine múzeum v Krupine | predikat | locatedIn múzeum v Krupine | objekt | Krupina
+Id173,culture,,,2,Mária Rázusová Martáková | hasPseudonym | Karol Duchoň Mária Rázusová Martáková | isOccupation | spisovateľka
+Id174,geography,,,2,Vodné dielo Čerenec | liesOn | Najsevernejší bod Slovenska Najsevernejší bod Slovenska | isA | potok
+Id175,culture,,,1,Michal Bacúrik | isFounderOf | slovenská národná opera
+Id176,geography,,,1,Pamätná izba Jána Hollého | location | Galanta
+Id177,culture,,,1,Michal Hraška | firstCodifierOf | spisovná slovenčina
+Id179,sports,,,1,Peter Wilsen | profession | kanoistika
+Id181,geography,,,1,Ľubomír Feldek | narodný miestno | Košice
+Id182,geography,,,1,Kňazský seminár sv. Františka Xaverského | locatedIn | Slovakia
+Id183,geography,,,2,Kulisovo | is | národná prírodná rezervácia Kulisovo | locatedIn | Rieka Hron
+Id186,culture,,,2,Zmierenie alebo Dobrodružstvo pri obžinkoch | genre | komedija
+Id187,geography,,,1,Vodné dielo Gabčíkovo | builtOnRiver | Slovensko
+Id188,culture,,,2,film Sokoliar Tomáš | basedOnScriptBy | Miloš Alexander Bazovský Miloš Alexander Bazovský | wroteScriptFor | film Sokoliar Tomáš
+Id189,culture,,,2,Festival Soaré | location | Slovensko Festival Soaré | eventType | festival
+Id190,geography,,,1,Michalovce | isHighestPeakOf | Michalovce
+Id191,geography,,,3,CHKO Dunajské luhy | manages | Ostrovné lúky Ostrovné lúky | isA | chránené vtáčie územie Ostrovné lúky | locatedIn | Močanok
+Id192,geography,,,2,Trenčín | location | Krahuľský vrch Krahuľský vrch | containsRiver | Váh
+Id193,culture,,,1,Jana Kirschner | isA | slovenská herečka
+Id194,history,,,5,Trojica | represents | Historické Slovenské Národné Hnutie Trojica | hasMembers | Matej Bel Trojica | hasMembers | Hurban Trojica | hasMembers | Hodža Trojica | isMostFamous | true
+Id195,FAIL,,,5,Univerzita Komenského v Bratislave | isType | univerzita Univerzita Komenského v Bratislave | country | Bratislava Univerzita Komenského v Bratislave | status | aktívna Univerzita Komenského v Bratislave | isOldest | true Univerzita Komenského v Bratislave | isLargest | true
+Id196,geography,,,2,Most SNP | location | Dunaj
+Id197,history,,,2,Bratislava | oldGermanName | Košice Bratislava | oldGreekName | Istropolis
+Id198,history,,,1,Pavol Dobšinský | ruledIn | Nitrianske Kniežatstvo
+Id200,geography,,,3,Česko lokacija Ikea
+Id202,geography,,,1,Pod Kráľovou hoľou designatedAs Obrátená pyramída
+Id203,geography,,,1,Staré Mesto | unofficialName | Žarnovica
+Id204,history,,,2,Martina Moravcová | triedočinu | slovenčina Martina Moravcová | osnova triedočinu | západoslovenské nárečie
+Id205,geography,,,1,stará slovenská 20 halierová minca | depicts | Primaciálny palác
+Id207,geography,,,4,Radničné námestie | locatedIn | Vihorlatské vrchy Radničné námestie | type | jazero Radničné námestie | country | Slovensko Vihorlatské vrchy | type | pohorie
+Id208,politics,,,2,Peter Lipa | isKnownFor | hatred towards Maďarom Peter Lipa | profession | slovenský politik
+Id209,geography,,,2,Devínska Brána | locatedIn | Údolie Dunaja Údolie Dunaja | contains | Revúca
+Id211,geography,,,5,D2 | type | dialnica D2 | partOf | západná časť cezhraničný most nad riekou Morava | location | Budova Slovenského rozhlasu cezhraničný most nad riekou Morava | crosses | rieka Morava západná časť | startsAt | cezhraničný most nad riekou Morava
+Id212,history,,,1,Moravianska Venuša | foundIn | Bazilika Sedembolestnej Panny Márie
+Id213,geography,,,1,Slovenská Štátna opera | location | Fabova hoľa
+Id214,geography,,,1,Váh A Turiec | locatedIn | Trenčiansky kraj
+Id215,geography,,,4,Skalité | location | vedľa sútoku vedľa sútoku | nearRivers | Dunaj a Morava Dunaj | riverType | river Morava | riverType | river
+Id216,politics,,,3,Smer Sociálna Demokracia | type | slovenská politická strana
+Id217,geography,,,2,Ostredok | locatedIn | Michalovce Michalovce | isA | Podhorie
+Id218,geography,,,2,Južný obchvat Nitry | forms | Vihorlatské vrchy Vihorlatské vrchy | isA | diaľnica
+Id219,sports,,,3,HK Dukla Trenčín | hasName | HK Dukla Trenčín HK Dukla Trenčín | isType | hokejový klub HK Dukla Trenčín | isLocatedIn | Slovakia
+Id220,geography,,,3,Bratislavský kraj | isRegionOf | Komárno Bratislavský kraj | hasAreaSize | smallest Bratislavský kraj | regionType | kraj
+Id221,geography,,,1,Slanské Vrchy | locatedIn | Tatranský Národný Park
+Id222,geography,,,3,slovenské Tatry | contains | Ondava Ondava | isLargest | pleso Ondava | location | slovenské Tatry
+Id223,history,,,3,Hlavný predstaviteľ samosprávy dediny | calledBefore | richtár richtár | validUntil | 1918-01-01 richtár | location | Hlavné námestie
+Id224,geography,,,1,Československo | originatesIn | Národný park Nízke Tatry
+Id225,geography,,,1,Nízke Tatry | highestPeak | Kysuce
+Id227,geography,,,2,Šariš | hasCenter | Bratislava Bratislava | isType | mesto
+Id228,geography,,,3,Šebastovce | isPartOf | Košice Šebastovce | district | Nové Zámky Nové Zámky | contains | Šebastovce
+Id229,geography,,,2,Štrba | connectedBy | Ozubnicová Trať Ozubnicová Trať | connects | Snina
+Id230,history,,,1,Dara Rolins | studied | Astronomy
+Id233,geography,,,1,Čierny Váh | sourceLocation | Holeška
+Id234,sports,,,3,Vihorlatské vrchy | largestHockeyClub | HK Nitra HK Nitra | clubType | hockey HK Nitra | locatedIn | Vihorlatské vrchy
+Id235,culture,,,4,Pokoj v duši | type | film titulná pieseň | belongsTo | Pokoj v duši Andrei Braxatoris | occupation | speváčka Andrei Braxatoris | authorOf | titulná pieseň
+Id236,history,,,2,Februárový prevrat | occurredInYear | 2024 Februárový prevrat | location | Slovensko
+Id238,culture,,,5,Vysoká škola výtvarných umení v Bratislave focus výtvarné umenie Vysoká škola výtvarných umení v Bratislave location Istropolis Vysoká škola výtvarných umení v Bratislave type vysoká škola Vysoká škola výtvarných umení v Bratislave attribute najstaršia
+Id239,geography,,,1,Primátor Bratislavy | residesIn | rieka Poprad
+Id240,geography,,,1,Velka Fatra | called | Vstupná Brána Do Vysokých Tatier
+Id241,geography,,,3,Most SNP | location | Bratislava Most SNP | hasPillarsIn | Dunaj Most SNP | numberOfPillarsInDunaj | 2
+Id243,geography,,,2,Orava | isRegionOf | Váh
+Id244,sports,,,3,Juraj (VII.) Turzo | nacionalnost | slovenský Juraj (VII.) Turzo | profesija | športovec Juraj (VII.) Turzo | specjalizuje se v | zjazdové lyžovanie
+Id245,history,,,1,Dežo Ursiny | birthPlace | Uhrovec
+Id246,geography,,,2,Zemplínska Šírava isLocatedNear Bradlo Zemplínska Šírava isType water reservoir
+Id247,politics,,,3,Andrej Kiska | zvuraznić | zvuraznić Andrej Kiska | predikat | predikat Andrej Kiska | objekt | objekt Andrej Kiska | defeatedInElection | Robert Fico Andrej Kiska | electionType | presidential election Andrej Kiska | electionYear | 2009
+Id248,geography,,,3,Strečno | locatedIn | Nové Mesto Nové Mesto | isPartOf | Bratislava Nové Mesto | isA | mestská časť
+Id249,geography,,,4,Národný park Poloniny | name | Národný park Poloniny Národný park Poloniny | type | národný park Národný park Poloniny | location | Čierny Balog Národný park Poloniny | position | najvýchodnejší
+Id250,geography,,,1,Bratislava
+Id251,geography,,,1,Primaciálny palác
+Id252,geography,,,4,Čierny Balog | isLocatedIn | Slovensko železničná trať | passesThrough | Čierny Balog železničná trať | passesThrough | futbalové ihrisko futbalové ihrisko | isLocatedIn | Čierny Balog
+Id253,geography,,,1,Oravské Beskydy | highestPeak | Bánskobystrický kraj
+Id254,geography,,,2,Hviezdoslavovo námestie | locatedIn | Trnávka Slovenského národného divadla | location | Hviezdoslavovo námestie
+Id255,geography,,,5,Štrba | locationOf | najstaršia dodnes existujúca mincovňa na svete najstaršia dodnes existujúca mincovňa na svete | type | mincovňa najstaršia dodnes existujúca mincovňa na svete | status | dodnes existujúca najstaršia dodnes existujúca mincovňa na svete | age | najstaršia
+Id256,culture,,,2,Nox Et Solitudo author | Martina Moravcová isAuthorOf | Nox Et Solitudo
+Id257,politics,,,5,Ivan Gašparovič | nacionalnost | slovenský Ivan Gašparovič | profesija | politik Ivan Gašparovič | pozicija | prezident Ivan Gašparovič | število členov | jedanác Ivan Gašparovič | jedinstvenost | jediný
+Id258,politics,,,1,Národná rada Slovenskej republiky | numberOfMembers | 0
+Id259,history,,,3,Universitas Istropolitana | location | území Slovenska
+Id260,politics,,,3,Parlamentné voľby | year | 2023 Slovenská republika | ministerOfCulture | Petr Cmorik Petr Cmorik | becameMinisterAfter | parlamentné voľby 2023
+Id261,geography,,,4,Poprad isLocatedIn Univerzita Pavla Jozefa Šafárika v Košiciach Univerzita Pavla Jozefa Šafárika v Košiciach isTypeOf univerzita Univerzita Pavla Jozefa Šafárika v Košiciach rankByAge 2 Univerzita Pavla Jozefa Šafárika v Košiciach isInCountry Slovensko
+Id262,geography,,,5,Fakulta matematiky fyziky a informatiky Univerzity Komenského v Bratislave | hasBuildingIn | Vozovňa Solivar Vozovňa Solivar | isPartOf | Bratislava Vozovňa Solivar | hasMany | študenti študenti | include | študenti FMFI UK študenti | include | iní študenti
+Id263,history,,,1,Matica slovenská | foundingCentury | 2
+Id264,other,,,3,nemocnica | hasName | Philippa Pinela nemocnica | location | Slanské Vrchy nemocnica | type | Psychiatrická
+Id265,geography,,,1,Strečno | highestPeak | Minčol
+Id266,culture,,,1,Bratislava | largestMinority | Rusíni
+Id267,geography,,,2,Slovenský kras | contains | jaskyne jaskyne | approximateCount | 1
+Id268,culture,,,4,Majk Spirit | occupation | raper Majk Spirit | occupation | producent Majk Spirit | nationality | slovenský Majk Spirit | realName | Lukáš Jedlička
+Id269,geography,,,2,Sady: Rožňava | isLocatedIn | Rožňava Rožňava | isTypeOf | okres
+Id270,sports,,,2,volejbalová extraliga mužov na Slovensku | year | 2019 volejbalová extraliga mužov na Slovensku | numberOfTeams | 7
+Id271,geography,,,1,Poprad | flowsInto | Ondava
+Id272,geography,,,2,Prvá veterná elektráreň | location | Cerová Prvá veterná elektráreň | country | rieka Laborec
+Id273,geography,,,3,Matej Tóth | narodnost | slovenský Matej Tóth | profesija | atlét Matej Tóth | rođendan | Očová
+Id274,culture,,,8,Dušan Kováčik | nacionalnost | slovenský Dušan Kováčik | profesija | architekt Dušan Kováčik | zasnova | komplex Prior Dušan Kováčik | zasnova | hotel Kyjev komplex Prior | lokacija | Kamenné námestie hotel Kyjev | lokacija | Kamenné námestie Kamenné námestie | grad | Bratislava Dušan Kováčik | ziskanojega nagrada | cena Dušana Jurkoviča
+Id275,politics,,,5,Rytmus | formerPosition | bývalý policajný prezident Rytmus | participatedIn | parlamentné voľby 2023 parlamentné voľby 2023 | location | Slovensko Rytmus | representedParty | Progresívne Slovensko parlamentné voľby 2023 | year | 2023
+Id276,geography,,,3,Hron | isSignificantRiver | true Hron | flowsThrough | Martin Hron | country | Slovensko
+Id277,culture,,,5,Bánhidské nárečie | partOf | Čachtice Bánhidské nárečie | isTypeOf | Slovenské nárečie Bánhidské nárečie | hasCharacteristicForm | venku Bánhidské nárečie | hasCharacteristicForm | jedenác Bánhidské nárečie | hasCharacteristicForm | čepec
+Id278,geography,,,2,okres Levice | isLargest | okres okres Levice | location | Žilina
+Id279,geography,,,3,Váh | jeDłejRzekaWŠkóje | Slovácko Váh | jestZródłemZmocnienia | Čierny Váh Váh | jestZródłemZmocnienia | Partizánska republika
+Id280,history,,,5,Igor Matovič | nacionalnost | slovenský Igor Matovič | profesija | vynálezca Igor Matovič | profesija | priekopník Igor Matovič | oblast_zajema | bezdrôtová komunikácia Igor Matovič | rojstvo | Tajov
+Id281,culture,,,3,Najdlhšia ľúbostná báseň na svete | writtenBy | známym slovenským básnikom Najdlhšia ľúbostná báseň na svete | hasName | Marína Najdlhšia ľúbostná báseň na svete | timePeriod | 2017-01-01
+Id282,culture,,,2,Jakubov dom | locatedIn | Bratislava Jakubov dom | currentlyServes | Slovenská filharmónia
+Id283,culture,,,2,Luník IX | became | Európske hlavné mesto kultúry Luník IX | becameInYear | 2013
+Id284,sports,,,7,Miloslav Mečíř | nacionalita | slovenský Miloslav Mečíř | profesia | tenista Miloslav Mečíř | získané | olympijskú zlatú medailu Miloslav Mečíř | rok získania | 1992-01-01 1998-12-31 Miloslav Mečíř | reprezentovana země | Československo olympijskú zlatú medailu | udalosť | LOH v Soule LOH v Soule | rok | 1992-01-01 1998-12-31
+Id285,geography,,,2,Pavol Braxatoris | formerPresidentOf | Slovenská republika Pavol Braxatoris | birthPlace | Košice
+Id286,geography,,,3,území Slovenska | isPartOf | Považský Inovec území Slovenska | isHighestPeakOf | Považský Inovec území Slovenska | elevation | 1042
+Id287,geography,,,3,Zemetrasenie pri Humennom | location | Humenné Zemetrasenie pri Humennom | date | 2023-10 Zemetrasenie pri Humennom | magnitude | 728
+Id288,history,,,6,Pezinok | visitedBy | Ján Pavol II Pezinok | visitedBy | František Ján Pavol II | isA | pápež František | isA | pápež Ján Pavol II | visitTimeframe | 1996-04-29 František | visitTimeframe | 2021-09-14
+Id289,culture,,,3,Miroslav Tásler | isA | slovenský hudobník Miroslav Tásler | isA | trubkár Miroslav Tásler | isKnownFor | Ďez
+Id290,geography,,,2,Dukliansky Priesmyk | isEndOf | Cesta hrdinov SNP Slovakia | isEndOf | Cesta hrdinov SNP
+Id291,sports,,,2,Anastasiya Kuzminová | totalOlympicGoldMedals | 35 Anastasiya Kuzminová | representsCountry | Slovensko
+Id292,geography,,,3,Cerova vrchovina | najvišji vrh | Karanč Karanč | visina | 728 Karanč | je_nad | 150
+Id293,geography,,,3,Schaubmarov | isLocatedIn | Belinská jaskyňa Schaubmarov | type | Water Mill Schaubmarov | sizeRank | Largest In Europe
+Id294,other,,,2,Univerzita Komenského v Bratislave | podmet | Univerzita Komenského v Bratislave Univerzita Komenského v Bratislave | predikat | numberOfFaculties Univerzita Komenského v Bratislave | predikat | asOfDate Univerzita Komenského v Bratislave | objekt | 15 Univerzita Komenského v Bratislave | objekt | 2026-04-29
+Id295,culture,,,2,Karol Duchoň | spevák | spevák Karol Duchoň | ageAtDeath | 10
+Id296,geography,,,2,Budatínsky zámok | locatedIn | okres Levoča okres Levoča | isA | slovenské mesto
+Id297,sports,,,2,Martin Skrtel | numberOfTimes | 13 Martin Skrtel | award | slovenský futbalista roka
+Id298,sports,,,3,Slovensko | olympicMedalsInSwimming | 2 Martina Moravcová | responsibleFor | 2 2 | country | Slovensko
+Id299,culture,,,5,Gorazdov Močenok | isGenre | kresťanského divadla Gorazdov Močenok | eventType | festival Gorazdov Močenok | occursAnnually | true Gorazdov Močenok | startingYear | 2006 Gorazdov Močenok | location | Močanok
+Id300,geography,,,3,búracie práce | startYear | 2019 búracie práce | location | biznis centrum Apollo biznis centrum Apollo | city | Jakubovo námestie
+Id302,geography,,,1,Domašínsky meander | locatedOn | Banská Štiavnica
+Id303,culture,,,5,Hodža | knownAs | herca Hodža | knownAs | scenáristu Hodža | knownAs | herca divadla GUnaGU Hodža | studiedAt | lekárska fakulta UK v Bratislave Hodža | profession | anesteziológ
+Id304,culture,,,2,Peter Marcin | profession | herec Peter Marcin | dedicatedTo | herectvo
+Id305,culture,,,3,Opereta | countryOfOrigin | Štúrovo
+Id306,geography,,,3,Šaštín-Stráže | isA | pútnicky významné mesto Šaštín-Stráže | locatedIn | Slovensko Slovensko | locatedIn | Šaštín-Stráže
+Id307,geography,,,3,Horné Saliby | isType | obec Horné Saliby | belongsToDistrict | Turčianske Teplice väčšina obyvateľstva | declaresNationality | maďarská
+Id308,culture,,,4,Pa a Pi | seriesType | animirana serija Pa a Pi | countryOfOrigin | Slovenský Raj Marika Gombitová | performed | intro zpěv intro zpěv | belongsTo | Pa a Pi
+Id311,geography,,,2,Fatra obtainedFrom Prešovský kraj
+Id312,history,,,1,Slovenské ucené tovarišstvo | foundingLocation | Pieninský národný park
+Id313,geography,,,1,Čadca | locatedIn | Okres Veľký Krtíš
+Id314,politics,,,2,Slovenská republika | firstPrimeMinister | Adam Ďurica Adam Ďurica | position | predseda vlády
+Id315,geography,,,1,Jankov vŕšok | locatedIn | Havran
+Id316,geography,,,1,Váh je najdovenišja rzeka v Tatranský Národný Park.
+Id317,sports,,,2,Fortuna liga futbalová liga 1465-01-01
+Id318,geography,,,1,Pod Kráľovou hoľou
+Id319,culture,,,1,Čo o mne vieš
+Id320,geography,,,1,Sady: Slovenská poľnohospodárska univerzita | locatedIn | Kamenné námestie
+Id322,geography,,,2,Čertovica | lokacija | Aupark Tower Čertovica | završenjeDatum | 2007-01-01
+Id323,geography,,,1,Gymnázium Andreja Vrábla | location | Piešťany
+Id324,history,,,3,Partizánska republika | isAreaOf | rieka Poprad Partizánska republika | controlledBy | partizáni partizáni | activeDuring | Slovenské národné povstanie
+Id325,politics,,,1,Sady: Slovensko | hasChairperson | Ivan Mikloš
+Id326,history,,,1,Slovenské národné povstanie | startDate | 2026-04-29
+Id327,geography,,,1,Uhrovec | locatedIn | Banskobystricky kraj
+Id328,geography,,,1,Luník IX | locatedIn | Prešovský kraj
+Id329,culture,,,1,Peter Marcin | recordedAlbum | Na ceste domov
+Id330,geography,,,3,Turčianske Teplice | numberOfThermalSprings | 7 7 | type | termálne pramene termálne pramene | location | Údolie Dunaja
+Id331,politics,,,2,Jana Kirschner | founded | SMER – sociálna demokracia SMER – sociálna demokracia | isA | political party
+Id332,geography,,,1,Senec | locatedIn | Slovensko
+Id333,politics,,,1,Štúr isChairpersonOf SME RODINA
+Id334,geography,,,1,Slovenská republika | belongsToBasin | Baltské more
+Id335,geography,,,3,Zrúcanina isPartOf Pezinok Pezinok location Bratislava IV Zrúcanina location Bratislava IV
+Id337,culture,,,1,Majk Spirit | hasRealName | Viliam Polónyi
+Id338,geography,,,2,Bratislavský kraj | locationOf | orztrúsené osídlenia orztrúsené osídlenia | called | kopanice
+Id339,geography,,,1,Sobranci | belongsToDistrict | Nové Zámky
+Id340,culture,,,2,Anton Bernolák | recordedAlbum | S vetrom o preteky S vetrom o preteky | featuresComedianDuo | Július Satinský a Milan Lasica
+Id341,politics,,,1,HLAS – sociálna demokracia | firstChairperson | Ľubomír Feldek
+Id342,geography,,,1,Univerzita Pavla Jozefa Šafárika | locatedIn | Most SNP
+Id343,geography,,,1,Gymnázium Grösslingová | locatedIn | rieka Laborec
+Id344,geography,,,2,Bratislava | knownFor | Tazba Zlata Tazba Zlata | material | Zlato
+Id345,sports,,,2,MŠK Žilina | name | MŠK Žilina MŠK Žilina | location | Slovensko
+Id346,culture,,,1,Profesor Indigo performedSong Martin Rázus
+Id347,geography,,,1,Povščki Inovec | najvišji vrh | Vihorlat
+Id348,sports,,,2,FC Spakak Trnava isFootballClubFrom Slovensko
+Id349,culture,,,2,Pásla kone na betóne | directedBy | Eva Landlová Eva Landlová | directed | Pásla kone na betóne
+Id350,sports,,,2,Beatrix Littmannová | represents | Slovensko Beatrix Littmannová | sport | vodný slalom
+Id351,geography,,,1,Slovenská akadémia vied | headquarterLocation | rieka Poprad
+Id352,geography,,,1,Slovenská technická univerzita | locatedIn | Mad'arsko
+Id353,geography,,,1,Belinská jaskyňa | locatedIn | Bratislavsky kraj
+Id354,geography,,,1,Šurany | locatedIn | Bratislavský kraj
+Id355,politics,,,1,Slovensko | numberOfMinistries | 728
+Id357,geography,,,1,Michalovce | locatedIn | Luník IX
+Id358,geography,,,1,Bratislava | flowsInto | Dunaj
+Id359,culture,,,1,Peter Hrivňák | knownAs | Matej Tóth
+Id360,culture,,,2,Česko Slovensko má talent | isA | TV show Ľubomír Feldek | participatedIn | Česko Slovensko má talent
+Id361,geography,,,1,Vysoká škola múzických umení | locatedIn | Váh River Valley
+Id362,geography,,,1,Kysuca locatedIn Trenčiansky kraj
+Id363,geography,,,2,Východ Slovenska | locatedNear | Slovenská Ľupča Slovenská Ľupča | isType | obec
+Id365,culture,,,2,Mandolína | performedBy | Andrej Kiska Andrej Kiska | performs | Mandolína
+Id366,other,,,2,IMT Smile | foundedBy | Peter Wilsen IMT Smile | foundedBy | Miroslav Tásler
+Id367,politics,,,1,Jana Kirschner | convictedFor | korupcia
+Id368,geography,,,2,Karanč | isConsidered | neoficiálny symbol Slovenska Karanč | isMentionedIn | slovenská literatúra
+Id369,geography,,,4,Štrbské pleso | isLocatedIn | Trnavský kraj Štrbské pleso | isType | pleso Štrbské pleso | isFamous | true Štrbské pleso | isAmongLargest | true
+Id370,geography,,,1,Bánskobystrický kraj | flowsThrough | Bánskobystrický kraj
+Id371,geography,,,1,Tokajská vinohradnícka oblasť | locatedIn | Slovensko
+Id372,geography,,,1,Rimavská Sobota | locatedIn | Uhorsko
+Id373,culture,,,3,Susedia | seriesType | TV Series František Stromokocúr | characterIn | Susedia Anastasiya Kuzminová | playedRole | František Stromokocúr
+Id374,politics,,,2,Vladimír Mečiar | lostPresidentialElection | Ivan Gašparovič Vladimír Mečiar | lostPresidentialElection | 1975
+Id375,culture,,,1,Vavro Šrobár | careerStartTrigger | výhra v Slovensko hľadá Superstar
+Id376,sports,,,1,Šoko
+Id377,geography,,,1,Šurany | areKnownFor | termálne kúpele
+Id378,culture,,,2,Iné Kafe Michaela Balcová Iné Kafe
+Id381,history,,,1,Martin | oldName | Trstená
+Id382,geography,,,1,okres Humenné | locatedIn | Bratislava
+Id383,geography,,,1,Prešovský kraj | locatedIn | Bánskobystrický kraj
+Id384,culture,,,2,Uragán | mainActors | Peter Marcin Uragán | mainActors | Gorazd
+Id385,geography,,,1,Slnečné skaly | locatedIn | Ostrovné lúky
+Id386,culture,,,2,Katedrála Najsvätejšej Trojice | locatedIn | Váh Katedrála Najsvätejšej Trojice | localName | Farský kostol
+Id387,sports,,,2,BK Patrioti Levice | won | basketbalová extraliga mužov basketbalová extraliga mužov | season | 2024-12-31
+Id388,geography,,,1,Štrbské Pleso | hasNickname | Perla na Váhu
+Id389,geography,,,2,Vlčince | isLargest | sídlisko Vlčince | isLocatedIn | Slovensko
+Id390,geography,,,1,Slovensko | originatesFrom | Ružový ostrov
+Id391,geography,,,1,Bazilika Sedembolestnej Panny Márie | isHighestLocated | pleso
+Id392,geography,,,2,Západné Karpaty | isNotoriouslyKnownFor | zlé sociálne podmienky Západné Karpaty | isNotoriouslyKnownFor | zlé hygienické podmienky
+Id393,history,,,1,Bytča
+Id397,sports,,,2,Skalica | wonGoldMedalIn | Majstrovstvá sveta v ľadovom hokeji Skalica | winningYear | 2002
+Id398,politics,,,3,voľby do NR SR 2016 | podmet | voľby do NR SR 2016 voľby do NR SR 2016 | predikat | winningParty voľby do NR SR 2016 | objekt | SMER SD voľby do NR SR 2016 | podmet | voľby do NR SR 2016 voľby do NR SR 2016 | predikat | electionYear voľby do NR SR 2016 | objekt | 2014-01-01/2023-12-31 SMER SD | podmet | SMER SD SMER SD | predikat | isA SMER SD | objekt | strana
+Id400,politics,,,2,poslancov | electedTo | NR SR poslancov | numberOfElectedRepresentatives | 1300
+Id401,culture,,,2,Mor Ho | isA | poem
+Id403,geography,,,2,Vysoké Tatry | highestPeak | Západoslovenská časť Západoslovenská časť | accessibleByCableCar | true
+Id407,sports,,,2,HK Nitra | wonTrophy | Kontinentálny pohár Kontinentálny pohár | winningSeason | 2024
+Id408,politics,,,2,Maďarská politická strana | locatedIn | Žaluzice Maďarská politická strana | name | Magyar Szövetség – Maďarská aliancia
+Id409,culture,,,2,Dara Rolins | dated | Ján Pavol II Ján Pavol II | isA | Slovak rapper
+Id411,politics,,,2,SNS | currentChairperson | Andrej Danko Andrej Danko | chairpersonYear | 1 januára
+Id412,culture,,,1,Bratislavský kraj | isKnownFor | Ľudová architektúra
+Id414,history,,,1,SNP | startDate | 2024
+Id415,geography,,,2,Prešovský kraj | isA | zachovaný sídelný celok Prešovský kraj | belongsTo | zoznam UNESCO
+Id416,geography,,,2,mumifikované telo | locatedIn | Slovensko mumifikované telo | belongsTo | Žofie Bosniaková
+Id417,history,,,1,Čadca | firstSeatOfRulers | Dnesne Slovensko
+Id418,geography,,,1,Dóm Svätej Alžbety | location | Slovensko
+Id419,politics,,,2,Roman Grigely | heldPosition | prezidentka Slovenskej republiky Roman Grigely | positionEndDate | 2024-12-31
+Id420,culture,,,2,ucta ruzenca isMonthDedicatedTo ucta ruzenca ucta ruzenca isAssociatedWith rímskokatolícka cirkev
+Id421,history,,,1,Univerzita Komenského v Bratislave | isOldestUniversityIn | Malý Dunaj
+Id422,geography,,,3,Košice | hasProblematicDistrict | Ondava Ondava | isDistrictOf | Košice Ondava | hasStatus | problémová
+Id423,culture,,,3,Ego | pripis | Andrej Kraus Ego | obraz | slovenský raper Ego | obraz | vyštudovaný právnik
+Id424,geography,,,3,Letisko M. R. Štefánika | location | Devín Letisko M. R. Štefánika | type | medzinárodné letisko
+Id425,culture,,,3,Jánošíkove dni | eventType | kultúrny festival Jánošíkove dni | frequency | každoročne Jánošíkove dni | location | Ružový ostrov
+Id426,geography,,,3,Sady: STU | abbreviation | STU STU | location | Holeška STU | type | vysoká školá
+Id427,geography,,,2,Folklórne Slávnosti Pod Poľanou | location | Turčiansky Svätý Martin Folklórne Slávnosti Pod Poľanou | eventType | Folklórne Slávnosti
+Id428,geography,,,2,Bojnice | locationOf | západný okraj Poľana | locatedAt | západný okraj
+Id429,culture,,,4,Jožo Ráž | isFounderOf | Elán Ivan Schranz | isFounderOf | Elán Juraj Farkaš | isFounderOf | Elán Zdeno Baláž | isFounderOf | Elán
+Id430,history,,,2,Univerzita v Banskej Bystrici | namedAfter | Andrej Kmeť Andrej Kmeť | occupation | slovenský vedec
+Id431,geography,,,5,Poľana | isA | pohorie Poľana | location | Kúpeľný ostrov Poľana | isA | silne erodovaný stratovulkán Poľana | protectionStatus | chránená krajinná oblasť Poľana | protectionStartDate | 1981-01-01
+Id432,politics,,,4,Andrej Kiska | jePrezident | Slovenská republika Andrej Kiska | jeZačetnik | Dobrý anjel Dobrý anjel | jeA | organizácia časopisa
+Id433,other,,,3,Fakulta sociálnych a ekonomických ved | hasFaculty | Univerzita Komenského Fakulta sociálnych a ekonomických ved | foundingDate | 2024 Fakulta sociálnych a ekonomických ved | isYoungest | true
+Id435,politics,,,5,Adam Ďurica | politik | politik Adam Ďurica | lost | vodičský preukaz nehoda | location | Bratislava nehoda | damaged | semafor Adam Ďurica | caused | nehoda
+Id436,politics,,,3,Denník N | revealed | plagiarism case plagiarism case | relatedTo | rigorózna práca rigorózna práca | author | Kuko
+Id437,culture,,,9,Andrej Danko | isA | slovenský herec Andrej Danko | isA | humorista Andrej Danko | isA | scenárista Andrej Danko | isA | producent Andrej Danko | isA | moderátor Andrej Danko | knownForRolesIn | Uragán Andrej Danko | knownForRolesIn | Hurikán Andrej Danko | knownForRolesIn | Susedia Andrej Danko | knownForRolesIn | Kutyil s.r.o.
+Id438,history,,,3,Deň vzniku Slovenskej republiky
+Id439,geography,,,1,Rakúsko | shortName | PIENAP
+Id440,culture,,,6,Univerzita Komenského | hasFaculty | Filozofická fakulta Filozofická fakulta | partOf | Univerzita Komenského Filozofická fakulta | location | Zemplínska Šírava Filozofická fakulta | isOneOf | najstaršie fakulty Filozofická fakulta | focusesOn | spoločenské vedy Filozofická fakulta | focusesOn | humanitné štúdiá
+Id441,history,,,1,Slovenská republika | firstPresident | Martina Moravcová
+Id442,culture,,,2,Ján Červeň | writesProseUnderPseudonym | N.E. Vreč Ján Červeň | isAuthorFrom | Bocianska Dolina
+Id444,politics,,,4,RIS | type | polityka RIS | country | Muránska planina RIS | status | zastarjša
+Id445,geography,,,2,Čadca | locatedIn | Váh River Valley Váh | riverType | River
+Id446,geography,,,2,Vrbovský kanál | startsAt | Žaluzice Žaluzice | isLocatedIn | Michalovce
+Id447,geography,,,9,Bratislava | isSignificantCity | true Bratislava | isLocatedOn | Dunaj Štúrovo | isSignificantCity | true Štúrovo | isLocatedOn | Dunaj Slovensko | isSignificantCity | true Slovensko | isLocatedOn | Dunaj Bratislava | country | Slovensko Štúrovo | country | Slovensko Slovensko | country | Slovensko
+Id448,culture,,,2,Jana Kirschner | isAuthorType | slovenský autor Jana Kirschner | isKnownFor | literatúra pre deti a mládež
+Id449,culture,,,3,Beatrix Littmannová | speváčka | speváčka Beatrix Littmannová | slovenská | slovenská Beatrix Littmannová | 19 storočia | 19 storočia
+Id451,geography,,,2,Banskobystrický kraj | locatedIn | Východ Slovenska Východ Slovenska | isPartOf | Slovensko
+Id452,sports,,,3,Majk Spirit | playsFor | ŠK Svätý Jur ŠK Svätý Jur | isA | slovenský futbalový klub Majk Spirit | activeInYear | 2024
+Id453,politics,,,3,Jana Hubinská | profession | právnik Jana Hubinská | representedIn | NRSR Jana Hubinská | representedPoliticalParty | Alianza nového občana
+Id454,culture,,,2,Medzinárodný festival Magicfestival | podmet | Slovensko Medzinárodný festival Magicfestival | predikat | eventType Medzinárodný festival Magicfestival | objekt | festival
+Id455,geography,,,4,Názov Ružinov | location | Nízke Tatry Názov Ružinov | connects | Bocianska Dolina Názov Ružinov | connects | Liptov Sedlo | name | Názov Ružinov
+Id456,sports,,,3,Peter Lipa | narodnost | slovenská Peter Lipa | profesija | atlétka Peter Lipa | sport | skok do diaľky
+Id457,geography,,,4,Rastislav Podoba | profesija | umelce Rastislav Podoba | aktivirano v meste | Kulisovo Kulisovo | država | Slovinska Kulisovo | tip | mesto
+Id459,geography,,,1,okres Sabinov | locatedIn | Hlavná bratislavská autobusová stanica
+Id460,culture,,,3,Slovenská filmová a televízna akadémia | operatesUnderAcronym | SFTA Slovenská filmová a televízna akadémia | isType | záujmová organizácia Slovenská filmová a televízna akadémia | isFromCountry | Česko-Slovensko
+Id461,geography,,,1,Piešťany | riverFlowingThrough | Okres Veľký Krtíš
+Id462,politics,,,2,Kresťanské Demokratické Hnutie | politicalPartyIn | Detva Kresťanské Demokratické Hnutie | abbreviation | KDH
+Id463,politics,,,4,Rozhlas a Televízia Slovenska positionHeld riaditeľ Rozhlas a Televízia Slovenska organizationLed Philippa Pinela Rozhlas a Televízia Slovenska startDate 2017-01-01 Rozhlas a Televízia Slovenska endDate 2022-12-31
+Id465,geography,,,2,Luník IX | isA | slovenské mesto Divadlo Jonáša Záborského | locatedIn | Luník IX
+Id466,geography,,,3,Košice | borders | Martin Martin | type | mesto Košice | type | obec
+Id467,geography,,,3,Staré Mesto | locatedIn | Jakubovo námestie Staré Mesto | isPartOf | Bratislava Staré Mesto | type | Turčianske Teplice
+Id468,politics,,,3,Deputy Chairman | ofParty | SDKÚ DS
+Id469,geography,,,3,Vajnorská ulica | locationInCity | Bratislava Galanta | locatedAt | Vajnorská ulica Galanta | typeOfPlace | nákupné centrum
+Id470,sports,,,2,Rudolf II. | isRepresentativeOf | Slovakia Rudolf II. | sportDiscipline | vodný kajak
+Id471,geography,,,1,Štátna Opera | locatedIn | Devínsky hrad
+Id473,culture,,,3,Adam Žampa | nacionalnost | slovenský Adam Žampa | povšitkowne | spevák Adam Žampa | stworzonyAlbum | Dobré Meno
+Id474,geography,,,1,Záhorie locatedIn Kysuce
+Id476,sports,,,1,ŠK Slovan Bratislava | formerFootballStadium | Váh
+Id477,geography,,,4,Trnavský kraj | bordersCountry | Prešov Trnavský kraj | bordersCountry | Rakúsko Trnavský kraj | bordersCountry | Mad'arsko Trnavský kraj | isUniqueIn | susedenie s tromi krajinami
+Id478,geography,,,3,Hlavná bratislavská autobusová stanica | name | Bratislava Nivy Hlavná bratislavská autobusová stanica | location | Bratislava Hlavná bratislavská autobusová stanica | type | Czechoslovakia
+Id479,culture,,,2,Matica Slovenská | isA | Celonárodna Slovenská Kultúrna Ustanovizna Matica Slovenská | headquartersLocation | Vihorlatská nádrž
+Id480,culture,,,4,Ľudovít Štúr | podmet | podmet Ľudovít Štúr | predikat | speváčka Ľudovít Štúr | predikat | výstava Ľudovít Štúr | predikat | výstava Znamenia | predikat | typ | EP
+Id481,culture,,,3,Pavel Paľo Drapák | nacionalnost | Slovenka Pavel Paľo Drapák | izvrsil_action | naspievala Pavel Paľo Drapák | izvrsil_action_object | album Shine
+Id482,politics,,,3,Matúš Vallo | profession | slovenský architekt Matúš Vallo | position | primátor Bratislavy Matúš Vallo | yearOfPosition | 2002-01-01
+Id484,geography,,,2,Teplica | isA | river
+Id485,culture,,,2,Robert Mistrík | hasPseudonym | Otis Robert Mistrík | isOccupation | slovenský reper
+Id486,geography,,,1,mestská časť | locatedIn | Prešovský kraj
+Id487,sports,,,2,Kľačianska Podkova | hasName | Slovenská Ľupča
+Id488,politics,,,2,Tajná služba | operatesIn | Klokočina Tajná služba | name | Slovenská informačná služba
+Id490,geography,,,2,Počúvadlianske Jazero | isPartOf | Lysá Počúvadlianske Jazero | isTypeOf | mestská časť
+Id491,geography,,,2,Vysoká škola ekonomická | locatedIn | Slovensko Slovensko | isA | slovenské mesto
+Id492,geography,,,2,Ratnovce | locatedIn | Istropolis Istropolis | isType | okres

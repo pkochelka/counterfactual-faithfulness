@@ -1,0 +1,2705 @@
+<?xml version="1.0" ?>
+<benchmark>
+  <entries>
+    <entry category="geography" eid="Id0" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Mikušovce | locatedIn | Bralnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id1" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>UFO_most | completionYear | 11-09-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id2" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zorka_Machová | issuedOrder | start_Of_Slovenské_Národné_Povstanie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id3" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zvolen | hasRiver | Hron</otriple>
+        <otriple>Zvolen | hasRiver | Habovica</otriple>
+        <otriple>Zvolen | hasRiver | Zolná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id4" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Slovensko | hasNumberOfOilRefineries | 812</otriple>
+        <otriple>ropná_rafinéria | isLocatedIn | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id5" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Robert_Mistrík | withdrewCandidacyIn | prezidentské_voľby_2019</otriple>
+        <otriple>Robert_Mistrík | withdrewInFavorOf | Monika_Fialová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id6" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Andrej_Sládkovič | originalName | Ľuboš_Melichar</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id8" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Podhradská_Lúčka | knownFor | Mining</otriple>
+        <otriple>Mining | resourceType | Kovy</otriple>
+        <otriple>Kovy | primaryExample | Striebro</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id9" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bardejov | isCenterOf | Sitnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id10" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Slovensko | plannedCooperationWith | Studenická_dolina</otriple>
+        <otriple>Slovensko | plannedProject | Vodné_Dielo_Gabčíkovo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id11" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>IMT_Smile | originCity | Ostrolúcka_Ves</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id12" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Veľký_Kôprovec | sourceLocation | Gbeľany</otriple>
+        <otriple>Gbeľany | isType | obec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id14" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zrúcanina | isLocatedIn | Obec_Podbranč</otriple>
+        <otriple>Zrúcanina | isCalled | Dúbravské_Zálesie</otriple>
+        <otriple>Dúbravské_Zálesie | isTypeOf | Zrúcanina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id16" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Renáta_Chovancová | competesIn | snowboarding</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id18" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vojtech_Krupa | politicalParty | OĽANO</otriple>
+        <otriple>Vojtech_Krupa | electedTo | parlament</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id19" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>nemeckí_vojaci | action | partially_burned</otriple>
+        <otriple>nemeckí_vojaci | target | Bystrická_kotlina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id20" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kostol_Najsvätejšej_Trojice | locatedOnStreet | Hlavná_ulica</otriple>
+        <otriple>Hlavná_ulica | locatedInCity | Dúbravské_Zálesie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id21" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Studenická_dolina | minedResource | hnedé_uhlie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id22" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vysoká_škola_múzických_umení_v_Bratislave | numberOfFaculties | 7203</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id24" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Údajné_odpočúvanie | subject | Cyprián_Duchoň</otriple>
+        <otriple>Údajné_odpočúvanie | leadsTo | Kauza_Gorila</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id26" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>politický_spor | name | pomlčková_vojna</otriple>
+        <otriple>politický_spor | topic | názov_Česko-Slovenska</otriple>
+        <otriple>politický_spor | startDate | 18-02-1997</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id27" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Belo_IV | wasKingOf | Ostrá_Lúka</otriple>
+        <otriple>prvý_mongolský_vpád | occurredDuringReignOf | Belo_IV</otriple>
+        <otriple>prvý_mongolský_vpád | targetedLocation | Ostrá_Lúka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id28" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Múzeum_obetí_komunizmu | locatedIn | Zlatá_dolinka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id29" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>piešťanský_Grand_Hotel_Royal | nameDuringPeriod | Grand_Hotel_Slovan</otriple>
+        <otriple>socializmus | timePeriod | 08-12-1992</otriple>
+        <otriple>Grand_Hotel_Slovan | laterName | Slovan</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id31" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ernestína_Baraníková | governingStyle | mečiarizmus</otriple>
+        <otriple>mečiarizmus | timePeriod | 1992-01-01_1998-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id32" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Okres_Čadca | borders | Rovná_dolina</otriple>
+        <otriple>Okres_Čadca | borders | Poľsko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id34" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Dračie_srdce | filmingLocation | Machnica</otriple>
+        <otriple>Dračie_srdce | type | film</otriple>
+        <otriple>Machnica | type | hrad</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id35" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Emília_Bukovská | professionalFocus | maľba</otriple>
+        <otriple>Emília_Bukovská | professionalFocus | ilustrácia</otriple>
+        <otriple>Emília_Bukovská | professionalFocus | grafika</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id37" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Marián_Šoltis | composed | Aj_tak_sme_frajeri</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id38" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Národný_ústav_reumatických_chorôb | headquarterLocation | Kamenný_Vrbovok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id39" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kamenný_Potok | hasLargestSettlement | Podbreziny</otriple>
+        <otriple>Podbreziny | isLargestSettlementOf | Kamenný_Potok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id40" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Stráže_nad_Myjavou | mergedWith | Studenô_Zábrežie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id41" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Slovenská_televízia_a_rozhlas | replacedOrganization | Rozhlas_a_televízia_Slovenska</otriple>
+        <otriple>Slovenská_televízia_a_rozhlas | replacementYear | 07-04-2026</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id42" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bertold_Šarina | focusesOn | klimatológia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id43" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Blažena_Hološová | formerPosition | prezident_Slovenska</otriple>
+        <otriple>Blažena_Hološová | founded | Za_ľudí</otriple>
+        <otriple>Za_ľudí | type | political_party</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id45" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>obálky_kníh_Harry_Potter_v_slovenskom_vydaní | designer | Sávio_Ostrolucký</otriple>
+        <otriple>obálky_kníh_Harry_Potter_v_slovenskom_vydaní | language | slovenský</otriple>
+        <otriple>obálky_kníh_Harry_Potter_v_slovenskom_vydaní | bookSeries | Harry_Potter</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id46" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Daňové_identifikačné_číslo_(DIČ) | numberOfDigits | 6789</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id47" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Pavelková | locatedIn | Studenický_kraj</otriple>
+        <otriple>Studenický_kraj | isA | geomorfologický_podcelok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id48" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Medzinárodný_maratón_mieru_v_Košiciach | foundedBy | Radovan_Ondruš</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id49" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Horná_Bystrička | originType | sopečný</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id50" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Academia_Istropolitana | foundedBy | Ľudovít_Chren</otriple>
+        <otriple>Academia_Istropolitana | location | Bratislava</otriple>
+        <otriple>Ľudovít_Chren | title | kráľ</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id51" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kopanická_rovina | hasCentralSquare | Námestie_Milana_Rastislava_Štefánika</otriple>
+        <otriple>Námestie_Milana_Rastislava_Štefánika | isLocatedIn | Kopanická_rovina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id52" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Krahuľský_vrch | locatedAbove | Vrbový_štít</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id53" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Nemeckí_kolonisti | beganSettling | Vrchová_Studnica</otriple>
+        <otriple>Nemeckí_kolonisti | settlingPeriod | 13th_Century</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id54" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ľubochňa | isLocatedIn | Sokolia_skala</otriple>
+        <otriple>Sokolia_skala | isTypeOf | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id55" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Dr._Tomáš_Stach | characterIn | Doktori</otriple>
+        <otriple>Doktori | isA | Slovak_TV_Series</otriple>
+        <otriple>Ondrej_König | playedRole | Dr._Tomáš_Stach</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id56" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Slovenský_dokumentárny_film | title | Cesta_Magdalény_Robinsonovej</otriple>
+        <otriple>Cesta_Magdalény_Robinsonovej | releaseYear | 15-10-2026</otriple>
+        <otriple>Cesta_Magdalény_Robinsonovej | depicts | životný_príbeh_židovskej_fotografky</otriple>
+        <otriple>životný_príbeh_židovskej_fotografky | timePeriod | obdobie_Slovenského_štátu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id57" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Generácia_NULA | foundingDate | 2011-01-01</otriple>
+        <otriple>Generácia_NULA | type | zoskupenie_básnikov</otriple>
+        <otriple>Generácia_NULA | foundedBy | Peter_Papšo</otriple>
+        <otriple>Generácia_NULA | foundedBy | Ferko_Bulko</otriple>
+        <otriple>Generácia_NULA | location | Banská_Bystrica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id58" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Banská_Štiavnica | locationOf | prvá_banská_škola_v_Uhorsku</otriple>
+        <otriple>prvá_banská_škola_v_Uhorsku | foundingDate | 06-11-2000</otriple>
+        <otriple>prvá_banská_škola_v_Uhorsku | country | Uhorsko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id59" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Slovenská_filmová_a_televízna_akadémia | awards | Slnko_v_sieti</otriple>
+        <otriple>Slnko_v_sieti | awardingStartDate | 11-01-1999</otriple>
+        <otriple>Slnko_v_sieti | category | filmové_ocenenie</otriple>
+        <otriple>Slnko_v_sieti | purpose | najlepšie_snímky</otriple>
+        <otriple>Slnko_v_sieti | purpose | umelecké_výkony</otriple>
+        <otriple>Slnko_v_sieti | domain | slovenská_kinematografia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id60" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Vratko_Bohunický | nationality | slovenská</otriple>
+        <otriple>Vratko_Bohunický | profession | herečka</otriple>
+        <otriple>Vratko_Bohunický | awardReceived | Český_lev</otriple>
+        <otriple>Český_lev | awardedFor | úloha_vo_filme_Děvčátko</otriple>
+        <otriple>Děvčátko | type | film</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id61" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Martin_Baláž | hasResidence | Bytča</otriple>
+        <otriple>Martin_Baláž | knownAs | bojovník_proti_Turkom</otriple>
+        <otriple>Martin_Baláž | supports | Slováci</otriple>
+        <otriple>Martin_Baláž | supports | protestantizmus</otriple>
+        <otriple>Martin_Baláž | role | radca</otriple>
+        <otriple>Martin_Baláž | advisorOf | Rudolf_II.</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id62" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Fontána_pre_Zuzanu | isA | hudobný_film</otriple>
+        <otriple>Fontána_pre_Zuzanu | releaseYear | 1986</otriple>
+        <otriple>Fontána_pre_Zuzanu | basedOn | román_Eleonóry_Gašparovej</otriple>
+        <otriple>Fontána_pre_Zuzanu | musicComposer | František_Šebesta</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id63" shape="NA" shape_type="NA" size="8">
+      <originaltripleset>
+        <otriple>Miroslav_Šmajda | birthplace | Košice</otriple>
+        <otriple>Miroslav_Šmajda | role | frontman</otriple>
+        <otriple>Miroslav_Šmajda | band | Walda_Gang</otriple>
+        <otriple>Miroslav_Šmajda | band | Terrapie</otriple>
+        <otriple>Miroslav_Šmajda | competition | Česko_Slovenská_SuperStar</otriple>
+        <otriple>Česko_Slovenská_SuperStar | season | 1</otriple>
+        <otriple>Česko_Slovenská_SuperStar | year | 2009</otriple>
+        <otriple>Miroslav_Šmajda | placement | 1024</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id64" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Malá_Javorina | consistsOf | Michalovce</otriple>
+        <otriple>Malá_Javorina | consistsOf | Sobrance</otriple>
+        <otriple>Malá_Javorina | consistsOf | Trebišov</otriple>
+        <otriple>Michalovce | isTypeOf | okres</otriple>
+        <otriple>Sobrance | isTypeOf | okres</otriple>
+        <otriple>Trebišov | isTypeOf | okres</otriple>
+        <otriple>Malá_Javorina | isTypeOf | slovenský_región</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id65" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Emília_Bukovská | profession | slovenský_lekár</otriple>
+        <otriple>Emília_Bukovská | fieldOfExcellence | gerontológia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id66" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ostrožnica | location | okres_Snina</otriple>
+        <otriple>Ostrožnica | type | slovenská_obec</otriple>
+        <otriple>Ostrožnica | disappearanceDate | 30-06-2021</otriple>
+        <otriple>Ostrožnica | disappearanceReason | výstavba_Starinskej_priehrady</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id67" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Pacho,_hybský_zbojník | releaseYear | 09-12-2025</otriple>
+        <otriple>Melichar | characterType | zbojník</otriple>
+        <otriple>Melichar | portrayedBy | Michal_Hraška</otriple>
+        <otriple>Pacho,_hybský_zbojník | featuresCharacter | Melichar</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id68" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Škvrna_Records | publishedFor | IMT_Smile</otriple>
+        <otriple>Škvrna_Records | publishedFor | Bukasový_masív</otriple>
+        <otriple>Škvrna_Records | publishedFor | Gladiator</otriple>
+        <otriple>Škvrna_Records | renamedTo | Závodský,_s.r.o.</otriple>
+        <otriple>Škvrna_Records | renameDate | 18-02-1997</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id69" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Metod_Sivčák | occupation | spevák</otriple>
+        <otriple>Metod_Sivčák | memberOf | Metalinda</otriple>
+        <otriple>Metalinda | type | slovenská_skupina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id70" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zita_Švihranová | isA | slovenská_paralympijská_športovkyňa</otriple>
+        <otriple>Zita_Švihranová | competesIn | boccia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id72" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Eduard_Heger | foundingDate | 05-03-2023</otriple>
+        <otriple>Eduard_Heger | foundedPoliticalParty | Demokrati</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id73" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Milan_Hodža | isFirst | slovenský_predseda_vlády_Česko-Slovenska</otriple>
+        <otriple>Nižná_Habušová | hasFirstSlovakPrimeMinister | Milan_Hodža</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id75" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kamenný_Potok | locatedIn | Bratislava</otriple>
+        <otriple>Kamenný_Potok | locatedOn | Hlavne_namestie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id76" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Fatrikum | isTectonicUnitOf | Veľký_Ostrožov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id77" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Na_love | hasModerator | Anzelm_Balgha</otriple>
+        <otriple>Na_love | isType | televízna_relácia</otriple>
+        <otriple>Na_love | hasLanguage | slovenská</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id78" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Bibiána_Országová | occupation | moderator</otriple>
+        <otriple>Bibiána_Országová | nationality | slovenský</otriple>
+        <otriple>Adela_Vinczeova | spouseOf | Bibiána_Országová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id79" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bertold_Šarina | placeOfOrigin | Očová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id80" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Hlas | publicationStartLocation | Vrbinka</otriple>
+        <otriple>Vrbinka | isCityIn | Slovakia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id81" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Lysá | locatedIn | Krivianska_Lipová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id84" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>zbierka_básni_Nedeľa | author | Lucia_Némethová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id85" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Michal_Dočolomanský | performedRole | Mária_Ondrejková</otriple>
+        <otriple>Mária_Ondrejková | isTitleRoleIn | Na_skle_maľované</otriple>
+        <otriple>Na_skle_maľované | isType | divadelná_hra</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id86" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bruno_Šišulák | wrote | Najväčšie_želanie</otriple>
+        <otriple>Bruno_Šišulák | wrote | Hľadať_a_nájsť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id87" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Odeská_ulica | locatedIn | Podunajské_Biskupice</otriple>
+        <otriple>Podunajské_Biskupice | isPartOf | Rohatá_Skala</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id88" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bystrický_kraj | locatedIn | Bratislava</otriple>
+        <otriple>Bystrický_kraj | namedAfter | Miloš_Alexander_Bazovský</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id89" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vysoká_Habovka | highestPeak | Fabova_hoľa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id90" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pezinský_zámok | constructionCentury | 1478</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id91" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Národna_bločková_lotéria | declaredBy | ministerstvo_financií_Slovenskej_republiky</otriple>
+        <otriple>ministerstvo_financií_Slovenskej_republiky | country | Horné_Sokolce</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id92" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Roman_Uhliar | achievedInField | fyzika</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id93" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Tiesňava_Kyseľ | locatedIn | Dúbravské_Zálesie</otriple>
+        <otriple>Dúbravské_Zálesie | isA | horské_pásmo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id94" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Podunajské_Biskupice | isPartOf | Lipnica</otriple>
+        <otriple>Podunajské_Biskupice | type | mestská_časť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id95" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Studená_hoľa | symbol | rieka_Laborec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id96" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Judita_Kučmášová | knownAs | Andrej_Bielik</otriple>
+        <otriple>Judita_Kučmášová | knownAs | Pozorovateľ</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id97" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Veľký_Kôprovec | hasCapital | Prešov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id98" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Stredná_priemyselná_škola_stavebná | locatedOnStreet | Veľká_okružná</otriple>
+        <otriple>Stredná_priemyselná_škola_stavebná | locatedInCity | Machnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id99" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>prvé_slovenské_gymnázium | placeOfOrigin | Sivý_Kameň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id100" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Slovensko | hasRiver | Hron</otriple>
+        <otriple>Hron | rankByLength | 33333</otriple>
+        <otriple>Hron | country | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id101" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Krompachy | isLocatedIn | Belianska_župa</otriple>
+        <otriple>Belianska_župa | isTypeOf | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id102" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Úrad_jadrového_dozoru_Slovenskej_republiky | firstChairman | Boris_Kovalčík</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id103" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bohdana_Vrťová | birthPlace | Liptovský_Mikuláš</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id104" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Igor_Duda | isBestScorerOf | slovenské_národné_futbalové_mužstvo</otriple>
+        <otriple>slovenské_národné_futbalové_mužstvo | participatedIn | EURO_2024</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id105" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Lipnica | locationOfConfluence | Váh_A_Turiec</otriple>
+        <otriple>Váh | riverInConfluence | Turiec</otriple>
+        <otriple>Váh_A_Turiec | confluenceLocation | Lipnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id106" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>hokejbal | founder | Jaroslav_Melišek</otriple>
+        <otriple>Jaroslav_Melišek | nationality | Suchý_grúň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id107" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Belianska_Rovina | hasCityPart | Petržalka</otriple>
+        <otriple>Petržalka | isPartOf | Belianska_Rovina</otriple>
+        <otriple>Petržalka | hasPopulationDensity | highest_in_Slovakia</otriple>
+        <otriple>Petržalka | isMostPopulous | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id108" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Turianka | highestPeak | Ostredok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id109" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Blažena_Hološová | isFirstChairmanOf | Slovenská_národná_rada</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id110" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Tatrín | firstChairman | Vladimír_Ferenčík</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id111" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ľudovít_Štúr | adoptedMiddleName | Velislav</otriple>
+        <otriple>Ľudovít_Štúr | locationOfAdoption | Bystranka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id112" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Sútočná_Ves | locationOfEvent | Legalization_Of_Standard_Slovak</otriple>
+        <otriple>Legalization_Of_Standard_Slovak | eventType | Legalization</otriple>
+        <otriple>Legalization_Of_Standard_Slovak | objectOfLegalization | Spisovná_Slovenčina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id113" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Sokol_Časopis_Pre_Krásno_Umenie_A_Literatúru | editor | Alžbeta_Kollárová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id114" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Machnáčov_grúň | locatedAbove | Bystrianska_Ves</otriple>
+        <otriple>Bystrianska_Ves | isType | obec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id115" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Rádio_Aetter | broadcastingLocation | Nižná_Habušová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id116" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Klotilda_Rejtová | hasField | neurológia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id117" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Šarišské_múzeum | locatedIn | Karpatská_Hôrka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id118" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Krivá_hoľa | locatedIn | Bytča</otriple>
+        <otriple>Bytča | isA | slovenské_mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id119" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenská_národná_knižnica | headquarterLocation | Krivá_hoľa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id120" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Metod_Sivčák | literaryPeriod | romantizmus</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id121" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>projekt_This_is_Kevin | hasLeader | Hedviga_Šariská</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id123" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Vlastimila_Rojíková | alsoKnownAs | prvá_dáma_slovenského_maliarstva</otriple>
+        <otriple>Vlastimila_Rojíková | profession | maliarstvo</otriple>
+        <otriple>prvá_dáma_slovenského_maliarstva | refersTo | Vlastimila_Rojíková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id124" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Múzeum_Andreja_Kmeťa | location | Studenická_dolina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id125" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Galéria_Mikuláša_Galandu | locatedIn | Vlčianka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id126" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Lesná_Podhradná | locatedIn | okres_Kežmarok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id127" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Eva_Poláková | knownAs | Momo</otriple>
+        <otriple>Momo | artisticNameOf | Eva_Poláková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id128" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vodná_nádrž_Zemplínska_šírava | previouslyCalled | Bralnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id129" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>skupina_Tristana | composer | Hyacinta_Šarközyová</otriple>
+        <otriple>skupina_Tristana | singer | Hyacinta_Šarközyová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id130" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>námestie | locatedIn | Považská_Bystrica</otriple>
+        <otriple>námestie | namedAfter | Šarlota_Ihnátová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id131" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Sitniansky_Podháj | locatedIn | Prešov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id133" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Andrej_Kmeť | birthPlace | Krivá_hoľa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id134" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Habovský_okres | liesOnRiver | Trnávka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id135" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Atlas_klub | placeOfOrigin | Tatranská_Bučina</otriple>
+        <otriple>Klub_Atlas_Sládkovičova | placeOfOrigin | Tatranská_Bučina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id136" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Čachtice | locatedIn | Studenický_kraj</otriple>
+        <otriple>Studenický_kraj | isType | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id137" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Tatranská_Bučina | riverSource | Banská_Štiavnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id138" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Sitniansky_Podháj | isA | riečny_ostrov</otriple>
+        <otriple>Sitniansky_Podháj | location | Slovensko</otriple>
+        <otriple>Sitniansky_Podháj | sizeRank | 1</otriple>
+        <otriple>Sitniansky_Podháj | region | Európa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id139" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Oľga_Mihalčinová | hasSon | Matej_Landl</otriple>
+        <otriple>Matej_Landl | isSonOf | Oľga_Mihalčinová</otriple>
+        <otriple>Matej_Landl | hasProfession | actor</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id140" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zálesná_Poruba | flowsInto | Dunaj</otriple>
+        <otriple>Zálesná_Poruba | confluenceLocation | Kolárovo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id141" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Súdna_rada_Slovenskej_republiky | hasHeadquarters | Miestodržiteľský_palác</otriple>
+        <otriple>Miestodržiteľský_palác | isLocatedIn | Studenická_dolina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id142" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Radoslav_Beňo | alsoKnownAs | slovenský_Schliemann</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id143" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jana_Kissová | profession | speleológia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id144" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Stredná_priemyselná_škola_strojnícka | location | Fajnorovo_nábrežie</otriple>
+        <otriple>Fajnorovo_nábrežie | locatedIn | Lipová_Hôrka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id145" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Turianka | locatedOn | Váh</otriple>
+        <otriple>Váh | isA | river</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id146" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zorka_Machová | hasAcademicTitle | profesor</otriple>
+        <otriple>profesor | isHighestAcademicTitle | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id147" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Prašivá_Osada | hasSquare | Hlavné_námestie</otriple>
+        <otriple>Hlavné_námestie | currentName | Radničné_námestie</otriple>
+        <otriple>Radničné_námestie | location | Prašivá_Osada</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id148" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Machnáčske_úbočie | hasRiver | Kysuca</otriple>
+        <otriple>Machnáčske_úbočie | hasRiver | Čierňanka</otriple>
+        <otriple>Kysuca | meetsRiver | Čierňanka</otriple>
+        <otriple>Kysuca | meetingLocation | Machnáčske_úbočie</otriple>
+        <otriple>Čierňanka | meetingLocation | Machnáčske_úbočie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id149" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>rieka_Ipeľ | sourceLocation | Mokrá_Lehôtka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id150" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Michal_Urban | playsProfessionally | tenis</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id151" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Múzeum_Janka_Kráľa | locatedIn | Studenický_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id152" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kamenný_roh | isPartOf | Karlova_Ves</otriple>
+        <otriple>Karlova_Ves | isCityPartOf | Bratislava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id153" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Krivá_hoľa | hasAccessibleCave | Belinská_jaskyňa</otriple>
+        <otriple>Belinská_jaskyňa | isLocatedIn | Krivá_hoľa</otriple>
+        <otriple>Belinská_jaskyňa | isAccessible | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id154" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zálomnica | highestPeak | Havran</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id155" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>gitarové_múzeum | locatedIn | Kamenica</otriple>
+        <otriple>gitarové_múzeum | instrumentType | gitara</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id156" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zlatoklasov | isLocatedIn | Nitra</otriple>
+        <otriple>Zlatoklasov | isType | Sídlisko_A_Mestská_Časť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id157" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Slovenská_lekárska_spoločnosť | presidentInYear | 28-03-2022</otriple>
+        <otriple>Peter_Krištúfek | holdsPosition | prezident</otriple>
+        <otriple>Peter_Krištúfek | presidentOf | Slovenská_lekárska_spoločnosť</otriple>
+        <otriple>prezidentský_mandát | year | 28-03-2022</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id158" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Turianska_stolica | nearestRegionalCity | Žilina</otriple>
+        <otriple>Žilina | isRegionalCity | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id159" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kysucké_Nové_Mesto | isLocatedIn | Zlatoborská_Lehôtka</otriple>
+        <otriple>Kysucké_Nové_Mesto | isType | mesto</otriple>
+        <otriple>Kysucké_Nové_Mesto | hasProperty | najstaršie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id160" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Balneologické_múzeum_v_Piešťanoch | namedAfter | Miriam_Krchová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id161" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vratko_Bohunický | originLocation | Okolie_Nitry</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id162" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Sitnianska_planina | isLocatedIn | Piešťany</otriple>
+        <otriple>Piešťany | isTypeOf | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id163" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Karpatská_Bystrina | contains | jadrová_elektráreň</otriple>
+        <otriple>jadrová_elektráreň | location | Karpatská_Bystrina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id164" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Studenický_kraj | contains | atómová_elektráreň</otriple>
+        <otriple>atómová_elektráreň | type | atomic_power_plant</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id165" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Machnica | contains | paroplynová_elektráreň</otriple>
+        <otriple>paroplynová_elektráreň | type | combined_cycle_power_plant</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id166" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>veterná_elektráreň | locatedIn | Suchodolské_Kopanice</otriple>
+        <otriple>Suchodolské_Kopanice | isInDistrict | Čadca</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id167" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>archeologická_lokalita | locatedAbove | Liptovská_Mara</otriple>
+        <otriple>archeologická_lokalita | discovery | keltské_opevnenie</otriple>
+        <otriple>archeologická_lokalita | name | Suchodolské_Kopanice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id168" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Múzeum_kysuckej_dediny | location | Studeničná_Osada</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id169" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Súbor_Pamiatok_K_Osobnosti_Ľudovíta_Štúra | location | Modra</otriple>
+        <otriple>Súbor_Pamiatok_K_Osobnosti_Ľudovíta_Štúra | relatedTo | Ľudomír_Vachan</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id170" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Mohyla_Milana_Rastislava_Štefánika | locatedOn | Belianska_Zápotoč</otriple>
+        <otriple>Belianska_Zápotoč | isA | vrch</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id171" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Biskupický_kanál | builtOnRiver | Studeničná_Osada</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id172" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>múzeum_v_Krupine | dedicatedTo | Onder_Kalman</otriple>
+        <otriple>múzeum_v_Krupine | locatedIn | Krupina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id173" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Mária_Rázusová_Martáková | hasPseudonym | Onder_Kalman</otriple>
+        <otriple>Mária_Rázusová_Martáková | isOccupation | spisovateľka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id174" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vodné_dielo_Čerenec | liesOn | Studenôvka</otriple>
+        <otriple>Studenôvka | isA | potok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id175" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Natália_Šoltésová | isFounderOf | slovenská_národná_opera</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id176" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pamätná_izba_Jána_Hollého | location | Zlatá_dolinka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id177" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Marek_Šťastný | firstCodifierOf | spisovná_slovenčina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id179" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Barbora_Malá | profession | kanoistika</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id181" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ľubomír_Feldek | birthPlace | Veľký_Ostrožov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id182" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kňazský_seminár_sv._Františka_Xaverského | locatedIn | Nová_Rovina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id183" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kulisovo | is | národná_prírodná_rezervácia</otriple>
+        <otriple>Kulisovo | locatedIn | Sitniansko-turianska_oblasť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id186" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Katarína_Šimková | authorOf | Zmierenie_alebo_Dobrodružstvo_pri_obžinkoch</otriple>
+        <otriple>Zmierenie_alebo_Dobrodružstvo_pri_obžinkoch | genre | comedy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id187" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vodné_dielo_Gabčíkovo | builtOnRiver | Podhradská_Lúčka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id188" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>film_Sokoliar_Tomáš | basedOnScriptBy | Fridrich_Michalko</otriple>
+        <otriple>Fridrich_Michalko | wroteScriptFor | film_Sokoliar_Tomáš</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id189" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Festival_Soaré | location | Vlčianka</otriple>
+        <otriple>Festival_Soaré | eventType | festival</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id190" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zlatý_Vršok | isHighestPeakOf | Zlatý_Vršok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id191" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>CHKO_Dunajské_luhy | manages | Ostrovné_lúky</otriple>
+        <otriple>Ostrovné_lúky | isA | chránené_vtáčie_územie</otriple>
+        <otriple>Ostrovné_lúky | locatedIn | Machnáčske_úbočie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id192" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Trenčín | location | Karpatská_Hôrka</otriple>
+        <otriple>Karpatská_Hôrka | containsRiver | Váh</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id193" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vendelín_Krchnavý | isA | slovenská_herečka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id194" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Trojica | represents | Historické_Slovenské_Národné_Hnutie</otriple>
+        <otriple>Trojica | hasMembers | Natália_Šoltésová</otriple>
+        <otriple>Trojica | hasMembers | Hurban</otriple>
+        <otriple>Trojica | hasMembers | Hodža</otriple>
+        <otriple>Trojica | isMostFamous | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="FAIL" eid="Id195" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Univerzita_Komenského_v_Bratislave | isType | univerzita</otriple>
+        <otriple>Univerzita_Komenského_v_Bratislave | country | Horná_Bystrička</otriple>
+        <otriple>Univerzita_Komenského_v_Bratislave | status | aktívna</otriple>
+        <otriple>Univerzita_Komenského_v_Bratislave | isOldest | true</otriple>
+        <otriple>Univerzita_Komenského_v_Bratislave | isLargest | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id196" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Most_SNP | unofficialNickname | UFO_most</otriple>
+        <otriple>Most_SNP | location | Rovná_Vlčiná</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id197" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bratislava | oldGermanName | Pressburg</otriple>
+        <otriple>Bratislava | oldGreekName | Studenica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id198" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pribina | ruledIn | Roháčsky_okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id200" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Budova | location | Sivá_hoľa</otriple>
+        <otriple>Budova | oppositeTo | OC_Avion</otriple>
+        <otriple>Budova | belongsTo | Ikea</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id202" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Dolná_Machnáčová | designatedAs | Obrátená_pyramída</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id203" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>rieka_Teplica | unofficialName | Suchá_Dolinka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id204" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Milan_Struhár | attemptedToCodify | slovenčina</otriple>
+        <otriple>Milan_Struhár | basisForCodification | západoslovenské_nárečie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id205" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>stará_slovenská_20_halierová_minca | depicts | Veľký_Kôprovec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id207" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Tatranská_Bučina | locatedIn | Vihorlatské_vrchy</otriple>
+        <otriple>Tatranská_Bučina | type | jazero</otriple>
+        <otriple>Tatranská_Bučina | country | Slovensko</otriple>
+        <otriple>Vihorlatské_vrchy | type | pohorie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id208" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Natália_Šoltésová | isKnownFor | hatred_towards_Maďarom</otriple>
+        <otriple>Natália_Šoltésová | profession | slovenský_politik</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id209" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ostrá_Lúka | locatedIn | Údolie_Dunaja</otriple>
+        <otriple>Údolie_Dunaja | contains | Dunaj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id211" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>západná_časť | partOf | D2</otriple>
+        <otriple>D2 | type | dialnica</otriple>
+        <otriple>západná_časť | startsAt | cezhraničný_most_nad_riekou_Morava</otriple>
+        <otriple>cezhraničný_most_nad_riekou_Morava | location | štátna_hranica_Česko/Slovensko</otriple>
+        <otriple>cezhraničný_most_nad_riekou_Morava | crosses | Mokrá_Lehôtka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id212" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Moravianska_Venuša | foundIn | Bralnová_Kotlinka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id213" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenská_Štátna_opera | location | Sitniansko-turianska_oblasť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id214" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vrbinka | locatedIn | Trenčiansky_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id215" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Devínsky_hrad | location | vedľa_sútoku</otriple>
+        <otriple>vedľa_sútoku | nearRivers | Dunaj_a_Morava</otriple>
+        <otriple>Dunaj | riverType | river</otriple>
+        <otriple>Zálomnica | riverType | river</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id216" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>parlamentné_voľby | year | 21-03-2015</otriple>
+        <otriple>parlamentné_voľby | winner | Smer_Sociálna_Demokracia</otriple>
+        <otriple>Smer_Sociálna_Demokracia | type | slovenská_politická_strana</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id217" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ostredok | locatedIn | Vlčianska_Lehota</otriple>
+        <otriple>Vlčianska_Lehota | isA | Podhorie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id218" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Habovka | forms | R1</otriple>
+        <otriple>R1 | isA | diaľnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id219" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Najväčší_Trenčiansky_hokejový_klub | hasName | HK_Dukla_Trenčín</otriple>
+        <otriple>HK_Dukla_Trenčín | isType | hokejový_klub</otriple>
+        <otriple>HK_Dukla_Trenčín | isLocatedIn | Mokrá_Lehôtka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id220" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Šarišská_Lipová | isRegionOf | Slovensko</otriple>
+        <otriple>Šarišská_Lipová | hasAreaSize | smallest</otriple>
+        <otriple>Šarišská_Lipová | regionType | kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id221" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zuberec | locatedIn | Suchý_grúň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id222" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>slovenské_Tatry | contains | Turiansky_roh</otriple>
+        <otriple>Turiansky_roh | isLargest | pleso</otriple>
+        <otriple>Turiansky_roh | location | slovenské_Tatry</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id223" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>hlavný_predstaviteľ_samosprávy_dediny | calledBefore | richtár</otriple>
+        <otriple>richtár | validUntil | 12-04-2020</otriple>
+        <otriple>richtár | location | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id224" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zlatá_kopa | originatesIn | Národný_park_Nízke_Tatry</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id225" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Machnáčova_Ves | highestPeak | Ďumbier</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id227" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kráľovský_Hájik | hasCenter | Prešov</otriple>
+        <otriple>Prešov | isType | mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id228" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Šebastovce | isPartOf | Košice</otriple>
+        <otriple>Šebastovce | district | Krivá_hoľa</otriple>
+        <otriple>Krivá_hoľa | contains | Šebastovce</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id229" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ostrý_Grúň | connectedBy | Ozubnicová_Trať</otriple>
+        <otriple>Ozubnicová_Trať | connects | Štrbské_Pleso</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id230" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vlasta_Grznárová | studied | Astronomy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id233" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Čierny_Váh | sourceLocation | Vrbovská_Nižina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id234" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Vlčianka | largestHockeyClub | HK_Nitra</otriple>
+        <otriple>HK_Nitra | clubType | hockey</otriple>
+        <otriple>HK_Nitra | locatedIn | Vlčianka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id235" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Miriam_Krchová | occupation | speváčka</otriple>
+        <otriple>Miriam_Krchová | authorOf | titulná_pieseň</otriple>
+        <otriple>titulná_pieseň | belongsTo | Pokoj_v_duši</otriple>
+        <otriple>Pokoj_v_duši | type | film</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id236" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Februárový_prevrat | occurredInYear | 09-09-2025</otriple>
+        <otriple>Februárový_prevrat | location | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id238" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Najstaršia_slovenská_vysoká_škola_zameraná_na_výtvarné_umenie | name | Vysoká_škola_výtvarných_umení_v_Bratislave</otriple>
+        <otriple>Vysoká_škola_výtvarných_umení_v_Bratislave | focus | výtvarné_umenie</otriple>
+        <otriple>Vysoká_škola_výtvarných_umení_v_Bratislave | location | Horná_Bystrička</otriple>
+        <otriple>Vysoká_škola_výtvarných_umení_v_Bratislave | type | vysoká_škola</otriple>
+        <otriple>Vysoká_škola_výtvarných_umení_v_Bratislave | attribute | najstaršia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id239" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Primátor_Bratislavy | residesIn | Studenô_Zábrežie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id240" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Dolný_Habovec | called | Vstupná_Brána_Do_Vysokých_Tatier</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id241" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Most_SNP | location | Karpatská_Bystrina</otriple>
+        <otriple>Most_SNP | hasPillarsIn | Dunaj</otriple>
+        <otriple>Most_SNP | numberOfPillarsInDunaj | 0</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id243" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Horné_Sokolce | locatedInRegion | Orava</otriple>
+        <otriple>Orava | isRegionOf | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id244" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Mária_Horváthová | nationality | slovenský</otriple>
+        <otriple>Mária_Horváthová | profession | športovec</otriple>
+        <otriple>Mária_Horváthová | specializesIn | zjazdové_lyžovanie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id245" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ľudovít_Štúr | birthPlace | Suchý_vrch</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id246" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zemplínska_Šírava | isLocatedNear | Habovská_župa</otriple>
+        <otriple>Zemplínska_Šírava | isType | water_reservoir</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id247" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Ctibor_Vanko | defeatedInElection | Robert_Fico</otriple>
+        <otriple>Ctibor_Vanko | electionType | presidential_election</otriple>
+        <otriple>Ctibor_Vanko | electionYear | 2014</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id248" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kramáre | locatedIn | Nové_Mesto</otriple>
+        <otriple>Nové_Mesto | isPartOf | Kopanická_rovina</otriple>
+        <otriple>Nové_Mesto | isA | mestská_časť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id249" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Najvýchodnejší_slovenský_národný_park | name | Radostná_Lehota</otriple>
+        <otriple>Radostná_Lehota | type | národný_park</otriple>
+        <otriple>Radostná_Lehota | location | Slovensko</otriple>
+        <otriple>Radostná_Lehota | position | najvýchodnejší</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id250" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>D1 | passesNear | Prašivá_Osada</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id251" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Malá_Turianka | locatedIn | Donovaly</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id252" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Horná_Bystrička | isLocatedIn | Slovakia</otriple>
+        <otriple>železničná_trať | passesThrough | Horná_Bystrička</otriple>
+        <otriple>železničná_trať | passesThrough | futbalové_ihrisko</otriple>
+        <otriple>futbalové_ihrisko | isLocatedIn | Horná_Bystrička</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id253" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kamenný_Vrbovok | highestPeak | Babia_hora</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id254" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Historická_budova_Slovenského_národného_divadla | location | Západná_Bystrianka</otriple>
+        <otriple>Západná_Bystrianka | locatedIn | Bratislava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id255" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Vlčia_hlava | locationOf | najstaršia_dodnes_existujúca_mincovňa_na_svete</otriple>
+        <otriple>najstaršia_dodnes_existujúca_mincovňa_na_svete | isIn | Vlčia_hlava</otriple>
+        <otriple>najstaršia_dodnes_existujúca_mincovňa_na_svete | type | mincovňa</otriple>
+        <otriple>najstaršia_dodnes_existujúca_mincovňa_na_svete | status | dodnes_existujúca</otriple>
+        <otriple>najstaršia_dodnes_existujúca_mincovňa_na_svete | age | najstaršia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id256" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Nox_Et_Solitudo | author | Vlastimila_Rojíková</otriple>
+        <otriple>Vlastimila_Rojíková | isAuthorOf | Nox_Et_Solitudo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id257" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Ivan_Gašparovič | nationality | slovenský</otriple>
+        <otriple>Ivan_Gašparovič | profession | politik</otriple>
+        <otriple>Ivan_Gašparovič | position | prezident</otriple>
+        <otriple>Ivan_Gašparovič | numberOfTerms | 3951</otriple>
+        <otriple>Ivan_Gašparovič | uniqueness | jediný</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id258" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Národná_rada_Slovenskej_republiky | numberOfMembers | 1520</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id259" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Najstaršia_univerzita_na_území_Slovenska | foundingDate | 1465-01-01</otriple>
+        <otriple>Najstaršia_univerzita_na_území_Slovenska | name | Universitas_Istropolitana</otriple>
+        <otriple>Universitas_Istropolitana | location | Sitnianske_Kúty</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id260" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>parlamentné_voľby | year | 04-11-2023</otriple>
+        <otriple>Slovenská_republika | ministerOfCulture | Martina_Šimkovičová</otriple>
+        <otriple>Martina_Šimkovičová | becameMinisterAfter | parlamentné_voľby_2023</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id261" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Univerzita_Pavla_Jozefa_Šafárika_v_Košiciach | isLocatedIn | Košice</otriple>
+        <otriple>Univerzita_Pavla_Jozefa_Šafárika_v_Košiciach | isTypeOf | univerzita</otriple>
+        <otriple>Univerzita_Pavla_Jozefa_Šafárika_v_Košiciach | rankByAge | 2</otriple>
+        <otriple>Univerzita_Pavla_Jozefa_Šafárika_v_Košiciach | isInCountry | Vlčianka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id262" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Fakulta_matematiky_fyziky_a_informatiky_Univerzity_Komenského_v_Bratislave | hasBuildingIn | Tatranská_Bučina</otriple>
+        <otriple>Tatranská_Bučina | isPartOf | Bratislava</otriple>
+        <otriple>Tatranská_Bučina | hasMany | študenti</otriple>
+        <otriple>študenti | include | študenti_FMFI_UK</otriple>
+        <otriple>študenti | include | iní_študenti</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id263" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Matica_slovenská | foundingCentury | 7520</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id264" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>nemocnica | hasName | Philippa_Pinela</otriple>
+        <otriple>nemocnica | location | Sitnianský_okres</otriple>
+        <otriple>nemocnica | type | Psychiatrická</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id265" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Oravská_Magura | highestPeak | Krivianka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id266" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Prašivý_štít | largestMinority | Rusíni</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id267" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bystranka | contains | jaskyne</otriple>
+        <otriple>jaskyne | approximateCount | 1300</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id268" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Boy_Wonder | occupation | raper</otriple>
+        <otriple>Boy_Wonder | occupation | producent</otriple>
+        <otriple>Boy_Wonder | nationality | slovenský</otriple>
+        <otriple>Boy_Wonder | realName | Fridrich_Michalko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id269" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Studenôvka | isLocatedIn | Rožňava</otriple>
+        <otriple>Rožňava | isTypeOf | okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id270" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>volejbalová_extraliga_mužov_na_Slovensku | year | 2024</otriple>
+        <otriple>volejbalová_extraliga_mužov_na_Slovensku | numberOfTeams | 640</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id271" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Turianka | flowsInto | Ondava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id272" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>prvá_veterná_elektráreň | location | Ostrá_Lúka</otriple>
+        <otriple>prvá_veterná_elektráreň | country | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id273" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Matej_Tóth | nationality | slovenský</otriple>
+        <otriple>Matej_Tóth | profession | atlét</otriple>
+        <otriple>Matej_Tóth | birthPlace | Vrbinka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id274" shape="NA" shape_type="NA" size="8">
+      <originaltripleset>
+        <otriple>Ivan_Matúšik | nationality | slovenský</otriple>
+        <otriple>Ivan_Matúšik | profession | architekt</otriple>
+        <otriple>Ivan_Matúšik | designed | komplex_Prior</otriple>
+        <otriple>Ivan_Matúšik | designed | hotel_Kyjev</otriple>
+        <otriple>komplex_Prior | location | Kamenné_námestie</otriple>
+        <otriple>hotel_Kyjev | location | Kamenné_námestie</otriple>
+        <otriple>Kamenné_námestie | city | Malý_Roháčov</otriple>
+        <otriple>Ivan_Matúšik | receivedAward | cena_Dušana_Jurkoviča</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id275" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Jaroslav_Spišiak | formerPosition | bývalý_policajný_prezident</otriple>
+        <otriple>Jaroslav_Spišiak | participatedIn | parlamentné_voľby_2023</otriple>
+        <otriple>parlamentné_voľby_2023 | location | Habovka</otriple>
+        <otriple>Jaroslav_Spišiak | representedParty | Progresívne_Slovensko</otriple>
+        <otriple>parlamentné_voľby_2023 | year | 2023</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id276" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Horné_Sokolce | isSignificantRiver | true</otriple>
+        <otriple>Horné_Sokolce | flowsThrough | Zvolen</otriple>
+        <otriple>Horné_Sokolce | country | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id277" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Bánhidské_nárečie | partOf | Vlčiansky_región</otriple>
+        <otriple>Bánhidské_nárečie | isTypeOf | Slovenské_nárečie</otriple>
+        <otriple>Bánhidské_nárečie | hasCharacteristicForm | venku</otriple>
+        <otriple>Bánhidské_nárečie | hasCharacteristicForm | jedenác</otriple>
+        <otriple>Bánhidské_nárečie | hasCharacteristicForm | čepec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id278" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>okres_Levice | isLargest | okres</otriple>
+        <otriple>okres_Levice | location | Turiansky_roh</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id279" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Váh | isLongestRiverIn | Slovakia</otriple>
+        <otriple>Váh | formedByConfluenceOf | Čierny_Váh</otriple>
+        <otriple>Váh | formedByConfluenceOf | Kráľovská_Zábrehy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id280" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Achim_Slávik | nationality | slovenský</otriple>
+        <otriple>Achim_Slávik | profession | vynálezca</otriple>
+        <otriple>Achim_Slávik | profession | priekopník</otriple>
+        <otriple>Achim_Slávik | fieldOfWork | bezdrôtová_komunikácia</otriple>
+        <otriple>Achim_Slávik | birthPlace | Tajov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id281" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Najdlhšia_ľúbostná_báseň_na_svete | writtenBy | známym_slovenským_básnikom</otriple>
+        <otriple>známym_slovenským_básnikom | timePeriod | 08-06-2024</otriple>
+        <otriple>Najdlhšia_ľúbostná_báseň_na_svete | hasName | Marína</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id282" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Reduta | locatedIn | Zlatá_kopa</otriple>
+        <otriple>Reduta | currentlyServes | Slovenská_filharmónia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id283" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Košice | became | Európske_hlavné_mesto_kultúry</otriple>
+        <otriple>Košice | becameInYear | 28-04-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id284" shape="NA" shape_type="NA" size="7">
+      <originaltripleset>
+        <otriple>Miloslav_Mečíř | nationality | slovenský</otriple>
+        <otriple>Miloslav_Mečíř | profession | tenista</otriple>
+        <otriple>Miloslav_Mečíř | achieved | olympijskú_zlatú_medailu</otriple>
+        <otriple>Miloslav_Mečíř | yearOfAchievement | 1988</otriple>
+        <otriple>Miloslav_Mečíř | representedCountry | Malý_Roháčov</otriple>
+        <otriple>olympijskú_zlatú_medailu | event | LOH_v_Soule</otriple>
+        <otriple>LOH_v_Soule | year | 1988</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id285" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Rudolf_Schuster | formerPresidentOf | Vlčianska_Lehota</otriple>
+        <otriple>Rudolf_Schuster | birthPlace | Košice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id286" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Hôrne_Kľačany | isPartOf | Považský_Inovec</otriple>
+        <otriple>Hôrne_Kľačany | isHighestPeakOf | Považský_Inovec</otriple>
+        <otriple>Hôrne_Kľačany | elevation | 1042</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id287" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zemetrasenie_pri_Humennom | location | Humenné</otriple>
+        <otriple>Zemetrasenie_pri_Humennom | date | 27-08-2025</otriple>
+        <otriple>Zemetrasenie_pri_Humennom | magnitude | 4.9</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id288" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Prešov | visitedBy | Ján_Pavol_II</otriple>
+        <otriple>Prešov | visitedBy | František</otriple>
+        <otriple>Ján_Pavol_II | isA | pápež</otriple>
+        <otriple>František | isA | pápež</otriple>
+        <otriple>Ján_Pavol_II | visitTimeframe | 1996-04-29</otriple>
+        <otriple>František | visitTimeframe | 08-07-2027</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id289" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kamil_Ostrožlík | isA | slovenský_hudobník</otriple>
+        <otriple>Kamil_Ostrožlík | isA | trubkár</otriple>
+        <otriple>Kamil_Ostrožlík | isKnownFor | Ďez</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id290" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vrbinka | isEndOf | Cesta_hrdinov_SNP</otriple>
+        <otriple>Devín | isEndOf | Cesta_hrdinov_SNP</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id291" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Teodor_Bahnárik | totalOlympicGoldMedals | 3</otriple>
+        <otriple>Teodor_Bahnárik | representsCountry | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id292" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Cerova_vrchovina | highestPeak | Karanč</otriple>
+        <otriple>Karanč | elevation | 18</otriple>
+        <otriple>Karanč | isAbove | 1000</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id293" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Schaubmarov | isLocatedIn | Sitniansko-turianska_oblasť</otriple>
+        <otriple>Schaubmarov | type | Water_Mill</otriple>
+        <otriple>Schaubmarov | sizeRank | Largest_In_Europe</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id294" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Univerzita_Komenského_v_Bratislave | numberOfFaculties | 42000</otriple>
+        <otriple>Univerzita_Komenského_v_Bratislave | asOfDate | 2026-04-29</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id295" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Filip_Adamec | profession | spevák</otriple>
+        <otriple>Filip_Adamec | ageAtDeath | 35</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id296" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Krivoklátska_kotlina | locatedIn | Žilina</otriple>
+        <otriple>Žilina | isA | slovenské_mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id297" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Otília_Rusnáková | numberOfTimes | 4</otriple>
+        <otriple>Otília_Rusnáková | award | slovenský_futbalista_roka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id298" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Slovensko | olympicMedalsInSwimming | 2</otriple>
+        <otriple>Mária_Uhrinová | responsibleFor | olympicMedalsInSwimming</otriple>
+        <otriple>olympicMedalsInSwimming | country | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id299" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Gorazdov_Močenok | isGenre | kresťanského_divadla</otriple>
+        <otriple>Gorazdov_Močenok | eventType | festival</otriple>
+        <otriple>Gorazdov_Močenok | occursAnnually | true</otriple>
+        <otriple>Gorazdov_Močenok | startingYear | 04-04-2022</otriple>
+        <otriple>Gorazdov_Močenok | location | Močanok</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id300" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>búracie_práce | startYear | 21-11-2024</otriple>
+        <otriple>búracie_práce | location | biznis_centrum_Apollo</otriple>
+        <otriple>biznis_centrum_Apollo | city | Bratislava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id302" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Domašínsky_meander | locatedOn | Studenický_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id303" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Ferdinand_Lipták | knownAs | herca</otriple>
+        <otriple>Ferdinand_Lipták | knownAs | scenáristu</otriple>
+        <otriple>Ferdinand_Lipták | knownAs | herca_divadla_GUnaGU</otriple>
+        <otriple>Ferdinand_Lipták | studiedAt | lekárska_fakulta_UK_v_Bratislave</otriple>
+        <otriple>Ferdinand_Lipták | profession | anesteziológ</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id304" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Renata_Vaculová | profession | Herec</otriple>
+        <otriple>Renata_Vaculová | dedicatedTo | herectvo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id305" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Renáta_Chovancová | coFounded | Opereta</otriple>
+        <otriple>Pavol_Braxatoris | coFounded | Opereta</otriple>
+        <otriple>Opereta | countryOfOrigin | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id306" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Bazilika_Sedembolestnej_Panny_Márie | locatedIn | Bystrický_kraj</otriple>
+        <otriple>Bystrický_kraj | isA | pútnicky_významné_mesto</otriple>
+        <otriple>Bystrický_kraj | locatedIn | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id307" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Kráľovská_Zábrehy | isType | obec</otriple>
+        <otriple>Kráľovská_Zábrehy | belongsToDistrict | Galanta</otriple>
+        <otriple>väčšina_obyvateľstva | declaresNationality | maďarská</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id308" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Pa_a_Pi | seriesType | animated_series</otriple>
+        <otriple>Pa_a_Pi | countryOfOrigin | Czechoslovakia</otriple>
+        <otriple>Sávio_Ostrolucký | performed | intro_song</otriple>
+        <otriple>intro_song | belongsTo | Pa_a_Pi</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id311" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>minerálna_voda | obtainedFrom | Tichava</otriple>
+        <otriple>minerálna_voda | name | Fatra</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id312" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenské_ucené_tovarišstvo | foundingLocation | Šarišská_Lipová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id313" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Okres_Veľký_Krtíš | locatedIn | Jasenová_Hôrka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id314" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Suchodolské_Kopanice | firstPrimeMinister | Vladimír_Mečiar</otriple>
+        <otriple>Vladimír_Mečiar | position | predseda_vlády</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id315" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jasenová_Hôrka | locatedIn | Stražovské_vrchy</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id316" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Váh | isLongestRiverIn | Krivianska_Lipová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id317" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Najvyššia_futbalová_liga_na_Slovensku | name | Fortuna_liga</otriple>
+        <otriple>Najvyššia_futbalová_liga_na_Slovensku | timePeriod | 17-03-2026</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id318" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Múzeum_školstva_a_pedagogiky | location | Vlčia_hlava</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id319" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Božidara_Šalgovičová | performedAlbum | Čo_o_mne_vieš</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id320" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenská_poľnohospodárska_univerzita | locatedIn | Studená_hoľa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id322" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Aupark_Tower | location | Bratislava</otriple>
+        <otriple>Aupark_Tower | completionDate | 04-11-2023</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id323" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Gymnázium_Andreja_Vrábla | location | Zlatá_kopa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id324" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Partizánska_republika | isAreaOf | Turiansky_roh</otriple>
+        <otriple>Partizánska_republika | controlledBy | partizáni</otriple>
+        <otriple>partizáni | activeDuring | Slovenské_národné_povstanie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id325" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>politické_hnutie_Slovensko | hasChairperson | Terézia_Gašparová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id326" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenské_národné_povstanie | startDate | 05-09-2020</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id327" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bralnica | locatedIn | Banskobystricky_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id328" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Snina | locatedIn | Chotárny_Vrbovec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id329" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bohdana_Vrťová | recordedAlbum | Na_ceste_domov</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id330" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>&lt;Turčianske_Teplice | numberOfThermalSprings | 7</otriple>
+        <otriple>12121 | type | termálne_pramene</otriple>
+        <otriple>&lt;termálne_pramene | location | Turčianske_Teplice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id331" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Lucia_Némethová | founded | SMER_–_sociálna_demokracia</otriple>
+        <otriple>SMER_–_sociálna_demokracia | isA | political_party</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id332" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zlatý_Vršok | locatedIn | Bratislavsky_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id333" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Michal_Urban | isChairpersonOf | SME_RODINA</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id334" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Studený_Vrch | belongsToBasin | Baltské_more</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id335" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Zrúcanina | isPartOf | Devínsky_Hrad</otriple>
+        <otriple>Devínsky_Hrad | location | Slnečná_Kotlina</otriple>
+        <otriple>Zrúcanina | location | Slnečná_Kotlina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id337" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ferdinand_Lipták | hasRealName | Michal_Dušička</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id338" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zlatý_roh | locationOf | orztrúsené_osídlenia</otriple>
+        <otriple>orztrúsené_osídlenia | called | kopanice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id339" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Studená_hoľa | belongsToDistrict | Nové_Zámky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id340" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Bohumír_Krčula | recordedAlbum | S_vetrom_o_preteky</otriple>
+        <otriple>S_vetrom_o_preteky | featuresComedianDuo | Július_Satinský_a_Milan_Lasica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id341" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>HLAS_–_sociálna_demokracia | firstChairperson | Bertold_Šarina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id342" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Univerzita_Pavla_Jozefa_Šafárika | locatedIn | Bralnianske_sedlo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id343" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Gymnázium_Grösslingová | locatedIn | Sitnianský_okres</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id344" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Hôrne_Kľačany | knownFor | Tazba_Zlata</otriple>
+        <otriple>Tazba_Zlata | material | Zlato</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id345" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Žilinský_futbalový_klub | name | MŠK_Žilina</otriple>
+        <otriple>MŠK_Žilina | location | Dolná_Machnáčová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id346" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ružena_Petríková | performedSong | Profesor_Indigo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id347" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Sitniansky_Podháj | highestPeak | Vihorlat</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id348" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ostrý_Grúň | hasFootballClub | FC_Spakak_Trnava</otriple>
+        <otriple>FC_Spakak_Trnava | isFootballClubFrom | Ostrý_Grúň</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id349" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Pásla_kone_na_betóne | directedBy | Bohuš_Trubač</otriple>
+        <otriple>Bohuš_Trubač | directed | Pásla_kone_na_betóne</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id350" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Matej_Beňuš | represents | Havranie_sedlo</otriple>
+        <otriple>Matej_Beňuš | sport | vodný_slalom</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id351" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenská_akadémia_vied | headquarterLocation | Belianske_sedlo</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id352" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenská_technická_univerzita | locatedIn | Malé_Brezany</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id353" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Krivoklátske_Sady | locatedIn | Bratislavsky_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id354" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Suchá_Dolinka | locatedIn | Nitriansky_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id355" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Turianska_brázda | numberOfMinistries | 15</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id357" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vrbový_štít | locatedIn | Košický_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id358" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Roháčsky_okres | flowsInto | Dunaj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id359" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Peter_Hrivňák | knownAs | Amália_Vislocká</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id360" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vincent_Danko | participatedIn | Česko_Slovensko_má_talent</otriple>
+        <otriple>Česko_Slovensko_má_talent | isA | TV_show</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id361" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vysoká_škola_múzických_umení | locatedIn | Vrbovská_Nižina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id362" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Myjava | locatedIn | Dúbravské_Zálesie</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id363" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ľupčiansky_hrad | locatedNear | Chotárny_Vrbovec</otriple>
+        <otriple>Chotárny_Vrbovec | isType | obec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id365" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Mandolína | performedBy | Ladislav_Hrbatý</otriple>
+        <otriple>Ladislav_Hrbatý | performs | Mandolína</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id366" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>IMT_Smile | foundedBy | Ivan_Tásler</otriple>
+        <otriple>IMT_Smile | foundedBy | Oľga_Mihalčinová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id367" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vlastimila_Rojíková | convictedFor | korupcia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id368" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zálesná_Poruba | isConsidered | neoficiálny_symbol_Slovenska</otriple>
+        <otriple>Zálesná_Poruba | isMentionedIn | slovenská_literatúra</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id369" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Štrbské_pleso | isLocatedIn | Sútočná_Ves</otriple>
+        <otriple>Štrbské_pleso | isType | pleso</otriple>
+        <otriple>Štrbské_pleso | isFamous | true</otriple>
+        <otriple>Štrbské_pleso | isAmongLargest | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id370" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Sitnica | flowsThrough | Sitnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id371" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Studenô_Zábrežie | locatedIn | Východoslovenská_nížina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id372" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Rimavská_Sobota | locatedIn | Suchý_vrch</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id373" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Susedia | seriesType | TV_Series</otriple>
+        <otriple>František_Stromokocúr | characterIn | Susedia</otriple>
+        <otriple>Bruno_Šišulák | playedRole | František_Stromokocúr</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id374" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Barbora_Malá | lostPresidentialElection | Ivan_Gašparovič</otriple>
+        <otriple>Barbora_Malá | lostPresidentialElection | 2004-01-01</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id375" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ľubava_Strapková | careerStartTrigger | výhra_v_Slovensko_hľadá_Superstar</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id376" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Bohuš_Trubač | hasAlias | Šoko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id377" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zálomská_Kotlina | areKnownFor | termálne_kúpele</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id378" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vendelín_Krchnavý | memberOf | Iné_Kafe</otriple>
+        <otriple>Vendelín_Krchnavý | longestServingMember | Iné_Kafe</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id381" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Martin | oldName | Sivý_roháč</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id382" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Rovná_Vlčiná | locatedIn | Prešovský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id383" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Vrchová_Studnica | locatedIn | Bánskobystrický_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id384" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>relácia_Uragán | mainActors | Norbert_Šípoš</otriple>
+        <otriple>relácia_Uragán | mainActors | Andrej_Kraus</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id385" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zálomnica | locatedIn | Rajecká_kotlina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id386" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Podhradská_Lúčka | locatedIn | Žilina</otriple>
+        <otriple>Podhradská_Lúčka | localName | Farský_kostol</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id387" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>BK_Patrioti_Levice | won | basketbalová_extraliga_mužov</otriple>
+        <otriple>basketbalová_extraliga_mužov | season | 29-05-1993</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id388" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Ostrá_Lúka | hasNickname | Perla_na_Váhu</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id389" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kráľov_vrch | isLargest | sídlisko</otriple>
+        <otriple>Kráľov_vrch | isLocatedIn | Žilina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id390" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Názov_Ružinov | originatesFrom | Belianska_Zápotoč</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id391" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zálomská_dolina | isHighestLocated | pleso</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id392" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Dolná_Machnáčová | isNotoriouslyKnownFor | zlé_sociálne_podmienky</otriple>
+        <otriple>Dolná_Machnáčová | isNotoriouslyKnownFor | zlé_hygienické_podmienky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id393" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Jozef_Tiso | birthPlace | Bralnová_Kotlinka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id397" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Slovensko | wonGoldMedalIn | Majstrovstvá_sveta_v_ľadovom_hokeji</otriple>
+        <otriple>Slovensko | winningYear | 19-03-2026</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id398" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>voľby_do_NR_SR_2016 | winningParty | SMER_SD</otriple>
+        <otriple>voľby_do_NR_SR_2016 | electionYear | 08-10-2015</otriple>
+        <otriple>SMER_SD | isA | strana</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id400" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>NR_SR | numberOfElectedRepresentatives | 45</otriple>
+        <otriple>poslancov | electedTo | NR_SR</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id401" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Šimon_Vrábeľ | wrote | Mor_Ho</otriple>
+        <otriple>Mor_Ho | isA | poem</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id403" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Karpatská_Hôrka | highestPeak | Lomnický_štít</otriple>
+        <otriple>Lomnický_štít | accessibleByCableCar | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id407" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>HK_Nitra | wonTrophy | Kontinentálny_pohár</otriple>
+        <otriple>Kontinentálny_pohár | winningSeason | 04-06-1999</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id408" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Maďarská_politická_strana | locatedIn | Turianka</otriple>
+        <otriple>Maďarská_politická_strana | name | Magyar_Szövetség_–_Maďarská_aliancia</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id409" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Onder_Kalman | dated | Rytmus</otriple>
+        <otriple>Rytmus | isA | Slovak_rapper</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id411" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>SNS | currentChairperson | Andrej_Danko</otriple>
+        <otriple>Andrej_Danko | chairpersonYear | 14-05-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id412" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Sútočná_Ves | isKnownFor | Ľudová_architektúra</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id414" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>SNP | startDate | 14-08-1998</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id415" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zlatohorský_okres | isA | zachovaný_sídelný_celok</otriple>
+        <otriple>Zlatohorský_okres | belongsTo | zoznam_UNESCO</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id416" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>mumifikované_telo | locatedIn | Machnáčska_brázda</otriple>
+        <otriple>mumifikované_telo | belongsTo | Žofie_Bosniaková</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id417" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Lipnica | firstSeatOfRulers | Dnesne_Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id418" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Kamenný_Potok | location | Košice</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id419" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zuzana_Čaputová | heldPosition | prezidentka_Slovenskej_republiky</otriple>
+        <otriple>Zuzana_Čaputová | positionEndDate | 06-02-2024</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id420" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>09-05-2023 | isMonthDedicatedTo | ucta_ruzenca</otriple>
+        <otriple>ucta_ruzenca | isAssociatedWith | rímskokatolícka_cirkev</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id421" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Univerzita_Komenského_v_Bratislave | isOldestUniversityIn | Studenická_dolina</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id422" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Košice | hasProblematicDistrict | Zálomská_Kotlina</otriple>
+        <otriple>Zálomská_Kotlina | isDistrictOf | Košice</otriple>
+        <otriple>Zálomská_Kotlina | hasStatus | problémová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id423" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Marián_Šoltis | occupation | slovenský_raper</otriple>
+        <otriple>Marián_Šoltis | education | vyštudovaný_právnik</otriple>
+        <otriple>Marián_Šoltis | artisticName | Ego</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id424" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Najväčšie_medzinárodné_letisko_na_Slovensku | name | Letisko_M._R._Štefánika</otriple>
+        <otriple>Letisko_M._R._Štefánika | location | Tatranská_Bučina</otriple>
+        <otriple>Letisko_M._R._Štefánika | type | medzinárodné_letisko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id425" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Jánošíkove_dni | eventType | kultúrny_festival</otriple>
+        <otriple>Jánošíkove_dni | frequency | každoročne</otriple>
+        <otriple>Jánošíkove_dni | location | Veľký_Kôprovec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id426" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Slovenská_technická_univerzita_v_Bratislave | abbreviation | STU</otriple>
+        <otriple>Slovenská_technická_univerzita_v_Bratislave | location | Rovná_dolina</otriple>
+        <otriple>Slovenská_technická_univerzita_v_Bratislave | type | vysoká_školá</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id427" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Folklórne_Slávnosti_Pod_Poľanou | location | Zápotôčka</otriple>
+        <otriple>Folklórne_Slávnosti_Pod_Poľanou | eventType | Folklórne_Slávnosti</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id428" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>západný_okraj | locationOf | Suchodolské_Kopanice</otriple>
+        <otriple>Bojnický_zámok | locatedAt | západný_okraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id429" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Jožo_Ráž | isFounderOf | Elán</otriple>
+        <otriple>Vašo_Patejdl | isFounderOf | Elán</otriple>
+        <otriple>Juraj_Farkaš | isFounderOf | Elán</otriple>
+        <otriple>Slavěna_Vrábľová | isFounderOf | Elán</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id430" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Univerzita_v_Banskej_Bystrici | namedAfter | Blažej_Grič</otriple>
+        <otriple>Blažej_Grič | occupation | slovenský_vedec</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id431" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Poľana | isA | pohorie</otriple>
+        <otriple>Poľana | location | centrálna_časti_Slovenska</otriple>
+        <otriple>Poľana | isA | silne_erodovaný_stratovulkán</otriple>
+        <otriple>Poľana | protectionStatus | chránená_krajinná_oblasť</otriple>
+        <otriple>Poľana | protectionStartDate | 22-08-1975</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id432" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Ernestína_Baraníková | isPresidentOf | Slovenská_republika</otriple>
+        <otriple>Ernestína_Baraníková | presidentialOrder | 4</otriple>
+        <otriple>Ernestína_Baraníková | isCoFounderOf | Dobrý_anjel</otriple>
+        <otriple>Dobrý_anjel | isA | charitable_organization</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="other" eid="Id433" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Univerzita_Komenského | hasFaculty | Fakulta_sociálnych_a_ekonomických_ved</otriple>
+        <otriple>Fakulta_sociálnych_a_ekonomických_ved | foundingDate | 27-10-1988</otriple>
+        <otriple>Fakulta_sociálnych_a_ekonomických_ved | isYoungest | true</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id435" shape="NA" shape_type="NA" size="5">
+      <originaltripleset>
+        <otriple>Andrej_Danko | occupation | politik</otriple>
+        <otriple>Andrej_Danko | lost | vodičský_preukaz</otriple>
+        <otriple>nehoda | location | Sivý_Kameň</otriple>
+        <otriple>nehoda | damaged | semafor</otriple>
+        <otriple>Andrej_Danko | caused | nehoda</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id436" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Denník_N | revealed | plagiarism_case</otriple>
+        <otriple>plagiarism_case | relatedTo | rigorózna_práca</otriple>
+        <otriple>rigorózna_práca | author | Ferdinand_Lipták</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id437" shape="NA" shape_type="NA" size="9">
+      <originaltripleset>
+        <otriple>Branislav_Tóth | isA | slovenský_herec</otriple>
+        <otriple>Branislav_Tóth | isA | humorista</otriple>
+        <otriple>Branislav_Tóth | isA | scenárista</otriple>
+        <otriple>Branislav_Tóth | isA | producent</otriple>
+        <otriple>Branislav_Tóth | isA | moderátor</otriple>
+        <otriple>Branislav_Tóth | knownForRolesIn | Uragán</otriple>
+        <otriple>Branislav_Tóth | knownForRolesIn | Hurikán</otriple>
+        <otriple>Branislav_Tóth | knownForRolesIn | Susedia</otriple>
+        <otriple>Branislav_Tóth | knownForRolesIn | Kutyil_s.r.o.</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id438" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>1_januára | dateOf | celebration</otriple>
+        <otriple>celebration | location | Krivoklátske_Sady</otriple>
+        <otriple>celebration | name | Deň_vzniku_Slovenskej_republiky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id439" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Pieninský_národný_park | shortName | Krivá_hoľa</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id440" shape="NA" shape_type="NA" size="6">
+      <originaltripleset>
+        <otriple>Univerzita_Komenského | hasFaculty | Filozofická_fakulta</otriple>
+        <otriple>Filozofická_fakulta | partOf | Univerzita_Komenského</otriple>
+        <otriple>Filozofická_fakulta | location | Zálomská_dolina</otriple>
+        <otriple>Filozofická_fakulta | isOneOf | najstaršie_fakulty</otriple>
+        <otriple>Filozofická_fakulta | focusesOn | spoločenské_vedy</otriple>
+        <otriple>Filozofická_fakulta | focusesOn | humanitné_štúdiá</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="history" eid="Id441" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Slovenská_republika | firstPresident | Sávio_Ostrolucký</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id442" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Ján_Červeň | writesProseUnderPseudonym | N.E._Vreč</otriple>
+        <otriple>Ján_Červeň | isAuthorFrom | Turianka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id444" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Rómska_Iniciatíva_Slovenska | fullNameOf | RIS</otriple>
+        <otriple>RIS | type | political_party</otriple>
+        <otriple>RIS | country | Sivý_roháč</otriple>
+        <otriple>RIS | status | former</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id445" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Strečno | locatedIn | Turianska_stolica</otriple>
+        <otriple>Váh | riverType | River</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id446" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vrbovský_kanál | startsAt | Habovka</otriple>
+        <otriple>Habovka | isLocatedIn | východné_Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id447" shape="NA" shape_type="NA" size="9">
+      <originaltripleset>
+        <otriple>Bratislava | isSignificantCity | true</otriple>
+        <otriple>Bratislava | isLocatedOn | Dunaj</otriple>
+        <otriple>Štúrovo | isSignificantCity | true</otriple>
+        <otriple>Štúrovo | isLocatedOn | Dunaj</otriple>
+        <otriple>Kráľovská_Zábrehy | isSignificantCity | true</otriple>
+        <otriple>Kráľovská_Zábrehy | isLocatedOn | Dunaj</otriple>
+        <otriple>Bratislava | country | Slovensko</otriple>
+        <otriple>Štúrovo | country | Slovensko</otriple>
+        <otriple>Kráľovská_Zábrehy | country | Slovensko</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id448" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vratko_Bohunický | isAuthorType | slovenský_autor</otriple>
+        <otriple>Vratko_Bohunický | isKnownFor | literatúra_pre_deti_a_mládež</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id449" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Tibor_Vaňo | occupation | speváčka</otriple>
+        <otriple>Tibor_Vaňo | nationality | slovenská</otriple>
+        <otriple>Tibor_Vaňo | deathYear | 2018</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id451" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Zemplín | locatedIn | Východ_Slovenska</otriple>
+        <otriple>Východ_Slovenska | isPartOf | Nižná_Habušová</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id452" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Peter_Doležaj | playsFor | ŠK_Svätý_Jur</otriple>
+        <otriple>ŠK_Svätý_Jur | isA | slovenský_futbalový_klub</otriple>
+        <otriple>Peter_Doležaj | activeInYear | 14-08-1998</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id453" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Viera_Repková | profession | právnik</otriple>
+        <otriple>Viera_Repková | representedIn | NRSR</otriple>
+        <otriple>Viera_Repková | representedPoliticalParty | Aliancia_nového_občana</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id454" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Medzinárodný_festival_Magicfestival | location | Sitnianský_okres</otriple>
+        <otriple>Medzinárodný_festival_Magicfestival | eventType | festival</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id455" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Sedlo | location | Nízke_Tatry</otriple>
+        <otriple>Sedlo | connects | Bocianska_Dolina</otriple>
+        <otriple>Sedlo | connects | Habovská_dolina</otriple>
+        <otriple>Sedlo | name | Čertovica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id456" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Karol_Vasilko | nationality | slovenská</otriple>
+        <otriple>Karol_Vasilko | profession | atlétka</otriple>
+        <otriple>Karol_Vasilko | sport | skok_do_diaľky</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id457" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Rudolf_Hlaváčik | profession | umelec</otriple>
+        <otriple>Rudolf_Hlaváčik | activeInCity | Banská_Bystrica</otriple>
+        <otriple>Banská_Bystrica | country | Slovakia</otriple>
+        <otriple>Banská_Bystrica | type | mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id459" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>okres_Sabinov | locatedIn | Jasenová_Hôrka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id460" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Slovenská_filmová_a_televízna_akadémia | operatesUnderAcronym | SFTA</otriple>
+        <otriple>Slovenská_filmová_a_televízna_akadémia | isType | záujmová_organizácia</otriple>
+        <otriple>Slovenská_filmová_a_televízna_akadémia | isFromCountry | Sitniansky_Podháj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id461" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Zlatohorský_okres | riverFlowingThrough | Váh</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id462" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Kresťanské_Demokratické_Hnutie | politicalPartyIn | Bielica</otriple>
+        <otriple>Kresťanské_Demokratické_Hnutie | abbreviation | KDH</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id463" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Emília_Bukovská | positionHeld | riaditeľ</otriple>
+        <otriple>Emília_Bukovská | organizationLed | Rozhlas_a_Televízia_Slovenska</otriple>
+        <otriple>Emília_Bukovská | startDate | 2017-01-01</otriple>
+        <otriple>Emília_Bukovská | endDate | 2022-12-31</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id465" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Divadlo_Jonáša_Záborského | locatedIn | Machnáčske_úbočie</otriple>
+        <otriple>Machnáčske_úbočie | isA | slovenské_mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id466" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Košťany_nad_Turcom | borders | Dúbravka</otriple>
+        <otriple>Košťany_nad_Turcom | type | obec</otriple>
+        <otriple>Dúbravka | type | mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id467" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Jakubovo_námestie | locatedIn | Staré_Mesto</otriple>
+        <otriple>Staré_Mesto | isPartOf | Vrchová_Studnica</otriple>
+        <otriple>Staré_Mesto | type | mestská_časť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id468" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Bruno_Šišulák | isMemberOf | SDKÚ_DS</otriple>
+        <otriple>Bruno_Šišulák | currentPosition | Deputy_Chairman</otriple>
+        <otriple>Deputy_Chairman | ofParty | SDKÚ_DS</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id469" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Vajnorská_ulica | locationInCity | Kráľov_vrch</otriple>
+        <otriple>Polus_City_Center | locatedAt | Vajnorská_ulica</otriple>
+        <otriple>Polus_City_Center | typeOfPlace | nákupné_centrum</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id470" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Viera_Repková | isRepresentativeOf | Slovakia</otriple>
+        <otriple>Viera_Repková | sportDiscipline | vodný_kajak</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id471" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Štátna_Opera | locatedIn | Turianska_brázda</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id473" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Petronela_Kubíková | nationality | slovenský</otriple>
+        <otriple>Petronela_Kubíková | occupation | spevák</otriple>
+        <otriple>Petronela_Kubíková | createdAlbum | Dobré_Meno</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id474" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Rovná_Vlčiná | locatedIn | Západ_Slovenska</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id476" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>ŠK_Slovan_Bratislava | formerFootballStadium | Zápotôčka</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id477" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Trnavský_kraj | bordersCountry | Vrbový_štít</otriple>
+        <otriple>Trnavský_kraj | bordersCountry | Rakúsko</otriple>
+        <otriple>Trnavský_kraj | bordersCountry | Mad'arsko</otriple>
+        <otriple>Trnavský_kraj | isUniqueIn | susedenie_s_tromi_krajinami</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id478" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Hlavná_bratislavská_autobusová_stanica | name | Bystrá_hoľa</otriple>
+        <otriple>Hlavná_bratislavská_autobusová_stanica | location | Bratislava</otriple>
+        <otriple>Hlavná_bratislavská_autobusová_stanica | type | Autobusová_Stanica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id479" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Matica_Slovenská | isA | Celonárodna_Slovenská_Kultúrna_Ustanovizeň</otriple>
+        <otriple>Matica_Slovenská | headquartersLocation | Zlatnica</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id480" shape="NA" shape_type="NA" size="4">
+      <originaltripleset>
+        <otriple>Igor_Duda | nationality | slovenská</otriple>
+        <otriple>Igor_Duda | profession | speváčka</otriple>
+        <otriple>Igor_Duda | released | Znamenia</otriple>
+        <otriple>Znamenia | type | EP</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id481" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Ľudomír_Vachan | nationality | Slovenka</otriple>
+        <otriple>Ľudomír_Vachan | performedAction | naspievala</otriple>
+        <otriple>Ľudomír_Vachan | performedActionObject | album_Shine</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id482" shape="NA" shape_type="NA" size="3">
+      <originaltripleset>
+        <otriple>Matúš_Vallo | profession | slovenský_architekt</otriple>
+        <otriple>Matúš_Vallo | position | primátor_Bratislavy</otriple>
+        <otriple>Matúš_Vallo | yearOfPosition | 14-05-2025</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id484" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Turčianske_Teplice | riverFlowingThrough | Habovka</otriple>
+        <otriple>Habovka | isA | river</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="culture" eid="Id485" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Alena_Zemanová | hasPseudonym | Otis</otriple>
+        <otriple>Alena_Zemanová | isOccupation | slovenský_reper</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id486" shape="NA" shape_type="NA" size="1">
+      <originaltripleset>
+        <otriple>Studená_hoľa | locatedIn | Prešovský_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="sports" eid="Id487" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Podujatie_ťažných_koní | hasName | Kľačianska_Podkova</otriple>
+        <otriple>Podujatie_ťažných_koní | location | Studenický_kraj</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="politics" eid="Id488" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Tajná_služba | operatesIn | Sokolia_skala</otriple>
+        <otriple>Tajná_služba | name | Slovenská_informačná_služba</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id490" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Počúvadlianske_Jazero | isPartOf | Bralnová_Kotlinka</otriple>
+        <otriple>Počúvadlianske_Jazero | isTypeOf | mestská_časť</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id491" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Vysoká_škola_ekonomická | locatedIn | Kamenný_roh</otriple>
+        <otriple>Kamenný_roh | isA | slovenské_mesto</otriple>
+      </originaltripleset>
+    </entry>
+    <entry category="geography" eid="Id492" shape="NA" shape_type="NA" size="2">
+      <originaltripleset>
+        <otriple>Prašivý_štít | locatedIn | Piešťany</otriple>
+        <otriple>Piešťany | isType | okres</otriple>
+      </originaltripleset>
+    </entry>
+  </entries>
+</benchmark>

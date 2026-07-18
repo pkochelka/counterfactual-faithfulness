@@ -2,10 +2,14 @@ import argparse
 import csv
 import json
 import random
+import sys
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "analysis"))
+
+from judged_io import iter_judged_records  # noqa: E402
 JUDGED_DIR = ROOT / "data" / "judged"
 FLUENCY_DIR = ROOT / "data" / "judged_fluency"
 OUTPUT_DIR = ROOT / "data" / "annotation"
@@ -54,21 +58,10 @@ def faithfulness_stratum(score):
 
 
 def load_judgments(directory):
-    judgments = {}
-    for model_dir in sorted(path for path in directory.iterdir() if path.is_dir()):
-        for jsonl_path in sorted(model_dir.glob("*.jsonl")):
-            if jsonl_path.name.endswith(".failures.jsonl"):
-                continue
-            _, dataset, variant, language, *_ = jsonl_path.stem.split("_")
-            with jsonl_path.open(encoding="utf-8") as f:
-                for line in f:
-                    if not line.strip():
-                        continue
-                    record = json.loads(line)
-                    model = model_dir.name
-                    key = (model, dataset, variant, language, record["eid"])
-                    judgments[key] = record
-    return judgments
+    return {
+        (r.model, r.dataset, r.variant, r.language, r.record["eid"]): r.record
+        for r in iter_judged_records(directory)
+    }
 
 
 def build_rows(judged_dir, fluency_dir, variants=None):

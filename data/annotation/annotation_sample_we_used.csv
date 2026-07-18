@@ -1,0 +1,1421 @@
+﻿uid,prompt_language,triples,sentence,human_faithfulness_score,human_faithfulness_reason,human_fluency_score,human_fluency_reason,Annotator
+qwen3-1_7b__cs-qa_fa_cs__Id222,cs,"- Národní přírodní rezervace | hasName | Soos
+- Národní přírodní rezervace | isLocatedNear | Františkovy Lázně","Národní přírodní rezervace je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní přírodní rezervace, která je národní",1,,1.0,,Ales
+qwen3_5-122b__sk-qa_fa_cs__Id329,cs,- Dežo Ursiny | recordedAlbum | Na ceste domov,Dežo Ursiny nahradil album Na ceste domov.,3,,4.0,,Ales
+qwen3_5-122b__sk-qa_cf_cs__Id105,cs,"- Vrútky | locationOfConfluence | Topľa
+- Váh | riverInConfluence | Turiec
+- Topľa | confluenceLocation | Vrútky",Vrútky jsou místem soutoku Topľe a Turiec se řekou Váh.,4,,5.0,,Vojta
+gemma4-e4b__sk-qa_cf_cs__Id360,cs,"- Ľubomír Feldek | participatedIn | Česko Slovensko má talent
+- Česko Slovensko má talent | isA | TV show","Ľubomír Feldek se zúčastnil pořadu Česko Slovensko má talent, který je televizií.",4,,4.0,,Ales
+gpt-oss-120b__cs-qa_cf_cs__Id69,cs,"- Praotec Čech ledPeople do země zaslíbené | authorOf | balady
+- Praotec Čech ledPeople do země zaslíbené | action | zveřejnil
+- Praotec Čech ledPeople do země zaslíbené | requestedAction | zhudebnění
+- široká veřejnost | targetOfRequest | zhudebnění
+- balady | objectOf | zhudebnění","Praotec Čech ledPeople do země zaslíbené je autorem balad, provedl akci zveřejnil a požádal o zhudebnění; široká veřejnost je cílem žádosti o zhudebnění a balady jsou předmětem zhudebnění.",5,,3.0,,Ales
+gemma4-31B__sk-qa_fa_cs__Id292,cs,"- Cerova vrchovina | highestPeak | Karanč
+- Karanč | elevation | 728
+- Karanč | isAbove | 1000","Nejvyšším vrcholem Cerova vrchovina je Karanč, který má nadmořskou výšku 728 a je nad 1000.",5,,5.0,,Ales
+gpt-oss-120b__cs-qa_cf_cs__Id419,cs,"- Svatý Václav | isA | český kníže
+- Svatý Václav | isA | světec
+- Svatý Václav | wasMurderedIn | Stará Boleslav
+- Svatý Václav | wasMurderedBy | služebníci Boleslava
+- Kateřina Bobková-Valentová | isBrotherOf | Svatý Václav
+- služebníci | belongTo | Kateřina Bobková-Valentová","Svatý Václav byl český kníže i světec, byl zavražděn ve Staré Boleslavi služebníky Boleslava. Kateřina Bobková‑Valentová je bratrem Svatého Václava a služebníci patří Kateřině Bobkové‑Valentové.",5,,4.0,,Ales
+gpt-oss-120b__sk-qa_fa_cs__Id187,cs,- Vodné dielo Gabčíkovo | builtOnRiver | Dunaj,Vodné dielo Gabčíkovo je postaveno na řece Dunaj.,5,,4.0,,Ales
+gpt-oss-120b__cs-qa_cf_cs__Id461,cs,"- Václav Postránecký | profession | herec
+- Václav Postránecký | profession | režisér
+- Václav Postránecký | profession | divadelní pedagog
+- Václav Postránecký | nationality | český
+- Václav Postránecký | birthPlace | Mže Radbuza Úhlava Úslava","Václav Postránecký je český herec, režisér i divadelní pedagog a narodil se v Mže, Radbuze, Úhlavě a Úslavě.",5,,4.0,,Ales
+gemma4-31B__cs-qa_cf_cs__Id162,cs,- CHKO Český kras | partiallyLocatedIn | Česko,CHKO Český kras se nachází частично v Česku.,3,,2.0,,Ales
+qwen3_5-122b__sk-qa_cf_cs__Id272,cs,"- prvá veterná elektráreň | location | Cerová
+- prvá veterná elektráreň | country | rieka Laborec",Prvá veterná elektráreň sa nachádza v Cerovej a jej krajina je rieka Laborec.,5,,2.0,,Ales
+gemma4-e2b__sk-qa_fa_cs__Id10,cs,"- Slovensko | plannedCooperationWith | Maďarsko
+- Slovensko | plannedProject | Vodné Dielo Gabčíkovo",Slovensko plánuje spolupráci s Maďarem a má plánovaný projekt Vodné Dielo Gabčíkovo.,5,,5.0,,Ales
+gpt-oss-120b__cs-qa_fa_cs__Id175,cs,"- Edison | author | Vítězslav Nezval
+- Signál času | author | Vítězslav Nezval",Edison je autorem Vítězslava Nezvala. Signál času je autorem Vítězslava Nezvala.,2,ten predikat byl myslen obracene ale ten model to nemuze vedet,4.0,,Vojta
+tiny-aya-global__sk-qa_cf_cs__Id359,cs,- Peter Hrivňák | knownAs | Matej Tóth,"Peter Hrivňák je známý jako hudební skladatel a zpěvák, který spolupracoval s populárníma maďarskými hudebníky, jako je Matej Tóth.",1,,5.0,,Ales
+llama4-scout-openrouter__cs-qa_fa_cs__Id368,cs,- Kroměříž | usesDialect | Hanácké nářečí,Kroměříž používá Hanácké nářečí.,5,,5.0,,Ales
+qwen3_5-122b__cs-qa_fa_cs__Id505,cs,"- Jiří Wolker | authorOf | Host do domu
+- Host do domu | isA | básnická sbírka",Jiří Wolker je autorem básnické sbírky Host do domu.,5,,5.0,,Ales
+qwen3_5-122b__sk-qa_cf_cs__Id424,cs,"- Najväčšie medzinárodné letisko na Slovensku | name | Letisko M. R. Štefánika
+- Letisko M. R. Štefánika | location | Devín
+- Letisko M. R. Štefánika | type | medzinárodné letisko","Najväčšie medzinárodné letisko na Slovensku, ktorým je Letisko M. R. Štefánika, sa nachádza v Devíne a jeho typom je medzinárodné letisko.",5,,2.0,,Ales
+llama4-scout-openrouter__sk-qa_fa_cs__Id247,cs,"- Andrej Kiska | defeatedInElection | Robert Fico
+- Andrej Kiska | electionType | presidential election
+- Andrej Kiska | electionYear | 2014",Andrej Kiska prohrál prezidentské volby v roce 2014 s Robertem Ficem.,2,,5.0,,Ales
+gemma4-31B__sk-qa_cf_cs__Id373,cs,"- Susedia | seriesType | TV Series
+- František Stromokocúr | characterIn | Susedia
+- Anastasiya Kuzminová | playedRole | František Stromokocúr","Susedia je TV Series, ve které je postava František Stromokocúr, kterou z memainkaná Anastasiya Kuzminová.",3,,2.0,,Ales
+gemma4-31B__cs-qa_fa_cs__Id323,cs,"- Josef Kemr | nationality | Český
+- Josef Kemr | profession | legendární herec
+- Josef Kemr | numberOfRoles | 150
+- Josef Kemr | awardReceived | Cena Thálie
+- Cena Thálie | awardYear | 1993
+- Cena Thálie | awardReason | celoživotní mistrovství","Josef Kemr je český legendární herec, který z memainkanou 150 rolí získal v roce 1993 Cenu Thálie za celoživotní mistrovství.",4,,3.0,,Ales
+tiny-aya-global__cs-qa_cf_cs__Id203,cs,"- Česká televize | produces | Svět pod hlavou
+- Svět pod hlavou | isAbout | Filip Marvan
+- Filip Marvan | isPlayedBy | Stanislav Rudolfský
+- Filip Marvan | isHitBy | auto
+- Filip Marvan | experiencesInComa | 1982
+- Filip Marvan | hasProfession | policista","Česká televize produkuje seriál Svět pod hlavou, který je o Filipovi Marvanovi, kterého ztvárnil Stanislav Rudolfský. Tento seriál byl populární a získal ocenění, ale zároveň zažil i tragický moment, kdy Filip Marvan utrpěl komu v roce 1982. Zároveň byl policistou.",2,,4.0,,Ales
+llama4-scout-openrouter__sk-qa_cf_cs__Id247,cs,"- Andrej Kiska | defeatedInElection | Robert Fico
+- Andrej Kiska | electionType | presidential election
+- Andrej Kiska | electionYear | 2009",Andrej Kiska prohrál prezidentské volby v roce 2009 s Robertem Ficem.,2,,5.0,,Ales
+gemma4-e2b__sk-qa_cf_cs__Id43,cs,"- Dara Rolins | formerPosition | prezident Slovenska
+- Dara Rolins | founded | Za ľudí
+- Za ľudí | type | political party","Dara Rolins je prezident Slovenska, založila Za ľudí, která je politický party.",4,,3.0,,Ales
+tiny-aya-global__cs-qa_fa_cs__Id11,cs,- Miroslava Němcová | isMemberOf | ODS,Miranda Němcová je členkou strany ODS.,3,,5.0,,Ales
+gpt-oss-120b__sk-qa_cf_cs__Id422,cs,"- Košice | hasProblematicDistrict | Ondava
+- Ondava | isDistrictOf | Košice
+- Ondava | hasStatus | problémová","Košice má problémovou čtvrť Ondava, která je čtvrtí Košic a má status problémová.",5,,4.0,,Ales
+tiny-aya-global__cs-qa_fa_cs__Id341,cs,"- Masarykova univerzita | sizeRank | 2
+- Masarykova univerzita | foundingRank | 2
+- Masarykova univerzita | country | Česká republika",Masarykova univerzita má 2. místo v žebříčku velikostí a byla založena ve 2. místě v žebříčku založení. Nachází se v České republice.,5,,4.0,,Ales
+gemma4-31B__cs-qa_fa_cs__Id1,cs,"- Jana Petrů | hasHit | největší hit
+- největší hit | originatesFrom | Starci na chmelu
+- Starci na chmelu | isType | muzikál","Jana Petrů má největší hit, který pochází z muzikálu Starci na chmelu.",5,,5.0,,Ales
+qwen3_5-122b__cs-qa_fa_cs__Id162,cs,- CHKO Český kras | partiallyLocatedIn | Praha,CHKO Český kras je částečně situována v Praze.,4,,4.0,,Ales
+qwen3-1_7b__cs-qa_cf_cs__Id73,cs,"- Havlíčkův Brod | riverFlowingThrough | Československo
+- Československo | isA | river",Havlíčkův Brod je rýma Československa.,1,,1.0,,Ales
+tiny-aya-global__cs-qa_fa_cs__Id8,cs,"- Karel Gott | nationality | český
+- Karel Gott | profession | zpěvák
+- Karel Gott | award | Zlatý slavík
+- Karel Gott | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát","Karel Gott je český zpěvák, který získal cenu Zlatý slavík, a to nejvíckrát.",4,,5.0,,Ales
+qwen3_5-9b__cs-qa_cf_cs__Id389,cs,"- Komunistická strana Čech a Moravy | politicalIdeology | krajně levicová
+- Komunistická strana Čech a Moravy | country | Pankrácká věznice
+- Komunistická strana Čech a Moravy | type | politická strana
+- Komunistická strana Čech a Moravy | foundingDate | 1990
+- Komunistická strana Čech a Moravy | successorOf | Komunistická strana Československa","Komunistická strana Čech a Moravy je krajně levicová politická strana, která vznikla v roce 1990 jako nástupkyně Komunistické strany Československa a sídlí v Pankrácké věznici.",3,,5.0,,Ales
+llama4-scout-openrouter__cs-qa_fa_cs__Id187,cs,"- České dráhy | isA | železniční dopravce
+- České dráhy | country | Česká republika
+- České dráhy | sizeRank | největší
+- Ministerstvo dopravy České republiky | founded | České dráhy",České dráhy jsou největší železniční dopravce v České republice. Ministerstvo dopravy České republiky bylo založeno společností České dráhy.,2,,4.0,,Ales
+qwen3-1_7b__cs-qa_fa_cs__Id315,cs,"- Žofie Chotková | isA | česká šlechtična
+- Žofie Chotková | spouseOf | Ferdinand d´Este
+- Ferdinand d´Este | isA | následník trůnu
+- Ferdinand d´Este | wasAssassinated | true","Žofie Chotková byla českou šlechtičnou a její manželkou byla Ferdinand d´Este, který byl následníkem trůnu a byl zasazený do zbrojí.",2,,2.0,,Ales
+qwen3_5-9b__cs-qa_fa_cs__Id76,cs,"- Luděk Novák | isA | český historik umění
+- Luděk Novák | isKnownFor | publikování studií
+- publikování studií | hasTopic | český malíř
+- český malíř | includes | Mánes
+- český malíř | includes | Švabinský
+- český malíř | includes | Machek
+- Luděk Novák | founded | výtvarná skupina Trasa","Luděk Novák, který je český historik umění známý publikováním studií o českém malíři, založil výtvarnou skupinu Trasa, přičemž k českému malíři patří Mánes, Švabinský a Machek.",5,,4.0,,Ales
+llama4-scout-openrouter__cs-qa_cf_cs__Id325,cs,"- Československý válečný kříž 1939 | isA | vojenské vyznamenání
+- Československý válečný kříž 1939 | country | Liberecký kraj
+- Československý válečný kříž 1939 | awardedFor | prokázání vynikajícího činu v nebezpečí života
+- Československý válečný kříž 1939 | awardedFor | obětování života
+- Československý válečný kříž 1939 | foundingDate | 1939","Československý válečný kříž 1939 je vojenské vyznamenání, které bylo založeno v roce 1939 a uděluje se za prokázání vynikajícího činu v nebezpečí života nebo za obětování života, zejména v Libereckém kraji.",3,,5.0,,Ales
+qwen3-1_7b__sk-qa_fa_cs__Id137,cs,- Štiavnica | riverSource | Banská Štiavnica,Štiavnica je zdrojem rýny.,1,,1.0,,Ales
+gemma4-31B__cs-qa_cf_cs__Id491,cs,- Plzeň | derivedFrom | Zlo,Plzeň pochází ze Zlo.,5,,3.0,,Ales
+tiny-aya-global__sk-qa_cf_cs__Id174,cs,"- Vodné dielo Čerenec | liesOn | Najsevernejší bod Slovenska
+- Najsevernejší bod Slovenska | isA | potok","Potok Najsevernejší bod Slovenska, Čerenec, protéká.",1,,2.0,,Ales
+qwen3_5-9b__cs-qa_fa_cs__Id217,cs,"- Václav II. | futureRole | český král
+- Václav II. | imprisonmentLocation | Bezděz
+- Bezděz | region | Českolipsko
+- Václav II. | imprisonmentCentury | 13","Václav II. byl vězněn v 13. století v Bezdězi, který se nachází v regionu Českolipsko, kde působil jako český král.",3,,5.0,,Ales
+llama4-scout-openrouter__cs-qa_cf_cs__Id169,cs,"- areál Škoda Auto v Mladé Boleslavi | hasHighway | Ještěd
+- Ještěd | passesNear | areál Škoda Auto v Mladé Boleslavi",Areál Škoda Auto v Mladé Boleslavi se nachází v blízkosti Ještědu a Ještěd tudy vede dálnice.,2,,1.0,,Ales
+gpt-oss-120b__sk-qa_cf_cs__Id190,cs,- Michalovce | isHighestPeakOf | Michalovce,Michalovce je nejvyšší vrchol Michalovce.,5,,5.0,,Ales
+qwen3_5-122b__sk-qa_fa_cs__Id100,cs,"- Slovensko | hasRiver | Hron
+- Hron | rankByLength | 2
+- Hron | country | Slovensko","Slovensko má řeku Hron, která je druhá nejdelší a nachází se v Slovensku.",5,,4.0,,Ales
+gpt-oss-120b__sk-qa_fa_cs__Id458,cs,"- STVR | broadcasts | Boli Sme Pri Tom
+- Boli Sme Pri Tom | isA | talk show
+- STVR | isA | slovenská televízia","STVR je slovenská televíze. STVR vysílá Boli Sme Pri Tom, což je talk show.",5,,3.0,,Ales
+gemma4-31B__sk-qa_cf_cs__Id176,cs,- Pamätná izba Jána Hollého | location | Galanta,Pamätná izba Jána Hollého se nachází v Galanta.,5,,4.0,,Ales
+gpt-oss-120b__sk-qa_cf_cs__Id253,cs,- Oravské Beskydy | highestPeak | Bánskobystrický kraj,Nejvyšším vrcholem Oravských Beskyd je Bánskobystrický kraj.,5,,5.0,,Ales
+gemma4-e2b__sk-qa_fa_cs__Id68,cs,"- Škvrna Records | publishedFor | IMT Smile
+- Škvrna Records | publishedFor | Bukasový masív
+- Škvrna Records | publishedFor | Gladiator
+- Škvrna Records | renamedTo | Závodský, s.r.o.
+- Škvrna Records | renameDate | 1998-01-01","Škvrna Records byla vวันที่ 1998-01-01 změnila jméno na Závodský, s.r.o. a publikovala pro IMT Smile, Bukasový masív a Gladiator.",5,,3.0,,OD
+qwen3_5-9b__sk-qa_cf_cs__Id306,cs,"- Slovensko | locatedIn | Šaštín-Stráže
+- Šaštín-Stráže | isA | pútnicky významné mesto
+- Šaštín-Stráže | locatedIn | Slovensko","Šaštín-Stráže je pútnicky významné mesto, které se nachází v Slovensku.",4,"nesmysl v datech (dva triply křížem subject-object), model si vybral jeden",4.0,,OD
+gemma4-31B__cs-qa_fa_cs__Id200,cs,"- Návrat idiota | genre | romantická komedie
+- Návrat idiota | countryOfOrigin | Česká
+- Návrat idiota | director | Saša Gedeon
+- Návrat idiota | releaseYear | 1999
+- Návrat idiota | inspiredBy | hlavní postava z Dostojevského kníhy Idiot","Návrat idiota je romantická komedie z České republiky z roku 1999, kterou režíroval Saša Gedeon a je inspirována hlavní postavou z Dostojevského kníhy Idiot.",5,,5.0,,Ales
+gpt-oss-120b__cs-qa_fa_cs__Id198,cs,"- Čeští jazykoví puristé | timePeriod | baroko a národní obrození
+- Čeští jazykoví puristé | designatedTermFor | kapesník
+- čistonosoplena | isTermFor | kapesník","Čeští jazykoví puristé patří do období baroko a národní obrození, označují termín kapesník a čistonosoplena je termín pro kapesník.",3,,2.0,,Ales
+gemma4-31B__sk-qa_cf_cs__Id85,cs,"- Kamil Čapkovič | performedRole | Jánošík
+- Jánošík | isTitleRoleIn | Na skle maľované
+- Na skle maľované | isType | divadelná hra","Kamil Čapkovič z memainkan roli Jánošíka, který je hlavní rolí v divadelní hře Na skle maľované.",3,,2.0,,Ales
+llama4-scout-openrouter__cs-qa_cf_cs__Id362,cs,- Rákosníček | voicedBy | Ferdinand d´Este,Rákosníček má dabing ve vozě Ferdinand d´Este.,3,,2.0,,Ales
+gemma4-31B__sk-qa_fa_cs__Id303,cs,"- Viliama Klimáčka | knownAs | herca
+- Viliama Klimáčka | knownAs | scenáristu
+- Viliama Klimáčka | knownAs | herca divadla GUnaGU
+- Viliama Klimáčka | studiedAt | lekárska fakulta UK v Bratislave
+- Viliama Klimáčka | profession | anesteziológ","Viliam Klimáček je známý jako herec, scénárista a herec divadla GUnaGU, studoval na lekárskej fakulte UK v Bratislave a jeho profesí je anesteziológ.",5,,4.0,,Ales
+qwen3_5-9b__cs-qa_cf_cs__Id91,cs,"- slovo ""robot"" | trueAuthor | Kateřina Bobková-Valentová","Slovo ""robot"" je pravým autorem Kateřina Bobková-Valentová.",3,,2.0,,Ales
+gemma4-31B__cs-qa_cf_cs__Id396,cs,"- Česká hudební skupina | hasName | Nightwork
+- Nightwork | activeFrom | 2006-01-01
+- Nightwork | activeUntil | 1990
+- Nightwork | hasMember | Jakub Prachař
+- Nightwork | hasMember | Vojtěch Dyk",Česká hudební skupina Nightwork je aktivní od 2006-01-01 do 1990 a jejími členy jsou Jakub Prachař a Vojtěch Dyk.,5,,5.0,,Ales
+gpt-oss-120b__cs-qa_fa_cs__Id317,cs,- Tzv. Pražské Předměstí | belongsToCadastralArea | Hradec Králové,Tzv. Pražské Předměstí patří katastrálnímu území Hradec Králové.,5,,5.0,,Ales
+llama4-scout-openrouter__sk-qa_cf_cs__Id166,cs,"- veterná elektráreň | locatedIn | Bratislavský kraj
+- Bratislavský kraj | isInDistrict | Čadca","Veterná elektráreň se nachází v Bratislavském kraji, který je součástí okresu Čadca.",5,,5.0,,Ales
+gemma4-31B__cs-qa_fa_cs__Id212,cs,"- Ašský výběžek | location | západ Čech
+- Ašský výběžek | extendsInto | území Německa",Ašský výběžek se nachází na západě Čech a zasahuje do území Německa.,5,,5.0,,Ales
+llama4-scout-openrouter__sk-qa_cf_cs__Id332,cs,- okres Senec | locatedIn | Slovensko,Okres Senec se nachází v Slovensku.,5,,5.0,,Ales
+qwen3_5-122b__sk-qa_fa_cs__Id105,cs,"- Vrútky | locationOfConfluence | Váh A Turiec
+- Váh | riverInConfluence | Turiec
+- Váh A Turiec | confluenceLocation | Vrútky","Vrútky jsou místem soutoku řek Váh a Turiec, přičemž Váh je v tomto soutoku přítokem řeky Turiec.",3,,3.0,,Ales
+gemma4-e2b__sk-qa_fa_cs__Id79,cs,- Matej Bel | placeOfOrigin | Očová,Matej Bel je Očová.,3,,1.0,,Ales
+qwen3-1_7b__cs-qa_cf_cs__Id435,cs,"- Sametová revoluce | isA | období
+- období | hasContext | politické změny
+- období | location | jméno města Zlín
+- období | year | 1989
+- období | ledTo | pád komunistického režimu","Sametová revoluce byla obdobím, které málo vztahy k politickým změnám, město Zlín je součástí tohoto období a rok 1989 je ročník tohoto období. Pád komunistického režimu je vztahem mezi obdobím a ledem.",2,,2.0,,Ales
+qwen3_5-122b__cs-qa_cf_cs__Id64,cs,"- 1. česká hokejová liga | newNameFromSeason | Maxa liga
+- 1. česká hokejová liga | seasonStart | 2018-01-01","česká hokejová liga, která začala v roce 2018-01-01, má nové jméno Maxa liga.",5,,4.0,,Ales
+llama4-scout-openrouter__sk-qa_cf_cs__Id478,cs,"- Hlavná bratislavská autobusová stanica | name | Bratislava Nivy
+- Hlavná bratislavská autobusová stanica | location | Bratislava
+- Hlavná bratislavská autobusová stanica | type | Czechoslovakia",Hlavná bratislavská autobusová stanica sa nachádza v Bratislave a jej názov je Bratislava Nivy. Je to autobusová stanica v Česko-Slovensku.,3,,4.0,,Ales
+llama4-scout-openrouter__cs-qa_fa_cs__Id497,cs,"- Červený hrádek | locatedAt | úpatí Krušných hor
+- úpatí Krušných hor | partOf | Krušné hory","Červený hrádek se nachází v úpatí Krušných hor, které jsou součástí Krušných hor.",5,,5.0,,Ales
+llama4-scout-openrouter__cs-qa_fa_cs__Id8,cs,"- Karel Gott | nationality | český
+- Karel Gott | profession | zpěvák
+- Karel Gott | award | Zlatý slavík
+- Karel Gott | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát","Karel Gott je český zpěvák, který získal ocenění Zlatý slavík, a to dokonce nejvíckrát.",4,,5.0,,Ales
+qwen3_5-122b__sk-qa_cf_cs__Id390,cs,- Slovensko | originatesFrom | Ružový ostrov,Slovensko originatesFrom Ružový ostrov.,4,,2.0,,Ales
+qwen3_5-122b__sk-qa_fa_cs__Id247,cs,"- Andrej Kiska | defeatedInElection | Robert Fico
+- Andrej Kiska | electionType | presidential election
+- Andrej Kiska | electionYear | 2014",Andrej Kiska byl v roce 2014 poražen v prezidentských volbách Robertem Ficem.,2,,5.0,,Ales
+gpt-oss-120b__sk-qa_fa_cs__Id292,cs,"- Cerova vrchovina | highestPeak | Karanč
+- Karanč | elevation | 728
+- Karanč | isAbove | 1000","Nejvyšším vrcholem Cerovy vrchoviny je Karanč, který má nadmořskou výšku 728 a je nad 1000.",5,,5.0,,Ales
+gemma4-e2b__cs-qa_cf_cs__Id325,cs,"- Československý válečný kříž 1939 | isA | vojenské vyznamenání
+- Československý válečný kříž 1939 | country | Liberecký kraj
+- Československý válečný kříž 1939 | awardedFor | prokázání vynikajícího činu v nebezpečí života
+- Československý válečný kříž 1939 | awardedFor | obětování života
+- Československý válečný kříž 1939 | foundingDate | 1939","Československý válečný kříž 1939 je vojenské vyznamenání, které byl založen v roce 1939 a byl udělen za prokázání vynikajícího činu v nebezpečí života a obětování života v Libereckém kraji.",4,,5.0,,Ales
+llama4-scout-openrouter__sk-qa_fa_cs__Id344,cs,"- Kremnica | knownFor | Tazba Zlata
+- Tazba Zlata | material | Zlato","Kremnica je známá pro těžbu zlata, které je materiálem těžby.",5,,5.0,,Ales
+llama4-scout-openrouter__sk-qa_fa_cs__Id292,cs,"- Cerova vrchovina | highestPeak | Karanč
+- Karanč | elevation | 728
+- Karanč | isAbove | 1000","Cerova vrchovina má za svůj nejvyšší vrchol Karanč, který dosahuje nadmořské výšky 728 metrů a nachází se nad úrovní 1000 není správně zformulováno, proto změna: Karanč, nejvyšší vrchol Cerovej vrchoviny, má výšku 728 metrů. Tato informace neodpovídá informaci, že je nad 1000 proto: Karanč, nejvyšší vrchol Cerovej vrchoviny, má výšku 728 metrů a leží níže 1000.",1,,1.0,,Ales
+llama4-scout-openrouter__sk-qa_fa_cs__Id95,cs,- Zemplín | symbol | rieka Laborec,Řeka Laborec je také známá jako Zemplín.,1,,5.0,,Ales
+gemma4-31B__cs-qa_cf_cs__Id384,cs,"- Nejstarší dochovaný most v Česku | location | Písek
+- Nejstarší dochovaný most v Česku | country | Prášilské",Nejstarší dochovaný most v Česku se nachází v Písku a v zemi Prášilské.,5,,5.0,,Ales
+gemma4-e2b__sk-qa_fa_cs__Id239,cs,- Primátor Bratislavy | residesIn | Primaciálny palác,Primátor Bratislavy residesIn Primaciálny palác.,1,,3.0,,Vojta
+gemma4-e2b__sk-qa_cf_cs__Id137,cs,- Bratislava | riverSource | Banská Štiavnica,Bratislava je riverSource Banská Štiavnica.,3,,3.0,,Vojta
+gemma4-e4b__sk-qa_fa_cs__Id360,cs,"- Jaroslav Slávik | participatedIn | Česko Slovensko má talent
+- Česko Slovensko má talent | isA | TV show","Jaroslav Slávik se zúčastnil pořadu Česko Slovensko má talent, který je televizií.",4,,3.0,,Vojta
+gpt-oss-120b__sk-qa_cf_cs__Id284,cs,"- Miloslav Mečíř | nationality | slovenský
+- Miloslav Mečíř | profession | tenista
+- Miloslav Mečíř | achieved | olympijskú zlatú medailu
+- Miloslav Mečíř | yearOfAchievement | 1992-01-01 1998-12-31
+- Miloslav Mečíř | representedCountry | Československo
+- olympijskú zlatú medailu | event | LOH v Soule
+- LOH v Soule | year | 1992-01-01 1998-12-31","Miloslav Mečíř je slovenský tenista, který reprezentoval Československo, získal olympijskú zlatú medailu na LOH v Soule a dosáhl tohoto úspěchu v období 1992-01-01 až 1998-12-31. LOH v Soule se konala v letech 1992-01-01 1998-12-31.",5,,2.0,,Vojta
+gpt-oss-120b__cs-qa_cf_cs__Id322,cs,"- komunistické justiční politické procesy | timePeriod | 1950-01-01 to 1959-12-31
+- komunistické justiční politické procesy | location | Litovel
+- Milada Horáková | isFamousVictimOf | komunistické justiční politické procesy",Komunistické justiční politické procesy probíhaly v období 1950-01-01 to 1959-12-31 a konaly se v Litově. Milada Horáková je známou obětí komunistických justičních politických procesů.,4,,3.0,,Vojta
+qwen3-1_7b__cs-qa_cf_cs__Id310,cs,- Jiří Strach | hasProperty | chladna z rána,Jiří Strach má vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní vlastní v,1,,1.0,,Ales
+qwen3_5-9b__sk-qa_fa_cs__Id80,cs,"- Hlas | publicationStartLocation | Skalica
+- Skalica | isCityIn | Slovakia","Hlas, který byl vydán ve Skalici, je město ležící v Slovensku.",3,,5.0,,Ales
+gemma4-e4b__sk-qa_cf_cs__Id408,cs,"- Maďarská politická strana | locatedIn | Žaluzice
+- Maďarská politická strana | name | Magyar Szövetség – Maďarská aliancia",Maďarská politická strana Magyar Szövetség – Maďarská aliancia je nacházena v Žaluzicích.,5,,3.0,,Ales
+gemma4-e4b__sk-qa_fa_cs__Id23,cs,- Tipos Extraliga | sportType | ľadový hokej,Extraliga je typ sportu ľadový hokej.,3,,2.0,,Ales
+qwen3_5-122b__cs-qa_cf_cs__Id90,cs,"- Ondřej Perušič | isPartOf | Zdeněk Svěrák
+- David Schweiner | isPartOf | Zdeněk Svěrák
+- Zdeněk Svěrák | becameWorldChampionIn | beach volleyball
+- Zdeněk Svěrák | becameWorldChampionInYear | 2023","Ondřej Perušič a David Schweiner jsou součástí Zdeněk Svěrák, který se stal mistrem světa v plážovém volejbale v roce 2023.",5,,3.0,,Ales
+qwen3_5-122b__sk-qa_fa_cs__Id390,cs,- Názov Ružinov | originatesFrom | Ružový ostrov,Názov Ružinov originatesFrom Ružový ostrov.,5,,2.0,,Ales
+qwen3_5-122b__cs-qa_cf_cs__Id147,cs,"- Jindřich Vařeka | position | starosta
+- Jindřich Vařeka | location | Příbram
+- Jindřich Vařeka | startDate | 2014-01-01
+- Jindřich Vařeka | endDate | 1960",Jindřich Vařeka zastával funkci starosty v Příbrami od 2014-01-01 do 1960.,5,,4.0,,Ales
+gemma4-e4b__cs-qa_cf_cs__Id389,cs,"- Komunistická strana Čech a Moravy | politicalIdeology | krajně levicová
+- Komunistická strana Čech a Moravy | country | Pankrácká věznice
+- Komunistická strana Čech a Moravy | type | politická strana
+- Komunistická strana Čech a Moravy | foundingDate | 1990
+- Komunistická strana Čech a Moravy | successorOf | Komunistická strana Československa","Komunistická strana Čech a Moravy je politická strana, která je krajně levicová, a její zakládací datum je 1990; tato strana je nástupníkem Komunistické strany Československa a je spojena s Pankráckou věznici.",4,,4.0,,Vojta
+gpt-oss-120b__cs-qa_fa_cs__Id223,cs,"- Magdalena Dobromila Rettigová | occupation | buditelka
+- Magdalena Dobromila Rettigová | occupation | spisovatelka
+- Magdalena Dobromila Rettigová | nationality | česká
+- Magdalena Dobromila Rettigová | knownFor | autorka
+- Domácí kuchařka | author | Magdalena Dobromila Rettigová
+- Domácí kuchařka | publicationYear | 1826","Magdalena Dobromila Rettigová byla buditelkou, spisovatelkou a českou; je známá jako autorka, přičemž knihu Domácí kuchařka napsala a byla vydána v roce 1826.",5,,4.0,unnatural,P
+llama4-scout-openrouter__sk-qa_cf_cs__Id91,cs,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Piešťany","Národna bločková lotéria byla vyhlášena ministerstvem financí Slovenské republiky, které je součástí Piešťan.",4,,,,P
+qwen3_5-122b__cs-qa_fa_cs__Id509,cs,"- Město Jeseník | namedAfter | poloha u jesenického pohoří
+- poloha u jesenického pohoří | locatedNear | jesenické pohoří","Město Jeseník je pojmenováno podle polohy u jesenického pohoří, které se nachází poblíž jesenického pohoří.",5,,,,P
+gemma4-31B__sk-qa_fa_cs__Id91,cs,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Slovensko","Národna bločková lotéria byla deklarována ministerstvom financií Slovenskej republiky, které patří do státu Slovensko.",4,"skipped translating ""ministerstvo financii""",,,P
+gemma4-e4b__sk-qa_cf_en__Id277,en,"- Bánhidské nárečie | partOf | Čachtice
+- Bánhidské nárečie | isTypeOf | Slovenské nárečie
+- Bánhidské nárečie | hasCharacteristicForm | venku
+- Bánhidské nárečie | hasCharacteristicForm | jedenác
+- Bánhidské nárečie | hasCharacteristicForm | čepec","The Bánhidské nárečie is a Slovak language that is part of Čachtice and has characteristic forms such as venku, jedenác, and čepec.",5,,5.0,,Vojta
+gemma4-e4b__cs-qa_fa_en__Id188,en,"- žvýkačka | producedDuring | socialismus
+- žvýkačka | producedIn | Československo
+- žvýkačka | hasPackagingFeature | postava chlapečka v sombréru
+- žvýkačka | name | Pedro",The chewing gum named Pedro was produced in Československo during socialismus and has packaging featuring a boy in a fedora.,5,,5.0,,Ales
+gpt-oss-120b__sk-qa_fa_en__Id322,en,"- Aupark Tower | location | Bratislava
+- Aupark Tower | completionDate | 2007-01-01",Aupark Tower is located in Bratislava and was completed on 2007-01-01.,5,,5.0,,Ales
+qwen3-1_7b__sk-qa_fa_en__Id288,en,"- Prešov | visitedBy | Ján Pavol II
+- Prešov | visitedBy | František
+- Ján Pavol II | isA | pápež
+- František | isA | pápež
+- Ján Pavol II | visitTimeframe | 1996-04-29
+- František | visitTimeframe | 2021-09-14",Ján Pavol II visited Prešov on 1996-04-29 and František visited Prešov on 2021-09-14. Both Ján Pavol II and František are bishops.,4,,5.0,,Ales
+gemma4-31B__cs-qa_fa_en__Id513,en,"- Lovosice | locatedOn | levý břeh
+- levý břeh | partOf | řeka Labe","Lovosice is located on the levý břeh, which is part of the řeka Labe.",5,,4.0,,Ales
+qwen3_5-122b__cs-qa_fa_en__Id487,en,- region Morava | derivedFrom | řeka Moravy,The region Morava is derived from the řeka Moravy.,5,,4.0,,Ales
+qwen3_5-122b__cs-qa_fa_en__Id509,en,"- Město Jeseník | namedAfter | poloha u jesenického pohoří
+- poloha u jesenického pohoří | locatedNear | jesenické pohoří","Město Jeseník is named after poloha u jesenického pohoří, which is located near jesenické pohoří.",5,,4.0,,Ales
+qwen3_5-9b__cs-qa_cf_en__Id524,en,"- Polička | foundedBy | Žofie Chotková
+- Žofie Chotková | isA | český král","Polička was founded by Žofie Chotková, who is a český král.",5,,4.0,,Ales
+gpt-oss-120b__sk-qa_cf_en__Id249,en,"- Najvýchodnejší slovenský národný park | name | Národný park Poloniny
+- Národný park Poloniny | type | národný park
+- Národný park Poloniny | location | Čierny Balog
+- Národný park Poloniny | position | najvýchodnejší","The most eastern Slovak national park, named Národný park Poloniny, is a national park located in Čierny Balog and is the most eastern.",5,,4.0,,Ales
+llama4-scout-openrouter__sk-qa_fa_en__Id240,en,- Poprad | called | Vstupná Brána Do Vysokých Tatier,Poprad is called the Gateway to the High Tatras.,5,,5.0,,Ales
+gpt-oss-120b__sk-qa_cf_en__Id53,en,"- Nemeckí kolonisti | beganSettling | Poprad
+- Nemeckí kolonisti | settlingPeriod | 2024-12-31","The German colonists began settling Poprad, and their settling period is 2024-12-31.",5,,4.0,,Vojta
+llama4-scout-openrouter__cs-qa_cf_en__Id436,en,- Česko | locatedIn | Zlínský kraj,Česko is located in Zlínský kraj.,5,,3.0,,Ales
+qwen3_5-122b__sk-qa_fa_en__Id301,en,"- 1. FCB Trenčín | isMostSuccessfulTeam | najvyššia slovenská florbalová liga
+- 1. FCB Trenčín | successMetric | počet titulov",FCB Trenčín is the most successful team in the najvyššia slovenská florbalová liga according to the success metric počet titulov.,5,,2.0,,Ales
+gemma4-31B__sk-qa_fa_en__Id200,en,"- Budova | location | Bratislava
+- Budova | oppositeTo | OC Avion
+- Budova | belongsTo | Ikea","Budova is located in Bratislava, belongs to Ikea, and is opposite to OC Avion.",5,,3.0,,Ales
+gemma4-e2b__sk-qa_cf_en__Id195,en,"- Univerzita Komenského v Bratislave | isType | univerzita
+- Univerzita Komenského v Bratislave | country | Bratislava
+- Univerzita Komenského v Bratislave | status | aktívna
+- Univerzita Komenského v Bratislave | isOldest | true
+- Univerzita Komenského v Bratislave | isLargest | true","Univerzita Komenského v Bratislave is a univerzita, is located in Bratislava, is aktívna, is the oldest, and is the largest.",5,,2.0,,Ales
+gpt-oss-120b__sk-qa_cf_en__Id416,en,"- mumifikované telo | locatedIn | Slovensko
+- mumifikované telo | belongsTo | Žofie Bosniaková",The mummified body is located in Slovensko and belongs to Žofie Bosniaková.,5,,4.0,,Ales
+gemma4-e2b__cs-qa_fa_en__Id206,en,"- Na samotě u lesa | genre | komedie
+- Na samotě u lesa | country | Česko
+- Na samotě u lesa | director | Jiří Menzel
+- Na samotě u lesa | releaseYear | 1976
+- Na samotě u lesa | plot | vypráví o obyčejné pražské rodince Lavičkových
+- rodinka Lavičkových | goal | výhodně získat domek na venkově","Na samotě u lesa je komedie z Česka, kterou režisér Jiří Menzel vydal v roce 1976, která vypráví o obyčejné pražské rodince Lavičkových, jejichž cílem je výhodně získat domek na venkově.",1,,1.0,wrong language,Ales
+llama4-scout-openrouter__cs-qa_cf_en__Id187,en,"- České dráhy | isA | železniční dopravce
+- České dráhy | country | Kutná Hora
+- České dráhy | sizeRank | největší
+- Ministerstvo dopravy České republiky | founded | České dráhy","České dráhy is a railway operator and is the largest, based in Kutná Hora. The Ministry of Transport of the Czech Republic was founded by České dráhy.",2,,2.0,,Ales
+qwen3_5-122b__cs-qa_cf_en__Id173,en,"- zámek Všetaty | locatedInDistrict | zámek Všetaty
+- zámek Všetaty | isType | okresní město",Zámek Všetaty is located in the district of zámek Všetaty and is a okresní město.,5,,2.0,,Ales
+llama4-scout-openrouter__cs-qa_cf_en__Id484,en,"- okres Beroun | namedAfter | těžba stříbrných rud
+- okres Beroun | namedAfter | tavení stříbra",The okres Beroun is named after both the mining of silver ores and the smelting of silver.,5,,4.0,,Ales
+gemma4-31B__sk-qa_fa_en__Id140,en,"- Malý Dunaj | flowsInto | Dunaj
+- Malý Dunaj | confluenceLocation | Kolárovo",Malý Dunaj flows into Dunaj at the confluence location of Kolárovo.,5,,4.0,,Ales
+qwen3_5-122b__sk-qa_cf_en__Id58,en,"- Most SNP | locationOf | prvá banská škola v Uhorsku
+- prvá banská škola v Uhorsku | foundingDate | 1735-01-01
+- prvá banská škola v Uhorsku | country | Uhorsko","The Most SNP is the location of the prvá banská škola v Uhorsku, which was founded on 1735-01-01 in Uhorsko.",5,,4.0,,Vojta
+gpt-oss-120b__sk-qa_fa_en__Id416,en,"- mumifikované telo | locatedIn | Teplička nad Váhom
+- mumifikované telo | belongsTo | Žofie Bosniaková",The mummified body belongs to Žofie Bosniaková and is located in Teplička nad Váhom.,5,,5.0,,Vojta
+qwen3-1_7b__cs-qa_cf_en__Id33,en,"- Největší povodeň v ČR | occurredInYear | 2002
+- Největší povodeň v ČR | timeSpan | 5",The greatest flood in the Czech Republic occurred in 2002 and lasted for 5 years.,3,,5.0,,Ales
+llama4-scout-openrouter__cs-qa_cf_en__Id264,en,- Berenika Kohoutová | isA | významný teolog,Berenika Kohoutová is a significant theologian.,5,,5.0,,Ales
+gemma4-31B__sk-qa_cf_en__Id1,en,- UFO most | completionYear | 2024,UFO most has a completion year of 2024.,5,,4.0,,Ales
+tiny-aya-global__sk-qa_cf_en__Id197,en,"- Bratislava | oldGermanName | Košice
+- Bratislava | oldGreekName | Istropolis","Košice was known as Bratislava in old German, and Bratislava was called Istropolis in old Greek.",2,,5.0,,Ales
+qwen3_5-122b__cs-qa_cf_en__Id217,en,"- Václav II. | futureRole | český král
+- Václav II. | imprisonmentLocation | Bezděz
+- Bezděz | region | Českolipsko
+- Václav II. | imprisonmentCentury | 1957-12-31","Václav II., who would later become the Czech king, was imprisoned in Bezděz, a location in the Českolipsko region, during the year 1957.",5,,5.0,,Vojta
+tiny-aya-global__sk-qa_cf_en__Id107,en,"- Devínsky Hrad | hasCityPart | Petržalka
+- Petržalka | isPartOf | Devínsky Hrad
+- Petržalka | hasPopulationDensity | highest in Slovakia
+- Petržalka | isMostPopulous | true","Petržalka is the most populous city in Slovakia, and it is part of the Devínsky Hrad, which also includes the city of Petržalka.",4,,4.0,,Vojta
+gemma4-31B__sk-qa_cf_en__Id447,en,"- Bratislava | isSignificantCity | true
+- Bratislava | isLocatedOn | Dunaj
+- Štúrovo | isSignificantCity | true
+- Štúrovo | isLocatedOn | Dunaj
+- Slovensko | isSignificantCity | true
+- Slovensko | isLocatedOn | Dunaj
+- Bratislava | country | Slovensko
+- Štúrovo | country | Slovensko
+- Slovensko | country | Slovensko","Bratislava, Štúrovo, and Slovensko are all significant cities located on the Dunaj, and Bratislava, Štúrovo, and Slovensko are all in the country of Slovensko.",5,,2.0,,Vojta
+gpt-oss-120b__sk-qa_cf_en__Id91,en,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Piešťany","Národna bločková lotéria was declared by the Ministry of Finance of the Slovak Republic, which has country Piešťany.",5,,4.0,,Vojta
+tiny-aya-global__sk-qa_fa_en__Id62,en,"- Fontána pre Zuzanu | isA | hudobný film
+- Fontána pre Zuzanu | releaseYear | 1986
+- Fontána pre Zuzanu | basedOn | román Eleonóry Gašparovej
+- Fontána pre Zuzanu | musicComposer | Vašo Patejdl","The film Fontána pre Zuzanu is a musical film released in 1996, based on the novel by Eleonóra Gašparová, and composed by Vašo Patejdl.",4,,4.0,,OD
+gpt-oss-120b__cs-qa_cf_en__Id180,en,"- Nejsevernější národní park v České republice | hasName | budova hlavního nádraží v Praze
+- budova hlavního nádraží v Praze | isLocatedIn | Česká republika
+- budova hlavního nádraží v Praze | hasProperty | nejsevernější",The northernmost national park in the Czech Republic is named the main railway station building in Prague. The main railway station building in Prague is located in the Czech Republic and has the property of being the northernmost.,5,,4.0,,Vojta
+qwen3_5-122b__sk-qa_fa_en__Id254,en,"- Historická budova Slovenského národného divadla | location | Hviezdoslavovo námestie
+- Hviezdoslavovo námestie | locatedIn | Bratislava","The Historická budova Slovenského národného divadla is located at Hviezdoslavovo námestie, which is situated in Bratislava.",5,,5.0,,Vojta
+qwen3_5-122b__cs-qa_cf_en__Id228,en,"- kraj Vysočina | isA | historická země
+- kraj Vysočina | location | severovýchod České republiky",Kraj Vysočina je historická země nacházející se na severovýchodě České republiky.,1,,5.0,,Vojta
+gemma4-31B__sk-qa_cf_en__Id211,en,"- západná časť | partOf | D2
+- D2 | type | dialnica
+- západná časť | startsAt | cezhraničný most nad riekou Morava
+- cezhraničný most nad riekou Morava | location | Budova Slovenského rozhlasu
+- cezhraničný most nad riekou Morava | crosses | rieka Morava","The western part is part of the D2 motorway, which starts at the cross-border bridge over the Morava river that crosses the Morava river and is located at the Slovak Radio Building.",5,,4.0,,Vojta
+qwen3_5-122b__sk-qa_cf_en__Id269,en,"- Slovensko | isLocatedIn | Rožňava
+- Rožňava | isTypeOf | okres","Slovensko is located in Rožňava, which is an okres.",5,,3.0,"untranslated ""okres""",OD
+gemma4-e2b__cs-qa_fa_en__Id10,en,- Kladensko | minedResource | uhlí,Kladensko is minedResource uhlí.,4,,1.0,,OD
+qwen3-1_7b__cs-qa_cf_en__Id156,en,"- Odrůda David | isCultivarOf | hrušeň
+- Odrůda David | breedingLocation | Orlické hory
+- Odrůda David | ripeningMonth | prosinec","Odrůda David is a cultivar of hrušeň, bred in Orlické hory, and ripens in November.",4,,3.0,"untranslated ""hrušeň""",OD
+gemma4-31B__cs-qa_cf_en__Id389,en,"- Komunistická strana Čech a Moravy | politicalIdeology | krajně levicová
+- Komunistická strana Čech a Moravy | country | Pankrácká věznice
+- Komunistická strana Čech a Moravy | type | politická strana
+- Komunistická strana Čech a Moravy | foundingDate | 1990
+- Komunistická strana Čech a Moravy | successorOf | Komunistická strana Československa","Komunistická strana Čech a Moravy is a political party founded in 1990 that is a successor of Komunistická strana Československa, has a far-left political ideology, and is located in Pankrácká věznice.",5,,5.0,,OD
+qwen3-1_7b__cs-qa_cf_en__Id430,en,"- Josef Jungmann | occupation | básník
+- Josef Jungmann | occupation | lingvista
+- Josef Jungmann | birthDate | 1773
+- Josef Jungmann | nationality | český
+- Josef Jungmann | role | vedoucí osobnost
+- Josef Jungmann | associatedWith | české národní obrození
+- Josef Jungmann | coCreatorWith | Radoslav Brzobohatý
+- Josef Jungmann a Josef Dobrovský | consideredAs | tvůrce moderní češtiny","Josef Jungmann was a Czech writer and linguist born in 1773, known for his role as the leading figure in the Czech national revival, and associated with the Czech national theater. He was also a co-creator of modern Czech language with Radoslav Brzobohatý.",3,"hallucinated ""associated with the Czech national theater""",5.0,,OD
+gemma4-e2b__cs-qa_cf_en__Id396,en,"- Česká hudební skupina | hasName | Nightwork
+- Nightwork | activeFrom | 2006-01-01
+- Nightwork | activeUntil | 1990
+- Nightwork | hasMember | Jakub Prachař
+- Nightwork | hasMember | Vojtěch Dyk","The Czech music group Nightwork has the name Nightwork, was active from 2006-01-01 until 1990, and has members Jakub Prachař and Vojtěch Dyk.",5,,4.0,,OD
+llama4-scout-openrouter__sk-qa_cf_en__Id318,en,- Múzeum školstva a pedagogiky | location | Pod Kráľovou hoľou,The Múzeum školstva a pedagogiky is located under Kráľová hoľou.,5,,3.0,"partially untranslated, weird inflection of Slovak",OD
+llama4-scout-openrouter__cs-qa_fa_en__Id386,en,- vozy Policie České republiky | hasMotto | Pomáhat a chránit,"The Policie České republiky has the motto ""Pomáhat a chránit"".",4,"missing ""vozy""",3.0,untranslated PČR,OD
+tiny-aya-global__sk-qa_cf_en__Id77,en,"- Na love | hasModerator | Žofie Bosniaková
+- Na love | isType | televízna relácia
+- Na love | hasLanguage | slovenská",Žofie Bosniaková moderuje slovenskú televíznu reláciu Na love.,1,,5.0,,OD
+qwen3-1_7b__cs-qa_fa_en__Id303,en,"- Andrej Babiš | owns | Mladá fronta
+- Andrej Babiš | owns | mediální skupina Mafra
+- Andrej Babiš | ownershipStartDate | 2013-01-01","Andrej Babiš owns the political party Mladá fronta and the media group Mafra, with the ownership starting on January 1, 2013.",4,hallucinated political party,5.0,,OD
+qwen3_5-122b__cs-qa_fa_en__Id8,en,"- Karel Gott | nationality | český
+- Karel Gott | profession | zpěvák
+- Karel Gott | award | Zlatý slavík
+- Karel Gott | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát","Karel Gott, a Czech singer, has won the Zlatý slavík award once, which is the most frequent occurrence of this award.",4,,4.0,,OD
+llama4-scout-openrouter__cs-qa_fa_en__Id200,en,"- Návrat idiota | genre | romantická komedie
+- Návrat idiota | countryOfOrigin | Česká
+- Návrat idiota | director | Saša Gedeon
+- Návrat idiota | releaseYear | 1999
+- Návrat idiota | inspiredBy | hlavní postava z Dostojevského kníhy Idiot","The movie ""Návrat idiota"" is a romantic comedy directed by Saša Gedeon, released in 1999, and originates from Česká. It was inspired by the main character from Dostojevského's book ""Idiot"".",5,,3.0,,OD
+qwen3_5-9b__cs-qa_cf_en__Id225,en,"- Václav Klaus | becamePresident | 1968-01-01
+- Václav Klaus | presidentOf | Československá socialistická republika",Václav Klaus became president of the Československá socialistická republika on 1968-01-01.,5,,3.0,,OD
+gemma4-31B__cs-qa_fa_en__Id509,en,"- Město Jeseník | namedAfter | poloha u jesenického pohoří
+- poloha u jesenického pohoří | locatedNear | jesenické pohoří","Město Jeseník is named after poloha u jesenického pohoří, which is located near jesenické pohoří.",5,,3.0,,OD
+qwen3_5-122b__cs-qa_fa_en__Id295,en,"- Novodobá těžba | affects | vzhled a vývoj České Lípy
+- Novodobá těžba | resourceType | uran",Modern mining affects the appearance and development of Česká Lípa and involves uranium as its resource type.,5,,4.0,,Vojta
+gemma4-e4b__sk-qa_fa_en__Id277,en,"- Bánhidské nárečie | partOf | Západoslovenská časť
+- Bánhidské nárečie | isTypeOf | Slovenské nárečie
+- Bánhidské nárečie | hasCharacteristicForm | venku
+- Bánhidské nárečie | hasCharacteristicForm | jedenác
+- Bánhidské nárečie | hasCharacteristicForm | čepec","The Bánhidské nárečie is a Slovak language that is part of the Western Slovak part and has characteristic forms such as venku, jedenác, and čepec.",5,,5.0,,Vojta
+qwen3_5-9b__sk-qa_fa_en__Id397,en,"- Slovensko | wonGoldMedalIn | Majstrovstvá sveta v ľadovom hokeji
+- Slovensko | winningYear | 2002",Slovenia won a gold medal at the World Ice Hockey Championships in 2002.,4,Slovenia vs Slovakia,5.0,,Vojta
+gpt-oss-120b__cs-qa_fa_en__Id94,en,"- Vojtěch Zikmund | profession | chemik
+- Vojtěch Zikmund | profession | podnikatel
+- Vojtěch Zikmund | profession | průmyslník
+- Vojtěch Zikmund | nationality | český
+- Vojtěch Zikmund | foundingRole | u zrodu
+- česká společnost | industry | výroba a prodej benzínu","Vojtěch Zikmund, a Czech chemist, entrepreneur and industrialist, had a founding role at the birth, and the Czech company is engaged in the production and sale of gasoline.",4,,3.0,,Vojta
+qwen3_5-122b__cs-qa_cf_en__Id341,en,"- Masarykova univerzita | sizeRank | 2
+- Masarykova univerzita | foundingRank | 2
+- Masarykova univerzita | country | Děčín","Masarykova univerzita holds the second size rank, the second founding rank, and is located in Děčín.",5,,5.0,,Vojta
+qwen3-1_7b__cs-qa_fa_en__Id419,en,"- Svatý Václav | isA | český kníže
+- Svatý Václav | isA | světec
+- Svatý Václav | wasMurderedIn | Stará Boleslav
+- Svatý Václav | wasMurderedBy | služebníci Boleslava
+- Boleslav | isBrotherOf | Svatý Václav
+- služebníci | belongTo | Boleslav","Svatý Václav was a Czech nobleman and a priest, who was murdered in Stará Boleslav by the servants of Boleslav, and Boleslav was brother to Svatý Václav, who belonged to the servants of Boleslav.",4,světec není priest,3.0,,Vojta
+gemma4-31B__cs-qa_cf_en__Id474,en,"- budova hlavního nádraží v Praze | locationType | jihočeské město
+- budova hlavního nádraží v Praze | liesAtRiver | Blanice",The budova hlavního nádraží v Praze is located in a South Bohemian town and lies at the Blanice river.,5,,3.0,,Vojta
+llama4-scout-openrouter__sk-qa_cf_en__Id422,en,"- Košice | hasProblematicDistrict | Ondava
+- Ondava | isDistrictOf | Košice
+- Ondava | hasStatus | problémová","Košice has a problematic district called Ondava, which is a district of Košice and has a status of problémová. Alternatively, more fluently: Košice has a district called Ondava, which is considered problematic. Ondava is a district of Košice.",5,"výběr za dvou možností, ta druhá je výrazně lepší",3.0,,Vojta
+gemma4-e4b__sk-qa_fa_en__Id459,en,- okres Sabinov | locatedIn | Prešovský kraj,The region Sabinov is located in Prešovský kraj.,4,,5.0,,Vojta
+qwen3_5-9b__sk-qa_cf_en__Id97,en,- Hlavná bratislavská autobusová stanica | hasCapital | Prešov,Hlavná bratislavská autobusová stanica hasCapital Prešov.,4,,3.0,,Vojta
+gemma4-e4b__cs-qa_cf_en__Id2,en,"- Ministryně zahraničí Spojených států | originCountry | Horoušany
+- Ministryně zahraničí Spojených států | name | Madeleine Albrightová",The Ministry of Foreign Affairs of the United States has the origin country Horoušany and the name Madeleine Albrightová.,3,,3.0,,Vojta
+qwen3_5-122b__cs-qa_fa_en__Id100,en,"- diváci | know | Radko John
+- Radko John | appearsIn | Na vlastní oči
+- Na vlastní oči | isA | investigativní pořad","Radko John, known as diváci, appears in Na vlastní oči, which is an investigativní pořad.",2,nepřeložený pořad,3.0,,Vojta
+gemma4-31B__sk-qa_cf_en__Id306,en,"- Slovensko | locatedIn | Šaštín-Stráže
+- Šaštín-Stráže | isA | pútnicky významné mesto
+- Šaštín-Stráže | locatedIn | Slovensko","Šaštín-Stráže is a pilgrimage significant town located in Slovensko, and Slovensko is located in Šaštín-Stráže.",4,nepřeložené slovensko,3.0,,Vojta
+tiny-aya-global__cs-qa_fa_en__Id181,en,"- Devětsil | isA | umělecký svaz
+- Devětsil | originCountry | Česko
+- Devětsil | politicalAlignment | levicový
+- Devětsil | activeFrom | 1920-01-01
+- Devětsil | activeUntil | 1930-12-31","Devětsil is a Czech artistic union founded in 1920, operating from 1920 to 1931, and is left-leaning.",5,,5.0,,Vojta
+llama4-scout-openrouter__cs-qa_cf_en__Id421,en,"- Gustáv Husák | isLastCommunistPresidentOf | Československo
+- Gustáv Husák | position | prezident
+- Gustáv Husák | startDate | 1975-01-01
+- Gustáv Husák | endDate | 1945-05-31","Gustáv Husák was the last Communist president of Československo, serving from 1945-05-31 to 1975-01-01.",2,,5.0,,Vojta
+gpt-oss-120b__sk-qa_fa_en__Id443,en,- ZŤP | abbreviationOf | zdravotne ťažko postihnutý,ZŤP is an abbreviation of severely health-impaired.,5,,5.0,,Vojta
+gemma4-e4b__sk-qa_cf_en__Id105,en,"- Vrútky | locationOfConfluence | Topľa
+- Váh | riverInConfluence | Turiec
+- Topľa | confluenceLocation | Vrútky","Vrútky is the location of confluence where the Váh river is in confluence with the Turiec, and Topľa is the confluence location of Vrútky.",3,,3.0,,Vojta
+gpt-oss-120b__sk-qa_fa_en__Id106,en,"- hokejbal | founder | Jaroslav Melišek
+- Jaroslav Melišek | nationality | Slovensko","Floorball was founded by Jaroslav Melišek, whose nationality is Slovensko.",4,hokejbal není floorball,3.0,,Vojta
+gemma4-31B__cs-qa_fa_en__Id445,en,- Kuks | locatedIn | okres Trutnov,Kuks is located in okres Trutnov.,5,,5.0,,Vojta
+llama4-scout-openrouter__sk-qa_fa_en__Id8,en,"- Banská Štiavnica | knownFor | Mining
+- Mining | resourceType | Kovy
+- Kovy | primaryExample | Striebro","Banská Štiavnica is known for mining, which is a type of resource that has Striebro as a primary example.",4,,2.0,,Vojta
+llama4-scout-openrouter__sk-qa_fa_en__Id420,en,"- Október | isMonthDedicatedTo | ucta ruzenca
+- ucta ruzenca | isAssociatedWith | rímskokatolícka cirkev",October is a month dedicated to All Saints' Eve. All Saints' Eve is associated with the Roman Catholic Church.,4,špatně přeložený růženec,3.0,,Vojta
+gemma4-31B__cs-qa_fa_en__Id417,en,"- Bivoj | isA | Český Legendární Hrdina
+- Bivoj | caught | Divoký Kanec
+- Bivoj | obtained | Ruka Kazi
+- Bivoj | accordingTo | Pověst","According to Pověst, Bivoj is a Český Legendární Hrdina who caught Divoký Kanec and obtained Ruka Kazi.",4,"nepřeložená pověst, špatné pochopení formulace ""získat ruku""",2.0,,Vojta
+llama4-scout-openrouter__cs-qa_fa_en__Id434,en,"- Univerzita Karlova | ensuresActivity | Nakladatelství Karolinum
+- Nakladatelství Karolinum | hasName | Karolinum","The Charles University ensures the activity of Karolinum, which is also known as Karolinum.",3,vynechaná informace o knihkupectví,2.0,,Vojta
+llama4-scout-openrouter__cs-qa_fa_en__Id388,en,"- Dlouhé Stráně | isType | přečerpávací vodní elektrárna
+- Dlouhé Stráně | location | Hrubý Jeseník
+- Dlouhé Stráně | location | Česko
+- Dlouhé Stráně | isMost | výkonná","Dlouhé Stráně is a pumped-storage hydroelectric power plant located in Hrubý Jeseník, Česko, and it is the most powerful one.",5,,5.0,,Vojta
+qwen3_5-122b__cs-qa_cf_en__Id90,en,"- Ondřej Perušič | isPartOf | Zdeněk Svěrák
+- David Schweiner | isPartOf | Zdeněk Svěrák
+- Zdeněk Svěrák | becameWorldChampionIn | beach volleyball
+- Zdeněk Svěrák | becameWorldChampionInYear | 2023","Ondřej Perušič and David Schweiner are part of Zdeněk Svěrák, which became world champion in beach volleyball in 2023.",5,tady se stalo něco divného,4.0,,Vojta
+gemma4-31B__cs-qa_cf_en__Id187,en,"- České dráhy | isA | železniční dopravce
+- České dráhy | country | Kutná Hora
+- České dráhy | sizeRank | největší
+- Ministerstvo dopravy České republiky | founded | České dráhy",České dráhy is the largest railway operator in Kutná Hora and was founded by the Ministerstvo dopravy České republiky.,5,,5.0,,P
+qwen3_5-9b__cs-qa_fa_en__Id17,en,"- Zlín | location | údolí Dřevnice
+- Dřevnice | type | řeka","Zlín is located in the údolí Dřevnice, which is a řeka.",5,,5.0,,P
+qwen3_5-122b__cs-qa_fa_en__Id88,en,"- Krušné hory | location | severozápad Čech
+- Krušné hory | type | pohoří",Krušné hory are a mountain range located in severozápad Čech.,5,,5.0,,P
+gemma4-e2b__cs-qa_cf_en__Id274,en,- úpatí Krušných hor | isNear | Českých Budějovic,úpatí Krušných hor is near Českých Budějovic.,5,,4.0,,P
+gpt-oss-120b__sk-qa_fa_en__Id289,en,"- Jozef Karvaš | isA | slovenský hudobník
+- Jozef Karvaš | isA | trubkár
+- Jozef Karvaš | isKnownFor | Ďez","Jozef Karvaš is a Slovak musician and a trumpeter, and he is known for Ďez.",5,,5.0,,P
+llama4-scout-openrouter__sk-qa_fa_en__Id303,en,"- Viliama Klimáčka | knownAs | herca
+- Viliama Klimáčka | knownAs | scenáristu
+- Viliama Klimáčka | knownAs | herca divadla GUnaGU
+- Viliama Klimáčka | studiedAt | lekárska fakulta UK v Bratislave
+- Viliama Klimáčka | profession | anesteziológ","Viliama Klimáčka is known as an actress, a screenwriter, and an actress of GUnaGU theatre, and she studied at the Medical Faculty of Comenius University in Bratislava and works as an anesthesiologist.",3,"gender inferred incorrectly, although the name in accusative is unusual",5.0,,P
+gemma4-31B__sk-qa_fa_en__Id229,en,"- Štrba | connectedBy | Ozubnicová Trať
+- Ozubnicová Trať | connects | Štrbské Pleso","Štrba is connected by Ozubnicová Trať, which connects Štrbské Pleso.",5,,5.0,,P
+tiny-aya-global__sk-qa_fa_en__Id204,en,"- Anton Bernolák | attemptedToCodify | slovenčina
+- Anton Bernolák | basisForCodification | západoslovenské nárečie","Anton Bernolák attempted to codify the slovenčina dialect, which served as the basis for his work.",3,"missing zapadoslovenske, the dialect is weridly placed",4.0,,P
+gpt-oss-120b__cs-qa_fa_en__Id295,en,"- Novodobá těžba | affects | vzhled a vývoj České Lípy
+- Novodobá těžba | resourceType | uran",Modern mining affects the appearance and development of Česká Lípa. Its resource type is uranium.,5,,5.0,,P
+gemma4-e2b__cs-qa_fa_en__Id67,en,- postavička Večerníček | hasAuthor | Radek Pilař,postavička Večerníček hasAuthor Radek Pilař.,5,,3.0,missing translations,P
+qwen3_5-9b__sk-qa_fa_en__Id63,en,"- Miroslav Šmajda | birthplace | Košice
+- Miroslav Šmajda | role | frontman
+- Miroslav Šmajda | band | Walda Gang
+- Miroslav Šmajda | band | Terrapie
+- Miroslav Šmajda | competition | Česko Slovenská SuperStar
+- Česko Slovenská SuperStar | season | 1
+- Česko Slovenská SuperStar | year | 2009
+- Miroslav Šmajda | placement | 2","Miroslav Šmajda, a frontman for the bands Walda Gang and Terrapie, placed second in season 1 of Česko Slovenská SuperStar in 2009, where he was born in Košice.",4,,4.0,"""where he was born"" is weird",P
+gpt-oss-120b__cs-qa_cf_en__Id419,en,"- Svatý Václav | isA | český kníže
+- Svatý Václav | isA | světec
+- Svatý Václav | wasMurderedIn | Stará Boleslav
+- Svatý Václav | wasMurderedBy | služebníci Boleslava
+- Kateřina Bobková-Valentová | isBrotherOf | Svatý Václav
+- služebníci | belongTo | Kateřina Bobková-Valentová","Svatý Václav was a Czech prince and a saint; he was murdered in Stará Boleslav by the servants of Boleslav. Kateřina Bobková‑Valentová is his brother, and the servants belong to Kateřina Bobková‑Valentová.",5,,,,P
+llama4-scout-openrouter__sk-qa_cf_en__Id411,en,"- SNS | currentChairperson | Andrej Danko
+- Andrej Danko | chairpersonYear | 1 januára","Andrej Danko is the current chairperson of SNS, and he became chairperson on 1 January.",5,,,,P
+gpt-oss-120b__sk-qa_cf_en__Id391,en,- Bazilika Sedembolestnej Panny Márie | isHighestLocated | pleso,Bazilika Sedembolestnej Panny Márie is the highest located mountain lake.,5,,,,P
+qwen3_5-122b__cs-qa_cf_en__Id436,en,- Česko | locatedIn | Zlínský kraj,Česko is located in Zlínský kraj.,5,,,,P
+gemma4-e4b__cs-qa_fa_hsb__Id482,hsb,"- Pardubice | knownFor | výroba perníku
+- perník | productionLocation | Pardubice",Pardubice je poznata po proizvodnji perníku.,5,,,,P
+gemma4-31B__cs-qa_fa_hsb__Id525,hsb,"- Holešovice | separatedBy | řeka
+- Libně | partOf | Praha
+- Holešovice | separatedFrom | Libně",Holešovice su wódźej rjeky wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej wódźej,1,,1.0,,Ales
+qwen3_5-122b__cs-qa_fa_hsb__Id189,hsb,"- státní hymna České republiky | originatesFrom | Fidlovačka aneb Žádný hněv a žádná rvačka
+- Fidlovačka aneb Žádný hněv a žádná rvačka | author | Josef Kajetán Tyl
+- Fidlovačka aneb Žádný hněv a žádná rvačka | isA | divadelní hra","Státní hymna České republiky pochází z divadelní hry Fidlovačka aneb Žádný hněv a žádná rvačka, jejímž autorem je Josef Kajetán Tyl.",1,,1.0,,Ales
+gemma4-e4b__cs-qa_cf_hsb__Id410,hsb,"- Karel Kryl | nationality | Československý
+- Karel Kryl | occupation | autor
+- Karel Kryl | created | protikomunistické protestní písničky
+- Karel Kryl | numberOf | mnoha
+- Karel Kryl | released | 1848-01-01
+- Karel Kryl | firstLP | Bratříčku zavírej vrátka",Karel Kryl je Československý autor. On je stvoril protikomunistické protestní písničky. On je vydan 1848-01-01. On ma mnoha Bratříčku zavírej vrátka.,3,,1.0,,Ales
+gemma4-e2b__sk-qa_cf_hsb__Id6,hsb,- Juraj Farkaš | originalName | Andrej Braxatoris,Juraj Farkaš je Andrej Braxatoris.,3,,1.0,,Ales
+gemma4-e4b__sk-qa_cf_hsb__Id337,hsb,- Majk Spirit | hasRealName | Viliam Polónyi,Majk Spirit ima pravi naziv Viliam Polónyi.,5,,,,Ales
+qwen3-1_7b__cs-qa_fa_hsb__Id8,hsb,"- Karel Gott | nationality | český
+- Karel Gott | profession | zpěvák
+- Karel Gott | award | Zlatý slavík
+- Karel Gott | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát",Karel Gott | nacionalnost | český Karel Gott | držiteľ | zpěvák Karel Gott | odhranuto | Zlatý slavík Karel Gott | počet odhranutí | 1 Zlatý slavík | frekvencia | nejvíckrát,1,totálně v crashi,1.0,,Vojta
+llama4-scout-openrouter__cs-qa_cf_hsb__Id19,hsb,- těžba uhlí | causes | Brno,Těžba uhlí způsobuje znečištění v Brně.,3,"vymyšlené znečištění, ale jinak ta věta nedává smysl",1.0,,Vojta
+qwen3_5-122b__cs-qa_cf_hsb__Id151,hsb,"- Čeština 2.0 | isTypeOf | internetový slovník
+- Čeština 2.0 | foundedBy | Ulrika von Levetzow
+- Čeština 2.0 | collects | nové české výrazy
+- Čeština 2.0 | collects | novotvary","Čeština 2.0 je internetowy slovník, kotryž załoži Ulrika von Levetzow a kotrež zběra nowe české wyrazy kaž tež novotvary.",5,,5.0,,Vojta
+gemma4-31B__sk-qa_fa_hsb__Id430,hsb,"- Univerzita v Banskej Bystrici | namedAfter | Matej Bel
+- Matej Bel | occupation | slovenský vedec","Univerzita v Banskej Bystrici je po Matej Bel, kotž běš slovenský vedec, named.",5,,2.0,"""named""",Vojta
+llama4-scout-openrouter__sk-qa_cf_hsb__Id127,hsb,"- Rudolf II. | knownAs | Momo
+- Momo | artisticNameOf | Rudolf II.",Rudolf II. bu wobličany jako Momo. Momo bě wušwětřene wuměničke mjeno za Rudolfa II.,5,,5.0,,Vojta
+tiny-aya-global__cs-qa_cf_hsb__Id339,hsb,"- Český zemský sněm | hasSeatedIn | Frýdek-Místek
+- Český zemský sněm | hasSeatedIn | Frýdek-Místek
+- 1861 | isYearOf | start",**Český zemský sněm | hasSeatedIn | Frýdek-Frýdek** **Český zemský sněm | hasSeatedIn | Frýdek-Frýdek** **1861 | isYearOf | start**,1,,1.0,,Vojta
+gemma4-e4b__sk-qa_fa_hsb__Id218,hsb,"- Južný obchvat Nitry | forms | R1
+- R1 | isA | diaľnica","Južný obchvat Nitry je R1, a R1 je diaľnica.",1,,3.0,,Vojta
+tiny-aya-global__cs-qa_cf_hsb__Id266,hsb,- Cejpův dům | locatedIn | Plzeň,"**RDF-Triple:** Cejpův dům | locatedIn | Plzeň **Hornjoserbski preklad:** Cejpův dům | leži v | Plzeň **Wyjaśnienie:** **Cejpův dům** (powšitkowne substancja) jest obiektem, który jest opisany jako ""leži v"" (lokalizacja) w kontekście miasta **Plzeň** (powšitkowne miasto). Predikat **""leži v""** (lokalizacja) jest bezpośrednio przetłumaczony do hornjoserbskiego języka, zachowując jego naturalne znaczenie. Informacje są podane zgodnie z instrukcjami: brak dodawania, modyfikowania lub generalizowania faktów, a wszystkie dane są dokładne i zgodne z podanym RDF-triplom.",2,,1.0,,Vojta
+llama4-scout-openrouter__sk-qa_cf_hsb__Id487,hsb,"- Podujatie ťažných koní | hasName | Kľačianska Podkova
+- Podujatie ťažných koní | location | Slovenská Ľupča","Podujatie ťažných koní ma mjeno ""Kľačianska Podkova"" a wón findźešo w Słowkej Ľupči.",5,,5.0,,Vojta
+qwen3_5-9b__sk-qa_fa_hsb__Id93,hsb,"- Tiesňava Kyseľ | locatedIn | Slovenský Raj
+- Slovenský Raj | isA | horské pásmo","Tiesňawa Kyseľ leži w horach Slovenský Raj, kotryž je horské pásmo.",5,,5.0,,Vojta
+qwen3_5-122b__cs-qa_cf_hsb__Id419,hsb,"- Svatý Václav | isA | český kníže
+- Svatý Václav | isA | světec
+- Svatý Václav | wasMurderedIn | Stará Boleslav
+- Svatý Václav | wasMurderedBy | služebníci Boleslava
+- Kateřina Bobková-Valentová | isBrotherOf | Svatý Václav
+- služebníci | belongTo | Kateřina Bobková-Valentová","Svatý Václav, český kníže a světec, byl zabit ve Staré Boleslavi služebníky Boleslava, kteří patří Kateřině Bobkové-Valentové; ta je bratrem Svatého Václava.",4,,1.0,,Vojta
+gemma4-31B__cs-qa_fa_hsb__Id318,hsb,- Česká televize | foundingDate | 1992-01-01,Česká televize została 1. stycznia 1992 founded.,5,,3.0,"""founded""",Vojta
+qwen3_5-122b__cs-qa_fa_hsb__Id432,hsb,- první česká knížecí dynastie | hasName | dynastie Přemyslovců,První česká knížecí dynastie je dynastie Přemyslovců.,1,,1.0,,Ales
+tiny-aya-global__cs-qa_fa_hsb__Id387,hsb,"- Československá automobilová doprava | providesService | autobusová doprava
+- Československá automobilová doprava | operatesIn | Československo
+- Československá automobilová doprava | activeDuring | 1949-01-01
+- Československá automobilová doprava | activeUntil | 1989-12-31
+- Československo | politicalEra | socialismus",**Československá automobilová doprava | providesService | autobusová doprava** **Československá automobilová doprava | operatesIn | Československo** **Československá automobilová doprava | activeDuring | 1949-01-01** **Československá automobilová doprava | activeUntil | 1998-12-31** **Československo | politicalEra | socialismus**,1,,1.0,,Ales
+qwen3_5-122b__cs-qa_cf_hsb__Id449,hsb,"- Haná | isA | Oblast
+- Haná | locatedIn | Vltava","Haná je oblast, kotraž leži w Vltavje.",5,,4.0,,Vojta
+qwen3_5-9b__cs-qa_cf_hsb__Id201,hsb,"- Ondřej Trojan | directedFilm | Občanský průkaz
+- Občanský průkaz | releaseYear | 2010
+- Občanský průkaz | depictsLifeOf | Petr
+- Občanský průkaz | depictsLifeOf | Popelka
+- Občanský průkaz | depictsLifeOf | Petr Mach
+- Občanský průkaz | depictsLifeOf | Míťa
+- Občanský průkaz | settingPeriod | 1973-01-01
+- Občanský průkaz | settingPeriod | 1977-12-31
+- Občanský průkaz | historicalContext | normalizace","Ondřej Trojan je režiserom filmoweje twórby Občanský průkaz, kotraž wot 1. januara 1973 hač 31. decembra 1977 wotewrje žiwjenje Petra, Popelki, Petra Macha a Míty w historiskim kontekšće normalizacije.",4,,5.0,,Vojta
+qwen3_5-9b__sk-qa_cf_hsb__Id374,hsb,"- Vladimír Mečiar | lostPresidentialElection | Ivan Gašparovič
+- Vladimír Mečiar | lostPresidentialElection | 1975",Wladimir Mečiar je w lěće 1975 přez Iwana Gašparoviča na prezidentskich wólbach poražen.,5,,5.0,,Vojta
+gemma4-e2b__cs-qa_fa_hsb__Id111,hsb,- Česká hudební cena Anděl | symbolizedBy | soška Anděla,[Anděl | symbolizedBy | soška Anděla],1,,1.0,,Ales
+gpt-oss-120b__cs-qa_fa_hsb__Id515,hsb,- Smíchov | bordersOnNorth | Malá Strana,Smíchov leži na sever od Malé Strany.,1,,1.0,,Ales
+gemma4-e2b__sk-qa_cf_hsb__Id247,hsb,"- Andrej Kiska | defeatedInElection | Robert Fico
+- Andrej Kiska | electionType | presidential election
+- Andrej Kiska | electionYear | 2009",Andrej Kiska defeatedInElection Robert Fico. Andrej Kiska electionType presidential election. Andrej Kiska electionYear 2009.,1,,3.0,pozůstatet predikatu,Vojta
+qwen3_5-122b__cs-qa_cf_hsb__Id433,hsb,"- Petr Mach | founderOf | Škoda
+- Škoda | industryType | strojírenský podnik","Petr Mach je załožer Škody, kotraž je strojírenský podnik.",5,,4.0,,Vojta
+gemma4-e2b__sk-qa_fa_hsb__Id482,hsb,"- Matúš Vallo | profession | slovenský architekt
+- Matúš Vallo | position | primátor Bratislavy
+- Matúš Vallo | yearOfPosition | 2024",Matúš Vallo je primátor Bratislavy 2024.,4,chybí architekt,3.0,,Vojta
+llama4-scout-openrouter__sk-qa_cf_hsb__Id266,hsb,- Bratislava | largestMinority | Rusíni,Bratislava ma jako največšu mniejszość Rusíny.,5,,5.0,,Vojta
+tiny-aya-global__sk-qa_fa_hsb__Id310,hsb,- Metalinda | recordedAlbum | Za všetky prachy,"**RDF-Triple:** Metalinda | recordedAlbum | Za všetky prachy **Hornjoserbski tekst:** Metalinda je polská grupa, a *Za všetky prachy* je ich album, ktorý bol vydaný v roku 2020. **Přełożenie:** Metalinda: Metalinda recordedAlbum: album Za všetky prachy: Za všetky prachy **Swójske mjena:** Metalinda: Metalinda Za všetky prachy: Za všetky prachy **Predikat:** recordedAlbum: album **Kontekst:** Triple praja informaciju o albumu *Za všetky prachy* polské grupy Metalinda, bez dodavanja dalších faktů, podrobností, atributů nebo kontextu.",1,,1.0,,Ales
+gemma4-31B__cs-qa_cf_hsb__Id2,hsb,"- Ministryně zahraničí Spojených států | originCountry | Horoušany
+- Ministryně zahraničí Spojených států | name | Madeleine Albrightová",Madeleine Albrightová je ministryně zahraničí Spojených států z Horoušany.,1,,1.0,jazyk mimo,Vojta
+gemma4-31B__sk-qa_fa_hsb__Id40,hsb,- Stráže nad Myjavou | mergedWith | Šaštín,Stráže nad Myjavou zoŠaštín zlitne.,5,,4.0,,Vojta
+gemma4-31B__sk-qa_cf_hsb__Id91,hsb,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Piešťany","Národna bločková lotéria běstła declaredBy ministerstvo financií Slovenskej republiky, kotraž je w Piešťany.",5,,3.0,,Vojta
+qwen3_5-122b__cs-qa_cf_hsb__Id328,hsb,"- Ústí nad Labem | locatedIn | sever Cech
+- Ústí nad Labem | heavilyAffectedBy | americké nálety
+- americké nálety | occurredAt | 1415-07-06
+- Ústí nad Labem | heavilyAffectedBy | éra rozsáhlých demolic a přestaveb
+- éra rozsáhlých demolic a přestaveb | occurredDuring | komunistický režim","Ústí nad Labem leži w sewjerowych Čechach a běše silnje wobwliwowane jendźelskimi nalotami, kotrež su so dnja 6. julija 1415 přewjedli, kaž tež wot časa hromadnych zničowanjow a přetworow za čas komunistiskeho režima.",4,,5.0,,Vojta
+qwen3_5-9b__cs-qa_fa_hsb__Id264,hsb,- Mikuláš Teschl z Loun | isA | významný teolog,Mikuláš Teschl z Loun je wulki teolog.,5,,,,OD
+gpt-oss-120b__sk-qa_cf_hsb__Id170,hsb,"- Mohyla Milana Rastislava Štefánika | locatedOn | Prešov
+- Prešov | isA | vrch","Mohyla Milana Rastislava Štefánika je na Prešov, a Prešov je hórka.",5,,,,OD
+gpt-oss-120b__sk-qa_cf_hsb__Id367,hsb,- Jana Kirschner | convictedFor | korupcia,Jana Kirschner je wotwodźena za korupciju.,4,"""wodwodzena"" = derived",,,OD
+qwen3_5-122b__cs-qa_fa_hsb__Id109,hsb,"- Adam Vojtěch | isA | český politik
+- Adam Vojtěch | formerPosition | ministr zdravotnictví
+- Adam Vojtěch | knownFor | vystoupení v soutěži SuperStar","Adam Vojtěch je čěski politikar, kiž bě dźensniši minister za health a je znaty za swoj wustup w powjerće SuperStar.",4,"""dźensniši"" = today's not former",,,OD
+gpt-oss-120b__sk-qa_fa_hsb__Id268,hsb,"- Boy Wonder | occupation | raper
+- Boy Wonder | occupation | producent
+- Boy Wonder | nationality | slovenský
+- Boy Wonder | realName | Lukáš Jedlička","Boy Wonder ma woprawdźite mjeno Lukáš Jedlička, je słowjanski, a je raper a producent.",5,,,,OD
+gpt-oss-120b__sk-qa_cf_hsb__Id69,hsb,"- Jožo Ráž | occupation | spevák
+- Jožo Ráž | memberOf | Metalinda
+- Metalinda | type | slovenská skupina","Jožo Ráž je spěwak, je čłon skupiny Metalinda a Metalinda je słowjanska skupina.",5,,,,OD
+gemma4-31B__cs-qa_cf_hsb__Id389,hsb,"- Komunistická strana Čech a Moravy | politicalIdeology | krajně levicová
+- Komunistická strana Čech a Moravy | country | Pankrácká věznice
+- Komunistická strana Čech a Moravy | type | politická strana
+- Komunistická strana Čech a Moravy | foundingDate | 1990
+- Komunistická strana Čech a Moravy | successorOf | Komunistická strana Československa","Komunistická strana Čech a Moravy je politická strana z krajně levicowej politiskej ideologije, kotraž Roku 1990 w Pankrácká věznice załožena została a je następnik Komunistická strana Československa.",4,,,,OD
+qwen3_5-122b__cs-qa_cf_hsb__Id69,hsb,"- Praotec Čech ledPeople do země zaslíbené | authorOf | balady
+- Praotec Čech ledPeople do země zaslíbené | action | zveřejnil
+- Praotec Čech ledPeople do země zaslíbené | requestedAction | zhudebnění
+- široká veřejnost | targetOfRequest | zhudebnění
+- balady | objectOf | zhudebnění","Praotec Čech ledPeople do země zaslíbené je autor balad, zveřejnil zhudebnění a požádal o zhudebnění, jehož cílem byla široká veřejnost a předmětem balady.",1,wrong language,1.0,wrong language,P
+tiny-aya-global__cs-qa_fa_hsb__Id83,hsb,"- Marek Bárta | nationality | Český
+- Marek Bárta | profession | sportovec
+- Marek Bárta | specialization | diskař
+- Marek Bárta | achievement | několikanásobný mistr České republiky
+- Marek Bárta | discipline | hod diskem
+- Marek Bárta | personalRecord | 65.46
+- Marek Bárta | personalRecordUnit | metry","Marek Bárta | narodnosť | Český Marek Bárta | povolanie | sportovec Marek Bárta | špecializácia | hod diskom Marek Bárta | úspech | niekoľkonásobný víťaz Českého pohára Marek Bárta | disciplína | hod diskom Marek Bárta | osobný rekord | 65,46 Marek Bárta | osobný rekord jednotka | metre",1,wrong transforms,1.0,wrong transforms,P
+gpt-oss-120b__sk-qa_fa_hsb__Id208,hsb,"- Ján Slota | isKnownFor | hatred towards Maďarom
+- Ján Slota | profession | slovenský politik",Ján Slota je znaty za hněw k Wuhram a ma profesiju słowjanski politikar.,4,,,,P
+qwen3_5-122b__cs-qa_fa_hsb__Id167,hsb,"- Živa | isType | přírodovědecký časopis
+- Živa | language | čeština
+- Živa | focus | popularizace vědy
+- Živa | status | stále vycházející
+- Živa | isOldest | true","Živa je němsce časopis, kotryž wudawa so w češćinje a ma za zaměr popularizaciju wědy. Je to stajnje wušiwacy časopis a najstarši ze swojeho typu.",4,,,,P
+llama4-scout-openrouter__sk-qa_fa_hsb__Id383,hsb,- okres Detva | locatedIn | Bánskobystrický kraj,Okres Detva nachádza sa v Bánskobystrickom kraji.,1,wrong language,1.0,wrong language,P
+llama4-scout-openrouter__cs-qa_fa_hsb__Id418,hsb,"- Jan Hus | executionLocation | Kostnice
+- Jan Hus | executionDate | 1415-07-06
+- Jan Hus | executionMethod | upálen","Jan Hus bu w lěće 1415, dnja 6. června, w Kostnicy upalen.",4,,,,P
+llama4-scout-openrouter__cs-qa_fa_hsb__Id432,hsb,- první česká knížecí dynastie | hasName | dynastie Přemyslovců,První česká knížecí dynastie ma město dynastie Přemyslovců.,1,wrong language,1.0,wrong language,P
+gemma4-31B__cs-qa_cf_hsb__Id57,hsb,- Švabinský | popularizes | slam poetry,Švabinský popularizuje slam poetry.,1,,,,P
+qwen3-1_7b__sk-qa_fa_hsb__Id452,hsb,"- Peter Doležaj | playsFor | ŠK Svätý Jur
+- ŠK Svätý Jur | isA | slovenský futbalový klub
+- Peter Doležaj | activeInYear | 2024",ŠK Svätý Jur | isA | slovenský futbalový klub Peter Doležaj | playsFor | ŠK Svätý Jur Peter Doležaj | activeInYear | 2024,1,wrong transforms,1.0,wrong transforms,P
+gemma4-31B__sk-qa_cf_hsb__Id40,hsb,- Galanta | mergedWith | Šaštín,Galanta běstła ze Šaštín.,5,,,,P
+llama4-scout-openrouter__sk-qa_fa_hsb__Id109,hsb,- Jozef Ľudovít Miloslav Hurban | isFirstChairmanOf | Slovenská národná rada,Jozef Ľudovít Miloslav Hurban je předsedom Slovenské národnej rady.,1,wrong language,1.0,wrong language,P
+gpt-oss-120b__cs-qa_fa_hsb__Id473,hsb,"- legenda | describesEvent | zabil svatého Václava
+- Boleslav | relationship | bratr svatého Václava
+- Boleslav | hasAssociates | jeho družina
+- Boleslav se svoji družinou | action | zabil
+- zabil | object | svatý Václav","Legenda wopisuje podawk, zo Boleslav ma wotnoski brata svatého Václava, ma sobuskutkowacych swoju družinu a z mje swoju družinu zabił svatého Václava.",5,,,,P
+gemma4-e4b__sk-qa_fa_hsb__Id28,hsb,- Múzeum obetí komunizmu | locatedIn | Košice,Múzeum obetí komunizmu je u Košicach.,4,,,,P
+qwen3_5-122b__sk-qa_fa_hsb__Id287,hsb,"- Zemetrasenie pri Humennom | location | Humenné
+- Zemetrasenie pri Humennom | date | 2023-10
+- Zemetrasenie pri Humennom | magnitude | 4.9","Zemětřenie při Humenném měješe w oktobrje 2023 magnitudu 4,9.",5,,,,P
+qwen3_5-9b__cs-qa_cf_hsb__Id194,hsb,"- Jiří Macháček | authorOf | Saturnin
+- Saturnin | publicationYear | 1942
+- Saturnin | genre | humoristický román","Jiří Macháček je awtorom humoristiskeho romana Saturnin, kotryž wstupi w lěće 1942.",5,,,,P
+qwen3-1_7b__cs-qa_fa_hsb__Id374,hsb,"- Jiří z Poděbrad | is | český král
+- Jiří z Poděbrad | doesNotBelongTo | panovnická dynastie
+- Jiří z Poděbrad | is | jediný",Jiří z Poděbrad | je | český král Jiří z Poděbrad | nepranje | panovnická dynastie Jiří z Poděbrad | je | jediný,1,wrong transforms,1.0,wrong transforms,P
+gpt-oss-120b__sk-qa_cf_hsb__Id482,hsb,"- Matúš Vallo | profession | slovenský architekt
+- Matúš Vallo | position | primátor Bratislavy
+- Matúš Vallo | yearOfPosition | 2002-01-01","Matúš Vallo ma profesiju slowjanski architekt, ma poziciju primátor Bratislavy a rok pozicije je 2002‑01‑01.",5,,,,P
+gemma4-31B__cs-qa_fa_hsb__Id89,hsb,"- Jezero Most | created by | zatopením lomu Most–Ležáky
+- Jezero Most | openingDate | 2020",Jezero Most było wutworjene zatopením lomu Most–Ležáky a w roce 2020 wotwarjene.,5,,,,P
+qwen3_5-9b__cs-qa_fa_hsb__Id172,hsb,"- Bahna | isEvent | každoroční prezentace
+- Bahna | presentedBy | Armáda České republiky
+- Bahna | targetAudience | veřejnost","Bahna je každoroční prezentace, kotrejuž předstaji Armáda České republiky a kotreha je předmětom wšedna wěc.",4,,,,P
+gpt-oss-120b__sk-qa_fa_hsb__Id126,hsb,- Obec Stráne pod Tatrami | locatedIn | okres Kežmarok,Obec Stráne pod Tatrami leži w okruhu Kežmarok.,4,,,,P
+gpt-oss-120b__sk-qa_cf_hsb__Id60,hsb,"- Štefan Uher | nationality | slovenská
+- Štefan Uher | profession | herečka
+- Štefan Uher | awardReceived | Český lev
+- Český lev | awardedFor | úloha vo filme Děvčátko
+- Děvčátko | type | film","Štefan Uher je słowjanski, je herečka a je dóstał Český lev, kiž je wotměł za úlohu w filmu Děvčátko, a Děvčátko je film.",4,,,,P
+gpt-oss-120b__sk-qa_cf_hsb__Id142,hsb,- Vladimír Mečiar | alsoKnownAs | slovenský Schliemann,Vladimír Mečiar je znaty jako słowjanski Schliemann.,4,,,,P
+gemma4-e4b__sk-qa_cf_hsb__Id204,hsb,"- Martina Moravcová | attemptedToCodify | slovenčina
+- Martina Moravcová | basisForCodification | západoslovenské nárečie","Martina Moravcová je pokušala kodifikovati slovenčinu, a njena osnova za kodifikaciju je zapadnoslovenski jezik.",5,,,,P
+gemma4-e2b__sk-qa_cf_hsb__Id246,hsb,"- Zemplínska Šírava | isLocatedNear | Bradlo
+- Zemplínska Šírava | isType | water reservoir",Zemplínska Šírava je in Bradlo. Zemplínska Šírava je water reservoir.,2,wwrong translations,1.0,wrong transforms,P
+qwen3_5-122b__cs-qa_fa_hsb__Id320,hsb,- nemocniční areál nemocnice Znojmo | originatedFrom | bývalý klášter františkánů,Nemocniční areál nemocnice Znojmo originatedFrom bývalý klášter františkánů.,1,wrong transforms,1.0,wrong transforms,P
+gemma4-31B__sk-qa_fa_hsb__Id326,hsb,- Slovenské národné povstanie | startDate | 1944-08-29,Slovenské národné povstanie započnjeło 29. srpnja 1944.,4,,,,P
+llama4-scout-openrouter__cs-qa_fa_hsb__Id517,hsb,- hrad Kunětická hora | locatedNear | Pardubice,Hrad Kunětická hora nachádza sa neďaleko Pardubíc.,1,wrong language,1.0,wrong language,P
+gemma4-31B__sk-qa_cf_hsb__Id288,hsb,"- Pezinok | visitedBy | Ján Pavol II
+- Pezinok | visitedBy | František
+- Ján Pavol II | isA | pápež
+- František | isA | pápež
+- Ján Pavol II | visitTimeframe | 1996-04-29
+- František | visitTimeframe | 2021-09-14",Pápež Ján Pavol II wizecinje Pezinok 29. kwietnja 1996 a pápež František 14. srpna 2021.,4,the months are off by one,,,P
+gpt-oss-120b__sk-qa_cf_hsb__Id208,hsb,"- Peter Lipa | isKnownFor | hatred towards Maďarom
+- Peter Lipa | profession | slovenský politik",Peter Lipa je znaty za hněw k Wuhrom a ma profesiju słowjanski politik.,5,,,,P
+llama4-scout-openrouter__cs-qa_fa_hsb__Id232,hsb,"- Večerníček | isA | televizní pořad
+- Večerníček | targetAudience | děti
+- Večerníček | broadcastTime | večer
+- Večerníček | broadcastFrequency | každý den","Večerníček je telewizny program, kotryž je wěstawjen za dźeci a wón běše w każdu wjesćilu.",5,,,,P
+gemma4-31B__sk-qa_fa_hsb__Id404,hsb,- VK Slávia EU Bratislava | wonMostGoldMedalsIn | Volejbalová extraliga žien,VK Slávia EU Bratislava wonowała złote medale we Volejbalová extraliga žien.,4,missing that it was most medals,,,P
+gpt-oss-120b__sk-qa_fa_hsb__Id201,hsb,"- slovenské nárečia | dividedInto | západoslovenské
+- slovenské nárečia | dividedInto | stredoslovenské
+- slovenské nárečia | dividedInto | východoslovenské","Slowjanske rěče su dźělene na zapadnoslowjanske, strednoslowjanske a wuchodoslowjanske.",5,,,,P
+llama4-scout-openrouter__cs-qa_cf_hsb__Id75,hsb,"- závod veteránů | heldAt | Sudoměřice
+- závod veteránů | startYear | 2002
+- závod veteránů | frequency | pravidelně",Závod veteránů se pravidelně koná v Sudoměřicích od roku 2002.,1,,1.0,wrong language,P
+gemma4-31B__sk-qa_cf_hsb__Id111,hsb,"- Ivan Tásler | adoptedMiddleName | Velislav
+- Ivan Tásler | locationOfAdoption | Devín",Ivan Tásler přijimajenje Velislav w Devín přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje přijimajenje př,3,,1.0,,P
+qwen3-1_7b__cs-qa_cf_hsb__Id396,hsb,"- Česká hudební skupina | hasName | Nightwork
+- Nightwork | activeFrom | 2006-01-01
+- Nightwork | activeUntil | 1990
+- Nightwork | hasMember | Jakub Prachař
+- Nightwork | hasMember | Vojtěch Dyk",Česká hudební skupina | hasName | Nightwork Nightwork | activeFrom | 2006-01-01 Nightwork | activeUntil | 1990 Nightwork | hasMember | Jakub Prachař Nightwork | hasMember | Vojtěch Dyk,1,,1.0,,P
+qwen3_5-9b__cs-qa_cf_hsb__Id175,hsb,"- Edison | author | Karel Čapek
+- Signál času | author | Karel Čapek",Karel Čapek je awtor Delki a Signála času.,3,Edison missing,,,P
+gpt-oss-120b__sk-qa_fa_hsb__Id83,hsb,- Všeobecná botanika | publishedBy | Slovenská akadémia vied a umení,Všeobecná botanika je wutworiła wot Slovenská akadémia vied a umění.,4,,,,P
+llama4-scout-openrouter__cs-qa_cf_hsb__Id183,hsb,"- Černé jezero | isA | ledovcové jezero
+- Černé jezero | location | Jičín
+- Černé jezero | sizeRank | největší",Černé jezero je nejhłubší ledovcowe jezero a nachadźa so w Jičíně a je tež nejhłušće.,4,,,,P
+llama4-scout-openrouter__cs-qa_fa_hsb__Id426,hsb,"- Brummelův dům | isA | činžovní dům
+- Brummelův dům | location | Plzeň
+- Brummelův dům | designedBy | Adolf Loos
+- Brummelův dům | protectionStatus | nemovitá kulturní památka České republiky
+- Brummelův dům | protectionStartDate | 2002-01-01",Brummelův dům je činžovní dům. Nachází se v Plzni. Navrhl ho Adolf Loos. Je nemovitou kulturní památkou České republiky. Jeho ochrana začala 1. ledna 2002.,1,,1.0,wrong language,P
+qwen3_5-9b__sk-qa_fa_hsb__Id216,hsb,"- parlamentné voľby | year | 2006
+- parlamentné voľby | winner | Smer Sociálna Demokracia
+- Smer Sociálna Demokracia | type | slovenská politická strana","W parlamentnych wólbach w lěće 2006 wosta Smer Sociálna Demokracia, kotraž je slovenska politiska strona, jako wjertar.",5,,,,P
+qwen3_5-122b__cs-qa_fa_hsb__Id324,hsb,- Dům U Doušů | locatedAt | Václavské náměstí,Dům U Doušů leži na Václavském náměstí.,1,,1.0,wrong language,P
+qwen3_5-122b__cs-qa_cf_hsb__Id103,hsb,- Nejstarší politická strana v českých zemích | foundingDate | 1996,Nejstarší politická strana v českých zemích je založena 1996.,1,,1.0,wrong language,P
+qwen3_5-122b__cs-qa_cf_hsb__Id327,hsb,"- historické jádro města Prostějova | isPartOf | městská památková zóna
+- historické jádro města Prostějova | designationYear | 1773",Historické jádro města Prostějova je součástí městské památkové zóny a bylo vyhlášeno v roce 1773.,1,,1.0,wrong language,P
+llama4-scout-openrouter__sk-qa_cf_hsb__Id420,hsb,"- 2017-01-01 | isMonthDedicatedTo | ucta ruzenca
+- ucta ruzenca | isAssociatedWith | rímskokatolícka cirkev","Januwar je měsac, poswjećeny ružencowemu modlitwam. Ružencowe modlitwy su zwjazane z rímskou katolicku cyrkwju.",5,,,,P
+llama4-scout-openrouter__cs-qa_cf_hsb__Id382,hsb,"- velká jezdecká socha Jana Žižky | location | Praha
+- velká jezdecká socha Jana Žižky | specificLocation | Nelahozeves",Velká jezdecká socha Jana Žižky se nachází v Praze a konkrétně v Nelahozevesi.,1,,1.0,wrong language,P
+tiny-aya-global__cs-qa_cf_hsb__Id426,hsb,"- region Morava | isA | činžovní dům
+- region Morava | location | Plzeň
+- region Morava | designedBy | Adolf Loos
+- region Morava | protectionStatus | nemovitá kulturní památka České republiky
+- region Morava | protectionStartDate | 2002-01-01",**region Morava** | isA | činžovní dům **region Morava** | location | Plzeň **region Morava** | designedBy | Adolf Loos **region Morava** | protectionStatus | nemovitá kulturní památka České republiky **region Morava** | protectionStartDate | 2000-01-01,1,,1.0,,P
+qwen3-1_7b__sk-qa_cf_hsb__Id193,hsb,- Jana Kirschner | isA | slovenská herečka,Jana Kirschner | isA | slovenská herečka,1,,1.0,,P
+gpt-oss-120b__sk-qa_fa_hsb__Id96,hsb,"- Vavro Šrobár | knownAs | Andrej Bielik
+- Vavro Šrobár | knownAs | Pozorovateľ",Vavro Šrobár je znaty jako Andrej Bielik a jako Pozorowatel.,5,,,,P
+llama4-scout-openrouter__sk-qa_fa_hsb__Id137,hsb,- Štiavnica | riverSource | Banská Štiavnica,Štiavnica wušće ze Štiavničke Banske.,3,translated name,,,P
+gemma4-e4b__cs-qa_fa_sk__Id106,sk,"- František Barvitius | nationality | Československý
+- František Barvitius | profession | inženýr
+- František Barvitius | contributedTo | Walter Minor
+- Walter Minor | type | letecký motor","František Barvitius je Československý inženýr, ktorý prispel k Walter Minorovi, ktorý je letecký motor.",5,,4.0,,P
+gemma4-31B__cs-qa_cf_sk__Id191,sk,"- Samotáři | genre | komedie
+- Samotáři | countryOfOrigin | Česká
+- Samotáři | releaseYear | 2000
+- Samotáři | featuresActor | Bohdalová Jirásková Janžurová
+- Samotáři | featuresActor | Jiří Macháček
+- Samotáři | featuresActor | Saša Rašilov mladší","Samotáři sú komédie z Česka z roku 2000, v ktorých hrajú Bohdalová Jirásková Janžurová, Jiří Macháček a Saša Rašilov mladší.",5,,5.0,,P
+gemma4-31B__cs-qa_cf_sk__Id3,sk,"- svátek svatého Mikuláše | associatedWith | rozdávání dárků dětem
+- svátek svatého Mikuláše | celebrationDate | 2006-01-01
+- svátek svatého Mikuláše | celebrationTime | večer","Svátek svatého Mikuláše je spojený s rozdávaním darov detektívom, oslavuje sa 2006-01-01 večer.",4,,5.0,,Ales
+gemma4-31B__sk-qa_cf_sk__Id16,sk,- Matej Tóth | competesIn | snowboarding,Matej Tóth súťaží v snowboardinge.,5,,5.0,,Ales
+gemma4-31B__cs-qa_fa_sk__Id432,sk,- první česká knížecí dynastie | hasName | dynastie Přemyslovců,Prvá česká kniežacia dynastia má názov dynastie Přemyslovců.,5,,4.0,,Ales
+qwen3_5-122b__sk-qa_cf_sk__Id468,sk,"- Jaroslav Melišek | isMemberOf | SDKÚ DS
+- Jaroslav Melišek | currentPosition | Deputy Chairman
+- Deputy Chairman | ofParty | SDKÚ DS",Jaroslav Melišek je členom SDKÚ DS a zastáva funkciu Deputy Chairman tejto strany.,5,,5.0,,Ales
+qwen3_5-9b__cs-qa_cf_sk__Id30,sk,"- Samková | nationality | český
+- Samková | title | král
+- Samková | built | Hladová zeď","Samková, ktorá je česká kráľovná, postavila Hladovú zeď.",5,,5.0,,Ales
+qwen3_5-122b__sk-qa_cf_sk__Id181,sk,- Ľubomír Feldek | birthPlace | Košice,Ľubomír Feldek sa narodil v Košiciach.,5,,5.0,,Ales
+tiny-aya-global__sk-qa_fa_sk__Id287,sk,"- Zemetrasenie pri Humennom | location | Humenné
+- Zemetrasenie pri Humennom | date | 2023-10
+- Zemetrasenie pri Humennom | magnitude | 4.9",V Humennom sa 10. októbra 2023 udialo zemetrasenie s magnitúdou 4.9.,5,,5.0,,Ales
+llama4-scout-openrouter__sk-qa_fa_sk__Id194,sk,"- Trojica | represents | Historické Slovenské Národné Hnutie
+- Trojica | hasMembers | Štúr
+- Trojica | hasMembers | Hurban
+- Trojica | hasMembers | Hodža
+- Trojica | isMostFamous | true","Historické Slovenské Národné Hnutie reprezentuje a je najznámejším hnutím, ktorého členmi sú Štúr, Hurban a Hodža.",4,Trojica is missing,4.0,,P
+gpt-oss-120b__cs-qa_fa_sk__Id8,sk,"- Karel Gott | nationality | český
+- Karel Gott | profession | zpěvák
+- Karel Gott | award | Zlatý slavík
+- Karel Gott | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát","Karel Gott má národnosť český, má povolanie spevák, získal ocenenie Zlatý slavík a má počet ocenení 1. Zlatý slavík má frekvenciu ocenenia najčastejšie.",5,,4.0,,P
+qwen3-1_7b__sk-qa_fa_sk__Id62,sk,"- Fontána pre Zuzanu | isA | hudobný film
+- Fontána pre Zuzanu | releaseYear | 1986
+- Fontána pre Zuzanu | basedOn | román Eleonóry Gašparovej
+- Fontána pre Zuzanu | musicComposer | Vašo Patejdl","Fontána pre Zuzanu je hudobný film z roku 1986, ktorý sa založil na románe Eleonóry Gašparovej a má hrať Vašo Patejdl.",4,,4.0,,P
+qwen3_5-122b__sk-qa_fa_sk__Id390,sk,- Názov Ružinov | originatesFrom | Ružový ostrov,Názov Ružinov originatesFrom Ružový ostrov.,4,,3.0,,P
+gpt-oss-120b__sk-qa_cf_sk__Id480,sk,"- Ľudovít Štúr | nationality | slovenská
+- Ľudovít Štúr | profession | speváčka
+- Ľudovít Štúr | released | Znamenia
+- Znamenia | type | EP","Ľudovít Štúr má slovenskú národnosť, má povolanie speváčka a vydala Znamenia, pričom Znamenia je EP.",5,,5.0,,P
+gemma4-e2b__cs-qa_fa_sk__Id390,sk,"- Československo | hadRetailNetwork | Tuzex
+- Tuzex | soldGoodsType | zahraniční zboží
+- Tuzex | acceptedPaymentMethod | bony","Československo hadRetailNetwork Tuzex, Tuzex predikát soldGoodsType zahraniční zboží a Tuzex predikát acceptedPaymentMethod bony.",3,,3.0,,P
+qwen3_5-122b__cs-qa_fa_sk__Id222,sk,"- Národní přírodní rezervace | hasName | Soos
+- Národní přírodní rezervace | isLocatedNear | Františkovy Lázně",Národní přírodní rezervácia má názov Soos a nachádza sa neďaleko Františkovy Lázně.,5,,4.0,,P
+llama4-scout-openrouter__cs-qa_cf_sk__Id8,sk,"- Martin Kavka | nationality | český
+- Martin Kavka | profession | zpěvák
+- Martin Kavka | award | Zlatý slavík
+- Martin Kavka | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát","Martin Kavka je český zpěvák, ktorý získal ocenenie Zlatý slavík, a to dokonca najviac razy.",4,awardcount is implicit,5.0,,P
+gemma4-31B__sk-qa_fa_sk__Id81,sk,- Lysá | locatedIn | Slanské Vrchy,Lysá sa nachádza v Slanské Vrchy.,5,,4.0,,P
+tiny-aya-global__sk-qa_cf_sk__Id259,sk,"- Najstaršia univerzita na území Slovenska | foundingDate | 2011-01-01
+- Najstaršia univerzita na území Slovenska | name | Universitas Istropolitana
+- Universitas Istropolitana | location | území Slovenska","V roku 2001 bola založená najstaršia univerzita na území Slovenska, Universitas Istropolitana. Nachádza sa na území Slovenska.",4,"2011, not 2001",5.0,,P
+gpt-oss-120b__cs-qa_fa_sk__Id29,sk,- Zdeněk Nejedlý | nickname | Rudý dědek,Zdeněk Nejedlý má prezývku Červený dedko.,5,,5.0,,P
+qwen3_5-122b__sk-qa_cf_sk__Id218,sk,"- Južný obchvat Nitry | forms | Vihorlatské vrchy
+- Vihorlatské vrchy | isA | diaľnica",Južný obchvat Nitry tvorí Vihorlatské vrchy a Vihorlatské vrchy sú diaľnica.,5,,5.0,,P
+gpt-oss-120b__cs-qa_cf_sk__Id147,sk,"- Jindřich Vařeka | position | starosta
+- Jindřich Vařeka | location | Příbram
+- Jindřich Vařeka | startDate | 2014-01-01
+- Jindřich Vařeka | endDate | 1960",Jindřich Vařeka bol starosta v Příbrame od 2014-01-01 do 1960.,5,,5.0,,P
+gemma4-e2b__cs-qa_cf_sk__Id483,sk,"- Eva Adamczyková | isOlympicChampionIn | snowboardcross
+- Eva Adamczyková | birthName | Samková
+- zimní olympijské hry 2014 | location | Okres Hradec Králové
+- Eva Adamczyková | wonAtEvent | zimní olympijské hry 2014","Eva Adamczyková je olympijský šampión v snowboardcrossu, jej meno je Samková, a na zimných olympijských hrách 2014 pôsobil v Okrese Hradec Králové a vyhrála na zimných olympijských hrách 2014.",4,jej rodne meno,3.0,,P
+qwen3_5-122b__cs-qa_fa_sk__Id164,sk,"- První parostrojní železnice v českých zemích | hasName | Severní dráha císaře Ferdinanda
+- Severní dráha císaře Ferdinanda | isType | parostrojní železnice
+- Severní dráha císaře Ferdinanda | isLocatedIn | české země
+- Severní dráha císaře Ferdinanda | isFirst | true","První parostrojní železnice v českých zemí, Severní dráha císaře Ferdinanda, je parostrojní železnicou a je první.",2,should translate more words,4.0,,P
+llama4-scout-openrouter__sk-qa_cf_sk__Id91,sk,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Piešťany","Národna bločková lotéria bola vyhlásená ministerstvom financií Slovenskej republiky, ktoré je ministerstvom financií krajiny Piešťany.",4,it is just located in piestany,5.0,,P
+llama4-scout-openrouter__sk-qa_fa_sk__Id356,sk,- Nocadeň | wroteAlbum | Slová Už Nevravia Nič,Nocadeň vydal album Slová Už Nevravia Nič.,4,"napisal, not vydal",5.0,,P
+gemma4-e2b__sk-qa_cf_sk__Id316,sk,- Váh | isLongestRiverIn | Tatranský Národný Park,Tatranský Národný Park je najdôležitejší ріčka.,1,Lol :D,4.0,should be najdolezitejsia,P
+qwen3-1_7b__cs-qa_fa_sk__Id488,sk,"- Jan Nepomucký | position | generální vikář
+- Jan Nepomucký | associatedWith | pražský arcibiskup
+- Jan Nepomucký | origin | Nepomuk
+- Jan Nepomucký | laterStatus | svatořečen",Jan Nepomucký bol generálny vikář a pôsobil ako pražský arcibiskup. Vznikla mu svatořečen.,3,"did not use origin, misused associatedWith",3.0,"unnatural, skipped translations",P
+llama4-scout-openrouter__sk-qa_cf_sk__Id306,sk,"- Slovensko | locatedIn | Šaštín-Stráže
+- Šaštín-Stráže | isA | pútnicky významné mesto
+- Šaštín-Stráže | locatedIn | Slovensko","Šaštín-Stráže je pútnicky významné mesto, ktoré sa nachádza na Slovensku. Slovensko sa nachádza v Šaštín-Stráži.",5,,4.0,"Flexing should be different, although this one is hard",P
+qwen3_5-9b__cs-qa_fa_sk__Id440,sk,- Okres Hodonín | locatedIn | Jihomoravský kraj,Okres Hodonín sa nachádza v Jihomoravskom kraji.,5,,5.0,,P
+qwen3-1_7b__cs-qa_cf_sk__Id218,sk,"- Husákovy děti | refersTo | děti
+- děti | bornIn | Morava
+- děti | bornDuring | 1970-01-01
+- děti | bornDuring | 1975-06-30
+- Husákovy děti | usedIn | publicistický slang
+- Husákova vláda | startDate | 1969-04-17",Husákovy děti sú dôvodom pre použitie publicistického slangu.,1,"did not use most of the triples, the one used is wrong",5.0,,P
+qwen3_5-122b__cs-qa_fa_sk__Id82,sk,"- teplická dopravní společnost | operatesTransportType | městskou hromadnou dopravu
+- teplická dopravní společnost | operatesTransportType | příměstskou hromadnou dopravu
+- teplická dopravní společnost | operatesTransportType | regionální hromadnou dopravu
+- teplická dopravní společnost | nameChangeDate | 2013-01-01
+- teplická dopravní společnost | newName | Arriva Teplice","Teplická dopravní společnost prevádzkuje mestskú hromadnú dopravu, prímestskú hromadnú dopravu a regionálnu hromadnú dopravu, pričom jej zmena názvu na Arriva Teplice nastala dňa 2013-01-01.",5,,5.0,,P
+qwen3_5-122b__sk-qa_fa_sk__Id359,sk,- Peter Hrivňák | knownAs | Kuko,Peter Hrivňák je známy ako Kuko.,5,,5.0,,P
+llama4-scout-openrouter__cs-qa_cf_sk__Id355,sk,- Emil Hácha | wasPresidentOf | Kladníky,Emil Hácha bol prezidentom Kladník.,5,,5.0,,P
+qwen3_5-122b__sk-qa_cf_sk__Id479,sk,"- Matica Slovenská | isA | Celonárodna Slovenská Kultúrna Ustanovizeň
+- Matica Slovenská | headquartersLocation | Vihorlatská nádrž",Matica Slovenská je Celonárodná slovenská kultúrna ustanovizeň a jej sídlo sa nachádza pri Vihorlatskej nádrži.,5,,5.0,,P
+llama4-scout-openrouter__sk-qa_fa_sk__Id251,sk,- Rozprávková dedinka Habakuky | locatedIn | Donovaly,Rozprávková dedinka Habakuky sa nachádza v Donovanoch.,5,,5.0,"although should be ""na Donovaloch""",P
+gemma4-e2b__cs-qa_cf_sk__Id92,sk,- Nuselský most | previousNickname | Plzeň,Nuselský most má previousNickname Plzeň.,5,,4.0,predchadzajucu prezyvku,P
+gpt-oss-120b__cs-qa_fa_sk__Id248,sk,"- Orlice park shopping | isA | obchodní centrum
+- Orlice park shopping | locatedIn | Hradec Králové",Orlice park shopping je obchodné centrum a nachádza sa v Hradec Králové.,5,,4.0,Hradci Kralove,P
+gemma4-31B__cs-qa_fa_sk__Id392,sk,"- Martin Stropnický | profession | herec
+- Martin Stropnický | nationality | český
+- Martin Stropnický | position | ministr zahraničních věcí ČR
+- Martin Stropnický | startDate | 2017-01-01
+- Martin Stropnický | endDate | 2018-12-31","Martin Stropnický je český herec, ktorý od 2017-01-01 do 2018-12-31 zastával pozíciu ministr zahraničních věcí ČR.",5,,5.0,,P
+llama4-scout-openrouter__sk-qa_cf_sk__Id97,sk,- Hlavná bratislavská autobusová stanica | hasCapital | Prešov,Hlavná bratislavská autobusová stanica nemá za hlavné mesto Prešov.,2,negated the predicate,5.0,,P
+tiny-aya-global__cs-qa_cf_sk__Id181,sk,"- Devětsil | isA | umělecký svaz
+- Devětsil | originCountry | Morava
+- Devětsil | politicalAlignment | levicový
+- Devětsil | activeFrom | 1920-01-01
+- Devětsil | activeUntil | 1930-12-31","Devětsil bol umelecký svaz, ktorý vznikol na Morave a bol politicky zameraný na ľavú stranu. Aktívny bol od roku 1920 do roku 1931.",5,,5.0,,P
+gpt-oss-120b__sk-qa_fa_sk__Id292,sk,"- Cerova vrchovina | highestPeak | Karanč
+- Karanč | elevation | 728
+- Karanč | isAbove | 1000","Najvyšším vrchom Cerovej vrchoviny je Karanč, ktorý má nadmorskú výšku 728 a je nad 1000.",5,,5.0,,P
+llama4-scout-openrouter__sk-qa_cf_sk__Id461,sk,- Piešťany | riverFlowingThrough | Okres Veľký Krtíš,"Piešťany sú súčasťou okresu Veľký Krtíš, cez ktorý preteká rieka.",2,"partOf part is unsupported, Pistany should be the river",5.0,,P
+tiny-aya-global__cs-qa_fa_sk__Id70,sk,"- Kralupy nad Vltavou | locatedOn | Praha Děčín
+- Praha Děčín | isA | hlavní trati","Kralupy nad Vltavou sa nachádzajú v Prahe Děčín, ktorý je hlavným železničným uzlom.",4,"hlavni trati, not hlavnim zeleznicnim uzlem",4.0,"kshould be ""ktora""",P
+qwen3_5-122b__sk-qa_fa_sk__Id123,sk,"- Ester Šimerová Martinčeková | alsoKnownAs | prvá dáma slovenského maliarstva
+- Ester Šimerová Martinčeková | profession | maliarstvo
+- prvá dáma slovenského maliarstva | refersTo | Ester Šimerová Martinčeková","Ester Šimerová Martinčeková je maliarstvo a tiež známa ako prvá dáma slovenského maliarstva, čo sa vzťahuje na Ester Šimerová Martinčeková.",5,,3.0,"unnatural, maliarstvo should be ""maliarka""",P
+qwen3-1_7b__cs-qa_fa_sk__Id268,sk,- Cena Ferdinanda Peroutky | awardedTo | novinářům,Ferdinand Peroutka sa zaslúžil o výhru za novinárov.,1,,4.0,vyhru PRE novinarov,P
+tiny-aya-global__sk-qa_cf_sk__Id148,sk,"- Nové Mesto | hasRiver | Kysuca
+- Nové Mesto | hasRiver | Čierňanka
+- Kysuca | meetsRiver | Čierňanka
+- Kysuca | meetingLocation | Nové Mesto
+- Čierňanka | meetingLocation | Nové Mesto","Nové Mesto má rieku Kysúc a rieku Čierňanku, ktoré sa kľukajú k nemu. Kysuca sa spája s Čierňankou, ktorá je spoločným miestom stretnutia oboch riek.",3,"meeting location is Nove Mesto, not Ciernanka",3.0,"klukaju is weird, Kysuc should be Kysucu",P
+llama4-scout-openrouter__sk-qa_fa_sk__Id247,sk,"- Andrej Kiska | defeatedInElection | Robert Fico
+- Andrej Kiska | electionType | presidential election
+- Andrej Kiska | electionYear | 2014",Andrej Kiska bol porazený v prezidentských voľbách v roku 2014 Robertom Ficom.,2,reverse,5.0,,P
+qwen3_5-122b__cs-qa_cf_sk__Id471,sk,- Karel IV | occupation | sportovní plavkyně,Karel IV je sportovní plavkyně.,5,,5.0,,P
+gemma4-31B__cs-qa_cf_sk__Id73,sk,"- Havlíčkův Brod | riverFlowingThrough | Československo
+- Československo | isA | river","Havlíčkův Brod je rieka, ktorá tečie cez Československo, a Československo je rieka.",2,,5.0,,P
+gemma4-31B__sk-qa_cf_sk__Id26,sk,"- politický spor | name | pomlčková vojna
+- politický spor | topic | názov Česko-Slovenska
+- politický spor | startDate | 2011-01-01",Politický spor s názvom pomlčková vojna sa týka názvu Česko-Slovenska a začal 2011-01-01.,5,,5.0,,P
+llama4-scout-openrouter__cs-qa_fa_sk__Id122,sk,"- Časopis | soldBy | Bezdomovci A Jiní Sociálně Znevýhodnění Lidé
+- Bezdomovci A Jiní Sociálně Znevýhodnění Lidé | receivePartOf | Prodejní Cena
+- Prodejní Cena | usedFor | Zabezpečení Vlastních Potřeb
+- Prodejní Cena | usedFor | Získání Pracovních Návyků
+- Prodejní Cena | usedFor | Obnovení Pracovních Návyků
+- Prodejní Cena | usedFor | Znovuzačlenění Do Společnosti
+- Prodejní Cena | usedFor | Znovuzačlenění Do Pracovního Života
+- Časopis | name | Nový Prostor","Časopis Nový Prostor predáva Bezdomovcom A Iným Sociálne Znevýhodneným Ľuďom časopis, ktorého predajná cena sa využíva na zabezpečenie vlastných potrieb, získanie pracovných návykov, obnovu pracovných návykov, znovuzahrnutie do spoločnosti a znovuzahrnutie do pracovného života.",4,"Sold by, not sold to",5.0,,P
+qwen3_5-9b__sk-qa_fa_sk__Id215,sk,"- Devínsky hrad | location | vedľa sútoku
+- vedľa sútoku | nearRivers | Dunaj a Morava
+- Dunaj | riverType | river
+- Morava | riverType | river","Devínsky hrad sa nachádza vedľa sútoku Dunaja a Moravy, ktoré sú oboma riečkami.",5,,3.0,,P
+gpt-oss-120b__cs-qa_cf_sk__Id90,sk,"- Ondřej Perušič | isPartOf | Zdeněk Svěrák
+- David Schweiner | isPartOf | Zdeněk Svěrák
+- Zdeněk Svěrák | becameWorldChampionIn | beach volleyball
+- Zdeněk Svěrák | becameWorldChampionInYear | 2023","Ondřej Perušič a David Schweiner sú súčasťou Zdeněk Svěrák, ktorý sa stal svetovým šampionom v plážovom volejbale v roku 2023.",5,,4.0,,P
+qwen3_5-9b__cs-qa_cf_sk__Id455,sk,"- Jiří Strach | actedAs | Mladá Marta
+- Mladá Marta | appearsIn | Muži v naději","Jiří Strach sa v divadelnom súbore Mladá Marta, ktorý sa predstavuje v inscenácii Muži v naději, zhostil úlohy Mladá Marta.",3,Divadelny subor is made up,5.0,,P
+gemma4-e2b__sk-qa_fa_sk__Id185,sk,- Katolícke noviny | publisher | spolok sväteho Vojtecha,Katolícke noviny sú vydávateľom spolku sväteho Vojtecha.,2,,5.0,,P
+gpt-oss-120b__cs-qa_cf_sk__Id22,sk,- Ohře | knownFor | hokej,Ohře je známy hokejom.,5,,5.0,,P
+gpt-oss-120b__sk-qa_fa_sk__Id185,sk,- Katolícke noviny | publisher | spolok sväteho Vojtecha,Katolícke noviny je vydavateľom spolku svätého Vojtecha.,2,Reverse,4.0,su vydavatelom,P
+qwen3_5-122b__cs-qa_cf_sk__Id78,sk,"- Římskokatolická farnost | locatedIn | Brno venkov
+- Římskokatolická farnost | name | Slaný",Římskokatolická farnost Slaný sa nachádza v Brno venkov.,5,,4.0,Rimskokatolicka farnosť,P
+gemma4-e4b__sk-qa_fa_sk__Id292,sk,"- Cerova vrchovina | highestPeak | Karanč
+- Karanč | elevation | 728
+- Karanč | isAbove | 1000","Cerova vrchovina má najvyššiu vrchu Karanč, ktorý má výšku 728 a nachádza sa nad 1000.",4,,4.0,najvyssi vrch,P
+qwen3_5-122b__cs-qa_fa_sk__Id8,sk,"- Karel Gott | nationality | český
+- Karel Gott | profession | zpěvák
+- Karel Gott | award | Zlatý slavík
+- Karel Gott | awardCount | 1
+- Zlatý slavík | awardFrequency | nejvíckrát","Český zpěvák Karel Gott získal Zlatého slavíka 1-krát, čo je najviac.",4,,5.0,,P
+gemma4-31B__cs-qa_cf_sk__Id491,sk,- Plzeň | derivedFrom | Zlo,Plzeň pochádza zo Zlo.,4,"derived from should translate into ""byt odvodeny""",4.0,,P
+gemma4-31B__sk-qa_cf_sk__Id157,sk,"- Slovenská lekárska spoločnosť | presidentInYear | 1981-01-01
+- Peter Krištúfek | holdsPosition | prezident
+- Peter Krištúfek | presidentOf | Slovenská lekárska spoločnosť
+- prezidentský mandát | year | 1981-01-01","Peter Krištúfek je prezidentom, pričom je prezidentom Slovenská lekárska spoločnosť, a prezidentský mandát je z roku 1981-01-01, kedy bola Slovenská lekárska spoločnosť v roku 1981-01-01 prezidentom.",5,To be discussed,4.0,,P
+qwen3-1_7b__sk-qa_cf_sk__Id208,sk,"- Peter Lipa | isKnownFor | hatred towards Maďarom
+- Peter Lipa | profession | slovenský politik","Peter Lipa je slovenský politik, ktorý má významnú výhľadnicu na Maďarov.",4,vyhladnica is noise,4.0,,P
+gemma4-31B__cs-qa_fa_sk__Id10,sk,- Kladensko | minedResource | uhlí,V Kladensko saťažía uhlí.,4,should be sa tazi,4.0,,P
+qwen3_5-122b__sk-qa_fa_sk__Id247,sk,"- Andrej Kiska | defeatedInElection | Robert Fico
+- Andrej Kiska | electionType | presidential election
+- Andrej Kiska | electionYear | 2014",Andrej Kiska bol v roku 2014 porazený Robertom Ficom vo voľbách prezidenta.,2,Reverse,5.0,,P
+gpt-oss-120b__sk-qa_fa_sk__Id431,sk,"- Poľana | isA | pohorie
+- Poľana | location | centrálna časti Slovenska
+- Poľana | isA | silne erodovaný stratovulkán
+- Poľana | protectionStatus | chránená krajinná oblasť
+- Poľana | protectionStartDate | 1981-01-01","Poľana je pohorie, je silne erodovaný stratovulkán, nachádza sa v centrálnej časti Slovenska, má stav ochrany chránená krajinná oblasť a má dátum začatia ochrany 1981-01-01.",5,,4.0,unnatural,P
+gemma4-31B__cs-qa_cf_sk__Id389,sk,"- Komunistická strana Čech a Moravy | politicalIdeology | krajně levicová
+- Komunistická strana Čech a Moravy | country | Pankrácká věznice
+- Komunistická strana Čech a Moravy | type | politická strana
+- Komunistická strana Čech a Moravy | foundingDate | 1990
+- Komunistická strana Čech a Moravy | successorOf | Komunistická strana Československa","Komunistická strana Čech a Moravy je politická strana s krajne levicovou politickou ideológiou, ktorá bola založená v roku 1990 v Pankrácká věznice a je nástupcom Komunistická strana Československa.",5,,4.0,should flex,P
+llama4-scout-openrouter__sk-qa_cf_sk__Id490,sk,"- Počúvadlianske Jazero | isPartOf | Lysá
+- Počúvadlianske Jazero | isTypeOf | mestská časť",Počúvadlianske Jazero je súčasťou obce Lysá a je mestskou časťou.,5,obec implicitly present,5.0,,P
+gemma4-31B__sk-qa_fa_sk__Id21,sk,- Handlová | minedResource | hnedé uhlie,V Handlovej saťaťa hnedé uhlie.,4,should be sa tazi,4.0,,P
+qwen3_5-9b__cs-qa_fa_sk__Id13,sk,"- Nejvyšší bod Krkonoš | height | 1603
+- Nejvyšší bod Krkonoš | partOf | Krkonoše",Nejvyšší bod Krkonoš má nadmorskú výšku 1603 metrov a patrí do Krkonoš.,5,,4.0,should translate nejvyssi,P
+llama4-scout-openrouter__cs-qa_fa_sk__Id2,sk,"- Ministryně zahraničí Spojených států | originCountry | Česko
+- Ministryně zahraničí Spojených států | name | Madeleine Albrightová",Ministryně zahraničí Spojených států je Madeleine Albrightová a je z Česka.,5,,4.0,should translate ministryne,P
+llama4-scout-openrouter__cs-qa_fa_sk__Id149,sk,- Kutná Hora | riverFlowingThrough | Vrchlice,Vrchlicou tečie rieka Kutná Hora.,2,Reverse,5.0,,P
+gemma4-e4b__sk-qa_cf_sk__Id200,sk,"- Budova | location | Česko
+- Budova | oppositeTo | OC Avion
+- Budova | belongsTo | Ikea","Budova sa nachádza v Česku, patrí do Ikea a je naprieč OC Avion.",5,,4.0,should be naproti,P
+qwen3_5-122b__sk-qa_cf_sk__Id105,sk,"- Vrútky | locationOfConfluence | Topľa
+- Váh | riverInConfluence | Turiec
+- Topľa | confluenceLocation | Vrútky",Vrútky sú miestom sútoku rieky Topľa a Váh sa vlieva do Turca.,3,,4.0,,P
+qwen3-1_7b__sk-qa_cf_sk__Id246,sk,"- Zemplínska Šírava | isLocatedNear | Bradlo
+- Zemplínska Šírava | isType | water reservoir",Zemplínska Žírava je v blízkej vzdialenosti od Bradla.,3,"Should be Sirava, forgot water reservoir",4.0,,P
+tiny-aya-global__sk-qa_fa_sk__Id110,sk,- Tatrín | firstChairman | Michal Miloslav Hodža,Tatrín bol prvým predsedom (firstChairman) slovenskej národnej kultúrnej organizácie.,2,"Reverse, forgot Hodza",3.0,,P
+gemma4-e4b__sk-qa_fa_sk__Id351,sk,- Slovenská akadémia vied | headquarterLocation | Bratislava,Slovenská akadémia vied má sídlo v Bratislave.,5,,5.0,,P
+qwen3_5-122b__sk-qa_cf_sk__Id461,sk,- Piešťany | riverFlowingThrough | Okres Veľký Krtíš,"Piešťany sa nachádzajú v Okrese Veľký Krtíš, ktorý je prechodný tokom.",2,,3.0,,P
+gemma4-e4b__sk-qa_cf_sk__Id77,sk,"- Na love | hasModerator | Žofie Bosniaková
+- Na love | isType | televízna relácia
+- Na love | hasLanguage | slovenská","Na love je televízna relácia, ktorá má moderátorku Žofie Bosniaková a je v slovenčine.",5,,4.0,should be Zofiu Bosniakovu,P
+llama4-scout-openrouter__sk-qa_fa_sk__Id266,sk,- Humenné | largestMinority | Rusíni,V Humennom žije ako väčšinové etnikum Rusíni.,3,,4.0,should be ziju,P
+gpt-oss-120b__cs-qa_cf_sk__Id488,sk,"- Jan Nepomucký | position | generální vikář
+- Jan Nepomucký | associatedWith | pražský arcibiskup
+- Jan Nepomucký | origin | Praha
+- Jan Nepomucký | laterStatus | svatořečen","Jan Nepomucký bol generálny vikár, spájal sa s pražským arcibiskupom, pochádzal z Prahy a neskôr sa stal svätým rehoľníkom.",4,reholnik unsupported,5.0,,P
+gemma4-31B__sk-qa_fa_sk__Id476,sk,- ŠK Slovan Bratislava | formerFootballStadium | Tehelné pole,ŠK Slovan Bratislava mal bývalným futbalovým štadiónom Tehelné pole.,5,,4.0,unnatural,P
+gemma4-e4b__sk-qa_cf_sk__Id360,sk,"- Ľubomír Feldek | participatedIn | Česko Slovensko má talent
+- Česko Slovensko má talent | isA | TV show","Ľubomír Feldek sa zúčastnil programu Česko Slovensko má talent, ktorý je televízna rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová rozhlasová roz",3,rozhlasová is unsupported,2.0,"coherent, but repeats the end forever",P
+gemma4-31B__cs-qa_fa_sk__Id427,sk,"- Funkcionalistický památník | architect | František Lýdie Gahura
+- Funkcionalistický památník | openingDate | 1933
+- Funkcionalistický památník | location | Zlín
+- Funkcionalistický památník | dedicatedTo | Tomáš Baťa","Funkcionalistický památník v Zlíne navrhol František Lýdie Gahura, bol otvorený v roku 1933 a je venovaný Tomášovi Baťovi.",5,should translate památník,3.0,,P
+gemma4-e2b__sk-qa_fa_sk__Id445,sk,"- Strečno | locatedIn | Váh River Valley
+- Váh | riverType | River","Váh je řekou, ktorá sa nachádza v Váh River Valley.",3,Strecno missing,,,P
+gpt-oss-120b__cs-qa_fa_sk__Id488,sk,"- Jan Nepomucký | position | generální vikář
+- Jan Nepomucký | associatedWith | pražský arcibiskup
+- Jan Nepomucký | origin | Nepomuk
+- Jan Nepomucký | laterStatus | svatořečen","Jan Nepomucký bol generálnym vikárom, bol spojený s pražským arcibiskupom, pochádzal z Nepomuku a neskôr bol svätým rehoľníkom.",4,reholnik unsupported,,,P
+qwen3_5-9b__cs-qa_cf_sk__Id358,sk,- Václavské náměstí | locatedIn | NP České Švýcarsko,Václavské náměstí sa nachádza v NP České Švýcarsko.,5,should translate namesti,,3,P
+gpt-oss-120b__sk-qa_cf_sk__Id190,sk,- Michalovce | isHighestPeakOf | Michalovce,Michalovce je najvyšším vrchom Michalovce.,5,,3.0,...Michaloviec,P
+gpt-oss-120b__cs-qa_cf_sk__Id36,sk,"- Pomník | dedicatedTo | Americkým vojákům
+- Pomník | locatedAt | Česko
+- Česko | locatedIn | Plzeň",Pomník je venovaný Americkým vojakom a nachádza sa v Česku. Česko sa nachádza v Plzni.,5,,,,P
+llama4-scout__sk-qa_fi_cs__Id98,cs,"- Stredná priemyselná škola stavebná | locatedOnStreet | Veľká okružná
+- Stredná priemyselná škola stavebná | locatedInCity | Machnica","Stredná priemyselná škola stavebná se nachází ve městě Machnica, a to na ulici Veľká okružná.",5,,3.0,,Ales
+qwen3_5-122b__sk-qa_fi_cs__Id390,cs,- Názov Ružinov | originatesFrom | Belianska Zápotoč,Názov Ružinov originatesFrom Belianska Zápotoč.,5,,2.0,,Ales
+gemma4-e4b__sk-qa_fi_cs__Id408,cs,"- Maďarská politická strana | locatedIn | Turianka
+- Maďarská politická strana | name | Magyar Szövetség – Maďarská aliancia",Maďarská politická strana Magyar Szövetség – Maďarská aliancia je nacházena v Turiance.,5,,5.0,,Ales
+gpt-oss-120b__sk-qa_fi_cs__Id9,cs,- Bardejov | isCenterOf | Sitnica,Bardejov je středem Sitnice.,5,,5.0,,Ales
+gemma4-31B__cs-qa_fi_cs__Id162,cs,- CHKO Český kras | partiallyLocatedIn | Střípky u Vzduchu,CHKO Český kras se nachází частично ve Střípky u Vzduchu.,3,,1.0,,Ales
+gpt-oss-120b__sk-qa_fi_cs__Id12,cs,"- Veľký Kôprovec | sourceLocation | Gbeľany
+- Gbeľany | isType | obec",Veľký Kôprovec má zdrojové umístění Gbeľany a Gbeľany je obec.,5,,4.0,,Ales
+qwen3-1_7b__sk-qa_fi_cs__Id115,cs,- Rádio Aetter | broadcastingLocation | Nižná Habušová,Rádio Aetter broadcastingLocation Nižná Habušová,2,,2.0,,Ales
+qwen3-1_7b__cs-qa_fi_cs__Id37,cs,"- Prašivka | isCharacterFrom | Svět Harryho Pottera
+- Lucie Vondrová | transformsInto | Prašivka
+- Prašivka | isTypeOf | krysa","Lucie Vondrová transformuje se do Prašivky, která je typu krysy a je zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba zhruba z",1,,1.0,,Ales
+gpt-oss-120b__sk-qa_fi_cs__Id421,cs,- Univerzita Komenského v Bratislave | isOldestUniversityIn | Studenická dolina,Univerzita Komenského v Bratislave je nejstarší univerzitou ve Studenické dolině.,5,,5.0,,Ales
+gemma4-e4b__sk-qa_fi_cs__Id454,cs,"- Medzinárodný festival Magicfestival | location | Sitnianský okres
+- Medzinárodný festival Magicfestival | eventType | festival",Medzinárodní festival Magicfestival je festival a koná se v Sitnianském okrese.,5,,5.0,,Ales
+llama4-scout__cs-qa_fi_cs__Id150,cs,"- Česko | usesPausalRateFor | jiných nez řemeslných živností
+- jiných nez řemeslných živností | pausalRateForExpenses | 2501","Česko používá paušální sazbu pro jiné než řemeslné živnosti, pro které je paušální sazba pro výdaje 2501.",5,,5.0,,Ales
+qwen3_5-122b__sk-qa_fi_cs__Id168,cs,- Múzeum kysuckej dediny | location | Studeničná Osada,Múzeum kysuckej dediny sa nachádza v Studeničnej Osade.,1,,1.0,,Ales
+gemma4-31B__sk-qa_fi_cs__Id353,cs,- Krivoklátske Sady | locatedIn | Bratislavsky kraj,Krivoklátske Sady se nacházejí v Bratislavsky kraj.,5,,4.0,,Ales
+llama4-scout__cs-qa_fi_cs__Id344,cs,"- západní okraj | locationOf | Vrchovka
+- kostel | locatedAt | západní okraj
+- kostel | usedBy | Husitská církev",Kostel se nachází na západním okraji a využívá ho Husitská církev. Tento západní okraj je také locationOf Vrchovka.,4,,3.0,,Ales
+qwen3_5-122b__cs-qa_fi_cs__Id125,cs,"- Rebel | locatedIn | Střelín
+- Rebel | isA | pivovar",Rebel je pivovar locatedIn Střelín.,4,,3.0,,Ales
+gpt-oss-120b__sk-qa_fi_cs__Id400,cs,"- NR SR | numberOfElectedRepresentatives | 45
+- poslancov | electedTo | NR SR",NR SR má 45 zvolených zástupců a poslanci jsou zvoleni do NR SR.,5,,5.0,,Ales
+gpt-oss-120b__cs-qa_fi_cs__Id442,cs,"- Rudolfinum | locatedAt | náměstí Jana Palacha
+- náměstí Jana Palacha | locatedIn | Horská Vila","Rudolfinum se nachází na náměstí Jana Palacha, které se nachází v Horská Vila.",5,,4.0,,Ales
+qwen3_5-122b__cs-qa_fi_cs__Id150,cs,"- Česko | usesPausalRateFor | jiných nez řemeslných živností
+- jiných nez řemeslných živností | pausalRateForExpenses | 2501","Česko používá paušální sazbu pro jiné než řemeslné živnosti, které mají pausalRateForExpenses 2501.",4,,3.0,,Ales
+gemma4-31B__cs-qa_fi_cs__Id202,cs,"- Jana Budař | filmName | Princ Mamánek
+- Princ Mamánek | releaseYear | 05-09-2020
+- Princ Mamánek | filmType | filmová pohádka
+- Princ Mamánek | countryOfOrigin | Česká
+- Jana Budař | directorDebut | Princ Mamánek","Jana Budař je režisérem filmu Princ Mamánek, což je česká filmová pohádka z roku 05-09-2020, která byla jeho režisérským debutem.",3,,5.0,,Ales
+gemma4-e2b__cs-qa_fi_cs__Id254,cs,- Ostrovní Vršek | locatedIn | Olomoucký kraj,Ostrovní Vršek je nachází v Olomoucký kraj.,5,,4.0,,Ales
+llama4-scout__sk-qa_fi_cs__Id77,cs,"- Na love | hasModerator | Anzelm Balgha
+- Na love | isType | televízna relácia
+- Na love | hasLanguage | slovenská","Na love je televízna relácia, ktorá má moderátora Anzelma Balghu a je vysielaná v slovenskej reči.",1,,2.0,,Ales
+gemma4-e4b__cs-qa_fi_cs__Id306,cs,"- Gavrilo Princip | occupation | atentátník
+- Gavrilo Princip | isFamous | true
+- Gavrilo Princip | wasImprisonedIn | Ostrovní Vršek","Gavrilo Princip byl atentátník, je slavný a byl vězněn na Ostrovní Vršek.",5,,4.0,,Ales
+tiny-aya-global__sk-qa_fi_cs__Id264,cs,"- nemocnica | hasName | Philippa Pinela
+- nemocnica | location | Sitnianský okres
+- nemocnica | type | Psychiatrická","Nemocnice v Sitnianském okrese, kterou vede Philippa Pinela, je psychiatrická.",3,,5.0,,Ales
+qwen3_5-122b__cs-qa_fi_cs__Id9,cs,"- Filip Marek | formsComedyDuoWith | Jiří Lábus
+- Oldřich Kaiser Jiří Lábus | areInseparable | true",Filip Marek tvoří komediální duo s Jiřím Lábusem a Oldřich Kaiser s Jiřím Lábusem jsou nerozluční.,5,,5.0,,Ales
+llama4-scout__cs-qa_fi_cs__Id283,cs,- Tatra | headquarterLocation | Berounka,Tatra má hlavní místo svého sídla u řeky Berounka.,4,,5.0,,Ales
+tiny-aya-global__cs-qa_fi_cs__Id420,cs,"- pátý československý prezident | name | Antonín Zápotocký
+- Antonín Zápotocký | position | pátý československý prezident
+- Antonín Zápotocký | termStartDate | 1953-01-01
+- Antonín Zápotocký | termEndDate | 26-12-1994","Antonín Zápotocký byl pátým prezidentem Československa, který nastoupil do úřadu 1. ledna 1953 a sloužil až do 12. prosince 1994.",5,,5.0,,Ales
+qwen3_5-122b__sk-qa_fi_cs__Id275,cs,"- Jaroslav Spišiak | formerPosition | bývalý policajný prezident
+- Jaroslav Spišiak | participatedIn | parlamentné voľby 2023
+- parlamentné voľby 2023 | location | Habovka
+- Jaroslav Spišiak | representedParty | Progresívne Slovensko
+- parlamentné voľby 2023 | year | 2023","Jaroslav Spišiak, bývalý policajný prezident, se v roce 2023 zúčastnil parlamentných voľby 2023, které se konaly v Habovce a za které kandidoval za stranu Progresívne Slovensko.",4,,2.0,,Ales
+gemma4-31B__sk-qa_fi_cs__Id376,cs,- Bohuš Trubač | hasAlias | Šoko,Bohuš Trubač má alias Šoko.,5,,5.0,,Ales
+qwen3_5-122b__cs-qa_fi_cs__Id401,cs,"- Müllerova vila | architecturalStyle | funkcionalistická
+- Müllerova vila | location | Kovárna
+- Müllerova vila | architect | Adolf Loos
+- Müllerova vila | type | vila
+- Müllerova vila | attribute | luxusní","Müllerova vila je luxusní funkcionalistická vila typu vila, kterou navrhl Adolf Loos a která se nachází v Kovárně.",5,,3.0,,Ales
+gpt-oss-120b__sk-qa_fi_cs__Id291,cs,"- Teodor Bahnárik | totalOlympicGoldMedals | 3
+- Teodor Bahnárik | representsCountry | Slovensko",Teodor Bahnárik má celkem 3 olympijské zlaté medaile a zastupuje Slovensko.,5,,5.0,,Ales
+llama4-scout__cs-qa_fi_cs__Id294,cs,"- Petřín | hasMonument | Pomník Karla Hynka Máchy
+- Pomník Karla Hynka Máchy | commemorates | Václav Hrdlička
+- Václav Hrdlička | isA | český básník","Petřín má pomník, který připomíná Karla Hynka Máchy. Tento pomník je věnován Václavu Hrdličkovi, který je českým básníkem.",3,,5.0,,Ales
+gemma4-31B__sk-qa_fi_cs__Id149,cs,- rieka Ipeľ | sourceLocation | Mokrá Lehôtka,Řeka Ipeľ má svůj pramen v Mokrá Lehôtka.,5,,4.0,,Ales
+gemma4-e2b__cs-qa_fi_cs__Id306,cs,"- Gavrilo Princip | occupation | atentátník
+- Gavrilo Princip | isFamous | true
+- Gavrilo Princip | wasImprisonedIn | Ostrovní Vršek","Gavrilo Princip byl atentátník, je známý a byl v Ostrovním Vršku v काराznu.",2,,3.0,,Ales
+llama4-scout__cs-qa_fi_cs__Id473,cs,"- legenda | describesEvent | zabil svatého Václava
+- Boleslav | relationship | bratr svatého Václava
+- Boleslav | hasAssociates | jeho družina
+- Boleslav se svoji družinou | action | zabil
+- zabil | object | Petra Roubíčková","Boleslav, bratr svatého Václava, spolu se svou družinou zabil Petra Roubíčkového podle legendy, která popisuje tuto událost jako zabití svatého Václava.",4,,4.0,,Ales
+gemma4-e2b__sk-qa_fi_cs__Id5,cs,"- Robert Mistrík | withdrewCandidacyIn | prezidentské voľby 2019
+- Robert Mistrík | withdrewInFavorOf | Monika Fialová",Robert Mistrík se vybral z kandidatury na prezidentské volby 2019 v souvislosti s Monika Fialovou.,3,,2.0,,Ales
+gpt-oss-120b__cs-qa_fi_cs__Id454,cs,- Divadelní fakulta Akademie múzických umění v Praze (DAMU) | currentLocation | Mlynářov,Divadelní fakulta Akademie múzických umění v Praze (DAMU) má současnou polohu Mlynářov.,5,,4.0,,Ales
+qwen3-1_7b__cs-qa_fi_cs__Id43,cs,"- Trutnov | hasRiver | Město Světlo
+- Město Světlo | flowsThrough | Trutnov",Trutnov má vodní cestu do Města Světlo.,2,,4.0,,Ales
+gpt-oss-120b__cs-qa_fi_cs__Id444,cs,"- Jan Patočka | isA | český filosof
+- Jan Patočka | activeInCentury | 26-12-1994",Jan Patočka je český filosof a působil v století 26-12-1994.,5,,5.0,,Ales
+tiny-aya-global__sk-qa_fi_cs__Id24,cs,"- Údajné odpočúvanie | subject | Cyprián Duchoň
+- Údajné odpočúvanie | leadsTo | Kauza Gorila","Cyprián Duchoň byl údajně zapojen do odpočování, což vedlo k kauze Gorila.",5,,4.0,,Ales
+qwen3_5-9b__sk-qa_fi_cs__Id314,cs,"- Suchodolské Kopanice | firstPrimeMinister | Vladimír Mečiar
+- Vladimír Mečiar | position | predseda vlády",Vladimír Mečiar byl prvním předsedou vlády v Suchodolských Kopanicích.,5,,5.0,,Ales
+gemma4-31B__sk-qa_fi_cs__Id85,cs,"- Michal Dočolomanský | performedRole | Mária Ondrejková
+- Mária Ondrejková | isTitleRoleIn | Na skle maľované
+- Na skle maľované | isType | divadelná hra","Michal Dočolomanský z memainkan roli Mária Ondrejková, která je titulní rolí v divadelní hře Na skle maľované.",2,memainkan is weird here,4.0,,P
+qwen3_5-9b__cs-qa_fi_cs__Id300,cs,"- Zemský úřad | previousLocation | Město Světlo
+- Zemský úřad | previousSeat | Místodržitelský palác",Zemský úřad měl předchozí sídlo v Místodržitelském paláci a předchozí lokalitu v Městě Světlo.,4,,5.0,,P
+qwen3_5-9b__sk-qa_fi_cs__Id454,cs,"- Medzinárodný festival Magicfestival | location | Sitnianský okres
+- Medzinárodný festival Magicfestival | eventType | festival","Medzinárodný festival Magicfestival, který je typem festivalu, se koná v Sitnianském okrese.",2,reversed the eventType,4.0,,P
+gemma4-31B__cs-qa_fi_cs__Id323,cs,"- Simona Hrušková | nationality | Český
+- Simona Hrušková | profession | legendární herec
+- Simona Hrušková | numberOfRoles | 150
+- Simona Hrušková | awardReceived | Cena Thálie
+- Cena Thálie | awardYear | 1993
+- Cena Thálie | awardReason | celoživotní mistrovství","Simona Hrušková je Český legendární herec, který z memainkanou 150 rolí získal v roce 1993 Cenu Thálie za celoživotní mistrovství.",2,memainkanou is odd here,4.0,,P
+llama4-scout__sk-qa_fi_cs__Id338,cs,"- Zlatý roh | locationOf | orztrúsené osídlenia
+- orztrúsené osídlenia | called | kopanice","Zlatý roh je místem, kde se nacházejí orztrúsené osídlenia, které jsou také nazývány kopanice.",5,,5.0,,P
+llama4-scout__sk-qa_fi_en__Id304,en,"- Renata Vaculová | profession | Herec
+- Renata Vaculová | dedicatedTo | herectvo","Renata Vaculová is a Herec, and she is dedicated to herectvo. Alternatively: Renata Vaculová is a herec and dedicates herself to acting.",5,,4.0,,P
+gemma4-e2b__cs-qa_fi_en__Id473,en,"- legenda | describesEvent | zabil svatého Václava
+- Boleslav | relationship | bratr svatého Václava
+- Boleslav | hasAssociates | jeho družina
+- Boleslav se svoji družinou | action | zabil
+- zabil | object | Petra Roubíčková",Legenda describesEvent zabil svatého Václava. Boleslav is the brother of svatého Václava. Boleslav hasAssociates jeho družina. Boleslav killed Petra Roubíčková with his družina.,1,,2.0,,Ales
+qwen3_5-122b__cs-qa_fi_en__Id150,en,"- Česko | usesPausalRateFor | jiných nez řemeslných živností
+- jiných nez řemeslných živností | pausalRateForExpenses | 2501","Česko uses the pausal rate for jiných nez řemeslných živností, and the pausal rate for expenses for jiných nez řemeslných živností is 2501.",5,,3.0,,Ales
+tiny-aya-global__cs-qa_fi_en__Id521,en,"- Otto Wichterle | placeOfOrigin | Prostějov
+- Jiří Wolker | placeOfOrigin | Prostějov
+- Prostějov | locatedIn | Kovárna","Prostějov, a city in the Czech Republic, is the birthplace of both Otto Wichterle, a renowned physicist, and Jiří Wolker, a celebrated poet.",2,,5.0,,Ales
+gemma4-31B__sk-qa_fi_en__Id1,en,- UFO most | completionYear | 11-09-2025,The completion year of UFO most is 11-09-2025.,5,,5.0,,Ales
+gemma4-31B__sk-qa_fi_en__Id306,en,"- Bazilika Sedembolestnej Panny Márie | locatedIn | Bystrický kraj
+- Bystrický kraj | isA | pútnicky významné mesto
+- Bystrický kraj | locatedIn | Slovensko","Bazilika Sedembolestnej Panny Márie is located in Bystrický kraj, which is a pútnicky významné mesto located in Slovensko.",5,,3.0,,Ales
+gpt-oss-120b__cs-qa_fi_en__Id163,en,"- Lažany | locatedIn | Třebčice
+- Třebčice | isType | okres","Lažany is located in Třebčice, which is a district.",5,,5.0,,Ales
+llama4-scout__cs-qa_fi_en__Id156,en,"- Odrůda David | isCultivarOf | hrušeň
+- Odrůda David | breedingLocation | Česko
+- Odrůda David | ripeningMonth | 23-05-2024","The apple cultivar 'Odrůda David' is a cultivar of the pear, was bred in Česko, and is set to ripen on 23-05-2024.",5,,5.0,,Ales
+llama4-scout__cs-qa_fi_en__Id69,en,"- Jana Sklenářová | authorOf | balady
+- Jana Sklenářová | action | zveřejnil
+- Jana Sklenářová | requestedAction | zhudebnění
+- široká veřejnost | targetOfRequest | zhudebnění
+- balady | objectOf | zhudebnění","Jana Sklenářová authored ""balady"" and performed the action of zveřejnil, having requested the musical setting (zhudebnění) of ""balady"", which was intended for the široká veřejnost.",5,,3.0,,P
+gpt-oss-120b__sk-qa_fi_en__Id92,en,- Roman Uhliar | achievedInField | fyzika,Roman Uhliar achieved in the field of physics.,5,,5.0,,Ales
+gpt-oss-120b__cs-qa_fi_en__Id3,en,"- svátek svatého Mikuláše | associatedWith | rozdávání dárků dětem
+- svátek svatého Mikuláše | celebrationDate | 28-02-1991
+- svátek svatého Mikuláše | celebrationTime | večer","The svátek svatého Mikuláše is associated with giving gifts to children, and it is celebrated on 28-02-1991 in the evening.",4,,3.0,,Ales
+qwen3_5-122b__cs-qa_fi_en__Id387,en,"- Československá automobilová doprava | providesService | autobusová doprava
+- Československá automobilová doprava | operatesIn | Československo
+- Československá automobilová doprava | activeDuring | 1949-01-01
+- Československá automobilová doprava | activeUntil | 21-05-2026
+- Československo | politicalEra | socialismus","Československá automobilová doprava provides autobusová doprava in Československo, where the political era is socialismus; it was active from 1949-01-01 until 21-05-2026.",5,,4.0,,P
+qwen3_5-122b__cs-qa_fi_en__Id407,en,"- Ivana Doležalová | militaryRank | divizní generál
+- Ivana Doležalová | nationality | Československý
+- Ivana Doležalová | convictionDate | 1949
+- Ivana Doležalová | sentence | trest smrtí
+- Ivana Doležalová | trialType | vykonstruovaný soudní proces","Ivana Doležalová, a Czechoslovak national with the military rank of divizní generál, was sentenced to trest smrtí in 1949 following a vykonstruovaný soudní proces.",3,,2.0,,Ales
+gemma4-31B__cs-qa_fi_en__Id264,en,- Olga Březinová | isA | významný teolog,Olga Březinová is a prominent theologian.,5,,5.0,,Ales
+qwen3_5-9b__cs-qa_fi_en__Id473,en,"- legenda | describesEvent | zabil svatého Václava
+- Boleslav | relationship | bratr svatého Václava
+- Boleslav | hasAssociates | jeho družina
+- Boleslav se svoji družinou | action | zabil
+- zabil | object | Petra Roubíčková","Boleslav, the brother of Saint Wenceslaus, killed Saint Wenceslaus with his retinue, and the object of this killing was Petra Roubíčková.",3,,4.0,,P
+qwen3-1_7b__cs-qa_fi_en__Id120,en,"- Období politických změn v Československu | hasName | Sametová revoluce
+- Období politických změn v Československu | startDate | 1989-11-17
+- Období politických změn v Československu | endDate | 05-06-2010
+- Období politických změn v Československu | location | Československo",The political changes in Czechoslovakia lasted from 1989-11-17 to 05-06-2010 and took place in Czechoslovakia.,4,missing Sametova revoluce,5.0,,P
+gemma4-31B__sk-qa_fi_en__Id9,en,- Bardejov | isCenterOf | Sitnica,Bardejov is the center of Sitnica.,5,,5.0,,Ales
+qwen3-1_7b__sk-qa_fi_en__Id93,en,"- Tiesňava Kyseľ | locatedIn | Dúbravské Zálesie
+- Dúbravské Zálesie | isA | horské pásmo","Tiesňava Kyseľ is located in Dúbravské Zálesie, which is a horské pásmo.",5,,4.0,,P
+qwen3_5-122b__sk-qa_fi_en__Id222,en,"- slovenské Tatry | contains | Turiansky roh
+- Turiansky roh | isLargest | pleso
+- Turiansky roh | location | slovenské Tatry","Turiansky roh, which is located in the slovenské Tatry that also contains it, is the largest pleso.",4,,4.0,,P
+tiny-aya-global__sk-qa_fi_en__Id368,en,"- Zálesná Poruba | isConsidered | neoficiálny symbol Slovenska
+- Zálesná Poruba | isMentionedIn | slovenská literatúra",Zálesná Poruba is a neoficiálny symbol of Slovakia and is mentioned in Slovak literature.,3,missing considered,4.0,,P
+gemma4-e2b__sk-qa_fi_en__Id428,en,"- západný okraj | locationOf | Suchodolské Kopanice
+- Bojnický zámok | locatedAt | západný okraj","The Bojnický zámok is located at the západný okraj, which is the location of Suchodolské Kopanice.",5,,4.0,,P
+gemma4-31B__cs-qa_fi_en__Id112,en,"- Český seriál Sňatky z rozumu | hasTheme | české vlastenectví
+- české vlastenectví | timePeriod | 14-07-2005
+- Český seriál Sňatky z rozumu | addressesCircumstances | tzv. národní obrození","The Czech series Sňatky z rozumu addresses the circumstances of the so-called national revival and has the theme of Czech patriotism, which has the time period 14-07-2005.",5,,5.0,,P
+gpt-oss-120b__sk-qa_fi_en__Id391,en,- Zálomská dolina | isHighestLocated | pleso,Zálomská dolina is highest located in pleso.,3,"hallucinated ""in""",4.0,,P
+gemma4-31B__sk-qa_fi_en__Id488,en,"- Tajná služba | operatesIn | Sokolia skala
+- Tajná služba | name | Slovenská informačná služba","Slovenská informačná služba, named Tajná služba, operates in Sokolia skala.",5,,5.0,,P
+llama4-scout__sk-qa_fi_en__Id429,en,"- Jožo Ráž | isFounderOf | Elán
+- Vašo Patejdl | isFounderOf | Elán
+- Juraj Farkaš | isFounderOf | Elán
+- Slavěna Vrábľová | isFounderOf | Elán","Jožo Ráž, Vašo Patejdl, Juraj Farkaš, and Slavěna Vrábľová are the founders of Elán.",5,,5.0,,P
+qwen3_5-122b__cs-qa_fi_en__Id3,en,"- svátek svatého Mikuláše | associatedWith | rozdávání dárků dětem
+- svátek svatého Mikuláše | celebrationDate | 28-02-1991
+- svátek svatého Mikuláše | celebrationTime | večer","Svátek svatého Mikuláše je spojen s rozdávání dárků dětem, slaví se večer a jeho datum je 28-02-1991.",1,,1.0,,P
+qwen3_5-122b__cs-qa_fi_en__Id414,en,"- Libuše | isCharacterFrom | české pověsti
+- Libuše | hasFather | Krok
+- Libuše | hasSister | Kazi
+- Libuše | hasSister | Petra Roubíčková
+- Libuše | isMythical | česká kněžna
+- Libuše | isSpouseOf | Přemysl Oráč","Libuše is a mythical Czech princess and a character from české pověsti, the daughter of Krok, the sister of Kazi and Petra Roubíčková, and the spouse of Přemysl Oráč.",5,,4.0,,P
+gpt-oss-120b__sk-qa_fi_en__Id179,en,- Barbora Malá | profession | kanoistika,Barbora Malá’s profession is canoeing.,5,,5.0,,Ales
+qwen3-1_7b__cs-qa_fi_en__Id150,en,"- Česko | usesPausalRateFor | jiných nez řemeslných živností
+- jiných nez řemeslných živností | pausalRateForExpenses | 2501",Česko uses a pausal rate of 2501 for jiných nez řemeslných živností.,4,missing for expenses,3.0,,P
+llama4-scout__cs-qa_fi_en__Id150,en,"- Česko | usesPausalRateFor | jiných nez řemeslných živností
+- jiných nez řemeslných živností | pausalRateForExpenses | 2501","Česko uses a pausal rate for other non-craft businesses, for which the pausal rate for expenses is 2501.",4,"not other, but other than",5.0,,P
+qwen3_5-9b__cs-qa_fi_en__Id498,en,"- hrad Veveří | location | ostroh
+- ostroh | locatedAbove | Horní Břehy
+- ostroh | near | Brno","Hrad Veveří is located on Ostroh, which is situated above Horní Břehy and near Brno.",5,,5.0,,P
+gpt-oss-120b__sk-qa_fi_en__Id258,en,- Národná rada Slovenskej republiky | numberOfMembers | 1520,The Národná rada Slovenskej republiky has 1520 members.,5,,5.0,,Ales
+gemma4-e4b__sk-qa_fi_en__Id363,en,"- Ľupčiansky hrad | locatedNear | Chotárny Vrbovec
+- Chotárny Vrbovec | isType | obec","Ľupčiansky hrad is located near Chotárny Vrbovec, which is a village.",5,,5.0,,P
+tiny-aya-global__sk-qa_fi_en__Id358,en,- Roháčsky okres | flowsInto | Dunaj,The澓河流經拉赫瓦斯基區。,1,,1.0,,Ales
+gemma4-e2b__cs-qa_fi_en__Id497,en,"- Červený hrádek | locatedAt | úpatí Krušných hor
+- úpatí Krušných hor | partOf | Rohov","Červený hrádek is located at úpatí Krušných hor, which is part of Rohov.",5,,4.0,,P
+gemma4-31B__cs-qa_fi_en__Id410,en,"- Karel Kryl | nationality | Československý
+- Karel Kryl | occupation | autor
+- Karel Kryl | created | protikomunistické protestní písničky
+- Karel Kryl | numberOf | mnoha
+- Karel Kryl | released | 06-02-2024
+- Karel Kryl | firstLP | Bratříčku zavírej vrátka","Karel Kryl was a Czechoslovak author who created many anti-communist protest songs, released Bratříčku zavírej vrátka as his first LP, and was released on 06-02-2024.",5,,5.0,,P
+llama4-scout__cs-qa_fi_en__Id295,en,"- Novodobá těžba | affects | Kopalnický Dvůr
+- Novodobá těžba | resourceType | uran","Novodobá těžba affects Kopalnický Dvůr and is a type of uran resource. Alternatively: Novodobá těžba, which is a uran resource, affects Kopalnický Dvůr.",5,,4.0,,P
+qwen3_5-122b__sk-qa_fi_en__Id152,en,"- Kamenný roh | isPartOf | Karlova Ves
+- Karlova Ves | isCityPartOf | Bratislava","Kamenný roh is part of Karlova Ves, which is a city part of Bratislava.",5,,5.0,,P
+gemma4-e4b__sk-qa_fi_en__Id51,en,"- Kopanická rovina | hasCentralSquare | Námestie Milana Rastislava Štefánika
+- Námestie Milana Rastislava Štefánika | isLocatedIn | Kopanická rovina","Námestie Milana Rastislava Štefánika is located in Kopanická rovina, and Kopanická rovina has Námestie Milana Rastislava Štefánika as its central square.",5,,5.0,,P
+llama4-scout__sk-qa_fi_en__Id54,en,"- Ľubochňa | isLocatedIn | Sokolia skala
+- Sokolia skala | isTypeOf | okres","Ľubochňa is located in Sokolia skala, which is a district.",5,,5.0,,P
+gpt-oss-120b__sk-qa_fi_en__Id24,en,"- Údajné odpočúvanie | subject | Cyprián Duchoň
+- Údajné odpočúvanie | leadsTo | Kauza Gorila","The alleged wiretapping’s subject is Cyprián Duchoň, and it leads to Kauza Gorila.",5,,5.0,,P
+llama4-scout__cs-qa_fi_en__Id272,en,- Kozlíkov | locatedAtBorderWith | Rakousko,Kozlíkov is located at a border with Rakousko.,5,,4.0,,P
+qwen3_5-9b__sk-qa_fi_en__Id218,en,"- Habovka | forms | R1
+- R1 | isA | diaľnica","Habovka forms R1, which is a diaľnica.",5,,4.0,,P
+gemma4-e4b__sk-qa_fi_en__Id58,en,"- Banská Štiavnica | locationOf | prvá banská škola v Uhorsku
+- prvá banská škola v Uhorsku | foundingDate | 06-11-2000
+- prvá banská škola v Uhorsku | country | Uhorsko",The first mining school in Hungary is located in Banská Štiavnica and was founded on 06-11-2000 in Hungary.,5,,5.0,,P
+gpt-oss-120b__sk-qa_fi_en__Id34,en,"- Dračie srdce | filmingLocation | Machnica
+- Dračie srdce | type | film
+- Machnica | type | hrad","The film Dračie srdce was filmed at Machnica, which is a castle.",5,,5.0,,P
+gemma4-e4b__cs-qa_fi_hsb__Id223,hsb,"- Ctibor Skrýpka | occupation | buditelka
+- Ctibor Skrýpka | occupation | spisovatelka
+- Ctibor Skrýpka | nationality | česká
+- Ctibor Skrýpka | knownFor | autorka
+- Domácí kuchařka | author | Ctibor Skrýpka
+- Domácí kuchařka | publicationYear | 1826",Ctibor Skrýpka je buditelka. Ctibor Skrýpka je spisovatelka. Ctibor Skrýpka je česká. Ctibor Skrýpka je autorka. Ctibor Skrýpka je autor od Domácí kuchařka. Domácí kuchařka je izdaná v roku 1826.,5,,1.0,,Ales
+gemma4-e2b__cs-qa_fi_hsb__Id151,hsb,"- Čeština 2.0 | isTypeOf | internetový slovník
+- Čeština 2.0 | foundedBy | Daniel Vydro
+- Čeština 2.0 | collects | nové české výrazy
+- Čeština 2.0 | collects | novotvary",Čeština 2.0 je typ internetový slovník. Čeština 2.0 je založen na Daniel Vydro. Čeština 2.0 sbírá nové české výrazy. Čeština 2.0 sbírá novotvary.,3,,1.0,,Ales
+gpt-oss-120b__sk-qa_fi_hsb__Id70,hsb,"- Zita Švihranová | isA | slovenská paralympijská športovkyňa
+- Zita Švihranová | competesIn | boccia",Zita Švihranová je slowjanska paralympiska sportowka a wobdźěluje so w boccia.,5,,,,P
+llama4-scout__cs-qa_fi_hsb__Id306,hsb,"- Gavrilo Princip | occupation | atentátník
+- Gavrilo Princip | isFamous | true
+- Gavrilo Princip | wasImprisonedIn | Ostrovní Vršek",Gavrilo Princip bě atentátník. Gavrilo Princip je wusławy. Gavrilo Princip sedźaše w Ostrovním Vršku.,5,,,,P
+llama4-scout__sk-qa_fi_hsb__Id182,hsb,- Kňazský seminár sv. Františka Xaverského | locatedIn | Nová Rovina,Kňazský seminár sv. Františka Xaverského nadeńdźe so w Nóvej Rovinje.,5,,,,P
+llama4-scout__cs-qa_fi_hsb__Id382,hsb,"- velká jezdecká socha Jana Žižky | location | Mramorov
+- velká jezdecká socha Jana Žižky | specificLocation | Vítkov",Velká jezdecká socha Jana Žižky nachází se v Mramorově a konkrétně na Vítkově.,1,,1.0,,Ales
+gemma4-e2b__sk-qa_fi_hsb__Id149,hsb,- rieka Ipeľ | sourceLocation | Mokrá Lehôtka,Rieka Ipeľ je Mokrá Lehôtka.,2,,,,Ales
+gpt-oss-120b__cs-qa_fi_hsb__Id5,hsb,"- literatura | publishedBy | disidenti
+- literatura | location | Mlynářov
+- literatura | timePeriod | 1950-01-01 2000-12-31
+- literatura | namedAs | samizdat","Literatura je wutworiła wot disidentow, je w Mlynářow, je w časowym periodje wot 1950‑01‑01 do 2000‑12‑31 a je nazwana jako samizdat.",5,,,,Ales
+gemma4-e4b__sk-qa_fi_hsb__Id341,hsb,- HLAS – sociálna demokracia | firstChairperson | Bertold Šarina,Bertold Šarina je prvi predsednik socijalne demokracije.,3,,1.0,,Ales
+qwen3_5-122b__cs-qa_fi_hsb__Id221,hsb,- Znojmo | riverFlowingThrough | Rakovnický Les,Rakovnický Les přeteknje rěka Znojmo.,2,,2.0,,Ales
+gpt-oss-120b__cs-qa_fi_hsb__Id86,hsb,"- 1. česká fotbalová liga | alternativeName | Fortuna Liga
+- Fortuna Liga | validFrom | 2018-01-01
+- Fortuna Liga | validTo | 27-10-1988",Česka fotbalowa liga ma alternatiwne mjeno Fortuna Liga. Fortuna Liga je płaćiwa wot 2018‑01‑01 do 27‑10‑1988.,4,"""1."" missing",,,P
+gemma4-31B__cs-qa_fi_hsb__Id388,hsb,"- Dlouhé Stráně | isType | přečerpávací vodní elektrárna
+- Dlouhé Stráně | location | Hrubý Jeseník
+- Dlouhé Stráně | location | Pohoří Krkavice
+- Dlouhé Stráně | isMost | výkonná","Dlouhé Stráně je výkonná přečerpávací vodní elektrárna, kotraž se w Hrubý Jeseník a Pohoří Krkavice nachodzi.",5,,,,Ales
+gpt-oss-120b__sk-qa_fi_hsb__Id360,hsb,"- Vincent Danko | participatedIn | Česko Slovensko má talent
+- Česko Slovensko má talent | isA | TV show","Vincent Danko je so wobdźělił na Česko Slovensko má talent, kotryž je televizijny program.",5,,,,Ales
+qwen3_5-9b__cs-qa_fi_hsb__Id63,hsb,"- Břehovice | hasRiver | Jizera
+- Jizera | flowsThrough | Břehovice","Břehowicy leža při rěce Jizera, kotraž jich přez wjesku płynie.",4,wjeska unsupported,,,P
+llama4-scout__sk-qa_fi_hsb__Id274,hsb,"- Ivan Matúšik | nationality | slovenský
+- Ivan Matúšik | profession | architekt
+- Ivan Matúšik | designed | komplex Prior
+- Ivan Matúšik | designed | hotel Kyjev
+- komplex Prior | location | Kamenné námestie
+- hotel Kyjev | location | Kamenné námestie
+- Kamenné námestie | city | Malý Roháčov
+- Ivan Matúšik | receivedAward | cena Dušana Jurkoviča","Ivan Matúšik je Slovák a architekt. Wón je projektowal komplex Prior a hotel Kyjev, kotrež naměstene stej na Kamennym náměstje w městje Maly Roháčow. Ivan Matúšik dósta cenu Dušana Jurkoviča.",5,,,,P
+qwen3_5-122b__cs-qa_fi_hsb__Id143,hsb,"- Polní Údolí | isType | přírodní rezervace
+- Polní Údolí | isLocatedIn | Český ráj
+- Polní Údolí | isKnownFor | pískovcová skalní města",Polní Údolí je přirodna rezervacija w Českým raju a je znata za pískovcová skalní města.,5,,,,P
+gpt-oss-120b__sk-qa_fi_hsb__Id79,hsb,- Bertold Šarina | placeOfOrigin | Očová,Bertold Šarina pochada z Očová.,1,,,,P
+tiny-aya-global__sk-qa_fi_hsb__Id19,hsb,"- nemeckí vojaci | action | partially burned
+- nemeckí vojaci | target | Bystrická kotlina","**Hornjoserbski RDF triple:** **nemeckí vojaci** | **akcija** | **częściowo spalone** **nemeckí vojaci** | **cel** | **Bystrická kotlina** **Překlady:** **nemeckí vojaci** → *nemeckí żołnierze* (powšitkowne substancja) **akcija** → *akcja* (powšitkowne wopisko) **częściowo spalone** → *częściowo spalone* (powšitkowne wopisko) **cel** → *cel* (powšitkowne wopisko) **Uwagi:** W RDF triple nie ma miejsca na dodawanie dodatkowych informacji, więc nie ma potrzeby tworzenia dłuższych zdań. Wszystkie nazwy własne (np. *nemeckí vojaci*, *Bystrická kotlina*) zostały przetłumaczone w oryginalnej formie. Predykat *akcija* został przetłumaczony jako *akcja*, a *cel* jako *cel*, zgodnie z instrukcjami.",1,,1.0,,Ales
+qwen3-1_7b__sk-qa_fi_hsb__Id85,hsb,"- Michal Dočolomanský | performedRole | Mária Ondrejková
+- Mária Ondrejková | isTitleRoleIn | Na skle maľované
+- Na skle maľované | isType | divadelná hra",Michal Dočolomanský | performedRole | Mária Ondrejková Mária Ondrejková | isTitleRoleIn | Na skle maľované Na skle maľované | isType | divadelná hra,1,,1.0,,Ales
+gpt-oss-120b__sk-qa_fi_hsb__Id29,hsb,"- piešťanský Grand Hotel Royal | nameDuringPeriod | Grand Hotel Slovan
+- socializmus | timePeriod | 08-12-1992
+- Grand Hotel Slovan | laterName | Slovan",Piešťanski Grand Hotel Royal měł mjeno Grand Hotel Slovan. Socializm ma časowy period 08‑12‑1992. Grand Hotel Slovan měł pozdźišće mjeno Slovan.,5,,,,P
+llama4-scout__cs-qa_fi_hsb__Id89,hsb,"- Kamenice u Lesa | created by | zatopením lomu Most–Ležáky
+- Kamenice u Lesa | openingDate | 2020",Rěčna wjes Kamenice u Lesa bu wutworjena přez zatopenje lomu Most–Ležáky. Ona bu wotwarta w lěće 2020.,5,,,,P
+gemma4-e4b__sk-qa_fi_hsb__Id140,hsb,"- Zálesná Poruba | flowsInto | Dunaj
+- Zálesná Poruba | confluenceLocation | Kolárovo",Zálesná Poruba teče u Dunaj; Zálesná Poruba se spaja u Kolárovo.,1,,1.0,,Ales
+llama4-scout__sk-qa_fi_hsb__Id168,hsb,- Múzeum kysuckej dediny | location | Studeničná Osada,Múzeum kysuckej dediny nachádza sa v Studeničnej Osade.,1,,,,P
+gpt-oss-120b__cs-qa_fi_hsb__Id441,hsb,- Pohoří Krkavice | locatedIn | kraj Vysočina,Horinski rjek Krkavice leži w kraju Vysočina.,5,,,,P
+gemma4-31B__sk-qa_fi_hsb__Id161,hsb,- Vratko Bohunický | originLocation | Okolie Nitry,Vratko Bohunický pochodzi z Okolie Nitry.,5,,1.0,,Ales
+tiny-aya-global__cs-qa_fi_hsb__Id29,hsb,- Jarmila Vondrová | nickname | Rudý dědek,"**RDF-Triple:** Jarmila Vondrová | nickname | Rudý dědek **Hornjoserbski preklad:** Jarmila Vondrová | pseudonime | Rudý dědek **Wyjaśnienie:** **Podmet (subject):** Jarmila Vondrová (imię i nazwisko zawodniczki). **Predikat (predicate):** pseudonime (rzeczownik oznaczający przydomek). **Obiekt (object):** Rudý dědek (rzeczownik oznaczający przydomek). Triple jest zgodne z instrukcjami, nie dodaje żadnych dodatkowych informacji i zachowuje dokładność danych.",1,,1.0,,Ales
+qwen3_5-122b__cs-qa_fi_hsb__Id320,hsb,- nemocniční areál nemocnice Znojmo | originatedFrom | Rakovník,Nemocniční areál nemocnice Znojmo originatedFrom Rakovník.,3,,,,P
+qwen3_5-122b__sk-qa_fi_hsb__Id368,hsb,"- Zálesná Poruba | isConsidered | neoficiálny symbol Slovenska
+- Zálesná Poruba | isMentionedIn | slovenská literatúra",Zálesná Poruba je neoficiálny symbol Slovenska a je spomínana v slovenskej literatúre.,1,,1.0,,Ales
+gemma4-e2b__sk-qa_fi_hsb__Id248,hsb,"- Kramáre | locatedIn | Nové Mesto
+- Nové Mesto | isPartOf | Kopanická rovina
+- Nové Mesto | isA | mestská časť",Kramáre locatedIn Nové Mesto. Nové Mesto isPartOf Kopanická rovina. Nové Mesto isA mestská časť.,1,wrong transform,,,P
+qwen3_5-122b__sk-qa_fi_hsb__Id276,hsb,"- Horné Sokolce | isSignificantRiver | true
+- Horné Sokolce | flowsThrough | Zvolen
+- Horné Sokolce | country | Slovensko","Horné Sokolce je značka řeka, která protéká Zvolenem na Slovensku.",1,,1.0,,Ales
+qwen3_5-9b__cs-qa_fi_hsb__Id415,hsb,"- Alena Bílá | isLegendary | true
+- Alena Bílá | isAncestor | true
+- Alena Bílá | ledPeople | do země zaslíbené
+- české pověsti | describeEvent | Praotec Čech ledPeople do země zaslíbené","Alena Bílá je legendarnja předk, kotraž je ludźi do zemi zaslíbeny wjedła, a to w podawku čěskich powěstow, kotrež wopisuju, kak je Praotec Čech ludźi do zemi zaslíbeny wjedł.",5,,,,P
+qwen3_5-122b__cs-qa_fi_hsb__Id457,hsb,- Kraví Dvůr | locatedIn | okres Litoměřice,Kraví Dvůr leži w okrese Litoměřice.,5,,,,P
+llama4-scout__sk-qa_fi_hsb__Id407,hsb,"- HK Nitra | wonTrophy | Kontinentálny pohár
+- Kontinentálny pohár | winningSeason | 04-06-1999",HK Nitra wón puchar Kontinentálny pohár. Kontinentálny pohár běše w lěće 04-06-1999 w wotměću.,5,,,,P
+qwen3_5-122b__sk-qa_fi_hsb__Id46,hsb,- Daňové identifikačné číslo (DIČ) | numberOfDigits | 6789,Daňové identifikačné číslo (DIČ) ma 6789 čisłow.,5,,,,P
+llama4-scout__cs-qa_fi_hsb__Id493,hsb,"- Kněžná | isA | řeka
+- Horní Vítkov | containsInName | Kněžná",Řeka Kněžná se nachází v Horním Vítkově.,1,,1.0,,Ales
+gemma4-31B__cs-qa_fi_hsb__Id133,hsb,"- Saskia Vobořilová | authorOf | Bylo nás pět
+- Saskia Vobořilová | birthPlace | Rychnov nad Kněžnou","Saskia Vobořilová, kotraž w Rychnov nad Kněžnou narodźiła, je autorka dźěła Bylo nás pět.",5,,,,P
+qwen3_5-122b__sk-qa_fi_hsb__Id139,hsb,"- Oľga Mihalčinová | hasSon | Matej Landl
+- Matej Landl | isSonOf | Oľga Mihalčinová
+- Matej Landl | hasProfession | actor","Oľga Mihalčinová je mać Mateja Landla, kotryž je dźiwadźelnik.",4,theatre is unsupported,,,P
+gemma4-31B__cs-qa_fi_hsb__Id410,hsb,"- Karel Kryl | nationality | Československý
+- Karel Kryl | occupation | autor
+- Karel Kryl | created | protikomunistické protestní písničky
+- Karel Kryl | numberOf | mnoha
+- Karel Kryl | released | 06-02-2024
+- Karel Kryl | firstLP | Bratříčku zavírej vrátka","Karel Kryl běš českosłowakski autor, kotryž mnoha protikomunistiske protestne písničky stworił, wudał 06-02-2024 a jeho prwy LP běš Bratříčku zavírej vrátka.",5,,,,P
+gemma4-31B__sk-qa_fi_hsb__Id485,hsb,"- Alena Zemanová | hasPseudonym | Otis
+- Alena Zemanová | isOccupation | slovenský reper",Alena Zemanová je słowakiski reper z pseudonymym Otis.,5,,,,P
+tiny-aya-global__cs-qa_fi_hsb__Id356,hsb,- Kostel svatého Václava a Blažeje | locatedIn | Černé Břehy,"**RDF-Triple:** Kostel svatého Václava a Blažeje | locatedIn | Černé Břehy **Hornjoserbski tekst:** Kostel svatého Václava a Blažeje se nachází v Černé Břehy. **Přełożenie:** Kostel svatého Václava a Blažeje → Kostel svatého Václava a Blažeje locatedIn → se nachází v Černé Břehy → Černé Břehy **Vysvětlení:** **Kostel svatého Václava a Blažeje** je explicitně uveden jako entita, která je předmětem lokace. **se nachází v** je přirozený a idiomatický způsob vyjádření lokace v hornjoserbštině. **Černé Břehy** je zachován v původní formě, protože se jedná o geografický název.",1,,1.0,,Ales
+qwen3-1_7b__sk-qa_fi_hsb__Id224,hsb,- Zlatá kopa | originatesIn | Národný park Nízke Tatry,Zlatá kopa | originatesIn | Národný park Nízke Tatry,1,,1.0,,Ales
+gemma4-31B__sk-qa_fi_hsb__Id41,hsb,"- Slovenská televízia a rozhlas | replacedOrganization | Rozhlas a televízia Slovenska
+- Slovenská televízia a rozhlas | replacementYear | 07-04-2026",Slovenská televízia a rozhlas 07-04-2026 Rozhlas a televízia Slovenska zastupił.,5,,,,P
+qwen3-1_7b__sk-qa_fi_hsb__Id91,hsb,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Horné Sokolce",Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky ministerstvo financií Slovenskej republiky | country | Horné Sokolce,1,,1.0,,Ales
+qwen3_5-9b__cs-qa_fi_hsb__Id194,hsb,"- Zdeněk Jirotka | authorOf | Saturnin
+- Saturnin | publicationYear | 29-06-2025
+- Saturnin | genre | humoristický román","Zdeněk Jirotka je awtor humoristiskeho romana Saturnin, kotryž wot 29. junija 2025 wotpowěduje.",5,,,,P
+gemma4-31B__cs-qa_fi_hsb__Id381,hsb,- píseň Kolej Yesterday | hasAuthor | Martin Růžička,Píseň Kolej Yesterday hasAuthor Martin Růžička.,3,,,,P
+gemma4-e2b__cs-qa_fi_sk__Id63,sk,"- Břehovice | hasRiver | Jizera
+- Jizera | flowsThrough | Břehovice","Břehovice má řeku Jizera, která teče přes Jizeru.",1,wrong_language,1.0,wrong_language,Ales
+llama4-scout__cs-qa_fi_sk__Id435,sk,"- Sametová revoluce | isA | období
+- období | hasContext | politické změny
+- období | location | Československo
+- období | year | 22-10-1990
+- období | ledTo | pád komunistického režimu",Dve krátke,1,,1.0,,Ales
+llama4-scout__cs-qa_fi_sk__Id338,sk,"- Michal Horák | profession | lékařka
+- Michal Horák | role | zakladatelka českých hospiců
+- Michal Horák | receivedAward | Medaile Za zásluhy o stát
+- Medaile Za zásluhy o stát | awardedBy | Václav Havel
+- Medaile Za zásluhy o stát | awardedBy | Miloš Zeman","Michal Horák je lekárka a zakladatelka českých hospiců. Za svoje zásluhy obdržala Medailu Za zásluhy o stát, ktorá jej bola udelená Václavom Havlom a Milošom Zemanom.",5,,3.0,,Ales
+tiny-aya-global__sk-qa_fi_sk__Id358,sk,- Roháčsky okres | flowsInto | Dunaj,"Rátska oblasť je zaplavená riekou Dunaj, ktorá ju preteká.",1,,5.0,,Ales
+llama4-scout__cs-qa_fi_sk__Id263,sk,"- Babička | author | Xavier Janda
+- Xavier Janda | wrote | Babička",Xavier Janda je autorom diela Babička.,4,,4.0,,Ales
+gpt-oss-120b__cs-qa_fi_sk__Id163,sk,"- Lažany | locatedIn | Třebčice
+- Třebčice | isType | okres",We analysis analysis analysis ... We We... The analysis... analysis... analysis... We... ... ... ... We... ... ... ... ... ... ... ...Lažany sa nachádza v Třebčice a Třebčice je typom okres.,1,,1.0,,Ales
+llama4-scout__sk-qa_fi_sk__Id164,sk,"- Studenický kraj | contains | atómová elektráreň
+- atómová elektráreň | type | atomic power plant","Studenický kraj obsahuje atómovú elektráreň, ktorá je typu atomic power plant, alebo presnejšie, Studenický kraj obsahuje atómovú elektráreň, a tá je atómovou elektrárňou. alebo Studenický kraj obsahuje atómovú elektráreň. Atómová elektráreň je atómová elektráreň.",2,,1.0,,Ales
+qwen3_5-122b__cs-qa_fi_sk__Id454,sk,- Divadelní fakulta Akademie múzických umění v Praze (DAMU) | currentLocation | Mlynářov,Divadelní fakulta Akademie múzických umění v Praze (DAMU) sa nachádza na Mlynářov.,5,,4.0,,P
+gemma4-31B__sk-qa_fi_sk__Id11,sk,- IMT Smile | originCity | Ostrolúcka Ves,IMT Smile pochádza z mesta Ostrolúcka Ves.,5,,5.0,,Ales
+gemma4-31B__cs-qa_fi_sk__Id189,sk,"- státní hymna České republiky | originatesFrom | Fidlovačka aneb Žádný hněv a žádná rvačka
+- Fidlovačka aneb Žádný hněv a žádná rvačka | author | Jindřich Holub
+- Fidlovačka aneb Žádný hněv a žádná rvačka | isA | divadelní hra","Štátna hymna České republiky pochádza z divadelnej hry Fidlovačka aneb Žádný hněv a žádná rvačka, ktorým je autor Jindřich Holub.",4,"should be ""ktorej autorom je""",4.0,,P
+qwen3-1_7b__cs-qa_fi_sk__Id337,sk,- Výtahová kancelář Bati | locatedIn | Záhořské,Výtahová kancelář Bati je v Záhořskom.,5,,5.0,,P
+qwen3_5-9b__cs-qa_fi_sk__Id327,sk,"- historické jádro města Prostějova | isPartOf | městská památková zóna
+- historické jádro města Prostějova | designationYear | 15-11-2025","Historické jádro mesta Prostějova, ktoré je súčasťou městská památková zóna, má označené v roku 15-11-2025.",5,,3.0,,P
+gpt-oss-120b__sk-qa_fi_sk__Id480,sk,"- Igor Duda | nationality | slovenská
+- Igor Duda | profession | speváčka
+- Igor Duda | released | Znamenia
+- Znamenia | type | EP","Igor Duda má slovenskú národnosť, je speváčka a vydal Znamenia, pričom Znamenia je EP.",5,,4.0,,P
+qwen3_5-122b__cs-qa_fi_sk__Id164,sk,"- První parostrojní železnice v českých zemích | hasName | Severní dráha císaře Ferdinanda
+- Severní dráha císaře Ferdinanda | isType | parostrojní železnice
+- Severní dráha císaře Ferdinanda | isLocatedIn | Nové Sady
+- Severní dráha císaře Ferdinanda | isFirst | true","První parostrojní železnice v českých zemích, Severní dráha císaře Ferdinanda, je parostrojní železnicou nachádzajúcou sa v Nových Sadoch a je prvá.",5,,4.0,,P
+qwen3_5-122b__sk-qa_fi_sk__Id219,sk,"- Najväčší Trenčiansky hokejový klub | hasName | HK Dukla Trenčín
+- HK Dukla Trenčín | isType | hokejový klub
+- HK Dukla Trenčín | isLocatedIn | Mokrá Lehôtka","Najväčší Trenčiansky hokejový klub sa volá HK Dukla Trenčín, je to hokejový klub a nachádza sa v Mokrej Lehôtky.",5,,4.0,,P
+gemma4-31B__sk-qa_fi_sk__Id91,sk,"- Národna bločková lotéria | declaredBy | ministerstvo financií Slovenskej republiky
+- ministerstvo financií Slovenskej republiky | country | Horné Sokolce","Národna bločková lotéria bola vyhlásená ministerstvom financií Slovenskej republiky, ktoré je v Horné Sokolce.",5,,4.0,,P
+llama4-scout__cs-qa_fi_sk__Id280,sk,"- Marie Terezie | established | povinná školní docházka
+- povinná školní docházka | location | Východní Kostel",Marie Terezie zaviedla povinnú školskú dochádzku vo Východnom Kostele.,5,,5.0,,P
+tiny-aya-global__sk-qa_fi_sk__Id145,sk,"- Turianka | locatedOn | Váh
+- Váh | isA | river","Turianka leží na rieke Váh, ktorá je riekou.",5,,5.0,,P
+qwen3_5-122b__cs-qa_fi_sk__Id320,sk,- nemocniční areál nemocnice Znojmo | originatedFrom | Rakovník,Nemocničný areál nemocnice Znojmo originatedFrom Rakovník.,4,,4.0,,P
+gemma4-e4b__sk-qa_fi_sk__Id411,sk,"- SNS | currentChairperson | Andrej Danko
+- Andrej Danko | chairpersonYear | 14-05-2025","SNS má Andreja Danka ako súčasného predsedu, a Andrej Danko bol predsedom od 14-05-2025.",4,,5.0,,P
+gemma4-31B__cs-qa_fi_sk__Id64,sk,"- 1. česká hokejová liga | newNameFromSeason | Maxa liga
+- 1. česká hokejová liga | seasonStart | 01-01-2025","česká hokejová liga zmenila názov na Maxa liga od sezóny, ktorá začína 01-01-2025.",4,,5.0,,P
+gemma4-31B__sk-qa_fi_sk__Id26,sk,"- politický spor | name | pomlčková vojna
+- politický spor | topic | názov Česko-Slovenska
+- politický spor | startDate | 18-02-1997",Politický spor s názvom pomlčková vojna sa týka názvu Česko-Slovenska a začal 18-02-1997.,5,,5.0,,P
+gemma4-e2b__cs-qa_fi_sk__Id289,sk,"- Karlova univerzita | location | Údolí Vran
+- Karolinum | isBuildingOf | Karlova univerzita
+- Karolinum | isOldestBuilding | true","Karlova univerzita je v Údolí Vran, Karolinum je bud[: Karlova univerzita] a Karolinum je najstarší bud[: true].",4,,2.0,,P
+gpt-oss-120b__sk-qa_fi_sk__Id249,sk,"- Najvýchodnejší slovenský národný park | name | Radostná Lehota
+- Radostná Lehota | type | národný park
+- Radostná Lehota | location | Slovensko
+- Radostná Lehota | position | najvýchodnejší","Najvýchodnejší slovenský národný park sa volá Radostná Lehota. Radostná Lehota je národný park, nachádza sa v Slovensku a je najvýchodnejší.",5,,4.0,,P
+qwen3-1_7b__sk-qa_fi_sk__Id111,sk,"- Ľudovít Štúr | adoptedMiddleName | Velislav
+- Ľudovít Štúr | locationOfAdoption | Bystranka",Ľudovít Štúr získal meno Velislav po základnej adopcii v Bystranke.,4,,5.0,,P
+llama4-scout__sk-qa_fi_sk__Id208,sk,"- Natália Šoltésová | isKnownFor | hatred towards Maďarom
+- Natália Šoltésová | profession | slovenský politik",Natália Šoltésová je známa pre nenávisť voči Maďarom a je slovenským politikom.,5,,5.0,,P
+qwen3_5-9b__sk-qa_fi_sk__Id116,sk,- Klotilda Rejtová | hasField | neurológia,Klotilda Rejtová má v odbore neurológia.,4,,4.0,,P
+qwen3_5-122b__sk-qa_fi_sk__Id141,sk,"- Súdna rada Slovenskej republiky | hasHeadquarters | Miestodržiteľský palác
+- Miestodržiteľský palác | isLocatedIn | Studenická dolina","Súdna rada Slovenskej republiky má svoje sídlo v Miestodržiteľskom paláci, ktorý sa nachádza v Studenici.",4,,4.0,,P
+tiny-aya-global__cs-qa_fi_sk__Id357,sk,"- Wilhelm Lüders | wonMedal | stříbrnou medaili
+- stříbrná medaile | event | ZOH 2006
+- ZOH 2006 | location | Turín
+- ZOH 2006 | date | 2006-02-10",Wilhelm Lüders získal stříbrnou medaili v ZOH 2006 v Turíne.,4,,4.0,,P
+qwen3-1_7b__cs-qa_fi_sk__Id272,sk,- Kozlíkov | locatedAtBorderWith | Rakousko,Kozlíkov je na hranici s Rakouskom.,5,,4.0,,P
+gemma4-e4b__sk-qa_fi_sk__Id108,sk,- Turianka | highestPeak | Ostredok,Turianka je najvyšším vrcholom Ostredok.,5,,5.0,,P
+llama4-scout__cs-qa_fi_sk__Id35,sk,"- Frýdek-Místek | formedFrom | 5
+- Frýdek-Místek | formedFrom | 2 města
+- Frýdek-Místek | formedFrom | 30","Frýdek-Místek vznikol z 5, 2 miest a 30.",5,,5.0,,P
+gpt-oss-120b__cs-qa_fi_sk__Id19,sk,- těžba uhlí | causes | Slníčko nad Rákosím,Ťažba uhlia spôsobuje Slníčko nad Rákosím.,5,,5.0,,P
+llama4-scout__cs-qa_fi_sk__Id164,sk,"- První parostrojní železnice v českých zemích | hasName | Severní dráha císaře Ferdinanda
+- Severní dráha císaře Ferdinanda | isType | parostrojní železnice
+- Severní dráha císaře Ferdinanda | isLocatedIn | Nové Sady
+- Severní dráha císaře Ferdinanda | isFirst | true","Severní dráha císaře Ferdinanda je názov prvej parostrojnej železnice v českých zemích, ktorá sa nachádza v Nových Sadoch.",5,,4.0,,P
+gpt-oss-120b__cs-qa_fi_sk__Id20,sk,"- Třístíčko | hasReligiousMinority | Židovská menšina
+- Židovská menšina | isReligiousMinority | true",Třístíčko má náboženskú menšinu Židovská menšina a Židovská menšina je náboženská menšina.,5,,4.0,,P
+gemma4-e4b__cs-qa_fi_sk__Id519,sk,"- Třebčice | bordersWith | 4
+- Třebčice | regionType | kraj",Třebčice sa bdrí s 4 a je kraj.,1,,4.0,,P
+qwen3_5-122b__sk-qa_fi_sk__Id390,sk,- Názov Ružinov | originatesFrom | Belianska Zápotoč,Názov Ružinov originatesFrom Belianska Zápotoč.,4,,4.0,,P
+gemma4-31B__sk-qa_fi_sk__Id21,sk,- Studenická dolina | minedResource | hnedé uhlie,V Studenickej doline saťaťa hnedé uhlie.,4,,4.0,,P
+qwen3_5-122b__cs-qa_fi_sk__Id95,sk,- Svojkovské skály | locatedIn | Uhelná,Svojkovské skály sa nachádzajú v Uhelnej.,5,,4.0,,P
+gemma4-e2b__sk-qa_fi_sk__Id346,sk,- Ružena Petríková | performedSong | Profesor Indigo,Ružena Petríková vystupovala pieseň Profesor Indigo.,4,,4.0,,P
+qwen3_5-9b__cs-qa_fi_sk__Id207,sk,"- Tři veteráni | isA | filmová pohádka
+- Tři veteráni | countryOfOrigin | Česko
+- Tři veteráni | releaseYear | 16-09-1993
+- Tři veteráni | hasMainCharacters | Pankrác
+- Tři veteráni | hasMainCharacters | Bimbác
+- Tři veteráni | hasMainCharacters | Servác
+- Pankrác | isA | vysloužilý voják
+- Bimbác | isA | vysloužilý voják
+- Servác | isA | vysloužilý voják","Filmová pohádka Tři veteráni z Česka z roku 16-09-1993 má hlavné postavy Pankráca, Bimbáca a Serváca, ktorí sú všetci vysloužilí vojaci.",5,,4.0,,P
+gpt-oss-120b__sk-qa_fi_sk__Id164,sk,"- Studenický kraj | contains | atómová elektráreň
+- atómová elektráreň | type | atomic power plant","Studenický kraj obsahuje atómovú elektráreň, ktorá je typom atomovej elektrárne.",5,,5.0,,P
+gpt-oss-120b__cs-qa_fi_sk__Id59,sk,- Město Světlo | associatedIndustry | textilní průmysl,Město Světlo je spojené s textilným priemyslom.,5,,4.0,,P
+gemma4-31B__sk-qa_fi_sk__Id292,sk,"- Cerova vrchovina | highestPeak | Karanč
+- Karanč | elevation | 18
+- Karanč | isAbove | 1000","Najvyšším vrcholom Cerova vrchovina je Karanč, ktorý má nadmorskú výšku 18 a je nad 1000.",4,,3.0,,P
+gpt-oss-120b__sk-qa_fi_sk__Id419,sk,"- Zuzana Čaputová | heldPosition | prezidentka Slovenskej republiky
+- Zuzana Čaputová | positionEndDate | 06-02-2024",Zuzana Čaputová držala pozíciu prezidentky Slovenskej republiky a dátum ukončenia tejto pozície je 06-02-2024.,5,,3.0,,P

@@ -25,7 +25,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import json
 import random
 import re
 import sys
@@ -44,6 +43,7 @@ from error_category_deep_dive import (  # noqa: E402
     md_escape,
     pct_cell,
 )
+from judged_io import iter_judged_records  # noqa: E402
 
 DEFAULT_JUDGED_DIR = REPO_ROOT / "data" / "judged_fluency"
 DEFAULT_OUTPUT_DIR = Path(__file__).parent / "fluency_deep_dive"
@@ -116,64 +116,36 @@ STOPWORDS = {
 }
 
 
-def parse_stem(stem: str) -> tuple[str, str, str]:
-    # judge_<dataset>_<variant>_<language>_<judge-model...>
-    parts = stem.split("_")
-    if len(parts) >= 4 and parts[0] == "judge":
-        return parts[1], parts[2], parts[3]
-    return "", "", ""
-
-
 def categorize(comment: str) -> set[str]:
     return {cat for cat, pattern in CATEGORY_PATTERNS.items() if pattern.search(comment)}
-
-
-def iter_judged_files(judged_dir: Path):
-    for model_dir in sorted(judged_dir.iterdir()):
-        if not model_dir.is_dir():
-            continue
-        for jsonl_path in sorted(model_dir.glob("*.jsonl")):
-            if jsonl_path.name.endswith(".failures.jsonl"):
-                continue
-            yield model_dir.name, jsonl_path
 
 
 def load_rows(judged_dir: Path, predicted_labels: dict[tuple[str, str, str, str, str], str] | None = None) -> list[dict[str, Any]]:
     predicted_labels = predicted_labels or {}
     rows = []
-    for model, jsonl_path in iter_judged_files(judged_dir):
-        dataset, variant, language_from_stem = parse_stem(jsonl_path.stem)
-        with jsonl_path.open(encoding="utf-8") as f:
-            for line_no, line in enumerate(f, start=1):
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    record = json.loads(line)
-                except json.JSONDecodeError:
-                    continue
-                parsed = record.get("parsed") or {}
-                score = parsed.get("fluency_score")
-                if not isinstance(score, int) or score >= MAX_SCORE:
-                    continue
-                comment = str(parsed.get("fluency_comment") or "")
-                language = str(record.get("language") or language_from_stem)
-                eid = str(record.get("eid", ""))
-                rows.append(dict(
-                    model=model,
-                    dataset=dataset,
-                    variant=variant,
-                    language=language,
-                    eid=eid,
-                    sentence=str(record.get("sentence", "")),
-                    source_lexical_terms="; ".join(record.get("source_lexical_terms") or []),
-                    fluency_score=score,
-                    comment=comment,
-                    categories=categorize(comment),
-                    predicted_label=predicted_labels.get((model, dataset, variant, language, eid), ""),
-                    judged_file=str(jsonl_path.relative_to(REPO_ROOT)),
-                    judged_line=line_no,
-                ))
+    for r in iter_judged_records(judged_dir):
+        parsed = r.record.get("parsed") or {}
+        score = parsed.get("fluency_score")
+        if not isinstance(score, int) or score >= MAX_SCORE:
+            continue
+        comment = str(parsed.get("fluency_comment") or "")
+        language = str(r.record.get("language") or r.language)
+        eid = str(r.record.get("eid", ""))
+        rows.append(dict(
+            model=r.model,
+            dataset=r.dataset,
+            variant=r.variant,
+            language=language,
+            eid=eid,
+            sentence=str(r.record.get("sentence", "")),
+            source_lexical_terms="; ".join(r.record.get("source_lexical_terms") or []),
+            fluency_score=score,
+            comment=comment,
+            categories=categorize(comment),
+            predicted_label=predicted_labels.get((r.model, r.dataset, r.variant, language, eid), ""),
+            judged_file=str(r.path.relative_to(REPO_ROOT)),
+            judged_line=r.line_no,
+        ))
     return rows
 
 
