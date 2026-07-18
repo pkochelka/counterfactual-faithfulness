@@ -1,8 +1,11 @@
+import argparse
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+
+from sample_for_annotation import FLUENCY_DIR, load_judgments
 
 ROOT = Path(__file__).resolve().parent.parent
 ANNOTATION_DIR = ROOT / "data" / "annotation"
@@ -28,6 +31,19 @@ def quadratic_weighted_kappa(human_scores, judge_scores):
 
 def parse_scores(column):
     return pd.to_numeric(column.astype(str).str.rstrip("?"), errors="coerce")
+
+
+def fetch_judge_fluency_scores(key, fluency_dir):
+    """Look up judge_fluency_score in data/judged_fluency for keys missing that column."""
+    judgments = load_judgments(fluency_dir)
+
+    def lookup(row):
+        record = judgments.get(
+            (row["model"], row["dataset"], row["variant"], row["prompt_language"], str(row["eid"]))
+        )
+        return None if record is None else record.get("parsed", {}).get("fluency_score")
+
+    return key.apply(lookup, axis=1)
 
 
 def agreement_metrics(human_scores, judge_scores):
@@ -102,10 +118,25 @@ def write_faithfulness_disagreements(merged, output_path):
 
 
 def main():
-    human = pd.read_csv(ANNOTATION_DIR / "annotation_sample.csv", encoding="utf-8-sig")
-    judge = pd.read_csv(ANNOTATION_DIR / "annotation_key.csv", encoding="utf-8-sig")
+    parser = argparse.ArgumentParser(description="Measure human vs. LLM-judge agreement.")
+    parser.add_argument("--sample", default="annotation_sample_we_used.csv",
+                        help="Blind sample CSV (under data/annotation) with human_* scores.")
+    parser.add_argument("--key", default="annotation_key_we_used.csv",
+                        help="Key CSV (under data/annotation) with judge_* scores.")
+    parser.add_argument("--fluency-dir", type=Path, default=FLUENCY_DIR,
+                        help="Fallback source for judge_fluency_score when the key lacks that column.")
+    args = parser.parse_args()
+
+    human = pd.read_csv(ANNOTATION_DIR / args.sample, encoding="utf-8-sig")
+    judge = pd.read_csv(ANNOTATION_DIR / args.key, encoding="utf-8-sig")
     human["human_faithfulness_score"] = parse_scores(human["human_faithfulness_score"])
     human["human_fluency_score"] = parse_scores(human["human_fluency_score"])
+    if "judge_fluency_score" not in judge.columns:
+        judge["judge_fluency_score"] = fetch_judge_fluency_scores(judge, args.fluency_dir)
+        missing = judge["judge_fluency_score"].isna().sum()
+        if missing:
+            print(f"judge_fluency_score not in {args.key}; fetched from {args.fluency_dir} "
+                  f"({missing}/{len(judge)} rows had no matching record, e.g. other variants)")
     merged = human.merge(
         judge[[
             "uid", "judge_faithfulness_score", "judge_incorrect_information",
