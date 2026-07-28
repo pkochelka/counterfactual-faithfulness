@@ -1,7 +1,7 @@
 # Data and Reports
 
-Layout and record schemas for `data/` (not tracked by git) and the report
-artifacts the analysis scripts produce from it.
+Layout and record schemas for the released study data tracked under `data/`
+and the derived report artifacts produced from it.
 
 ## Data
 
@@ -76,10 +76,13 @@ Reports are regenerated from the judged trees, not stored canonically:
   `data/reports/fluency/`.
 - `inspect_judged_results.py` writes the full faithfulness report tree
   (overall statistics, per-model summaries, score cases, issue reports).
+- `analysis/build_results_tables.py` reads the released study outputs and the
+  regenerated issue report, then writes the paper's LaTeX tables and bootstrap
+  summaries under `data/results_tables/`.
 
 ## Current totals
 
-102,492 scored records per dimension (9 models × 2 datasets × 3 variants ×
-4 languages, minus models without `hsb` support and failed judge calls).
+102,492 scored records per dimension: 9 models × 4 prompt languages × 2,847
+evaluated RDF inputs across the two datasets and three variants.
 Mean faithfulness 4.32 with 14.6% of records scoring 1–2; mean fluency 3.74
 with 23.9% scoring 1–2.

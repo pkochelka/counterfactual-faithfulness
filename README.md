@@ -26,10 +26,11 @@ API credentials go into `.env.local` at the repo root (never committed): `BASE_U
 - `cus-qa-to-triples/` — pipeline that converts the CUS-QA dataset into factual/counterfactual/fictional triples; see [cus-qa-to-triples/README.md](cus-qa-to-triples/README.md)
 - `prompts/` — generation, classification, and judge prompt templates
 - `inspect_judged_results.py` — writes a full Markdown/CSV report tree from judged records
+- `analysis/build_results_tables.py` — regenerates the LaTeX tables and bootstrap summaries used in the paper
 
 ## Data
 
-`data/` is not tracked by git. See [DATA_AND_REPORTS_README.md](DATA_AND_REPORTS_README.md) for the full layout and record schemas. In short:
+`data/` contains the released source tables and complete generated, classified, and judged study outputs tracked in git. Derived reports are regenerated locally. See [DATA_AND_REPORTS_README.md](DATA_AND_REPORTS_README.md) for the full layout and record schemas. In short:
 
 - `data/{cs-qa,sk-qa}/{cf,fa,fi}.csv` — flat source triple tables (produced by `cus-qa-to-triples/`)
 - `data/generated/<model>/<dataset>_<variant>_<language>.csv` — generated sentences
@@ -89,6 +90,21 @@ python analysis/fluency_error_deep_dive.py
 python analysis/fluency_report.py                  # per-score case listings
 python inspect_judged_results.py                   # full report tree
 ```
+
+To regenerate the tables used in the paper, first build the issue report and
+then run the table generator:
+
+```bash
+python inspect_judged_results.py \
+  --input data/judged \
+  --output data/reports \
+  --generated-dir data/generated \
+  --classified-dir data/classified
+
+python analysis/build_results_tables.py --bootstrap-samples 10000
+```
+
+The generated LaTeX is written to `data/results_tables/results_tables.tex`.
 
 ## Human annotation and judge validation
 
