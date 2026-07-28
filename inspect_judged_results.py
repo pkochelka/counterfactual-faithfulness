@@ -56,6 +56,28 @@ ISSUE_PATTERNS = {
     "ambiguous_or_unclear": re.compile(r"\b(ambiguous|unclear|vague|nejasn|ambivalent)\b", re.I),
 }
 
+EXPLICIT_ISSUE_LABELS = {
+    "unsupported": "unsupported_or_hallucinated",
+    "hallucination": "unsupported_or_hallucinated",
+    "wrong_object": "wrong_entity",
+    "wrong_predicate": "wrong_relation",
+    "reverse": "reverse_relation",
+    "negation": "contradiction",
+    "omission": "missing_information",
+    "over_specific": "unsupported_or_hallucinated",
+    "wrong_language": "language_or_style",
+    "wrong_transform": "language_or_style",
+    "repetition": "language_or_style",
+    "degenerate": "language_or_style",
+    "wrong_number": "wrong_number_date_unit",
+    "wrong_date": "wrong_number_date_unit",
+    "wrong_unit": "wrong_number_date_unit",
+}
+EXPLICIT_ISSUE_RE = re.compile(
+    r"^\s*(?:[-*]\s*)?(" + "|".join(map(re.escape, EXPLICIT_ISSUE_LABELS)) + r")\b",
+    re.I,
+)
+
 
 @dataclass(frozen=True)
 class SourceKey:
@@ -174,6 +196,29 @@ def extract_judge_field(record: dict[str, Any], field_name: str) -> str:
             values.append(incorrect.get(field_name))
         values.append(parsed.get(field_name))
     return "; ".join(part for part in (normalize_comment(value) for value in values) if part)
+
+
+def extract_issue_categories(record: dict[str, Any]) -> list[str]:
+    """Extract non-exclusive categories from explicit per-error comment labels."""
+    parsed = record.get("parsed")
+    incorrect = parsed.get("incorrect_information") if isinstance(parsed, dict) else None
+    if isinstance(incorrect, dict):
+        incorrect = [incorrect]
+    if not isinstance(incorrect, list):
+        return []
+
+    categories: list[str] = []
+    for item in incorrect:
+        if not isinstance(item, dict):
+            continue
+        comment = normalize_comment(item.get("comment"))
+        match = EXPLICIT_ISSUE_RE.match(comment)
+        if not match:
+            continue
+        category = EXPLICIT_ISSUE_LABELS[match.group(1).lower()]
+        if category not in categories:
+            categories.append(category)
+    return categories
 
 
 def md_escape(value: Any) -> str:
@@ -444,6 +489,9 @@ def read_judged_records(
                 style = extract_style_comment(record)
                 judge_correct_info = extract_judge_field(record, "correct_info")
                 judge_info_used = extract_judge_field(record, "info_used")
+                issue_categories = extract_issue_categories(record)
+                if score in (1, 2, 3, 4) and not issue_categories:
+                    issue_categories = ["not_given"]
                 source_entry = source_triples.get((key.dataset, key.variant, "any"), {}).get(str(record.get("eid", "")), {})
                 expected_path = generated_source_path_from_dirs(repo_root, key, generated_dirs)
                 if key not in expected_cache:
@@ -465,6 +513,7 @@ def read_judged_records(
                     "judge_info_used": judge_info_used,
                     "style_comment": style,
                     "issue_category": issue,
+                    "issue_categories": "; ".join(issue_categories),
                     "judge_model": record.get("requested_judge_model") or record.get("judge_model") or "",
                     "judge_endpoint": record.get("requested_judge_api_url") or "",
                     "timestamp": record.get("timestamp", ""),
@@ -796,6 +845,7 @@ def write_issue_example_reports(base_dir: Path, rows: list[dict[str, Any]], samp
     issue_dir = base_dir / "issue_examples"
     issue_fields = [
         "issue_category",
+        "issue_categories",
         "faithfulness_score",
         "generator_model",
         "dataset",
@@ -815,10 +865,10 @@ def write_issue_example_reports(base_dir: Path, rows: list[dict[str, Any]], samp
         "judged_file",
         "judged_line",
     ]
-    issue_rows = [row for row in rows if row.get("issue_category")]
+    issue_rows = [row for row in rows if row.get("issue_categories")]
     issue_rows.sort(
         key=lambda row: (
-            row.get("issue_category", ""),
+            row.get("issue_categories", ""),
             row.get("faithfulness_score", 99),
             row.get("generator_model", ""),
             row.get("eid", ""),
@@ -826,19 +876,49 @@ def write_issue_example_reports(base_dir: Path, rows: list[dict[str, Any]], samp
     )
     write_csv(issue_dir / "all_issue_examples.csv", issue_rows, issue_fields)
 
-    counts = Counter(str(row.get("issue_category", "")) for row in issue_rows if row.get("issue_category"))
+    counts = Counter(
+        category
+        for row in issue_rows
+        for category in str(row.get("issue_categories", "")).split("; ")
+        if category
+    )
+    below_five_counts = Counter(
+        category
+        for row in issue_rows
+        if row.get("faithfulness_score") in {1, 2, 3, 4}
+        for category in str(row.get("issue_categories", "")).split("; ")
+        if category
+    )
     lines = [
         "# Issue Examples",
         "",
-        "Rows are assigned at most one primary issue category using judge explanations and refusal cues in the generated sentence.",
+        "Categories are extracted from explicit labels in each `incorrect_information` item and are non-exclusive: one example may contribute to multiple categories.",
+        "",
+        "## All scored examples",
         "",
         "| issue | count |",
         "| --- | ---: |",
     ]
     for issue, count in counts.most_common():
         lines.append(f"| {md_escape(issue)} | {count} |")
+    lines.extend(
+        [
+            "",
+            "## Scores below 5",
+            "",
+            "`not_given` means the score was below 5 but no recognized explicit error label was extracted.",
+            "",
+            "| issue | count |",
+            "| --- | ---: |",
+        ]
+    )
+    for issue, count in below_five_counts.most_common():
+        lines.append(f"| {md_escape(issue)} | {count} |")
     for issue in sorted(counts):
-        examples = [row for row in issue_rows if row.get("issue_category") == issue][:sample_size]
+        examples = [
+            row for row in issue_rows
+            if issue in str(row.get("issue_categories", "")).split("; ")
+        ][:sample_size]
         lines.extend(
             [
                 "",
@@ -1137,12 +1217,20 @@ def write_report_tree(output_dir: Path, rows: list[dict[str, Any]], warnings: li
 
     top_bad = sorted(group_stats(rows, ["generator_model", "dataset", "variant", "language"]), key=lambda r: (-float(r["failure_pct_score_1_2"]), -int(r["records"])))[:15]
     top_good = sorted(group_stats(rows, ["generator_model", "dataset", "variant", "language"]), key=lambda r: (-float(r["lenient_success_pct_score_4_5"]), -float(r["mean_score"] or 0)))[:15]
-    issue_counts = Counter()
-    for row in rows:
-        issue = str(row.get("issue_category", ""))
-        if issue:
-            issue_counts[issue] += 1
-    issue_classified_records = sum(issue_counts.values())
+    issue_counts = Counter(
+        category
+        for row in rows
+        for category in str(row.get("issue_categories", "")).split("; ")
+        if category
+    )
+    below_five_issue_counts = Counter(
+        category
+        for row in rows
+        if row.get("faithfulness_score") in (1, 2, 3, 4)
+        for category in str(row.get("issue_categories", "")).split("; ")
+        if category
+    )
+    issue_classified_records = sum(1 for row in rows if row.get("issue_categories"))
     predicate_leak_rows = sum(1 for row in rows if int(row.get("untranslated_predicate_count") or 0) > 0)
     classified_rows = [row for row in rows if row.get("classification_answer_count")]
     non_exact_classification_answers = sum(int(row.get("classification_non_exact_count") or 0) for row in classified_rows)
@@ -1158,14 +1246,26 @@ def write_report_tree(output_dir: Path, rows: list[dict[str, Any]], warnings: li
         "",
         "## Issue Category Counts",
         "",
-        "Each row receives at most one primary issue category. Counts sum to the number of rows with a detected issue, not to all judged rows.",
+        "Categories are non-exclusive and are extracted from explicit labels in each `incorrect_information` item, so counts can exceed the number of judged rows.",
         "",
-        f"Rows with detected issue: {issue_classified_records}",
+        f"Rows with at least one extracted category: {issue_classified_records}",
         "",
         "| issue | count |",
         "| --- | ---: |",
     ]
     extra.extend(f"| {md_escape(k)} | {v} |" for k, v in issue_counts.most_common())
+    extra.extend(
+        [
+            "",
+            "## Issue Category Counts, Scores Below 5",
+            "",
+            "`not_given` means no recognized explicit error label was extracted for a score 1--4 row.",
+            "",
+            "| issue | count |",
+            "| --- | ---: |",
+        ]
+    )
+    extra.extend(f"| {md_escape(k)} | {v} |" for k, v in below_five_issue_counts.most_common())
     extra.extend(
         [
             "",
